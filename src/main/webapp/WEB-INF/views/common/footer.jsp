@@ -63,9 +63,9 @@
 					개인정보처리방침</div>
 			</div>
 			<div class="d-flex" style="margin-top: 15px">
-				<div class="footer_text">현대IT&E 5팀</div>
+				<div class="footer_text">현대IT&E 5기</div>
 				<div class="footer_text footer_text_space">|</div>
-				<div class="footer_text">팀원 : 서민철, 변용혁, 서회형, 이수정</div>
+				<div class="footer_text">팀원 : 정승하, 박소은, 김민석, 신미림</div>
 				<div class="footer_text footer_text_space">|</div>
 				<div class="footer_text">서울시 강남구 도산대로 523 한섬빌딩</div>
 				<div class="footer_text footer_text_space">|</div>

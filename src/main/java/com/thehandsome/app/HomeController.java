@@ -1,4 +1,4 @@
-package com.thehansome.app;
+package com.thehandsome.app;
 
 import java.text.DateFormat;
 import java.util.Date;
