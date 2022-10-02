@@ -14,8 +14,8 @@
 			value="net.sf.log4jdbc.DriverSpy"></property>
 		<property name="url"
 			value="jdbc:log4jdbc:oracle:thin:@127.0.0.1:1521/xepdb1"></property>
-		<property name="username" value="tmdgk"></property>
-		<property name="password" value="tmdgk"></property>
+		<property name="username" value="hansome"></property>
+		<property name="password" value="1234"></property>
 		<property name="initialSize" value="2"></property>
 		<property name="maxTotal" value="3"></property>
 		<property name="maxIdle" value="2"></property>
