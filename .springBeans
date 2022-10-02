@@ -9,6 +9,15 @@
 	<configs>
 	</configs>
 	<autoconfigs>
+		<config>src/main/resources/spring/root/component_scan.xml</config>
+		<config>src/main/resources/spring/dispatcher/viewresolver.xml</config>
+		<config>src/main/resources/spring/dispatcher/aop.xml</config>
+		<config>src/main/resources/spring/root/transaction.xml</config>
+		<config>src/main/resources/spring/root/messagesource.xml</config>
+		<config>src/main/resources/spring/dispatcher/component_scan.xml</config>
+		<config>src/main/resources/spring/root/properties.xml</config>
+		<config>src/main/resources/spring/root/mybatis.xml</config>
+		<config>src/main/resources/spring/dispatcher/resources.xml</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

@@ -191,7 +191,7 @@
                                     
                                  for (let j = 0; j < 5; j++) {
                                     let idx = i * 5 + j;
-                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bName=" + encodeURI(brand_array.at(idx).bname) + "&pageNo=1'>" + brand_array.at(idx).bname + "</a></li>";
+                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bname=" + encodeURI(brand_array.at(idx).bname) + "&pageNo=1'>" + brand_array.at(idx).bname + "</a></li>";
                                  }
                                  
                                  tmp += "</ul>";

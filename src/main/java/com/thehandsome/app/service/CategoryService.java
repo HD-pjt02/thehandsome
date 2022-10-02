@@ -1,0 +1,31 @@
+package com.thehandsome.app.service;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import com.thehandsome.app.dao.CategoryDAO;
+import com.thehandsome.app.dto.CategoryDTO;
+
+@Service
+public class CategoryService {
+	private static final Logger logger = LoggerFactory.getLogger(CategoryService.class);
+
+	@Resource
+	private CategoryDAO categoryDao;
+	public List<CategoryDTO> getCategoryLarge(CategoryDTO forLarge) {
+		return categoryDao.selectCategoryLarge(forLarge);
+	}
+
+	public List<CategoryDTO> getCategoryMedium(CategoryDTO forMedium) {
+		return categoryDao.selectCategoryMedium(forMedium);
+	}
+	
+	public List<CategoryDTO> getCategorySmall(CategoryDTO forSmall) {
+		return categoryDao.selectCategorySmall(forSmall);
+	}
+}

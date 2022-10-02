@@ -9,7 +9,8 @@ public class ProductDTO {
 	private String pname;
 	private String pcontent;
 	private int pprice;
-	private String pbrand;
+	private int pbrand;
+	private int pcategory;
 	private Timestamp pregdate;
 	private int pdiscount;
 	private int plikeamount;
