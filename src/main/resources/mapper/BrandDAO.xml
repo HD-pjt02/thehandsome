@@ -8,4 +8,9 @@
 		SELECT bcode, bname
 		FROM BRAND
 	</select>
+	
+	<select id="selectTest" resultType="Integer">
+		SELECT 1
+		FROM DUAL
+	</select>
 </mapper>

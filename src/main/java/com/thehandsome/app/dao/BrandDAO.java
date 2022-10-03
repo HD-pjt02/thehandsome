@@ -9,4 +9,6 @@ import com.thehandsome.app.dto.BrandDTO;
 @Mapper
 public interface BrandDAO {
 	public List<BrandDTO> selectAllBrands();
+
+	public int selectTest();
 }

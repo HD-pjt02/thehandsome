@@ -3,7 +3,7 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.thehandsome.app.dao.CategoryDao">
+<mapper namespace="com.thehandsome.app.dao.CategoryDAO">
 	<select id="selectCategoryMedium" resultType="category" parameterType="category">
         SELECT cmedium from category
 	    WHERE clarge = #{cLarge}

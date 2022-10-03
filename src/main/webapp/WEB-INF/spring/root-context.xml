@@ -7,16 +7,16 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 		
-	
+	<context:property-placeholder location="classpath:properties/context.properties" />
 
 		<!-- Connection Pool -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName"
-			value="net.sf.log4jdbc.DriverSpy"></property>
+			value="${hikcariConfig.driverClassName}"></property>
 		<property name="jdbcUrl"
-			value="jdbc:log4jdbc:oracle:thin:@localhost:1521/xepdb1"></property>
-		<property name="username" value="hansome"></property>
-		<property name="password" value="1234"></property>
+			value="${hikariConfig.jdbcUrl}"></property>
+		<property name="username" value="${hikariConfig.username}"></property>
+		<property name="password" value="${hikariConfig.password}"></property>
 	</bean>
 	
 	<!-- HikariCP configuration -->
@@ -27,9 +27,12 @@
 	<!-- Mybatis -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:mapper-config.xml"/>
+		<property name="mapperLocations" value="classpath:/mapper/*.xml"/>
 	</bean>
 	
-	<mybatis-spring:scan base-package="com.thehandsome.app" />
+	<mybatis-spring:scan base-package="com.thehandsome.app"/>
+	
 	
 	
 	<!-- 4가지 종류의 어노테이션을 객체로 만드는 기능을 끈다. -->
@@ -44,10 +47,10 @@
 
 	
 
-	<!-- <bean id="sqlSessionTemplate"
+	<bean id="sqlSessionTemplate"
 		class="org.mybatis.spring.SqlSessionTemplate">
 		<constructor-arg ref="sqlSessionFactory"></constructor-arg>
-	</bean> -->
+	</bean>
   
 </beans>
 
