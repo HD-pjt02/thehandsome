@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.thehandsome.app.dao.BrandDAO;
+import com.thehandsome.app.mapper.BrandMapper;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -16,10 +16,10 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class MapperTest {
 	@Setter(onMethod_ = @Autowired)
-	private BrandDAO brandDAO;
+	private BrandMapper brandMapper;
 	
 	@Test
 	public void testGetTime() {
-		log.info(brandDAO.selectTest());
+		log.info(brandMapper.selectTest());
 	}
 }

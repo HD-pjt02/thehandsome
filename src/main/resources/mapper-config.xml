@@ -5,11 +5,11 @@
 <configuration>
 	<typeAliases>
 
-		<typeAlias alias="brand"
+		<typeAlias alias="brandDTO"
 			type="com.thehandsome.app.dto.BrandDTO" />
-		<typeAlias alias="category"
+		<typeAlias alias="categoryDTO"
 			type="com.thehandsome.app.dto.CategoryDTO" />
-		<typeAlias alias="product"
+		<typeAlias alias="productDTO"
 			type="com.thehandsome.app.dto.ProductDTO" />
 
 	</typeAliases>

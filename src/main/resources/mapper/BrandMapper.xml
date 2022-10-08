@@ -3,8 +3,8 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.thehandsome.app.dao.BrandDAO">
-	<select id="selectAllBrands" resultType="brand">
+<mapper namespace="com.thehandsome.app.mapper.BrandMapper">
+	<select id="selectAllBrands" resultType="brandDTO"><!--dto타입 풀로쓰지않고 alias로 짧게 사용가능  -->
 		SELECT bcode, bname
 		FROM BRAND
 	</select>

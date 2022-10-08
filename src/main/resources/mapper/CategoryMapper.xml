@@ -3,15 +3,15 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.thehandsome.app.dao.CategoryDAO">
-	<select id="selectCategoryMedium" resultType="category" parameterType="category">
+<mapper namespace="com.thehandsome.app.mapper.CategoryMapper">
+	<select id="selectCategoryMedium" resultType="categoryDTO" parameterType="categoryDTO">
         SELECT cmedium from category
 	    WHERE clarge = #{cLarge}
 	    AND cmedium NOT IN('SPECIAL SHOP')
 	    GROUP BY clarge, cmedium
 	</select>
 	
-	<select id="selectCategorySmall" resultType="category" parameterType="category">
+	<select id="selectCategorySmall" resultType="categoryDTO" parameterType="categoryDTO">
     	SELECT csmall from category
     	WHERE clarge = #{cLarge}
     	AND cmedium = #{cMedium}

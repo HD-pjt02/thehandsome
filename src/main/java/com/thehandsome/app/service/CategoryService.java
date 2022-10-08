@@ -8,24 +8,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import com.thehandsome.app.dao.CategoryDAO;
 import com.thehandsome.app.dto.CategoryDTO;
+import com.thehandsome.app.mapper.CategoryMapper;
 
 @Service
 public class CategoryService {
 	private static final Logger logger = LoggerFactory.getLogger(CategoryService.class);
 
 	@Resource
-	private CategoryDAO categoryDao;
+	private CategoryMapper categoryMapper;
 	public List<CategoryDTO> getCategoryLarge(CategoryDTO forLarge) {
-		return categoryDao.selectCategoryLarge(forLarge);
+		return categoryMapper.selectCategoryLarge(forLarge);
 	}
 
 	public List<CategoryDTO> getCategoryMedium(CategoryDTO forMedium) {
-		return categoryDao.selectCategoryMedium(forMedium);
+		return categoryMapper.selectCategoryMedium(forMedium);
 	}
 	
 	public List<CategoryDTO> getCategorySmall(CategoryDTO forSmall) {
-		return categoryDao.selectCategorySmall(forSmall);
+		return categoryMapper.selectCategorySmall(forSmall);
 	}
 }
