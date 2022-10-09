@@ -11,9 +11,9 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class HomeController {
 	@RequestMapping(value="", method= {RequestMethod.GET,RequestMethod.POST})
-	public String basic() {
+	public String home() {
 		log.info("실행");
-		return "member/join";
+		return "home";
 	
 	}
 	

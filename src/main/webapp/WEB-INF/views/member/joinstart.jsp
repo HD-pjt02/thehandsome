@@ -19,7 +19,7 @@
         <meta name="keywords" contents="한섬, 더한섬닷컴, 한섬몰, 한섬아울렛, 한섬닷컴, 더한섬, 한섬올라인몰, HANDSOME, thehandsome">
 <title>
 	회원가입시작 | 더한섬닷컴</title>
-<link rel="shortcut icon" href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
+<link rel="shortcut icon" href="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/thehandsome_ic_16x16.ico">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/font_443.css" media="all">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css?20220929" media="all">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/layout.css?20220826" media="all">
@@ -30,18 +30,18 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/footer.css?20220406" media="all">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/contents1e5d.css?20220907" media="all">
 <style type="text/css" media="print">
-	@IMPORT url("/_ui/desktop/common/blueprint/print.css");
+	@IMPORT url("${pageContext.request.contextPath}/resources/blueprint/print.css");
 </style>
 
-<script async="" defer="" src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RPZ82BN53C&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5PCJDFJ"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/1947530058811697?v=2.9.84&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" charset="utf-8" src="//static.recopick.com/dist/production.min.js"></script><script type="text/javascript" src="/_ui/desktop/common/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/jquery.vticker.js"></script><!-- 200318 ì¶ê° -->
+<script async="" defer="" src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RPZ82BN53C&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5PCJDFJ"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/1947530058811697?v=2.9.84&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" charset="utf-8" src="//static.recopick.com/dist/production.min.js"></script><script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.vticker.js"></script><!-- 200318 ì¶ê° -->
 <script type="text/javascript">
 		//<![CDATA[
 		
 		var ACC = { config: {} };
 			ACC.config.contextPath = "";
 			ACC.config.encodedContextPath = "/ko";
-			ACC.config.commonResourcePath = "/_ui/desktop/common";
+			ACC.config.commonResourcePath = "${pageContext.request.contextPath}/resources";
 			ACC.config.themeResourcePath = "/_ui/desktop/theme-blue";
 			ACC.config.siteResourcePath = "/_ui/desktop/site-handsome";
 			ACC.config.rootPath = "/_ui/desktop";	
@@ -73,29 +73,29 @@
     var handsomeContextPath = "/ko"; 
 </script>
  
-<script type="text/javascript" src="/_ui/desktop/common/js/handsome/common.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/handsome/html5shiv-printshiv.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/handsome/jquery.flexslider.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/handsome/ui.js?20211105"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/jquery.form-3.51.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/common_function.js?20220411"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/videojs-ie8.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/common.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/html5shiv-printshiv.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/jquery.flexslider.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/ui.js?20211105"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.form-3.51.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/common_function.js?20220411"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/videojs-ie8.min.js"></script>
 <!--[if lt IE 9]>
-<script type="text/javascript" src="/_ui/desktop/common/js/handsome/html5shiv.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/handsome/respond.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/html5shiv.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/respond.js"></script>
 <![endif]-->
  
-<script type="text/javascript" src="/_ui/desktop/common/js/jquery-ui-1.11.2.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-ui-1.11.2.min.js"></script>
 
-<script type="text/javascript" src="/_ui/desktop/common/js/instagramAPI.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/makePCookie.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/instagramAPI.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/makePCookie.js"></script>
 
-<script type="text/javascript" src="/_ui/desktop/common/wisenut/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/wisenut/js/jquery.min.js"></script>
 
-<script type="text/javascript" src="/_ui/desktop/common/js/netfunnel.js" charset="UTF-8"></script>
-<script type="text/javascript" src="/_ui/desktop/common/js/netfunnel_skin.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/netfunnel.js" charset="UTF-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/netfunnel_skin.js" charset="UTF-8"></script>
 
-<script type="text/javascript" src="/_ui/desktop/common/js/unorm.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/unorm.js"></script>
 
 <script type="text/javascript">
 var setDimensionData = function(){
@@ -612,7 +612,7 @@ function GA_Event(Category,Action,Label) {
                     innerHtml += "      <img src=\"http://cdn.thehandsome.com/Mobile/event/detail/image/m_evt_blsm2_180321.png\" alt=\"꽃잎줍기\">";
                     innerHtml += "  </div>";
                     innerHtml += "  <a href=\"javascript:blossomsEvent(\'"+type+"\');\" alt=\"이벤트GO\" style=\"display:block;position:absolute;top:10px;width:110px;height:85px;\">&nbsp;</a>";
-                    innerHtml += "  <a href=\"javascript:blossomsClose(\'close'\);\" alt=\"꽃잎close\" style=\"background:url('/_ui/desktop/common/images/common/btn_close.png') no-repeat;display:block;position:absolute;top:0;right:-7px;width:18px;height:18px;z-index:2;\">&nbsp;</a>";
+                    innerHtml += "  <a href=\"javascript:blossomsClose(\'close'\);\" alt=\"꽃잎close\" style=\"background:url('${pageContext.request.contextPath}/resources/images/common/btn_close.png') no-repeat;display:block;position:absolute;top:0;right:-7px;width:18px;height:18px;z-index:2;\">&nbsp;</a>";
                     innerHtml += "  <div style=\"position:absolute;bottom:-4px;left:17px;width:120px;\">";
                     innerHtml += "      <label for=\"day_close\" style=\"cursor:pointer;text-decoration:underline;color:#6e6e6e;letter-spacing:-.5px;\" onclick=\"blossomsClose(\'day_close\');\">하루 보지 않기</label>";
                     innerHtml += "      <input id=\"day_close\" type=\"checkbox\" name=\"day_close\" value=\"하루 보지 않기\" onclick=\"blossomsClose(\'day_close\');\" style=\"display:none;\">";
@@ -666,7 +666,7 @@ function GA_Event(Category,Action,Label) {
                              innerHtml += '    <div class="today_close" style="position:absolute;bottom:0;left:6px;width:134px;">';
                              innerHtml += '        <label for="justDay1" style="cursor:pointer;color:#000;letter-spacing:-.5px;">오늘 하루 보지 않기</label>';
                              innerHtml += '        <input id="justDay1" type="checkbox" name="day_close" value="오늘 하루 보지 않기" style="display:none">';
-                             innerHtml += '        <a href="javascript:mapleEvtPopClose()" alt="닫기" class="close" style="background:url(\'http://cdn.thehandsome.com/_ui/desktop/common/images/common/btn_close.png\') no-repeat; display:block; position:absolute; bottom:2px; right:6px; width:11px; height:11px; z-index:2;">&nbsp;</a>';
+                             innerHtml += '        <a href="javascript:mapleEvtPopClose()" alt="닫기" class="close" style="background:url(\'http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/btn_close.png\') no-repeat; display:block; position:absolute; bottom:2px; right:6px; width:11px; height:11px; z-index:2;">&nbsp;</a>';
                              innerHtml += '    </div>';
                              innerHtml += '</div>';
                          
@@ -923,7 +923,7 @@ function setPlayLeaves(item){
             if(data == "anonymous") {
                     innerHtml  = '<div class="popwrap_maple_evt2209" style="height:319px;">';
                     innerHtml += '   <div class="check_my_maple" style="position:relative">';
-                    innerHtml += '       <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_login.jpg" alt="오늘의 단풍잎">';
+                    innerHtml += '       <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_login.jpg" alt="오늘의 단풍잎">';
                     innerHtml += '       <a href="/ko/magazine/events/8804481881984/login" style="width:160px;height:40px;text-indent:-9999px;position:absolute;top:208px;left:120px;display:block">로그인 바로가기</a>';
                     innerHtml += '       <a href="javascript:mapleEvtPopClose()" class="btn_close_oneday" style="position:absolute;width:130px;height:30px;bottom:25px;left:135px;text-indent:-9999px;display:block">오늘 하루 보지 않기</a>';
                     innerHtml += '   </div>';
@@ -933,7 +933,7 @@ function setPlayLeaves(item){
             }else if(data == "noTarget") {
                     innerHtml  = '<div class="popwrap_maple_evt2209" style="height:319px;">';
                     innerHtml += '   <div class="check_my_maple" style="position:relative">';
-                    innerHtml += '       <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_login02_1.jpg" alt="오늘의 단풍잎">';
+                    innerHtml += '       <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_login02_1.jpg" alt="오늘의 단풍잎">';
                     innerHtml += '       <a href="https://www.h-point.co.kr/cu/join/start.nhd" style="width:160px;height:40px;text-indent:-9999px;position:absolute;top:208px;left:120px;display:block">통합회원 가입하기</a>';
                     innerHtml += '       <a href="javascript:mapleEvtPopClose()" class="btn_close_oneday" style="position:absolute;width:130px;height:30px;bottom:25px;left:135px;text-indent:-9999px;display:block">오늘 하루 보지 않기</a>';
                     innerHtml += '   </div>';
@@ -943,7 +943,7 @@ function setPlayLeaves(item){
             }else if(data == "nextTime") {
                     innerHtml  = '<div class="popwrap_maple_evt2209" style="height:269px;">';
                     innerHtml += '   <div class="check_my_maple" style="position:relative">';
-                    innerHtml += '       <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_todayend.jpg" alt="내일 다시 참여해보세요">';
+                    innerHtml += '       <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_todayend.jpg" alt="내일 다시 참여해보세요">';
                     innerHtml += '       <a href="javascript:mapleEvtPopClose()" class="btn_close_oneday" style="position:absolute;width:130px;height:30px;bottom:34px;left:135px;text-indent:-9999px;display:block">오늘 하루 보지 않기</a>';
                     innerHtml += '   </div>';
                     innerHtml += '   <a href="javascript:mapleEvtPopClose()" class="btn_close"></a>';
@@ -953,11 +953,11 @@ function setPlayLeaves(item){
                     innerHtml = '<div class="popwrap_maple_evt2209" style="height:349px;">';
                     innerHtml += '    <div class="check_my_maple" style="position:relative">';
                     if(item == "1" || item == "2" || item == "3" || item == "4") {
-                        innerHtml += '    <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_red.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
+                        innerHtml += '    <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_red.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
                     }else if(item == "5" || item == "6" || item == "7") { 
-                        innerHtml += '    <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_green.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
+                        innerHtml += '    <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_green.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
                     }else if(item == "8" || item == "9" || item == "10") {
-                        innerHtml += '    <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_brown.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
+                        innerHtml += '    <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_brown.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
                     }
                     
                     innerHtml += '        <a href="javascript:mapleEvtPopClose(\'close\')" style="width:170px;height:40px;text-indent:-9999px;position:absolute;bottom:77px;left:28px">계속 쇼핑</a>';
@@ -1131,7 +1131,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 		</script>
 	<!-- Loading -->
 	<div class="loading_bar" id="loadingBarDiv" style="display:none;">
-		<img src="/_ui/desktop/common/images/common/loading.gif" alt="loading">
+		<img src="${pageContext.request.contextPath}/resources/images/common/loading.gif" alt="loading">
 		<span>�로딩중</span>
 	</div>
 	<!-- //Loading -->
@@ -1141,7 +1141,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div></form><!-- headerWrap -->
 		<div id="headerWrap">
 			<div class="header header_fixed header_main1903"> 
-				<script type="text/javascript" src="/_ui/desktop/common/js/SsoAjax.js"></script>
+				<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/SsoAjax.js"></script>
 
 <script>
 var arkQuery = $.noConflict(true);
@@ -1279,9 +1279,9 @@ function gaBrandType(brandCode){
     
     var favoriteBrands = new Array();
 </script>
-<script type="text/javascript" src="/_ui/desktop/common/wisenut/ark/js/beta.fix.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/wisenut/ark/js/ark.js"></script>
-<script type="text/javascript" src="/_ui/desktop/common/wisenut/js/search.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/ark/js/beta.fix.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/ark/js/ark.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/js/search.js"></script>
 <script type="text/javascript">
 //<![CDATA[
     // #1067 - 201803 메인 개편
@@ -2358,14 +2358,14 @@ function setLogout(){
 
 <div id="footerWrap">
 	<div id="topBtn" style="display: none;">
-		<a href="javascript:void(0);" class="viewTopArea"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/top_btn.png" alt="맨 위로" onclick="GA_Event('공통','퀵버튼','TOP');"></a>
+		<a href="javascript:void(0);" class="viewTopArea"><img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/top_btn.png" alt="맨 위로" onclick="GA_Event('공통','퀵버튼','TOP');"></a>
 	</div>
 	<div class="footer">
 		<!--footer_cnts1 -->
 		<div class="footer_cnts1 clearfix">
 			<!-- footer_menu-->
 			<div class="footer_menu cnts1_left">
-				<div class="footer_logo"><a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
+				<div class="footer_logo"><a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
 				<div class="footer_link">
 					<ul class="clearfix">
 					    <li><a href="/ko/svcenter/theClubInfo" onclick="GA_Event('공통','푸터_메뉴','온라인 멤버십');">온라인 멤버십</a></li>
@@ -2405,8 +2405,8 @@ function setLogout(){
 				<!--download_app , athome-->
 				<div class="cnts1_right_inner">
 				    <a href="/ko/appDownloadSMS/sendSMSPage" onclick="GA_Event('공통','푸터','APP다운로드');">
-<img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_ico_apps.png" alt="APP 다운로드" style="width:52px;height:71px;">
-<!-- 				        <img src="/_ui/desktop/common/images/common/ico_apps_new.png" alt="APP 다운로드" style="width:54px;height:70px;"> -->
+<img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/footer_ico_apps.png" alt="APP 다운로드" style="width:52px;height:71px;">
+<!-- 				        <img src="${pageContext.request.contextPath}/resources/images/common/ico_apps_new.png" alt="APP 다운로드" style="width:54px;height:70px;"> -->
 <p>APP 다운로드 &gt;</p>
 			        </a>
 				    <a href="/ko/svcenter/footerAthomeInfo" style="margin-right:0;" onclick="GA_Event('공통','푸터','딜리버리서비스');">

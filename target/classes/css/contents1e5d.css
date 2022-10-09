@@ -978,7 +978,7 @@ footer contents
 .emailinput{padding:30px 0 40px;}
 .email_step{background: #f5f5f5;/*border-top:1px solid #e3e3e3;*/overflow:hidden;}
 .email_step ul{margin:0 auto;width:995px;}
-.email_step ul li{float:left;height:88px;background: url("../../../../../cdn.thehandsome.com/_ui/desktop/common/images/member/email_step.gif") no-repeat;text-indent: -999em}
+.email_step ul li{float:left;height:88px;background: url("http://cdn.thehandsome.com/_ui/desktop/common/images/member/email_step.gif") no-repeat;text-indent: -999em}
 .email_step ul .step01{width:249px;background-position: 0 -1px;}
 .email_step ul .step01.on{background-position: 0 -92px;}
 .email_step ul .step02{width:287px;background-position: -249px -1px}
