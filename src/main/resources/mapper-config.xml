@@ -11,6 +11,8 @@
 			type="com.thehandsome.app.dto.CategoryDTO" />
 		<typeAlias alias="productDTO"
 			type="com.thehandsome.app.dto.ProductDTO" />
+		<typeAlias alias="memberDTO"
+			type="com.thehandsome.app.dto.MemberDTO" />
 
 	</typeAliases>
 </configuration>

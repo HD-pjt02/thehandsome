@@ -31,7 +31,7 @@
 		<property name="mapperLocations" value="classpath:/mapper/*.xml"/><!-- 해당경로 아래있는 모든 xml파일을 쿼리문(mapper) -->
 	</bean>
 	
-	<mybatis-spring:scan base-package="com.thehandsome.app"/>
+	<mybatis-spring:scan base-package="com.thehandsome.app.mapper"/>
 	
 	
 	
