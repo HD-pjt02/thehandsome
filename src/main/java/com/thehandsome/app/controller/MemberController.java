@@ -1,14 +1,15 @@
 package com.thehandsome.app.controller;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.thehandsome.app.service.MemberService;
 
@@ -25,35 +26,36 @@ public class MemberController {
 	
 	
 	/*****************회원가입 관련 기능**********************/
-	@RequestMapping(value="/joinstart", method= {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/joinstart",  method= {RequestMethod.GET})
 	public String joinstart() {
 		log.info("회원가입 시작 폼");
+		
 		return "member/joinstart";
 	
 	}
 	
-	@RequestMapping(value="/joinprovision", method= {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/joinprovision",  method= {RequestMethod.GET})
 	public String joinprovision() {
 		log.info("회원가입 동의 폼");
 		return "member/joinprovision";
 	
 	}
 	
-	@RequestMapping(value="/joininfoform", method= {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/joininfoform",  method= {RequestMethod.GET})
 	public String joininfoform() {
 		log.info("회원가입 정보 입력 폼");
 		return "member/joininfoform";
 	
 	}
 	
-	@RequestMapping(value="/joincomplete", method= {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/joincomplete",  method= {RequestMethod.GET})
 	public String joincomplete() {
 		log.info("회원가입 완료 폼");
 		return "member/joincomplete";
 	
 	}
 	
-	@RequestMapping(value="/isdupluid", method= {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/isdupluid",  method= {RequestMethod.GET})
 	public @ResponseBody Boolean isdupluid(@RequestParam Map<String,Object> map) {
 		log.info("이메일 중복체크");
 		log.info(""+map.get("uid"));
@@ -75,7 +77,7 @@ public class MemberController {
 	
 	/************************회원가입 관련 끝****************************/
 	
-	@RequestMapping(value="/login", method= {RequestMethod.GET,RequestMethod.POST})
+	@RequestMapping(value="/login",  method= {RequestMethod.GET})
 	public String login() {
 		log.info("로그인 폼");
 		return "member/login";
