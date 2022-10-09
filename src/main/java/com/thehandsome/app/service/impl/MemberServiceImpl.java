@@ -16,7 +16,7 @@ public class MemberServiceImpl implements MemberService{
 	private MemberMapper memberMapper;
 
 	@Override
-	public long isdupluid(String uid) {
+	public Long isdupluid(String uid) {
 		return memberMapper.isdupluid(uid);
 	}
 

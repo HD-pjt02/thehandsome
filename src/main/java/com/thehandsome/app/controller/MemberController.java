@@ -60,13 +60,15 @@ public class MemberController {
 		
 		String uid = (String)map.get("uid");
 		
-		long result = memberService.isdupluid(uid);
-		boolean response = result>0?true:false;
-		
 //		Map<String,String> msg = new HashMap<String,String>();
 //		msg.put("message","good");
 //		log.info(""+msg);
-		return response;
+		if(memberService.isdupluid(uid)==null) {
+			return false;
+		}
+		else {
+			return true;
+		}
 	
 	}
 	
