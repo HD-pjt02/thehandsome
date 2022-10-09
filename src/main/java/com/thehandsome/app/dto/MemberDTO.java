@@ -6,15 +6,18 @@ import lombok.Data;
 @Data
 public class MemberDTO {
 	private int mno;
-	private String mid;
-	private String mname;
-	private char mgender;
-	private String mbirth;
-	private char msnscheck;
-	private String memail;
-	private char memailcheck;
-	private String mtel;
-	private int mmileage;
-	private int mtotalpay;
-	private Date mdate;
+	private String id;
+	private String password;
+	private String email;
+	private String phone;
+	private String name;
+	private String birth;
+	private int mileage;
+	private Date regdate;
+	private Date lastlogindate;
+	private String role;
+	private String enable;
+	private int amount;
+	private String grade;
+	
 }

@@ -1,15 +1,30 @@
 package com.thehandsome.app.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import lombok.extern.log4j.Log4j;
+import com.thehandsome.app.service.MemberService;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Controller
 @RequestMapping("/member")
-@Log4j
+@Slf4j
 public class MemberController {
+	
+	@Autowired
+	private MemberService memberService;
+	
+	
+	
+	/*****************회원가입 관련 기능**********************/
 	@RequestMapping(value="/joinstart", method= {RequestMethod.GET,RequestMethod.POST})
 	public String joinstart() {
 		log.info("회원가입 시작 폼");
@@ -38,6 +53,25 @@ public class MemberController {
 	
 	}
 	
+	@RequestMapping(value="/isdupluid", method= {RequestMethod.GET,RequestMethod.POST})
+	public @ResponseBody Boolean isdupluid(@RequestParam Map<String,Object> map) {
+		log.info("이메일 중복체크");
+		log.info(""+map.get("uid"));
+		
+		String uid = (String)map.get("uid");
+		
+		long result = memberService.isdupluid(uid);
+		boolean response = result>0?true:false;
+		
+//		Map<String,String> msg = new HashMap<String,String>();
+//		msg.put("message","good");
+//		log.info(""+msg);
+		return response;
+	
+	}
+	
+	
+	/************************회원가입 관련 끝****************************/
 	
 	@RequestMapping(value="/login", method= {RequestMethod.GET,RequestMethod.POST})
 	public String login() {

@@ -826,7 +826,6 @@ layer popup 형식의 confirm 창
 */
 var layerConfirm = function(msg, confirmMsg, cancleMsg){
 
-    
     var t = this;
 
     this.confirmAction = function(){
@@ -853,7 +852,7 @@ var layerConfirm = function(msg, confirmMsg, cancleMsg){
     alertTag +='</div>';
     alertTag +='</div>';
     
-
+    
     var $alertLayer = $(alertTag).appendTo($("body"));
     
     //$('body').css("cssText", " overflow:hidden !important");

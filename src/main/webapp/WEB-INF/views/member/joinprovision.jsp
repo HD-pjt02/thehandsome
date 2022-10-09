@@ -2250,7 +2250,7 @@ $(document).ready(function(){
         }
         
         if(agreeAll){
-            $("#resultSend").attr("action", "/ko/member/joininfoform" );
+            $("#resultSend").attr("action", "/member/joininfoform" );
             $("#resultSend").submit();
         }
     });

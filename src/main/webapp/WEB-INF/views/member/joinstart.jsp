@@ -90,7 +90,7 @@
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/instagramAPI.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/makePCookie.js"></script>
 
-<script type="text/javascript" src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/wisenut/js/jquery.min.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/js/jquery.min.js"></script>
 
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/netfunnel.js" charset="UTF-8"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/netfunnel_skin.js" charset="UTF-8"></script>
@@ -2202,6 +2202,7 @@ $(document).ready(function(){
         
     });
     
+    /* 이메일 중복체크 */
     $("#idDubChkBtn").click(function(){
         var vc = new ValidationCheck();
         vc.checkIdList = ['id','uidDomain'];
@@ -2215,17 +2216,19 @@ $(document).ready(function(){
         if(vc.isValid()){
             $.ajax({
                 type:"GET",
-                url:"/ko/member/isdupluid?uid="+$("#id").val()+"@"+$("#uidDomain").val(),
+                url:"/member/isdupluid?uid="+$("#id").val()+"@"+$("#uidDomain").val(),
+                contentType: 'application/json; charset=utf-8',
                 success:function(response){
-                    if(response==true){
+                	 if(response==true){
                         $("#idDubMsg").text('이미 사용중인 이메일입니다.');
                     }else{
                         $("#idDubMsg").text('사용 가능한 이메일입니다.');
                         $("#uidDuplChk").val('Y');
-                    }
+                    } 
                 },
-                error:function(e){
-                    console.log(e);
+                error:function(request,status,error){
+                	alert(request+"/"+status+"/"+error);
+                    
                 }
             });
         }

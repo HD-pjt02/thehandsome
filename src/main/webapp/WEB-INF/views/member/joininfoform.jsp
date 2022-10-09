@@ -57,7 +57,7 @@
 			ACC.accessibilityLoading = 'Loading... Please wait...';
 			ACC.accessibilityStoresLoaded = 'Stores loaded';
 			
-			ACC.autocompleteUrl = '/ko/search/autocompleteSecure';
+			ACC.autocompleteUrl = '/search/autocompleteSecure';
 			
 			
 		//]]>
@@ -2463,7 +2463,7 @@ $(document).ready(function(){
               $("#emailAddress").val("");
           }
           $("#sBirthday").val($("#selYear").val() + $("#selMonth").val() + $("#selDay").val());
-          $("#memberJoinForm").attr("action", "/ko/member/joincomplete");
+          $("#memberJoinForm").attr("action", "/member/joincomplete");
           $("#memberJoinForm").submit();
       });
       
