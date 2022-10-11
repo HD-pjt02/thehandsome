@@ -14,7 +14,13 @@
 		INSERT INTO MEMBER
 		(MNO,ID,PASSWORD,EMAIL,NAME,BIRTH,MILEAGE,REGDATE,LASTLOGINDATE,AMOUNT)
 		VALUES 
-		(1,#{id},#{password},#{email},#{name},#{birth},0,SYSDATE,SYSDATE,0)
+		(MEMBER_SEQ.NEXTVAL,#{id},#{password},#{email},#{name},#{birth},0,SYSDATE,SYSDATE,0)
 	</insert>
+	
+	<select id="memberLogin" parameterType="memberDTO" resultType="memberDTO">
+		SELECT *
+		FROM MEMBER
+		WHERE id = #{id}
+	</select>
 	
 </mapper>

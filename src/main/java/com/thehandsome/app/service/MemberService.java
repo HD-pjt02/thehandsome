@@ -10,4 +10,6 @@ public interface MemberService {
 
 	Long joinMember(MemberDTO memberDTO);
 
+	MemberDTO memberLogin(MemberDTO memberDTO);
+
 }
