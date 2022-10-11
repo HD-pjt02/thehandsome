@@ -172,6 +172,7 @@
 	                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bName=" + encodeURI(brand_array.at(idx).bname) + "&pageNo=1'>" + brand_array.at(idx).bname + "</a></li>";
 	                                 }
 	                                 
+	                                 
 	                                 tmp += "</ul>";
 	                                 tmp += "</div>";
 	                                 
