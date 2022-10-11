@@ -4,24 +4,25 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
-	 <settings>
-        <setting name="cacheEnabled" value="true" />
-        <setting name="useGeneratedKeys" value="false" />
-        <setting name="defaultExecutorType" value="REUSE"/>
-        <setting name="defaultStatementTimeout" value="60"/>
-        <setting name="callSettersOnNulls" value="true"/>
-        <setting name="mapUnderscoreToCamelCase" value="false"/>
-    </settings>
+	<settings>
+		<setting name="cacheEnabled" value="true" />
+		<setting name="useGeneratedKeys" value="false" />
+		<setting name="defaultExecutorType" value="REUSE" />
+		<setting name="defaultStatementTimeout" value="60" />
+		<setting name="callSettersOnNulls" value="true" />
+		<setting name="mapUnderscoreToCamelCase" value="false" />
+	</settings>
 
 	<typeAliases>
-
-		<typeAlias alias="brandDTO"
-			type="com.thehandsome.app.dto.BrandDTO" />
-		<typeAlias alias="categoryDTO"
-			type="com.thehandsome.app.dto.CategoryDTO" />
-		<typeAlias alias="productDTO"
+		<typeAlias alias="ProductDTO"
 			type="com.thehandsome.app.dto.ProductDTO" />
-		<typeAlias alias="memberDTO"
+		<typeAlias alias="CategoryDTO"
+			type="com.thehandsome.app.dto.CategoryDTO" />
+		<typeAlias alias="BrandDTO"
+			type="com.thehandsome.app.dto.BrandDTO" />
+		<typeAlias alias="ColorDTO"
+			type="com.thehandsome.app.dto.ColorDTO" />
+		<typeAlias alias="MemberDTO"
 			type="com.thehandsome.app.dto.MemberDTO" />
 
 	</typeAliases>

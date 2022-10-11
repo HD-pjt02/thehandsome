@@ -6,7 +6,6 @@
 	padding-left: 0;
 	width: 100px;
 }
-
 a:hover {
 	color: black;
 	text-decoration: none;
@@ -43,7 +42,7 @@ a:hover {
 							원
 						</h5>
 						<p>상품번호 : ${product.pcode}</p>
-						<div class="bg-light rounded p-3">"${product.pdetail}"</div>
+						<div class="bg-light rounded p-3">"${product.pcontent}"</div>
 					</td>
 
 				</tr>

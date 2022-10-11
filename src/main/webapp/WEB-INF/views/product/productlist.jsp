@@ -6,98 +6,79 @@ ul {
 	list-style: none;
 	padding: 0;
 }
-
 .container {
 	padding: 0;
 }
-
 a {
 	color: black;
 	text-decoration: none;
 }
-
 a:link {
 	color: black;
 	text-decoration: none;
 }
-
 a:visited {
 	color: black;
 	text-decoration: none;
 }
-
 a:hover {
 	color: black;
 	text-decoration: none;
 }
-
 .cell {
 	float: left;
 	box-sizing: border-box;
 }
-
 .product-list .cell {
 	width: 20%;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 20px;
 }
-
 .img-box>img {
 	display: block;
 	width: 100%;
 	cursor: pointer;
 }
-
 div .product-color {
 	text-align: center;
 }
-
 div .product-color>a>img {
 	margin: 0px 2px;
 	width: 18px;
 	height: 18px;
 }
-
 @media {
 	.product-list .row .cell {
 		width: calc(100%/ 3);
 	}
 }
-
 .product-list .row .cell .brand-name, .product-name, .product-price {
 	text-align: center;
 	font-size: 12px;
 }
-
 .imgswap img:last-child {
 	display: none
 }
-
 .imgswap:hover img:first-child {
 	display: none
 }
-
 .imgswap:hover img:last-child {
 	display: inherit
 }
-
 .btn-group button {
 	cursor: pointer;
 	float: left;
 }
-
 .btn-group button:not(:last-child) {
 	border-right: none;
 }
-
 .dropdown-menu {
 	height: auto;
 	max-height: 200px;
 	width: 250px;
 	overflow-x: hidden;
 }
-
 input[id="cb1"] {
 	width: 22px;
 	height: 22px;
@@ -117,14 +98,14 @@ input[id="cb1"] {
 	<script>
 		const url = new URL(window.location.href);
 		const urlParams = url.searchParams;
-		let tmp = "<a href='${pageContext.request.contextPath}/product/productlist?cLarge=" + urlParams.get("cLarge") + "&cMedium=none&cSmall=none&pageNo=1'>" + urlParams.get("cLarge") + "</a>";
-		if (urlParams.get("cMedium") !== "none") {
+		let tmp = "<a href='${pageContext.request.contextPath}/product/productlist?clarge=" + urlParams.get("clarge") + "&cmedium=none&csmall=none&pageNo=1'>" + urlParams.get("clarge") + "</a>";
+		if (urlParams.get("cmedium") !== "none") {
 			tmp += " ＞ ";
-			tmp += "<a href='${pageContext.request.contextPath}/product/productlist?cLarge=" + urlParams.get("cLarge") + "&cMedium=" + urlParams.get("cMedium") + "&cSmall=none&pageNo=1'>" + urlParams.get("cMedium")
+			tmp += "<a href='${pageContext.request.contextPath}/product/productlist?clarge=" + urlParams.get("clarge") + "&cmedium=" + urlParams.get("cmedium") + "&csmall=none&pageNo=1'>" + urlParams.get("cmedium")
 					+ "</a>";
-			if (urlParams.get("cSmall") !== "none") {
+			if (urlParams.get("csmall") !== "none") {
 				tmp += " ＞ ";
-				tmp += "<a href='${pageContext.request.contextPath}/product/productlist?cLarge=" + urlParams.get("cLarge") + "&cMedium=" + urlParams.get("cMedium") + "&cSmall=" + urlParams.get("cSmall") + "&pageNo=1'>" + urlParams.get("cSmall")
+				tmp += "<a href='${pageContext.request.contextPath}/product/productlist?clarge=" + urlParams.get("clarge") + "&cmedium=" + urlParams.get("cmedium") + "&csmall=" + urlParams.get("csmall") + "&pageNo=1'>" + urlParams.get("csmall")
 						+ "</a>";
 			}
 		}
@@ -146,38 +127,38 @@ input[id="cb1"] {
 	</div>
 	<div id="pager-container" class="container text-center mb-3">
 		<a
-			href="productlist?cLarge=${category.cLarge}&cMedium=${category.cMedium}&cSmall=${category.cSmall}&pageNo=1">처음</a>
+			href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=1">처음</a>
 		<c:if test="${pager.groupNo > 1}">
 			<a class="btn btn-light btn-sm"
-				href="productlist?cLarge=${category.cLarge}&cMedium=${category.cMedium}&cSmall=${category.cSmall}&pageNo=${pager.startPageNo-1}">이전</a>
+				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${pager.startPageNo-1}">이전</a>
 		</c:if>
 		<c:forEach var="i" begin="${pager.startPageNo}"
 			end="${pager.endPageNo}">
 			<c:if test="${pager.pageNo != i}">
 				<a class="btn btn-light btn-sm"
-					href="productlist?cLarge=${category.cLarge}&cMedium=${category.cMedium}&cSmall=${category.cSmall}&pageNo=${i}">${i}</a>
+					href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
 			</c:if>
 			<c:if test="${pager.pageNo == i}">
 				<a class="btn btn-outline-dark btn-sm"
-					href="productlist?cLarge=${category.cLarge}&cMedium=${category.cMedium}&cSmall=${category.cSmall}&pageNo=${i}">${i}</a>
+					href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
 			</c:if>
 		</c:forEach>
 		<c:if test="${pager.groupNo < pager.totalGroupNo}">
 			<a class=""
-				href="productlist?cLarge=${category.cLarge}&cMedium=${category.cMedium}&cSmall=${category.cSmall}&pageNo=${pager.endPageNo+1}">다음</a>
+				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${pager.endPageNo+1}">다음</a>
 		</c:if>
 
 		<a class=""
-			href="productlist?cLarge=${category.cLarge}&cMedium=${category.cMedium}&cSmall=${category.cSmall}&pageNo=${pager.totalPageNo}">끝</a>
+			href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${pager.totalPageNo}">끝</a>
 	</div>
 	<script>
 		let product_array;
 		
 		$(window).ready(function () {
 			$.ajax({
-				url: "${pageContext.request.contextPath}/product/getProductList?cLarge=" + urlParams.get("cLarge")
-						+ "&cMedium=" + urlParams.get("cMedium")
-						+ "&cSmall=" + urlParams.get("cSmall")
+				url: "${pageContext.request.contextPath}/product/getProductList?clarge=" + urlParams.get("clarge")
+						+ "&cmedium=" + urlParams.get("cmedium")
+						+ "&csmall=" + urlParams.get("csmall")
 						+ "&pageNo=" + urlParams.get("pageNo")
 			}).done((data) => {
 				product_array = data.products;

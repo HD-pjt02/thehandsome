@@ -5,9 +5,9 @@
 
 <mapper namespace="com.thehandsome.app.mapper.MemberMapper">
 	<select id="isdupluid" parameterType="String" resultType="Long">
-		SELECT 1
+		SELECT *
 		FROM MEMBER
-		WHERE id = #{uid}
+		WHERE id = #{id}
 	</select>
 	
 </mapper>
