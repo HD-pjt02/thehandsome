@@ -2929,10 +2929,10 @@ $(document).ready(function(){
             <!--//sub container-->
         </div>
         
-        <form id="resultSend" action="/ko/member/joinprovision" method="POST"><input type="hidden" name="uid" value="wlgns3882@naver.com">
+        <form id="resultSend" action="/member/joinprovision" method="POST"><input type="hidden" name="uid" value="${useremail}">
             <input type="hidden" name="checkOptional" id="checkOptional">
         <div>
-<input type="hidden" name="CSRFToken" value="289c8a50-3404-43c6-9404-7ea8ef0646fd">
+<input type="hidden" name="CSRFToken" value="${token}">
 </div></form><!-- footerWrap -->
 
 <script type="text/javascript">

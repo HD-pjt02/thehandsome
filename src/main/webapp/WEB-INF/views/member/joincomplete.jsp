@@ -19,7 +19,7 @@
         <meta name="keywords" contents="한섬, 더한섬닷컴, 한섬몰, 한섬아울렛, 한섬닷컴, 더한섬, 한섬올라인몰, HANDSOME, thehandsome">
 <title>
 	회원가입완료 | 더한섬닷컴</title>
-<link rel="shortcut icon" href="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/thehandsome_ic_16x16.ico">
+<link rel="shortcut icon" href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/font_443.css" media="all">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css?20220929" media="all">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/layout.css?20220826" media="all">
@@ -666,7 +666,7 @@ function GA_Event(Category,Action,Label) {
                              innerHtml += '    <div class="today_close" style="position:absolute;bottom:0;left:6px;width:134px;">';
                              innerHtml += '        <label for="justDay1" style="cursor:pointer;color:#000;letter-spacing:-.5px;">오늘 하루 보지 않기</label>';
                              innerHtml += '        <input id="justDay1" type="checkbox" name="day_close" value="오늘 하루 보지 않기" style="display:none">';
-                             innerHtml += '        <a href="javascript:mapleEvtPopClose()" alt="닫기" class="close" style="background:url(\'http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/btn_close.png\') no-repeat; display:block; position:absolute; bottom:2px; right:6px; width:11px; height:11px; z-index:2;">&nbsp;</a>';
+                             innerHtml += '        <a href="javascript:mapleEvtPopClose()" alt="닫기" class="close" style="background:url(\'http://cdn.thehandsome.com/_ui/desktop/common/images/common/btn_close.png\') no-repeat; display:block; position:absolute; bottom:2px; right:6px; width:11px; height:11px; z-index:2;">&nbsp;</a>';
                              innerHtml += '    </div>';
                              innerHtml += '</div>';
                          
@@ -923,7 +923,7 @@ function setPlayLeaves(item){
             if(data == "anonymous") {
                     innerHtml  = '<div class="popwrap_maple_evt2209" style="height:319px;">';
                     innerHtml += '   <div class="check_my_maple" style="position:relative">';
-                    innerHtml += '       <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_login.jpg" alt="오늘의 단풍잎">';
+                    innerHtml += '       <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_login.jpg" alt="오늘의 단풍잎">';
                     innerHtml += '       <a href="/ko/magazine/events/8804481881984/login" style="width:160px;height:40px;text-indent:-9999px;position:absolute;top:208px;left:120px;display:block">로그인 바로가기</a>';
                     innerHtml += '       <a href="javascript:mapleEvtPopClose()" class="btn_close_oneday" style="position:absolute;width:130px;height:30px;bottom:25px;left:135px;text-indent:-9999px;display:block">오늘 하루 보지 않기</a>';
                     innerHtml += '   </div>';
@@ -933,7 +933,7 @@ function setPlayLeaves(item){
             }else if(data == "noTarget") {
                     innerHtml  = '<div class="popwrap_maple_evt2209" style="height:319px;">';
                     innerHtml += '   <div class="check_my_maple" style="position:relative">';
-                    innerHtml += '       <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_login02_1.jpg" alt="오늘의 단풍잎">';
+                    innerHtml += '       <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_login02_1.jpg" alt="오늘의 단풍잎">';
                     innerHtml += '       <a href="https://www.h-point.co.kr/cu/join/start.nhd" style="width:160px;height:40px;text-indent:-9999px;position:absolute;top:208px;left:120px;display:block">통합회원 가입하기</a>';
                     innerHtml += '       <a href="javascript:mapleEvtPopClose()" class="btn_close_oneday" style="position:absolute;width:130px;height:30px;bottom:25px;left:135px;text-indent:-9999px;display:block">오늘 하루 보지 않기</a>';
                     innerHtml += '   </div>';
@@ -943,7 +943,7 @@ function setPlayLeaves(item){
             }else if(data == "nextTime") {
                     innerHtml  = '<div class="popwrap_maple_evt2209" style="height:269px;">';
                     innerHtml += '   <div class="check_my_maple" style="position:relative">';
-                    innerHtml += '       <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_todayend.jpg" alt="내일 다시 참여해보세요">';
+                    innerHtml += '       <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_todayend.jpg" alt="내일 다시 참여해보세요">';
                     innerHtml += '       <a href="javascript:mapleEvtPopClose()" class="btn_close_oneday" style="position:absolute;width:130px;height:30px;bottom:34px;left:135px;text-indent:-9999px;display:block">오늘 하루 보지 않기</a>';
                     innerHtml += '   </div>';
                     innerHtml += '   <a href="javascript:mapleEvtPopClose()" class="btn_close"></a>';
@@ -953,11 +953,11 @@ function setPlayLeaves(item){
                     innerHtml = '<div class="popwrap_maple_evt2209" style="height:349px;">';
                     innerHtml += '    <div class="check_my_maple" style="position:relative">';
                     if(item == "1" || item == "2" || item == "3" || item == "4") {
-                        innerHtml += '    <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_red.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
+                        innerHtml += '    <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_red.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
                     }else if(item == "5" || item == "6" || item == "7") { 
-                        innerHtml += '    <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_green.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
+                        innerHtml += '    <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_green.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
                     }else if(item == "8" || item == "9" || item == "10") {
-                        innerHtml += '    <img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/event/202209_maple/evt_maple_202209_pc_pop_brown.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
+                        innerHtml += '    <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/event/202209_maple/evt_maple_202209_pc_pop_brown.jpg" alt="행운의 황금 단풍잎을 획득하셨습니다.">';
                     }
                     
                     innerHtml += '        <a href="javascript:mapleEvtPopClose(\'close\')" style="width:170px;height:40px;text-indent:-9999px;position:absolute;bottom:77px;left:28px">계속 쇼핑</a>';
@@ -2163,11 +2163,11 @@ if(typeof kakaoPixel !== 'undefined'){
 $(document).ready(function(){
 	
 	$("#mainBtn").click(function(){
-		location.href="/ko/";
+		location.href="/";
 	});
 	
 	$("#loginBtn").click(function(){
-		location.href="/ko/member/login";
+		location.href="/member/login";
 	});
 	
     
@@ -2242,14 +2242,14 @@ function setLogout(){
 
 <div id="footerWrap">
 	<div id="topBtn">
-		<a href="javascript:void(0);" class="viewTopArea"><img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/top_btn.png" alt="맨 위로" onclick="GA_Event('공통','퀵버튼','TOP');"></a>
+		<a href="javascript:void(0);" class="viewTopArea"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/top_btn.png" alt="맨 위로" onclick="GA_Event('공통','퀵버튼','TOP');"></a>
 	</div>
 	<div class="footer">
 		<!--footer_cnts1 -->
 		<div class="footer_cnts1 clearfix">
 			<!-- footer_menu-->
 			<div class="footer_menu cnts1_left">
-				<div class="footer_logo"><a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
+				<div class="footer_logo"><a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
 				<div class="footer_link">
 					<ul class="clearfix">
 					    <li><a href="/ko/svcenter/theClubInfo" onclick="GA_Event('공통','푸터_메뉴','온라인 멤버십');">온라인 멤버십</a></li>
@@ -2289,7 +2289,7 @@ function setLogout(){
 				<!--download_app , athome-->
 				<div class="cnts1_right_inner">
 				    <a href="/ko/appDownloadSMS/sendSMSPage" onclick="GA_Event('공통','푸터','APP다운로드');">
-<img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/footer_ico_apps.png" alt="APP 다운로드" style="width:52px;height:71px;">
+<img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_ico_apps.png" alt="APP 다운로드" style="width:52px;height:71px;">
 <!-- 				        <img src="${pageContext.request.contextPath}/resources/images/common/ico_apps_new.png" alt="APP 다운로드" style="width:54px;height:70px;"> -->
 <p>APP 다운로드 &gt;</p>
 			        </a>
