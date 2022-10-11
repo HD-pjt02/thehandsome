@@ -1911,7 +1911,7 @@ function GA_search(){
             <div class="brand_menu brand_menu1903">
             <ul class="clearfix">
                 <!-- 선호 브랜드 없음 -->
-                        <li><span class="on"><a href="/ko/main" onclick="GA_Event('공통','탑_네비게이션','HOME')">HOME</a></span></li>
+                        <li><span class="on"><a href="/" onclick="GA_Event('공통','탑_네비게이션','HOME')">HOME</a></span></li>
                         <!-- 로그인 상태 -->
 								<!-- 비로그인 상태 -->
                         		<p class="brand_menu_guide_text">로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
@@ -2122,7 +2122,7 @@ function GA_search(){
 <input type="hidden" name="CSRFToken" value="f1ec6a61-8f11-4005-b3e4-77e27a91af9f">
 </div></form><!-- //headerWrap --><div class="gnbwarp new201608 clearfix">
         <h1 class="logo logo1903">
-            <a href="/ko/main" onclick="GA_Event('공통', '로고', '상단');">thehandsome.com</a>
+            <a href="/" onclick="GA_Event('공통', '로고', '상단');">thehandsome.com</a>
         </h1>
         <!-- 첫번째 c:if -->
 
@@ -2146,6 +2146,11 @@ function GA_search(){
 //<![CDATA[ 
 $(document).ready(function(){
     
+	/* 
+	작성자: 신미림
+	작성일: 22.10.09
+	내용: 이메일인증 버튼
+	*/
     $('#emailAuthBtn').click(function(){
         var vc = new ValidationCheck();   
         vc.checkIdList = ['id', 'uidDomain', 'uidDuplChk'];
@@ -2157,7 +2162,7 @@ $(document).ready(function(){
             var email = $("#id").val()+"@"+$("#uidDomain").val();
             $.ajax({
                 type: "GET",
-                url: "/ko/member/easyjoinsendmail?userMail="+email,
+                url: "/member/easyjoinsendmail?userMail="+email,
                 success: function(data){
                     if(data.resultCode=="S"){
                         layerAlert("["+email+"]으로 발송된 인증메일의<br/>인증링크를 유효시간 30분 안에 선택해주세요.");
@@ -2308,14 +2313,14 @@ var authFailFn = function(msg){
                         </div>
                     </fieldset>
                 
-                <div class="jo_bottom_banner">
+                <!-- <div class="jo_bottom_banner">
                     <div class="left_banner">
                         <a href="http://www.thehandsome.com/ko/magazine/events/8802941687680" target="_blank">통합회원 가입 시 <br>가입 축하 <span style="color:#c69c6c;">정상 15% &amp; 아울렛 5% 쿠폰</span> 증정<span class="dtil_viw">자세히 보기 &gt;&gt;</span></a>
                     </div>
                     <div class="right_banner">
                         <a href="/ko/svcenter/theClubInfo" target="_blank">통합회원을 위한<br>한섬 온라인 멤버십 <span style="color:#c69c6c;">THE 클럽</span><span class="dtil_viw">자세히 보기 &gt;&gt;</span></a>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!--//sub container-->
         </div></form>
@@ -2368,7 +2373,7 @@ function setLogout(){
 		<div class="footer_cnts1 clearfix">
 			<!-- footer_menu-->
 			<div class="footer_menu cnts1_left">
-				<div class="footer_logo"><a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
+				<div class="footer_logo"><a href="/" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com${pageContext.request.contextPath}/resources/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
 				<div class="footer_link">
 					<ul class="clearfix">
 					    <li><a href="/ko/svcenter/theClubInfo" onclick="GA_Event('공통','푸터_메뉴','온라인 멤버십');">온라인 멤버십</a></li>
