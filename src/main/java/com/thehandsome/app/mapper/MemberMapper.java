@@ -11,4 +11,6 @@ public interface MemberMapper {
 
 	Long joinMember(MemberDTO memberDTO);
 
+	MemberDTO memberLogin(MemberDTO memberDTO);
+
 }

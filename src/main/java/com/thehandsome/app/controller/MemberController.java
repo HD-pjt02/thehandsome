@@ -3,9 +3,14 @@ package com.thehandsome.app.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,12 +30,15 @@ public class MemberController {
 	private MemberService memberService;
 	
 	
+	@Autowired
+	private BCryptPasswordEncoder pwEncoder;
+	
+	
 	
 	/*****************회원가입 관련 기능**********************/
 	@RequestMapping(value="/joinstart",  method= {RequestMethod.GET})
 	public String joinstart() {
 		log.info("회원가입 시작 폼");
-		
 		return "member/joinstart";
 	
 	}
@@ -71,11 +79,13 @@ public class MemberController {
 	@RequestMapping(value="/joincomplete",  method= {RequestMethod.POST})
 	public String joincompleteaction(@RequestParam Map<String,Object> map) {
 		log.info("회원가입 완료 폼");
+		String rawPw = (String)map.get("passwd");
+		String encodePw = pwEncoder.encode(rawPw);
 		MemberDTO memberDTO = new MemberDTO();
 		memberDTO.setId((String)map.get("uid"));
 		memberDTO.setEmail((String)map.get("emailAddress"));
 		memberDTO.setBirth((String)map.get("sBirthday"));
-		memberDTO.setPassword((String)map.get("passwd"));
+		memberDTO.setPassword(encodePw);
 		memberDTO.setName((String)map.get("name"));
 		
 		//String emailReceiveYn = (String)map.get("emailReceiveYn");
@@ -137,7 +147,54 @@ public class MemberController {
 	public String login() {
 		log.info("로그인 폼");
 		return "member/login";
+	}
 	
+	@RequestMapping(value="/isduplglobaluid",  method= {RequestMethod.POST})
+	public @ResponseBody Map<String,String> isduplglobaluid(@RequestParam Map<String,Object> map) {
+		log.info("통합회원 여부 체크");
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setId((String)map.get("uid"));
+		memberDTO.setPassword((String)map.get("upw"));
+		log.info("id: "+memberDTO.getId());
+		log.info("pw: "+memberDTO.getPassword());
+		
+		Map<String,String> msg = new HashMap<String,String>();
+		msg.put("result","exist");
+		log.info(""+msg);
+		
+		return msg;
+	}
+	
+	@RequestMapping(value="/login",  method= {RequestMethod.POST})
+	public String loginaction(@RequestParam Map<String,Object> map, Model model,HttpServletRequest request ) {
+		log.info("로그인 진행");
+		HttpSession session = request.getSession();
+		String rawPw = (String)map.get("j_password");
+//		String j_username = (String)map.get("j_username");
+		
+		MemberDTO memberDTO = new MemberDTO();
+		memberDTO.setId((String)map.get("inputId"));
+		MemberDTO memberInfo = memberService.memberLogin(memberDTO);
+		String encodePw = memberInfo.getPassword();
+	        
+		if(memberInfo != null) {                                // 일치하지 않는 아이디, 비밀번호 입력 경우
+		    
+		   if(true == pwEncoder.matches(rawPw, encodePw)) {
+			   session.setAttribute("member", memberInfo); 
+				return "redirect:/";
+		   }
+		   else {
+				model.addAttribute("result", 0);
+				return "redirect:/member/login";
+		   }
+		   
+		    
+		}else {
+			 model.addAttribute("result", 0);
+			 return "redirect:/member/login";
+		}
+		
+		
 	}
 	
 }

@@ -2215,10 +2215,10 @@ $(document).ready(function(){
         
         $.ajax({
             type:"POST",
-            url:"/ko/member/isduplglobaluid",
+            url:"/member/isduplglobaluid",
             data: {"uid":id,"upw":pw,"CSRFToken":"289c8a50-3404-43c6-9404-7ea8ef0646fd"},
             success:function(data){
-                if(data.result == "exist"){
+            	if(data.result == "exist"){
                     GA_Event('로그인', '로그인', '로그인');
                     $("#inputId").val(id);
                     $("#loginForm").submit();
@@ -2777,7 +2777,7 @@ function kakaoLogin(){
 	                    <h4>회원</h4>
 	                </div>
 	                <div id="hpIPLogin">
-	                <form id="loginForm" name="loginForm" action="/ko/j_spring_security_check" method="post">
+	                <form id="loginForm" name="loginForm" action="/member/login" method="post"> <!--post로 action으로 넘기겠다 --> 
 	                    <input type="hidden" name="inputId" id="inputId" value="">
 	                    <fieldset>
 	                        <legend>로그인 입력항목</legend>
