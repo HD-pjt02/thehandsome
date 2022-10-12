@@ -2388,7 +2388,7 @@ $(document).ready(function(){
      $("#email, #emailDomain, #emailDomainSel").change(function(){
           $("#emailMsg").text('');
           $("#emailDuplChk").val(''); 
-          var email1 = "wlgns3882@naver.com";
+          var email1 = "${useremail}";
           var email2= $("#email").val()+"@"+$("#emailDomain").val();
           
           if(email1 != email2){
@@ -2400,7 +2400,7 @@ $(document).ready(function(){
       $("#cancleBtn").click(function(){
           var lc = new layerConfirm('회원가입을 취소하시겠습니까?', '확인', '취소');
           lc.confirmAction = function(){
-              location.href="/ko/";
+              location.href="/";
           };
       });
 
@@ -2476,7 +2476,7 @@ $(document).ready(function(){
       
       $('#ck1').click(function(){
           if($(this).is(':checked')){
-              var email = "wlgns3882@naver.com";
+              var email = "${useremail}";
               var emailArray = email.split("@");
               
               $("#email").val(emailArray[0]);
@@ -2592,10 +2592,10 @@ function validateEmail(email) {
 //]]>
 </script>
 
-<form id="memberJoinForm" action="/ko/member/joininfoform" method="POST"><input type="hidden" name="emailDuplChk" id="emailDuplChk" value="" title="이메일 중복">
+<form id="memberJoinForm" action="/member/joininfoform" method="POST"><input type="hidden" name="emailDuplChk" id="emailDuplChk" value="" title="이메일 중복">
         <input type="hidden" name="pwTypeChk" id="pwTypeChk" value="" title="비밀번호 형식">
         <input type="hidden" name="pwConfirmChk" id="pwConfirmChk" value="" title="비밀번호 일치">
-        <input type="hidden" id="uid" name="uid" value="wlgns3882@naver.com">
+        <input type="hidden" id="uid" name="uid" value="${useremail}">
         <input type="hidden" id="emailAddress" name="emailAddress" value="">
         <input type="hidden" id="sBirthday" name="sBirthday" value="">
         <input type="hidden" id="gender" name="gender" value="">
@@ -2638,7 +2638,7 @@ function validateEmail(email) {
                                     <tbody>
                                         <tr>
                                             <th scope="row">이메일 아이디</th>
-                                            <td>wlgns3882@naver.com</td>
+                                            <td>${useremail}</td>
                                         </tr>
                                         <tr>
                                             <th scope="row"><strong class="reqd">*</strong><label for="pw">비밀번호</label></th>

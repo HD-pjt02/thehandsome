@@ -10,4 +10,17 @@
 		WHERE id = #{uid}
 	</select>
 	
+	<insert id="joinMember" parameterType="memberDTO">
+		INSERT INTO MEMBER
+		(MNO,ID,PASSWORD,EMAIL,NAME,BIRTH,MILEAGE,REGDATE,LASTLOGINDATE,AMOUNT)
+		VALUES 
+		(MEMBER_SEQ.NEXTVAL,#{id},#{password},#{email},#{name},#{birth},0,SYSDATE,SYSDATE,0)
+	</insert>
+	
+	<select id="memberLogin" parameterType="memberDTO" resultType="memberDTO">
+		SELECT *
+		FROM MEMBER
+		WHERE id = #{id}
+	</select>
+	
 </mapper>
