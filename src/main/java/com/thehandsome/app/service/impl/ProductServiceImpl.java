@@ -16,6 +16,7 @@ import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
+import com.thehandsome.app.dto.StockDTO;
 import com.thehandsome.app.mapper.ProductMapper;
 import com.thehandsome.app.service.ProductService;
 
@@ -34,7 +35,7 @@ public class ProductServiceImpl implements ProductService {
 	private ProductMapper productMapper;
 
 	public ProductDTO getProduct(String pcode) {
-		logger.info("ProductDTO getProduct(String pcode) 실행");
+		//logger.info("ProductDTO getProduct(String pcode) 실행");
 		return productMapper.selectProduct(pcode);
 	}
 
@@ -47,13 +48,10 @@ public class ProductServiceImpl implements ProductService {
 		if (category.getClarge().equals("none")) {
 			return productMapper.selectProductsBrand(categorypage);
 		} else if (category.getCmedium().equals("none")) {
-			// 대분류
 			return productMapper.selectProductsNoMedium(categorypage);
 		} else if (category.getCsmall().equals("none")) {
-			// 대분류 + 중분류
 			return productMapper.selectProductsNoSmall(categorypage);
 		}
-		// 대분류 + 중분류 + 소분류
 		return productMapper.selectProducts(categorypage);
 	}
 
@@ -61,9 +59,9 @@ public class ProductServiceImpl implements ProductService {
 		return productMapper.selectProductColor(pcode);
 	}
 
-	/*public List<ProductSize> getProductSize(ProductDTO pcode) {
+	public List<StockDTO> getProductSize(ProductDTO pcode) {
 		return productMapper.selectProductSize(pcode);
-	}*/
+	}
 
 	public int getTotalProductNum(CategoryDTO category) {
 		if (category.getClarge().equals("none")) {
@@ -90,7 +88,7 @@ public class ProductServiceImpl implements ProductService {
 		return productMapper.count(category);
 	}
 
-	/*public Stock getProductStock(String scode) {
-		return productMapper.selectProductStock(scode);
-	}*/
+	public StockDTO getProductStock(String pcode) {
+		return productMapper.selectProductStock(pcode);
+	}
 }

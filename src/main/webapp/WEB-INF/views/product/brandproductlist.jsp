@@ -100,11 +100,11 @@ input[id="cb1"] {
       const url = new URL(window.location.href);
       //searchParams는메소드로 접근
       const urlParams = url.searchParams;
-      let tmp = "<a href='${pageContext.request.contextPath}/product/brandproductlist?bName=none&pageNo=1'>BRAND</a>";
+      let tmp = "<a href='${pageContext.request.contextPath}/product/brandproductlist?bname=none&pageNo=1'>BRAND</a>";
       
-         if (urlParams.get("bName") !== "none") {
+         if (urlParams.get("bname") !== "none") {
             tmp += " ＞ ";
-            tmp += "<a href='${pageContext.request.contextPath}/product/brandproductlist?bName=" + encodeURI(urlParams.get("bName")) + "&pageNo=1'>" + urlParams.get("bName") + "</a>";
+            tmp += "<a href='${pageContext.request.contextPath}/product/brandproductlist?bname=" + encodeURI(urlParams.get("bname")) + "&pageNo=1'>" + urlParams.get("bname") + "</a>";
          }
       $("#product_brand_title").html(tmp);
    </script>
@@ -122,31 +122,31 @@ input[id="cb1"] {
 			</ul>
 		</div>
 	</div>
-	<div id="pager-container" class="container text-center mb-3">
-		<a href="brandproductlist?bName=${brand.bname}&pageNo=1">처음</a>
-		<c:if test="${pager.groupNo > 1}">
+	<div id="page-container" class="container text-center mb-3">
+		<a href="brandproductlist?bname=${brand.bname}&pageNo=1">처음</a>
+		<c:if test="${page.groupNo > 1}">
 
 			<a class="btn btn-light btn-sm"
-				href="brandproductlist?bName=${brand.bname}&pageNo=${pager.startPageNo-1}">이전</a>
+				href="brandproductlist?bname=${brand.bname}&pageNo=${page.startPageNo-1}">이전</a>
 		</c:if>
-		<c:forEach var="i" begin="${pager.startPageNo}"
-			end="${pager.endPageNo}">
-			<c:if test="${pager.pageNo != i}">
+		<c:forEach var="i" begin="${page.startPageNo}"
+			end="${page.endPageNo}">
+			<c:if test="${page.pageNo != i}">
 				<a class="btn btn-light btn-sm"
-					href="brandproductlist?bName=${brand.bname}&pageNo=${i}">${i}</a>
+					href="brandproductlist?bname=${brand.bname}&pageNo=${i}">${i}</a>
 			</c:if>
-			<c:if test="${pager.pageNo == i}">
+			<c:if test="${page.pageNo == i}">
 				<a class="btn btn-outline-dark btn-sm"
-					href="brandproductlist?bName=${brand.bname}&pageNo=${i}">${i}</a>
+					href="brandproductlist?bname=${brand.bname}&pageNo=${i}">${i}</a>
 			</c:if>
 		</c:forEach>
-		<c:if test="${pager.groupNo < pager.totalGroupNo}">
+		<c:if test="${page.groupNo < page.totalGroupNo}">
 			<a class=""
-				href="brandproductlist?bName=${brand.bname}&pageNo=${pager.endPageNo+1}">다음</a>
+				href="brandproductlist?bname=${brand.bname}&pageNo=${page.endPageNo+1}">다음</a>
 		</c:if>
 
 		<a class=""
-			href="brandproductlist?bName=${brand.bname}&pageNo=${pager.totalPageNo}">끝</a>
+			href="brandproductlist?bname=${brand.bname}&pageNo=${page.totalPageNo}">끝</a>
 	</div>
 
 	<script>
@@ -154,7 +154,7 @@ input[id="cb1"] {
       
       $(window).ready(function () {
          $.ajax({
-            url: "${pageContext.request.contextPath}/product/getBrandProductList?bName=" + urlParams.get("bName") + "&pageNo=" + urlParams.get("pageNo")
+            url: "${pageContext.request.contextPath}/product/getBrandProductList?bname=" + urlParams.get("bname") + "&pageNo=" + urlParams.get("pageNo")
          }).done((data) => {
             product_array = data.products;
             let html_tmp = "";

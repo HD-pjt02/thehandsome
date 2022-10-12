@@ -56,8 +56,8 @@ public class HomeController {
 	@ResponseBody
 	public String getBrandList(HttpSession session) {
 		if (!brandListJson.get("result").equals("success")) {
-			List<BrandDTO> brands = brandService.getBrandList();
-			brandListJson.put("brands", brands);
+			List<BrandDTO> brand = brandService.getBrandList();
+			brandListJson.put("brand", brand);
 			brandListJson.put("result", "success");
 		}
 		String json = brandListJson.toString();
@@ -70,10 +70,11 @@ public class HomeController {
 	@GetMapping(value = "/getCategoryList", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String getCategoryList(String clarge, HttpSession session) {
-
+		System.out.println("clarge : " + clarge);
 		if (!categoryListJson.get("result").equals("success")) {
 			CategoryDTO tmp = new CategoryDTO();
 			tmp.setClarge(clarge);
+			System.out.println("tmp.getClarge() : " + tmp.getClarge());
 
 			List<CategoryDTO> categoryMedium = categoryService.getCategoryMedium(tmp);
 

@@ -11,6 +11,7 @@ import lombok.Data;
 public class ColorDTO {
 	/* 1. 상품 품번  */
 	private String pcode;
+	private String pcodecolor;
 	private String pcolor;
 	private String colorurl;
 	private String frontimg1;

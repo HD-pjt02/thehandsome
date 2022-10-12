@@ -7,7 +7,8 @@ ul {
 	padding: 0;
 }
 .container {
-	padding: 0;
+    max-width: 1500px;
+	padding: 10px;
 }
 a {
 	color: black;
@@ -50,7 +51,7 @@ div .product-color>a>img {
 }
 @media {
 	.product-list .row .cell {
-		width: calc(100%/ 3);
+		width: calc(100%/ 4);
 	}
 }
 .product-list .row .cell .brand-name, .product-name, .product-price {
@@ -125,31 +126,31 @@ input[id="cb1"] {
 			</ul>
 		</div>
 	</div>
-	<div id="pager-container" class="container text-center mb-3">
+	<div id="page-container" class="container text-center mb-3">
 		<a
 			href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=1">처음</a>
-		<c:if test="${pager.groupNo > 1}">
+		<c:if test="${page.groupNo > 1}">
 			<a class="btn btn-light btn-sm"
-				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${pager.startPageNo-1}">이전</a>
+				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.startPageNo-1}">이전</a>
 		</c:if>
-		<c:forEach var="i" begin="${pager.startPageNo}"
-			end="${pager.endPageNo}">
-			<c:if test="${pager.pageNo != i}">
+		<c:forEach var="i" begin="${page.startPageNo}"
+			end="${page.endPageNo}">
+			<c:if test="${page.pageNo != i}">
 				<a class="btn btn-light btn-sm"
 					href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
 			</c:if>
-			<c:if test="${pager.pageNo == i}">
+			<c:if test="${page.pageNo == i}">
 				<a class="btn btn-outline-dark btn-sm"
 					href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
 			</c:if>
 		</c:forEach>
-		<c:if test="${pager.groupNo < pager.totalGroupNo}">
+		<c:if test="${page.groupNo < page.totalGroupNo}">
 			<a class=""
-				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${pager.endPageNo+1}">다음</a>
+				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.endPageNo+1}">다음</a>
 		</c:if>
 
 		<a class=""
-			href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${pager.totalPageNo}">끝</a>
+			href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.totalPageNo}">끝</a>
 	</div>
 	<script>
 		let product_array;
@@ -167,18 +168,19 @@ input[id="cb1"] {
 					let product = product_array.at(i);
 					let product_color = product.colors;
 					let product_info = product.product;
+					//console.log(product_info);
 					let tmp = "";
-					tmp += "<li class='cell'><a id='product_link" + i + "' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&cproductcolor=" + product_array.at(i).colors.at(product_array.at(i).state).cproductcolor + "'>";
+					tmp += "<li class='cell'><a id='product_link" + i + "' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
 					tmp += "	<div id='product_img" + i + "' class='img-box imgswap'>";
-					tmp += "		<img src='" + product_color.at(product_array.at(i)["state"])["cimageproduct1"] + "' alt='' />";
-					tmp += "		<img src='" + product_color.at(product_array.at(i)["state"])["cimageproduct2"] + "' alt='' />";
+					tmp += "		<img src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
+					tmp += "		<img src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
 					tmp += "	</div>";
 					tmp += "	<div class='brand-name'>" + product_info.bname + "</div>";
 					tmp += "	<div class='product-name'>" + product_info.pname + "</div>";
-					tmp += "	<div class='product-price'>" + product_info.pprice.toLocaleString() + "원</div></a>";
+					tmp += "	<div class='product-price'>￦ " + product_info.pprice.toLocaleString() + "원</div></a>";
 					tmp += "	<div class='product-color'>";
 					for (let j = 0; j < product_color.length; j++) {
-						tmp += "<a href='javascript:changeColor(" + i + ", " + j + ")'><img src='" + product_color.at(j)["ccolorchipimage"] + "'/></a>";
+						tmp += "<a href='javascript:changeColor(" + i + ", " + j + ")'><img src='" + product_color.at(j)["colorurl"] + "'/></a>";
 					}
 					tmp += "	</div>";
 					tmp += "</li>";
@@ -199,7 +201,7 @@ input[id="cb1"] {
 				tmp += "<img src='" + color_img["cimageproduct1"] + "' alt='' />";
 				tmp += "<img src='" + color_img["cimageproduct2"] + "' alt='' />";
 			
-			$(p_link).attr("href", "productdetail?pcode=" + product_array.at(product_idx).product.pcode + "&cproductcolor=" + product_array.at(product_idx).colors.at(product_array.at(product_idx).state).cproductcolor);
+			$(p_link).attr("href", "productdetail?pcode=" + product_array.at(product_idx).product.pcode + "&pcolor=" + product_array.at(product_idx).colors.at(product_array.at(product_idx).state).pcolor);
 			$(p_color_id).html(tmp);
 		}
 	</script>

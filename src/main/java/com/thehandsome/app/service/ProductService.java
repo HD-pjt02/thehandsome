@@ -7,6 +7,7 @@ import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
+import com.thehandsome.app.dto.StockDTO;
 
 /* 작성자 : 정승하
  * 작성일 : 2022.10.17.월
@@ -23,5 +24,9 @@ public interface ProductService {
 	public int getTotalProductNum(CategoryDTO category);
 	
 	public int getTotalProductNumIncludeBrand(BrandDTO brand, CategoryDTO category);
+	
+	public StockDTO getProductStock(String pcode);
+	
+	public List<StockDTO> getProductSize(ProductDTO pcode);
 
 }

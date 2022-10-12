@@ -20,12 +20,12 @@ public class CategoryServiceImpl  implements CategoryService {
 	private CategoryMapper categoryMapper;
 
 	public List<CategoryDTO> getCategoryMedium(CategoryDTO forMedium) {
-		logger.info("List<CategoryDTO> getCategoryMedium(CategoryDTO forMedium) 실행");
+		//logger.info("List<CategoryDTO> getCategoryMedium(CategoryDTO forMedium)" + forMedium + "실행");
 		return categoryMapper.selectCategoryMedium(forMedium);
 	}
 	
 	public List<CategoryDTO> getCategorySmall(CategoryDTO forSmall) {
-		logger.info("List<CategoryDTO> getCategorySmall(CategoryDTO forSmall) 실행");
+		//logger.info("List<CategoryDTO> getCategorySmall(CategoryDTO forSmall)" + forSmall + "실행");
 		return categoryMapper.selectCategorySmall(forSmall);
 	}
 }

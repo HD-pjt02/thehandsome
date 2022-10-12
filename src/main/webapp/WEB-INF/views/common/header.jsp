@@ -12,7 +12,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
+<title>The Handsome Mall</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 <link rel="stylesheet"
@@ -22,13 +22,14 @@
 	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-	
+
 </head>
 <style>
 .set_width {
-	width: 1205px;
+	width: 1300px;
 	margin: 0px auto;
 }
+
 .header_item {
 	padding: 0px 20px 0px 0px;
 	color: #363636;
@@ -37,6 +38,7 @@
 	display: table-cell;
 	vertical-align: middle;
 }
+
 .nav_item {
 	color: #363636;
 	font-size: 13px;
@@ -45,34 +47,42 @@
 	font-weight: bolder;
 	padding: 16px;
 }
+
 .footer_item {
 	width: 150px;
 	font-size: 11px;
 	padding: 5px 40px 5px 0px;
 }
+
 .footer_text {
 	font-size: 10px;
 	color: #555555;
 }
+
 .footer_text_space {
 	margin: 0px 8px;
 	color: rgba(0, 0, 0, 0.4);
 }
+
 .nav ul, .nav li {
 	margin: 0;
 	padding: 0;
 	border: none;
 	outline: none;
 }
+
 .nav a {
 	text-decoration: none;
 	color: black;
 	font-size: 14px;
 }
+
 .nav li {
 	list-style: none;
 }
+
 .nav {
+	width: 1000px;
 	display: inline-block;
 	position: relative;
 	cursor: default;
@@ -82,6 +92,7 @@
 	display: block;
 	float: left;
 }
+
 .nav>li>a {
 	position: relative;
 	display: block;
@@ -95,7 +106,7 @@
 .nav>li>div {
 	position: absolute;
 	display: block;
-	width: 120%;
+	width: 150%;
 	height: 400px;
 	top: 50px;
 	left: 0;
@@ -105,6 +116,7 @@
 	background: #ffffff;
 	border-radius: 0 0 3px 3px;
 }
+
 .nav>li:hover>div {
 	opacity: 1;
 	visibility: visible;
@@ -113,16 +125,18 @@
 /* Menu Content Styles */
 .nav .nav-column {
 	float: left;
-	height: 180px;
-	width: 32%;
+	height: 300px;
+	width: 15%;
 	padding-left: 2.5%;
 }
+
 .nav .nav-column li a {
 	display: block;
 	line-height: 26px;
 	font-size: 13px;
 	color: #888888;
 }
+
 .nav .nav-column li a:hover {
 	color: #666666;
 }
@@ -133,7 +147,7 @@
 		style="position: fixed; width: 100%; background-color: white; z-index: 1;">
 		<div class="set_width">
 			<a href="${pageContext.request.contextPath}/home" class="header_item">HOME</a>
-			
+
 			<div class="header_item">LANGUAGE</div>
 		</div>
 		<div style="width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.1)"></div>
@@ -156,8 +170,8 @@
 	                              window.alert("브랜드를 찾을 수 없습니다.");
 	                           } else {
 								
-	                              let brand_array = data.brands;
-	      
+	                              var brand_array = data.brand;
+	                              console.log(data.brand);
 	                              let html_tmp = "";
 	                              for (let i = 0; i < brand_array.length / 5; i++) {
 	                                 let tmp = "";
@@ -166,10 +180,8 @@
 										                                    
 	                                 for (let j = 0; j < 5; j++) {
 	                                    let idx = i * 5 + j;
-	                                    console.log(brand_array[idx]);
-	                                    console.log(brand_array[idx].bname);
-	                                    
-	                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bName=" + encodeURI(brand_array.at(idx).bname) + "&pageNo=1'>" + brand_array.at(idx).bname + "</a></li>";
+	                                   console.log(brand_array.at(idx)["bname"]);
+	                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bname=" + encodeURI(brand_array.at(idx)["bname"]) + "&pageNo=1'>" + brand_array.at(idx)["bname"] + "</a></li>";
 	                                 }
 	                                 tmp += "</ul>";
 	                                 tmp += "</div>";
@@ -241,53 +253,111 @@
                      });
                   </script></li>
 					<li><a
-						href="${pageContext.request.contextPath}/product/productlist?clarge=키즈&cmedium=none&csmall=none&pageNo=1">키즈</a>
-						<div id="kids_category"></div> <script>
+						href="${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=none&csmall=none&pageNo=1">잡화</a>
+						<div id="etc_category"></div> <script>
                      $(window).ready(function () {
                         $.ajax({
-                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=키즈"
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=잡화"
                         }).done((data) => {
                            let tmp_html = "";
-                           let data_array = data.kids;
-                           
+                           let data_array = data.잡화;
                            for (let i = 0; i < data_array.length; i++) {
                               let data_medium = data_array.at(i);
                               let medium_array = Object.getOwnPropertyNames(data_medium);
                               let tmp = "<div class='nav-column'>";
-                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=키즈&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
                               tmp += "   <ul>";
                               for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
                                  let csmall = data_medium[medium_array[0]].at(j);
-                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=키즈&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
                               }
                               tmp += "   </ul>";
                               tmp += "</div>";
                               tmp_html += tmp;
                            }
                            
-                           $("#kids_category").html(tmp_html);
+                           $("#etc_category").html(tmp_html);
                         });
                      });
                   </script></li>
 					<li><a
-						href="${pageContext.request.contextPath}/product/productlist?clarge=LIFESTYLE&cmedium=none&csmall=none&pageNo=1">라이프스타일</a>
-						<div id="lifestyle_category"></div> <script>
+						href="${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=none&csmall=none&pageNo=1">골프</a>
+						<div id="golf_category"></div> <script>
                      $(window).ready(function () {
                         $.ajax({
-                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=LIFESTYLE"
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=골프"
                         }).done((data) => {
                            let tmp_html = "";
-                           let data_array = data.LIFESTYLE;
+                           let data_array = data.골프;
                            
                            for (let i = 0; i < data_array.length; i++) {
                               let data_medium = data_array.at(i);
                               let medium_array = Object.getOwnPropertyNames(data_medium);
                               let tmp = "<div class='nav-column'>";
-                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=LIFESTYLE&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
                               tmp += "   <ul>";
                               for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
                                  let csmall = data_medium[medium_array[0]].at(j);
-                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=LIFESTYLE&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                              }
+                              tmp += "   </ul>";
+                              tmp += "</div>";
+                              tmp_html += tmp;
+                           }
+                           
+                           $("#golf_category").html(tmp_html);
+                        });
+                     });
+                  </script></li>
+					<li><a
+						href="${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=none&csmall=none&pageNo=1">뷰티</a>
+						<div id="beauty_category"></div> <script>
+                     $(window).ready(function () {
+                        $.ajax({
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=뷰티"
+                        }).done((data) => {
+                           let tmp_html = "";
+                           let data_array = data.뷰티;
+                           
+                           for (let i = 0; i < data_array.length; i++) {
+                              let data_medium = data_array.at(i);
+                              let medium_array = Object.getOwnPropertyNames(data_medium);
+                              let tmp = "<div class='nav-column'>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <ul>";
+                              for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
+                                 let csmall = data_medium[medium_array[0]].at(j);
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                              }
+                              tmp += "   </ul>";
+                              tmp += "</div>";
+                              tmp_html += tmp;
+                           }
+                           
+                           $("#beauty_category").html(tmp_html);
+                        });
+                     });
+                  </script></li>
+					<li><a
+						href="${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=none&csmall=none&pageNo=1">라이프스타일</a>
+						<div id="lifestyle_category"></div> <script>
+                     $(window).ready(function () {
+                        $.ajax({
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=라이프스타일"
+                        }).done((data) => {
+                        	console.log(data);
+                           let tmp_html = "";
+                           let data_array = data.라이프스타일;
+                           
+                           for (let i = 0; i < data_array.length; i++) {
+                              let data_medium = data_array.at(i);
+                              let medium_array = Object.getOwnPropertyNames(data_medium);
+                              let tmp = "<div class='nav-column'>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <ul>";
+                              for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
+                                 let csmall = data_medium[medium_array[0]].at(j);
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
                               }
                               tmp += "   </ul>";
                               tmp += "</div>";

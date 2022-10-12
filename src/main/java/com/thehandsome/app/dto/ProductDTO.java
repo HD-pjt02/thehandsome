@@ -12,8 +12,8 @@ import java.sql.Timestamp;
 public class ProductDTO {
 	/* 1. 상품 품번 */
 	private String pcode;
-	/* 2. 브랜드 넘버 */
-	private int bno;
+	/* 2. 브랜드 품번 */
+	private String bname;
 	/* 3. 카테고리 대분류 */
 	private String clarge;
 	/* 4. 카테고리 중분류 */
@@ -36,5 +36,4 @@ public class ProductDTO {
 	private int plikeamount;
 	/* 13. 상품 사용 여부 */
 	private String penabled;
-	
 }

@@ -7,7 +7,6 @@
 	<select id="selectCategoryMedium" resultType="CategoryDTO" parameterType="CategoryDTO">
         SELECT cmedium from category
 	    WHERE clarge = #{clarge}
-	    AND cmedium NOT IN('SPECIAL SHOP')
 	    GROUP BY clarge, cmedium
 	</select>
 	
