@@ -43,6 +43,7 @@ public class MemberController {
 	
 	}
 	
+	
 	@RequestMapping(value="/joinprovision",  method= {RequestMethod.GET,RequestMethod.POST})
 	public String joinprovision(@RequestParam("joincode") String joincode, Model model ) {
 		log.info("회원가입 동의 폼");
