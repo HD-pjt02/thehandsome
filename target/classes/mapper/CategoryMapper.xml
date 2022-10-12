@@ -4,17 +4,16 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.thehandsome.app.mapper.CategoryMapper">
-	<select id="selectCategoryMedium" resultType="categoryDTO" parameterType="categoryDTO">
+	<select id="selectCategoryMedium" resultType="CategoryDTO" parameterType="CategoryDTO">
         SELECT cmedium from category
-	    WHERE clarge = #{cLarge}
-	    AND cmedium NOT IN('SPECIAL SHOP')
+	    WHERE clarge = #{clarge}
 	    GROUP BY clarge, cmedium
 	</select>
 	
-	<select id="selectCategorySmall" resultType="categoryDTO" parameterType="categoryDTO">
+	<select id="selectCategorySmall" resultType="CategoryDTO" parameterType="CategoryDTO">
     	SELECT csmall from category
-    	WHERE clarge = #{cLarge}
-    	AND cmedium = #{cMedium}
+    	WHERE clarge = #{clarge}
+    	AND cmedium = #{cmedium}
     	GROUP BY clarge, cmedium, csmall
     	
 	</select>
