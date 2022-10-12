@@ -11,7 +11,7 @@
   	</insert>	
   	
   	<!-- 1:1조회-->
-  	<select id="qnaSelect" resultType="qnaDTO">
+  	<select id="qnaSelect" resultType="QnaDTO">
   		select qDate, qCategory, qContent, qStatus from qna where mno = #{mNo}
   	</select>
   </mapper>

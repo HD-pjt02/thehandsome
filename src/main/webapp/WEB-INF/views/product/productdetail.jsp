@@ -6,7 +6,6 @@
 	padding-left: 0;
 	width: 100px;
 }
-
 a:hover {
 	color: black;
 	text-decoration: none;
@@ -19,6 +18,10 @@ a:hover {
 			<img src="${productimage1}" alt="" style="width: inherit;"> <img
 				src="${productimage2}" alt="" style="width: inherit;"> <img
 				src="${productimage3}" alt="" style="width: inherit;">
+				<img src="${productimage4}" alt="" style="width: inherit;">
+				<img src="${productimage5}" alt="" style="width: inherit;">
+				<img src="${productimage6}" alt="" style="width: inherit;">
+				<img src="${productimage7}" alt="" style="width: inherit;">
 		</div>
 		<div class="col-6">
 			<div class="toast" data-autohide="false"
@@ -43,7 +46,7 @@ a:hover {
 							원
 						</h5>
 						<p>상품번호 : ${product.pcode}</p>
-						<div class="bg-light rounded p-3">"${product.pdetail}"</div>
+						<div class="bg-light rounded p-3">"${product.pcontent}"</div>
 					</td>
 
 				</tr>
@@ -75,8 +78,8 @@ a:hover {
 							<small class="detail-title">색상</small>
 							<c:forEach var="color" items="${colors}">
 								<a
-									href="productdetail?pcode=${product.pcode}&cproductcolor=${color.cproductcolor}">
-									<img src="${color.ccolorchipimage}"
+									href="productdetail?pcode=${product.pcode}&pcolor=${color.pcolor}">
+									<img src="${color.colorurl}"
 									style="margin: 0px 2px; width: 26px; height: 26px;" />
 								</a>
 							</c:forEach>
@@ -86,14 +89,14 @@ a:hover {
 							<c:forEach var="size" items="${sizes}">
 								<input type="button" class="btn btn-light btn-sm border"
 									onclick="checkStock(this, ${product.pprice})"
-									value="${size.sproductsize}" />
+									value="${size.psize}" />
 							</c:forEach>
 						</p>
 						<p>
 							<small class="detail-title">수량</small> <input
 								id="product-amount-input" class="mb-2 text-center" type="number"
-								size="1" style="width: 50px;" value="0"
-								onchange="changeAmount(this, ${product.pprice})" max="0" min="0" />
+								size="1" style="width: 50px;" value="1"
+								onchange="changeAmount(this, ${product.pprice})" max="100" min="1" />
 						</p>
 						<p id="product-stock-amount"></p> <script>
 							const url = new URL(window.location.href);
@@ -116,15 +119,15 @@ a:hover {
 									url: "/product/getProductStock",
 									data: {
 										"pcode" : "${product.pcode}",
-										"color" : urlParams.get("cproductcolor"),
+										"color" : urlParams.get("pcolor"),
 										"size" : obj.value
 									}
 								}).done((data) => {
-									let p_amount = Math.min($("#product-amount-input").val(), data.amount);
+									let p_amount = Math.min($("#product-amount-input").val(), data.pamount);
 									$("#product-amount-input").val(p_amount);
 									changeAmount(p_amount, product_price);
 									$("#product-amount-input").attr("max", data.amount);
-									$("#product-stock-amount").html("<small class='detail-title' style='color: red;'>남은 수량 <span>" + data.amount + "개</span></small>");
+									$("#product-stock-amount").html("<small class='detail-title' style='color: red;'>남은 수량 <span>" + data.pamount + "개</span></small>");
 								});
 							}
 						</script>
@@ -150,7 +153,7 @@ a:hover {
 									function addShoppingBag() {
 										if ($("#product-amount-input").val() > 0) {
 											location.href = "insertToShoppingbag?sbproductcolor="
-													+ urlParams.get("cproductcolor")
+													+ urlParams.get("pcolor")
 													+ "&sbproductsize=" + current_size
 													+ "&sbproductamount=" + $("#product-amount-input").val()
 													+ "&pcode=" + urlParams.get("pcode");
@@ -162,7 +165,7 @@ a:hover {
 									function addShoppingBagForDirectOrder() {
 										if ($("#product-amount-input").val() > 0) {
 											location.href = "insertToShoppingbagForDirectOrder?sbproductcolor="
-												+ urlParams.get("cproductcolor")
+												+ urlParams.get("pcolor")
 												+ "&sbproductsize=" + current_size
 												+ "&sbproductamount=" + $("#product-amount-input").val()
 												+ "&pcode=" + urlParams.get("pcode");

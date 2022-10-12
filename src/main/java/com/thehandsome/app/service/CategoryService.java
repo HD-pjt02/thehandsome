@@ -6,9 +6,7 @@ import com.thehandsome.app.dto.CategoryDTO;
 
 
 public interface CategoryService {
-	public List<CategoryDTO> getCategoryLarge(CategoryDTO forLarge);
-
 	public List<CategoryDTO> getCategoryMedium(CategoryDTO forMedium);
 	
 	public List<CategoryDTO> getCategorySmall(CategoryDTO forSmall);
-}
+}	

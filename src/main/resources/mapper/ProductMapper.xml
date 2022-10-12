@@ -4,5 +4,195 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.thehandsome.app.mapper.ProductMapper">
-	
+	<select id="selectProduct" resultType="ProductDTO"
+		parameterType="String">
+		SELECT p.pcode, p.pname, p.pprice, p.pcontent, p.bname,
+		b.bno, b.bname,
+		p.clarge, p.cmedium, p.csmall,
+		p.pregdate, p.pdiscount, p.plikeamount
+		FROM product
+		p, brand b
+		WHERE p.pcode =
+		#{pcode}
+		AND p.bname = b.bname
+	</select>
+
+	<select id="selectProducts" resultType="ProductDTO"
+		parameterType="HashMap">
+		<![CDATA[
+		SELECT rnum, pcode, pname, pprice, pcontent,
+			bname, clarge, cmedium, csmall
+		FROM (
+		        SELECT ROWNUM as rnum, pcode, pname, pprice, pcontent,
+					bname, clarge, cmedium, csmall
+		        FROM (
+		            SELECT p.pcode as pcode, p.pname as pname, p.pprice as pprice, p.pcontent as pcontent,
+		                b.bname as bname, p.clarge as clarge, p.cmedium as cmedium, p.csmall as csmall
+		            FROM product p, brand b
+		            WHERE p.clarge = #{category.clarge}
+		            AND p.cmedium = #{category.cmedium}
+		            AND p.csmall = #{category.csmall}
+		            AND b.bname = p.bname
+		        )
+		        WHERE ROWNUM <= #{page.endRowNo}
+		)
+		WHERE rnum >= #{page.startRowNo}
+		]]>
+	</select>
+
+	<select id="selectProductStock" resultType="StockDTO"
+		parameterType="String">
+		SELECT *
+		FROM stock
+		WHERE pcode = #{pcode}
+	</select>
+
+
+	<select id="selectProductsNoSmall" resultType="ProductDTO"
+		parameterType="HashMap">
+		<![CDATA[
+		SELECT rnum, pcode, pname, pprice, pcontent,
+			bname, clarge, cmedium, csmall
+		FROM (
+		        SELECT ROWNUM as rnum, pcode, pname, pprice, pcontent,
+					bname, clarge, cmedium, csmall
+		        FROM (
+		            SELECT p.pcode as pcode, p.pname as pname, p.pprice as pprice, p.pcontent as pcontent,
+		                b.bname as bname, p.clarge as clarge, p.cmedium as cmedium, p.csmall as csmall
+		            FROM product p, brand b
+		            WHERE p.clarge = #{category.clarge}
+		            AND p.cmedium = #{category.cmedium}
+					AND p.csmall LIKE '%'
+		            AND b.bname = p.bname
+		        )
+		        WHERE ROWNUM <= #{page.endRowNo}
+		)
+		WHERE rnum >= #{page.startRowNo}
+		]]>
+	</select>
+
+	<select id="selectProductsNoMedium" resultType="ProductDTO"
+		parameterType="HashMap">
+		<![CDATA[
+		SELECT rnum, pcode, pname, pprice, pcontent,
+			bname, clarge, cmedium, csmall
+		FROM (
+		        SELECT ROWNUM as rnum, pcode, pname, pprice, pcontent,
+					bname, clarge, cmedium, csmall
+		        FROM (
+		            SELECT p.pcode as pcode, p.pname as pname, p.pprice as pprice, p.pcontent as pcontent,
+		                b.bname as bname, p.clarge as clarge, p.cmedium as cmedium, p.csmall as csmall
+		            FROM product p, brand b
+		            WHERE p.clarge = #{category.clarge}
+					AND p.cmedium LIKE '%'
+					AND p.csmall LIKE '%'
+		            AND b.bname = p.bname
+		        )
+		        WHERE ROWNUM <= #{page.endRowNo}
+		)
+		WHERE rnum >= #{page.startRowNo}
+		]]>
+	</select>
+
+	<select id="selectProductColor" resultType="ColorDTO"
+		parameterType="ProductDTO">
+		SELECT *
+		FROM color
+		WHERE pcode =
+		#{pcode}
+	</select>
+
+	<select id="selectProductSize" resultType="StockDTO"
+		parameterType="ProductDTO">
+		SELECT distinct(psize)
+		FROM stock
+		WHERE pcode = #{pcode}
+		ORDER BY
+		CASE psize WHEN 'S' THEN 1
+		WHEN 'M' THEN 2
+		WHEN 'L' THEN 3
+		END
+		ASC,
+		psize ASC
+
+	</select>
+
+	<select id="count" resultType="int" parameterType="CategoryDTO">
+		SELECT
+		COUNT(pcode)
+		FROM product
+		WHERE clarge = #{clarge}
+		AND cmedium =
+		#{cmedium}
+		AND csmall = #{csmall}
+	</select>
+
+	<select id="countNoSmall" resultType="int"
+		parameterType="CategoryDTO">
+		SELECT
+		COUNT(pcode)
+		FROM product
+		WHERE clarge = #{clarge}
+		AND cmedium = #{cmedium}
+		AND csmall LIKE '%'
+	</select>
+
+	<select id="countNoMedium" resultType="int"
+		parameterType="CategoryDTO">
+		SELECT
+		COUNT(pcode)
+		FROM product
+		WHERE clarge = #{clarge}
+		AND cmedium LIKE '%'
+		AND csmall LIKE '%'
+	</select>
+
+	<select id="selectProductsBrand" resultType="ProductDTO"
+		parameterType="HashMap">
+      <![CDATA[
+      SELECT rnum, pcode, pname, pprice, pcontent,
+         bname, clarge, cmedium, csmall
+      FROM (
+              SELECT ROWNUM as rnum, pcode, pname, pprice, pcontent,
+               bname, clarge, cmedium, csmall
+              FROM (
+                  SELECT p.pcode as pcode, p.pname as pname, p.pprice as pprice, p.pcontent as pcontent,
+                      b.bname as bname, p.clarge as clarge, p.cmedium as cmedium, p.csmall as csmall
+                  FROM product p, brand b
+                  WHERE p.clarge LIKE '%'
+                  AND p.cmedium LIKE '%'
+                  AND p.csmall LIKE '%'
+                  AND b.bname = p.bname
+                  AND b.bname = #{brand.bname,javaType=String ,jdbcType=VARCHAR}
+              )
+              WHERE ROWNUM <= #{page.endRowNo}
+      )
+      WHERE rnum >= #{page.startRowNo}
+      ]]>
+	</select>
+
+	<select id="countNoLarge" resultType="int"
+		parameterType="CategoryDTO">
+		SELECT
+		COUNT(pcode)
+		FROM product
+		WHERE clarge LIKE '%'
+		AND
+		cmedium LIKE '%'
+		AND csmall LIKE '%'
+	</select>
+
+	<select id="countNoLargeIncludeBrand" resultType="int"
+		parameterType="HashMap">
+		SELECT
+		COUNT(pcode)
+		FROM product p, brand b
+		WHERE clarge
+		LIKE '%'
+		AND cmedium LIKE '%'
+		AND csmall LIKE '%'
+		AND b.bname = p.bname
+		AND
+		b.bname = #{brand.bname,javaType=String ,jdbcType=VARCHAR}
+	</select>
 </mapper>

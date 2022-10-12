@@ -6,98 +6,79 @@ ul {
 	list-style: none;
 	padding: 0;
 }
-
 .container {
 	padding: 0;
 }
-
 a {
 	color: black;
 	text-decoration: none;
 }
-
 a:link {
 	color: black;
 	text-decoration: none;
 }
-
 a:visited {
 	color: black;
 	text-decoration: none;
 }
-
 a:hover {
 	color: black;
 	text-decoration: none;
 }
-
 .cell {
 	float: left;
 	box-sizing: border-box;
 }
-
 .product-list .cell {
 	width: 20%;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 20px;
 }
-
 .img-box>img {
 	display: block;
 	width: 100%;
 	cursor: pointer;
 }
-
 div .product-color {
 	text-align: center;
 }
-
 div .product-color>a>img {
 	margin: 0px 2px;
 	width: 18px;
 	height: 18px;
 }
-
 @media {
 	.product-list .row .cell {
 		width: calc(100%/ 3);
 	}
 }
-
 .product-list .row .cell .brand-name, .product-name, .product-price {
 	text-align: center;
 	font-size: 12px;
 }
-
 .imgswap img:last-child {
 	display: none
 }
-
 .imgswap:hover img:first-child {
 	display: none
 }
-
 .imgswap:hover img:last-child {
 	display: inherit
 }
-
 .btn-group button {
 	cursor: pointer;
 	float: left;
 }
-
 .btn-group button:not(:last-child) {
 	border-right: none;
 }
-
 .dropdown-menu {
 	height: auto;
 	max-height: 200px;
 	width: 250px;
 	overflow-x: hidden;
 }
-
 input[id="cb1"] {
 	width: 22px;
 	height: 22px;
@@ -141,31 +122,31 @@ input[id="cb1"] {
 			</ul>
 		</div>
 	</div>
-	<div id="pager-container" class="container text-center mb-3">
+	<div id="page-container" class="container text-center mb-3">
 		<a href="brandproductlist?bname=${brand.bname}&pageNo=1">처음</a>
-		<c:if test="${pager.groupNo > 1}">
+		<c:if test="${page.groupNo > 1}">
 
 			<a class="btn btn-light btn-sm"
-				href="brandproductlist?bname=${brand.bname}&pageNo=${pager.startPageNo-1}">이전</a>
+				href="brandproductlist?bname=${brand.bname}&pageNo=${page.startPageNo-1}">이전</a>
 		</c:if>
-		<c:forEach var="i" begin="${pager.startPageNo}"
-			end="${pager.endPageNo}">
-			<c:if test="${pager.pageNo != i}">
+		<c:forEach var="i" begin="${page.startPageNo}"
+			end="${page.endPageNo}">
+			<c:if test="${page.pageNo != i}">
 				<a class="btn btn-light btn-sm"
 					href="brandproductlist?bname=${brand.bname}&pageNo=${i}">${i}</a>
 			</c:if>
-			<c:if test="${pager.pageNo == i}">
+			<c:if test="${page.pageNo == i}">
 				<a class="btn btn-outline-dark btn-sm"
 					href="brandproductlist?bname=${brand.bname}&pageNo=${i}">${i}</a>
 			</c:if>
 		</c:forEach>
-		<c:if test="${pager.groupNo < pager.totalGroupNo}">
+		<c:if test="${page.groupNo < page.totalGroupNo}">
 			<a class=""
-				href="brandproductlist?bname=${brand.bname}&pageNo=${pager.endPageNo+1}">다음</a>
+				href="brandproductlist?bname=${brand.bname}&pageNo=${page.endPageNo+1}">다음</a>
 		</c:if>
 
 		<a class=""
-			href="brandproductlist?bname=${brand.bname}&pageNo=${pager.totalPageNo}">끝</a>
+			href="brandproductlist?bname=${brand.bname}&pageNo=${page.totalPageNo}">끝</a>
 	</div>
 
 	<script>

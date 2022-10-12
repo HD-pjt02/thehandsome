@@ -31,3 +31,5 @@ public class MybatisTest {
 		}
 	}
 }
+//2022.10.17.월
+//JUnit Test 완료

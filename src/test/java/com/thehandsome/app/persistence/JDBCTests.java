@@ -25,7 +25,7 @@ public class JDBCTests {
 	public void testConnection() {
 		try{
 			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xepdb1",
-					"hansome",
+					"handsome",
 					"1234");
 			log.info(con);
 		}catch(Exception e) {
@@ -33,3 +33,5 @@ public class JDBCTests {
 		}
 	}
 }
+//2022.10.17.월
+//JUnit Test 완료
