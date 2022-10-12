@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%>
+<%--@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -147,7 +147,21 @@
 		style="position: fixed; width: 100%; background-color: white; z-index: 1;">
 		<div class="set_width">
 			<a href="${pageContext.request.contextPath}/home" class="header_item">HOME</a>
-
+			<sec:authorize access="isAnonymous()">
+				<a href="${pageContext.request.contextPath}/member/login"
+					class="header_item">로그인</a>
+			</sec:authorize>
+			<sec:authorize access="isAuthenticated()">
+				<form name="logoutForm" method="post"
+					action="${pageContext.request.contextPath}member/logout"
+					style="display: table-cell;">
+					<input type="hidden" name="${_csrf.parameterName}"
+						value="${_csrf.token}" /> <a class="header_item"
+						href="javascript:logoutForm.submit();">로그아웃</a>
+				</form>
+				<a href="${pageContext.request.contextPath}/member/myorders"
+					class="header_item">마이페이지</a>
+			</sec:authorize>
 			<div class="header_item">LANGUAGE</div>
 		</div>
 		<div style="width: 100%; border-bottom: 1px solid rgba(0, 0, 0, 0.1)"></div>

@@ -14,7 +14,8 @@
 	</settings>
 
 	<typeAliases>
-
+		<typeAlias alias="QnaDTO"
+			type="com.thehandsome.app.dto.QnaDTO" />
 		<typeAlias alias="OrderDTO"
 			type="com.thehandsome.app.dto.OrderDTO" />
 		<typeAlias alias="ProductDTO"

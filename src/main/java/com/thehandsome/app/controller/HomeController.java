@@ -13,16 +13,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.thehandsome.app.dto.BrandDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.service.BrandService;
 import com.thehandsome.app.service.CategoryService;
 
+import lombok.extern.log4j.Log4j;
+
 
 @Controller
 public class HomeController {
+
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 	@RequestMapping("/")
@@ -37,8 +42,8 @@ public class HomeController {
 	
 	@RequestMapping("/loginForm")
 	public String loginForm() {
-		logger.info("실행");
-		return "member/loginForm";
+		logger.info("로그인 실행");
+		return "/member/loginForm";
 	}
 
 	@Resource
