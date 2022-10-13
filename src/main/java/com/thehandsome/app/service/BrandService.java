@@ -7,5 +7,4 @@ import com.thehandsome.app.dto.BrandDTO;
 
 public interface BrandService {
 	public List<BrandDTO> getBrandList();
-	
 }

@@ -1,6 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%--taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags--%>
+<%--@ taglib prefix="sec"
+	uri="http://www.springframework.org/security/tags"--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -12,7 +12,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
+<title>The Handsome Mall</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 <link rel="stylesheet"
@@ -22,10 +22,11 @@
 	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
 <style>
 .set_width {
-	width: 1205px;
+	width: 1300px;
 	margin: 0px auto;
 }
 
@@ -81,6 +82,7 @@
 }
 
 .nav {
+	width: 1000px;
 	display: inline-block;
 	position: relative;
 	cursor: default;
@@ -104,7 +106,7 @@
 .nav>li>div {
 	position: absolute;
 	display: block;
-	width: 120%;
+	width: 150%;
 	height: 400px;
 	top: 50px;
 	left: 0;
@@ -123,8 +125,8 @@
 /* Menu Content Styles */
 .nav .nav-column {
 	float: left;
-	height: 180px;
-	width: 32%;
+	height: 300px;
+	width: 15%;
 	padding-left: 2.5%;
 }
 
@@ -146,12 +148,12 @@
 		<div class="set_width">
 			<a href="${pageContext.request.contextPath}/home" class="header_item">HOME</a>
 			<sec:authorize access="isAnonymous()">
-				<a href="${pageContext.request.contextPath}/loginForm"
+				<a href="${pageContext.request.contextPath}/member/login"
 					class="header_item">로그인</a>
 			</sec:authorize>
 			<sec:authorize access="isAuthenticated()">
 				<form name="logoutForm" method="post"
-					action="${pageContext.request.contextPath}/logout"
+					action="${pageContext.request.contextPath}member/logout"
 					style="display: table-cell;">
 					<input type="hidden" name="${_csrf.parameterName}"
 						value="${_csrf.token}" /> <a class="header_item"
@@ -173,57 +175,58 @@
 				<ul class="nav">
 					<li><a href="">브랜드</a>
 						<div id="brand_nav"></div> <script>
-                     $(window).ready(function () {
-                        $.ajax({
-                           //backEnd에서 받을 요청 URL
-                           url: "${pageContext.request.contextPath}/getBrandList"
-                        }).done((data) => {
-                           if (data.result === "loadFail") {
-                              window.alert("브랜드를 찾을 수 없습니다.");
-                           } else {
-                              let brand_array = data.brands;
-                              let html_tmp = "";
-                              
-                              for (let i = 0; i < brand_array.length / 5; i++) {
-                                 let tmp = "";
-                                    tmp += "<div class='nav-column'>";
-                                    tmp += "<ul>";
-                                    
-                                 for (let j = 0; j < 5; j++) {
-                                    let idx = i * 5 + j;
-                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bname=" + encodeURI(brand_array.at(idx).bname) + "&pageNo=1'>" + brand_array.at(idx).bname + "</a></li>";
-                                 }
-                                 
-                                 tmp += "</ul>";
-                                 tmp += "</div>";
-                                 
-                                 html_tmp += tmp;
-                              }
-                              
-                              $("#brand_nav").html(html_tmp);
-                           }
-                        });
-                     });
+						$(window).ready(function () {
+	                        $.ajax({
+	                           //backEnd에서 받을 요청 URL
+	                           url: "${pageContext.request.contextPath}/getBrandList"
+	                        }).done((data) => {
+	                           if (data.result === "loadFail") {
+	                              window.alert("브랜드를 찾을 수 없습니다.");
+	                           } else {
+								
+	                              var brand_array = data.brand;
+	                              console.log(data.brand);
+	                              let html_tmp = "";
+	                              for (let i = 0; i < brand_array.length / 5; i++) {
+	                                 let tmp = "";
+	                                    tmp += "<div class='nav-column'>";
+	                                    tmp += "<ul>";
+										                                    
+	                                 for (let j = 0; j < 5; j++) {
+	                                    let idx = i * 5 + j;
+	                                   console.log(brand_array.at(idx)["bname"]);
+	                                    tmp += "<li><a href='${pageContext.request.contextPath}/product/brandproductlist?bname=" + encodeURI(brand_array.at(idx)["bname"]) + "&pageNo=1'>" + brand_array.at(idx)["bname"] + "</a></li>";
+	                                 }
+	                                 tmp += "</ul>";
+	                                 tmp += "</div>";
+	                                 
+	                                 html_tmp += tmp;
+	                              }
+	                              
+	                              $("#brand_nav").html(html_tmp);
+	                           }
+	                        });
+	                     });
                   </script></li>
 					<li><a
-						href="${pageContext.request.contextPath}/product/productlist?cLarge=WOMEN&cMedium=none&cSmall=none&pageNo=1">여성</a>
+						href="${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=none&csmall=none&pageNo=1">여성</a>
 						<div id="women_category"></div> <script>
                      $(window).ready(function () {
                         $.ajax({
-                           url: "${pageContext.request.contextPath}/getCategoryList?cLarge=WOMEN"
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=여성"
                         }).done((data) => {
                            let tmp_html = "";
-                           let data_array = data.WOMEN;
-                           
+                           let data_array = data.여성;
+                           //console.log(data);
                            for (let i = 0; i < data_array.length; i++) {
                               let data_medium = data_array.at(i);
                               let medium_array = Object.getOwnPropertyNames(data_medium);
                               let tmp = "<div class='nav-column'>";
-                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?cLarge=WOMEN&cMedium=" + medium_array[0] + "&cSmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
                               tmp += "   <ul>";
                               for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
                                  let csmall = data_medium[medium_array[0]].at(j);
-                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?cLarge=WOMEN&cMedium=" + medium_array[0] + "&cSmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
                               }
                               tmp += "   </ul>";
                               tmp += "</div>";
@@ -235,24 +238,24 @@
                      });
                   </script></li>
 					<li><a
-						href="${pageContext.request.contextPath}/product/productlist?cLarge=MEN&cMedium=none&cSmall=none&pageNo=1">남성</a>
+						href="${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=none&csmall=none&pageNo=1">남성</a>
 						<div id="men_category"></div> <script>
                      $(window).ready(function () {
                         $.ajax({
-                           url: "${pageContext.request.contextPath}/getCategoryList?cLarge=MEN"
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=남성"
                         }).done((data) => {
                            let tmp_html = "";
-                           let data_array = data.MEN;
-                           
+                           let data_array = data.남성;
+                           //console.log(data);
                            for (let i = 0; i < data_array.length; i++) {
                               let data_medium = data_array.at(i);
                               let medium_array = Object.getOwnPropertyNames(data_medium);
                               let tmp = "<div class='nav-column'>";
-                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?cLarge=MEN&cMedium=" + medium_array[0] + "&cSmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
                               tmp += "   <ul>";
                               for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
                                  let csmall = data_medium[medium_array[0]].at(j);
-                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?cLarge=MEN&cMedium=" + medium_array[0] + "&cSmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
                               }
                               tmp += "   </ul>";
                               tmp += "</div>";
@@ -264,53 +267,111 @@
                      });
                   </script></li>
 					<li><a
-						href="${pageContext.request.contextPath}/product/productlist?cLarge=KIDS&cMedium=none&cSmall=none&pageNo=1">키즈</a>
-						<div id="kids_category"></div> <script>
+						href="${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=none&csmall=none&pageNo=1">잡화</a>
+						<div id="etc_category"></div> <script>
                      $(window).ready(function () {
                         $.ajax({
-                           url: "${pageContext.request.contextPath}/getCategoryList?cLarge=KIDS"
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=잡화"
                         }).done((data) => {
                            let tmp_html = "";
-                           let data_array = data.KIDS;
-                           
+                           let data_array = data.잡화;
                            for (let i = 0; i < data_array.length; i++) {
                               let data_medium = data_array.at(i);
                               let medium_array = Object.getOwnPropertyNames(data_medium);
                               let tmp = "<div class='nav-column'>";
-                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?cLarge=KIDS&cMedium=" + medium_array[0] + "&cSmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
                               tmp += "   <ul>";
                               for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
                                  let csmall = data_medium[medium_array[0]].at(j);
-                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?cLarge=KIDS&cMedium=" + medium_array[0] + "&cSmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
                               }
                               tmp += "   </ul>";
                               tmp += "</div>";
                               tmp_html += tmp;
                            }
                            
-                           $("#kids_category").html(tmp_html);
+                           $("#etc_category").html(tmp_html);
                         });
                      });
                   </script></li>
 					<li><a
-						href="${pageContext.request.contextPath}/product/productlist?cLarge=LIFESTYLE&cMedium=none&cSmall=none&pageNo=1">라이프스타일</a>
-						<div id="lifestyle_category"></div> <script>
+						href="${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=none&csmall=none&pageNo=1">골프</a>
+						<div id="golf_category"></div> <script>
                      $(window).ready(function () {
                         $.ajax({
-                           url: "${pageContext.request.contextPath}/getCategoryList?cLarge=LIFESTYLE"
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=골프"
                         }).done((data) => {
                            let tmp_html = "";
-                           let data_array = data.LIFESTYLE;
+                           let data_array = data.골프;
                            
                            for (let i = 0; i < data_array.length; i++) {
                               let data_medium = data_array.at(i);
                               let medium_array = Object.getOwnPropertyNames(data_medium);
                               let tmp = "<div class='nav-column'>";
-                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?cLarge=LIFESTYLE&cMedium=" + medium_array[0] + "&cSmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
                               tmp += "   <ul>";
                               for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
                                  let csmall = data_medium[medium_array[0]].at(j);
-                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?cLarge=LIFESTYLE&cMedium=" + medium_array[0] + "&cSmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                              }
+                              tmp += "   </ul>";
+                              tmp += "</div>";
+                              tmp_html += tmp;
+                           }
+                           
+                           $("#golf_category").html(tmp_html);
+                        });
+                     });
+                  </script></li>
+					<li><a
+						href="${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=none&csmall=none&pageNo=1">뷰티</a>
+						<div id="beauty_category"></div> <script>
+                     $(window).ready(function () {
+                        $.ajax({
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=뷰티"
+                        }).done((data) => {
+                           let tmp_html = "";
+                           let data_array = data.뷰티;
+                           
+                           for (let i = 0; i < data_array.length; i++) {
+                              let data_medium = data_array.at(i);
+                              let medium_array = Object.getOwnPropertyNames(data_medium);
+                              let tmp = "<div class='nav-column'>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <ul>";
+                              for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
+                                 let csmall = data_medium[medium_array[0]].at(j);
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
+                              }
+                              tmp += "   </ul>";
+                              tmp += "</div>";
+                              tmp_html += tmp;
+                           }
+                           
+                           $("#beauty_category").html(tmp_html);
+                        });
+                     });
+                  </script></li>
+					<li><a
+						href="${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=none&csmall=none&pageNo=1">라이프스타일</a>
+						<div id="lifestyle_category"></div> <script>
+                     $(window).ready(function () {
+                        $.ajax({
+                           url: "${pageContext.request.contextPath}/getCategoryList?clarge=라이프스타일"
+                        }).done((data) => {
+                        	console.log(data);
+                           let tmp_html = "";
+                           let data_array = data.라이프스타일;
+                           
+                           for (let i = 0; i < data_array.length; i++) {
+                              let data_medium = data_array.at(i);
+                              let medium_array = Object.getOwnPropertyNames(data_medium);
+                              let tmp = "<div class='nav-column'>";
+                              tmp += "   <p><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=" + medium_array[0] + "&csmall=none&pageNo=1'>" + medium_array[0] + "</a></p>";
+                              tmp += "   <ul>";
+                              for (let j = 0; j < data_medium[medium_array[0]].length; j++) {
+                                 let csmall = data_medium[medium_array[0]].at(j);
+                                 tmp += "      <li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=" + medium_array[0] + "&csmall=" + csmall + "&pageNo=1'>" + csmall + "</a></li>";
                               }
                               tmp += "   </ul>";
                               tmp += "</div>";

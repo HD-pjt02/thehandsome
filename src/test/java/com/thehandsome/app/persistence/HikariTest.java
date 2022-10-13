@@ -30,3 +30,5 @@ public class HikariTest {
 		}
 	}
 }
+// 2022.10.17.월
+// JUnit Test 완료
