@@ -58,7 +58,6 @@
                 <i class="bi bi-chat-dots" style="font-size: 30px; margin-right: 10px"></i>
               </div>
               <div>
-                <a href="tohomeServlet?command=inquiry_moveform">
                 <p>1:1문의하기</p>
                 </a>
                 <small>쉽고 편리하게 문의하세요.</small>
@@ -77,19 +76,17 @@
       
        <div class="inquiryList">
     
-       <c:forEach items="${inquiryList}" var="InquiryVO" varStatus="status">
-          <form name="formm" method="post" action="tohomeServlet?command=inquiry_delete">
+       <c:forEach items="${qnaList}" var="qnaList" varStatus="status">
           <div class="inquiry-history">
             <div class="info">
-              <input type="text" name="cseq" value="${InquiryVO.quiryId}" style="display: none"> 
-              <span class="inquirytype">${InquiryVO.quiryType}</span>
+              <span class="inquirytype"><c:out value="${qnaList.qcategory}"></c:out></span>
             </div>
             <div class="text-wrapper">
               <div class="text-answer">
-                <span>${InquiryVO.quiryContent}</span>
+                <span><c:out value="${qnaList.qcontent}"></c:out></span>
               </div>
               <div class="text-date">
-                <span>${InquiryVO.quiryDate}</span>
+                <span><c:out value="${qnaList.qdate}"></c:out></span>
                 <i class="bi bi-arrow-down-short" style="font-size: 32px" id="arrow-down${status.index}" onClick="ft(this.id)"></i>
               </div>
             </div>
@@ -105,7 +102,6 @@
             </button>
           </div>
           </div>
-             </form>
           </c:forEach>
          </div>
           
