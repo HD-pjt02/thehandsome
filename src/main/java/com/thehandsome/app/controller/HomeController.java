@@ -61,9 +61,6 @@ public class HomeController {
 	public String getBrandList(HttpSession session) {
 		if (!brandListJson.get("result").equals("success")) {
 			List<BrandDTO> brand = brandService.getBrandList();
-			for (BrandDTO b : brand) {
-				System.out.println(b.getBname());
-			}
 			brandListJson.put("brand", brand);
 			brandListJson.put("result", "success");
 		}

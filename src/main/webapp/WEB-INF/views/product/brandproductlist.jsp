@@ -157,35 +157,36 @@ input[id="cb1"] {
          $.ajax({
             url: "${pageContext.request.contextPath}/product/getBrandProductList?bname=" + urlParams.get("bname") + "&pageNo=" + urlParams.get("pageNo")
          }).done((data) => {
-            product_array = data.products;
-            let html_tmp = "";
-            for (let i = 0; i < product_array.length; i++) {
-               let product = product_array.at(i);
-               let product_color = product.colors;
-               let product_info = product.product;
-               let tmp = "";
-               tmp += "<li class='cell'><a id='product_link" + i + "' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&cproductcolor=" + product_array.at(i).colors.at(product_array.at(i).state).cproductcolor + "'>";
-               tmp += "   <div id='product_img" + i + "' class='img-box imgswap'>";
-               tmp += "      <img src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
-               tmp += "      <img src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
-               tmp += "   </div>";
-               tmp += "   <div class='brand-name'>" + product_info.bname + "</div>";
-               tmp += "   <div class='product-name'>" + product_info.pname + "</div>";
-               tmp += "   <div class='product-price'>" + product_info.pprice.toLocaleString() + "원</div></a>";
-               tmp += "   <div class='product-color'>";
-               for (let j = 0; j < product_color.length; j++) {
-                  tmp += "<a href='javascript:changeColor(" + i + ", " + j + ")'><img src='" + product_color.at(j)["colorurl"] + "'/></a>";
-               }
-               tmp += "   </div>";
-               tmp += "</li>";
-               html_tmp += tmp;
-            }
-            $("#product-list-wrapper").html(html_tmp);
-         });
-      });
-      
-      function changeColor(product_idx, color_idx) {
-    	  product_array.at(product_idx)["state"] = color_idx;
+				product_array = data.products;
+				let html_tmp = "";
+				for (let i = 0; i < product_array.length; i++) {
+					let product = product_array.at(i);
+					let product_color = product.colors;
+					//console.log(product_color);
+					let product_info = product.product;
+					//console.log(product_info);
+					let tmp = "";
+					tmp += "<li class='cell'><a id='product_link" + i + "' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
+					tmp += "	<div id='product_img" + i + "' class='img-box imgswap'>";
+					tmp += "		<img src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
+					tmp += "		<img src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
+					tmp += "	</div>";
+					tmp += "	<div class='brand-name'>" + product_info.bname + "</div>";
+					tmp += "	<div class='product-name'>" + product_info.pname + "</div>";
+					tmp += "	<div class='product-price'>￦ " + product_info.pprice.toLocaleString() + "원</div></a>";
+					tmp += "	<div class='product-color'>";
+					for (let j = 0; j < product_color.length; j++) {
+						tmp += "<a href='javascript:changeColor(" + i + ", " + j + ")'><img src='" + product_color.at(j)["colorurl"] + "'/></a>";
+					}
+					tmp += "	</div>";
+					tmp += "</li>";
+					html_tmp += tmp;
+				}
+				$("#product-list-wrapper").html(html_tmp);
+			});
+		});
+		function changeColor(product_idx, color_idx) {
+			product_array.at(product_idx)["state"] = color_idx;
 			let color_img = product_array.at(product_idx).colors.at(color_idx);
 			//console.log(color_img);
 			let p_color_id = "#product_img" + product_idx;
@@ -197,7 +198,7 @@ input[id="cb1"] {
 			$(p_link).attr("href", "productdetail?pcode=" + product_array.at(product_idx).product.pcode + "&pcolor=" + product_array.at(product_idx).colors.at(product_array.at(product_idx).state).pcolor);
 			console.log($(p_link));
 			$(p_color_id).html(tmp);
-      }
+		}
    </script>
 
 	<%@ include file="/WEB-INF/views/common/footer.jsp"%>
