@@ -12,8 +12,7 @@
 		p.pregdate, p.pdiscount, p.plikeamount
 		FROM product
 		p, brand b
-		WHERE p.pcode =
-		#{pcode}
+		WHERE p.pcode = #{pcode}
 		AND p.bname = b.bname
 	</select>
 
