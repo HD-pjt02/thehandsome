@@ -119,7 +119,7 @@ a:hover {
 									url: "/product/getProductStock",
 									data: {
 										"pcode" : "${product.pcode}",
-										"color" : urlParams.get("pcolor"),
+										"pcolor" : urlParams.get("pcolor"),
 										"size" : obj.value
 									}
 								}).done((data) => {
