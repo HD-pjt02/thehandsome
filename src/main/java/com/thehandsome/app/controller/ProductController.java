@@ -179,15 +179,21 @@ public class ProductController {
 		return json;
 	}
 
+	/*221017미림 수정 */
 	@RequestMapping("/productdetail")
 	public String productDetail(String pcode, String pcolor, Model model) {
 		logger.info("productdetail 실행");
+		logger.info("pcode: "+pcode);
+		logger.info("pcolor: "+ pcolor);
 		ProductDTO product = productService.getProduct(pcode);
 		List<ColorDTO> colors = productService.getProductColor(product);
 		List<StockDTO> sizes = productService.getProductSize(product);
-
+		logger.info("color size: "+colors.size());
 		for (int i = 0; i < colors.size(); i++) {
+			logger.info("now color: "+colors.get(i).getPcolor());
 			if (pcolor.equals(colors.get(i).getPcolor())) {
+				model.addAttribute("currentcolorcode", colors.get(i).getPcodecolor());
+				model.addAttribute("currentpcolor", colors.get(i).getPcolor());
 				model.addAttribute("productimage1", colors.get(i).getImgurl1());
 				model.addAttribute("productimage2", colors.get(i).getImgurl2());
 				model.addAttribute("productimage3", colors.get(i).getImgurl3());
@@ -250,5 +256,8 @@ public class ProductController {
 
 		return json;
 	}
+	
+	
+	
 
 }
