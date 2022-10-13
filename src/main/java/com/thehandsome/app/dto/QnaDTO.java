@@ -10,38 +10,38 @@ import lombok.Data;
 @Data
 public class QnaDTO {
 	//문의 id
-	private int qId;
+	private int qid;
 	
 	//멤버 id
-	private String mId;
+	private String mid;
 	
 	//문의제목
-	private String qTitle;
+	private String qtitle;
 	
 	//문의내용
-	private String qContent;
+	private String qcontent;
 	
 	//문의날짜
-	private Timestamp qDate;
+	private Timestamp qdate;
 	
 	//문의회신날짜
-	private Timestamp qReplyDate;
+	private Timestamp qreplyDate;
 	
 	//문의회신제목
-	private String qReplyTitle;
+	private String qreplyTitle;
 	
 	//문의회신내용
-	private String qReplyContent;
+	private String qreplyContent;
 	
 	//관리자
-	private String qManager;
+	private String qmanager;
 	
 	//멤버 number
-	private int mNo;
+	private int mno;
 	
 	//문의 분야
-	private String qCategory;
+	private String qcategory;
 	
 	//처리 상태
-	private String qStatus;
+	private String qstatus;
 }

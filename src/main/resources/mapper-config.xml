@@ -30,6 +30,5 @@
 			type="com.thehandsome.app.dto.StockDTO" />
 		<typeAlias alias="MemberDTO"
 			type="com.thehandsome.app.dto.MemberDTO" />
-
 	</typeAliases>
 </configuration>
