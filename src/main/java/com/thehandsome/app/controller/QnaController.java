@@ -13,6 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.thehandsome.app.dto.QnaDTO;
 import com.thehandsome.app.service.QnaService;
@@ -52,17 +53,21 @@ public class QnaController {
 		
 		//qna조회 페이지로 이동
 		@RequestMapping(value = "customerCenterMain", method = RequestMethod.GET)
-			public void qnaSelectGet() {
+			public void qnaSelectGet(Model model) {
 			log.info("qna 조회 페이지 진입");
-		}
-		
-		//qna조회
-		@RequestMapping(value = "customerCenterMain", method = RequestMethod.POST)
-		public void productGetDetail(Model model) {
 			int nMo = 1;
-			model.addAttribute("qnaInfoList", qnaservice.qnaselect(nMo));
+			model.addAttribute("qnaList", qnaservice.qnaselect(nMo));
 			System.out.println(model);
 		}
+		
+//		//qna조회
+//		@RequestMapping(value = "/customerCenterMain")
+//		public String productGetDetail(Model model) {
+//			int nMo = 1;
+//			model.addAttribute("qnaList", qnaservice.qnaselect(nMo));
+//			System.out.println(model);
+//			return "/qna/customerCenterMain";
+//		}
 		
 		
 		

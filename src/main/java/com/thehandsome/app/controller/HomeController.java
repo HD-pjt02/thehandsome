@@ -24,7 +24,6 @@ import com.thehandsome.app.service.CategoryService;
 
 import lombok.extern.log4j.Log4j;
 
-
 @Controller
 public class HomeController {
 
@@ -39,7 +38,7 @@ public class HomeController {
 	public String home() {
 		return "home";
 	}
-	
+
 	@RequestMapping("/loginForm")
 	public String loginForm() {
 		logger.info("로그인 실행");
@@ -75,16 +74,11 @@ public class HomeController {
 	@GetMapping(value = "/getCategoryList", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String getCategoryList(String clarge, HttpSession session) {
-		System.out.println("clarge : " + clarge);
 		if (!categoryListJson.get("result").equals("success")) {
 			CategoryDTO tmp = new CategoryDTO();
 			tmp.setClarge(clarge);
-			System.out.println("tmp.getClarge() : " + tmp.getClarge());
-
 			List<CategoryDTO> categoryMedium = categoryService.getCategoryMedium(tmp);
-
 			JSONArray jsonArray = new JSONArray();
-
 			for (CategoryDTO m : categoryMedium) {
 				m.setClarge(tmp.getClarge());
 

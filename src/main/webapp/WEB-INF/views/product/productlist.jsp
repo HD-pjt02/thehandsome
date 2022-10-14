@@ -6,73 +6,117 @@ ul {
 	list-style: none;
 	padding: 0;
 }
+
 .container {
-    max-width: 1500px;
+	max-width: 1500px;
 	padding: 10px;
 }
+
 a {
 	color: black;
 	text-decoration: none;
 }
+
 a:link {
 	color: black;
 	text-decoration: none;
 }
+
 a:visited {
 	color: black;
 	text-decoration: none;
 }
+
 a:hover {
 	color: black;
 	text-decoration: none;
 }
+
 .cell {
 	float: left;
 	box-sizing: border-box;
 }
+
 .product-list .cell {
 	width: 20%;
 	padding-left: 10px;
 	padding-right: 10px;
 	margin-top: 20px;
 }
+
 .img-box>img {
 	display: block;
 	width: 100%;
 	cursor: pointer;
 }
+
 div .product-color {
 	text-align: center;
 }
+
 div .product-color>a>img {
 	margin: 0px 2px;
 	width: 18px;
 	height: 18px;
 }
+
 @media {
 	.product-list .row .cell {
 		width: calc(100%/ 4);
 	}
 }
+
 .product-list .row .cell .brand-name, .product-name, .product-price {
 	text-align: center;
 	font-size: 12px;
 }
+
 .imgswap img:last-child {
 	display: none
 }
+
 .imgswap:hover img:first-child {
 	display: none
 }
+
 .imgswap:hover img:last-child {
 	display: inherit
 }
+
 .btn-group button {
 	cursor: pointer;
 	float: left;
 }
-.btn-group button:not(:last-child) {
-	border-right: none;
+
+.btn-group
+
+ 
+
+button
+
+
+:not
+
+ 
+
+(
+:last-child
+
+ 
+
+)
+{
+border-right
+
+
+:
+
+ 
+
+none
+
+
+;
 }
 .dropdown-menu {
 	height: auto;
@@ -80,6 +124,7 @@ div .product-color>a>img {
 	width: 250px;
 	overflow-x: hidden;
 }
+
 input[id="cb1"] {
 	width: 22px;
 	height: 22px;
@@ -114,9 +159,16 @@ input[id="cb1"] {
 	</script>
 	<hr />
 	<div class="container">
+		<div>브랜드</div>
+		<div>색상</div>
+		<div>사이즈</div>
+		<div>가격</div>
+		<div>정렬순</div>
+		<div>초기화</div>
+		<div>적용</div>
 		<div style="font-size: 15px; text-align: center; align-self: center;">
-			총 <span style="color: #3D59DB; font-weight: bold">${totalRows}건</span>의 상품이
-			검색되었습니다.
+			총 <span style="color: #3D59DB; font-weight: bold">${totalRows}건</span>의
+			상품이 검색되었습니다.
 		</div>
 	</div>
 	<div class="container product-list">
@@ -133,8 +185,7 @@ input[id="cb1"] {
 			<a class="btn btn-light btn-sm"
 				href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.startPageNo-1}">이전</a>
 		</c:if>
-		<c:forEach var="i" begin="${page.startPageNo}"
-			end="${page.endPageNo}">
+		<c:forEach var="i" begin="${page.startPageNo}" end="${page.endPageNo}">
 			<c:if test="${page.pageNo != i}">
 				<a class="btn btn-light btn-sm"
 					href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
@@ -167,6 +218,7 @@ input[id="cb1"] {
 				for (let i = 0; i < product_array.length; i++) {
 					let product = product_array.at(i);
 					let product_color = product.colors;
+					//console.log(product_color);
 					let product_info = product.product;
 					//console.log(product_info);
 					let tmp = "";
@@ -189,19 +241,18 @@ input[id="cb1"] {
 				$("#product-list-wrapper").html(html_tmp);
 			});
 		});
-		
 		function changeColor(product_idx, color_idx) {
 			product_array.at(product_idx)["state"] = color_idx;
-			
 			let color_img = product_array.at(product_idx).colors.at(color_idx);
+			//console.log(color_img);
 			let p_color_id = "#product_img" + product_idx;
 			let p_link = "#product_link" + product_idx;
-			
+			//2022.10.19.수 수정사항
 			let tmp = "";
-				tmp += "<img src='" + color_img["cimageproduct1"] + "' alt='' />";
-				tmp += "<img src='" + color_img["cimageproduct2"] + "' alt='' />";
-			
+				tmp += "<img src='" + color_img["imgurl1"] + "' alt='' />";
+				tmp += "<img src='" + color_img["imgurl2"] + "' alt='' />";
 			$(p_link).attr("href", "productdetail?pcode=" + product_array.at(product_idx).product.pcode + "&pcolor=" + product_array.at(product_idx).colors.at(product_array.at(product_idx).state).pcolor);
+			console.log($(p_link));
 			$(p_color_id).html(tmp);
 		}
 	</script>
