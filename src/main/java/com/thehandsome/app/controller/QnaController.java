@@ -79,4 +79,13 @@ public class QnaController {
 		return "redirect:/qna/customerCenterMain";
 	}
 		
-}
+		@RequestMapping(value = "/qnaUpdateGet", method = RequestMethod.GET)
+			public void qnaUpdateGet(int qId, Model model) throws Exception{
+				log.info("qna 수정 조회 페이지 진입");
+				model.addAttribute("qnaList", qnaservice.qnaselect(qId));
+		        System.out.println(model);
+
+			}
+		}
+
+
