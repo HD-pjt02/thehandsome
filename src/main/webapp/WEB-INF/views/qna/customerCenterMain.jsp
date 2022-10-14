@@ -77,9 +77,10 @@
        <div class="inquiryList">
     
        <c:forEach items="${qnaList}" var="qnaList" varStatus="status">
-       <form name="formm" method="post" action="tohomeServlet?command=inquiry_delete">
+       <form name="formm" method="post" action="/qna/qnaDelete">
           <div class="inquiry-history">
             <div class="info">
+            <input type="text" name="qid" value="${qnaList.qid}">
               <span class="inquirytype"><c:out value="${qnaList.qcategory}"></c:out></span>
             </div>
             <div class="text-wrapper">
@@ -94,10 +95,7 @@
           </div>
           <div class="inquiry-answer" id="inquiry-answer${status.index}">
           <div class="inquiry-answer2">
-            <span>
-              A. 문의에 대한 답변을 준비중입니다. 빠른 답변을 드릴 수 있도록
-              노력하겠습니다.
-            </span>
+              <span><c:out value="${qnaList.qstatus}"></c:out></span>
             <button class="delete_inquiry_btn" type="submit">
               삭제
             </button>

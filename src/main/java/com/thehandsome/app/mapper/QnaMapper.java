@@ -14,4 +14,6 @@ public interface QnaMapper {
 	public void qnaInsert(QnaDTO qna);
 	//1:1문의 조회
 	public List<QnaDTO> qnaSelect(int nMo);
+	
+	public void qnaDelete(int qid);
 }
