@@ -69,6 +69,14 @@ public class QnaController {
 //			return "/qna/customerCenterMain";
 //		}
 		
+		//qna삭제 수행
+		@RequestMapping(value = "/qnaDelete", method = RequestMethod.POST)
+		public String qnaDelete(int qid) throws Exception{
+		log.info("qna 삭제 진입");
+		qnaservice.qnadelect(qid);
 		
+		log.info("qna service delete 성공");
+		return "redirect:/qna/customerCenterMain";
+	}
 		
 }

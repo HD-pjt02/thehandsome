@@ -21,17 +21,22 @@ public class QnaServiceImpl implements QnaService{
 	QnaMapper qnamapper;
 	
 	
-	//문의 입력
+	//qna 입력
 	@Override
 	public void qnainsert(QnaDTO qna) throws Exception {
 		qnamapper.qnaInsert(qna);
 	}
 	
-
+	//qna 조회
 	@Override
 	public List<QnaDTO> qnaselect(int nMo) {
-		// TODO Auto-generated method stub
 		return qnamapper.qnaSelect(nMo);
+	}
+
+	//qna 삭제
+	@Override
+	public void qnadelect(int qid) {
+		qnamapper.qnaDelete(qid);
 	}
 
 }
