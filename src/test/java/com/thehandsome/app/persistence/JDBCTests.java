@@ -24,12 +24,14 @@ public class JDBCTests {
 	@Test
 	public void testConnection() {
 		try{
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",
-					"c##book_ex",
-					"book_ex");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/xepdb1",
+					"handsome",
+					"1234");
 			log.info(con);
 		}catch(Exception e) {
 			fail(e.getMessage());
 		}
 	}
 }
+//2022.10.17.월
+//JUnit Test 완료

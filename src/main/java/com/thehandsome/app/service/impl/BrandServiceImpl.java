@@ -2,26 +2,25 @@ package com.thehandsome.app.service.impl;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.annotation.Resource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.thehandsome.app.dto.BrandDTO;
 import com.thehandsome.app.mapper.BrandMapper;
 import com.thehandsome.app.service.BrandService;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Service
-public class BrandServiceImpl implements BrandService{
-	
+public class BrandServiceImpl  implements BrandService{
+	private static final Logger logger = LoggerFactory.getLogger(BrandServiceImpl.class);
 
-	@Autowired
+	@Resource
 	private BrandMapper brandMapper;
-	
-	
 
 	public List<BrandDTO> getBrandList() {
+		logger.info("List<BrandDTO> getBrandList() 실행");
 		return brandMapper.selectAllBrands();
 	}
 }
