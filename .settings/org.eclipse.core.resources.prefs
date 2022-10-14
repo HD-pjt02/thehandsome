@@ -1,2 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/main/webapp/WEB-INF/views/common/body.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/common/footer_temp.jsp=UTF-8
+encoding//src/main/webapp/WEB-INF/views/common/header_temp.jsp=UTF-8
 encoding//src/main/webapp/WEB-INF/views/member/joinprovision.jsp=UTF-8
