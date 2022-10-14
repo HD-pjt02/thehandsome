@@ -77,6 +77,7 @@
        <div class="inquiryList">
     
        <c:forEach items="${qnaList}" var="qnaList" varStatus="status">
+       <form name="formm" method="post" action="tohomeServlet?command=inquiry_delete">
           <div class="inquiry-history">
             <div class="info">
               <span class="inquirytype"><c:out value="${qnaList.qcategory}"></c:out></span>
@@ -102,6 +103,7 @@
             </button>
           </div>
           </div>
+          </form>
           </c:forEach>
          </div>
           

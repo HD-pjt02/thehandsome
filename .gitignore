@@ -3,7 +3,4 @@ log4j.xml
 pom.properties
 log4jdbc.log4j2.properties
 MANIFEST.MF
-/.classpath/
-thehandsome/.classpath
-Servers/
-.factorypath
+.classpath
