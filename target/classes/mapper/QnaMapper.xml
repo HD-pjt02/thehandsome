@@ -15,7 +15,31 @@
   		select * from qna where mno = #{mno}
   	</select>
   	
+  	<!-- qna삭제 -->
   	<delete id="qnaDelete">
   		delete from qna where qid = #{qid}
   	</delete>
+  	
+  	<select id="qnaSelectDTO" resultType="QnaDTO">
+		select * from qna where qid = #{qid}
+	</select>
+	
+	
+	<!-- 총 게시글 갯수 출력 -->
+	<select id="countQna" resultType="int">
+		SELECT COUNT(*) FROM QNA
+	</select>
+
+	<!-- 페이징 처리 후 게시글 조회 -->
+	<select id="selectQna" resultType="QnaDTO">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT * 
+							FROM QNA 						
+							) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
   </mapper>
