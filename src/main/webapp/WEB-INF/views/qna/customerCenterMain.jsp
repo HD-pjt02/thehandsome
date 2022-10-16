@@ -10,21 +10,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- CSS only -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/resources/css/customerCenterMain.css"
 	type="text/css" />
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
-	crossorigin="anonymous" />
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-	crossorigin="anonymous">
-    </script>
+
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css" />
 
@@ -76,7 +70,7 @@
 
 					<div class="inquiryList">
 
-						<c:forEach items="${qnaList}" var="qnaList" varStatus="status">
+						<c:forEach items="${viewAll}" var="qnaList" varStatus="status">
 							<form name="formm" method="post" action="/qna/qnaDelete">
 								<div class="inquiry-history">
 									<div class="info">
@@ -107,7 +101,25 @@
 							</form>
 						</c:forEach>
 					</div>
-
+					
+	<div style="display: block; text-align: center;">		
+		<c:if test="${paging.startPage != 1 }">
+			<a href="boardList?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+		</c:if>
+		<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+			<c:choose>
+				<c:when test="${p == paging.nowPage }">
+					<b>${p }</b>
+				</c:when>
+				<c:when test="${p != paging.nowPage }">
+					<a href="boardList?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+				</c:when>
+			</c:choose>
+		</c:forEach>
+		<c:if test="${paging.endPage != paging.lastPage}">
+			<a href="boardList?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+		</c:if>
+	</div>
 				</div>
 			</section>
 		</div>
@@ -133,11 +145,11 @@
  
  function update_btn(qid){
 	 var qid = qid.value;
-	 var data = {qId : qid}
+	 console.log(qid);
 	 
 	 $.ajax({
-		    url: "/qna/qnaUpdateGet",
-		    data: data,
+		    url: "qnaUpdateGet.do",
+		    data: "qid=" + qid,
 		    type: "POST",
 		    success : function(data){
 		      alert("성공")
@@ -145,13 +157,12 @@
 		    error : function(){
 		      alert("에러")		
 		    }
-		  });
+		  }); 
 	 
  }
 
 
 
  </script>
-</script>
 
 </html>

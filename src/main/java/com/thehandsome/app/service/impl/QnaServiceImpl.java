@@ -38,5 +38,25 @@ public class QnaServiceImpl implements QnaService{
 	public void qnadelect(int qid) {
 		qnamapper.qnaDelete(qid);
 	}
+	
+	//qna 업데이트 전 조회
+	@Override
+	public QnaDTO qnaselectDTO(int qid) {
+		return qnamapper.qnaSelectDTO(qid);
+		
+	}
+	// 게시물 총 갯수
+	@Override
+	public int countQna() {
+		return qnamapper.countQna();
+	}
+	
+	// 페이징 처리 게시글 조회
+	@Override
+	public List<QnaDTO> selectQna(PagingDTO vo) {
+		return qnamapper.selectQna(vo);
+	}
+	
+	
 
 }
