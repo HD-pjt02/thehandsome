@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.thehandsome.app.mapper.CategoryMapper">
+	<select id="selectCategoryMedium" resultType="CategoryDTO" parameterType="CategoryDTO">
+        SELECT cmedium from category
+	    WHERE clarge = #{clarge}
+	    GROUP BY clarge, cmedium
+	</select>
+	
+	<select id="selectCategorySmall" resultType="CategoryDTO" parameterType="CategoryDTO">
+    	SELECT csmall from category
+    	WHERE clarge = #{clarge}
+    	AND cmedium = #{cmedium}
+    	GROUP BY clarge, cmedium, csmall
+    	
+	</select>
+</mapper>
