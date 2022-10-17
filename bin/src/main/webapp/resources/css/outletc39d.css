@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* * * * * common * * * * */
+/* main, decke, outlet 상품 상세정보 */
+.item_box{position:relative;}
+.item_box a{display: block;position: relative;}
+.item_box .item_info2 span{display:block;text-align:center;}
+.item_box .item_info2 .brand{letter-spacing:1px;font-family:"whitneyBold","Malgun Gothic","맑은 고딕";font-size: 11px;color:#363636;}
+.item_box .item_info2 .title{padding:0 10px;height:20px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:11px;}
+.item_box .item_info2 .price{padding:5px 0;color:#0d0d0d;font-size:11px;}
+.item_box .item_info2 .price.point_color1{color:#ff0000;}
+.item_box .item_info2 .flag span{display: inline-block;padding:0 5px;font-size:11px}
+.item_box .item_info2 .flag .flag_typ1{color:#c69c6d;letter-spacing: 1px}
+.item_box .item_info2 .flag .flag_typ2{color:#ff0000;}
+.item_box .item_info2 .flag .set{color:#c69c6d;letter-spacing: 1px}
+.item_box .item_info2 .flag .soldout{color:#ff0000;}
+.item_box .color_more_wrap{margin-top:10px;position:relative;text-align:center;}
+.item_box .color_more_wrap a{display:inline-block;border:1px solid #dcdcdc;width:13px;height:14px;cursor:default;}
+.item_box .color_more_wrap a:hover{border:2px solid #363636;width:11px;height:12px;}
+
+
+/* outlet main ***************************************************************************/
+.ou_main_wrap{margin-bottom:35px;}
+.ou_main_wrap img{vertical-align:middle;}
+.ou_tlt{color:#363636;font-size:24px;font-weight:bold;margin:80px 0 20px;}
+
+/* main banner */
+.ou_banner{position: relative;margin-top:20px;max-width:1205px;max-height:420px;height:420px;}
+.ou_banner li img{display: block}
+.ou_banner .flex-control-nav{position:absolute; left:0; bottom:30px;text-align: center;}
+.ou_banner .flex-direction-nav a{position:absolute;display:block;width:20px;height:33px;background: url("../images/magazine/event2_controls.png") no-repeat;text-indent: -999em}
+.ou_banner .flex-direction-nav .flex-prev{top:50%;left:1.5%;background-position: left top;z-index: 1;margin-top: -17px}
+.ou_banner .flex-direction-nav .flex-next{top:50%;right:1.5%;background-position: right top;z-index: 1;margin-top: -17px}
+.ou_banner .slides li{position: relative;}
+.ou_banner .slides li .txt_wrap{position: absolute;top:50%;left:50%;color:#363636;text-align: center;width:800px;margin:-75px 0 0 -400px;}
+.ou_banner .slides li .txt_wrap .title{font-size:14px;line-height:21px;letter-spacing:3px}
+.ou_banner .slides li .txt_wrap .s_title{font-size:30px;line-height:40px;padding:20px 0 55px;letter-spacing:3px}
+.ou_banner .slides li .txt_wrap.wt .title,
+.ou_banner .slides li .txt_wrap.wt .s_title{color:#222;}
+.ou_banner .slides li img{max-width:1205px;}
+
+/* brand menu */
+.ou_br_wrap{position:relative;padding:30px 0 25px;border-bottom:1px solid #e5e5e5;margin-bottom:55px;}
+.ou_br_wrap:after{content:'';display:block;clear:both;}
+.ou_br_wrap > ul{height:auto;overflow:hidden;text-align:center;}
+.ou_br_wrap ul.auto{height:45px;}
+.ou_br_wrap ul li ul li{display:inline-block;min-height:20px;margin:10px 20px;}
+.ou_br_wrap .btn_more{width:98px;height:20px;position:absolute;left:50%;bottom:-20px;border:1px solid #e5e5e5;border-top:0;margin-left:-49px;background:#fff;}
+.ou_br_wrap .btn_more a{display:block;text-indent:-999em;background:url("../images/common/ou_more_btn.png") 0 bottom no-repeat;}
+.ou_br_wrap .btn_more a.on{background-position:0 0;}
+
+/* new arrivals */
+.ou_newpd_wrap:after{content:'';display:block;clear:both;}
+.ou_newpd_wrap img{width:100%;}
+.ou_newpd_wrap .ou_br_list{position:relative;width:18.839%;float:left;}
+.ou_newpd_wrap .ou_br_list .ou_tlt{position:absolute;margin:60px 20px;z-index:10;}
+.ou_newpd_wrap .ou_newpd_banner{position:relative;}
+.ou_newpd_wrap .ou_newpd_banner .txt{position:absolute;left:20px;top:120px;color:#363636;font-size:18px;font-family:"whitneyBook","Malgun Gothic","맑은 고딕";}
+
+.ou_newpd_wrap .ou_br_list .ou_newpd_btn{position:absolute;left:20px;top:155px;z-index:10;}
+.ou_newpd_wrap .ou_br_list .ou_newpd_btn li{display:block;float:left;margin-right:20px;}
+.ou_newpd_wrap .ou_br_list .ou_newpd_btn li a{display:inline-block;width:10px;height:15px;background:url("../images/common/ou_newpd_controls.png") no-repeat;text-indent:-999em;}
+.ou_newpd_wrap .ou_br_list .ou_newpd_btn li+li a{background-position:right 0;}
+
+.ou_newpd_wrap .ou_items_list{width:80.4%;float:right;}
+.ou_items_list li{float:left;width:24.253%;margin-left:0.99%;}
+.ou_items_list li:first-child{margin-left:0;}
+.ou_items_list li .item_box .item_info1 .item_size{display:inline-block;position: absolute;left:0;bottom:0;width:100%;padding:15px 0;background:url("../images/products/item_size_bg.png");text-align: center}
+.ou_items_list li .item_box .item_info1{margin-bottom:8px;letter-spacing: 1px}
+.ou_items_list li .item_box .item_info1 .item_img{position: relative;display:block;}
+.ou_items_list li .item_box .item_info1 .item_img img{width:100%;max-width:235px;}
+.ou_items_list li .item_box .item_info1 .item_img .on{display:none;position: absolute;top:0;left:0;}
+.ou_items_list li .item_box .item_info1 .item_size span{display:inline-block;padding:0 10px;}
+
+
+/* MD's pick */
+.ou_mdp_wrap:after{content:'';display:block;clear:both;}
+.ou_mdp_wrap img{width:100%;}
+.ou_mdp_wrap li{width:19.503%;float:left;}
+.ou_mdp_wrap li:first-child{width:59.6%;margin-right:0.75%;}
+.ou_mdp_wrap li:first-child .item_info1{text-align:center;background:#f9f7f8;}
+.ou_mdp_wrap li:first-child img{width:66.297%;}
+.ou_mdp_wrap li.s2{float:right;}
+.ou_mdp_wrap li.s3{margin-top:8px;}
+.ou_mdp_wrap li.s4{margin-top:8px;float:right;}
+.ou_mdp_list .item_info2_wrap{display:none;width:92%;position:absolute;left:4%;bottom:10px;padding:20px;margin:0 auto;background:url("../images/main/ou_mdp_bg.png") repeat;box-sizing:border-box;}
+.ou_mdp_list li:first-child .item_info2_wrap{bottom:30px;padding:25px;margin:0 auto;box-sizing:border-box;}
+
+.ou_mdp_list .item_info2 .brand:after{content:'';position:absolute;left:50%;bottom:0;display:block;width:16px;height:2px;margin-left:-8px;background:#363636;}
+.ou_mdp_list .item_info2 .brand{position:relative;background:url("../images/common/ou_logo.png") no-repeat;text-indent:-999em;padding-bottom:10px;margin:0 auto 10px;} 
+.ou_br_wrap a{display:block;}
+.ou_br_wrap .brand{display:block;background:url("../images/common/ou_logo.png") no-repeat;text-indent:-999em;} 
+.ou_br_wrap .brand.BR01,
+.ou_br_wrap .brand.OU_BR01,
+.ou_mdp_list .item_info2 .brand.BR01{width:68px;background-position: 0 -45px}/* TIME */
+.ou_br_wrap .brand.BR02,
+.ou_br_wrap .brand.OU_BR02,
+.ou_mdp_list .item_info2 .brand.BR02{width:86px;background-position: 0 -86px}/* MINE */
+.ou_br_wrap .brand.BR03,
+.ou_br_wrap .brand.OU_BR03,
+.ou_mdp_list .item_info2 .brand.BR03{width:53px;height:25px;background-position: 0 -126px}/* SYSTEM */
+.ou_br_wrap .brand.BR04,
+.ou_br_wrap .brand.OU_BR04,
+.ou_mdp_list .item_info2 .brand.BR04{width:54px;height:25px;background-position: 0 -167px}/* SJSJ */
+.ou_br_wrap .brand.BR05,
+.ou_br_wrap .brand.OU_BR05,
+.ou_mdp_list .item_info2 .brand.BR05{width:70px;height:25px;margin-top:-4px;background-position: 0 -205px}/* DECKE */
+.ou_br_wrap .brand.BR06,
+.ou_br_wrap .brand.OU_BR06,
+.ou_mdp_list .item_info2 .brand.BR06{width:70px;height:25px;background-position: 0 -249px}/* TIME HOMME */
+.ou_br_wrap .brand.BR07,
+.ou_br_wrap .brand.OU_BR07,
+.ou_mdp_list .item_info2 .brand.BR07{width:50px;height:25px;background-position: 0 -289px}/* SYSTEM HOMME */
+.ou_br_wrap .brand.BR08,
+.ou_br_wrap .brand.OU_BR08,
+.ou_mdp_list .item_info2 .brand.BR08{width:130px;background-position: 0 -332px}/* CASHMERE */
+.ou_br_wrap .brand.BR09,
+.ou_br_wrap .brand.OU_BR09,
+.ou_mdp_list .item_info2 .brand.BR09{width:50px;background-position: 0 -371px}/* CHLOE */
+.ou_br_wrap .brand.BR10,
+.ou_br_wrap .brand.OU_BR10,
+.ou_mdp_list .item_info2 .brand.BR10{width:98px;background-position: 0 -413px}/* SEE BY CHLOE */
+.ou_br_wrap .brand.BR11,
+.ou_br_wrap .brand.OU_BR11,
+.ou_mdp_list .item_info2 .brand.BR11{width:46px;background-position: 0 -453px}/* MM6 */
+.ou_br_wrap .brand.BR12,
+.ou_br_wrap .brand.OU_BR12,
+.ou_mdp_list .item_info2 .brand.BR12{width:134px;background-position: 0 -495px}/* EACHxOTHER */
+.ou_br_wrap .brand.BR13,
+.ou_br_wrap .brand.OU_BR13,
+.ou_mdp_list .item_info2 .brand.BR13{width:38px;height:40px;margin-top:-6px;background-position: 0 -534px}/* ELEVENTY */
+.ou_br_wrap .brand.BR14,
+.ou_br_wrap .brand.OU_BR14,
+.ou_mdp_list .item_info2 .brand.BR14{width:51px;background-position: 0 -589px}/* BIRD by JUICYCOUTURE */
+.ou_br_wrap .brand.BR15,
+.ou_br_wrap .brand.OU_BR15,
+.ou_mdp_list .item_info2 .brand.BR15{width:140px;background-position: 0 -631px}/* Tom GreyHound Downstairs */
+.ou_br_wrap .brand.BR16,
+.ou_br_wrap .brand.OU_BR16,
+.ou_mdp_list .item_info2 .brand.BR16{width:54px;background-position: 0 -672px}/* MUE */
+.ou_br_wrap .brand.BR17,
+.ou_br_wrap .brand.OU_BR17,
+.ou_mdp_list .item_info2 .brand.BR17{width:75px;height:28px;background-position: 0 -757px}/* JUICY COUTURE */
+.ou_br_wrap .brand.BR18,
+.ou_br_wrap .brand.OU_BR18,
+.ou_mdp_list .item_info2 .brand.BR18{width:48px;height:32px;margin-top:-4px;background-position: 0 -793px}/* LANVIN SPORT */
+.ou_br_wrap .brand.BR19,
+.ou_br_wrap .brand.OU_BR19,
+.ou_mdp_list .item_info2 .brand.BR19{width:48px;height:32px;margin-top:-6px;background-position: 0 -831px}/* LANVIN COLLECTION */
+.ou_br_wrap .brand.BR20,
+.ou_br_wrap .brand.OU_BR20,
+.ou_mdp_list .item_info2 .brand.BR20{width:48px;height:32px;margin-top:-3px;background-position: 0 -876px}/* LANVIN */
+.ou_br_wrap .brand.BR21,
+.ou_br_wrap .brand.OU_BR21,
+.ou_mdp_list .item_info2 .brand.BR21{width:82px;background-position: 0 -923px}/* BALLY */
+.ou_br_wrap .brand.BR22,
+.ou_br_wrap .brand.OU_BR22,
+.ou_mdp_list .item_info2 .brand.BR22{width:110px;background-position: 0 -964px}/* JIMMY CHOO */
+.ou_br_wrap .brand.BR23,
+.ou_br_wrap .brand.OU_BR23,
+.ou_mdp_list .item_info2 .brand.BR23{width:97px;background-position: 0 -1007px}/* BELSTAFF */
+.ou_br_wrap .brand.BR24,
+.ou_br_wrap .brand.OU_BR24,
+.ou_mdp_list .item_info2 .brand.BR24{width:68px;background-position: 0 -1046px}/* IRO */
+.ou_br_wrap .brand.BR25,
+.ou_br_wrap .brand.OU_BR25,
+.ou_mdp_list .item_info2 .brand.BR25{width:114px;background-position: 0 -1088px}/* THE KOOPLES */
+.ou_br_wrap .brand.BR26,
+.ou_br_wrap .brand.OU_BR26,
+.ou_mdp_list .item_info2 .brand.BR26{background-position: 0 -1122px}/* LANVIN COLLECTION ACC _이미지 없음 */
+.ou_br_wrap .brand.BR27,
+.ou_br_wrap .brand.OU_BR27,
+.ou_mdp_list .item_info2 .brand.BR27{background-position: 0 -1122px}/* MUE HOMME _이미지 없음 */
+.ou_br_wrap .brand.BR28,
+.ou_br_wrap .brand.OU_BR28,
+.ou_mdp_list .item_info2 .brand.BR28{width:126px;background-position: 0 -1172px}/* MOTHAN */
+.ou_br_wrap .brand.BR30,
+.ou_br_wrap .brand.OU_BR30,
+.ou_mdp_list .item_info2 .brand.BR30{width:140px;background-position: 0 -1212px}/* FOURM STUDIO */
+.ou_br_wrap .brand.BR31,
+.ou_br_wrap .brand.OU_BR31,
+.ou_mdp_list .item_info2 .brand.BR31{width:103px;height:25px;background-position: 0 -1262px}/* LATT BY T */
+.ou_br_wrap .brand.BR32,
+.ou_br_wrap .brand.OU_BR32,
+.ou_mdp_list .item_info2 .brand.BR32{width:147px;background-position: 0 -1312px}/* FOURM 1/4 MEN'S LOUNGE_20161207 */
+.ou_br_wrap .brand.BR34,
+.ou_br_wrap .brand.OU_BR34,
+.ou_mdp_list .item_info2 .brand.BR34{width:147px;background-position: 0 -1362px}/* FOURM ATELIER_20161207 */
+.ou_br_wrap .brand.BR35,
+.ou_br_wrap .brand.OU_BR35,
+.ou_mdp_list .item_info2 .brand.BR35{width:139px;background-position: 0 -1510px;}/* FOURM THE STORE _20170108 */
+.ou_br_wrap .brand.FOURM,
+.ou_br_wrap .brand.OU_FOURM,
+.ou_mdp_list .item_info2 .brand.FOURM{margin-top:-12px;width:70px;height:30px;background-position: 0 -1460px;}/* 1/4 FOURM _20170108 */
+/* .ou_br_wrap .brand.OU_BR35, */
+/* .ou_mdp_list .item_info2 .brand.BR35{width:147px;background-position: 0 -1412px}FOURM LIFESTYLE _20161207 */
+.ou_br_wrap .brand.BR44,
+.ou_br_wrap .brand.OU_BR44,
+.ou_mdp_list .item_info2 .brand.BR44{width:136px;background-position: 0 -1547px;}/* CLUB MONACO 20190109*/
+.ou_br_wrap .brand.BR43,
+.ou_br_wrap .brand.OU_BR43,
+.ou_mdp_list .item_info2 .brand.BR43{width:68px;background-position: 0 -1585px;margin-top:-3px;}/* OBZEE 20190109*/
+.ou_br_wrap .brand.BR45,
+.ou_br_wrap .brand.OU_BR45,
+.ou_mdp_list .item_info2 .brand.BR45{width:59px;background-position: 0 -1670px;}/* O'2nd 20191223 */
+.ou_br_wrap .brand.BR47,
+.ou_br_wrap .brand.OU_BR47,
+.ou_mdp_list .item_info2 .brand.BR47{width:86px;background-position: 0 -1632px;}/* h:scene 20190626*/
+.ou_br_wrap .brand.BR41,
+.ou_br_wrap .brand.OU_BR41,
+.ou_mdp_list .item_info2 .brand.BR41{width:154px; background-position: 0 -1708px; height:33px; margin-top:-8px;}/* Phillip Lim 20210512 */
+.ou_br_wrap .brand.BR37,
+.ou_br_wrap .brand.OU_BR37,
+.ou_mdp_list .item_info2 .brand.BR37{width:115px;background-position: 0 -1758px;height:27px;}/* Rochas 210819  */
+
+/* 20200721 LATT BY T >>>> LATT로 변경으로 인한 사이즈 조정 */
+.ou_br_wrap .brand.BR31, .ou_br_wrap .brand.OU_BR31, .ou_mdp_list .item_info2 .brand.BR31{width:76px;height:25px;background-position: 0 -1262px}/* LATT BY T */
+
+/* 20200918_BI개선 */
+.item_box .color_more_wrap a{}
+.item_box .color_more_wrap a:hover{border: 1px solid #dcdcdc; width: 13px; height: 14px;}
+.item_box .color_more_wrap .wt:hover{border: 1px solid #dcdcdc; width: 13px; height: 14px;}
+.item_box .color_more_wrap a:hover:after{content:""; display:block; position: absolute; bottom:-5px; left:0; width:100%; height:2px; background-color:#000;}
