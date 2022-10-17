@@ -25,13 +25,13 @@ public class QnaDTO {
 	private Timestamp qdate;
 	
 	//문의회신날짜
-	private Timestamp qreplyDate;
+	private Timestamp qreplydate;
 	
 	//문의회신제목
-	private String qreplyTitle;
+	private String qreplytitle;
 	
 	//문의회신내용
-	private String qreplyContent;
+	private String qreplycontent;
 	
 	//관리자
 	private String qmanager;

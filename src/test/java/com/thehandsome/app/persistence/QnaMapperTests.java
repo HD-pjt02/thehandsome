@@ -46,13 +46,20 @@ public class QnaMapperTests {
 //		
 //	}
 	
+//	@Test
+//	public void qnaSelect() throws Exception{	
+//		
+//		int qna= 1;
+//		//���ǿ��� id�� �����´����� qna�� �־
+//		List<QnaDTO> list = qnamapper.qnaSelect(qna);
+//	    System.out.println(list);
+//	}
+	
 	@Test
-	public void qnaSelect() throws Exception{	
-		
-		int qna= 1;
-		//���ǿ��� id�� �����´����� qna�� �־
-		List<QnaDTO> list = qnamapper.qnaSelect(qna);
-	    System.out.println(list);
+	public void qnaDelete() throws Exception {
+		int qid = 26;
+		qnamapper.qnaDelete(qid);
+		System.out.println("삭제성공");
 	}
 	
 //	@Test
