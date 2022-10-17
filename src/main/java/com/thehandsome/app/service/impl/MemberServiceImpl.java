@@ -72,7 +72,7 @@ public class MemberServiceImpl implements MemberService{
 				"            </td></tr><tr><td style=\"color:#222; font-size:12px; line-height:20px; font-family:Dotum,sans-serif; font-weight:normal; text-align:center; border:0; padding:30px 0 0;\">\r\n" + 
 				"            회원가입을 하기 위해 아래 이메일 인증하기 버튼을 클릭해주세요.\r\n" + 
 				"            </td></tr><tr><td style=\"height:10px;border:0; padding:0; margin:0;\"></td></tr><tr><td style=\"text-align:center; padding:20px 0 0;\">\r\n" + 
-				"                <a href=\"http://localhost:8085/member/joinprovision?joincode="+authNumber+","+toMail+"\" target=\"_blank\" style=\"display:inline-block; color:#ffffff; font-size:14px; line-:14px; font-family:dotum,sans-serif; font-weight:bold; text-decoration:none; background-color:#474747; border:0; padding:14px 25px; margin:0;\" rel=\"noreferrer noopener\">이메일 인증하기</a>\r\n" + 
+				"                <a href=\"http://localhost:8080/member/joinprovision?joincode="+authNumber+","+toMail+"\" target=\"_blank\" style=\"display:inline-block; color:#ffffff; font-size:14px; line-:14px; font-family:dotum,sans-serif; font-weight:bold; text-decoration:none; background-color:#474747; border:0; padding:14px 25px; margin:0;\" rel=\"noreferrer noopener\">이메일 인증하기</a>\r\n" + 
 				"            </td></tr><tr><td style=\"color:#222; font-size:12px; line-height:20px; font-family:Dotum,sans-serif; font-weight:normal; text-align:center; border:0; padding:10px 0 0;\">\r\n" + 
 				"            인증 유효시간 : 30분 이내\r\n" + 
 				"            </td></tr><tr><td style=\"height:120px;border:0; padding:0; margin:0;\"></td></tr><tr><td>\r\n" + 
