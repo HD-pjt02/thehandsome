@@ -97,8 +97,7 @@
 		parameterType="ProductDTO">
 		SELECT *
 		FROM color
-		WHERE pcode =
-		#{pcode}
+		WHERE pcode = #{pcode}
 	</select>
 
 	<select id="selectProductSize" resultType="StockDTO"
