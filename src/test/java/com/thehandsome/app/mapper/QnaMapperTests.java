@@ -1,4 +1,9 @@
-package com.thehandsome.app.persistence;
+/* 
+ * 작성자 : 김민석
+ * 작성일 : 2022.10.17.월
+ * QnaMapperTests : QnaMapper.xml을 test 자바소스
+ */
+package com.thehandsome.app.mapper;
 
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
