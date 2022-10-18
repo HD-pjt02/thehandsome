@@ -61,17 +61,53 @@ public class QnaController {
 //			model.addAttribute("qnaList", qnaservice.qnaselect(nMo));
 //		}
 		
+		@RequestMapping(value = "customerCenterMain", method = RequestMethod.GET)
+		public void qnaSelectGet(PagingDTO vo, Model model
+				, @RequestParam(value="nowPage", required=false)String nowPage
+				, @RequestParam(value="cntPerPage", required=false)String cntPerPage) {
+			System.out.println("qna 조회 진입");
+			int total = qnaservice.countQna();
+			if (nowPage == null && cntPerPage == null) {
+				nowPage = "1";
+				cntPerPage = "5";
+			} else if (nowPage == null) {
+				nowPage = "1";
+			} else if (cntPerPage == null) { 
+				cntPerPage = "5";
+			}
+			vo = new PagingDTO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+			model.addAttribute("paging", vo);
+			model.addAttribute("viewAll", qnaservice.selectQna(vo));
+			
+		}
+//		
 
 		
 		//qna삭제 수행
 		@RequestMapping(value = "/qnaDelete", method = RequestMethod.POST)
-		public String qnaDelete(int qid) throws Exception{
+		public String qnaDelete(int qid, PagingDTO vo, Model model
+				, @RequestParam(value="nowPage", required=false)String nowPage
+				, @RequestParam(value="cntPerPage", required=false)String cntPerPage) throws Exception{
 		log.info("qna 삭제 진입");
 		qnaservice.qnadelect(qid);
 		
 		log.info("qna service delete 성공");
-		return "redirect:/qna/customerCenterMain";
+		
+		int total = qnaservice.countQna();
+		if (nowPage == null && cntPerPage == null) {
+			nowPage = "1";
+			cntPerPage = "5";
+		} else if (nowPage == null) {
+			nowPage = "1";
+		} else if (cntPerPage == null) { 
+			cntPerPage = "5";
+		}
+		vo = new PagingDTO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+		model.addAttribute("paging", vo);
+		model.addAttribute("viewAll", qnaservice.selectQna(vo));
+		return "/qna/customerCenterMain";
 	    }
+		
 		
 		//qna 수정할 내용 select
 		@RequestMapping(value = "qnaUpdateGet.do", method = RequestMethod.POST)
@@ -86,10 +122,15 @@ public class QnaController {
 		//qna 수정
 		
 		//qna수정페이지로 이동
-	@RequestMapping(value = "qnaUpdate", method = RequestMethod.GET)
-	@ResponseBody
-		public void qnaUpdate() {
+	@RequestMapping(value = "qnaUpdate", method = RequestMethod.POST)
+		public String qnaUpdate(QnaDTO qnadto) {
 		log.info("qna 수정 페이지 진입");
+		
+		System.out.println(qnadto);
+		
+		log.info(qnadto);
+		
+		return "/qna/qnaUpdate";
 //		model.addAttribute("qnaDTO", qnaservice.qnaselectDTO(qid));
 //		System.out.println(model);
 	}
@@ -103,25 +144,27 @@ public class QnaController {
 ////		model.addAttribute("qnaList", qnaservice.qnaselect(nMo));
 //	}
 	
-	@GetMapping("boardList")
-	public String boardList(PagingDTO vo, Model model
-			, @RequestParam(value="nowPage", required=false)String nowPage
-			, @RequestParam(value="cntPerPage", required=false)String cntPerPage) {
-		
-		int total = qnaservice.countQna();
-		if (nowPage == null && cntPerPage == null) {
-			nowPage = "1";
-			cntPerPage = "5";
-		} else if (nowPage == null) {
-			nowPage = "1";
-		} else if (cntPerPage == null) { 
-			cntPerPage = "5";
-		}
-		vo = new PagingDTO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
-		model.addAttribute("paging", vo);
-		model.addAttribute("viewAll", qnaservice.selectQna(vo));
-		return "qna/customerCenterMain";
-	}
+	
+//	@GetMapping("boardList")
+//	public String boardList(PagingDTO vo, Model model
+//			, @RequestParam(value="nowPage", required=false)String nowPage
+//			, @RequestParam(value="cntPerPage", required=false)String cntPerPage) {
+//		
+//		int total = qnaservice.countQna();
+//		if (nowPage == null && cntPerPage == null) {
+//			nowPage = "1";
+//			cntPerPage = "5";
+//		} else if (nowPage == null) {
+//			nowPage = "1";
+//		} else if (cntPerPage == null) { 
+//			cntPerPage = "5";
+//		}
+//		vo = new PagingDTO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+//		model.addAttribute("paging", vo);
+//		model.addAttribute("viewAll", qnaservice.selectQna(vo));
+//		return "qna/customerCenterMain";
+//	}
+
 
 
 }

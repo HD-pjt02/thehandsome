@@ -71,10 +71,10 @@
 					<div class="inquiryList">
 
 						<c:forEach items="${viewAll}" var="qnaList" varStatus="status">
-							<form name="formm" method="post" action="/qna/qnaDelete">
+							<form id= "form1" name="formm" method="post">
 								<div class="inquiry-history">
 									<div class="info">
-										<input type="text" name="qid" id="qid${status.index}"
+										<input type="text" name="qid" id="qid"
 											value="${qnaList.qid}"> <span class="inquirytype"><c:out
 												value="${qnaList.qcategory}"></c:out></span>
 									</div>
@@ -92,9 +92,8 @@
 								<div class="inquiry-answer" id="inquiry-answer${status.index}">
 									<div class="inquiry-answer2">
 										<span><c:out value="${qnaList.qstatus}"></c:out></span>
-										<button class="delete_inquiry_btn" type="submit">삭제</button>
-										<button class="update_inquiry_btn" type="button"
-											onClick="update_btn(qid${status.index})">수정</button>
+										<button class="delete_inquiry_btn" type="button">삭제</button>
+										<button class="update_inquiry_btn" type="button">수정</button>
 									</div>
 
 								</div>
@@ -104,7 +103,7 @@
 					
 	<div style="display: block; text-align: center;">		
 		<c:if test="${paging.startPage != 1 }">
-			<a href="boardList?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+			<a href="customerCenterMain?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
 		</c:if>
 		<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
 			<c:choose>
@@ -112,12 +111,12 @@
 					<b>${p }</b>
 				</c:when>
 				<c:when test="${p != paging.nowPage }">
-					<a href="boardList?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+					<a href="customerCenterMain?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
 				</c:when>
 			</c:choose>
 		</c:forEach>
 		<c:if test="${paging.endPage != paging.lastPage}">
-			<a href="boardList?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+			<a href="customerCenterMain?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
 		</c:if>
 	</div>
 				</div>
@@ -143,7 +142,22 @@
         });
  }
  
- function update_btn(qid){
+ 
+ $(document).ready(function(){
+		//회원가입 버튼(회원가입 기능 작동)
+		$(".delete_inquiry_btn").click(function(){
+			$("#form1").attr("action", "/qna/qnaDelete");
+			$("#form1").submit();
+		});
+		
+		$(".update_inquiry_btn").click(function(){
+			$("#form1").attr("action", "/qna/qnaUpdate");
+			$("#form1").submit();
+		});
+	});
+ 
+/*  function update_btn(qid){
+	 
 	 var qid = qid.value;
 	 console.log(qid);
 	 
@@ -159,7 +173,7 @@
 		    }
 		  }); 
 	 
- }
+ } */
 
 
 
