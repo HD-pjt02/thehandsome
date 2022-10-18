@@ -2616,7 +2616,7 @@ $(document).ready(function(){
     }
     
     
-    
+    //리뷰작성
     $("#customerReviewWrite").on("click", function(){
         
         //초기화
@@ -2624,13 +2624,13 @@ $(document).ready(function(){
       
         //로그인이 되어 있는지 확인한다.
         
-            goLogin("review");
-            return;
+          //  goLogin("review");
+          //미림 주석  return;
         
         
         if ( 'Y' == 'Y' ) {
             $.ajax({
-                url     : '/ko/p/reviewWriteBeforeVerify',
+                url     : '/review/reviewWriteBeforeVerify',
                 type    : 'GET',
                 datatype: 'json',
                 data : { "productCode" : $('#productCode').val()
@@ -2640,7 +2640,8 @@ $(document).ready(function(){
                 	var la;
                 	if('ko' == 'ko') {
         				purchaseListCount = data.orderProductReviewList.length + data.offlineProductReviewList.length;
-        			
+        				//미림 임시 고정값
+        				purchaseListCount = 1;
                     	if ( $('#tempProductId').val() == '' || $('#tempProductId').val() == null ) {
                         	if ( purchaseListCount == 0 ) {
                         		if(data.reviewWriteOnce == true) {
@@ -6400,7 +6401,7 @@ function reviewHtml(data){
     }
     
     if(data.reviewList != undefined){
-	     var totalNumberOfResults = parseInt(paging.totalNumberOfResults);
+	    //미림 임시주석 var totalNumberOfResults = parseInt(paging.totalNumberOfResults);
 	     var cookieUid = 'anonymous';
 	     
 	     var reviewHtml = "";
@@ -7634,11 +7635,11 @@ function fn_popupCustomerReview(pageNum,reviewType){
     if(pageNum == null || pageNum == ''){
         pageNum=1;
     }
-    
+
     var productCode = $("#productCode").val();
-    
+    //미림 alert("여기다: "+productCode);
     $.ajax({
-         url: '/ko/p/review',
+         url: '/review/getproductreview',
          type: "GET",
          dataType:"json",
          data: {"productCode":productCode, "pageNum":pageNum, "pageSize":4, "reviewType": reviewType},
