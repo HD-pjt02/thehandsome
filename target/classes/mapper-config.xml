@@ -32,5 +32,7 @@
 			type="com.thehandsome.app.dto.MemberDTO" />
 		<typeAlias alias="CartDTO"
 			type="com.thehandsome.app.dto.CartDTO" />
+		<typeAlias alias="ReviewDTO"
+			type="com.thehandsome.app.dto.ReviewDTO" />
 	</typeAliases>
 </configuration>
