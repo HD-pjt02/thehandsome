@@ -4063,7 +4063,7 @@ function reviewWriteCheck()
             if (!inputHangulchk.test(str)){
                 var la;
                 if ( "Y" == 'Y' ) {
-                    la = new customLayerAlert("사이즈는 영문, 숫자만 입력가능합니다.");  
+                    la = new customLayerAlert("사이즈는 영문, 숫자만 입력가능합니다.");   
                 } else {
                     la = new layerAlert("사이즈는 숫자, 영문, 한글로 정확하게 입력해주세요.");
                 }
@@ -13052,56 +13052,7 @@ function onMouseOutRecommend() {
 
         <!--상품평 리스트 팝업-->
 <div class="popwrap w_type_4" id="customerReviewDiv" style="display:none;">
-    <!--마일리지 안내영역 1906 -->
-    <div class="mileage_info_wrap1906">
-        <p class="wrap_heading">상품평 작성 시 추가 마일리지를 드려요!</p>
-        <div class="mileage_info_box">
-            <div class="review_w">
-                <p class="review_w_tit">• 온라인 구매 상품평 작성 시</p>
-                <ul>
-                    <li>
-                        <div class="ico_mileage1906">
-                            정상상품
-                        </div>
-                        <p><strong>정상상품</strong><br>구매금액의 <b>0.5%</b></p>
-                    </li>
-                    <li>
-                        <div class="ico_mileage1906">
-                            아울렛상품
-                        </div>
-                        <p><strong>아울렛상품</strong><br>구매금액의 <b>0.1%</b></p>
-                    </li>
-                    <li>
-                        <div class="ico_mileage1906">
-                            포토상품평
-                        </div>
-                        <p><strong>포토상품평</strong><br>(상품별 최초)<br><b>2,000마일리지</b></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="best_review">
-                <p class="review_w_tit">• 온라인/오프라인 구매</p>
-                <ul>
-                    <li>
-                        <div class="ico_mileage1906">
-                            베스트리뷰
-                        </div>
-                        <p><strong>베스트리뷰</strong><br>매월 5명 <b>10만원</b> 바우처</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="noti_box" style="display:none;">
-            <ul class="bul_sty01_li">
-                <li>마일리지는 배송 완료일로부터 30일 이내, 작성한 상품평에 한하여 제공됩니다.</li>
-                <li>상품평 작성 시, 제공되는 추가 마일리지는 온라인에서 구입한 상품에 한하여 제공됩니다.</li>
-                <li>베스트 리뷰는 온라인/오프라인에서 구매한 상품의 상품평 전체를 대상으로 선정합니다.</li>
-                <li>할인, 쿠폰 적용 후 실결제금액이 5,000원 이상인 상품에 한하여 지급됩니다.</li>
-                <li>판매가 종료된 상품의 경우, 상품 상세페이지가 소멸되어 상품평 작성 및 마일리지 적립이 불가능합니다.</li>
-            </ul>
-        </div>
-        <div class="btn_noti_box"><span>자세히 보기</span></div>
-    </div>
+ 
         <!--//마일리지 안내영역 1906 -->
     <div class="pop_tltwrap2 pb0 customerreviewdiv1905">
     
@@ -13255,46 +13206,8 @@ function onMouseOutRecommend() {
                             <tr class="tbl_blank1807">
                                 <td colspan="4">&nbsp;</td>
                             </tr>
-                            <tr class="radio_btn_1905 bk">
-                                <th scope="row" class="th_space">연 령</th>
-                                <td colspan="3">
-                                    <input id="ageG1" type="radio" name="age" value="18세 이하">
-                                    <label for="ageG1">18세 이하</label>
-                                    <input id="ageG2" type="radio" name="age" value="20대">
-                                    <label for="ageG2">20대</label>
-                                    <input id="ageG3" type="radio" name="age" value="30대">
-                                    <label for="ageG3">30대</label>
-                                    <input id="ageG4" type="radio" name="age" value="40대">
-                                    <label for="ageG4">40대</label>
-                                    <input id="ageG5" type="radio" name="age" value="50대">
-                                    <label for="ageG5">50대</label>
-                                    <input id="ageG6" type="radio" name="age" value="60대 이상">
-                                    <label for="ageG6">60대 이상</label>
-                                    </td>
-                            </tr>
-                            <tr class="input_txt_1905">
-                                <th scope="row" class="th_space" id="thHeight">
-                                    <strong class="reqd">*</strong>
-                                    키</th>
-                                <td><input type="text" name="height" id="height" style="width:75%amrgin-right:10px">cm</td>
-                                <th scope="row" class="th_space" id="thEnjoySize">
-                                    <strong class="reqd">*</strong>
-                                    평소 사이즈</th>
-                                <td><input type="text" name="enjoySize" id="enjoySize"></td>
-                            </tr>
-                            <tr class="radio_btn_1905">
-                                <th scope="row" class="th_space" id="thBodyType">
-                                    <strong class="reqd">*</strong>
-                                    체 형</th>
-                                <td colspan="3">
-                                    <input id="dark1" type="radio" name="bodyType" value="마른 체형">
-                                    <label for="dark1">마른 체형</label>
-                                    <input id="dark2" type="radio" name="bodyType" value="보통">
-                                    <label for="dark2">보통</label>
-                                    <input id="dark3" type="radio" name="bodyType" value="통통한 체형">
-                                    <label for="dark3">통통한 체형</label>
-                                </td>
-                            </tr>
+                           
+                           
                             <tr class="tbl_blank1807">
                                 <td colspan="4">&nbsp;</td>
                             </tr>
@@ -13316,75 +13229,7 @@ function onMouseOutRecommend() {
                                     </div>
                                 </th>
                             </tr>
-                            <tr>
-                                <th scope="row" class="th_space"><strong class="reqd">*</strong>실 착용 사이즈</th>
-                                <td colspan="3">
-                                    <!--20190529_상품평활성화-->
-                                    <div class="cont_detail">
-                                        <p class="left_txt">어깨너비 : </p>
-                                        <ul class="rd_box_radio_list">
-                                            <li>
-                                                <input id="realWearSize1_01" type="radio" name="realWearSize1" value="1">
-                                                <label for="realWearSize1_01">타이트함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize1_02" type="radio" name="realWearSize1" value="2">
-                                                <label for="realWearSize1_02">적당함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize1_03" type="radio" name="realWearSize1" value="3">
-                                                <label for="realWearSize1_03">여유있음</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cont_detail">
-                                        <p class="left_txt">가슴둘레 : </p>
-                                        <ul class="rd_box_radio_list">
-                                            <li>
-                                                <input id="realWearSize2_01" type="radio" name="realWearSize2" value="1">
-                                                <label for="realWearSize2_01">타이트함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize2_02" type="radio" name="realWearSize2" value="2">
-                                                <label for="realWearSize2_02">적당함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize2_03" type="radio" name="realWearSize2" value="3">
-                                                <label for="realWearSize2_03">여유있음</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cont_detail">
-                                        <p class="left_txt">총길이 : </p>
-                                        <ul class="rd_box_radio_list">
-                                            <li>
-                                                <input id="realWearSize3_01" type="radio" name="realWearSize3" value="1">
-                                                <label for="realWearSize3_01">짧은 편</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize3_02" type="radio" name="realWearSize3" value="2">
-                                                <label for="realWearSize3_02">적당함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize3_03" type="radio" name="realWearSize3" value="3">
-                                                <label for="realWearSize3_03">긴 편</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--//20190529_상품평활성화-->
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="th_space"><strong class="reqd">*</strong>실 제품 색상</th>
-                                <td colspan="3">
-                                    <input id="dark" type="radio" name="realProductColor" value="1">
-                                    <label for="dark">어두워요</label>
-                                    <input id="same" type="radio" name="realProductColor" class="ml20" value="2">
-                                    <label for="same">화면과 같아요</label>
-                                    <input id="light" type="radio" name="realProductColor" class="ml20" value="3">
-                                    <label for="light">밝아요</label>
-                                </td>
-                            </tr>
+                            
                                     <tr>
                                 <th scope="row">
                                     <strong class="reqd" style="margin-top:6px;">*</strong>
