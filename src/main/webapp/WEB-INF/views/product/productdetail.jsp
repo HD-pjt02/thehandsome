@@ -34,8 +34,8 @@
 <meta property="recopick:author" content="MINE">
 
 <!-- 1. recopick END -->
-<title>
-	캐시미어 더블 재킷 | JACKET | OUTER | WOMEN | HANDSOME | 더한섬닷컴</title>
+<title><!--22.10.19 미림 변경완료 -->
+	${product.pname} | ${product.csmall} | ${product.cmedium} | ${product.clarge} | HANDSOME | 더한섬닷컴</title>
 <link rel="shortcut icon" href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/font_80.css" media="all">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css?20220929" media="all">
@@ -2633,7 +2633,7 @@ $(document).ready(function(){
                 url     : '/review/reviewWriteBeforeVerify',
                 type    : 'GET',
                 datatype: 'json',
-                data : { "productCode" : $('#productCode').val()
+                data : { "productCode" : $('#productCode').val()// /review/reviewWriteBeforeVerify해당 url 이 호출될때 json타입으로 컨트롤러 보내줌 
                 },
                 success : function(data) {
                 	var purchaseListCount = 0;
@@ -2877,12 +2877,10 @@ $(document).ready(function(){
                     viewPopup("#customerReviewWriteDiv");
                     $("#customerReviewDiv").hide();
                     
-                    var imgSrc = "";
                     
-                        imgSrc = "http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg";
                         
                     
-                    $("#reviewProducImg").attr('src',imgSrc);
+                   // $("#reviewProducImg").attr('src',imgSrc);
                     $("#reviewProducPrice").text($(".price").find("span:eq(0)").text());
                     $("#reviewProductBrandName").text($("#brandName").val());
                     $("#reviewProductProductName").text($("#productName").val());
@@ -3089,15 +3087,18 @@ $(document).ready(function(){
         $("#thFile").css("font-weight","normal");
     });
     
+    
+    //리뷰등록하기 버튼을 눌렀을시
     $("#reviewWriteSend").on('click', function(){
         
+    	//리뷰 썼는지 안썼는지 
         if(!reviewWriteCheck()){
             return;
         }
         
         
-            goLogin("review");
-            return;
+            //goLogin("review"); 추후 로그인처리 미림주석
+            //return;
         
         
         $("#reviewHeadline").val($("#reviewHeadline").val().trim());
@@ -3977,219 +3978,11 @@ function reviewWriteCheck()
 {
     var inputNumberchk = /^[0-9]+$/; // 숫자 체크
     var inputHangulchk = /[^ㄱ-ㅎ|ㅏ-ㅣ]+$/; // 초성(자음/모음) 체크
+  
     
-    if ( "Y" == 'Y' && "ko" != "ko" ) {
-        if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 색상이 보일때만 체크
-            if($('.select_options_wrap .color_chip li a').hasClass('on') == false){
-                var la = new customLayerAlert('색상을 선택해 주세요.');    
-                //$('.select_options_wrap .color_chip li a').focus();
-                $('.select_colors p').css("color", "#ff0000");
-                $('.select_colors p').css("font-weight","bold");
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    
-        if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 사이즈가 보일때만 체크
-            var productType = $('form[name=reviewForm] input[name=productCodeType]').val();
-            if(productType != 'ApparelSizeVariantProduct'){ //ApparelStyleVariantProduct
-                var la = new customLayerAlert('사이즈를 선택해 주세요.');
-                //$('.select_options .select_size p').focus();
-                $('.select_options .select_size p').css("color", "#ff0000");
-                $('.select_options .select_size p').css("font-weight","bold");
-                
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    } else if("Y" == 'N') {
-    	if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 색상이 보일때만 체크
-            if($('.select_options_wrap .color_chip li a').hasClass('on') == false){
-                var la = new customLayerAlert('색상을 선택해 주세요.');    
-                //$('.select_options_wrap .color_chip li a').focus();
-                $('.select_colors p').css("color", "#ff0000");
-                $('.select_colors p').css("font-weight","bold");
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    
-        if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 사이즈가 보일때만 체크
-            var productType = $('form[name=reviewForm] input[name=productCodeType]').val();
-            if(productType != 'ApparelSizeVariantProduct'){ //ApparelStyleVariantProduct
-                var la = new customLayerAlert('사이즈를 선택해 주세요.');
-                //$('.select_options .select_size p').focus();
-                $('.select_options .select_size p').css("color", "#ff0000");
-                $('.select_options .select_size p').css("font-weight","bold");
-                
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    }
-    
-    if($("#height").val() != null && $("#height").val().length > 0){
-        var height = $("#height").val();
-        for(i=0; i<height.length; i++){
-            var str = height.substr(i,1);
-            if (!inputNumberchk.test(str)){
-                var la;
-                if ( "Y" == 'Y' ) {
-                    la = new customLayerAlert("키는 숫자로 입력해주세요.");  
-                } else {
-                    la = new layerAlert("키는 숫자로 입력해주세요.");
-                }
-                
-                la.confirmAction = function(){
-                    $("#height").focus();
-                };
-                return;
-            }
-        }
-    }
-    
-    if($("#enjoySize").val() != null && $("#enjoySize").val().length > 0){
-        var enjoySize = $("#enjoySize").val();
-        for(i=0; i<enjoySize.length; i++){
-            var str = enjoySize.substr(i,1);
-            if (!inputHangulchk.test(str)){
-                var la;
-                if ( "Y" == 'Y' ) {
-                    la = new customLayerAlert("사이즈는 영문, 숫자만 입력가능합니다.");   
-                } else {
-                    la = new layerAlert("사이즈는 숫자, 영문, 한글로 정확하게 입력해주세요.");
-                }
-                la.confirmAction = function(){
-                    $("#enjoySize").focus();
-                };
-                return;
-            }
-        }
-    }
+  
     
     if ( "Y" == 'Y' ) {
-        if ( $('#purchaseColor').val() == '' || ($('#purchaseSize').val() == '') && !chkLiquides) { //리퀴드는 오프라인의 경우 purchaseSize가 없을수있음.
-            $("#customerReviewWriteDiv").attr("tabindex", 0).focus();
-            var la = new customLayerAlert('구매 옵션을 선택해주세요.');
-            return false;
-        }
-        if('ko' != 'ko') {
-            if ( 'Y' == $('#purchaseProdYN').val() ) {  // 매장구입
-                // 색상
-                if($('.select_options_wrap .color_chip li a').hasClass('on') == false){
-                    var la = new customLayerAlert('색상을 선택해 주세요.');
-                    //$('.select_options_wrap .color_chip li a').focus();
-                    $('.select_colors p').css("color", "#ff0000");
-                    $('.select_colors p').css("font-weight","bold");
-                    la.confirmAction = function(){
-                        $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                    };
-                    return false;     
-                }
-            
-                // 사이즈
-                var productType = $('form[name=reviewForm] input[name=productCodeType]').val();
-                if(productType != 'ApparelSizeVariantProduct'){ //ApparelStyleVariantProduct
-                    var la = new customLayerAlert('사이즈를 선택해 주세요.');
-                    //$('.select_options .select_size p').focus();
-                    $('.select_options .select_size p').css("color", "#ff0000");
-                    $('.select_options .select_size p').css("font-weight","bold");
-                    
-                    la.confirmAction = function(){
-                        $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                    };
-                    return false;
-                }
-            }
-        }
-        
-        if  ( 'top' == 'top' || 'top' == 'bottoms' ) {
-
-            if ( $("#height").val() == null || $.trim($("#height").val()) == '' ) {
-                $("#thHeight").css("color", "#ff0000");
-                $("#thHeight").css("font-weight","normal");
-                $("#height").focus();
-                var la = new customLayerAlert('키를 입력해주세요.');
-                return;
-            }
-            
-            if ( $("#enjoySize").val() == null || $.trim($("#enjoySize").val()) == '' ) {
-                $("#thEnjoySize").css("color", "#ff0000");
-                $("#thEnjoySize").css("font-weight","normal");
-                $("#enjoySize").focus();
-                var la = new customLayerAlert('평소 사이즈를 입력해주세요.');
-                return;
-            }
-            
-            if ( $('input[name=bodyType]:checked').length < 1 ) {
-                $("#thBodyType").css("color", "#ff0000");
-                $("#thBodyType").css("font-weight","normal");
-                $("#thBodyType").focus();
-                var la = new customLayerAlert('체형을 선택해주세요.');
-                
-                $('input[name=bodyType]').on('click', function() {
-                    $("#thBodyType").css("color", "black");
-                    $("#thBodyType").css("font-weight","normal");
-                });
-                return;
-            }
-            
-            if( $("input[name=realWearSize1]:checked").length < 1 ) {
-                var la = new customLayerAlert('실 착용 사이즈를 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=realWearSize1]").click(function() {
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#realWearSize1_01').focus();
-                return;
-            }
-            if( $("input[name=realWearSize2]:checked").length < 1 ) {
-                var la = new customLayerAlert('실 착용 사이즈를 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=realWearSize2]").click(function() {
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#realWearSize2_01').focus();
-                return;
-            }
-            if( $("input[name=realWearSize3]:checked").length < 1 ) {
-                var la = new customLayerAlert('실 착용 사이즈를 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=realWearSize3]").click(function() {
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#realWearSize3_01').focus();
-                return;
-            }
-            if( $("input[name=realProductColor]:checked").length < 1 ){
-                var la = new customLayerAlert('실 제품 색상을 선택해주세요.');
-                $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=realProductColor]").click(function(){
-                    $(".write_star_wrap").next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-                });
-                $('#realProductColor01').focus();
-                return;
-            }
             if ($('#reviewHeadline').val().length == 0 || $.trim($('#reviewHeadline').val()) == '') {
                 var la = new customLayerAlert('내용을 입력해주세요.');
                 return;
@@ -4198,154 +3991,7 @@ function reviewWriteCheck()
                 var la = new customLayerAlert('상품평 내용은 20~200자 사이입니다.');
                 return;
             }
-        }
-        
-        if  ('top' == 'cosmetic') {
-            if ( $('input[name=skinType]:checked').length < 1 ) {
-                $("#thSkinType").css("color", "#ff0000");
-                $("#thSkinType").css("font-weight","normal");
-                $("#thSkinType").focus();
-                var la = new customLayerAlert('피부 타입을 선택해주세요.');
-                
-                $('input[name=skinType]').on('click', function() {
-                    $("#thSkinType").css("color", "black");
-                    $("#thSkinType").css("font-weight","normal");
-                });
-                return;
-            }
-            
-            if( $("input[name=moisturize]:checked").length < 1 ){
-                var la = new customLayerAlert('보습력을 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=moisturize]").click(function(){
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#moisturize1').focus();
-                return;
-            }
-            
-            if( $("input[name=spreadability]:checked").length < 1 ){
-                var la = new customLayerAlert('발림성을 선택해주세요.');
-                $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=spreadability]").click(function(){
-                    $(".write_star_wrap").next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-                });
-                $('#spreadability1').focus();
-                return;
-            }
-            
-            if( $("input[name=scent]:checked").length < 1 ){
-                var la = new customLayerAlert('향을 선택해주세요.');
-                $(".write_star_wrap").next().next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=scent]").click(function(){
-                    $(".write_star_wrap").next().next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().next().find("th").css("font-weight","normal");
-                });
-                $('#scent1').focus();
-                return;
-            }
-        }
-        
-        //Liquides Parfums Bar
-        if  ('top' == 'perfume') {
-            if ( $('input[name=skinType]:checked').length < 1 ) {
-                $("#thSkinType").css("color", "#ff0000");
-                $("#thSkinType").css("font-weight","normal");
-                $("#thSkinType").focus();
-                var la = new customLayerAlert('피부 타입을 선택해주세요.');
-                
-                $('input[name=skinType]').on('click', function() {
-                    $("#thSkinType").css("color", "black");
-                    $("#thSkinType").css("font-weight","normal");
-                });
-                return;
-            }
-            
-            if( $("input[name=scent]:checked").length < 1 ){
-                var la = new customLayerAlert('향을 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=scent]").click(function(){
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#scent1').focus();
-                return;
-            }
-            
-            if( $("input[name=persistence]:checked").length < 1 ){
-                var la = new customLayerAlert('지속성을 선택해주세요.');
-                $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=persistence]").click(function(){
-                    $(".write_star_wrap").next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-                });
-                $('#persistence1').focus();
-                return;
-            }
-            
-            if ($('#reviewHeadline').val().length == 0 || $.trim($('#reviewHeadline').val()) == '') {
-                var la = new customLayerAlert('내용을 입력해주세요.');
-                $(".write_star_wrap").next().next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=persistence]").click(function(){
-                    $(".write_star_wrap").next().next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().next().find("th").css("font-weight","normal");
-                });
-                return;
-            }
-            if ($('#reviewHeadline').val().length < 20) {
-                var la = new customLayerAlert('상품평 내용은 20~200자 사이입니다.');
-                return;
-            }
-            
-        }
-        
-    } else {
-
-        if($("input:radio[name=realWearSize]:checked").length < 1){
-            var la = new layerAlert('실착용 사이즈를 선택해주세요.');
-            $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-            $(".write_star_wrap").next().find("th").css("font-weight","bold");
-            la.confirmAction = function(){
-                $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-            };
-            
-            $("input:radio[name=realWearSize]").click(function(){
-                $(".write_star_wrap").next().find("th").css("color", "black");
-                $(".write_star_wrap").next().find("th").css("font-weight","normal");
-            });
-            
-            return false;
-        }
-        
-        if($("input:radio[name=realProductColor]:checked").length < 1){
-            var la = new layerAlert('실제품 색상을 선택해주세요.');
-            $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-            $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-            la.confirmAction = function(){
-                $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-            };
-            
-            $("input:radio[name=realProductColor]").click(function(){
-                $(".write_star_wrap").next().next().find("th").css("color", "black");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-            });
-            return false;
-        }
-    }
+    } 
     
     var headline = $("#reviewHeadline").val();
     
@@ -7779,13 +7425,15 @@ function hideProductLayer() {
     $("#productLayer").hide();
     
 }
+
+//파일 업로드 
 function uploadFilesubmit(){
 	
 	var msg = "";
 	
-    $('#shoulderWidth').val($('input[name=realWearSize1]:checked').val());
-    $('#chestSize').val($('input[name=realWearSize2]:checked').val());
-    $('#totalSize').val($('input[name=realWearSize3]:checked').val());
+ //   $('#shoulderWidth').val($('input[name=realWearSize1]:checked').val());
+  //  $('#chestSize').val($('input[name=realWearSize2]:checked').val());
+   // $('#totalSize').val($('input[name=realWearSize3]:checked').val());
     
     
     
@@ -7798,15 +7446,16 @@ function uploadFilesubmit(){
     
     var tUrl = "";
     $("#reviewHeadline").val(encodeText($("#reviewHeadline").val()));
+    //사진 첨부안함
     if(fileSize <= 1){
         var url = "";
         var type = "";
         if($("form#reviewForm #productId").val() != ""){
-            url = '/ko/p/modifyCustomerReview';
+            url = '/review/modifyCustomerReview';
             type = "POST";
             msg = '수정되었습니다.';
         }else{
-            url = '/ko/p/reviewWriteNew';    
+            url = '/review/reviewWriteNew';    
             type = "GET";
             msg = '등록되었습니다.';
         }
@@ -7814,7 +7463,7 @@ function uploadFilesubmit(){
         $.ajax({
              url: url,
              type: type,
-             data: $('form#reviewForm').serialize(),
+             data: $('form#reviewForm').serialize(),//form에 있는 것들을 보내고
              success: function(data){
                  if ( "F" == data.rsltCd ) {
                      if ( 'Y' == 'Y' ) {
@@ -7851,7 +7500,7 @@ function uploadFilesubmit(){
         });
         
     }else{
-    	
+    	//사진첨부 함
     	var labelLeng = $('#customerReviewWriteDiv .upload_btn label').length - 1;
     	$('#customerReviewWriteDiv .upload_btn label').each(function(i){
     		if(i != labelLeng){
@@ -10977,7 +10626,7 @@ function testerReviewReset() { //팝업초기화
 					<a href="javascript:fn_goCategori('br02')" onclick="GA_Detail('brand',$(this))">${produt.bname}</a>
 									</div>
 				<span class="name ko_fir_spel">
-					${product.pname}<input type="hidden" id="brandName" value="MINE">
+					${product.pname}<input type="hidden" id="brandName" value="${product.bname}">
 					<input type="hidden" id="productName" value="${product.pname}">
 					<input type="hidden" id="productCode" value="${currentcolorcode}">
 				</span>
@@ -12194,302 +11843,12 @@ a2a_config.track_links = 'googl';
 	
 	<!-- 코디상품 start -->
 	<div class="related_evt">
-		<div class="cd-n-lb-tab" id="codi_lookbook_tab" style="">
-			<ul>
-				<li class="on"><a href="#cd-n-lb-tab-01" onclick="GA_Event('상품_상세','함께 코디한 상품','함께 코디한 상품');">함께 코디한 상품</a></li>
-				</ul>
-		</div>
+		
 		<!-- box1 -->
 		<div class="cd-n-lb-content-box" id="cd-n-lb-tab-01" style="display: block;">
 			<div class="matches_list together-codi-list" id="referencesListContent">
-				<div class="bx-wrapper" style="max-width: 491px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 277px;"><ul class="clearfix slides" style="width: 615%; position: relative; transition-duration: 0s; transform: translate3d(-483px, 0px, 0px);"><li id="prod_MN2C9NPC341W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9NPC341W_BK');" onclick="GA_Event('상품_상세','코디상품','크롭 슬림 데님 팬츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9NPC341W_BKLIKE" class="add_wishlist MN2C9NPC341W_BKLIKE like " onclick="addWishListProdClick('MN2C9NPC341W_BK');GA_Event('스타일', '코디상품 좋아요', '크롭 슬림 데님 팬츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크롭 슬림 데님 팬츠</span>
-		                                <span class="price">
-		                                    ₩375,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9NPC341W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9NPC341W_BK','MN2C9NPC341W_BK');" class="no_color on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C9ASZ098W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9ASZ098W_BK');" onclick="GA_Event('상품_상세','코디상품','레더 엠블럽 스트랩 부츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9ASZ098W_BKLIKE" class="add_wishlist MN2C9ASZ098W_BKLIKE like " onclick="addWishListProdClick('MN2C9ASZ098W_BK');GA_Event('스타일', '코디상품 좋아요', '레더 엠블럽 스트랩 부츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">레더 엠블럽 스트랩 부츠</span>
-		                                <span class="price">
-		                                    ₩595,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9ASZ098W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_BK');" class="beige on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9ASZ098W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C7AJW684W_YR" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C7AJW684W_YR');" onclick="GA_Event('상품_상세','코디상품','크리스탈 스퀘어 귀걸이');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C7AJW684W_YRLIKE" class="add_wishlist MN2C7AJW684W_YRLIKE like " onclick="addWishListProdClick('MN2C7AJW684W_YR');GA_Event('스타일', '코디상품 좋아요', '크리스탈 스퀘어 귀걸이');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크리스탈 스퀘어 귀걸이</span>
-		                                <span class="price">
-		                                    ₩145,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<li id="chipbtn_MN2C7AJW684W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															<input type="hidden" id="colorName" value="YELLOW ORANGE">
-															<li id="chipbtn_MN2C7AJW684W_YR">
-																	<input type="hidden" class="colorNameVal" value="YELLOW ORANGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_YR');" class="beige on" style="background:#d5b966 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		            <li id="prod_MN2C9KTO051W_BG" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9KTO051W_BG');" onclick="GA_Event('상품_상세','코디상품','울 언밸런스 니트 탑');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9KTO051W_BGLIKE" class="add_wishlist MN2C9KTO051W_BGLIKE like " onclick="addWishListProdClick('MN2C9KTO051W_BG');GA_Event('스타일', '코디상품 좋아요', '울 언밸런스 니트 탑');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">울 언밸런스 니트 탑</span>
-		                                <span class="price">
-		                                    ₩445,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BEIGE">
-															<li id="chipbtn_MN2C9KTO051W_BG">
-																	<input type="hidden" class="colorNameVal" value="BEIGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BG');" class="beige on" style="background:#cca07c url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9KTO051W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BK');" class="beige" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BK_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('BLACK');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C9NPC341W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9NPC341W_BK');" onclick="GA_Event('상품_상세','코디상품','크롭 슬림 데님 팬츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9NPC341W_BKLIKE" class="add_wishlist MN2C9NPC341W_BKLIKE like " onclick="addWishListProdClick('MN2C9NPC341W_BK');GA_Event('스타일', '코디상품 좋아요', '크롭 슬림 데님 팬츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크롭 슬림 데님 팬츠</span>
-		                                <span class="price">
-		                                    ₩375,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9NPC341W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9NPC341W_BK','MN2C9NPC341W_BK');" class="no_color on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C9ASZ098W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9ASZ098W_BK');" onclick="GA_Event('상품_상세','코디상품','레더 엠블럽 스트랩 부츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9ASZ098W_BKLIKE" class="add_wishlist MN2C9ASZ098W_BKLIKE like " onclick="addWishListProdClick('MN2C9ASZ098W_BK');GA_Event('스타일', '코디상품 좋아요', '레더 엠블럽 스트랩 부츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">레더 엠블럽 스트랩 부츠</span>
-		                                <span class="price">
-		                                    ₩595,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9ASZ098W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_BK');" class="beige on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9ASZ098W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C7AJW684W_YR" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C7AJW684W_YR');" onclick="GA_Event('상품_상세','코디상품','크리스탈 스퀘어 귀걸이');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C7AJW684W_YRLIKE" class="add_wishlist MN2C7AJW684W_YRLIKE like " onclick="addWishListProdClick('MN2C7AJW684W_YR');GA_Event('스타일', '코디상품 좋아요', '크리스탈 스퀘어 귀걸이');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크리스탈 스퀘어 귀걸이</span>
-		                                <span class="price">
-		                                    ₩145,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<li id="chipbtn_MN2C7AJW684W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															<input type="hidden" id="colorName" value="YELLOW ORANGE">
-															<li id="chipbtn_MN2C7AJW684W_YR">
-																	<input type="hidden" class="colorNameVal" value="YELLOW ORANGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_YR');" class="beige on" style="background:#d5b966 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C9KTO051W_BG" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9KTO051W_BG');" onclick="GA_Event('상품_상세','코디상품','울 언밸런스 니트 탑');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9KTO051W_BGLIKE" class="add_wishlist MN2C9KTO051W_BGLIKE like " onclick="addWishListProdClick('MN2C9KTO051W_BG');GA_Event('스타일', '코디상품 좋아요', '울 언밸런스 니트 탑');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">울 언밸런스 니트 탑</span>
-		                                <span class="price">
-		                                    ₩445,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BEIGE">
-															<li id="chipbtn_MN2C9KTO051W_BG">
-																	<input type="hidden" class="colorNameVal" value="BEIGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BG');" class="beige on" style="background:#cca07c url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9KTO051W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BK');" class="beige" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BK_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('BLACK');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C9NPC341W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9NPC341W_BK');" onclick="GA_Event('상품_상세','코디상품','크롭 슬림 데님 팬츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9NPC341W_BKLIKE" class="add_wishlist MN2C9NPC341W_BKLIKE like " onclick="addWishListProdClick('MN2C9NPC341W_BK');GA_Event('스타일', '코디상품 좋아요', '크롭 슬림 데님 팬츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크롭 슬림 데님 팬츠</span>
-		                                <span class="price">
-		                                    ₩375,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9NPC341W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9NPC341W_BK','MN2C9NPC341W_BK');" class="no_color on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C9ASZ098W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9ASZ098W_BK');" onclick="GA_Event('상품_상세','코디상품','레더 엠블럽 스트랩 부츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9ASZ098W_BKLIKE" class="add_wishlist MN2C9ASZ098W_BKLIKE like " onclick="addWishListProdClick('MN2C9ASZ098W_BK');GA_Event('스타일', '코디상품 좋아요', '레더 엠블럽 스트랩 부츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">레더 엠블럽 스트랩 부츠</span>
-		                                <span class="price">
-		                                    ₩595,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9ASZ098W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_BK');" class="beige on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9ASZ098W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li></ul></div></div>
-				<div class="controls" id="referencesControls">
-		                <a href="javascript:void(0);" class="prev"></a>
-		                <a href="javascript:void(0);" class="next"></a>
-		            </div>
+				</div>
+				
 	            </div>
 		</div>
 		<!-- //box1 -->
@@ -13142,7 +12501,7 @@ function onMouseOutRecommend() {
                                 <td colspan="3" style="padding:15px;">
                                     <div class="item_box" id="reviewProductDiv">
                                         <div class="pt_list_all">
-                                            <a href="#;"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg" id="reviewProducImg" alt="상품 이미지" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></a>
+                                            <a href="#;"><img src="${productimage1}" id="reviewProducImg" alt="상품 이미지" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></a>
                                             <div class="tlt_wrap review_header_wrapper">
                                             <!-- <div class="tlt_wrap review_header_wrapper nodata"> -->
                                                 <a href="#;" class="basket_tlt">
