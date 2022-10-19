@@ -17,6 +17,13 @@ import com.thehandsome.app.dto.StockDTO;
 public interface ReviewService {
 
 	List<ReviewDTO> getReviewList(ReviewDTO reviewDTO);
+
+	//리뷰작성하기를 누르면 해당 상품의 정보가 불러와서 담는다. 
+	ReviewDTO getColorProduct(ReviewDTO reviewDTO);
+
+	Long insertReview(ReviewDTO reviewDTO);
+	
+	
 	
 	
 }

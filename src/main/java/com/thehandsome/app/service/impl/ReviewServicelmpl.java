@@ -36,5 +36,15 @@ public class ReviewServicelmpl implements ReviewService{
 	public List<ReviewDTO> getReviewList(ReviewDTO reviewDTO) {
 		return reviewMapper.getReviewList(reviewDTO);
 	}
+	
+	@Override
+	public ReviewDTO getColorProduct(ReviewDTO reviewDTO) {
+		return reviewMapper.getColorProduct(reviewDTO);
+	}
+
+	@Override
+	public Long insertReview(ReviewDTO reviewDTO) {
+		return reviewMapper.insertReview(reviewDTO);
+	}
 
 }

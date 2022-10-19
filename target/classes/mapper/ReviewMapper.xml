@@ -13,4 +13,20 @@
 		]]>
 	</select>
 	
+	<select id="getColorProduct" resultType="ReviewDTO"
+		parameterType="ReviewDTO">
+		<![CDATA[
+		SELECT T2.BNAME,T1.COLORURL,T2.PNAME,T2.PPRICE FROM COLOR T1
+        JOIN PRODUCT T2 ON T1.PCODE = T2.PCODE
+        WHERE T1.PCODECOLOR = #{pcodecolor}
+
+		]]>
+	</select>
+	
+	<insert id="insertReview" parameterType="ReviewDTO">
+	<![CDATA[
+	
+	]]>
+	</insert>
+	
 </mapper>

@@ -3,7 +3,8 @@
 <%@ include file="/WEB-INF/views/common/header2.jsp"%>
 
 		
-//<![CDATA[ 
+ 
+<script>
 $(document).ready(function(){
     
 
@@ -449,7 +450,7 @@ function validateEmail(email) {
   var re = /^((([^<>()[\]\\.,;:\s@\"~`!@#$%^&*+={}|'/?]+(\.[^<>()[\]\\.,;:\s@\"~`!@#$%^&*+={}|'/?]+)*))|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
 }
-//]]>
+
 </script>
 
 <form id="memberJoinForm" action="/member/joininfoform" method="POST"><input type="hidden" name="emailDuplChk" id="emailDuplChk" value="" title="이메일 중복">
