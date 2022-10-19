@@ -105,34 +105,36 @@ public class QnaController {
 		vo = new PagingDTO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
 		model.addAttribute("paging", vo);
 		model.addAttribute("viewAll", qnaservice.selectQna(vo));
+		
 		return "/qna/customerCenterMain";
 	    }
 		
 		
-		//qna 수정할 내용 select
-		@RequestMapping(value = "qnaUpdateGet.do", method = RequestMethod.POST)
-		@ResponseBody
-			public String qnaUpdateGet(int qid, Model model) throws Exception{
-				log.info("qna 수정 조회 페이지 진입");
-				model.addAttribute("qnaDTO", qnaservice.qnaselectDTO(qid));
-		        System.out.println(model);
-				return "redirect:/qna/qnaUpdate";
+		//qna 뜨면서 뿌려주는거
+		@RequestMapping(value = "qnaUpdate", method = RequestMethod.GET)
+			public void qnaUpdateGet(int qid, Model model) throws Exception{
+			log.info("qna 수정 페이지 진입");
+			QnaDTO qnadto = new QnaDTO();		
+			
+			qnadto = qnaservice.qnaselectDTO(qid);
+			model.addAttribute("qnaDTO", qnadto);
+			System.out.println(model);
 		}
 		
 		//qna 수정
 		
-		//qna수정페이지로 이동
-	@RequestMapping(value = "qnaUpdate", method = RequestMethod.POST)
-		public String qnaUpdate(QnaDTO qnadto) {
-		log.info("qna 수정 페이지 진입");
-		
+//    //qna수정 버튼 눌렀을 때 진행
+	@RequestMapping(value = "/qnaUpdate", method = RequestMethod.POST)
+	@ResponseBody
+		public String qnaUpdate(@RequestParam("qid")int qid, Model model) {
+		log.info("qna 수정전 조회 페이지 진입");
+		QnaDTO qnadto = new QnaDTO();		
+		qnadto = qnaservice.qnaselectDTO(qid);
 		System.out.println(qnadto);
 		
-		log.info(qnadto);
+		model.addAttribute("qnadto", qnadto);
 		
 		return "/qna/qnaUpdate";
-//		model.addAttribute("qnaDTO", qnaservice.qnaselectDTO(qid));
-//		System.out.println(model);
 	}
 		
 	

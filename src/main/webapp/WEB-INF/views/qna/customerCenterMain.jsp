@@ -92,8 +92,8 @@
 								<div class="inquiry-answer" id="inquiry-answer${status.index}">
 									<div class="inquiry-answer2">
 										<span><c:out value="${qnaList.qstatus}"></c:out></span>
-										<button class="delete_inquiry_btn" type="button">삭제</button>
-										<button class="update_inquiry_btn" type="button">수정</button>
+										<button class="delete_inquiry_btn" type="button" onClick="delete_btn(qid)">삭제</button>
+										<button class="update_inquiry_btn" type="button" onClick="update_btn(qid)">수정</button>
 									</div>
 
 								</div>
@@ -143,37 +143,43 @@
  }
  
  
- $(document).ready(function(){
+//제이쿼리로 컨트롤러에 값넘기기
+ function delete_btn(qid){ 
 		//회원가입 버튼(회원가입 기능 작동)
-		$(".delete_inquiry_btn").click(function(){
-			$("#form1").attr("action", "/qna/qnaDelete");
+	 	 var qid = qid.value;
+		    console.log(qid);
+		 	$("#form1").attr("action", "/qna/qnaDelete?qid="+qid);
 			$("#form1").submit();
-		});
+			
+			
+			//바닐라js로 컨트롤러에 값넘기기
+			/* fetch("/qna/qnaDelete?qid="+qid).then(() => {
+				console.log("성공");
+			}).catch(){
+				console.log("실패");
+			} */
 		
-		$(".update_inquiry_btn").click(function(){
-			$("#form1").attr("action", "/qna/qnaUpdate");
-			$("#form1").submit();
-		});
-	});
- 
-/*  function update_btn(qid){
+		
+	};
+	
+ //ajax로 컨트롤러에 값넘기기
+  function update_btn(qid){ 
 	 
 	 var qid = qid.value;
 	 console.log(qid);
-	 
-	 $.ajax({
-		    url: "qnaUpdateGet.do",
-		    data: "qid=" + qid,
+ 	  $.ajax({
+		    url: "/qna/qnaUpdate",
+		    data: {qid : qid},
 		    type: "POST",
 		    success : function(data){
-		      alert("성공")
+		      location.href= "/qna/qnaUpdate?qid="+qid;
 		    },
 		    error : function(){
 		      alert("에러")		
 		    }
-		  }); 
+		  });   
 	 
- } */
+ } 
 
 
 
