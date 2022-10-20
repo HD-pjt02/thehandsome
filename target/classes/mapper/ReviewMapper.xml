@@ -24,6 +24,12 @@
 	</select>
 	
 	<insert id="insertReview" parameterType="ReviewDTO">
+		<![CDATA[
+		insert into review values(review_seq.nextVal,#{mid},#{pcode},#{pcodecolor},sysdate,#{rrate},#{rcontent},#{rimg},#{product_pcode},#{product_pno},#{reviewtype})
+		]]>
+	</insert>
+	
+	<insert id="insertPhotoReview" parameterType="ReviewDTO">
 	<![CDATA[
 	
 	]]>

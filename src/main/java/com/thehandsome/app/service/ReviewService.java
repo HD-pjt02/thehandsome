@@ -22,6 +22,8 @@ public interface ReviewService {
 	ReviewDTO getColorProduct(ReviewDTO reviewDTO);
 
 	Long insertReview(ReviewDTO reviewDTO);
+
+	Long insertPhotoReview(ReviewDTO reviewDTO);
 	
 	
 	

@@ -6080,7 +6080,8 @@ function reviewHtml(data){
 	            reviewHtml += "    <ul>";
 	            reviewHtml += "        <li class='name'>"+list[i].principal.uid+"</li>";
 	            if ( list[i].profileData != null && list[i].profileData != "") {
-	                reviewHtml += "      <li class='grade'>"+list[i].profileData+"</li>"; <!-- 고객등급 -->
+	                reviewHtml += "      <li class='grade'>"+list[i].profileData+"</li>";
+	                <!-- 고객등급 -->
 	            }
 	            reviewHtml += "        <li class='date'>"+list[i].displayCreateDate+"</li>";
 	            reviewHtml += "        <li class='stars'>";
@@ -7512,10 +7513,10 @@ function uploadFilesubmit(){
     	
         var url = "";
         if($("form#reviewForm #productId").val() != ""){
-            url = "/ko/p/modifyCustomerReview" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
+            url = "/review/modifyCustomerReview" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
             msg = '수정되었습니다.';
         }else{
-            url = "/ko/p/reviewWriteNew" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
+            url = "/review/reviewWriteNew" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
             msg = '등록되었습니다.';
         }
         $('form#reviewForm').ajaxSubmit({
@@ -12456,6 +12457,8 @@ function onMouseOutRecommend() {
     </div>
     <div class="pop_cnt evaluation_write1905 options1811">
         <form id="reviewForm" name="reviewForm" action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051" method="post" enctype="multipart/form-data"><input type="hidden" name="productCode">
+            <input type="hidden" name="pcode" value="${product.pcode}">
+            <input type="hidden" name="pno" value="${product.pno}">
             <input type="hidden" name="productCodeType">
             <input type="hidden" name="orderNumber" id="orderNumber" value="">
             <input type="hidden" name="purchaseColor" id="purchaseColor" value="">

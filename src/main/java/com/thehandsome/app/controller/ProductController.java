@@ -223,7 +223,7 @@ public class ProductController {
 
 		model.addAttribute("viewer", viewers.get(pcode));
 
-		return "product/productdetail_old";
+		return "product/productdetail";
 	}
 
 	@RequestMapping("/exitPage")
