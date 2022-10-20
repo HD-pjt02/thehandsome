@@ -57,6 +57,12 @@ public class QnaServiceImpl implements QnaService{
 		return qnamapper.selectQna(vo);
 	}
 	
+	//qna 수정
+		@Override
+		public void qnaupdate(QnaDTO qna){
+			qnamapper.qnaUpdate(qna);
+		}
+	
 	
 
 }
