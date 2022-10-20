@@ -1,7 +1,7 @@
 /* 
  * 작성자 : 김민석
  * 작성일 : 2022.10.17.월
- * QnaMapperTests : CartMapper.xml을 test 자바소스
+ * QnaMapperTests : CartMapper.xml을 test 
  */
 package com.thehandsome.app.mapper;
 
@@ -16,6 +16,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.thehandsome.app.mapper.QnaMapper;
+import com.thehandsome.app.service.CartService;
 import com.thehandsome.app.dto.*;
 
 import lombok.extern.log4j.Log4j;
@@ -26,8 +27,9 @@ import lombok.extern.log4j.Log4j;
 public class CartMapperTests {
 
 	@Autowired
-	private CartMapper cartmapper;			//MemberMapper.java �������̽� ������ ����
-	
+	private CartMapper cartmapper;
+	@Autowired
+	private CartService service;
 //	//cartAdd 테스트
 //	@Test
 //	public void cartAdd() throws Exception{
@@ -46,45 +48,36 @@ public class CartMapperTests {
 //		
 //	}
 	
-	//cartget 테스트
-	@Test
-	public void qnaSelect() throws Exception{	
-		
-		int mno = 1;
-		
-		List<CartDTO> list = cartmapper.getCart(mno);
-		log.info("select 성공");
-		System.out.println(list);
-	}
-	
-	
+//	//cartget 테스트
 //	@Test
-//	public void qnaDelete() throws Exception {
-//		int qid = 26;
-//		qnamapper.qnaDelete(qid);
-//		System.out.println("삭제성공");
-//	}
-	
-//	@Test
-//	public void memberIdChk() throws Exception {
-//		String id = "test3";
-//		String id2 = "test123";
-//		membermapper.idCheck(id);
-//		membermapper.idCheck(id2);
-//		System.out.println(membermapper.idCheck(id));
-//		System.out.println(membermapper.idCheck(id2));
-//	}
-	
-//	 /* �α��� ���� mapper �޼��� �׽�Ʈ */
-//	@Test
-//	public void memberLogin() throws Exception {
-//		MemberVO member = new MemberVO();
+//	public void qnaSelect() throws Exception{	
 //		
-//		member.setMemberId("test3");
-//		member.setMemberPw("test3");
-//		membermapper.memberLogin(member);
-//		System.out.println("��� �� : " + membermapper.memberLogin(member));
+//		int mno = 1;
+//		
+//		List<CartDTO> list = cartmapper.getCart(mno);
+//		log.info("select 성공");
+//		System.out.println(list);
 //	}
+	
+	
+	
+	//장바구니 등록 테스트
+		@Test
+		public void addCartTest() {
+				CartDTO dto = new CartDTO(); 
+				dto.setMno(2);
+				dto.setPcode("OB2C9AJW691W");
+				dto.setPcount(5);
+			
+			//when
+				int result = service.addCart(dto);
+			
+			//then
+				System.out.println("** result : " + result);
+			
+			
+		}
+
 	
 	
 	

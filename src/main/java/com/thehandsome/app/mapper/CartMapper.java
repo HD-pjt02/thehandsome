@@ -17,7 +17,7 @@ public interface CartMapper {
 	//cart테이블에 row를 추가하는 메소드
 	//반환타입을 int로 할 경우 row 추가 성공 시 1, 
 	//실패시 0을 반환하는데 이러한 점을 필요할때 활용하기 위해 int로 지정하였습니다.
-	public int addCart(CartDTO cart);
+	public int addCart(CartDTO cart) throws Exception;
 	
 	/* 카트 삭제 */
 	//cart테이블의 지정한 row를 삭제하는 메서드 입니다

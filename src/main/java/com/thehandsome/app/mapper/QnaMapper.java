@@ -24,4 +24,7 @@ public interface QnaMapper {
 
 	// 페이징 처리 게시글 조회
 	public List<QnaDTO> selectQna(PagingDTO vo);
+	
+	//qna 수정
+	public void qnaUpdate(QnaDTO qna);
 }
