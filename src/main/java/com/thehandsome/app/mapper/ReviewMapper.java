@@ -12,4 +12,8 @@ public interface ReviewMapper {
 
 	List<ReviewDTO> getReviewList(ReviewDTO reviewDTO);
 
+	ReviewDTO getColorProduct(ReviewDTO reviewDTO);
+
+	Long insertReview(ReviewDTO reviewDTO);
+
 }

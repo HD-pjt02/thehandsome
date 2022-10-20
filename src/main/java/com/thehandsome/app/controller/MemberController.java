@@ -84,13 +84,19 @@ public class MemberController {
 		String encodePw = pwEncoder.encode(rawPw);
 		MemberDTO memberDTO = new MemberDTO();
 		memberDTO.setId((String)map.get("uid"));
-		memberDTO.setEmail((String)map.get("emailAddress"));
 		memberDTO.setBirth((String)map.get("sBirthday"));
 		memberDTO.setPassword(encodePw);
 		memberDTO.setName((String)map.get("name"));
 		
 		//String emailReceiveYn = (String)map.get("emailReceiveYn");
 		//String collectionAgreementYN = (String)map.get("collectionAgreementYN");
+		
+		if(((String)map.get("emailAddress")).equals("")) {
+			memberDTO.setEmail("null");
+		}
+		else {
+			memberDTO.setEmail((String)map.get("emailAddress"));
+		}
 		memberService.joinMember(memberDTO);
 		
 		return "member/joincomplete";
