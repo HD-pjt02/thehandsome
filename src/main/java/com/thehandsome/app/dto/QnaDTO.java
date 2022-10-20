@@ -4,6 +4,7 @@
  * QnaVO(문의모델)
  */
 package com.thehandsome.app.dto;
+import java.io.File;
 import java.sql.Timestamp;
 
 import lombok.Data;
@@ -44,4 +45,7 @@ public class QnaDTO {
 	
 	//처리 상태
 	private String qstatus;
+	
+	//qna 이미지
+	private String qimg;
 }

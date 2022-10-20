@@ -5,6 +5,8 @@
  */
 package com.thehandsome.app.controller;
 
+import java.io.File;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.thehandsome.app.dto.PagingDTO;
 import com.thehandsome.app.dto.QnaDTO;
@@ -38,18 +42,52 @@ public class QnaController {
 		log.info("qna 입력 페이지 진입");
 	}
 	
+	
 	//qna입력 페이지 
 		@RequestMapping(value = "/mtmInqrReg", method = RequestMethod.POST)
-		public String qnaPOST(QnaDTO qna) throws Exception {
-			
+		public String qnaPOST(MultipartHttpServletRequest request, QnaDTO qna, MultipartFile[] uploadFile) throws Exception {
 			log.info("qna입력 페이지 진입");
+			System.out.println(qna);
 			
-			//qna 입력 서비스 실행
-			qnaservice.qnainsert(qna);
+			//파일 업로드 위치 경로
+			String path = request.getSession().getServletContext().getRealPath("");
+            String path2 = "resources/qnaimage";
+            //String uploadFolder = "C:\\upload";
+            
+            
+//			//qna 입력 서비스 실행
+//			//qna.setQimg(multipartFile.getOriginalFilename());
+//			qnaservice.qnainsert(qna);
+//			log.info("qna service 성공");
 			
-			log.info("qna service 성공");
+				
+//			log.info(uploadFile);
+//			log.info(uploadFile.length);
+
+			for (MultipartFile multipartFile : uploadFile) {
+
+				log.info("-------------------------------------");
+				log.info("Upload File Name: " + multipartFile.getOriginalFilename());
+				log.info("Upload File Size: " + multipartFile.getSize());
+				
+				System.out.println(path);
+				System.out.println(path2);
+				//qna 입력 서비스 실행
+				qna.setQimg(multipartFile.getOriginalFilename());
+				qnaservice.qnainsert(qna);
+				log.info("qna service 성공");
+
+				File saveFile = new File(path+path2, multipartFile.getOriginalFilename());
+
+				try {
+					multipartFile.transferTo(saveFile);
+
+				} catch (Exception e) {
+					log.error(e.getMessage());
+				} // end catch
+			} // end for
 			
-			return "redirect:/main";
+			return "redirect:/qna/customerCenterMain";
 					
 	}
 		
@@ -113,7 +151,7 @@ public class QnaController {
 		//qna 뜨면서 뿌려주는거
 		@RequestMapping(value = "qnaUpdate", method = RequestMethod.GET)
 			public void qnaUpdateGet(int qid, Model model) throws Exception{
-			log.info("qna 수정 페이지 진입");
+			log.info("qna 수정 페이지 진입 후 화면에 뿌려줌");
 			QnaDTO qnadto = new QnaDTO();		
 			
 			qnadto = qnaservice.qnaselectDTO(qid);
@@ -123,7 +161,7 @@ public class QnaController {
 		
 		//qna 수정
 		
-//    //qna수정 버튼 눌렀을 때 진행
+    //qna수정 버튼 눌렀을 때 진행
 	@RequestMapping(value = "/qnaUpdate", method = RequestMethod.POST)
 	@ResponseBody
 		public String qnaUpdate(@RequestParam("qid")int qid, Model model) {
@@ -138,35 +176,19 @@ public class QnaController {
 	}
 		
 	
-//	//qna조회 페이지로 이동
-//	@RequestMapping(value = "customerCenterMain", method = RequestMethod.GET)
-//		public void qnaSelectGet(Model model) {
-//		log.info("qna 조회 페이지 진입");
-////		int nMo = 1;
-////		model.addAttribute("qnaList", qnaservice.qnaselect(nMo));
-//	}
-	
-	
-//	@GetMapping("boardList")
-//	public String boardList(PagingDTO vo, Model model
-//			, @RequestParam(value="nowPage", required=false)String nowPage
-//			, @RequestParam(value="cntPerPage", required=false)String cntPerPage) {
-//		
-//		int total = qnaservice.countQna();
-//		if (nowPage == null && cntPerPage == null) {
-//			nowPage = "1";
-//			cntPerPage = "5";
-//		} else if (nowPage == null) {
-//			nowPage = "1";
-//		} else if (cntPerPage == null) { 
-//			cntPerPage = "5";
-//		}
-//		vo = new PagingDTO(total, Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
-//		model.addAttribute("paging", vo);
-//		model.addAttribute("viewAll", qnaservice.selectQna(vo));
-//		return "qna/customerCenterMain";
-//	}
+	        //qna수정 수행
+			@RequestMapping(value = "/qnaUpdateExecute", method = RequestMethod.POST)
+			public String qnaUpdateExecute(QnaDTO qnadto) throws Exception{
+			log.info("qna 수정 진입");
+			System.out.println(qnadto);
+			
+			qnaservice.qnaupdate(qnadto);
 
+			
+			return "redirect:/qna/customerCenterMain";
+		    }
+	
+	
 
 
 }

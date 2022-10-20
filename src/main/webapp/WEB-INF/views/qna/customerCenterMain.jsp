@@ -67,9 +67,7 @@
 							</div>
 						</div>
 					</div>
-
 					<div class="inquiryList">
-
 						<c:forEach items="${viewAll}" var="qnaList" varStatus="status">
 							<form id= "form1" name="formm" method="post">
 								<div class="inquiry-history">
@@ -95,7 +93,7 @@
 										<button class="delete_inquiry_btn" type="button" onClick="delete_btn(qid)">삭제</button>
 										<button class="update_inquiry_btn" type="button" onClick="update_btn(qid)">수정</button>
 									</div>
-
+								<img src="${pageContext.request.contextPath}/resources/qnaimage/${qnaList.qimg}" alt="이미지">
 								</div>
 							</form>
 						</c:forEach>
@@ -145,7 +143,7 @@
  
 //제이쿼리로 컨트롤러에 값넘기기
  function delete_btn(qid){ 
-		//회원가입 버튼(회원가입 기능 작동)
+		//qna삭제
 	 	 var qid = qid.value;
 		    console.log(qid);
 		 	$("#form1").attr("action", "/qna/qnaDelete?qid="+qid);
@@ -162,7 +160,7 @@
 		
 	};
 	
- //ajax로 컨트롤러에 값넘기기
+ //ajax로 컨트롤러에 값넘기기(qna 수정)
   function update_btn(qid){ 
 	 
 	 var qid = qid.value;
