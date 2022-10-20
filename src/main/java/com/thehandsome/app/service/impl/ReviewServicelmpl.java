@@ -47,4 +47,9 @@ public class ReviewServicelmpl implements ReviewService{
 		return reviewMapper.insertReview(reviewDTO);
 	}
 
+	@Override
+	public Long insertPhotoReview(ReviewDTO reviewDTO) {
+		return reviewMapper.insertPhotoReview(reviewDTO);
+	}
+
 }

@@ -175,12 +175,13 @@ public class MemberController {
 	@RequestMapping(value="/login",  method= {RequestMethod.POST})
 	public String loginaction(@RequestParam Map<String,Object> map, Model model,HttpServletRequest request ) {
 		log.info("로그인 진행");
-		HttpSession session = request.getSession();
+		
+		HttpSession session = request.getSession();//세션가져옴
 		String rawPw = (String)map.get("j_password");
 //		String j_username = (String)map.get("j_username");
 		
 		MemberDTO memberDTO = new MemberDTO();
-		memberDTO.setId((String)map.get("inputId"));
+		memberDTO.setId((String)map.get("inputId"));//화면에서 입력된 아이디 
 		MemberDTO memberInfo = memberService.memberLogin(memberDTO);
 		String encodePw = memberInfo.getPassword();
 	        
