@@ -27,7 +27,7 @@
     
     <link rel="stylesheet" type="text/css" href="../../../resources/css/brand.css" media="all">
     <link rel="stylesheet" type="text/css" href="../../../resources/css/footer.css" media="all">
-    <link rel="stylesheet" type="text/css" href="../../../resources/css/contents.css" media="all">
+    <link rel="stylesheet" type="text/css" href="../../../resources/css/contents1e5d.css" media="all">
     <style type="text/css" media="print">
         @IMPORT url("../../../resources/blueprint/print.css");
     </style>

@@ -1,6 +1,5 @@
 package com.thehandsome.app.controller;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,13 +18,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.thehandsome.app.dto.ColorDTO;
-import com.thehandsome.app.dto.ProductDTO;
+import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.ReviewDTO;
-import com.thehandsome.app.service.ProductService;
 import com.thehandsome.app.service.ReviewService;
 
-import lombok.extern.java.Log;
 import lombok.extern.log4j.Log4j;
 
 @Log4j
@@ -121,20 +117,35 @@ public class ReviewController {
 	}
 	
 	//리뷰등록 할때  첨부파일 미등록
+	//insert into review values(seq.nextVal,#{mid},#{pcode},pcodecolor,sysdate,#{rcontent},#{rlmg},#{product_pcode},#{product_pno},#{reviewtype});
 	@RequestMapping(value ="/reviewWriteNew", method = {RequestMethod.GET})
 	@ResponseBody 
-	public String reviewWriteNew(@RequestParam Map<String,Object> map) {
+	public String reviewWriteNew(@RequestParam Map<String,Object> map, HttpSession session) {
+		
+		MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");//세션에 있는 멤버 관련 내용을 모두 가져옴 
+		System.out.println(memberInfo.getId());
+		System.out.println((String)map.get("pcode"));
+		System.out.println((String)map.get("productCode"));
+		
 		
 		System.out.println("리뷰쓰기 폼");
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setRrate(Integer.parseInt((String)map.get("rating")));
 		reviewDTO.setRcontent((String)map.get("headline"));
+		reviewDTO.setMid(memberInfo.getId());
+		reviewDTO.setPcode((String)map.get("pcode"));
+		reviewDTO.setPcodecolor((String)map.get("productCode"));
+		reviewDTO.setRimg("");
+		reviewDTO.setProduct_pcode((String)map.get("pcode"));
+		reviewDTO.setProduct_pno(Integer.parseInt((String)map.get("pno")));
+		reviewDTO.setReviewtype("TEXT");
 		//reviewDTO.setRimg((String)map.get("reviewFile"));
 		Long result = reviewService.insertReview(reviewDTO);
 		System.out.println("별점:"+reviewDTO.getRrate());
 		System.out.println("내용:"+reviewDTO.getRcontent());
 		//logger.info("이미지"+reviewDTO.getRimg());
 		JSONObject jsonObject = new JSONObject();
+		
 		JSONArray jsonArray = new JSONArray();
 		
 	
@@ -144,6 +155,33 @@ public class ReviewController {
 		return json;//ajax이므로 데이터 다시 있던 곳으로 보내기 
 		
 	}
+	
+//	//리뷰등록 할때  첨부파일 등록 
+//		@RequestMapping(value ="/reviewWriteNew", method = {RequestMethod.GET})
+//		@ResponseBody 
+//		public String reviewWriteNewPhoto(@RequestParam Map<String,Object> map) {
+//			
+//			System.out.println("리뷰쓰기 폼");
+//			ReviewDTO reviewDTO = new ReviewDTO();
+//			reviewDTO.setRrate(Integer.parseInt((String)map.get("rating")));
+//			reviewDTO.setRcontent((String)map.get("headline"));
+//			reviewDTO.setRimg((String)map.get("reviewFile"));
+//			
+//			Long resultphoto = reviewService.insertPhotoReview(reviewDTO);
+//			
+//			System.out.println("별점:"+reviewDTO.getRrate());
+//			System.out.println("내용:"+reviewDTO.getRcontent());
+//			System.out.println("이미지:"+reviewDTO.getRimg());
+//			
+//			JSONObject jsonObject = new JSONObject();
+//			JSONArray jsonArray = new JSONArray();
+//		
+//			String json = jsonObject.toString();
+//
+//			return json;//ajax이므로 데이터 다시 있던 곳으로 보내기 
+//			
+//		}
+//	
 	
 
 }
