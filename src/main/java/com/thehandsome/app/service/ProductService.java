@@ -19,6 +19,16 @@ public interface ProductService {
 	
 	public List<ProductDTO> getProducts(BrandDTO bname, CategoryDTO category, PageDTO page);
 	
+	/* 선택한 카테고리를 브랜드 필터링*/
+	public List<ProductDTO> filterProductsBrand(CategoryDTO category);
+	
+	/* 선택 카테고리를 색상 필터링*/
+	public List<ColorDTO> filterProductsColor(CategoryDTO category);
+	
+	/* 필터링*/
+	public List<ProductDTO> filterProducts(CategoryDTO category, PageDTO page, String[] brandList, ColorDTO color, StockDTO stock,
+			ProductDTO product, int orderby);
+	
 	public List<ColorDTO> getProductColor(ProductDTO pcode);
 	
 	public int getTotalProductNum(CategoryDTO category);
@@ -29,4 +39,5 @@ public interface ProductService {
 	
 	public List<StockDTO> getProductSize(ProductDTO pcode);
 
+	
 }
