@@ -170,20 +170,28 @@ public class ReviewController {
 	//리뷰등록 할때  첨부파일 등록 
 		@RequestMapping(value ="/reviewWriteNew", method = {RequestMethod.POST})
 		@ResponseBody 
-		public String reviewWriteNewPhoto(@RequestParam Map<String,Object> map,MultipartFile[] reviewFile) {
+		public String reviewWriteNewPhoto(@RequestParam Map<String,Object> map,MultipartFile[] reviewFile, HttpSession session) {
 			
+			MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");//세션에 있는 멤버 관련 내용을 모두 가져옴 
+			System.out.println(memberInfo.getId());
+			System.out.println((String)map.get("pcode"));
+			System.out.println((String)map.get("productCode"));
+			
+			Long nextRno = reviewService.selectNextReviewNo();
 			
 			
 			String uploadFolder = "D:\\mirim\\kosa\\thehandsome\\src\\main\\webapp\\resources\\upload";
-			
-			//List<String> list = new ArrayList<>();
-			
+			String saveFileName = "";
 			for(MultipartFile multipartFile : reviewFile) {
 				System.out.println("-----------");
 				System.out.println("파일명:"+multipartFile.getOriginalFilename());
 				System.out.println("파일크기:" + multipartFile.getSize());
 				
-				File saveFile = new File(uploadFolder, multipartFile.getOriginalFilename());
+				String[] orgNameSplit = multipartFile.getOriginalFilename().split("[.]");
+				saveFileName = ""+nextRno+"."+orgNameSplit[orgNameSplit.length-1]; 
+				System.out.println("저장되는 파일명:"+ saveFileName);
+				
+				File saveFile = new File(uploadFolder, saveFileName);
 				
 				
 				try {
@@ -196,18 +204,23 @@ public class ReviewController {
 				
 			}
 			
+			
 			System.out.println("리뷰쓰기 폼(사진첨부완료)");
 			ReviewDTO reviewDTO = new ReviewDTO();
 			reviewDTO.setRrate(Integer.parseInt((String)map.get("rating")));
 			reviewDTO.setRcontent((String)map.get("headline"));
+			reviewDTO.setMid(memberInfo.getId());
+			reviewDTO.setPcode((String)map.get("pcode"));
+			reviewDTO.setPcodecolor((String)map.get("productCode"));
+			reviewDTO.setRimg(saveFileName);
+			reviewDTO.setProduct_pcode((String)map.get("pcode"));
+			reviewDTO.setProduct_pno(Integer.parseInt((String)map.get("pno")));
+			reviewDTO.setReviewtype("IMAGE");
+			Long result = reviewService.insertPhotoReview(reviewDTO);
 			
-			//reviewDTO.setRimg(saveFile);
-			System.out.println((String)map.get("reviewFile"));
 			
-//			reviewDTO.setRimg((String)map.get("reviewFile"));
-//			System.out.println((String)map.get("reviewFile"));
 			
-			Long resultphoto = reviewService.insertPhotoReview(reviewDTO);
+			
 			
 			System.out.println("별점:"+reviewDTO.getRrate());
 			System.out.println("내용:"+reviewDTO.getRcontent());
