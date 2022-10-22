@@ -1,5 +1,7 @@
 package com.thehandsome.app.controller;
 
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -17,12 +19,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.ReviewDTO;
 import com.thehandsome.app.service.ReviewService;
 
 import lombok.extern.log4j.Log4j;
+
+/* 
+ * 작성자 : 신미림
+ * 작성일 : 2022.10.17.월
+ * 리뷰관련컨트롤러
+ */
 
 @Log4j
 @Controller
@@ -144,6 +153,8 @@ public class ReviewController {
 		System.out.println("별점:"+reviewDTO.getRrate());
 		System.out.println("내용:"+reviewDTO.getRcontent());
 		//logger.info("이미지"+reviewDTO.getRimg());
+		
+		
 		JSONObject jsonObject = new JSONObject();
 		
 		JSONArray jsonArray = new JSONArray();
@@ -156,32 +167,60 @@ public class ReviewController {
 		
 	}
 	
-//	//리뷰등록 할때  첨부파일 등록 
-//		@RequestMapping(value ="/reviewWriteNew", method = {RequestMethod.GET})
-//		@ResponseBody 
-//		public String reviewWriteNewPhoto(@RequestParam Map<String,Object> map) {
-//			
-//			System.out.println("리뷰쓰기 폼");
-//			ReviewDTO reviewDTO = new ReviewDTO();
-//			reviewDTO.setRrate(Integer.parseInt((String)map.get("rating")));
-//			reviewDTO.setRcontent((String)map.get("headline"));
+	//리뷰등록 할때  첨부파일 등록 
+		@RequestMapping(value ="/reviewWriteNew", method = {RequestMethod.POST})
+		@ResponseBody 
+		public String reviewWriteNewPhoto(@RequestParam Map<String,Object> map,MultipartFile[] reviewFile) {
+			
+			
+			
+			String uploadFolder = "D:\\mirim\\kosa\\thehandsome\\src\\main\\webapp\\resources\\upload";
+			
+			//List<String> list = new ArrayList<>();
+			
+			for(MultipartFile multipartFile : reviewFile) {
+				System.out.println("-----------");
+				System.out.println("파일명:"+multipartFile.getOriginalFilename());
+				System.out.println("파일크기:" + multipartFile.getSize());
+				
+				File saveFile = new File(uploadFolder, multipartFile.getOriginalFilename());
+				
+				
+				try {
+					//list.add(multipartFile.getOriginalFilename());
+					multipartFile.transferTo(saveFile);
+				}catch(Exception e) {
+					System.out.println(e.getMessage());
+				}
+				
+				
+			}
+			
+			System.out.println("리뷰쓰기 폼(사진첨부완료)");
+			ReviewDTO reviewDTO = new ReviewDTO();
+			reviewDTO.setRrate(Integer.parseInt((String)map.get("rating")));
+			reviewDTO.setRcontent((String)map.get("headline"));
+			
+			//reviewDTO.setRimg(saveFile);
+			System.out.println((String)map.get("reviewFile"));
+			
 //			reviewDTO.setRimg((String)map.get("reviewFile"));
-//			
-//			Long resultphoto = reviewService.insertPhotoReview(reviewDTO);
-//			
-//			System.out.println("별점:"+reviewDTO.getRrate());
-//			System.out.println("내용:"+reviewDTO.getRcontent());
-//			System.out.println("이미지:"+reviewDTO.getRimg());
-//			
-//			JSONObject jsonObject = new JSONObject();
-//			JSONArray jsonArray = new JSONArray();
-//		
-//			String json = jsonObject.toString();
-//
-//			return json;//ajax이므로 데이터 다시 있던 곳으로 보내기 
-//			
-//		}
-//	
+//			System.out.println((String)map.get("reviewFile"));
+			
+			Long resultphoto = reviewService.insertPhotoReview(reviewDTO);
+			
+			System.out.println("별점:"+reviewDTO.getRrate());
+			System.out.println("내용:"+reviewDTO.getRcontent());
+			System.out.println("이미지:"+reviewDTO.getRimg());
+		
+			JSONObject jsonObject = new JSONObject();
+			JSONArray jsonArray = new JSONArray();
+		
+     		String json = jsonObject.toString();
+            return json;//ajax이므로 데이터 다시 있던 곳으로 보내기 
+		
+		}
+	
 	
 
 }

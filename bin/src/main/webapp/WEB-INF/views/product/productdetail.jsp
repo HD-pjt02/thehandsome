@@ -1,41 +1,99 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
-<html lang="ko"><head><script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/ec.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-RPZ82BN53C&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="https://static.addtoany.com/menu/svg/icons.30.svg.js"></script>
-<meta name="naver-site-verification" content="2f9358e1e36605519854a595f243f0171519dd1d">
-<meta name="google-site-verification" content="0bGV8gPhwO_PzritNvIsz2k74EH5yPsrXXluJ8ZUed8">
-<meta name="google-site-verification" content="dO99-Ao-ywXeVDEz4jz5nJBXzQXVCgmX4WXzxl_Nf3c">
-<meta name="facebook-domain-verification" content="jvxpdjfrqqan9oe1qdrjfyxj553an6">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<html lang="ko">
+<head>
+<script type="text/javascript" async=""
+	src="https://www.google-analytics.com/plugins/ua/ec.js"></script>
+<script type="text/javascript" async=""
+	src="https://www.googletagmanager.com/gtag/js?id=G-RPZ82BN53C&amp;l=dataLayer&amp;cx=c"></script>
+<script type="text/javascript" async=""
+	src="https://www.google-analytics.com/analytics.js"></script>
+<script async=""
+	src="https://static.addtoany.com/menu/svg/icons.30.svg.js"></script>
+<meta name="naver-site-verification"
+	content="2f9358e1e36605519854a595f243f0171519dd1d">
+<meta name="google-site-verification"
+	content="0bGV8gPhwO_PzritNvIsz2k74EH5yPsrXXluJ8ZUed8">
+<meta name="google-site-verification"
+	content="dO99-Ao-ywXeVDEz4jz5nJBXzQXVCgmX4WXzxl_Nf3c">
+<meta name="facebook-domain-verification"
+	content="jvxpdjfrqqan9oe1qdrjfyxj553an6">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="Cache-Control" content="No-Cache">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi">
-<meta property="og:url" content="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=1, target-densitydpi=medium-dpi">
+<meta property="og:url"
+	content="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko">
 <meta property="og:type" content="product">
 <meta property="og:title" content="[MINE] 캐시미어 더블 재킷">
+<<<<<<< Updated upstream
 <meta property="og:description" content="">
+<meta property="og:image"
+	content="http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_W01.jpg">
+=======
+<meta property="og:descriptizfon" content="">
 <meta property="og:image" content="http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_W01.jpg">
+>>>>>>> Stashed changes
 <meta property="product:price:amount" content="1250000">
 <meta property="product:price:currency" content="KRW">
 <!-- 1. recopick START -->
 <meta property="recopick:title" content="캐시미어 더블 재킷">
-<meta property="recopick:image" content="http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg">
+<meta property="recopick:image"
+	content="http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg">
 <meta property="recopick:price" content="1250000">
-<meta property="recopick:price:currency" content="KRW"> 
+<meta property="recopick:price:currency" content="KRW">
 <meta property="recopick:sale_price" content="1250000">
 <meta property="recopick:sale_price:currency" content="KRW">
 <meta property="recopick:description" content="">
 <meta property="recopick:author" content="MINE">
 
 <!-- 1. recopick END -->
+<<<<<<< Updated upstream
+<title><!--22.10.19 미림 변경완료 --> ${product.pname} |
+	${product.csmall} | ${product.cmedium} | ${product.clarge} | HANDSOME |
+	더한섬닷컴
+</title>
+<link rel="shortcut icon"
+	href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/font_80.css"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/common.css?20220929"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/layout.css?20220826"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/popup.css?20210225"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css"
+	media="all">
+
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/brand.css"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/footer.css?20220406"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/contents1e5d.css?20220907"
+	media="all">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/resources/css/swiper.min.css"
+	media="all">
+=======
 <title>
-	캐시미어 더블 재킷 | JACKET | OUTER | WOMEN | HANDSOME | 더한섬닷컴</title>
+	${product.pname} | ${product.csmall} | ${product.cmedium} | ${product.clarge} | HANDSOME | 더한섬닷컴</title>
 <link rel="shortcut icon" href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/font_80.css" media="all">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css?20220929" media="all">
@@ -47,12 +105,29 @@
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/footer.css?20220406" media="all">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/contents1e5d.css?20220907" media="all">
 <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/swiper.min.css" media="all">
+>>>>>>> Stashed changes
 <style type="text/css" media="print">
-	@IMPORT url("${pageContext.request.contextPath}/resources/blueprint/print.css");
+@IMPORT
+	url("${pageContext.request.contextPath}/resources/blueprint/print.css")
+	;
 </style>
 
-<script async="" defer="" src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-5PCJDFJ"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="https://connect.facebook.net/signals/config/1947530058811697?v=2.9.84&amp;r=stable" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" charset="utf-8" src="//static.recopick.com/dist/production.min.js"></script><script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-1.11.2.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.vticker.js"></script><!-- 200318 ì¶ê° -->
+<script async="" defer=""
+	src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js"></script>
+<script async=""
+	src="https://www.googletagmanager.com/gtm.js?id=GTM-5PCJDFJ"></script>
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script
+	src="https://connect.facebook.net/signals/config/1947530058811697?v=2.9.84&amp;r=stable"
+	async=""></script>
+<script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+<script async="" charset="utf-8"
+	src="//static.recopick.com/dist/production.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery.vticker.js"></script>
+<!-- 200318 ì¶ê° -->
 <script type="text/javascript">
 		//<![CDATA[
 		
@@ -80,7 +155,7 @@
 			
 		//]]>
 	</script>
-	<script type="text/javascript">
+<script type="text/javascript">
 	//<![CDATA[
 	ACC.addons = {};	//JS holder for addons properties
 			
@@ -91,29 +166,45 @@
     var handsomeContextPath = "/ko"; 
 </script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/common.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/html5shiv-printshiv.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/jquery.flexslider.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/ui.js?20211105"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery.form-3.51.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/common_function.js?20220411"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/videojs-ie8.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/handsome/common.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/handsome/html5shiv-printshiv.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/handsome/jquery.flexslider.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/handsome/ui.js?20211105"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery.form-3.51.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/common_function.js?20220411"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/videojs-ie8.min.js"></script>
 <!--[if lt IE 9]>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/html5shiv.js"></script>
 <script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/respond.js"></script>
 <![endif]-->
- 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/jquery-ui-1.11.2.min.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/instagramAPI.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/makePCookie.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/jquery-ui-1.11.2.min.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/js/jquery.min.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/instagramAPI.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/makePCookie.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/netfunnel.js" charset="UTF-8"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/netfunnel_skin.js" charset="UTF-8"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/wisenut/js/jquery.min.js"></script>
 
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/unorm.js"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/netfunnel.js"
+	charset="UTF-8"></script>
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/netfunnel_skin.js"
+	charset="UTF-8"></script>
+
+<script type="text/javascript"
+	src="${pageContext.request.contextPath}/resources/js/unorm.js"></script>
 
 <script type="text/javascript">
 var setDimensionData = function(){
@@ -571,13 +662,61 @@ function GA_Event(Category,Action,Label) {
 }
 </script>
 <style media="screen">
-.blsmflw1 {animation: target_image 1.5s;animation-iteration-count: 2;transform-origin:50% 50%;}
-.leaf2209 {animation: target_image 1.5s;animation-iteration-count: 2;transform-origin:50% 50%;}
- @keyframes target_image {
-	0% { transform: rotate(-1deg); }
-	50% { transform: rotate(9deg) }
-	100% { transform: rotate(-1deg); }
- }
+.blsmflw1 {
+	animation: target_image 1.5s;
+	animation-iteration-count: 2;
+	transform-origin: 50% 50%;
+}
+
+.leaf2209 {
+	animation: target_image 1.5s;
+	animation-iteration-count: 2;
+	transform-origin: 50% 50%;
+}
+
+@
+keyframes target_image { 0% {
+	transform: rotate(-1deg);
+}
+50%
+{
+transform
+
+
+:
+
+ 
+
+rotate
+
+
+(9
+deg
+)
+
+ 
+
+}
+100%
+{
+transform
+
+
+:
+
+ 
+
+rotate
+
+
+(-1
+deg
+);
+
+ 
+
+}
+}
 </style>
 
 <script>
@@ -1043,12 +1182,14 @@ fbq('init', '1947530058811697'); // Insert your pixel ID here.
 fbq('track', 'PageView');
 </script>
 <noscript>
-    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1947530058811697&ev=PageView&noscript=1"/>
+	<img height="1" width="1" style="display: none"
+		src="https://www.facebook.com/tr?id=1947530058811697&ev=PageView&noscript=1" />
 </noscript>
 <!-- End Facebook Pixel Code -->
 
-        <!-- #2894 - 카카오광고 집행 위한 픽셀&SDK 삽입 -->
-<script type="text/javascript" charset="UTF-8" src="//t1.daumcdn.net/adfit/static/kp.js"></script>
+<!-- #2894 - 카카오광고 집행 위한 픽셀&SDK 삽입 -->
+<script type="text/javascript" charset="UTF-8"
+	src="//t1.daumcdn.net/adfit/static/kp.js"></script>
 <script type="text/javascript">
 if(typeof kakaoPixel !== 'undefined'){
       var kakaoTrackId = '3482319208237780781'; //개발
@@ -1091,31 +1232,807 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 
 <!-- Groobee -->
-    <script type="text/javascript">
+<script type="text/javascript">
     (function(a,i,u,e,o) {
     a[u]=a[u]||function(){(a[u].q=a[u].q||[]).push(arguments)};
     })(window, document, "groobee");
     groobee("serviceKey", "446b3d48b07e41f68624bf7f3457f33d");
     groobee("siteType", "custom");
     </script>
-    <script charset="utf-8" src="//static.groobee.io/dist/g2/groobee.init.min.js"></script>
-    <!-- End of Groobee -->
-    <meta property="groobee:member_id" content="">
-    <meta property="groobee:member_grade" content="">
-    <meta property="groobee:member_gender" content="">
-    <meta property="groobee:member_type" content="">
-    <meta property="groobee:member_age" content="">
-    <script>
+<script charset="utf-8"
+	src="//static.groobee.io/dist/g2/groobee.init.min.js"></script>
+<!-- End of Groobee -->
+<meta property="groobee:member_id" content="">
+<meta property="groobee:member_grade" content="">
+<meta property="groobee:member_gender" content="">
+<meta property="groobee:member_type" content="">
+<meta property="groobee:member_age" content="">
+<script>
     // 검색 결과 페이지
     if(window.location.pathname.indexOf("/hssearch/searchCount") > -1) {
         var groobeeKeyword = "";                     //검색_검색어(검색결과페이지일때 사용)
         groobee( "SE", { keyword : groobeeKeyword } );
     }
     </script>
-<meta http-equiv="origin-trial" content="A/vXSuiuvzsL+Db89QNS/YzqK5Wmzx9oASGHZVMjcaWfVdbB6eUJrJGNr7uhrsmiGhryVjVALd72agYzELDTMAgAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5uZXQ6NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2OTc2NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0KGawWMfAygakxUO+Z3rulPwK2j0AqkLneiEt4pAI951GYaafeHNV9Ya+PAn7s0y12QSrfTjc9LdOUU+QfkdQwAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2OTc2NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><script src="http://static.addtoany.com/menu/modules/core.e18d3993.js" type="module"></script><link href="https://static.addtoany.com/menu/svg/icons.30.svg.js" rel="preload" as="script"><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/943253288/?random=1665669738791&amp;cv=9&amp;fst=1665669738791&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=375603261&amp;u_h=864&amp;u_w=1536&amp;u_ah=824&amp;u_aw=1536&amp;u_cd=24&amp;u_his=6&amp;u_tz=540&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=http%3A%2F%2Fwww.thehandsome.com%2Fko%2FHANDSOME%2FWOMEN%2FOUTER%2FJACKET%2F%25EC%25BA%2590%25EC%258B%259C%25EB%25AF%25B8%25EC%2596%25B4-%25EB%258D%2594%25EB%25B8%2594-%25EC%259E%25AC%25ED%2582%25B7%2Fp%2FMN2C8WJC026WP_CM%3FcategoryCode%3Dwe051&amp;ref=http%3A%2F%2Fwww.thehandsome.com%2Fko%2Fc%2Fwe051%2F&amp;tiba=%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4%20%EB%8D%94%EB%B8%94%20%EC%9E%AC%ED%82%B7%20%7C%20JACKET%20%7C%20OUTER%20%7C%20WOMEN%20%7C%20HANDSOME%20%7C%20%EB%8D%94%ED%95%9C%EC%84%AC%EB%8B%B7%EC%BB%B4&amp;hn=www.googleadservices.com&amp;rfmt=3&amp;fmt=4"></script><script src="//rum.beusable.net/script/b200506e124944u371/29f6068460" async="" type="text/javascript"></script><script src="https://cdn.megadata.co.kr/js/socialLink/social_sns_config_min.js" type="text/javascript" defer="" async=""></script><style type="text/css">.a2a_hide{display:none}.a2a_logo_color{background-color:#0166ff}.a2a_menu,.a2a_menu *{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;float:none;margin:0;padding:0;position:static;height:auto;width:auto}.a2a_menu{border-radius:6px;display:none;direction:ltr;background:#FFF;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;color:#000;line-height:12px;border:1px solid #CCC;vertical-align:baseline;overflow:hidden}.a2a_mini{min-width:200px;position:absolute;width:300px;z-index:9999997}.a2a_overlay{display:none;background:#616c7d;opacity:.92;backdrop-filter:blur(8px);position:fixed;top:0;right:0;left:0;bottom:0;z-index:9999998;-webkit-tap-highlight-color:transparent;transition:opacity .14s,backdrop-filter .14s}.a2a_full{background:#FFF;border:1px solid #FFF;height:auto;height:calc(320px);top:15%;left:50%;margin-left:-320px;position:fixed;text-align:center;width:640px;z-index:9999999;transition:transform .14s,opacity .14s}.a2a_full_footer,.a2a_full_header,.a2a_full_services{border:0;margin:0;padding:12px;box-sizing:border-box}.a2a_full_header{padding-bottom:8px}.a2a_full_services{height:280px;overflow-y:scroll;padding:0 12px;-webkit-overflow-scrolling:touch}.a2a_full_services .a2a_i{display:inline-block;float:none;width:181px;width:calc(33.334% - 18px)}div.a2a_full_footer{font-size:12px;text-align:center;padding:8px 14px}div.a2a_full_footer a,div.a2a_full_footer a:visited{display:inline;font-size:12px;line-height:14px;padding:8px 14px}div.a2a_full_footer a:focus,div.a2a_full_footer a:hover{background:0 0;border:0;color:#0166FF}div.a2a_full_footer a span.a2a_s_a2a,div.a2a_full_footer a span.a2a_w_a2a{background-size:14px;border-radius:3px;display:inline-block;height:14px;line-height:14px;margin:0 3px 0 0;vertical-align:top;width:14px}.a2a_modal{height:0;left:50%;margin-left:-320px;position:fixed;text-align:center;top:15%;width:640px;z-index:9999999;transition:transform .14s,opacity .14s;-webkit-tap-highlight-color:transparent}.a2a_modal_body{background:0 0;border:0;font:24px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;position:relative;height:auto;width:auto}.a2a_thanks{color:#fff;height:auto;margin-top:20px;width:auto}.a2a_thanks>div:first-child{margin:0 0 40px 0}.a2a_thanks div *{height:inherit}#a2a_copy_link{background:#FFF;border:1px solid #FFF;cursor:pointer;margin-top:15%}span.a2a_s_link#a2a_copy_link_icon,span.a2a_w_link#a2a_copy_link_icon{background-size:48px;border-radius:0;display:inline-block;height:48px;left:0;line-height:48px;margin:0 3px 0 0;position:absolute;vertical-align:top;width:48px}#a2a_modal input#a2a_copy_link_text{background-color:transparent;border:0;color:#2A2A2A;cursor:pointer;font:inherit;height:48px;left:62px;max-width:initial;padding:0;position:relative;width:564px;width:calc(100% - 76px)}#a2a_copy_link_copied{background-color:#0166ff;color:#fff;display:none;font:inherit;font-size:16px;margin-top:1px;padding:3px 8px}@media (prefers-color-scheme:dark){.a2a_menu a,.a2a_menu a.a2a_i,.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more,i.a2a_i{border-color:#2a2a2a!important;color:#fff!important}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover,.a2a_menu_find_container{border-color:#444!important;background-color:#444!important}.a2a_menu{background-color:#2a2a2a;border-color:#2a2a2a}.a2a_menu_find{color:#fff!important}.a2a_menu span.a2a_s_find svg{background-color:transparent!important}.a2a_menu span.a2a_s_find svg path{fill:#fff!important}}@media print{.a2a_floating_style,.a2a_menu,.a2a_overlay{visibility:hidden}}@keyframes a2aFadeIn{from{opacity:0}to{opacity:1}}.a2a_starting{opacity:0}.a2a_starting.a2a_full,.a2a_starting.a2a_modal{transform:scale(.8)}@media (max-width:639px){.a2a_full{border-radius:0;top:15%;left:0;margin-left:auto;width:100%}.a2a_modal{left:0;margin-left:10px;width:calc(100% - 20px)}}@media (min-width:318px) and (max-width:437px){.a2a_full .a2a_full_services .a2a_i{width:calc(50% - 18px)}}@media (max-width:317px){.a2a_full .a2a_full_services .a2a_i{width:calc(100% - 18px)}}@media (max-height:436px){.a2a_full{bottom:40px;height:auto;top:40px}}@media (max-height:550px){.a2a_modal{top:30px}}@media (max-height:360px){.a2a_modal{top:20px}.a2a_thanks>div:first-child{margin-bottom:20px}}.a2a_menu a{color:#0166FF;text-decoration:none;font:16px sans-serif-light,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Arial,Helvetica,"Liberation Sans",sans-serif;line-height:14px;height:auto;width:auto;outline:0}.a2a_menu a.a2a_i:visited,.a2a_menu a.a2a_more{color:#0166FF}.a2a_menu a.a2a_i:active,.a2a_menu a.a2a_i:focus,.a2a_menu a.a2a_i:hover,.a2a_menu a.a2a_more:active,.a2a_menu a.a2a_more:focus,.a2a_menu a.a2a_more:hover{color:#2A2A2A;border-color:#EEE;border-style:solid;background-color:#EEE;text-decoration:none}.a2a_menu span.a2a_s_find{background-size:24px;height:24px;left:8px;position:absolute;top:7px;width:24px}.a2a_menu span.a2a_s_find svg{background-color:#FFF}.a2a_menu span.a2a_s_find svg path{fill:#CCC}#a2a_menu_container{display:inline-block}.a2a_menu_find_container{border:1px solid #CCC;border-radius:6px;padding:2px 24px 2px 0;position:relative;text-align:left}.a2a_cols_container .a2a_col1{overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch}#a2a_modal input,#a2a_modal input[type=text],.a2a_menu input,.a2a_menu input[type=text]{display:block;background-image:none;box-shadow:none;line-height:100%;margin:0;outline:0;overflow:hidden;padding:0;-moz-box-shadow:none;-webkit-box-shadow:none;-webkit-appearance:none}#a2afeed_find_container input,#a2afeed_find_container input[type=text],#a2apage_find_container input,#a2apage_find_container input[type=text]{background-color:transparent;border:0;box-sizing:content-box;color:#2A2A2A;font:inherit;font-size:16px;height:28px;line-height:20px;left:38px;outline:0;margin:0;max-width:initial;min-height:initial;padding:2px 0;position:relative;width:99%}.a2a_clear{clear:both}.a2a_svg{background-repeat:no-repeat;display:block;overflow:hidden;height:32px;line-height:32px;padding:0;pointer-events:none;width:32px}.a2a_svg svg{background-repeat:no-repeat;background-position:50% 50%;border:none;display:block;left:0;margin:0 auto;overflow:hidden;padding:0;position:relative;top:0;width:auto;height:auto}a.a2a_i,i.a2a_i{display:block;float:left;border:1px solid #FFF;line-height:24px;padding:6px 8px;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:132px}a.a2a_i span,a.a2a_more span{display:inline-block;overflow:hidden;vertical-align:top}a.a2a_i .a2a_svg{margin:0 6px 0 0}a.a2a_i .a2a_svg,a.a2a_more .a2a_svg{background-size:24px;height:24px;line-height:24px;width:24px}a.a2a_sss:hover{border-left:1px solid #CCC}a.a2a_more{border-bottom:1px solid #FFF;border-left:0;border-right:0;line-height:24px;margin:6px 0 0;padding:6px;-webkit-touch-callout:none}a.a2a_more span{height:24px;margin:0 6px 0 0}.a2a_kit .a2a_svg{background-repeat:repeat}.a2a_default_style a:empty,.a2a_flex_style a:empty,.a2a_floating_style a:empty,.a2a_overlay_style a:empty{display:none}.a2a_color_buttons a,.a2a_floating_style a{text-decoration:none}.a2a_default_style:not(.a2a_flex_style) a{float:left;line-height:16px;padding:0 2px}.a2a_default_style a:hover .a2a_svg,.a2a_floating_style a:hover .a2a_svg,.a2a_overlay_style a:hover .a2a_svg svg{opacity:.7}.a2a_overlay_style.a2a_default_style a:hover .a2a_svg{opacity:1}.a2a_default_style .a2a_count,.a2a_default_style .a2a_svg,.a2a_floating_style .a2a_svg,.a2a_menu .a2a_svg,.a2a_vertical_style .a2a_count,.a2a_vertical_style .a2a_svg{border-radius:4px}.a2a_default_style .a2a_counter img,.a2a_default_style .a2a_dd,.a2a_default_style .a2a_svg{float:left}.a2a_default_style .a2a_img_text{margin-right:4px}.a2a_default_style .a2a_divider{border-left:1px solid #000;display:inline;float:left;height:16px;line-height:16px;margin:0 5px}.a2a_kit a{cursor:pointer}.a2a_floating_style{background-color:#fff;border-radius:6px;position:fixed;z-index:9999995}.a2a_overlay_style{z-index:2147483647}.a2a_floating_style,.a2a_overlay_style{animation:a2aFadeIn .2s ease-in;padding:4px}.a2a_vertical_style:not(.a2a_flex_style) a{clear:left;display:block;overflow:hidden;padding:4px}.a2a_floating_style.a2a_default_style{bottom:0}.a2a_floating_style.a2a_default_style a,.a2a_overlay_style.a2a_default_style a{padding:4px}.a2a_count{background-color:#fff;border:1px solid #ccc;box-sizing:border-box;color:#2a2a2a;display:block;float:left;font:12px Arial,Helvetica,sans-serif;height:16px;margin-left:4px;position:relative;text-align:center;width:50px}.a2a_count:after,.a2a_count:before{border:solid transparent;border-width:4px 4px 4px 0;content:"";height:0;left:0;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:50%;width:0}.a2a_count:before{border-right-color:#ccc}.a2a_count:after{border-right-color:#fff;margin-left:-3px}.a2a_count span{animation:a2aFadeIn .14s ease-in}.a2a_vertical_style .a2a_counter img{display:block}.a2a_vertical_style .a2a_count{float:none;margin-left:0;margin-top:6px}.a2a_vertical_style .a2a_count:after,.a2a_vertical_style .a2a_count:before{border:solid transparent;border-width:0 4px 4px 4px;content:"";height:0;left:50%;line-height:0;margin:-4px 0 0 -4px;position:absolute;top:0;width:0}.a2a_vertical_style .a2a_count:before{border-bottom-color:#ccc}.a2a_vertical_style .a2a_count:after{border-bottom-color:#fff;margin-top:-3px}.a2a_color_buttons .a2a_count,.a2a_color_buttons .a2a_count:after,.a2a_color_buttons .a2a_count:before,.a2a_color_buttons.a2a_vertical_style .a2a_count:after,.a2a_color_buttons.a2a_vertical_style .a2a_count:before{background-color:transparent;border:none;color:#fff;float:none;width:auto}.a2a_color_buttons.a2a_vertical_style .a2a_count{margin-top:0}.a2a_flex_style{display:flex;align-items:flex-start;gap:0}.a2a_default_style.a2a_flex_style{left:0;right:0;width:100%}.a2a_vertical_style.a2a_flex_style{flex-direction:column;top:0;bottom:0}.a2a_flex_style a{display:flex;justify-content:center;flex:1;padding:4px}.a2a_flex_style.a2a_vertical_style a{flex-direction:column}.a2a_floating_style.a2a_color_buttons,.a2a_floating_style.a2a_flex_style{border-radius:0;padding:0}.a2a_floating_style.a2a_default_style.a2a_flex_style{bottom:0}.a2a_kit.a2a_flex_style .a2a_counter img,.a2a_kit.a2a_flex_style .a2a_dd,.a2a_kit.a2a_flex_style .a2a_svg{float:none}.a2a_nowrap{white-space:nowrap}.a2a_note{margin:0 auto;padding:9px;font-size:12px;text-align:center}.a2a_note .a2a_note_note{margin:0;color:#2A2A2A}.a2a_wide a{display:block;margin-top:3px;border-top:1px solid #EEE;text-align:center}.a2a_label{position:absolute!important;clip-path:polygon(0px 0px,0px 0px,0px 0px);-webkit-clip-path:polygon(0px 0px,0px 0px,0px 0px);overflow:hidden;height:1px;width:1px}.a2a_kit,.a2a_menu,.a2a_modal,.a2a_overlay{-ms-touch-action:manipulation;touch-action:manipulation;outline:0}.a2a_dd img{border:0}.a2a_button_facebook_like iframe{max-width:none}</style><script src="//rum.beusable.net/script/checker/b200506e124944u371/29f6068460?url=http%3A%2F%2Fwww.thehandsome.com%2Fko%2FHANDSOME%2FWOMEN%2FOUTER%2FJACKET%2F%25EC%25BA%2590%25EC%258B%259C%25EB%25AF%25B8%25EC%2596%25B4-%25EB%258D%2594%25EB%25B8%2594-%25EC%259E%25AC%25ED%2582%25B7%2Fp%2FMN2C8WJC026WP_CM%3FcategoryCode%3Dwe051" async="" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"><link rel="stylesheet" type="text/css" href="//static.groobee.io/dist/g2/css/grb-recommend-list_v2.css"></head>
+<meta http-equiv="origin-trial"
+	content="A/vXSuiuvzsL+Db89QNS/YzqK5Wmzx9oASGHZVMjcaWfVdbB6eUJrJGNr7uhrsmiGhryVjVALd72agYzELDTMAgAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5uZXQ6NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2OTc2NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+<meta http-equiv="origin-trial"
+	content="A0KGawWMfAygakxUO+Z3rulPwK2j0AqkLneiEt4pAI951GYaafeHNV9Ya+PAn7s0y12QSrfTjc9LdOUU+QfkdQwAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2OTc2NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+<script src="http://static.addtoany.com/menu/modules/core.e18d3993.js"
+	type="module"></script>
+<link href="https://static.addtoany.com/menu/svg/icons.30.svg.js"
+	rel="preload" as="script">
+<script type="text/javascript" async=""
+	src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/943253288/?random=1665669738791&amp;cv=9&amp;fst=1665669738791&amp;num=1&amp;guid=ON&amp;resp=GooglemKTybQhCsO&amp;eid=375603261&amp;u_h=864&amp;u_w=1536&amp;u_ah=824&amp;u_aw=1536&amp;u_cd=24&amp;u_his=6&amp;u_tz=540&amp;u_java=false&amp;u_nplug=5&amp;u_nmime=2&amp;sendb=1&amp;ig=1&amp;frm=0&amp;url=http%3A%2F%2Fwww.thehandsome.com%2Fko%2FHANDSOME%2FWOMEN%2FOUTER%2FJACKET%2F%25EC%25BA%2590%25EC%258B%259C%25EB%25AF%25B8%25EC%2596%25B4-%25EB%258D%2594%25EB%25B8%2594-%25EC%259E%25AC%25ED%2582%25B7%2Fp%2FMN2C8WJC026WP_CM%3FcategoryCode%3Dwe051&amp;ref=http%3A%2F%2Fwww.thehandsome.com%2Fko%2Fc%2Fwe051%2F&amp;tiba=%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4%20%EB%8D%94%EB%B8%94%20%EC%9E%AC%ED%82%B7%20%7C%20JACKET%20%7C%20OUTER%20%7C%20WOMEN%20%7C%20HANDSOME%20%7C%20%EB%8D%94%ED%95%9C%EC%84%AC%EB%8B%B7%EC%BB%B4&amp;hn=www.googleadservices.com&amp;rfmt=3&amp;fmt=4"></script>
+<script src="//rum.beusable.net/script/b200506e124944u371/29f6068460"
+	async="" type="text/javascript"></script>
+<script
+	src="https://cdn.megadata.co.kr/js/socialLink/social_sns_config_min.js"
+	type="text/javascript" defer="" async=""></script>
+<style type="text/css">
+.a2a_hide {
+	display: none
+}
+
+.a2a_logo_color {
+	background-color: #0166ff
+}
+
+.a2a_menu, .a2a_menu * {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	float: none;
+	margin: 0;
+	padding: 0;
+	position: static;
+	height: auto;
+	width: auto
+}
+
+.a2a_menu {
+	border-radius: 6px;
+	display: none;
+	direction: ltr;
+	background: #FFF;
+	font: 16px sans-serif-light, HelveticaNeue-Light, "Helvetica Neue Light",
+		"Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
+	color: #000;
+	line-height: 12px;
+	border: 1px solid #CCC;
+	vertical-align: baseline;
+	overflow: hidden
+}
+
+.a2a_mini {
+	min-width: 200px;
+	position: absolute;
+	width: 300px;
+	z-index: 9999997
+}
+
+.a2a_overlay {
+	display: none;
+	background: #616c7d;
+	opacity: .92;
+	backdrop-filter: blur(8px);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 9999998;
+	-webkit-tap-highlight-color: transparent;
+	transition: opacity .14s, backdrop-filter .14s
+}
+
+.a2a_full {
+	background: #FFF;
+	border: 1px solid #FFF;
+	height: auto;
+	height: calc(320px);
+	top: 15%;
+	left: 50%;
+	margin-left: -320px;
+	position: fixed;
+	text-align: center;
+	width: 640px;
+	z-index: 9999999;
+	transition: transform .14s, opacity .14s
+}
+
+.a2a_full_footer, .a2a_full_header, .a2a_full_services {
+	border: 0;
+	margin: 0;
+	padding: 12px;
+	box-sizing: border-box
+}
+
+.a2a_full_header {
+	padding-bottom: 8px
+}
+
+.a2a_full_services {
+	height: 280px;
+	overflow-y: scroll;
+	padding: 0 12px;
+	-webkit-overflow-scrolling: touch
+}
+
+.a2a_full_services .a2a_i {
+	display: inline-block;
+	float: none;
+	width: 181px;
+	width: calc(33.334% - 18px)
+}
+
+div.a2a_full_footer {
+	font-size: 12px;
+	text-align: center;
+	padding: 8px 14px
+}
+
+div.a2a_full_footer a, div.a2a_full_footer a:visited {
+	display: inline;
+	font-size: 12px;
+	line-height: 14px;
+	padding: 8px 14px
+}
+
+div.a2a_full_footer a:focus, div.a2a_full_footer a:hover {
+	background: 0 0;
+	border: 0;
+	color: #0166FF
+}
+
+div.a2a_full_footer a span.a2a_s_a2a, div.a2a_full_footer a span.a2a_w_a2a
+	{
+	background-size: 14px;
+	border-radius: 3px;
+	display: inline-block;
+	height: 14px;
+	line-height: 14px;
+	margin: 0 3px 0 0;
+	vertical-align: top;
+	width: 14px
+}
+
+.a2a_modal {
+	height: 0;
+	left: 50%;
+	margin-left: -320px;
+	position: fixed;
+	text-align: center;
+	top: 15%;
+	width: 640px;
+	z-index: 9999999;
+	transition: transform .14s, opacity .14s;
+	-webkit-tap-highlight-color: transparent
+}
+
+.a2a_modal_body {
+	background: 0 0;
+	border: 0;
+	font: 24px sans-serif-light, HelveticaNeue-Light, "Helvetica Neue Light",
+		"Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
+	position: relative;
+	height: auto;
+	width: auto
+}
+
+.a2a_thanks {
+	color: #fff;
+	height: auto;
+	margin-top: 20px;
+	width: auto
+}
+
+.a2a_thanks>div:first-child {
+	margin: 0 0 40px 0
+}
+
+.a2a_thanks div * {
+	height: inherit
+}
+
+#a2a_copy_link {
+	background: #FFF;
+	border: 1px solid #FFF;
+	cursor: pointer;
+	margin-top: 15%
+}
+
+span.a2a_s_link#a2a_copy_link_icon, span.a2a_w_link#a2a_copy_link_icon {
+	background-size: 48px;
+	border-radius: 0;
+	display: inline-block;
+	height: 48px;
+	left: 0;
+	line-height: 48px;
+	margin: 0 3px 0 0;
+	position: absolute;
+	vertical-align: top;
+	width: 48px
+}
+
+#a2a_modal input#a2a_copy_link_text {
+	background-color: transparent;
+	border: 0;
+	color: #2A2A2A;
+	cursor: pointer;
+	font: inherit;
+	height: 48px;
+	left: 62px;
+	max-width: initial;
+	padding: 0;
+	position: relative;
+	width: 564px;
+	width: calc(100% - 76px)
+}
+
+#a2a_copy_link_copied {
+	background-color: #0166ff;
+	color: #fff;
+	display: none;
+	font: inherit;
+	font-size: 16px;
+	margin-top: 1px;
+	padding: 3px 8px
+}
+
+@media ( prefers-color-scheme :dark) {
+	.a2a_menu a, .a2a_menu a.a2a_i, .a2a_menu a.a2a_i:visited, .a2a_menu a.a2a_more,
+		i.a2a_i {
+		border-color: #2a2a2a !important;
+		color: #fff !important
+	}
+	.a2a_menu a.a2a_i:active, .a2a_menu a.a2a_i:focus, .a2a_menu a.a2a_i:hover,
+		.a2a_menu a.a2a_more:active, .a2a_menu a.a2a_more:focus, .a2a_menu a.a2a_more:hover,
+		.a2a_menu_find_container {
+		border-color: #444 !important;
+		background-color: #444 !important
+	}
+	.a2a_menu {
+		background-color: #2a2a2a;
+		border-color: #2a2a2a
+	}
+	.a2a_menu_find {
+		color: #fff !important
+	}
+	.a2a_menu span.a2a_s_find svg {
+		background-color: transparent !important
+	}
+	.a2a_menu span.a2a_s_find svg path {
+		fill: #fff !important
+	}
+}
+
+@media print {
+	.a2a_floating_style, .a2a_menu, .a2a_overlay {
+		visibility: hidden
+	}
+}
+
+@
+keyframes a2aFadeIn {
+	from {opacity: 0
+}
+
+to {
+	opacity: 1
+}
+
+}
+.a2a_starting {
+	opacity: 0
+}
+
+.a2a_starting.a2a_full, .a2a_starting.a2a_modal {
+	transform: scale(.8)
+}
+
+@media ( max-width :639px) {
+	.a2a_full {
+		border-radius: 0;
+		top: 15%;
+		left: 0;
+		margin-left: auto;
+		width: 100%
+	}
+	.a2a_modal {
+		left: 0;
+		margin-left: 10px;
+		width: calc(100% - 20px)
+	}
+}
+
+@media ( min-width :318px) and (max-width:437px) {
+	.a2a_full .a2a_full_services .a2a_i {
+		width: calc(50% - 18px)
+	}
+}
+
+@media ( max-width :317px) {
+	.a2a_full .a2a_full_services .a2a_i {
+		width: calc(100% - 18px)
+	}
+}
+
+@media ( max-height :436px) {
+	.a2a_full {
+		bottom: 40px;
+		height: auto;
+		top: 40px
+	}
+}
+
+@media ( max-height :550px) {
+	.a2a_modal {
+		top: 30px
+	}
+}
+
+@media ( max-height :360px) {
+	.a2a_modal {
+		top: 20px
+	}
+	.a2a_thanks>div:first-child {
+		margin-bottom: 20px
+	}
+}
+
+.a2a_menu a {
+	color: #0166FF;
+	text-decoration: none;
+	font: 16px sans-serif-light, HelveticaNeue-Light, "Helvetica Neue Light",
+		"Helvetica Neue", Arial, Helvetica, "Liberation Sans", sans-serif;
+	line-height: 14px;
+	height: auto;
+	width: auto;
+	outline: 0
+}
+
+.a2a_menu a.a2a_i:visited, .a2a_menu a.a2a_more {
+	color: #0166FF
+}
+
+.a2a_menu a.a2a_i:active, .a2a_menu a.a2a_i:focus, .a2a_menu a.a2a_i:hover,
+	.a2a_menu a.a2a_more:active, .a2a_menu a.a2a_more:focus, .a2a_menu a.a2a_more:hover
+	{
+	color: #2A2A2A;
+	border-color: #EEE;
+	border-style: solid;
+	background-color: #EEE;
+	text-decoration: none
+}
+
+.a2a_menu span.a2a_s_find {
+	background-size: 24px;
+	height: 24px;
+	left: 8px;
+	position: absolute;
+	top: 7px;
+	width: 24px
+}
+
+.a2a_menu span.a2a_s_find svg {
+	background-color: #FFF
+}
+
+.a2a_menu span.a2a_s_find svg path {
+	fill: #CCC
+}
+
+#a2a_menu_container {
+	display: inline-block
+}
+
+.a2a_menu_find_container {
+	border: 1px solid #CCC;
+	border-radius: 6px;
+	padding: 2px 24px 2px 0;
+	position: relative;
+	text-align: left
+}
+
+.a2a_cols_container .a2a_col1 {
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch
+}
+
+#a2a_modal input, #a2a_modal input[type=text], .a2a_menu input,
+	.a2a_menu input[type=text] {
+	display: block;
+	background-image: none;
+	box-shadow: none;
+	line-height: 100%;
+	margin: 0;
+	outline: 0;
+	overflow: hidden;
+	padding: 0;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	-webkit-appearance: none
+}
+
+#a2afeed_find_container input, #a2afeed_find_container input[type=text],
+	#a2apage_find_container input, #a2apage_find_container input[type=text]
+	{
+	background-color: transparent;
+	border: 0;
+	box-sizing: content-box;
+	color: #2A2A2A;
+	font: inherit;
+	font-size: 16px;
+	height: 28px;
+	line-height: 20px;
+	left: 38px;
+	outline: 0;
+	margin: 0;
+	max-width: initial;
+	min-height: initial;
+	padding: 2px 0;
+	position: relative;
+	width: 99%
+}
+
+.a2a_clear {
+	clear: both
+}
+
+.a2a_svg {
+	background-repeat: no-repeat;
+	display: block;
+	overflow: hidden;
+	height: 32px;
+	line-height: 32px;
+	padding: 0;
+	pointer-events: none;
+	width: 32px
+}
+
+.a2a_svg svg {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	border: none;
+	display: block;
+	left: 0;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	top: 0;
+	width: auto;
+	height: auto
+}
+
+a.a2a_i, i.a2a_i {
+	display: block;
+	float: left;
+	border: 1px solid #FFF;
+	line-height: 24px;
+	padding: 6px 8px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 132px
+}
+
+a.a2a_i span, a.a2a_more span {
+	display: inline-block;
+	overflow: hidden;
+	vertical-align: top
+}
+
+a.a2a_i .a2a_svg {
+	margin: 0 6px 0 0
+}
+
+a.a2a_i .a2a_svg, a.a2a_more .a2a_svg {
+	background-size: 24px;
+	height: 24px;
+	line-height: 24px;
+	width: 24px
+}
+
+a.a2a_sss:hover {
+	border-left: 1px solid #CCC
+}
+
+a.a2a_more {
+	border-bottom: 1px solid #FFF;
+	border-left: 0;
+	border-right: 0;
+	line-height: 24px;
+	margin: 6px 0 0;
+	padding: 6px;
+	-webkit-touch-callout: none
+}
+
+a.a2a_more span {
+	height: 24px;
+	margin: 0 6px 0 0
+}
+
+.a2a_kit .a2a_svg {
+	background-repeat: repeat
+}
+
+.a2a_default_style a:empty, .a2a_flex_style a:empty, .a2a_floating_style a:empty,
+	.a2a_overlay_style a:empty {
+	display: none
+}
+
+.a2a_color_buttons a, .a2a_floating_style a {
+	text-decoration: none
+}
+
+.a2a_default_style:not (.a2a_flex_style ) a {
+	float: left;
+	line-height: 16px;
+	padding: 0 2px
+}
+
+.a2a_default_style a:hover .a2a_svg, .a2a_floating_style a:hover .a2a_svg,
+	.a2a_overlay_style a:hover .a2a_svg svg {
+	opacity: .7
+}
+
+.a2a_overlay_style.a2a_default_style a:hover .a2a_svg {
+	opacity: 1
+}
+
+.a2a_default_style .a2a_count, .a2a_default_style .a2a_svg,
+	.a2a_floating_style .a2a_svg, .a2a_menu .a2a_svg, .a2a_vertical_style .a2a_count,
+	.a2a_vertical_style .a2a_svg {
+	border-radius: 4px
+}
+
+.a2a_default_style .a2a_counter img, .a2a_default_style .a2a_dd,
+	.a2a_default_style .a2a_svg {
+	float: left
+}
+
+.a2a_default_style .a2a_img_text {
+	margin-right: 4px
+}
+
+.a2a_default_style .a2a_divider {
+	border-left: 1px solid #000;
+	display: inline;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	margin: 0 5px
+}
+
+.a2a_kit a {
+	cursor: pointer
+}
+
+.a2a_floating_style {
+	background-color: #fff;
+	border-radius: 6px;
+	position: fixed;
+	z-index: 9999995
+}
+
+.a2a_overlay_style {
+	z-index: 2147483647
+}
+
+.a2a_floating_style, .a2a_overlay_style {
+	animation: a2aFadeIn .2s ease-in;
+	padding: 4px
+}
+
+.a2a_vertical_style:not (.a2a_flex_style ) a {
+	clear: left;
+	display: block;
+	overflow: hidden;
+	padding: 4px
+}
+
+.a2a_floating_style.a2a_default_style {
+	bottom: 0
+}
+
+.a2a_floating_style.a2a_default_style a, .a2a_overlay_style.a2a_default_style a
+	{
+	padding: 4px
+}
+
+.a2a_count {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	color: #2a2a2a;
+	display: block;
+	float: left;
+	font: 12px Arial, Helvetica, sans-serif;
+	height: 16px;
+	margin-left: 4px;
+	position: relative;
+	text-align: center;
+	width: 50px
+}
+
+.a2a_count:after, .a2a_count:before {
+	border: solid transparent;
+	border-width: 4px 4px 4px 0;
+	content: "";
+	height: 0;
+	left: 0;
+	line-height: 0;
+	margin: -4px 0 0 -4px;
+	position: absolute;
+	top: 50%;
+	width: 0
+}
+
+.a2a_count:before {
+	border-right-color: #ccc
+}
+
+.a2a_count:after {
+	border-right-color: #fff;
+	margin-left: -3px
+}
+
+.a2a_count span {
+	animation: a2aFadeIn .14s ease-in
+}
+
+.a2a_vertical_style .a2a_counter img {
+	display: block
+}
+
+.a2a_vertical_style .a2a_count {
+	float: none;
+	margin-left: 0;
+	margin-top: 6px
+}
+
+.a2a_vertical_style .a2a_count:after, .a2a_vertical_style .a2a_count:before
+	{
+	border: solid transparent;
+	border-width: 0 4px 4px 4px;
+	content: "";
+	height: 0;
+	left: 50%;
+	line-height: 0;
+	margin: -4px 0 0 -4px;
+	position: absolute;
+	top: 0;
+	width: 0
+}
+
+.a2a_vertical_style .a2a_count:before {
+	border-bottom-color: #ccc
+}
+
+.a2a_vertical_style .a2a_count:after {
+	border-bottom-color: #fff;
+	margin-top: -3px
+}
+
+.a2a_color_buttons .a2a_count, .a2a_color_buttons .a2a_count:after,
+	.a2a_color_buttons .a2a_count:before, .a2a_color_buttons.a2a_vertical_style .a2a_count:after,
+	.a2a_color_buttons.a2a_vertical_style .a2a_count:before {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	float: none;
+	width: auto
+}
+
+.a2a_color_buttons.a2a_vertical_style .a2a_count {
+	margin-top: 0
+}
+
+.a2a_flex_style {
+	display: flex;
+	align-items: flex-start;
+	gap: 0
+}
+
+.a2a_default_style.a2a_flex_style {
+	left: 0;
+	right: 0;
+	width: 100%
+}
+
+.a2a_vertical_style.a2a_flex_style {
+	flex-direction: column;
+	top: 0;
+	bottom: 0
+}
+
+.a2a_flex_style a {
+	display: flex;
+	justify-content: center;
+	flex: 1;
+	padding: 4px
+}
+
+.a2a_flex_style.a2a_vertical_style a {
+	flex-direction: column
+}
+
+.a2a_floating_style.a2a_color_buttons, .a2a_floating_style.a2a_flex_style
+	{
+	border-radius: 0;
+	padding: 0
+}
+
+.a2a_floating_style.a2a_default_style.a2a_flex_style {
+	bottom: 0
+}
+
+.a2a_kit.a2a_flex_style .a2a_counter img, .a2a_kit.a2a_flex_style .a2a_dd,
+	.a2a_kit.a2a_flex_style .a2a_svg {
+	float: none
+}
+
+.a2a_nowrap {
+	white-space: nowrap
+}
+
+.a2a_note {
+	margin: 0 auto;
+	padding: 9px;
+	font-size: 12px;
+	text-align: center
+}
+
+.a2a_note .a2a_note_note {
+	margin: 0;
+	color: #2A2A2A
+}
+
+.a2a_wide a {
+	display: block;
+	margin-top: 3px;
+	border-top: 1px solid #EEE;
+	text-align: center
+}
+
+.a2a_label {
+	position: absolute !important;
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	overflow: hidden;
+	height: 1px;
+	width: 1px
+}
+
+.a2a_kit, .a2a_menu, .a2a_modal, .a2a_overlay {
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	outline: 0
+}
+
+.a2a_dd img {
+	border: 0
+}
+
+.a2a_button_facebook_like iframe {
+	max-width: none
+}
+</style>
+<script
+	src="//rum.beusable.net/script/checker/b200506e124944u371/29f6068460?url=http%3A%2F%2Fwww.thehandsome.com%2Fko%2FHANDSOME%2FWOMEN%2FOUTER%2FJACKET%2F%25EC%25BA%2590%25EC%258B%259C%25EB%25AF%25B8%25EC%2596%25B4-%25EB%258D%2594%25EB%25B8%2594-%25EC%259E%25AC%25ED%2582%25B7%2Fp%2FMN2C8WJC026WP_CM%3FcategoryCode%3Dwe051"
+	async="" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css"
+	href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" type="text/css"
+	href="//static.groobee.io/dist/g2/css/grb-recommend-list_v2.css">
+</head>
 
 <body oncontextmenu="return false">
-<!-- <div id="transparent_mask"></div> -->
+	<!-- <div id="transparent_mask"></div> -->
 	<script>
 			//라쿠텐 유입
 			var siteID = "" ? "" : "";
@@ -1133,54 +2050,62 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				document.cookie = cname + '=' + cvalue + '; expires=' + d.toUTCString() + '; path=/';
 			})('sslvisit1', false, -7);
 			</script>
-		<!-- 현대닷컴 유입 시작 -->
-		<script>
+	<!-- 현대닷컴 유입 시작 -->
+	<script>
 			(function(cname, cvalue, day){
 				var d = new Date();
 				d.setTime(d.getTime() + (day*24*60*60*1000));
 				document.cookie = cname + '=' + cvalue + '; expires=' + d.toUTCString() + '; path=/';
 			})('thehyundai', false, -7);
 			</script>
-		<!-- 현대닷컴 유입 끝 -->
-		
-		<!-- hmall 유입 시작 -->
-		<script>
+	<!-- 현대닷컴 유입 끝 -->
+
+	<!-- hmall 유입 시작 -->
+	<script>
 			(function(cname, cvalue, day){
 				var d = new Date();
 				d.setTime(d.getTime() + (day*24*60*60*1000));
 				document.cookie = cname + '=' + cvalue + '; expires=' + d.toUTCString() + '; path=/';
 			})('hyundaihmall', false, -7);
 			</script>
-		<!-- hmall 유입 끝 -->
-		
-		<!-- 광고 유입 시작 -->
-        <script>
+	<!-- hmall 유입 끝 -->
+
+	<!-- 광고 유입 시작 -->
+	<script>
             (function(cname, cvalue, day){
                 var d = new Date();
                 d.setTime(d.getTime() + (day*24*60*60*1000));
                 document.cookie = cname + '=' + cvalue + '; expires=' + d.toUTCString() + '; path=/';
             })('fromSite', '', -7);
             </script>
-        <!-- 광고 유입 끝 -->
+	<!-- 광고 유입 끝 -->
 	<!-- Loading -->
-	<div class="loading_bar" id="loadingBarDiv" style="display:none;">
-		<img src="${pageContext.request.contextPath}/resources/images/common/loading.gif" alt="loading">
-		<span>�로딩중</span>
+	<div class="loading_bar" id="loadingBarDiv" style="display: none;">
+		<img
+			src="${pageContext.request.contextPath}/resources/images/common/loading.gif"
+			alt="loading"> <span>�로딩중</span>
 	</div>
 	<!-- //Loading -->
 
-	<form id="CSRFForm" action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051" method="post"><div>
-<input type="hidden" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-</div></form><!-- headerWrap -->
-		<div id="headerWrap">
-			<div class="header header_fixed header_main1903"> 
-				<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/SsoAjax.js"></script>
+	<form id="CSRFForm"
+		action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+		method="post">
+		<div>
+			<input type="hidden" name="CSRFToken"
+				value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
+		</div>
+	</form>
+	<!-- headerWrap -->
+	<div id="headerWrap">
+		<div class="header header_fixed header_main1903">
+			<script type="text/javascript"
+				src="${pageContext.request.contextPath}/resources/js/SsoAjax.js"></script>
 
-<script>
+			<script>
 var arkQuery = $.noConflict(true);
 </script>
 
-<script>
+			<script>
 /*
  * 챗봇 관련 스크립트
  */
@@ -1299,7 +2224,7 @@ function gaBrandType(brandCode){
  
 </script>
 
-<script type="text/javascript">
+			<script type="text/javascript">
     var historyDelete = '검색기록전체삭제';
     var typingWord = '검색어를 입력해주세요.';
     var gotoBrand = '브랜드바로가기'; 
@@ -1312,10 +2237,13 @@ function gaBrandType(brandCode){
     
     var favoriteBrands = new Array();
 </script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/ark/js/beta.fix.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/ark/js/ark.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/wisenut/js/search.js"></script>
-<script type="text/javascript">
+			<script type="text/javascript"
+				src="${pageContext.request.contextPath}/resources/wisenut/ark/js/beta.fix.js"></script>
+			<script type="text/javascript"
+				src="${pageContext.request.contextPath}/resources/wisenut/ark/js/ark.js"></script>
+			<script type="text/javascript"
+				src="${pageContext.request.contextPath}/resources/wisenut/js/search.js"></script>
+			<script type="text/javascript">
 //<![CDATA[
     // #1067 - 201803 메인 개편
     function applyCategory(){
@@ -1936,120 +2864,193 @@ function GA_search(){
 
 //]]>
 </script>
-<form id="autologinForm" name="autologinForm" action="/ko/hp/autologin" method="get">
-    <input type="hidden" name="hcid" id="hcid" value="e2gaf@naver.com">
-</form>
-		<div class="top_nav topnav1903">
-			<div class="top_nav_wrap clearfix">
-            <div class="brand_menu brand_menu1903">
-            <ul class="clearfix">
-                <!-- 선호 브랜드 없음 -->
-                        <li><span><a href="/ko/main" onclick="GA_Event('공통','탑_네비게이션','HOME')">HOME</a></span></li>
-                        <!-- 로그인 상태 -->
-								<!-- 비로그인 상태 -->
-                        		<p class="brand_menu_guide_text">로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
-								</ul>
-        </div>
-    <div class="gnb_sh_wrap" style="display:none;">
-					<!-- search box -->
-					<div class="gnb_sh_box">
-						<input type="text" class="input" id="gnbsearchwords" title="검색어 입력" value="" onkeypress="if(event.keyCode==13) {EnterSearchHeader(); return false;}">
-						<a href="javascript:void(0);" id="gnbsearch">검색</a>
+			<form id="autologinForm" name="autologinForm"
+				action="/ko/hp/autologin" method="get">
+				<input type="hidden" name="hcid" id="hcid" value="e2gaf@naver.com">
+			</form>
+			<div class="top_nav topnav1903">
+				<div class="top_nav_wrap clearfix">
+					<div class="brand_menu brand_menu1903">
+						<ul class="clearfix">
+							<!-- 선호 브랜드 없음 -->
+							<li><span><a href="/ko/main"
+									onclick="GA_Event('공통','탑_네비게이션','HOME')">HOME</a></span></li>
+							<!-- 로그인 상태 -->
+							<!-- 비로그인 상태 -->
+							<p class="brand_menu_guide_text">
+								로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span
+									style="margin-top: -1px; display: inline-block;">♥</span>해주세요
+							</p>
+						</ul>
 					</div>
-					<!-- //search box -->
-					<!-- search result -->
-					<div class="gnb_sh_result">
-						<div class="tab">
-							<a href="javascript:void(0);" class="menu on">최근검색어</a>
-							<div class="result_list on">
-								<div class="searchWord1" style="display: none;"><a href="javascript:void(0);" class="ml newlyBtn" id="searchWord1"></a><a href="javascript:void(0);" class="close" onclick="deletecookie('HS_Seachwords1')">닫기</a></div>
-								<div class="searchWord2" style="display: none;"><a href="javascript:void(0);" class="ml newlyBtn" id="searchWord2"></a><a href="javascript:void(0);" class="close" onclick="deletecookie('HS_Seachwords2')">닫기</a></div>
-								<div class="searchWord3" style="display: none;"><a href="javascript:void(0);" class="ml newlyBtn" id="searchWord3"></a><a href="javascript:void(0);" class="close" onclick="deletecookie('HS_Seachwords3')">닫기</a></div>
-								<div class="searchWord4" style="display: none;"><a href="javascript:void(0);" class="ml newlyBtn" id="searchWord4"></a><a href="javascript:void(0);" class="close" onclick="deletecookie('HS_Seachwords4')">닫기</a></div>
-								<div class="searchWord5" style="display: none;"><a href="javascript:void(0);" class="ml newlyBtn" id="searchWord5"></a><a href="javascript:void(0);" class="close" onclick="deletecookie('HS_Seachwords5')">닫기</a></div>
-								<a href="javascript:void(0);" class="btn_svclose">검색어 <span id="searchSaveYN" save="on">끄기</span></a>
-								<a href="javascript:void(0);" class="btn_allclose on" onclick="searchOff()">닫기</a>
-							</div>
-							<a href="javascript:void(0);" class="menu">인기검색어</a>
-							<div class="result_list">
-								<div><a href="javascript:void(0);" class="ml favBtn">jacket</a><!-- <a href="javascript:void(0);" class="close">닫기</a> --></div>
-								<div><a href="javascript:void(0);" class="ml favBtn">blouse</a><!-- <a href="javascript:void(0);" class="close">닫기</a> --></div>
-								<div><a href="javascript:void(0);" class="ml favBtn">stripe</a><!-- <a href="javascript:void(0);" class="close">닫기</a> --></div>
-								<div><a href="javascript:void(0);" class="ml favBtn">ribbon</a><!-- <a href="javascript:void(0);" class="close">닫기</a> --></div>
-								<div><a href="javascript:void(0);" class="ml favBtn">blouson</a><!-- <a href="javascript:void(0);" class="close">닫기</a> --></div>
-								<a href="javascript:void(0);" class="btn_svclose">검색어 <span id="searchSaveYNfame" save="on">끄기</span></a>
-								<a href="javascript:void(0);" class="btn_allclose" onclick="searchOff()">닫기</a>
+					<div class="gnb_sh_wrap" style="display: none;">
+						<!-- search box -->
+						<div class="gnb_sh_box">
+							<input type="text" class="input" id="gnbsearchwords"
+								title="검색어 입력" value=""
+								onkeypress="if(event.keyCode==13) {EnterSearchHeader(); return false;}">
+							<a href="javascript:void(0);" id="gnbsearch">검색</a>
+						</div>
+						<!-- //search box -->
+						<!-- search result -->
+						<div class="gnb_sh_result">
+							<div class="tab">
+								<a href="javascript:void(0);" class="menu on">최근검색어</a>
+								<div class="result_list on">
+									<div class="searchWord1" style="display: none;">
+										<a href="javascript:void(0);" class="ml newlyBtn"
+											id="searchWord1"></a><a href="javascript:void(0);"
+											class="close" onclick="deletecookie('HS_Seachwords1')">닫기</a>
+									</div>
+									<div class="searchWord2" style="display: none;">
+										<a href="javascript:void(0);" class="ml newlyBtn"
+											id="searchWord2"></a><a href="javascript:void(0);"
+											class="close" onclick="deletecookie('HS_Seachwords2')">닫기</a>
+									</div>
+									<div class="searchWord3" style="display: none;">
+										<a href="javascript:void(0);" class="ml newlyBtn"
+											id="searchWord3"></a><a href="javascript:void(0);"
+											class="close" onclick="deletecookie('HS_Seachwords3')">닫기</a>
+									</div>
+									<div class="searchWord4" style="display: none;">
+										<a href="javascript:void(0);" class="ml newlyBtn"
+											id="searchWord4"></a><a href="javascript:void(0);"
+											class="close" onclick="deletecookie('HS_Seachwords4')">닫기</a>
+									</div>
+									<div class="searchWord5" style="display: none;">
+										<a href="javascript:void(0);" class="ml newlyBtn"
+											id="searchWord5"></a><a href="javascript:void(0);"
+											class="close" onclick="deletecookie('HS_Seachwords5')">닫기</a>
+									</div>
+									<a href="javascript:void(0);" class="btn_svclose">검색어 <span
+										id="searchSaveYN" save="on">끄기</span></a> <a
+										href="javascript:void(0);" class="btn_allclose on"
+										onclick="searchOff()">닫기</a>
+								</div>
+								<a href="javascript:void(0);" class="menu">인기검색어</a>
+								<div class="result_list">
+									<div>
+										<a href="javascript:void(0);" class="ml favBtn">jacket</a>
+										<!-- <a href="javascript:void(0);" class="close">닫기</a> -->
+									</div>
+									<div>
+										<a href="javascript:void(0);" class="ml favBtn">blouse</a>
+										<!-- <a href="javascript:void(0);" class="close">닫기</a> -->
+									</div>
+									<div>
+										<a href="javascript:void(0);" class="ml favBtn">stripe</a>
+										<!-- <a href="javascript:void(0);" class="close">닫기</a> -->
+									</div>
+									<div>
+										<a href="javascript:void(0);" class="ml favBtn">ribbon</a>
+										<!-- <a href="javascript:void(0);" class="close">닫기</a> -->
+									</div>
+									<div>
+										<a href="javascript:void(0);" class="ml favBtn">blouson</a>
+										<!-- <a href="javascript:void(0);" class="close">닫기</a> -->
+									</div>
+									<a href="javascript:void(0);" class="btn_svclose">검색어 <span
+										id="searchSaveYNfame" save="on">끄기</span></a> <a
+										href="javascript:void(0);" class="btn_allclose"
+										onclick="searchOff()">닫기</a>
+								</div>
 							</div>
 						</div>
+						<!-- //search result -->
 					</div>
-					<!-- //search result -->
-				</div>				
-				<!-- 201705 search_box_wrap -->
-				<div class="search_box_wrap sbw1803" id="searchBox">
-                    <form name="search" id="search" action="/ko/hssearch/searchCount" method="post" onsubmit="return false;">           
-                        <input type="hidden" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-                        <input type="hidden" name="searchwords" value="">
-                        <input type="hidden" name="startCount" value="">
-                        <input type="hidden" name="mode" value="">
-                        <input type="hidden" name="sort" value="">
-                        <input type="hidden" name="collection" value="">
-                        <input type="hidden" name="range" value="">
-                        <input type="hidden" name="startDate" value="">
-                        <input type="hidden" name="endDate" value="">
-                        <input type="hidden" name="searchField" value="">
-                        <input type="hidden" name="reQuery">
-                        <input type="hidden" id="prefixQuery" value="">
-                        <input type="hidden" id="identity" name="identity" value="">                
-                        <input type="hidden" id="realQuery" name="realQuery" value="">
-                        <input type="hidden" id="loginState" value="loginOff">
-                        <input type="hidden" id="athomeInfo" value="">
-                        <input type="hidden" id="selectedLang" name="selectedLang" value="product_ko">
-                        <input type="hidden" id="lang" name="lang" value="ko">  
-                        <input type="hidden" id="brandPageGubun" name="brandPageGubun" value="off"><!-- 브랜드 페이지 여부 -->
-                        <input type="hidden" id="brand_img" name="brand_img" value="">          
-                        <input type="hidden" id="brand_url" name="brand_url" value="">                    
-                        <div class="search_box">
-                            <label for="query" class="hidden">search</label>
-                            <input type="search" id="query" name="query" value="" onkeypress="javascript:pressCheck((event),this);" style="margin-top: 0.2px;" autocomplete="off">
-                            <span class="placeholder"></span>
-                            <a href="javascript:void(0);"><span class="btn_close">닫기</span></a>
-                            <a href="javascript:GA_search();doSearch();" class="search"><span class="ico">검색</span></a>
-                        </div>
-                    </form>
-                    <!--검색박스 활성화 data_react -->
-                    <div class="data_react">
-                        <!-- tab 검색어 입력 전 -->
-                        <div class="search_tab">
-                            <div class="btn_search_tab" style="display:none;">
-                                <a href="javascript:void(0);" rel="recent_search" class="btn_recent_search on" onclick="GA_Event('검색','최근 검색어','클릭')">최근 검색어</a>
-                                <a href="javascript:void(0);" rel="style_search" class="btn_style_search" id="btn_style_search">Style Search</a>
-                                <a href="javascript:void(0);" rel="popular_search" class="btn_style_search" id="btn_top_search" style="display:none;" onclick="GA_Event('검색','인기검색어','클릭')">인기검색어</a>
-                                </div>
-                            <!-- 최근 검색어 -->
-                            <div class="recent_search s_tab">
-                                <ul id="mykeyword"><li class="searchkey"><a href="javascript:void(0);" onclick="javascript:doKeyword('올 브렌드 자수 재킷');GA_Event('검색','최근검색어','%uC62C%20%uBE0C%uB80C%uB4DC%20%uC790%uC218%20%uC7AC%uD0B7' );">올 브렌드 자수 재킷</a> <a href="javascript:removeMyKeyword('올 브렌드 자수 재킷')" class="btn_close">삭제</a></li><div class="clear_search_hs"><a href="javascript:removeAllMyKeyword()">검색기록전체삭제</a></div></ul>
-                            </div>
-                            <!-- style search -->
-                            <form id="searchStyle" name="searchStyle" action="/ko/hssearch/searchCount" method="post" onsubmit="return false;">
-                                <input type="hidden" name="query" value="">
-                                <input type="hidden" name="collection" value="">
-                                <input type="hidden" id="CSRFToken" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-                                <input type="hidden" id="searchStyleYn" name="searchStyleYn" value="searchStyle">
-                            </form>
+					<!-- 201705 search_box_wrap -->
+					<div class="search_box_wrap sbw1803" id="searchBox">
+						<form name="search" id="search" action="/ko/hssearch/searchCount"
+							method="post" onsubmit="return false;">
+							<input type="hidden" name="CSRFToken"
+								value="77badcd5-86c7-4e47-8c1f-0663967bf7b6"> <input
+								type="hidden" name="searchwords" value=""> <input
+								type="hidden" name="startCount" value=""> <input
+								type="hidden" name="mode" value=""> <input type="hidden"
+								name="sort" value=""> <input type="hidden"
+								name="collection" value=""> <input type="hidden"
+								name="range" value=""> <input type="hidden"
+								name="startDate" value=""> <input type="hidden"
+								name="endDate" value=""> <input type="hidden"
+								name="searchField" value=""> <input type="hidden"
+								name="reQuery"> <input type="hidden" id="prefixQuery"
+								value=""> <input type="hidden" id="identity"
+								name="identity" value=""> <input type="hidden"
+								id="realQuery" name="realQuery" value=""> <input
+								type="hidden" id="loginState" value="loginOff"> <input
+								type="hidden" id="athomeInfo" value=""> <input
+								type="hidden" id="selectedLang" name="selectedLang"
+								value="product_ko"> <input type="hidden" id="lang"
+								name="lang" value="ko"> <input type="hidden"
+								id="brandPageGubun" name="brandPageGubun" value="off">
+							<!-- 브랜드 페이지 여부 -->
+							<input type="hidden" id="brand_img" name="brand_img" value="">
+							<input type="hidden" id="brand_url" name="brand_url" value="">
+							<div class="search_box">
+								<label for="query" class="hidden">search</label> <input
+									type="search" id="query" name="query" value=""
+									onkeypress="javascript:pressCheck((event),this);"
+									style="margin-top: 0.2px;" autocomplete="off"> <span
+									class="placeholder"></span> <a href="javascript:void(0);"><span
+									class="btn_close">닫기</span></a> <a
+									href="javascript:GA_search();doSearch();" class="search"><span
+									class="ico">검색</span></a>
+							</div>
+						</form>
+						<!--검색박스 활성화 data_react -->
+						<div class="data_react">
+							<!-- tab 검색어 입력 전 -->
+							<div class="search_tab">
+								<div class="btn_search_tab" style="display: none;">
+									<a href="javascript:void(0);" rel="recent_search"
+										class="btn_recent_search on"
+										onclick="GA_Event('검색','최근 검색어','클릭')">최근 검색어</a> <a
+										href="javascript:void(0);" rel="style_search"
+										class="btn_style_search" id="btn_style_search">Style
+										Search</a> <a href="javascript:void(0);" rel="popular_search"
+										class="btn_style_search" id="btn_top_search"
+										style="display: none;" onclick="GA_Event('검색','인기검색어','클릭')">인기검색어</a>
+								</div>
+								<!-- 최근 검색어 -->
+								<div class="recent_search s_tab">
+									<ul id="mykeyword">
+										<li class="searchkey"><a href="javascript:void(0);"
+											onclick="javascript:doKeyword('올 브렌드 자수 재킷');GA_Event('검색','최근검색어','%uC62C%20%uBE0C%uB80C%uB4DC%20%uC790%uC218%20%uC7AC%uD0B7' );">올
+												브렌드 자수 재킷</a> <a
+											href="javascript:removeMyKeyword('올 브렌드 자수 재킷')"
+											class="btn_close">삭제</a></li>
+										<div class="clear_search_hs">
+											<a href="javascript:removeAllMyKeyword()">검색기록전체삭제</a>
+										</div>
+									</ul>
+								</div>
+								<!-- style search -->
+								<form id="searchStyle" name="searchStyle"
+									action="/ko/hssearch/searchCount" method="post"
+									onsubmit="return false;">
+									<input type="hidden" name="query" value=""> <input
+										type="hidden" name="collection" value=""> <input
+										type="hidden" id="CSRFToken" name="CSRFToken"
+										value="77badcd5-86c7-4e47-8c1f-0663967bf7b6"> <input
+										type="hidden" id="searchStyleYn" name="searchStyleYn"
+										value="searchStyle">
+								</form>
 
-                            <div class="style_search s_tab" id="stylesearch_area">
-                            <p class="style_search_tlt">Style Search 2018</p>
-				                <div class="ss_txt_list">				                    
-				                    <ul class="style_search_arr" id="style_search_arr">     
-				                    </ul>
-				                </div>
-				                <div class="ss_img_list" id="styleSearchSlider">
-				                    <ul class="slides"><li></li></ul>
-				                </div>
-				            </div>
-				            
-	                        <!-- style search 컨텐츠 하나일 때-->
-	                        <!-- <div class="style_search s_tab">
+								<div class="style_search s_tab" id="stylesearch_area">
+									<p class="style_search_tlt">Style Search 2018</p>
+									<div class="ss_txt_list">
+										<ul class="style_search_arr" id="style_search_arr">
+										</ul>
+									</div>
+									<div class="ss_img_list" id="styleSearchSlider">
+										<ul class="slides">
+											<li></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- style search 컨텐츠 하나일 때-->
+								<!-- <div class="style_search s_tab">
 	                            <div class="ss_txt_list">
 	                                <p class="style_search_tlt">Style Search 2017 S/S</p>
 	                                <ul id="style_search_arr">
@@ -2059,115 +3060,156 @@ function GA_search(){
                                     <ul class="slides"><li></li></ul>
                                 </div>
 	                        </div> -->
-	                        <!-- //style search 컨텐츠 하나일 때-->
-				            <div class="popular_search s_tab" id="topsearch_area" style="display:none;">
-				                <ol class="ol_popular1" id="topsearchLeft">
-	                            </ol>
-<!-- 				                <ol class="ol_popular2" id="topsearchRight"> -->
-<!-- 	                            </ol> -->
-				            </div>
-                            </div>
-                        <!--// tab 검색어 입력 전 -->
-                        <!-- 검색어 입력 후 (검색어 자동완성) -->
-                        <div class="search_autocomplete">
-                            <div class="autocomplete_txt">
-                                <div id="brandView">
-                                    <ul>                            
-                                    </ul>
-                                </div>
-                                <div id="ark" style="height:170px;"><div class="ark_wrap" id="ark_wrap" style="display: none;"><ul id="ark_content_list"></ul></div></div>
-                            </div>
-                            <div class="autocomplete_right">
-                                <div class="category_brand">
-                                    <p>카테고리/브랜드</p>
-                                    <div class="brand">
-                                        <p id="autocomplete_brand">브랜드</p>
-                                    </div>
-                                    <div class="category">
-                                        <p id="autocomplete_category">카테고리</p>
-                                    </div>
-                                </div>
-                                <div class="autocomplete_img">
-                                    <p><span>"<span id="autocomplete_query">{0}</span>"</span>에 대한 주요 검색 결과</p>
-<!--                                     <p><span>"<span id="autocomplete_query"></span>&#32;"</span>에 대한 주요 검색 결과</p> -->
-                                    <ul id="auto2">
-                                    </ul>
-                                </div>
-                                </div>
-                        </div>
-                        <!--// 검색어 입력 후 (검색어 자동완성) -->
-                    </div>
-                    <!--//검색박스 활성화 data_react -->
-                </div>
-                <!--// 201705 search_box_wrap -->
-                <div class="util_menu" style="display:block;">
-					<ul class="clearfix">
-						<li><a href="/ko/member/login" onclick="GA_Event('공통','헤더_메뉴','로그인')">로그인<!-- 로그인 --></a></li>
-						<li class="header_dropmemu mypage">
-							
-						<a href="/ko/mypage" class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
-							<div class="list">
-								<ul>
-									<li><a href="/ko/mypage/order/myorders" onclick="GA_Event('공통','헤더_메뉴','마이페이지_주문조회')">주문조회<!-- 주문조회 --></a></li>
-									<li><a href="/ko/mypage/myGradeInfo" onclick="GA_Event('공통','헤더_메뉴','마이페이지_나의회원등급')">나의회원등급<!-- 온라인등급 --></a></li>
-										<li><a href="/ko/mypage/voucher" onclick="GA_Event('공통','헤더_메뉴','마이페이지_쿠폰조회')">쿠폰조회<!-- 쿠폰조회 --></a></li>
-									<li><a href="/ko/mypage/mypoint" onclick="GA_Event('공통','헤더_메뉴','마이페이지_마일리지조회')">마일리지조회<!-- 포인트조회 --></a></li>
-										   <li><a href="/ko/mypage/myEGiftCard" onclick="GA_Event('공통','헤더_메뉴','마이페이지_e-Gift Card')">e-Gift Card<!-- e-Gfit Card --></a></li>
-									   <li><a href="/ko/mypage/personInfomationChangePWCheck" onclick="GA_Event('공통','헤더_메뉴','마이페이지_회원정보변경')">회원정보변경<!-- 회원정보변경 --></a></li>
-									<li><a href="/ko/svcenter/mantomaninquiry" onclick="GA_Event('공통','헤더_메뉴','마이페이지_온라인상담')">온라인상담<!-- 온라인 상담 --></a></li>
-									</ul>
-							</div>
-						</li>
-						
-						<li>
-							<div class="header_dropmemu lang_switch lang_1911">
-							    <a href="javascript:void(0);" class="btn" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE')">LANGUAGE</a>
-								<div class="list" style="display: none; height: 87px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-									<ul>
-										<li><a href="javascript:language('ko')" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_한국어')">한국어</a></li>
-										<li><a href="javascript:language('en')" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_ENGLISH')">ENGLISH</a></li>
-										<li><a href="javascript:language('zh')" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_中文')">中文</a></li>
-									</ul>
+								<!-- //style search 컨텐츠 하나일 때-->
+								<div class="popular_search s_tab" id="topsearch_area"
+									style="display: none;">
+									<ol class="ol_popular1" id="topsearchLeft">
+									</ol>
+									<!-- 				                <ol class="ol_popular2" id="topsearchRight"> -->
+									<!-- 	                            </ol> -->
 								</div>
 							</div>
-						</li>
-						</ul>
-				</div>
-				</div>
-		</div>
+							<!--// tab 검색어 입력 전 -->
+							<!-- 검색어 입력 후 (검색어 자동완성) -->
+							<div class="search_autocomplete">
+								<div class="autocomplete_txt">
+									<div id="brandView">
+										<ul>
+										</ul>
+									</div>
+									<div id="ark" style="height: 170px;">
+										<div class="ark_wrap" id="ark_wrap" style="display: none;">
+											<ul id="ark_content_list"></ul>
+										</div>
+									</div>
+								</div>
+								<div class="autocomplete_right">
+									<div class="category_brand">
+										<p>카테고리/브랜드</p>
+										<div class="brand">
+											<p id="autocomplete_brand">브랜드</p>
+										</div>
+										<div class="category">
+											<p id="autocomplete_category">카테고리</p>
+										</div>
+									</div>
+									<div class="autocomplete_img">
+										<p>
+											<span>"<span id="autocomplete_query">{0}</span>"
+											</span>에 대한 주요 검색 결과
+										</p>
+										<!--                                     <p><span>"<span id="autocomplete_query"></span>&#32;"</span>에 대한 주요 검색 결과</p> -->
+										<ul id="auto2">
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!--// 검색어 입력 후 (검색어 자동완성) -->
+						</div>
+						<!--//검색박스 활성화 data_react -->
+					</div>
+					<!--// 201705 search_box_wrap -->
+					<div class="util_menu" style="display: block;">
+						<ul class="clearfix">
+							<li><a href="/ko/member/login"
+								onclick="GA_Event('공통','헤더_메뉴','로그인')">로그인<!-- 로그인 --></a></li>
+							<li class="header_dropmemu mypage"><a href="/ko/mypage"
+								class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
+								<div class="list">
+									<ul>
+										<li><a href="/ko/mypage/order/myorders"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_주문조회')">주문조회<!-- 주문조회 --></a></li>
+										<li><a href="/ko/mypage/myGradeInfo"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_나의회원등급')">나의회원등급<!-- 온라인등급 --></a></li>
+										<li><a href="/ko/mypage/voucher"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_쿠폰조회')">쿠폰조회<!-- 쿠폰조회 --></a></li>
+										<li><a href="/ko/mypage/mypoint"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_마일리지조회')">마일리지조회<!-- 포인트조회 --></a></li>
+										<li><a href="/ko/mypage/myEGiftCard"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_e-Gift Card')">e-Gift
+												Card<!-- e-Gfit Card -->
+										</a></li>
+										<li><a href="/ko/mypage/personInfomationChangePWCheck"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_회원정보변경')">회원정보변경<!-- 회원정보변경 --></a></li>
+										<li><a href="/ko/svcenter/mantomaninquiry"
+											onclick="GA_Event('공통','헤더_메뉴','마이페이지_온라인상담')">온라인상담<!-- 온라인 상담 --></a></li>
+									</ul>
+								</div></li>
 
-		<!-- validation check message global -->
-		<input type="hidden" id="validationCheckPwd" value="비밀번호를 재입력 하셔야 합니다.">
-		<input type="hidden" id="validationCheck" value="필수데이터가 입력되지 않았습니다.">
-		<input type="hidden" id="validationCheckMsg" value="다음 사항을 확인해 주세요.">
-		<input type="hidden" id="validationCheckMsg1" value="필수데이터가 입력되지 않았습니다.">
-		<input type="hidden" id="validationCheckMsg2" value="동일문자를 3번 이상 사용할 수 없습니다.">
-		<input type="hidden" id="validationCheckMsg3" value="연속된 문자열(123 또는 321, abc, cba 등) 3자리이상 올 수 없습니다.">
-		<input type="hidden" id="validationCheckMsg4" value="Caps Lock 이 켜져 있습니다.">
-		<input type="hidden" id="validationCheckMsg5" value="이메일 아이디의 중복 확인이 필요합니다.">
-		<input type="hidden" id="validationCheckMsg6" value="이메일의 중복확인이 필요합니다.">
-		<input type="hidden" id="deliveryOkMsg" value="확인">
-		<input type="hidden" id="deliveryCancelMsg" value="취소">		
-		
-		<form id="chatbotForm" action="https://talk.thehandsome.com/front/v1/jsp/view/chat.jsp" method="post" target="chatwindow"><input type="hidden" name="token" id="chatbot_token">
-          <input type="hidden" name="talkId" id="chatbot_talkId">
-        <div>
-<input type="hidden" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-</div></form><!-- //headerWrap --><!-- //201803 util menu -->
-    <div class="gnbwarp brand clearfix">
-                    <h1 class="logo fix-size mine">
-                        <a href="/ko/b/br02" class="BR02" onclick="GA_Event('브랜드_메인','GNB','MINE');">BR02</a>
-                            </h1>
-                    <div class="gnb_nav clearfix">
-                        <h2 class="invisible">주메뉴</h2>
-                        <ul class="brd_m cate_m clearfix">
-                                    <li><a href="/ko/b/br02/brand" onclick="GA_Event('브랜드_메인','GNB','브랜드 소개');">브랜드 소개<!-- 브랜드 소개 --><span class="arr">arrow</span></a></li>
-                                    <li><a href="/ko/b/br02/storeInformation" onclick="GA_Event('브랜드_메인','GNB','매장');" class="">매장<!-- 매장 --><span class="arr">arrow</span></a></li>
-                                    <!--                                     편집샵의 경우 브랜드 탭 추가 -->
-                                    <li><a href="javascript:void(0);" onclick="GA_Event('브랜드_메인','GNB','룩북');moveBrandLookBook('br02');">룩북<!-- 룩북 --><span class="arr">arrow</span></a></li>
-                                    <li class="vline"><a href="/ko/b/br02/lookBook" onclick="GA_Event('브랜드_메인','GNB','캠페인');">캠페인<!-- 15 FW 화보 --><span class="arr">arrow</span></a></li>
-                                    </ul>
-                                <script type="text/javascript">
+							<li>
+								<div class="header_dropmemu lang_switch lang_1911">
+									<a href="javascript:void(0);" class="btn"
+										onclick="GA_Event('공통','헤더_메뉴','LANGUAGE')">LANGUAGE</a>
+									<div class="list"
+										style="display: none; height: 87px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+										<ul>
+											<li><a href="javascript:language('ko')"
+												onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_한국어')">한국어</a></li>
+											<li><a href="javascript:language('en')"
+												onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_ENGLISH')">ENGLISH</a></li>
+											<li><a href="javascript:language('zh')"
+												onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_中文')">中文</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- validation check message global -->
+			<input type="hidden" id="validationCheckPwd"
+				value="비밀번호를 재입력 하셔야 합니다."> <input type="hidden"
+				id="validationCheck" value="필수데이터가 입력되지 않았습니다."> <input
+				type="hidden" id="validationCheckMsg" value="다음 사항을 확인해 주세요.">
+			<input type="hidden" id="validationCheckMsg1"
+				value="필수데이터가 입력되지 않았습니다."> <input type="hidden"
+				id="validationCheckMsg2" value="동일문자를 3번 이상 사용할 수 없습니다."> <input
+				type="hidden" id="validationCheckMsg3"
+				value="연속된 문자열(123 또는 321, abc, cba 등) 3자리이상 올 수 없습니다."> <input
+				type="hidden" id="validationCheckMsg4" value="Caps Lock 이 켜져 있습니다.">
+			<input type="hidden" id="validationCheckMsg5"
+				value="이메일 아이디의 중복 확인이 필요합니다."> <input type="hidden"
+				id="validationCheckMsg6" value="이메일의 중복확인이 필요합니다."> <input
+				type="hidden" id="deliveryOkMsg" value="확인"> <input
+				type="hidden" id="deliveryCancelMsg" value="취소">
+
+			<form id="chatbotForm"
+				action="https://talk.thehandsome.com/front/v1/jsp/view/chat.jsp"
+				method="post" target="chatwindow">
+				<input type="hidden" name="token" id="chatbot_token"> <input
+					type="hidden" name="talkId" id="chatbot_talkId">
+				<div>
+					<input type="hidden" name="CSRFToken"
+						value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
+				</div>
+			</form>
+			<!-- //headerWrap -->
+			<!-- //201803 util menu -->
+			<div class="gnbwarp brand clearfix">
+				<h1 class="logo fix-size mine">
+					<a href="/ko/b/br02" class="BR02"
+						onclick="GA_Event('브랜드_메인','GNB','MINE');">BR02</a>
+				</h1>
+				<div class="gnb_nav clearfix">
+					<h2 class="invisible">주메뉴</h2>
+					<ul class="brd_m cate_m clearfix">
+						<li><a href="/ko/b/br02/brand"
+							onclick="GA_Event('브랜드_메인','GNB','브랜드 소개');">브랜드 소개<!-- 브랜드 소개 -->
+								<span class="arr">arrow</span></a></li>
+						<li><a href="/ko/b/br02/storeInformation"
+							onclick="GA_Event('브랜드_메인','GNB','매장');" class="">매장<!-- 매장 -->
+								<span class="arr">arrow</span></a></li>
+						<!--                                     편집샵의 경우 브랜드 탭 추가 -->
+						<li><a href="javascript:void(0);"
+							onclick="GA_Event('브랜드_메인','GNB','룩북');moveBrandLookBook('br02');">룩북<!-- 룩북 -->
+								<span class="arr">arrow</span></a></li>
+						<li class="vline"><a href="/ko/b/br02/lookBook"
+							onclick="GA_Event('브랜드_메인','GNB','캠페인');">캠페인<!-- 15 FW 화보 -->
+								<span class="arr">arrow</span></a></li>
+					</ul>
+					<script type="text/javascript">
                                     function moveBrandLookBook(brandCode){
                                         var url = "/ko/magazine/lookbook";
                                         var $form = $('<form></form>');
@@ -2180,250 +3222,304 @@ function GA_search(){
                                         $form.submit();
                                     }
                                     </script>
-                                <ul class="cate_m clearfix" id="cate_m_brand">
-                            <!-- 2016.08.03 Eddie: Brand Custom Menu -->
-                            <!-- //2016.08.03 Eddie: Brand Custom Menu -->
-                            <li>
-	                                <a href="/ko/c/br02/BR02" onclick="GA_Event('브랜드_메인','GNB','전체보기');" class="mark-none">
-	전체보기<!-- 전체보기 -->
-	                                    <span class="arr">arrow</span>
-	                                </a>
-	                            </li>
-                            <!--                                     편집샵의 경우 브랜드 탭 추가 -->
-								<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
-                             <li><a href="/ko/c/BR02_we/BR02" onclick="GA_Event('브랜드_메인','GNB','여성');" class="">여성<span class="arr">arrow</span></a>
-                                <div class="sub_back" style="height: 0px; border-bottom: 0px;">
-                                        <div class="sub_menu" style="display: none;">
-                                            <ul class="sm_dep1" style="margin-left: 0px; margin-right: 0px; float: right;">
-                                    <li>
-                                    <a href="/ko/c/BR02_we09/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_SPECIAL SHOP*');">SPECIAL SHOP*</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we09y/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_SPECIAL SHOP*_MINE : CODE MINE ATELIER');">MINE : CODE MINE ATELIER</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_we05/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터');">아우터</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we051/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터_재킷');">재킷</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we052/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터_점퍼');">점퍼</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we015/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터_가디건/베스트');">가디건/베스트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we053/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터_트렌치 코트');">트렌치 코트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we054/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터_코트');">코트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we055/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_아우터_다운/패딩');">다운/패딩</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_we01/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_탑');">탑</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we011/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_탑_티셔츠');">티셔츠</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we012/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_탑_블라우스');">블라우스</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we013/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_탑_셔츠');">셔츠</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we014/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_탑_니트');">니트</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_we04/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_드레스');">드레스</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we041/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_드레스_미니 드레스');">미니 드레스</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we042/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_드레스_미디 드레스');">미디 드레스</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we043/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_드레스_롱/맥시 드레스');">롱/맥시 드레스</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_we02/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_팬츠');">팬츠</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we021/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_캐주얼');">캐주얼</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we022/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_포멀');">포멀</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we023/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_데님');">데님</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we024/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_쇼츠');">쇼츠</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li style="margin-right: 0px;">
-                                    <a href="/ko/c/BR02_we03/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_스커트');">스커트</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we031/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_스커트_미니 스커트');">미니 스커트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we032/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_스커트_펜슬 스커트');">펜슬 스커트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we033/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_스커트_플레어 스커트');">플레어 스커트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_we034/BR02" onclick="GA_Event('브랜드_메인','GNB','여성_스커트_롱/맥시 스커트');">롱/맥시 스커트</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    </ul>
-                                        </div>
-                                    </div>
-                                    </li>
-<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
-                            <!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
-                             <li><a href="/ko/c/BR02_as/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화');" class="">잡화<span class="arr">arrow</span></a>
-                                <div class="sub_back" style="height: 0px; border-bottom: 0px;">
-                                        <div class="sub_menu" style="display: none;">
-                                            <ul class="sm_dep1" style="margin-left: 453px; margin-right: 0px; float: left;">
-                                    <li>
-                                    <a href="/ko/c/BR02_as01/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈');">여성슈즈</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as011/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_부츠');">부츠</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as012/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_로퍼/블로퍼');">로퍼/블로퍼</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as013/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_스니커즈');">스니커즈</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as014/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_플랫');">플랫</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as015/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_힐/슬링백');">힐/슬링백</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_as03/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성백');">여성백</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as031/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성백_토트백');">토트백</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as032/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성백_숄더/크로스바디백');">숄더/크로스바디백</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as034/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_여성백_기타 백');">기타 백</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_as05/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_머플러/스카프');">머플러/스카프</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as051/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_머플러/스카프_머플러');">머플러</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as052/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_머플러/스카프_스카프');">스카프</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li>
-                                    <a href="/ko/c/BR02_as06/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리');">주얼리</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as061/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_이어링/커프');">이어링/커프</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as062/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_목걸이');">목걸이</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as063/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_팔찌');">팔찌</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as064/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_반지');">반지</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    <li style="margin-right: 0px;">
-                                    <a href="/ko/c/BR02_as07/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC');">기타 ACC</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as071/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_모자');">모자</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as072/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_양말');">양말</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as074/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_벨트');">벨트</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_as076/BR02" onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_헤어ACC');">헤어ACC</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    </ul>
-                                        </div>
-                                    </div>
-                                    </li>
-<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
-                            <!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
-                             <li><a href="/ko/c/BR02_be/BR02" onclick="GA_Event('브랜드_메인','GNB','뷰티');" class="">뷰티<span class="arr">arrow</span></a>
-                                <div class="sub_back" style="height: 0px; border-bottom: 0px;">
-                                        <div class="sub_menu" style="display: none;">
-                                            <ul class="sm_dep1" style="margin-left: 453px; margin-right: 0px; float: left;">
-                                    <li style="margin-right: 0px;">
-                                    <a href="/ko/c/BR02_be02/BR02" onclick="GA_Event('브랜드_메인','GNB','뷰티_메이크업');">메이크업</a>
-                                    <ul class="clearfix sm_dep2">
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_be021/BR02" onclick="GA_Event('브랜드_메인','GNB','뷰티_메이크업_페이스 메이크업');">페이스 메이크업</a></li>
-                                
-                                    <li>
-                                        </li><li><a href="/ko/c/BR02_be023/BR02" onclick="GA_Event('브랜드_메인','GNB','뷰티_메이크업_립 메이크업');">립 메이크업</a></li>
-                                
-                                    </ul>
-                                    </li>
-                                    </ul>
-                                        </div>
-                                    </div>
-                                    </li>
-<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
-                            </ul>
-                    </div>
-                    <!-- 201608 util menu -->
-                    <div class="util_menu util_menu1803">
-                        <ul class="clearfix">
-                            <li><a href="javascript:void(0);"><span class="ico_sh">search</span></a></li>
-                            <li><a href="/ko/mypage/myWish"><span class="ico wishlist">wish list</span> <span class="count">(<span id="wishlistCount">0</span>)</span></a></li>
-                            <li><a href="/ko/shoppingbag"><span class="ico cart">장바구니</span> <span class="count">(<span id="cartCount">0</span>)</span></a></li>
-                            </ul>
-                    </div>    
-                    <!-- //201608 util menu -->
-                    <div id="transparent_mask"></div>
-                </div>
-                </div>
+					<ul class="cate_m clearfix" id="cate_m_brand">
+						<!-- 2016.08.03 Eddie: Brand Custom Menu -->
+						<!-- //2016.08.03 Eddie: Brand Custom Menu -->
+						<li><a href="/ko/c/br02/BR02"
+							onclick="GA_Event('브랜드_메인','GNB','전체보기');" class="mark-none">
+								전체보기<!-- 전체보기 --> <span class="arr">arrow</span>
+						</a></li>
+						<!--                                     편집샵의 경우 브랜드 탭 추가 -->
+						<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
+						<li><a href="/ko/c/BR02_we/BR02"
+							onclick="GA_Event('브랜드_메인','GNB','여성');" class="">여성<span
+								class="arr">arrow</span></a>
+							<div class="sub_back" style="height: 0px; border-bottom: 0px;">
+								<div class="sub_menu" style="display: none;">
+									<ul class="sm_dep1"
+										style="margin-left: 0px; margin-right: 0px; float: right;">
+										<li><a href="/ko/c/BR02_we09/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','여성_SPECIAL SHOP*');">SPECIAL
+												SHOP*</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_we09y/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_SPECIAL SHOP*_MINE : CODE MINE ATELIER');">MINE
+														: CODE MINE ATELIER</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_we05/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','여성_아우터');">아우터</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_we051/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_아우터_재킷');">재킷</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we052/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_아우터_점퍼');">점퍼</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we015/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_아우터_가디건/베스트');">가디건/베스트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we053/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_아우터_트렌치 코트');">트렌치
+														코트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we054/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_아우터_코트');">코트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we055/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_아우터_다운/패딩');">다운/패딩</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_we01/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','여성_탑');">탑</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_we011/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_탑_티셔츠');">티셔츠</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we012/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_탑_블라우스');">블라우스</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we013/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_탑_셔츠');">셔츠</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we014/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_탑_니트');">니트</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_we04/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','여성_드레스');">드레스</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_we041/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_드레스_미니 드레스');">미니
+														드레스</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we042/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_드레스_미디 드레스');">미디
+														드레스</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we043/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_드레스_롱/맥시 드레스');">롱/맥시
+														드레스</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_we02/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','여성_팬츠');">팬츠</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_we021/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_캐주얼');">캐주얼</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we022/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_포멀');">포멀</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we023/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_데님');">데님</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we024/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_팬츠_쇼츠');">쇼츠</a></li>
+
+											</ul></li>
+										<li style="margin-right: 0px;"><a
+											href="/ko/c/BR02_we03/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','여성_스커트');">스커트</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_we031/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_스커트_미니 스커트');">미니
+														스커트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we032/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_스커트_펜슬 스커트');">펜슬
+														스커트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we033/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_스커트_플레어 스커트');">플레어
+														스커트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_we034/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','여성_스커트_롱/맥시 스커트');">롱/맥시
+														스커트</a></li>
+
+											</ul></li>
+									</ul>
+								</div>
+							</div></li>
+						<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
+						<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
+						<li><a href="/ko/c/BR02_as/BR02"
+							onclick="GA_Event('브랜드_메인','GNB','잡화');" class="">잡화<span
+								class="arr">arrow</span></a>
+							<div class="sub_back" style="height: 0px; border-bottom: 0px;">
+								<div class="sub_menu" style="display: none;">
+									<ul class="sm_dep1"
+										style="margin-left: 453px; margin-right: 0px; float: left;">
+										<li><a href="/ko/c/BR02_as01/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈');">여성슈즈</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_as011/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_부츠');">부츠</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as012/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_로퍼/블로퍼');">로퍼/블로퍼</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as013/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_스니커즈');">스니커즈</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as014/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_플랫');">플랫</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as015/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성슈즈_힐/슬링백');">힐/슬링백</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_as03/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','잡화_여성백');">여성백</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_as031/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성백_토트백');">토트백</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as032/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성백_숄더/크로스바디백');">숄더/크로스바디백</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as034/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_여성백_기타 백');">기타 백</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_as05/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','잡화_머플러/스카프');">머플러/스카프</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_as051/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_머플러/스카프_머플러');">머플러</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as052/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_머플러/스카프_스카프');">스카프</a></li>
+
+											</ul></li>
+										<li><a href="/ko/c/BR02_as06/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리');">주얼리</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_as061/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_이어링/커프');">이어링/커프</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as062/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_목걸이');">목걸이</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as063/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_팔찌');">팔찌</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as064/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_주얼리_반지');">반지</a></li>
+
+											</ul></li>
+										<li style="margin-right: 0px;"><a
+											href="/ko/c/BR02_as07/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC');">기타 ACC</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_as071/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_모자');">모자</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as072/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_양말');">양말</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as074/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_벨트');">벨트</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_as076/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','잡화_기타 ACC_헤어ACC');">헤어ACC</a></li>
+
+											</ul></li>
+									</ul>
+								</div>
+							</div></li>
+						<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
+						<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
+						<li><a href="/ko/c/BR02_be/BR02"
+							onclick="GA_Event('브랜드_메인','GNB','뷰티');" class="">뷰티<span
+								class="arr">arrow</span></a>
+							<div class="sub_back" style="height: 0px; border-bottom: 0px;">
+								<div class="sub_menu" style="display: none;">
+									<ul class="sm_dep1"
+										style="margin-left: 453px; margin-right: 0px; float: left;">
+										<li style="margin-right: 0px;"><a
+											href="/ko/c/BR02_be02/BR02"
+											onclick="GA_Event('브랜드_메인','GNB','뷰티_메이크업');">메이크업</a>
+											<ul class="clearfix sm_dep2">
+												<li></li>
+												<li><a href="/ko/c/BR02_be021/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','뷰티_메이크업_페이스 메이크업');">페이스
+														메이크업</a></li>
+
+												<li></li>
+												<li><a href="/ko/c/BR02_be023/BR02"
+													onclick="GA_Event('브랜드_메인','GNB','뷰티_메이크업_립 메이크업');">립
+														메이크업</a></li>
+
+											</ul></li>
+									</ul>
+								</div>
+							</div></li>
+						<!-- #1141 - 카테고리 개편 (정상 브랜드 페이지 상단 카테고리 영역) -->
+					</ul>
+				</div>
+				<!-- 201608 util menu -->
+				<div class="util_menu util_menu1803">
+					<ul class="clearfix">
+						<li><a href="javascript:void(0);"><span class="ico_sh">search</span></a></li>
+						<li><a href="/ko/mypage/myWish"><span
+								class="ico wishlist">wish list</span> <span class="count">(<span
+									id="wishlistCount">0</span>)
+							</span></a></li>
+						<li><a href="/ko/shoppingbag"><span class="ico cart">장바구니</span>
+								<span class="count">(<span id="cartCount">0</span>)
+							</span></a></li>
+					</ul>
+				</div>
+				<!-- //201608 util menu -->
+				<div id="transparent_mask"></div>
+			</div>
 		</div>
-		<!-- //headerWrap -->
-		
-		<script type="text/javascript">
+	</div>
+	<!-- //headerWrap -->
+
+	<script type="text/javascript">
 
 if(typeof kakaoPixel !== 'undefined'){
     var kakaoTrackId = '3482319208237780781'; //개발
@@ -2434,14 +3530,18 @@ if(typeof kakaoPixel !== 'undefined'){
     });
 }
 </script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/handsome/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="/_ui/handsomemobile/js/swiper.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/popup.css" media="all">
+	<script type="text/javascript"
+		src="${pageContext.request.contextPath}/resources/js/handsome/jquery.bxslider.min.js"></script>
+	<script type="text/javascript"
+		src="/_ui/handsomemobile/js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="${pageContext.request.contextPath}/resources/css/popup.css"
+		media="all">
 
-    <!-- *) 제품상세페이지 분석코드 -->
-    <!-- AceCounter eCommerce (Product_Detail) v7.5 Start -->
-    <!-- Function and Variables Definition Block Start -->
-    <script language="javascript" type="text/javascript">
+	<!-- *) 제품상세페이지 분석코드 -->
+	<!-- AceCounter eCommerce (Product_Detail) v7.5 Start -->
+	<!-- Function and Variables Definition Block Start -->
+	<script language="javascript" type="text/javascript">
 var _JV="AMZ2013010701";//script Version
 var _UD='undefined';var _UN='unknown';
 function _IDV(a){return (typeof a!=_UD)?1:0}
@@ -2461,11 +3561,11 @@ if(!_IDV(_pd)) var _pd = '' ;
 if(!_IDV(_ct)) var _ct = '' ;
 if(!_IDV(_amt)) var _amt = '' ;
 </script>
-    <!-- Function and Variables Definition Block End-->
+	<!-- Function and Variables Definition Block End-->
 
-    <!-- AceCounter eCommerce (Product_Detail) v7.5 Start -->
-    <!-- Data Allocation (Product_Detail) -->
-    <script language="javascript">
+	<!-- AceCounter eCommerce (Product_Detail) v7.5 Start -->
+	<!-- Data Allocation (Product_Detail) -->
+	<script language="javascript">
 
 _pd =_RP('캐시미어 더블 재킷');  
 _ct =_RP('BR02'); 
@@ -2476,11 +3576,12 @@ _A_nl=Array('1');
 _A_pl=Array('MN2C8WJC026WP_CM'); 
 _A_pn=Array('캐시미어 더블 재킷'); 
 _A_ct=Array('BR02'); </script>
-    <!-- AceCounter eCommerce (Product_detail) v6.4 Start -->
+	<!-- AceCounter eCommerce (Product_detail) v6.4 Start -->
 
-<!--  criteo 상품 페이지 트래커 START  -->
-<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js" async="true"></script>
-<script type="text/javascript">
+	<!--  criteo 상품 페이지 트래커 START  -->
+	<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js"
+		async="true"></script>
+	<script type="text/javascript">
     window.criteo_q = window.criteo_q || [];
     window.criteo_q.push(  
         { event: "setAccount", account: 24596 },
@@ -2491,10 +3592,10 @@ _A_ct=Array('BR02'); </script>
         { event: "viewItem", item: "MN2C8WJC026WP"}
         );
 </script>
-<!--  criteo 상품 페이지 트래커 END -->
+	<!--  criteo 상품 페이지 트래커 END -->
 
-<!-- Enliple Tracker Start -->
-<script type="text/javascript">
+	<!-- Enliple Tracker Start -->
+	<script type="text/javascript">
 try{
 	var ENP_VAR = {
 		collect: {},
@@ -2541,9 +3642,9 @@ try{
     console.log(e)
 }
 </script>
-<!-- Enliple Tracker End -->
+	<!-- Enliple Tracker End -->
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 //<![CDATA[
 
 var intervalLoopCnt = 0;
@@ -2616,7 +3717,7 @@ $(document).ready(function(){
     }
     
     
-    
+    //리뷰작성
     $("#customerReviewWrite").on("click", function(){
         
         //초기화
@@ -2624,23 +3725,24 @@ $(document).ready(function(){
       
         //로그인이 되어 있는지 확인한다.
         
-            goLogin("review");
-            return;
+          //  goLogin("review");
+          //미림 주석  return;
         
         
         if ( 'Y' == 'Y' ) {
             $.ajax({
-                url     : '/ko/p/reviewWriteBeforeVerify',
+                url     : '/review/reviewWriteBeforeVerify',
                 type    : 'GET',
                 datatype: 'json',
-                data : { "productCode" : $('#productCode').val()
+                data : { "productCode" : $('#productCode').val()// /review/reviewWriteBeforeVerify해당 url 이 호출될때 json타입으로 컨트롤러 보내줌 
                 },
                 success : function(data) {
                 	var purchaseListCount = 0;
                 	var la;
                 	if('ko' == 'ko') {
         				purchaseListCount = data.orderProductReviewList.length + data.offlineProductReviewList.length;
-        			
+        				//미림 임시 고정값
+        				purchaseListCount = 1;
                     	if ( $('#tempProductId').val() == '' || $('#tempProductId').val() == null ) {
                         	if ( purchaseListCount == 0 ) {
                         		if(data.reviewWriteOnce == true) {
@@ -2876,12 +3978,10 @@ $(document).ready(function(){
                     viewPopup("#customerReviewWriteDiv");
                     $("#customerReviewDiv").hide();
                     
-                    var imgSrc = "";
                     
-                        imgSrc = "http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg";
                         
                     
-                    $("#reviewProducImg").attr('src',imgSrc);
+                   // $("#reviewProducImg").attr('src',imgSrc);
                     $("#reviewProducPrice").text($(".price").find("span:eq(0)").text());
                     $("#reviewProductBrandName").text($("#brandName").val());
                     $("#reviewProductProductName").text($("#productName").val());
@@ -2969,9 +4069,10 @@ $(document).ready(function(){
     
     $("#productQnAWrite").on("click", function(){
         //로그인이 되어 있는지 확인한다.
-        
-            goLogin("productQnA");
-            return;
+        	
+        	// 박소은 주석
+            // goLogin("productQnA");
+            // return;
         
         
         $(".btn_close").trigger("click");
@@ -3088,15 +4189,18 @@ $(document).ready(function(){
         $("#thFile").css("font-weight","normal");
     });
     
+    
+    //리뷰등록하기 버튼을 눌렀을시
     $("#reviewWriteSend").on('click', function(){
         
+    	//리뷰 썼는지 안썼는지 
         if(!reviewWriteCheck()){
             return;
         }
         
         
-            goLogin("review");
-            return;
+            //goLogin("review"); 추후 로그인처리 미림주석
+            //return;
         
         
         $("#reviewHeadline").val($("#reviewHeadline").val().trim());
@@ -3976,219 +5080,11 @@ function reviewWriteCheck()
 {
     var inputNumberchk = /^[0-9]+$/; // 숫자 체크
     var inputHangulchk = /[^ㄱ-ㅎ|ㅏ-ㅣ]+$/; // 초성(자음/모음) 체크
+  
     
-    if ( "Y" == 'Y' && "ko" != "ko" ) {
-        if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 색상이 보일때만 체크
-            if($('.select_options_wrap .color_chip li a').hasClass('on') == false){
-                var la = new customLayerAlert('색상을 선택해 주세요.');    
-                //$('.select_options_wrap .color_chip li a').focus();
-                $('.select_colors p').css("color", "#ff0000");
-                $('.select_colors p').css("font-weight","bold");
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    
-        if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 사이즈가 보일때만 체크
-            var productType = $('form[name=reviewForm] input[name=productCodeType]').val();
-            if(productType != 'ApparelSizeVariantProduct'){ //ApparelStyleVariantProduct
-                var la = new customLayerAlert('사이즈를 선택해 주세요.');
-                //$('.select_options .select_size p').focus();
-                $('.select_options .select_size p').css("color", "#ff0000");
-                $('.select_options .select_size p').css("font-weight","bold");
-                
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    } else if("Y" == 'N') {
-    	if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 색상이 보일때만 체크
-            if($('.select_options_wrap .color_chip li a').hasClass('on') == false){
-                var la = new customLayerAlert('색상을 선택해 주세요.');    
-                //$('.select_options_wrap .color_chip li a').focus();
-                $('.select_colors p').css("color", "#ff0000");
-                $('.select_colors p').css("font-weight","bold");
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    
-        if($('#orderWriteChk').val() == 'Y'){ // 상품평쓰기 화면에서 사이즈가 보일때만 체크
-            var productType = $('form[name=reviewForm] input[name=productCodeType]').val();
-            if(productType != 'ApparelSizeVariantProduct'){ //ApparelStyleVariantProduct
-                var la = new customLayerAlert('사이즈를 선택해 주세요.');
-                //$('.select_options .select_size p').focus();
-                $('.select_options .select_size p').css("color", "#ff0000");
-                $('.select_options .select_size p').css("font-weight","bold");
-                
-                la.confirmAction = function(){
-                    $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                };
-                return false;
-            }
-        }
-    }
-    
-    if($("#height").val() != null && $("#height").val().length > 0){
-        var height = $("#height").val();
-        for(i=0; i<height.length; i++){
-            var str = height.substr(i,1);
-            if (!inputNumberchk.test(str)){
-                var la;
-                if ( "Y" == 'Y' ) {
-                    la = new customLayerAlert("키는 숫자로 입력해주세요.");  
-                } else {
-                    la = new layerAlert("키는 숫자로 입력해주세요.");
-                }
-                
-                la.confirmAction = function(){
-                    $("#height").focus();
-                };
-                return;
-            }
-        }
-    }
-    
-    if($("#enjoySize").val() != null && $("#enjoySize").val().length > 0){
-        var enjoySize = $("#enjoySize").val();
-        for(i=0; i<enjoySize.length; i++){
-            var str = enjoySize.substr(i,1);
-            if (!inputHangulchk.test(str)){
-                var la;
-                if ( "Y" == 'Y' ) {
-                    la = new customLayerAlert("사이즈는 영문, 숫자만 입력가능합니다.");  
-                } else {
-                    la = new layerAlert("사이즈는 숫자, 영문, 한글로 정확하게 입력해주세요.");
-                }
-                la.confirmAction = function(){
-                    $("#enjoySize").focus();
-                };
-                return;
-            }
-        }
-    }
+  
     
     if ( "Y" == 'Y' ) {
-        if ( $('#purchaseColor').val() == '' || ($('#purchaseSize').val() == '') && !chkLiquides) { //리퀴드는 오프라인의 경우 purchaseSize가 없을수있음.
-            $("#customerReviewWriteDiv").attr("tabindex", 0).focus();
-            var la = new customLayerAlert('구매 옵션을 선택해주세요.');
-            return false;
-        }
-        if('ko' != 'ko') {
-            if ( 'Y' == $('#purchaseProdYN').val() ) {  // 매장구입
-                // 색상
-                if($('.select_options_wrap .color_chip li a').hasClass('on') == false){
-                    var la = new customLayerAlert('색상을 선택해 주세요.');
-                    //$('.select_options_wrap .color_chip li a').focus();
-                    $('.select_colors p').css("color", "#ff0000");
-                    $('.select_colors p').css("font-weight","bold");
-                    la.confirmAction = function(){
-                        $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                    };
-                    return false;     
-                }
-            
-                // 사이즈
-                var productType = $('form[name=reviewForm] input[name=productCodeType]').val();
-                if(productType != 'ApparelSizeVariantProduct'){ //ApparelStyleVariantProduct
-                    var la = new customLayerAlert('사이즈를 선택해 주세요.');
-                    //$('.select_options .select_size p').focus();
-                    $('.select_options .select_size p').css("color", "#ff0000");
-                    $('.select_options .select_size p').css("font-weight","bold");
-                    
-                    la.confirmAction = function(){
-                        $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-                    };
-                    return false;
-                }
-            }
-        }
-        
-        if  ( 'top' == 'top' || 'top' == 'bottoms' ) {
-
-            if ( $("#height").val() == null || $.trim($("#height").val()) == '' ) {
-                $("#thHeight").css("color", "#ff0000");
-                $("#thHeight").css("font-weight","normal");
-                $("#height").focus();
-                var la = new customLayerAlert('키를 입력해주세요.');
-                return;
-            }
-            
-            if ( $("#enjoySize").val() == null || $.trim($("#enjoySize").val()) == '' ) {
-                $("#thEnjoySize").css("color", "#ff0000");
-                $("#thEnjoySize").css("font-weight","normal");
-                $("#enjoySize").focus();
-                var la = new customLayerAlert('평소 사이즈를 입력해주세요.');
-                return;
-            }
-            
-            if ( $('input[name=bodyType]:checked').length < 1 ) {
-                $("#thBodyType").css("color", "#ff0000");
-                $("#thBodyType").css("font-weight","normal");
-                $("#thBodyType").focus();
-                var la = new customLayerAlert('체형을 선택해주세요.');
-                
-                $('input[name=bodyType]').on('click', function() {
-                    $("#thBodyType").css("color", "black");
-                    $("#thBodyType").css("font-weight","normal");
-                });
-                return;
-            }
-            
-            if( $("input[name=realWearSize1]:checked").length < 1 ) {
-                var la = new customLayerAlert('실 착용 사이즈를 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=realWearSize1]").click(function() {
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#realWearSize1_01').focus();
-                return;
-            }
-            if( $("input[name=realWearSize2]:checked").length < 1 ) {
-                var la = new customLayerAlert('실 착용 사이즈를 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=realWearSize2]").click(function() {
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#realWearSize2_01').focus();
-                return;
-            }
-            if( $("input[name=realWearSize3]:checked").length < 1 ) {
-                var la = new customLayerAlert('실 착용 사이즈를 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=realWearSize3]").click(function() {
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#realWearSize3_01').focus();
-                return;
-            }
-            if( $("input[name=realProductColor]:checked").length < 1 ){
-                var la = new customLayerAlert('실 제품 색상을 선택해주세요.');
-                $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=realProductColor]").click(function(){
-                    $(".write_star_wrap").next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-                });
-                $('#realProductColor01').focus();
-                return;
-            }
             if ($('#reviewHeadline').val().length == 0 || $.trim($('#reviewHeadline').val()) == '') {
                 var la = new customLayerAlert('내용을 입력해주세요.');
                 return;
@@ -4197,154 +5093,7 @@ function reviewWriteCheck()
                 var la = new customLayerAlert('상품평 내용은 20~200자 사이입니다.');
                 return;
             }
-        }
-        
-        if  ('top' == 'cosmetic') {
-            if ( $('input[name=skinType]:checked').length < 1 ) {
-                $("#thSkinType").css("color", "#ff0000");
-                $("#thSkinType").css("font-weight","normal");
-                $("#thSkinType").focus();
-                var la = new customLayerAlert('피부 타입을 선택해주세요.');
-                
-                $('input[name=skinType]').on('click', function() {
-                    $("#thSkinType").css("color", "black");
-                    $("#thSkinType").css("font-weight","normal");
-                });
-                return;
-            }
-            
-            if( $("input[name=moisturize]:checked").length < 1 ){
-                var la = new customLayerAlert('보습력을 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=moisturize]").click(function(){
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#moisturize1').focus();
-                return;
-            }
-            
-            if( $("input[name=spreadability]:checked").length < 1 ){
-                var la = new customLayerAlert('발림성을 선택해주세요.');
-                $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=spreadability]").click(function(){
-                    $(".write_star_wrap").next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-                });
-                $('#spreadability1').focus();
-                return;
-            }
-            
-            if( $("input[name=scent]:checked").length < 1 ){
-                var la = new customLayerAlert('향을 선택해주세요.');
-                $(".write_star_wrap").next().next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=scent]").click(function(){
-                    $(".write_star_wrap").next().next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().next().find("th").css("font-weight","normal");
-                });
-                $('#scent1').focus();
-                return;
-            }
-        }
-        
-        //Liquides Parfums Bar
-        if  ('top' == 'perfume') {
-            if ( $('input[name=skinType]:checked').length < 1 ) {
-                $("#thSkinType").css("color", "#ff0000");
-                $("#thSkinType").css("font-weight","normal");
-                $("#thSkinType").focus();
-                var la = new customLayerAlert('피부 타입을 선택해주세요.');
-                
-                $('input[name=skinType]').on('click', function() {
-                    $("#thSkinType").css("color", "black");
-                    $("#thSkinType").css("font-weight","normal");
-                });
-                return;
-            }
-            
-            if( $("input[name=scent]:checked").length < 1 ){
-                var la = new customLayerAlert('향을 선택해주세요.');
-                $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().find("th").css("font-weight","bold");
-                
-                $("input[name=scent]").click(function(){
-                    $(".write_star_wrap").next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().find("th").css("font-weight","normal");
-                });
-                $('#scent1').focus();
-                return;
-            }
-            
-            if( $("input[name=persistence]:checked").length < 1 ){
-                var la = new customLayerAlert('지속성을 선택해주세요.');
-                $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=persistence]").click(function(){
-                    $(".write_star_wrap").next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-                });
-                $('#persistence1').focus();
-                return;
-            }
-            
-            if ($('#reviewHeadline').val().length == 0 || $.trim($('#reviewHeadline').val()) == '') {
-                var la = new customLayerAlert('내용을 입력해주세요.');
-                $(".write_star_wrap").next().next().next().find("th").css("color", "#ff0000");
-                $(".write_star_wrap").next().next().next().find("th").css("font-weight","bold");
-                
-                $("input[name=persistence]").click(function(){
-                    $(".write_star_wrap").next().next().next().find("th").css("color", "black");
-                    $(".write_star_wrap").next().next().next().find("th").css("font-weight","normal");
-                });
-                return;
-            }
-            if ($('#reviewHeadline').val().length < 20) {
-                var la = new customLayerAlert('상품평 내용은 20~200자 사이입니다.');
-                return;
-            }
-            
-        }
-        
-    } else {
-
-        if($("input:radio[name=realWearSize]:checked").length < 1){
-            var la = new layerAlert('실착용 사이즈를 선택해주세요.');
-            $(".write_star_wrap").next().find("th").css("color", "#ff0000");
-            $(".write_star_wrap").next().find("th").css("font-weight","bold");
-            la.confirmAction = function(){
-                $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-            };
-            
-            $("input:radio[name=realWearSize]").click(function(){
-                $(".write_star_wrap").next().find("th").css("color", "black");
-                $(".write_star_wrap").next().find("th").css("font-weight","normal");
-            });
-            
-            return false;
-        }
-        
-        if($("input:radio[name=realProductColor]:checked").length < 1){
-            var la = new layerAlert('실제품 색상을 선택해주세요.');
-            $(".write_star_wrap").next().next().find("th").css("color", "#ff0000");
-            $(".write_star_wrap").next().next().find("th").css("font-weight","bold");
-            la.confirmAction = function(){
-                $("#customerReviewWriteDiv").attr("tabindex", -1).focus();
-            };
-            
-            $("input:radio[name=realProductColor]").click(function(){
-                $(".write_star_wrap").next().next().find("th").css("color", "black");
-                $(".write_star_wrap").next().next().find("th").css("font-weight","normal");
-            });
-            return false;
-        }
-    }
+    } 
     
     var headline = $("#reviewHeadline").val();
     
@@ -6400,7 +7149,7 @@ function reviewHtml(data){
     }
     
     if(data.reviewList != undefined){
-	     var totalNumberOfResults = parseInt(paging.totalNumberOfResults);
+	    //미림 임시주석 var totalNumberOfResults = parseInt(paging.totalNumberOfResults);
 	     var cookieUid = 'anonymous';
 	     
 	     var reviewHtml = "";
@@ -6433,7 +7182,8 @@ function reviewHtml(data){
 	            reviewHtml += "    <ul>";
 	            reviewHtml += "        <li class='name'>"+list[i].principal.uid+"</li>";
 	            if ( list[i].profileData != null && list[i].profileData != "") {
-	                reviewHtml += "      <li class='grade'>"+list[i].profileData+"</li>"; <!-- 고객등급 -->
+	                reviewHtml += "      <li class='grade'>"+list[i].profileData+"</li>";
+	                <!-- 고객등급 -->
 	            }
 	            reviewHtml += "        <li class='date'>"+list[i].displayCreateDate+"</li>";
 	            reviewHtml += "        <li class='stars'>";
@@ -7634,11 +8384,11 @@ function fn_popupCustomerReview(pageNum,reviewType){
     if(pageNum == null || pageNum == ''){
         pageNum=1;
     }
-    
+
     var productCode = $("#productCode").val();
-    
+    //미림 alert("여기다: "+productCode);
     $.ajax({
-         url: '/ko/p/review',
+         url: '/review/getproductreview',
          type: "GET",
          dataType:"json",
          data: {"productCode":productCode, "pageNum":pageNum, "pageSize":4, "reviewType": reviewType},
@@ -7778,13 +8528,15 @@ function hideProductLayer() {
     $("#productLayer").hide();
     
 }
+
+//파일 업로드 
 function uploadFilesubmit(){
 	
 	var msg = "";
 	
-    $('#shoulderWidth').val($('input[name=realWearSize1]:checked').val());
-    $('#chestSize').val($('input[name=realWearSize2]:checked').val());
-    $('#totalSize').val($('input[name=realWearSize3]:checked').val());
+ //   $('#shoulderWidth').val($('input[name=realWearSize1]:checked').val());
+  //  $('#chestSize').val($('input[name=realWearSize2]:checked').val());
+   // $('#totalSize').val($('input[name=realWearSize3]:checked').val());
     
     
     
@@ -7797,15 +8549,16 @@ function uploadFilesubmit(){
     
     var tUrl = "";
     $("#reviewHeadline").val(encodeText($("#reviewHeadline").val()));
+    //사진 첨부안함
     if(fileSize <= 1){
         var url = "";
         var type = "";
         if($("form#reviewForm #productId").val() != ""){
-            url = '/ko/p/modifyCustomerReview';
+            url = '/review/modifyCustomerReview';
             type = "POST";
             msg = '수정되었습니다.';
         }else{
-            url = '/ko/p/reviewWriteNew';    
+            url = '/review/reviewWriteNew';    
             type = "GET";
             msg = '등록되었습니다.';
         }
@@ -7813,7 +8566,7 @@ function uploadFilesubmit(){
         $.ajax({
              url: url,
              type: type,
-             data: $('form#reviewForm').serialize(),
+             data: $('form#reviewForm').serialize(),//form에 있는 것들을 보내고
              success: function(data){
                  if ( "F" == data.rsltCd ) {
                      if ( 'Y' == 'Y' ) {
@@ -7850,7 +8603,7 @@ function uploadFilesubmit(){
         });
         
     }else{
-    	
+    	//사진첨부 함
     	var labelLeng = $('#customerReviewWriteDiv .upload_btn label').length - 1;
     	$('#customerReviewWriteDiv .upload_btn label').each(function(i){
     		if(i != labelLeng){
@@ -7862,10 +8615,10 @@ function uploadFilesubmit(){
     	
         var url = "";
         if($("form#reviewForm #productId").val() != ""){
-            url = "/ko/p/modifyCustomerReview" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
+            url = "/review/modifyCustomerReview" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
             msg = '수정되었습니다.';
         }else{
-            url = "/ko/p/reviewWriteNew" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
+            url = "/review/reviewWriteNew" + "?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6";
             msg = '등록되었습니다.';
         }
         $('form#reviewForm').ajaxSubmit({
@@ -10051,7 +10804,25 @@ function sendGroobee(){
 
 //]]>
 </script>
+<<<<<<< Updated upstream
 
+	<div id="globalMessages"></div>
+	<div id="bodyWrap" class="item_detail" style="">
+		<div id="oneEventLayer"></div>
+
+		<div class="adaptive_wrap">
+			<div class="clearfix prd_detail1905" id="clearfix">
+				<div class="clearfix image_view3">
+					<a href="javascript:imageZoom()" id="btn_zoom" class="btn_zoom"
+						onclick="GA_Event('상품_상세','크게보기','클릭')">크게보기</a>
+					<!-- 버튼 클릭시 item_visual 에 zoom 클래스 추가 -->
+					<!-- 2021.08.18 동영상 재생 수정, 상품 imageDivisionCode에 VOD가 있는 경우 동영상 url 세팅 -->
+					<div class="image_view1" id="image_view1">
+						<div class="item_visual" id="imageDiv" style="margin-top: 20px;">
+							<ul>
+								<!--
+=======
+<!-- 이 위에 날려버리기 -->
     <div id="globalMessages">
         </div>
     <div id="bodyWrap" class="item_detail" style="">
@@ -10066,104 +10837,135 @@ function sendGroobee(){
 		<div class="item_visual" id="imageDiv" style="margin-top: 20px;">
 			<ul>
 				<!--
+>>>>>>> Stashed changes
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage1}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage1}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage2}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage2}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage3}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage3}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage4}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage4}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage5}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage5}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage6}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage6}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<li><img src="${productimage7}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-							<!--
+							-->
+
+								<li><img src="${productimage7}" class="respon_image"
+									alt="캐시미어 더블 재킷"
+									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
-						<!--
+							-->
+
+								<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							--> 
-							
+							-->
+
+							</ul>
+						</div>
+					</div>
+					<div class="item_visual" id="imageDivW" style="display: none">
+						<ul>
+							<li><img src="${productimage1}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+							<li><img src="${productimage2}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+							<li><img src="${productimage3}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+							<li><img src="${productimage4}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+							<li><img src="${productimage5}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+							<li><img src="${productimage6}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
+							<li><img src="${productimage7}" class="respon_image"
+								alt="캐시미어 더블 재킷"
+								onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
 						</ul>
-		</div>
-	</div>
-	<div class="item_visual" id="imageDivW" style="display:none">
-        <ul>
-            <li><img src="${productimage1}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        <li><img src="${productimage2}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        <li><img src="${productimage3}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        <li><img src="${productimage4}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        <li><img src="${productimage5}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        <li><img src="${productimage6}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        <li><img src="${productimage7}" class="respon_image" alt="캐시미어 더블 재킷" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-                        </ul>
-    </div>
-    <!--동영상 삽입 180710-->
-    <!--//동영상 삽입 180710-->
-<!--  2021.08.18 동영상 재생 영역  -->
-    </div><script type="text/javascript" src="${pageContext.request.contextPath}/resources/js/wpay.js"></script>
-<!-- 품절상품포함 여부 -->
-<script type="text/javascript">
+					</div>
+					<!--동영상 삽입 180710-->
+					<!--//동영상 삽입 180710-->
+					<!--  2021.08.18 동영상 재생 영역  -->
+				</div>
+				<script type="text/javascript"
+					src="${pageContext.request.contextPath}/resources/js/wpay.js"></script>
+				<!-- 품절상품포함 여부 -->
+				<script type="text/javascript">
 //<![CDATA[
 var stockOnlineStockpile = {};
 var warehouseStockpile = {};
@@ -10968,54 +11770,60 @@ function testerReviewReset() { //팝업초기화
 //]]>
 </script>
 
-<div class="item_detail_info float_right" id="contentDiv" style="margin-top: 20px; top: 0px; left: 638px;">
-	<div class="info">
-		<div class="info_sect">
-			<h4 class="item_name">
-				<div class="brand-name">
-					<a href="javascript:fn_goCategori('br02')" onclick="GA_Detail('brand',$(this))">${produt.bname}</a>
-									</div>
-				<span class="name ko_fir_spel">
-					${product.pname}<input type="hidden" id="brandName" value="MINE">
-					<input type="hidden" id="productName" value="${product.pname}">
-					<input type="hidden" id="productCode" value="${currentcolorcode}">
-				</span>
-			</h4>
-			
-			<div class="flag">
-			</div>
-			
-			<p class="price">
-				<span>₩${product.pprice}</span>
-						<input type="hidden" id="productPrice" value="${product.pprice}">
-			</p>
-			<!-- 상품추가설명 -->
-			<p class="selling_point"></p>
-			<!-- 20200914이후 추가 상품설명 (신) -->
-		            <div class="prod-detail-con-box">
-		                    <strong class="number-code">상품품번 : <span>${currentcolorcode}</span></strong>
-		                    <div class="round-style">
-		                        <p>${product.pcontent}</p>
-		                    </div>
-		                    <div class="fit-info">
-		                    <p class="size-text">- 피팅 정보 : 177cm, 55 사이즈 모델이 82 사이즈 착용</p>
-		                    </div>
-		                    </div>
-		            <!-- 20200914 이전 상품설명(구) -->
-		            </div>
-		
-		<!-- 20200904 추가 (더보기) -->
-                 <div class="info_sect">
-			            <div class="prod-detail-con-more">
-			                <button type="button" class="more-btn">더보기<i></i></button>
-			                <div class="more-con-box">
-			                    <ul>
-			                        <li>- 이탈리아 'TEXCO' 사의 수입 원단<br>- 100% 캐시미어 소재<br>- 앞면의 버튼 클로징<br>- 양 옆에 포켓<br>- 소맷단과 뒷면 밑단에 슬릿</li>
-			                            </ul>
-			                </div>
-			            </div>
-			        </div>
-			        <script>
+				<div class="item_detail_info float_right" id="contentDiv"
+					style="margin-top: 20px; top: 0px; left: 638px;">
+					<div class="info">
+						<div class="info_sect">
+							<h4 class="item_name">
+								<div class="brand-name">
+									<a href="javascript:fn_goCategori('br02')"
+										onclick="GA_Detail('brand',$(this))">${produt.bname}</a>
+								</div>
+								<span class="name ko_fir_spel"> ${product.pname}<input
+									type="hidden" id="brandName" value="${product.bname}">
+									<input type="hidden" id="productName" value="${product.pname}">
+									<input type="hidden" id="productCode"
+									value="${currentcolorcode}">
+								</span>
+							</h4>
+
+							<div class="flag"></div>
+
+							<p class="price">
+								<span>₩${product.pprice}</span> <input type="hidden"
+									id="productPrice" value="${product.pprice}">
+							</p>
+							<!-- 상품추가설명 -->
+							<p class="selling_point"></p>
+							<!-- 20200914이후 추가 상품설명 (신) -->
+							<div class="prod-detail-con-box">
+								<strong class="number-code">상품품번 : <span>${currentcolorcode}</span></strong>
+								<div class="round-style">
+									<p>${product.pcontent}</p>
+								</div>
+								<div class="fit-info">
+									<p class="size-text">- 피팅 정보 : 177cm, 55 사이즈 모델이 82 사이즈 착용</p>
+								</div>
+							</div>
+							<!-- 20200914 이전 상품설명(구) -->
+						</div>
+
+						<!-- 20200904 추가 (더보기) -->
+						<div class="info_sect">
+							<div class="prod-detail-con-more">
+								<button type="button" class="more-btn">
+									더보기<i></i>
+								</button>
+								<div class="more-con-box">
+									<ul>
+										<li>- 이탈리아 'TEXCO' 사의 수입 원단<br>- 100% 캐시미어 소재<br>-
+											앞면의 버튼 클로징<br>- 양 옆에 포켓<br>- 소맷단과 뒷면 밑단에 슬릿
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<script>
 			            $(document).ready(function() {
 			                $('.prod-detail-con-more').on('click', '.more-btn', function(){
 			                    $('.more-con-box').slideToggle(function(){
@@ -11024,19 +11832,16 @@ function testerReviewReset() { //팝업초기화
 			                })
 			            });
 			        </script>
-			        <!-- //20200904 더보기 -->
-                 <div class="info_sect">
-			<ul class="point_delivery">
-				<li>
-					<span class="title">한섬마일리지</span>
-					<span class="txt">${mileage}&nbsp;M&nbsp;(5%)</span>
-									</li>
-				
-				<li>
-                    <span class="title">H.Point</span>
-                     <span class="txt">${hpoint}&nbsp;P&nbsp;(0.1%)</span>
-                        <a href="javascript:fn_cardBenefit();" id="cardbenef" class="etc_info" onclick="GA_Event('상품_상세','카드사_혜택안내','클릭');">카드사 혜택안내</a>
-                    <script type="text/javascript">
+						<!-- //20200904 더보기 -->
+						<div class="info_sect">
+							<ul class="point_delivery">
+								<li><span class="title">한섬마일리지</span> <span class="txt">${mileage}&nbsp;M&nbsp;(5%)</span>
+								</li>
+
+								<li><span class="title">H.Point</span> <span class="txt">${hpoint}&nbsp;P&nbsp;(0.1%)</span>
+									<a href="javascript:fn_cardBenefit();" id="cardbenef"
+									class="etc_info" onclick="GA_Event('상품_상세','카드사_혜택안내','클릭');">카드사
+										혜택안내</a> <script type="text/javascript">
 $(document).ready(function(){
 	
 	
@@ -11096,241 +11901,283 @@ function fn_tableMerge(id){
 
 </script>
 
-<div class="popwrap w_type_2" id="cardBenefit" style="display:none;">
-	<div class="pop_tltwrap2">
-		<h3>카드혜택안내</h3>
-	</div>
-	<div class="pop_cnt">
-		<div class="card_benefits scroll-y">
-			<div class="box">
-					<div class="title clearfix">
-						<p class="float_left">무이자 할부 행사</p>
-						<!-- 
+									<div class="popwrap w_type_2" id="cardBenefit"
+										style="display: none;">
+										<div class="pop_tltwrap2">
+											<h3>카드혜택안내</h3>
+										</div>
+										<div class="pop_cnt">
+											<div class="card_benefits scroll-y">
+												<div class="box">
+													<div class="title clearfix">
+														<p class="float_left">무이자 할부 행사</p>
+														<!-- 
 						<p class="float_left">무이자 할부 행사</p>
 						<p class="float_right">행사기간 : 2015.08.01 ~ 2015.12.31</p>
 						-->
-					</div>
-					<table class="cnt_type1" id="noInterestTable">
-						<caption>무이자 할부 행사</caption>
-						<colgroup>
-							<col style="width:155px">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-									<th scope="row" name="신한카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/hde/h2b/8814181515294.jpg" orgurl="/medias/shinhan.jpg?context=bWFzdGVyfHJvb3R8MjY1N3xpbWFnZS9qcGVnfGhkZS9oMmIvODgxNDE4MTUxNTI5NC5qcGd8NTAwMDYxM2ZmZmRlZGFhZDQ0ODNmODJjZTg2OTE3MGI3OWQ2ZmE3YzI0ZjA3MDY3NzIxYWVhNmY3NDQyYWUzMA" alt="신한카드"></span></th>
-									<td><b>신한카드 5만원이상 결제시 2~6개월 무이자 할부</b><br>
-대상: 신한카드 전 회원<br>
-(신한BC 제외/ 법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="삼성카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/h3d/h4d/8814181613598.jpg" orgurl="/medias/SAMSUNG.jpg?context=bWFzdGVyfHJvb3R8MzIxOXxpbWFnZS9qcGVnfGgzZC9oNGQvODgxNDE4MTYxMzU5OC5qcGd8ZGY1NDJiM2U1YWNmNGE5MTJkOTA0MTAxMDliMDc4ZjRlNTJmZjJlOTkxOTQzZTEwMDcxZWU2NGU2MjJmMWE2Mw" alt="삼성카드"></span></th>
-									<td><b>삼성카드 5만원이상 결제시 2~6개월 무이자 할부</b><br>
-대상: 삼성카드 전 회원<br>
-(법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="비씨카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/hf2/h0d/8814181220382.jpg" orgurl="/medias/BC.jpg?context=bWFzdGVyfHJvb3R8MjQ1OHxpbWFnZS9qcGVnfGhmMi9oMGQvODgxNDE4MTIyMDM4Mi5qcGd8MjZlZGU2ZGQyNDBkYzU5YmY2NWY0MDU3NDc1OTA0YWI5NmM4NDJjMDFiYjBiYjBjY2FhZjhmMzg3ZmE5NGU5Yw" alt="비씨카드"></span></th>
-									<td><b>비씨카드 5만원이상 결제시 2~7개월 무이자 할부</b><br> 
-대상: 비씨카드 전 회원<br>(법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="현대카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/h5d/h7c/8814181711902.jpg" orgurl="/medias/HYUNDAI.jpg?context=bWFzdGVyfHJvb3R8MjYxMHxpbWFnZS9qcGVnfGg1ZC9oN2MvODgxNDE4MTcxMTkwMi5qcGd8YmM5ZWY0ZjlhODlkMzdmMjYyNmY4NjQ4OWU5NWVjOWFlMGY4ODIwYzZlNjA0MjBlNDkwNWI0ZDllYThjMWE5Mw" alt="현대카드"></span></th>
-									<td><b>현대카드 5만원이상 결제시 2~7개월 무이자 할부</b><br>
-대상: 현대카드 전 회원<br>
-(법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="국민카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/h2e/h34/8814181023774.jpg" orgurl="/medias/kucmin.jpg?context=bWFzdGVyfHJvb3R8MzMwM3xpbWFnZS9qcGVnfGgyZS9oMzQvODgxNDE4MTAyMzc3NC5qcGd8MjM1YjEyN2I4OTljMGIxYzY3MjhjNDhkZWMyOTE5ODZjYmRiYWExNDdhOWZmNDQ3ZWNhNGIxZjYwYzk2MDA4Zg" alt="국민카드"></span></th>
-									<td><b>KB국민카드 5만원이상 결제시 2~7개월 무이자 할부</b><br>
-대상: KB국민카드 전 회원<br>
-(NH농협, 국민BC 제외/ 법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="하나카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/h60/hfb/8814054965278.gif" orgurl="/medias/hanacard.gif?context=bWFzdGVyfHJvb3R8MTkzNXxpbWFnZS9naWZ8aDYwL2hmYi84ODE0MDU0OTY1Mjc4LmdpZnxhMGM5OWY0MDdhNDhjYzkwOTdiMzhkM2VmMDQ2YTI0NTAyNDBjZTljNTdiYzk4YWRhZmI0NjBhOWRhNzRiMGYw" alt="하나카드"></span></th>
-									<td><b>하나카드 5만원이상 결제시 2~8개월 무이자 할부</b><br>
-대상: 하나카드 전 회원 (구 하나SK, 구 외환)<br>
-(하나BC카드 포함/법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="NH카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/h8e/h36/8814181908510.jpg" orgurl="/medias/NH.jpg?context=bWFzdGVyfHJvb3R8Mzk3OXxpbWFnZS9qcGVnfGg4ZS9oMzYvODgxNDE4MTkwODUxMC5qcGd8ZWVlNmY1OWM0NDdmMjg2M2Y4NGZkNDZjYThmOTVkMWNmY2QwYWNkOWI1ODc5YTdiMTc5MjY4MThiZTkzYzNmMw" alt="NH카드"></span></th>
-									<td><b>NH농협카드 5만원이상 결제시 2~8개월 무이자 할부</b><br>
-대상: NH농협카드 전 회원<br>
-(NH농협BC카드 포함/ 법인,기프트,체크,선불카드 제외)
-<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="롯데카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/hb3/h47/8814181810206.jpg" orgurl="/medias/LOTTE.jpg?context=bWFzdGVyfHJvb3R8MzI3MXxpbWFnZS9qcGVnfGhiMy9oNDcvODgxNDE4MTgxMDIwNi5qcGd8MDliOThkNzA1ZDc2ZDE4MzZhYmUzYjI2MDMxZDk0NGU3OTVjYzBhYTA1MmMzMjAyZmE0Y2U4OTZlNTU3NDU2Zg" alt="롯데카드"></span></th>
-									<td><b>롯데카드 5만원이상 결제시 2~4개월 무이자 할부</b><br>
-대상:롯데카드 전 회원<br>
-(법인,기프트,체크,선불카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							</tbody>
-					</table>
-				</div>
-			<div class="box">
-					<div class="title clearfix">
-						<p class="float_left">부분 무이자 할부 행사</p>
-						
-					</div>
-					<table class="cnt_type1" id="partNoInterestTable">
-						<caption>부분 무이자 할부 행사</caption>
-						<colgroup>
-							<col style="width:155px">
-							<col>
-						</colgroup>
-						<tbody>
-							<tr>
-									<th scope="row" name="신한카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/hde/h2b/8814181515294.jpg" orgurl="/medias/shinhan.jpg?context=bWFzdGVyfHJvb3R8MjY1N3xpbWFnZS9qcGVnfGhkZS9oMmIvODgxNDE4MTUxNTI5NC5qcGd8NTAwMDYxM2ZmZmRlZGFhZDQ0ODNmODJjZTg2OTE3MGI3OWQ2ZmE3YzI0ZjA3MDY3NzIxYWVhNmY3NDQyYWUzMA" alt="신한카드"></span></th>
-									<td><b>10개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="삼성카드" rowspan="2"><span class="card"><img src="http://image.thehandsome.com/sys_master/h3d/h4d/8814181613598.jpg" orgurl="/medias/SAMSUNG.jpg?context=bWFzdGVyfHJvb3R8MzIxOXxpbWFnZS9qcGVnfGgzZC9oNGQvODgxNDE4MTYxMzU5OC5qcGd8ZGY1NDJiM2U1YWNmNGE5MTJkOTA0MTAxMDliMDc4ZjRlNTJmZjJlOTkxOTQzZTEwMDcxZWU2NGU2MjJmMWE2Mw" alt="삼성카드"></span></th>
-									<td><b>10개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4회차 고객 부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									
-									<td><b>12개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4,5회차 고객 부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)
-<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="비씨카드" rowspan="2"><span class="card"><img src="http://image.thehandsome.com/sys_master/hf2/h0d/8814181220382.jpg" orgurl="/medias/BC.jpg?context=bWFzdGVyfHJvb3R8MjQ1OHxpbWFnZS9qcGVnfGhmMi9oMGQvODgxNDE4MTIyMDM4Mi5qcGd8MjZlZGU2ZGQyNDBkYzU5YmY2NWY0MDU3NDc1OTA0YWI5NmM4NDJjMDFiYjBiYjBjY2FhZjhmMzg3ZmE5NGU5Yw" alt="비씨카드"></span></th>
-									<td><b> 우리BC 10개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)
-<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									
-									<td><b>우리BC 12개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)
-<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="국민카드" rowspan="2"><span class="card"><img src="http://image.thehandsome.com/sys_master/h2e/h34/8814181023774.jpg" orgurl="/medias/kucmin.jpg?context=bWFzdGVyfHJvb3R8MzMwM3xpbWFnZS9qcGVnfGgyZS9oMzQvODgxNDE4MTAyMzc3NC5qcGd8MjM1YjEyN2I4OTljMGIxYzY3MjhjNDhkZWMyOTE5ODZjYmRiYWExNDdhOWZmNDQ3ZWNhNGIxZjYwYzk2MDA4Zg" alt="국민카드"></span></th>
-									<td><b>10개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4 회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									
-									<td><b>12개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4,5 회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="하나카드" rowspan="2"><span class="card"><img src="http://image.thehandsome.com/sys_master/h60/hfb/8814054965278.gif" orgurl="/medias/hanacard.gif?context=bWFzdGVyfHJvb3R8MTkzNXxpbWFnZS9naWZ8aDYwL2hmYi84ODE0MDU0OTY1Mjc4LmdpZnxhMGM5OWY0MDdhNDhjYzkwOTdiMzhkM2VmMDQ2YTI0NTAyNDBjZTljNTdiYzk4YWRhZmI0NjBhOWRhNzRiMGYw" alt="하나카드"></span></th>
-									<td><b>10개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									
-									<td><b>12개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							<tr>
-									<th scope="row" name="신한카드"><span class="card"><img src="http://image.thehandsome.com/sys_master/hde/h2b/8814181515294.jpg" orgurl="/medias/shinhan.jpg?context=bWFzdGVyfHJvb3R8MjY1N3xpbWFnZS9qcGVnfGhkZS9oMmIvODgxNDE4MTUxNTI5NC5qcGd8NTAwMDYxM2ZmZmRlZGFhZDQ0ODNmODJjZTg2OTE3MGI3OWQ2ZmE3YzI0ZjA3MDY3NzIxYWVhNmY3NDQyYWUzMA" alt="신한카드"></span></th>
-									<td><b>12개월 부분무이자</b><br>
-(5만원이상 결제시/1,2,3,4,5회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
-									2022.10.01&nbsp;~&nbsp;2022.10.31</td>
-								</tr>
-							</tbody>
-					</table>
-					<ul class="bul_sty01_li mt10">
-						<li>무이자 할부 결제 시 카드사 포인트는 적립되지 않습니다.</li>
-						<li>ARS 무이자 할부는 해당 카드사 ARS 번호로 사전 신청을 하신 경우에 한하여<br>무이자 혜택이 적용됩니다.(ARS 부문 무이자 할부 포함)</li>
-						<li>상기 부분 무이자 할부는 5만원 이상 결제 시 자동 적용되며, 결제창에는 무이자 표시가   되지 않을  수 있습니다.</li>
-						<li>법인 / 체크 / 선불 / 기프트 / 은행 계열 카드는 제외됩니다.</li>
-						<li>고객 부담 수수료는 해당 카드사로 문의 바랍니다.</li>
-						<li>본 행사는 카드사 사정에 따라 일부 내용이 변경 또는 중단될 수 있습니다.</li>
-					</ul>
-				</div>
-			</div>
-	</div>
-	<a href="javascript:void(0);" class="btn_close"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div>
-</li>
-				
-				<li>
-					<span class="title">배송비</span>
-					<span class="txt">30,000원 이상 무료배송 (실결제 기준)</span>
-					   <a href="javascript:fn_popupDelivery();" class="etc_info" onclick="GA_Event('상품_상세','배송안내','클릭');">배송안내</a>
-					<div class="popwrap w_type_2" id="popupDelivery" style="display:none;">
-	<div class="pop_tltwrap2">
-		<h3>배송비안내</h3>
-	</div>
-	<div class="pop_cnt">
-		<table class="cnt_type1">
-			<caption>배송비안내</caption>
-			<colgroup>
-				<col style="width:155px">
-				<col>
-			</colgroup>
-			<tbody>
-				<tr>
-					<th scope="row">배송기간</th>
-					<td>평균 입금완료일 기준 2-4일 소요됩니다.<br>(토/일/공휴일 제외)</td>
-				</tr>
-				<tr>
-					<th scope="row">배송비</th>
-					<td>
-						<ul class="bul_sty01_li">
-							<li>30,000원 이상 결제 시 <em class="ft_point01">무료배송</em></li>
-							<li>30,000원 미만 결제 시 <em class="ft_point01">2,500원</em></li>
-						</ul>
-						<p class="bul_sty02">도서산간 지역은 3,000원의 별도 배송비가 부과됩니다.</p>
-						<p class="bul_sty02">쿠폰/바우처 할인금액 및 한섬마일리지/H.Point 사용을 제외한 실결제금액 기준입니다.</p>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-	<a href="javascript:void(0);" class="btn_close"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div>
-</li>
-				</ul>
-		</div>
+													</div>
+													<table class="cnt_type1" id="noInterestTable">
+														<caption>무이자 할부 행사</caption>
+														<colgroup>
+															<col style="width: 155px">
+															<col>
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row" name="신한카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/hde/h2b/8814181515294.jpg"
+																		orgurl="/medias/shinhan.jpg?context=bWFzdGVyfHJvb3R8MjY1N3xpbWFnZS9qcGVnfGhkZS9oMmIvODgxNDE4MTUxNTI5NC5qcGd8NTAwMDYxM2ZmZmRlZGFhZDQ0ODNmODJjZTg2OTE3MGI3OWQ2ZmE3YzI0ZjA3MDY3NzIxYWVhNmY3NDQyYWUzMA"
+																		alt="신한카드"></span></th>
+																<td><b>신한카드 5만원이상 결제시 2~6개월 무이자 할부</b><br> 대상:
+																	신한카드 전 회원<br> (신한BC 제외/ 법인,기프트,체크,선불카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="삼성카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h3d/h4d/8814181613598.jpg"
+																		orgurl="/medias/SAMSUNG.jpg?context=bWFzdGVyfHJvb3R8MzIxOXxpbWFnZS9qcGVnfGgzZC9oNGQvODgxNDE4MTYxMzU5OC5qcGd8ZGY1NDJiM2U1YWNmNGE5MTJkOTA0MTAxMDliMDc4ZjRlNTJmZjJlOTkxOTQzZTEwMDcxZWU2NGU2MjJmMWE2Mw"
+																		alt="삼성카드"></span></th>
+																<td><b>삼성카드 5만원이상 결제시 2~6개월 무이자 할부</b><br> 대상:
+																	삼성카드 전 회원<br> (법인,기프트,체크,선불카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="비씨카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/hf2/h0d/8814181220382.jpg"
+																		orgurl="/medias/BC.jpg?context=bWFzdGVyfHJvb3R8MjQ1OHxpbWFnZS9qcGVnfGhmMi9oMGQvODgxNDE4MTIyMDM4Mi5qcGd8MjZlZGU2ZGQyNDBkYzU5YmY2NWY0MDU3NDc1OTA0YWI5NmM4NDJjMDFiYjBiYjBjY2FhZjhmMzg3ZmE5NGU5Yw"
+																		alt="비씨카드"></span></th>
+																<td><b>비씨카드 5만원이상 결제시 2~7개월 무이자 할부</b><br> 대상:
+																	비씨카드 전 회원<br>(법인,기프트,체크,선불카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="현대카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h5d/h7c/8814181711902.jpg"
+																		orgurl="/medias/HYUNDAI.jpg?context=bWFzdGVyfHJvb3R8MjYxMHxpbWFnZS9qcGVnfGg1ZC9oN2MvODgxNDE4MTcxMTkwMi5qcGd8YmM5ZWY0ZjlhODlkMzdmMjYyNmY4NjQ4OWU5NWVjOWFlMGY4ODIwYzZlNjA0MjBlNDkwNWI0ZDllYThjMWE5Mw"
+																		alt="현대카드"></span></th>
+																<td><b>현대카드 5만원이상 결제시 2~7개월 무이자 할부</b><br> 대상:
+																	현대카드 전 회원<br> (법인,기프트,체크,선불카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="국민카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h2e/h34/8814181023774.jpg"
+																		orgurl="/medias/kucmin.jpg?context=bWFzdGVyfHJvb3R8MzMwM3xpbWFnZS9qcGVnfGgyZS9oMzQvODgxNDE4MTAyMzc3NC5qcGd8MjM1YjEyN2I4OTljMGIxYzY3MjhjNDhkZWMyOTE5ODZjYmRiYWExNDdhOWZmNDQ3ZWNhNGIxZjYwYzk2MDA4Zg"
+																		alt="국민카드"></span></th>
+																<td><b>KB국민카드 5만원이상 결제시 2~7개월 무이자 할부</b><br>
+																	대상: KB국민카드 전 회원<br> (NH농협, 국민BC 제외/ 법인,기프트,체크,선불카드
+																	제외)<br> 2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="하나카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h60/hfb/8814054965278.gif"
+																		orgurl="/medias/hanacard.gif?context=bWFzdGVyfHJvb3R8MTkzNXxpbWFnZS9naWZ8aDYwL2hmYi84ODE0MDU0OTY1Mjc4LmdpZnxhMGM5OWY0MDdhNDhjYzkwOTdiMzhkM2VmMDQ2YTI0NTAyNDBjZTljNTdiYzk4YWRhZmI0NjBhOWRhNzRiMGYw"
+																		alt="하나카드"></span></th>
+																<td><b>하나카드 5만원이상 결제시 2~8개월 무이자 할부</b><br> 대상:
+																	하나카드 전 회원 (구 하나SK, 구 외환)<br> (하나BC카드
+																	포함/법인,기프트,체크,선불카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="NH카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h8e/h36/8814181908510.jpg"
+																		orgurl="/medias/NH.jpg?context=bWFzdGVyfHJvb3R8Mzk3OXxpbWFnZS9qcGVnfGg4ZS9oMzYvODgxNDE4MTkwODUxMC5qcGd8ZWVlNmY1OWM0NDdmMjg2M2Y4NGZkNDZjYThmOTVkMWNmY2QwYWNkOWI1ODc5YTdiMTc5MjY4MThiZTkzYzNmMw"
+																		alt="NH카드"></span></th>
+																<td><b>NH농협카드 5만원이상 결제시 2~8개월 무이자 할부</b><br>
+																	대상: NH농협카드 전 회원<br> (NH농협BC카드 포함/ 법인,기프트,체크,선불카드
+																	제외) <br> 2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="롯데카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/hb3/h47/8814181810206.jpg"
+																		orgurl="/medias/LOTTE.jpg?context=bWFzdGVyfHJvb3R8MzI3MXxpbWFnZS9qcGVnfGhiMy9oNDcvODgxNDE4MTgxMDIwNi5qcGd8MDliOThkNzA1ZDc2ZDE4MzZhYmUzYjI2MDMxZDk0NGU3OTVjYzBhYTA1MmMzMjAyZmE0Y2U4OTZlNTU3NDU2Zg"
+																		alt="롯데카드"></span></th>
+																<td><b>롯데카드 5만원이상 결제시 2~4개월 무이자 할부</b><br>
+																	대상:롯데카드 전 회원<br> (법인,기프트,체크,선불카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+												<div class="box">
+													<div class="title clearfix">
+														<p class="float_left">부분 무이자 할부 행사</p>
 
-		<div class="info_sect" id="color_size">
-			<ul class="color_size_qty">
-				<li>
-					<span class="title">색상</span>
-					<div class="txt">
-						
-						<ul class="color_chip clearfix">
-						<c:forEach var="color" items="${colors}">
-						<input type="hidden" id="colorName" value="${color.pcolor}">
-											<li id="${color.pcodecolor}">
-													<input type="hidden" class="colorNameVal" value="${color.pcolor}">
-													<a href="/product/productdetail?pcode=${color.pcode}&pcolor=${color.pcolor}" class="${color.pcolor} <c:if test='${color.pcolor eq currentpcolor}'>on</c:if>" style="background:#a36944 url('${color.colorurl}')" onmouseover="setColorName('${color.pcolor}');" onmouseout="setColorName('');"></a>
-												</li>
-												</c:forEach>
-											</ul>
-						
-					</div>
-					<span class="cl_name" id="colorNameContent"></span>
-				</li>
-				<li>
-				    <span class="title">사이즈<!-- 사이즈 --></span>
-					<span class="txt">
-					<script type="text/javascript">
+													</div>
+													<table class="cnt_type1" id="partNoInterestTable">
+														<caption>부분 무이자 할부 행사</caption>
+														<colgroup>
+															<col style="width: 155px">
+															<col>
+														</colgroup>
+														<tbody>
+															<tr>
+																<th scope="row" name="신한카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/hde/h2b/8814181515294.jpg"
+																		orgurl="/medias/shinhan.jpg?context=bWFzdGVyfHJvb3R8MjY1N3xpbWFnZS9qcGVnfGhkZS9oMmIvODgxNDE4MTUxNTI5NC5qcGd8NTAwMDYxM2ZmZmRlZGFhZDQ0ODNmODJjZTg2OTE3MGI3OWQ2ZmE3YzI0ZjA3MDY3NzIxYWVhNmY3NDQyYWUzMA"
+																		alt="신한카드"></span></th>
+																<td><b>10개월 부분무이자</b><br> (5만원이상 결제시/1,2,3,4회차
+																	고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="삼성카드" rowspan="2"><span
+																	class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h3d/h4d/8814181613598.jpg"
+																		orgurl="/medias/SAMSUNG.jpg?context=bWFzdGVyfHJvb3R8MzIxOXxpbWFnZS9qcGVnfGgzZC9oNGQvODgxNDE4MTYxMzU5OC5qcGd8ZGY1NDJiM2U1YWNmNGE5MTJkOTA0MTAxMDliMDc4ZjRlNTJmZjJlOTkxOTQzZTEwMDcxZWU2NGU2MjJmMWE2Mw"
+																		alt="삼성카드"></span></th>
+																<td><b>10개월 부분무이자</b><br> (5만원이상 결제시/1,2,3,4회차
+																	고객 부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+
+																<td><b>12개월 부분무이자</b><br> (5만원이상
+																	결제시/1,2,3,4,5회차 고객 부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외) <br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="비씨카드" rowspan="2"><span
+																	class="card"><img
+																		src="http://image.thehandsome.com/sys_master/hf2/h0d/8814181220382.jpg"
+																		orgurl="/medias/BC.jpg?context=bWFzdGVyfHJvb3R8MjQ1OHxpbWFnZS9qcGVnfGhmMi9oMGQvODgxNDE4MTIyMDM4Mi5qcGd8MjZlZGU2ZGQyNDBkYzU5YmY2NWY0MDU3NDc1OTA0YWI5NmM4NDJjMDFiYjBiYjBjY2FhZjhmMzg3ZmE5NGU5Yw"
+																		alt="비씨카드"></span></th>
+																<td><b> 우리BC 10개월 부분무이자</b><br> (5만원이상
+																	결제시/1,2,3회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외) <br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+
+																<td><b>우리BC 12개월 부분무이자</b><br> (5만원이상
+																	결제시/1,2,3,4회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외) <br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="국민카드" rowspan="2"><span
+																	class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h2e/h34/8814181023774.jpg"
+																		orgurl="/medias/kucmin.jpg?context=bWFzdGVyfHJvb3R8MzMwM3xpbWFnZS9qcGVnfGgyZS9oMzQvODgxNDE4MTAyMzc3NC5qcGd8MjM1YjEyN2I4OTljMGIxYzY3MjhjNDhkZWMyOTE5ODZjYmRiYWExNDdhOWZmNDQ3ZWNhNGIxZjYwYzk2MDA4Zg"
+																		alt="국민카드"></span></th>
+																<td><b>10개월 부분무이자</b><br> (5만원이상 결제시/1,2,3,4
+																	회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+
+																<td><b>12개월 부분무이자</b><br> (5만원이상 결제시/1,2,3,4,5
+																	회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="하나카드" rowspan="2"><span
+																	class="card"><img
+																		src="http://image.thehandsome.com/sys_master/h60/hfb/8814054965278.gif"
+																		orgurl="/medias/hanacard.gif?context=bWFzdGVyfHJvb3R8MTkzNXxpbWFnZS9naWZ8aDYwL2hmYi84ODE0MDU0OTY1Mjc4LmdpZnxhMGM5OWY0MDdhNDhjYzkwOTdiMzhkM2VmMDQ2YTI0NTAyNDBjZTljNTdiYzk4YWRhZmI0NjBhOWRhNzRiMGYw"
+																		alt="하나카드"></span></th>
+																<td><b>10개월 부분무이자</b><br> (5만원이상 결제시/1,2,3회차
+																	고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+
+																<td><b>12개월 부분무이자</b><br> (5만원이상 결제시/1,2,3,4회차
+																	고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+															<tr>
+																<th scope="row" name="신한카드"><span class="card"><img
+																		src="http://image.thehandsome.com/sys_master/hde/h2b/8814181515294.jpg"
+																		orgurl="/medias/shinhan.jpg?context=bWFzdGVyfHJvb3R8MjY1N3xpbWFnZS9qcGVnfGhkZS9oMmIvODgxNDE4MTUxNTI5NC5qcGd8NTAwMDYxM2ZmZmRlZGFhZDQ0ODNmODJjZTg2OTE3MGI3OWQ2ZmE3YzI0ZjA3MDY3NzIxYWVhNmY3NDQyYWUzMA"
+																		alt="신한카드"></span></th>
+																<td><b>12개월 부분무이자</b><br> (5만원이상
+																	결제시/1,2,3,4,5회차 고객부담, 잔여할부 수수료 면제/법인,체크,기프트카드 제외)<br>
+																	2022.10.01&nbsp;~&nbsp;2022.10.31</td>
+															</tr>
+														</tbody>
+													</table>
+													<ul class="bul_sty01_li mt10">
+														<li>무이자 할부 결제 시 카드사 포인트는 적립되지 않습니다.</li>
+														<li>ARS 무이자 할부는 해당 카드사 ARS 번호로 사전 신청을 하신 경우에 한하여<br>무이자
+															혜택이 적용됩니다.(ARS 부문 무이자 할부 포함)
+														</li>
+														<li>상기 부분 무이자 할부는 5만원 이상 결제 시 자동 적용되며, 결제창에는 무이자 표시가
+															되지 않을 수 있습니다.</li>
+														<li>법인 / 체크 / 선불 / 기프트 / 은행 계열 카드는 제외됩니다.</li>
+														<li>고객 부담 수수료는 해당 카드사로 문의 바랍니다.</li>
+														<li>본 행사는 카드사 사정에 따라 일부 내용이 변경 또는 중단될 수 있습니다.</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<a href="javascript:void(0);" class="btn_close"><img
+											src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+											alt="닫기"></a>
+									</div></li>
+
+								<li><span class="title">배송비</span> <span class="txt">30,000원
+										이상 무료배송 (실결제 기준)</span> <a href="javascript:fn_popupDelivery();"
+									class="etc_info" onclick="GA_Event('상품_상세','배송안내','클릭');">배송안내</a>
+									<div class="popwrap w_type_2" id="popupDelivery"
+										style="display: none;">
+										<div class="pop_tltwrap2">
+											<h3>배송비안내</h3>
+										</div>
+										<div class="pop_cnt">
+											<table class="cnt_type1">
+												<caption>배송비안내</caption>
+												<colgroup>
+													<col style="width: 155px">
+													<col>
+												</colgroup>
+												<tbody>
+													<tr>
+														<th scope="row">배송기간</th>
+														<td>평균 입금완료일 기준 2-4일 소요됩니다.<br>(토/일/공휴일 제외)
+														</td>
+													</tr>
+													<tr>
+														<th scope="row">배송비</th>
+														<td>
+															<ul class="bul_sty01_li">
+																<li>30,000원 이상 결제 시 <em class="ft_point01">무료배송</em></li>
+																<li>30,000원 미만 결제 시 <em class="ft_point01">2,500원</em></li>
+															</ul>
+															<p class="bul_sty02">도서산간 지역은 3,000원의 별도 배송비가 부과됩니다.</p>
+															<p class="bul_sty02">쿠폰/바우처 할인금액 및 한섬마일리지/H.Point 사용을
+																제외한 실결제금액 기준입니다.</p>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<a href="javascript:void(0);" class="btn_close"><img
+											src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+											alt="닫기"></a>
+									</div></li>
+							</ul>
+						</div>
+
+						<div class="info_sect" id="color_size">
+							<ul class="color_size_qty">
+								<li><span class="title">색상</span>
+									<div class="txt">
+
+										<ul class="color_chip clearfix">
+											<c:forEach var="color" items="${colors}">
+												<input type="hidden" id="colorName" value="${color.pcolor}">
+												<li id="${color.pcodecolor}"><input type="hidden"
+													class="colorNameVal" value="${color.pcolor}"> <a
+													href="/product/productdetail?pcode=${color.pcode}&pcolor=${color.pcolor}"
+													class="${color.pcolor} <c:if test='${color.pcolor eq currentpcolor}'>on</c:if>"
+													style="background:#a36944 url('${color.colorurl}')"
+													onmouseover="setColorName('${color.pcolor}');"
+													onmouseout="setColorName('');"></a></li>
+											</c:forEach>
+										</ul>
+
+									</div> <span class="cl_name" id="colorNameContent"></span></li>
+								<li><span class="title">사이즈<!-- 사이즈 --></span> <span
+									class="txt"> <script type="text/javascript">
 
 $(document).ready(function(){
 	
@@ -11352,826 +12199,995 @@ $(document).ready(function(){
 
 </script>
 
-<div class="popwrap w_type_2" id="sizeQuickReferenceLayer" style="display:none;">
-	<div class="pop_tltwrap2">
-		<h3>사이즈조견표</h3>
-	</div>
-	<div class="pop_cnt">
-		<div class="size_chart">
-			<div class="tab_a m6" id="size_tab">
-				<ul>
-					<li><a href="#;" class="active">WOMEN<br>TOP</a></li>
-					<li><a href="#;">WOMEN<br>BOTTOMS</a></li>
-					<li><a href="#;">WOMEN<br>SHOES</a></li>
-					<li><a href="#;">MEN<br>TOP</a></li>
-					<li><a href="#;">MEN<br>BOTTOMS</a></li>
-					<li><a href="#;">MEN<br>SHOES</a></li>
-				</ul>
-			</div>
-			<div class="size_tab_container">
-				<div>
-					<table class="cnt_type2">
-						<caption>사이즈조견표</caption>
-						<colgroup>
-							<col>
-							<col style="width:16%">
-							<col style="width:16%">
-							<col style="width:16%">
-							<col style="width:16%">
-							<col style="width:16%">
-						</colgroup>
-						<thead>
-							<tr class="al_middle">
-								<th scope="col">BRAND/<br>SIZE</th>
-								<th scope="col">XS</th>
-								<th scope="col">S</th>
-								<th scope="col">M</th>
-								<th scope="col">L</th>
-								<th scope="col">FREE</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="al_middle">
-								<th scope="row">TIME</th>
-								<td>76</td>
-								<td>82</td>
-								<td>88</td>
-								<td>94</td>
-								<td>90</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">MINE</th>
-								<td>76</td>
-								<td>82</td>
-								<td>88</td>
-								<td>94</td>
-								<td>90</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">SYSTEM</th>
-								<td>76</td>
-								<td>82</td>
-								<td>88</td>
-								<td>-</td>
-								<td>90</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">SJSJ</th>
-								<td>76</td>
-								<td>82</td>
-								<td>88</td>
-								<td>-</td>
-								<td>90</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row" rowspan="2">KOREA</th>
-								<td>85</td>
-								<td>90</td>
-								<td>95</td>
-								<td>100</td>
-								<td>-</td>
-							</tr>
-							<tr class="al_middle">
-								<td>44</td>
-								<td>55</td>
-								<td>66</td>
-								<td>77</td>
-								<td>-</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">US</th>
-								<td>2</td>
-								<td>4</td>
-								<td>6</td>
-								<td>8</td>
-								<td>-</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">EUROPE</th>
-								<td>34</td>
-								<td>36</td>
-								<td>38</td>
-								<td>40</td>
-								<td>-</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">CHINA</th>
-								<td>160/<br>80A</td>
-								<td>165/<br>84A</td>
-								<td>170/<br>88A</td>
-								<td>175/<br>92A</td>
-								<td>-</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div style="display:none;">
-					<table class="cnt_type2">
-						<caption>사이즈조견표</caption>
-						<colgroup>
-							<col>
-							<col style="width:19%">
-							<col style="width:19%">
-							<col style="width:19%">
-							<col style="width:19%">
-						</colgroup>
-						<thead>
-							<tr class="al_middle">
-								<th scope="col">BRAND/<br>SIZE</th>
-								<th scope="col">XS</th>
-								<th scope="col">S</th>
-								<th scope="col">M</th>
-								<th scope="col">L</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">TIME</th>
-								<td>61</td>
-								<td>64</td>
-								<td>67</td>
-								<td>70</td>
-							</tr>
-							<tr>
-								<th scope="row">MINE</th>
-								<td>61</td>
-								<td>64</td>
-								<td>67</td>
-								<td>70</td>
-							</tr>
-							<tr>
-								<th scope="row">SYSTEM</th>
-								<td>61</td>
-								<td>64</td>
-								<td>67</td>
-								<td>-</td>
-							</tr>
-							<tr>
-								<th scope="row">SJSJ</th>
-								<td>61</td>
-								<td>64</td>
-								<td>67</td>
-								<td>-</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row" rowspan="2">KOREA</th>
-								<td>24</td>
-								<td>26</td>
-								<td>28</td>
-								<td>30</td>
-							</tr>
-							<tr>
-								<td>44</td>
-								<td>55</td>
-								<td>66</td>
-								<td>77</td>
-							</tr>
-							<tr>
-								<th scope="row">US</th>
-								<td>2</td>
-								<td>4</td>
-								<td>6</td>
-								<td>8</td>
-							</tr>
-							<tr>
-								<th scope="row">EUROPE</th>
-								<td>34</td>
-								<td>36</td>
-								<td>38</td>
-								<td>40</td>
-							</tr>
-							<tr>
-								<th scope="row">CHINA</th>
-								<td>160/<br>66A</td>
-								<td>165/<br>68A</td>
-								<td>170/<br>70A</td>
-								<td>175/<br>72A</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div style="display:none;">
-					<table class="cnt_type2">
-						<caption>사이즈조견표</caption>
-						<colgroup>
-							<col>
-							<col style="width:19%">
-							<col style="width:19%">
-							<col style="width:19%">
-							<col style="width:19%">
-						</colgroup>
-						<thead>
-							<tr class="al_middle">
-								<th scope="col">BRAND/<br>SIZE</th>
-								<th scope="col">XS</th>
-								<th scope="col">S</th>
-								<th scope="col">M</th>
-								<th scope="col">L</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">TIME</th>
-								<td>230</td>
-								<td>235</td>
-								<td>240</td>
-								<td>245</td>
-							</tr>
-							<tr>
-								<th scope="row">MINE</th>
-								<td>230</td>
-								<td>235</td>
-								<td>240</td>
-								<td>245</td>
-							</tr>
-							<tr>
-								<th scope="row">SYSTEM</th>
-								<td>230</td>
-								<td>235</td>
-								<td>240</td>
-								<td>245</td>
-							</tr>
-							<tr>
-								<th scope="row">SJSJ</th>
-								<td>230</td>
-								<td>235</td>
-								<td>240</td>
-								<td>245</td>
-							</tr>
-							<tr>
-								<th scope="row">KOREA</th>
-								<td>230</td>
-								<td>235</td>
-								<td>240</td>
-								<td>245</td>
-							</tr>
-							<tr>
-								<th scope="row">US</th>
-								<td>6</td>
-								<td>6.5</td>
-								<td>7</td>
-								<td>7.5</td>
-							</tr>
-							<tr>
-								<th scope="row">EUROPE</th>
-								<td>36</td>
-								<td>36.5</td>
-								<td>37</td>
-								<td>37.5</td>
-							</tr>
-							<tr>
-								<th scope="row">CHINA</th>
-								<td>36</td>
-								<td>37</td>
-								<td>38</td>
-								<td>39</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div style="display:none;">
-					<table class="cnt_type2">
-						<caption>사이즈조견표</caption>
-						<colgroup>
-							<col>
-							<col style="width:16%">
-							<col style="width:16%">
-							<col style="width:16%">
-							<col style="width:16%">
-							<col style="width:16%">
-						</colgroup>
-						<thead>
-							<tr class="al_middle">
-								<th scope="col">BRAND/<br>SIZE</th>
-								<th scope="col">S</th>
-								<th scope="col">M</th>
-								<th scope="col">L</th>
-								<th scope="col">XL</th>
-								<th scope="col">XXL</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="al_middle">
-								<th scope="row">TIME<br>HOMME</th>
-								<td>90</td>
-								<td>95</td>
-								<td>100</td>
-								<td>105</td>
-								<td>110</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">SYSTEM<br>HOMME</th>
-								<td>90</td>
-								<td>95</td>
-								<td>100</td>
-								<td>105</td>
-								<td>110</td>
-							</tr>
-							<tr class="al_middle">
-                                <th scope="row">CLUB<br>MONACO</th>
-                                <td>XS</td>
-                                <td>S</td>
-                                <td>M</td>
-                                <td>L</td>
-                                <td>XL</td>
-                            </tr>
-							<tr class="al_middle">
-								<th scope="row">KOREA</th>
-								<td>90</td>
-								<td>95</td>
-								<td>100</td>
-								<td>105</td>
-								<td>110</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">US</th>
-								<td>36</td>
-								<td>38</td>
-								<td>40</td>
-								<td>42</td>
-								<td>44</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">EUROPE</th>
-								<td>46</td>
-								<td>48</td>
-								<td>50</td>
-								<td>52</td>
-								<td>54</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">CHINA</th>
-								<td>165/<br>80-90</td>
-								<td>170/<br>96-98</td>
-								<td>175/<br>108-110</td>
-								<td>180/<br>118-122</td>
-								<td>185/<br>126-130</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div style="display:none;">
-					<table class="cnt_type2">
-						<caption>사이즈조견표</caption>
-						<colgroup>
-							<col>
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-							<col style="width:9.5%">
-						</colgroup>
-						<thead>
-							<tr class="al_middle">
-								<th scope="col">BRAND/<br>SIZE</th>
-								<th scope="col">S</th>
-								<th scope="col" colspan="2">M</th>
-								<th scope="col" colspan="2">L</th>
-								<th scope="col" colspan="2">XL</th>
-								<th scope="col" colspan="2">XXL</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="al_middle">
-								<th scope="row">TIME<br>HOMME</th>
-								<td>74</td>
-								<td colspan="2">78</td>
-								<td>82</td>
-								<td>84</td>
-								<td>86</td>
-								<td>88</td>
-								<td>90</td>
-								<td>92</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">SYSTEM<br>HOMME</th>
-								<td>74</td>
-								<td colspan="2">78</td>
-								<td>82</td>
-								<td>84</td>
-								<td>86</td>
-								<td>88</td>
-								<td>90</td>
-								<td>92</td>
-							</tr>
-                            <tr class="al_middle">
-                                <th scope="row">CLUB<br>MONACO</th>
-                                <td>29</td>
-                                <td>30</td>
-                                <td>31</td>
-                                <td>32</td>
-                                <td>33</td>
-                                <td colspan="2">34</td>
-                                <td colspan="2">36</td>
-                            </tr>
-							<tr class="al_middle">
-								<th scope="row">KOREA</th>
-								<td>29</td>
-								<td colspan="2">30</td>
-								<td>32</td>
-								<td>33</td>
-								<td>34</td>
-								<td>35</td>
-								<td>35.5</td>
-								<td>36</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">US</th>
-								<td>44T</td>
-								<td colspan="2">46T</td>
-								<td colspan="2">48T</td>
-								<td colspan="2">50T</td>
-								<td colspan="2">52T</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">EUROPE</th>
-								<td>44</td>
-								<td colspan="2">46</td>
-								<td colspan="2">48</td>
-								<td colspan="2">50</td>
-								<td colspan="2">52</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">CHINA</th>
-								<td>44</td>
-								<td colspan="2">46</td>
-								<td colspan="2">48</td>
-								<td colspan="2">50</td>
-								<td colspan="2">52</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div style="display:none;">
-					<table class="cnt_type2">
-						<caption>사이즈조견표</caption>
-						<colgroup>
-							<col>
-							<col style="width:23%">
-							<col style="width:23%">
-							<col style="width:23%">
-						</colgroup>
-						<thead>
-							<tr class="al_middle">
-								<th scope="col">BRAND<br>SIZE</th>
-								<th scope="col">S</th>
-								<th scope="col">M</th>
-								<th scope="col">L</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr class="al_middle">
-								<th scope="row">TIME HOMME</th>
-								<td>260</td>
-								<td>270</td>
-								<td>280</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">SYSTEM HOMME</th>
-								<td>260</td>
-								<td>270</td>
-								<td>280</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">KOREA</th>
-								<td>260</td>
-								<td>270</td>
-								<td>280</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">US</th>
-								<td>8</td>
-								<td>9</td>
-								<td>10</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">EUROPE</th>
-								<td>41</td>
-								<td>42</td>
-								<td>43.5</td>
-							</tr>
-							<tr class="al_middle">
-								<th scope="row">CHINA</th>
-								<td>43</td>
-								<td>45</td>
-								<td>47</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				</div>
-		</div>
-	</div>
-	<a href="javascript:void(0);" class="btn_close"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div><ul class="size_chip clearfix sizeChipKo1901">
-							<li id="MN2C8WJC026WP_CM_76">
-										<a href="javascript:fn_detailProductAjax('MN2C8WJC026WP_CM_76')" class="on" onclick="GA_Event('상품_상세','사이즈','76')">76<span class="ko_size1901">&nbsp;(44)</span></a>
-										</li>
-									<li id="MN2C8WJC026WP_CM_82">
-										<a href="javascript:fn_detailProductAjax('MN2C8WJC026WP_CM_82')" onclick="GA_Event('상품_상세','사이즈','82')">82<span class="ko_size1901">&nbsp;(55)</span></a>
-										</li>
-									</ul>
-					</span>
-					<!-- 2021.08.10 화장품 상품인 경우 사이즈조견표 영역 미노출 -->
-					<a href="javascript:fn_popupSizeQuickReference();" class="etc_info" onclick="GA_Event('상품_상세','사이즈_조건표','클릭')">사이즈 조견표</a>
-					<!-- 재입고알림 툴팁 -->
-                    <!-- //재입고알림 툴팁 -->
-                    </li>
-				<li>
-					<span class="title">수량</span>
-					<span class="txt">
-						<span class="qty_sel num">
-							<a href="javascript:fn_qtySubtraction();" class="left">이전 버튼</a>
-							<input type="text" id="txtqty" title="수량" value="1" class="mr0" readonly="readonly">
-							<a href="javascript:fn_qtyAdd();" class="right">다음 버튼</a>
-							     </span>
-					</span>
-					
-					<span class="txt" id="popularProudct" style="display: none">
-					   <span class="deliveryPlanDate">
-					       해당 상품은 전국 매장을 통해 수급하여 배송 될 예정입니다. <br>
-					       불량 등의 이유로 수급이 어려울 경우, 취소될 수 있습니다. <br>(평일 기준 5일 이상 소요 예정)
-					   </span>
-					</span>
-					<input type="hidden" id="erpWorkOrderNumber">     <input type="hidden" id="reserveSalesStockpile">  <input type="hidden" id="erpWorkOrderProdCode">  </li>
-			</ul>
-		</div>
-		<div class="total_price clearfix">
-			<div class="title float_left" style="width:auto;">총 합계</div>
-			<div class="pirce float_right">
-<!-- 				<div class="tlt_ship"> -->
-<!-- 				<div class="delch_box" style="display: none;"> -->
-<!-- 	       			<span class="arr">위치아이콘</span> -->
-<!-- 	                <div> -->
-<!-- 	                    <div id="exchangeDiv"></div> -->
-<!-- 	                </div> -->
-<!-- 	        	</div> -->
-<!-- 				</div> -->
-			<span id="sumPrice">₩1,250,000</span>
-			</div>
-		</div>
-		<!-- st_receipt_wrap -->
-			<!-- //st_receipt_wrap -->
-			<!-- st_store_wrap -->
-			<div class="st_store_wrap1807" id="storePickupChoice" style="display:none;">
-				<div class="st_store">
-					<dl>
-						<dt>선택 매장</dt>
-						<dd>
-							<p id="storePickupChoiceName"></p>
-							<p id="storePickupChoiceAddress"></p>
-							<p id="storePickupChoiceTelephone"></p>
-						</dd>
-						<dt>수령 신청일</dt>
-						<dd>
-							<p id="storePickupChoiceDate"></p>
-						</dd>
-					</dl>
-					<a href="javascript:fn_popupStorePickUp();" class="btn">매장변경</a>
-				</div>
-				<ul class="bul_sty01_li">
-					<li>매장 수령 시 상품 사이즈 및 컬러 변경은 불가합니다.</li>
-					<li>수령 가능 확정 일은 주문 완료 후, 수령 교환권을 SMS로 안내 드립니다.</li>
-					<li>수령 확정일로부터 <span style="color:#fe4242;">1일 경과 후 상품을 수령하지 않으시면 자동 취소</span> 됩니다.</li>
-				</ul>
-			</div>
-			<!-- //st_store_wrap -->
-		<div class="btnwrap clearfix" style="position: absolute; width: 473px; margin-top: -371.413px; margin-bottom: 371.413px;">
-			<input type="button" value="" class="btn wishlist1803 float_left ml0  " onclick="addWishListClick();GA_Event('상품_상세','하단 고정 버튼','좋아요');">
-		
-		    <div class="toast_popup">
-                <p style="display: none; top: -4.12381px; opacity: 0.031172;">위시리스트에서 삭제했습니다.</p>
-            </div>
-            
-            <!--190508 추가 -->
-            <div class="toast_popup_pre_order1905"><!-- 토스트팝업 190507 -->
-                <p>예약 주문이 가능한 옵션(컬러/사이즈)가 있습니다. <br>옵션 선택 후 배송 예정일을 확인해 주세요.</p>
-                <span class="arr">위치아이콘</span>
-            </div>
-            <!--//190508 추가 -->
-            
-			<form id="addToCartForm" name="addToCartForm" action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051" method="post"><input type="hidden" maxlength="3" size="1" name="qty" class="qty">
-				<input type="hidden" name="productCodePost" value="MN2C8WJC026WP_CM">
-				<input type="hidden" id="productCodeType" name="productCodeType" value="ApparelStyleVariantProduct">
-				<input type="hidden" id="stockCnt" value="0">
-				<input type="hidden" name="storeId" id="storeId" value="">
-				<input type="hidden" name="storePickupDate" id="storePickupDate" value="">
-				<input type="hidden" name="workOrder" id="workOrder" value="">
-				<input type="hidden" name="recommendProduct" id="recommendProduct" value="">
-				<input type="hidden" name="deliveryKind" id="deliveryKind" value="">
-				<input type="hidden" name="streetname" id="streetname" value="">
-				<input type="hidden" name="streetnumber" id="streetnumber" value="">
-				<input type="hidden" name="postalcode" id="postalcode" value="">
-				<input type="hidden" name="quickStreetname" id="quickStreetname" value="">
-	            <input type="hidden" name="quickStreetnumber" id="quickStreetnumber" value="">
-	            <input type="hidden" name="quickPostalcode" id="quickPostalcode" value="">
-				<input type="hidden" name="fourpmList" id="fourpmList">
-				<input type="hidden" name="athomeList" id="athomeList">
-				<input type="hidden" name="pickupList" id="pickupList">
-				<input type="hidden" name="quickList" id="quickList">
-				<input type="hidden" name="buyNowYn" id="buyNowYn" value="false">
-				<input type="button" value="쇼핑백 담기" class="btn cart1803 float_left ml0" id="addToCartButton" onclick="addToCart();GA_Event('상품_상세','하단 고정 버튼','쇼핑백담기');">
-					<div>
-<input type="hidden" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-</div></form><input type="button" value="바로주문" class="btn order float_right mr0" id="addToCartBuyNowButton" onclick="GA_Event('상품_상세','하단 고정 버튼','바로주문');addToCart(true);">   
-	                </div>
-		
-		<dl class="toggle_type1" style="margin-top:80px;">
-			<!-- 상품상세 정보창 변경 211027 S -->
-			<dt><a href="javascript:void(0);" id="NEW_DETAIL_INFO_EVT">상품상세정보</a></dt>
-			<dd>
-				<div class="product-info-211027">
-					<h3>상품 추가 정보</h3>
-					<table>
-						<caption>상품 추가 정보</caption>
-						<colgroup>
-							<col style="width:91px">
-							<col style="width:125px;">
-							<col style="width:127px">
-							<col style="width:126px;">
-						</colgroup>
-						<tbody>
-							<tr>
-								<th>핏</th>
-								<td>슬림핏</td>
-								<td class="bold">레귤러핏</td>
-								<td>루즈핏</td>
-							</tr>
-							<tr>
-								<th>신축성</th>
-								<td class="bold">없음</td>
-								<td>조금 있음</td>
-								<td>있음</td>
-							</tr>
-							<tr>
-								<th>비침</th>
-								<td class="bold">없음</td>
-								<td>약간</td>
-								<td>있음</td>
-							</tr>
-							<tr>
-								<th>두께</th>
-								<td>얇음</td>
-								<td class="bold">보통</td>
-								<td>두꺼움</td>
-							</tr>
-							<tr>
-								<th>안감</th>
-								<td>없음</td>
-								<td>부분 안감</td>
-								<td class="bold">전체 안감</td>
-							</tr>
-							</tbody>
-					</table>
-					<p>상기 정보는 주관적 내용이므로 참고해주세요</p>
-				</div>
-			</dd>
-			<!-- 상품상세 정보창 변경 211027 E -->
-			<dt>
-				<a href="javascript:void(0);" id="DETAIL_INFO_EVT">
-					상품정보제공고시</a>
-			</dt>
-			<dd style="display:none;">
-				<strong>상품품번 :</strong> MN2C8WJC026WP<br>
-	                    <strong>품목 :</strong> 의류<br>
-			                <strong>소재 :</strong> 겉감 캐시미어 100%, 배색 폴리에스터 29%, 폴리우레탄 3%, 레이온 28%, 모 40%, 안감1 레이온 100%, 안감2 폴리에스터 100%(CM)<br>
-						<strong>색상 :</strong> CM(CAMEL)<br>
-						<strong>사이즈 :</strong> 82, 76<br>
-						<strong>제조국 :</strong> 한국<br>
-						<strong>제조사 :</strong> (주)한섬<br>
-						<strong>제조연월 :</strong> 202210<br>
-				     <br>
-				<strong>품질보증기준</strong><br>
-					1. 본 제품은 정부 고시 소비자 분쟁해결 기준에 의거 고객의 정당한 피해를 보상해드립니다. <br> - 원단 불량, 부자재 불량, 봉제 불량, 사이즈 부정확, 부당 표시(미표시 및 부실표시) 및 소재 구성 부적합으로 인한 세탁 사고 : 구입일로부터 1년 이내분은 무상수리, 교환, 구입가 환불함. (단, 봉제 불량은 1년 경과 후에도 무상 수선 가능) <br> - 사이즈가 맞지 않거나 디자인, 색상 불만 제품 : 구입 후 7일 이내로서 제품에 손상이 없는 경우 동일 가격, 동일 제품으로 교환 가능. <br> - 상하의 한 벌(세트/일착)인 경우 한 쪽에만 이상이 있어도 한 벌(세트/일착)로 처리함. 단, 소재 및 디자인이 다른 경우에는 해당 의류만 교환 가능. <br>2. 소비자 부주의에 의한 제품 훼손, 세탁 잘못으로 인한 변형 및 품질 보증기간(1년)이 경과한 제품에 대해서는 보상의 책임을 지지 않으며, 수선 가능시에는 실비로 수선해드립니다. <br>3. 제품에 이상이 있는 경우 바로 본사로 연락주시면 수선/교환/환불이 가능하나, 타업체(일반 수선실 등)에서 수선했을 경우는 불가능합니다.<br><br>
-					<strong>세탁방법 및 취급 시 주의사항</strong><br>
-						본 제품은 반드시 드라이크리닝 하십시오. 세탁 시 이염, 변색, 탈색될 수 있으니 유의하시기 바랍니다. 단추나 악세서리는 세탁 시 손상될 수 있으므로 은박지로 싸거나 분리하여 주십시오. 특성상 마찰에 의해 올 뜯김 등 원단 손상이 발생할 수 있으니 취급 시 주의하시기 바랍니다.<br><br>
-							<div style="margin-bottom:20px;">
-					<p style="float:left;">
-					<strong>AS 책임자와 연락처</strong><br>
-					㈜한섬/1800-5700</p>
-					<!-- 20200218 마크 추가 -->
-					<div class="sft_ksdt">
+										<div class="popwrap w_type_2" id="sizeQuickReferenceLayer"
+											style="display: none;">
+											<div class="pop_tltwrap2">
+												<h3>사이즈조견표</h3>
+											</div>
+											<div class="pop_cnt">
+												<div class="size_chart">
+													<div class="tab_a m6" id="size_tab">
+														<ul>
+															<li><a href="#;" class="active">WOMEN<br>TOP
+															</a></li>
+															<li><a href="#;">WOMEN<br>BOTTOMS
+															</a></li>
+															<li><a href="#;">WOMEN<br>SHOES
+															</a></li>
+															<li><a href="#;">MEN<br>TOP
+															</a></li>
+															<li><a href="#;">MEN<br>BOTTOMS
+															</a></li>
+															<li><a href="#;">MEN<br>SHOES
+															</a></li>
+														</ul>
+													</div>
+													<div class="size_tab_container">
+														<div>
+															<table class="cnt_type2">
+																<caption>사이즈조견표</caption>
+																<colgroup>
+																	<col>
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																</colgroup>
+																<thead>
+																	<tr class="al_middle">
+																		<th scope="col">BRAND/<br>SIZE
+																		</th>
+																		<th scope="col">XS</th>
+																		<th scope="col">S</th>
+																		<th scope="col">M</th>
+																		<th scope="col">L</th>
+																		<th scope="col">FREE</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="al_middle">
+																		<th scope="row">TIME</th>
+																		<td>76</td>
+																		<td>82</td>
+																		<td>88</td>
+																		<td>94</td>
+																		<td>90</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">MINE</th>
+																		<td>76</td>
+																		<td>82</td>
+																		<td>88</td>
+																		<td>94</td>
+																		<td>90</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">SYSTEM</th>
+																		<td>76</td>
+																		<td>82</td>
+																		<td>88</td>
+																		<td>-</td>
+																		<td>90</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">SJSJ</th>
+																		<td>76</td>
+																		<td>82</td>
+																		<td>88</td>
+																		<td>-</td>
+																		<td>90</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row" rowspan="2">KOREA</th>
+																		<td>85</td>
+																		<td>90</td>
+																		<td>95</td>
+																		<td>100</td>
+																		<td>-</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<td>44</td>
+																		<td>55</td>
+																		<td>66</td>
+																		<td>77</td>
+																		<td>-</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">US</th>
+																		<td>2</td>
+																		<td>4</td>
+																		<td>6</td>
+																		<td>8</td>
+																		<td>-</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">EUROPE</th>
+																		<td>34</td>
+																		<td>36</td>
+																		<td>38</td>
+																		<td>40</td>
+																		<td>-</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">CHINA</th>
+																		<td>160/<br>80A
+																		</td>
+																		<td>165/<br>84A
+																		</td>
+																		<td>170/<br>88A
+																		</td>
+																		<td>175/<br>92A
+																		</td>
+																		<td>-</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div style="display: none;">
+															<table class="cnt_type2">
+																<caption>사이즈조견표</caption>
+																<colgroup>
+																	<col>
+																	<col style="width: 19%">
+																	<col style="width: 19%">
+																	<col style="width: 19%">
+																	<col style="width: 19%">
+																</colgroup>
+																<thead>
+																	<tr class="al_middle">
+																		<th scope="col">BRAND/<br>SIZE
+																		</th>
+																		<th scope="col">XS</th>
+																		<th scope="col">S</th>
+																		<th scope="col">M</th>
+																		<th scope="col">L</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">TIME</th>
+																		<td>61</td>
+																		<td>64</td>
+																		<td>67</td>
+																		<td>70</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">MINE</th>
+																		<td>61</td>
+																		<td>64</td>
+																		<td>67</td>
+																		<td>70</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">SYSTEM</th>
+																		<td>61</td>
+																		<td>64</td>
+																		<td>67</td>
+																		<td>-</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">SJSJ</th>
+																		<td>61</td>
+																		<td>64</td>
+																		<td>67</td>
+																		<td>-</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row" rowspan="2">KOREA</th>
+																		<td>24</td>
+																		<td>26</td>
+																		<td>28</td>
+																		<td>30</td>
+																	</tr>
+																	<tr>
+																		<td>44</td>
+																		<td>55</td>
+																		<td>66</td>
+																		<td>77</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">US</th>
+																		<td>2</td>
+																		<td>4</td>
+																		<td>6</td>
+																		<td>8</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">EUROPE</th>
+																		<td>34</td>
+																		<td>36</td>
+																		<td>38</td>
+																		<td>40</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">CHINA</th>
+																		<td>160/<br>66A
+																		</td>
+																		<td>165/<br>68A
+																		</td>
+																		<td>170/<br>70A
+																		</td>
+																		<td>175/<br>72A
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div style="display: none;">
+															<table class="cnt_type2">
+																<caption>사이즈조견표</caption>
+																<colgroup>
+																	<col>
+																	<col style="width: 19%">
+																	<col style="width: 19%">
+																	<col style="width: 19%">
+																	<col style="width: 19%">
+																</colgroup>
+																<thead>
+																	<tr class="al_middle">
+																		<th scope="col">BRAND/<br>SIZE
+																		</th>
+																		<th scope="col">XS</th>
+																		<th scope="col">S</th>
+																		<th scope="col">M</th>
+																		<th scope="col">L</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<th scope="row">TIME</th>
+																		<td>230</td>
+																		<td>235</td>
+																		<td>240</td>
+																		<td>245</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">MINE</th>
+																		<td>230</td>
+																		<td>235</td>
+																		<td>240</td>
+																		<td>245</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">SYSTEM</th>
+																		<td>230</td>
+																		<td>235</td>
+																		<td>240</td>
+																		<td>245</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">SJSJ</th>
+																		<td>230</td>
+																		<td>235</td>
+																		<td>240</td>
+																		<td>245</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">KOREA</th>
+																		<td>230</td>
+																		<td>235</td>
+																		<td>240</td>
+																		<td>245</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">US</th>
+																		<td>6</td>
+																		<td>6.5</td>
+																		<td>7</td>
+																		<td>7.5</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">EUROPE</th>
+																		<td>36</td>
+																		<td>36.5</td>
+																		<td>37</td>
+																		<td>37.5</td>
+																	</tr>
+																	<tr>
+																		<th scope="row">CHINA</th>
+																		<td>36</td>
+																		<td>37</td>
+																		<td>38</td>
+																		<td>39</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div style="display: none;">
+															<table class="cnt_type2">
+																<caption>사이즈조견표</caption>
+																<colgroup>
+																	<col>
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																	<col style="width: 16%">
+																</colgroup>
+																<thead>
+																	<tr class="al_middle">
+																		<th scope="col">BRAND/<br>SIZE
+																		</th>
+																		<th scope="col">S</th>
+																		<th scope="col">M</th>
+																		<th scope="col">L</th>
+																		<th scope="col">XL</th>
+																		<th scope="col">XXL</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="al_middle">
+																		<th scope="row">TIME<br>HOMME
+																		</th>
+																		<td>90</td>
+																		<td>95</td>
+																		<td>100</td>
+																		<td>105</td>
+																		<td>110</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">SYSTEM<br>HOMME
+																		</th>
+																		<td>90</td>
+																		<td>95</td>
+																		<td>100</td>
+																		<td>105</td>
+																		<td>110</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">CLUB<br>MONACO
+																		</th>
+																		<td>XS</td>
+																		<td>S</td>
+																		<td>M</td>
+																		<td>L</td>
+																		<td>XL</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">KOREA</th>
+																		<td>90</td>
+																		<td>95</td>
+																		<td>100</td>
+																		<td>105</td>
+																		<td>110</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">US</th>
+																		<td>36</td>
+																		<td>38</td>
+																		<td>40</td>
+																		<td>42</td>
+																		<td>44</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">EUROPE</th>
+																		<td>46</td>
+																		<td>48</td>
+																		<td>50</td>
+																		<td>52</td>
+																		<td>54</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">CHINA</th>
+																		<td>165/<br>80-90
+																		</td>
+																		<td>170/<br>96-98
+																		</td>
+																		<td>175/<br>108-110
+																		</td>
+																		<td>180/<br>118-122
+																		</td>
+																		<td>185/<br>126-130
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div style="display: none;">
+															<table class="cnt_type2">
+																<caption>사이즈조견표</caption>
+																<colgroup>
+																	<col>
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																	<col style="width: 9.5%">
+																</colgroup>
+																<thead>
+																	<tr class="al_middle">
+																		<th scope="col">BRAND/<br>SIZE
+																		</th>
+																		<th scope="col">S</th>
+																		<th scope="col" colspan="2">M</th>
+																		<th scope="col" colspan="2">L</th>
+																		<th scope="col" colspan="2">XL</th>
+																		<th scope="col" colspan="2">XXL</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="al_middle">
+																		<th scope="row">TIME<br>HOMME
+																		</th>
+																		<td>74</td>
+																		<td colspan="2">78</td>
+																		<td>82</td>
+																		<td>84</td>
+																		<td>86</td>
+																		<td>88</td>
+																		<td>90</td>
+																		<td>92</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">SYSTEM<br>HOMME
+																		</th>
+																		<td>74</td>
+																		<td colspan="2">78</td>
+																		<td>82</td>
+																		<td>84</td>
+																		<td>86</td>
+																		<td>88</td>
+																		<td>90</td>
+																		<td>92</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">CLUB<br>MONACO
+																		</th>
+																		<td>29</td>
+																		<td>30</td>
+																		<td>31</td>
+																		<td>32</td>
+																		<td>33</td>
+																		<td colspan="2">34</td>
+																		<td colspan="2">36</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">KOREA</th>
+																		<td>29</td>
+																		<td colspan="2">30</td>
+																		<td>32</td>
+																		<td>33</td>
+																		<td>34</td>
+																		<td>35</td>
+																		<td>35.5</td>
+																		<td>36</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">US</th>
+																		<td>44T</td>
+																		<td colspan="2">46T</td>
+																		<td colspan="2">48T</td>
+																		<td colspan="2">50T</td>
+																		<td colspan="2">52T</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">EUROPE</th>
+																		<td>44</td>
+																		<td colspan="2">46</td>
+																		<td colspan="2">48</td>
+																		<td colspan="2">50</td>
+																		<td colspan="2">52</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">CHINA</th>
+																		<td>44</td>
+																		<td colspan="2">46</td>
+																		<td colspan="2">48</td>
+																		<td colspan="2">50</td>
+																		<td colspan="2">52</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+														<div style="display: none;">
+															<table class="cnt_type2">
+																<caption>사이즈조견표</caption>
+																<colgroup>
+																	<col>
+																	<col style="width: 23%">
+																	<col style="width: 23%">
+																	<col style="width: 23%">
+																</colgroup>
+																<thead>
+																	<tr class="al_middle">
+																		<th scope="col">BRAND<br>SIZE
+																		</th>
+																		<th scope="col">S</th>
+																		<th scope="col">M</th>
+																		<th scope="col">L</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr class="al_middle">
+																		<th scope="row">TIME HOMME</th>
+																		<td>260</td>
+																		<td>270</td>
+																		<td>280</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">SYSTEM HOMME</th>
+																		<td>260</td>
+																		<td>270</td>
+																		<td>280</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">KOREA</th>
+																		<td>260</td>
+																		<td>270</td>
+																		<td>280</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">US</th>
+																		<td>8</td>
+																		<td>9</td>
+																		<td>10</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">EUROPE</th>
+																		<td>41</td>
+																		<td>42</td>
+																		<td>43.5</td>
+																	</tr>
+																	<tr class="al_middle">
+																		<th scope="row">CHINA</th>
+																		<td>43</td>
+																		<td>45</td>
+																		<td>47</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+											</div>
+											<a href="javascript:void(0);" class="btn_close"><img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+												alt="닫기"></a>
+										</div>
+										<ul class="size_chip clearfix sizeChipKo1901">
+											<li id="MN2C8WJC026WP_CM_76"><a
+												href="javascript:fn_detailProductAjax('MN2C8WJC026WP_CM_76')"
+												class="on" onclick="GA_Event('상품_상세','사이즈','76')">76<span
+													class="ko_size1901">&nbsp;(44)</span></a></li>
+											<li id="MN2C8WJC026WP_CM_82"><a
+												href="javascript:fn_detailProductAjax('MN2C8WJC026WP_CM_82')"
+												onclick="GA_Event('상품_상세','사이즈','82')">82<span
+													class="ko_size1901">&nbsp;(55)</span></a></li>
+										</ul>
+								</span> <!-- 2021.08.10 화장품 상품인 경우 사이즈조견표 영역 미노출 --> <a
+									href="javascript:fn_popupSizeQuickReference();"
+									class="etc_info" onclick="GA_Event('상품_상세','사이즈_조건표','클릭')">사이즈
+										조견표</a> <!-- 재입고알림 툴팁 --> <!-- //재입고알림 툴팁 --></li>
+								<li><span class="title">수량</span> <span class="txt">
+										<span class="qty_sel num"> <a
+											href="javascript:fn_qtySubtraction();" class="left">이전 버튼</a>
+											<input type="text" id="txtqty" title="수량" value="1"
+											class="mr0" readonly="readonly"> <a
+											href="javascript:fn_qtyAdd();" class="right">다음 버튼</a>
+									</span>
+								</span> <span class="txt" id="popularProudct" style="display: none">
+										<span class="deliveryPlanDate"> 해당 상품은 전국 매장을 통해 수급하여
+											배송 될 예정입니다. <br> 불량 등의 이유로 수급이 어려울 경우, 취소될 수 있습니다. <br>(평일
+											기준 5일 이상 소요 예정)
+									</span>
+								</span> <input type="hidden" id="erpWorkOrderNumber"> <input
+									type="hidden" id="reserveSalesStockpile"> <input
+									type="hidden" id="erpWorkOrderProdCode"></li>
+							</ul>
 						</div>
-					<!-- // 20200218 마크 추가 -->
-					</div><br><br>
-					위 내용은 상품정보제공 고시에 따라 작성되었습니다.</dd>
-		<!-- 2021.08.10 화장품 상품인 경우 실측사이즈 영역 미노출 -->
-		<dt><a href="javascript:void(0);" id="REAL_SIZE_EVT">실측사이즈</a></dt>
-			<dd>
-				<div class="ko realsize_img SZ06"></div>
-						<p class="tit">자켓</p>
-						<!-- info_tbl -->
-						<div class="detail-size-bd"> <!--20200910 --> <!-- 20160627 -->
-							<span class="unit">단위(cm)</span>
-							<!-- 아우터 사이즈 -->
-							<table class="unit-board" border="0">
-								
-								<!-- 2019.07.24 아이템별 노출항목 판단 -->
-								<!-- 2020.08.19 아이템별 노출항목 판단 -->
-								<!-- 탑(베스트 제외) 2020.08.19 sizeCode 추가( SZ13 ~ SZ16 ) -->
-									<caption>아우터 실측사이즈</caption>
-								<colgroup>
-									<col style="width:81px;">
-										<col style="width:auto;">
-										<col style="width:auto;">
-										<col style="width:auto;">
+						<div class="total_price clearfix">
+							<div class="title float_left" style="width: auto;">총 합계</div>
+							<div class="pirce float_right">
+								<!-- 				<div class="tlt_ship"> -->
+								<!-- 				<div class="delch_box" style="display: none;"> -->
+								<!-- 	       			<span class="arr">위치아이콘</span> -->
+								<!-- 	                <div> -->
+								<!-- 	                    <div id="exchangeDiv"></div> -->
+								<!-- 	                </div> -->
+								<!-- 	        	</div> -->
+								<!-- 				</div> -->
+								<span id="sumPrice">₩1,250,000</span>
+							</div>
+						</div>
+						<!-- st_receipt_wrap -->
+						<!-- //st_receipt_wrap -->
+						<!-- st_store_wrap -->
+						<div class="st_store_wrap1807" id="storePickupChoice"
+							style="display: none;">
+							<div class="st_store">
+								<dl>
+									<dt>선택 매장</dt>
+									<dd>
+										<p id="storePickupChoiceName"></p>
+										<p id="storePickupChoiceAddress"></p>
+										<p id="storePickupChoiceTelephone"></p>
+									</dd>
+									<dt>수령 신청일</dt>
+									<dd>
+										<p id="storePickupChoiceDate"></p>
+									</dd>
+								</dl>
+								<a href="javascript:fn_popupStorePickUp();" class="btn">매장변경</a>
+							</div>
+							<ul class="bul_sty01_li">
+								<li>매장 수령 시 상품 사이즈 및 컬러 변경은 불가합니다.</li>
+								<li>수령 가능 확정 일은 주문 완료 후, 수령 교환권을 SMS로 안내 드립니다.</li>
+								<li>수령 확정일로부터 <span style="color: #fe4242;">1일 경과 후
+										상품을 수령하지 않으시면 자동 취소</span> 됩니다.
+								</li>
+							</ul>
+						</div>
+						<!-- //st_store_wrap -->
+						<div class="btnwrap clearfix"
+							style="position: absolute; width: 473px; margin-top: -371.413px; margin-bottom: 371.413px;">
+							<input type="button" value=""
+								class="btn wishlist1803 float_left ml0  "
+								onclick="addWishListClick();GA_Event('상품_상세','하단 고정 버튼','좋아요');">
+
+							<div class="toast_popup">
+								<p style="display: none; top: -4.12381px; opacity: 0.031172;">위시리스트에서
+									삭제했습니다.</p>
+							</div>
+
+							<!--190508 추가 -->
+							<div class="toast_popup_pre_order1905">
+								<!-- 토스트팝업 190507 -->
+								<p>
+									예약 주문이 가능한 옵션(컬러/사이즈)가 있습니다. <br>옵션 선택 후 배송 예정일을 확인해 주세요.
+								</p>
+								<span class="arr">위치아이콘</span>
+							</div>
+							<!--//190508 추가 -->
+
+							<form id="addToCartForm" name="addToCartForm"
+								action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+								method="post">
+								<input type="hidden" maxlength="3" size="1" name="qty"
+									class="qty"> <input type="hidden"
+									name="productCodePost" value="MN2C8WJC026WP_CM"> <input
+									type="hidden" id="productCodeType" name="productCodeType"
+									value="ApparelStyleVariantProduct"> <input
+									type="hidden" id="stockCnt" value="0"> <input
+									type="hidden" name="storeId" id="storeId" value=""> <input
+									type="hidden" name="storePickupDate" id="storePickupDate"
+									value=""> <input type="hidden" name="workOrder"
+									id="workOrder" value=""> <input type="hidden"
+									name="recommendProduct" id="recommendProduct" value="">
+								<input type="hidden" name="deliveryKind" id="deliveryKind"
+									value=""> <input type="hidden" name="streetname"
+									id="streetname" value=""> <input type="hidden"
+									name="streetnumber" id="streetnumber" value=""> <input
+									type="hidden" name="postalcode" id="postalcode" value="">
+								<input type="hidden" name="quickStreetname" id="quickStreetname"
+									value=""> <input type="hidden" name="quickStreetnumber"
+									id="quickStreetnumber" value=""> <input type="hidden"
+									name="quickPostalcode" id="quickPostalcode" value=""> <input
+									type="hidden" name="fourpmList" id="fourpmList"> <input
+									type="hidden" name="athomeList" id="athomeList"> <input
+									type="hidden" name="pickupList" id="pickupList"> <input
+									type="hidden" name="quickList" id="quickList"> <input
+									type="hidden" name="buyNowYn" id="buyNowYn" value="false">
+								<input type="button" value="쇼핑백 담기"
+									class="btn cart1803 float_left ml0" id="addToCartButton"
+									onclick="addToCart();GA_Event('상품_상세','하단 고정 버튼','쇼핑백담기');">
+								<div>
+									<input type="hidden" name="CSRFToken"
+										value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
+								</div>
+							</form>
+							<input type="button" value="바로주문"
+								class="btn order float_right mr0" id="addToCartBuyNowButton"
+								onclick="GA_Event('상품_상세','하단 고정 버튼','바로주문');addToCart(true);">
+						</div>
+
+						<dl class="toggle_type1" style="margin-top: 80px;">
+							<!-- 상품상세 정보창 변경 211027 S -->
+							<dt>
+								<a href="javascript:void(0);" id="NEW_DETAIL_INFO_EVT">상품상세정보</a>
+							</dt>
+							<dd>
+								<div class="product-info-211027">
+									<h3>상품 추가 정보</h3>
+									<table>
+										<caption>상품 추가 정보</caption>
+										<colgroup>
+											<col style="width: 91px">
+											<col style="width: 125px;">
+											<col style="width: 127px">
+											<col style="width: 126px;">
 										</colgroup>
-								
-								<thead>
-									<tr>
-										<th scope="col">사이즈</th>
-										<th scope="col">76</th>
-													<th scope="col">82</th>
-													</tr>
-								</thead>
-								<tbody>
-									<!-- 2020.08.19 실측사이즈 추가 09~12 -->
-									<tr>
-											<th scope="row">총길이</th>
-													<td>
-												55.24</td>
-												<td>
-												55.88</td>
-												</tr>
-									<tr>
-											<th scope="row">가슴단면</th>	
-													<td>
-												49.85</td>
-												<td>
-												51.75</td>
-												</tr>
-									<tr>
-											<th scope="row">어깨너비</th>
-													<td>
-												39.37</td>
-												<td>
-												40.64</td>
-												</tr>
-									<tr>
-											<th scope="row">소매길이</th>
-													<td>
-												59.06</td>
-												<td>
-												59.69</td>
-												</tr>
-									</tbody>
-							</table>
+										<tbody>
+											<tr>
+												<th>핏</th>
+												<td>슬림핏</td>
+												<td class="bold">레귤러핏</td>
+												<td>루즈핏</td>
+											</tr>
+											<tr>
+												<th>신축성</th>
+												<td class="bold">없음</td>
+												<td>조금 있음</td>
+												<td>있음</td>
+											</tr>
+											<tr>
+												<th>비침</th>
+												<td class="bold">없음</td>
+												<td>약간</td>
+												<td>있음</td>
+											</tr>
+											<tr>
+												<th>두께</th>
+												<td>얇음</td>
+												<td class="bold">보통</td>
+												<td>두꺼움</td>
+											</tr>
+											<tr>
+												<th>안감</th>
+												<td>없음</td>
+												<td>부분 안감</td>
+												<td class="bold">전체 안감</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>상기 정보는 주관적 내용이므로 참고해주세요</p>
+								</div>
+							</dd>
+							<!-- 상품상세 정보창 변경 211027 E -->
+							<dt>
+								<a href="javascript:void(0);" id="DETAIL_INFO_EVT"> 상품정보제공고시</a>
+							</dt>
+							<dd style="display: none;">
+								<strong>상품품번 :</strong> MN2C8WJC026WP<br> <strong>품목
+									:</strong> 의류<br> <strong>소재 :</strong> 겉감 캐시미어 100%, 배색 폴리에스터 29%,
+								폴리우레탄 3%, 레이온 28%, 모 40%, 안감1 레이온 100%, 안감2 폴리에스터 100%(CM)<br>
+								<strong>색상 :</strong> CM(CAMEL)<br> <strong>사이즈 :</strong>
+								82, 76<br> <strong>제조국 :</strong> 한국<br> <strong>제조사
+									:</strong> (주)한섬<br> <strong>제조연월 :</strong> 202210<br> <br>
+								<strong>품질보증기준</strong><br> 1. 본 제품은 정부 고시 소비자 분쟁해결 기준에 의거
+								고객의 정당한 피해를 보상해드립니다. <br> - 원단 불량, 부자재 불량, 봉제 불량, 사이즈 부정확,
+								부당 표시(미표시 및 부실표시) 및 소재 구성 부적합으로 인한 세탁 사고 : 구입일로부터 1년 이내분은 무상수리,
+								교환, 구입가 환불함. (단, 봉제 불량은 1년 경과 후에도 무상 수선 가능) <br> - 사이즈가 맞지
+								않거나 디자인, 색상 불만 제품 : 구입 후 7일 이내로서 제품에 손상이 없는 경우 동일 가격, 동일 제품으로 교환
+								가능. <br> - 상하의 한 벌(세트/일착)인 경우 한 쪽에만 이상이 있어도 한 벌(세트/일착)로
+								처리함. 단, 소재 및 디자인이 다른 경우에는 해당 의류만 교환 가능. <br>2. 소비자 부주의에 의한
+								제품 훼손, 세탁 잘못으로 인한 변형 및 품질 보증기간(1년)이 경과한 제품에 대해서는 보상의 책임을 지지 않으며,
+								수선 가능시에는 실비로 수선해드립니다. <br>3. 제품에 이상이 있는 경우 바로 본사로 연락주시면
+								수선/교환/환불이 가능하나, 타업체(일반 수선실 등)에서 수선했을 경우는 불가능합니다.<br> <br>
+								<strong>세탁방법 및 취급 시 주의사항</strong><br> 본 제품은 반드시 드라이크리닝
+								하십시오. 세탁 시 이염, 변색, 탈색될 수 있으니 유의하시기 바랍니다. 단추나 악세서리는 세탁 시 손상될 수
+								있으므로 은박지로 싸거나 분리하여 주십시오. 특성상 마찰에 의해 올 뜯김 등 원단 손상이 발생할 수 있으니 취급 시
+								주의하시기 바랍니다.<br> <br>
+								<div style="margin-bottom: 20px;">
+									<p style="float: left;">
+										<strong>AS 책임자와 연락처</strong><br> ㈜한섬/1800-5700
+									</p>
+									<!-- 20200218 마크 추가 -->
+									<div class="sft_ksdt"></div>
+									<!-- // 20200218 마크 추가 -->
+								</div>
+								<br> <br> 위 내용은 상품정보제공 고시에 따라 작성되었습니다.
+							</dd>
+							<!-- 2021.08.10 화장품 상품인 경우 실측사이즈 영역 미노출 -->
+							<dt>
+								<a href="javascript:void(0);" id="REAL_SIZE_EVT">실측사이즈</a>
+							</dt>
+							<dd>
+								<div class="ko realsize_img SZ06"></div>
+								<p class="tit">자켓</p>
+								<!-- info_tbl -->
+								<div class="detail-size-bd">
+									<!--20200910 -->
+									<!-- 20160627 -->
+									<span class="unit">단위(cm)</span>
+									<!-- 아우터 사이즈 -->
+									<table class="unit-board" border="0">
+
+										<!-- 2019.07.24 아이템별 노출항목 판단 -->
+										<!-- 2020.08.19 아이템별 노출항목 판단 -->
+										<!-- 탑(베스트 제외) 2020.08.19 sizeCode 추가( SZ13 ~ SZ16 ) -->
+										<caption>아우터 실측사이즈</caption>
+										<colgroup>
+											<col style="width: 81px;">
+											<col style="width: auto;">
+											<col style="width: auto;">
+											<col style="width: auto;">
+										</colgroup>
+
+										<thead>
+											<tr>
+												<th scope="col">사이즈</th>
+												<th scope="col">76</th>
+												<th scope="col">82</th>
+											</tr>
+										</thead>
+										<tbody>
+											<!-- 2020.08.19 실측사이즈 추가 09~12 -->
+											<tr>
+												<th scope="row">총길이</th>
+												<td>55.24</td>
+												<td>55.88</td>
+											</tr>
+											<tr>
+												<th scope="row">가슴단면</th>
+												<td>49.85</td>
+												<td>51.75</td>
+											</tr>
+											<tr>
+												<th scope="row">어깨너비</th>
+												<td>39.37</td>
+												<td>40.64</td>
+											</tr>
+											<tr>
+												<th scope="row">소매길이</th>
+												<td>59.06</td>
+												<td>59.69</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //info_tbl -->
+
+								<!-- <p class="txt_last">- 모델착용사이즈 : <strong>82</strong></p> -->
+								<!-- 20160627 -->
+
+								<!-- info_tbl -->
+
+								<!-- //info_tbl -->
+								<!-- numlist -->
+								<br>
+								<!-- //numlist -->
+								<font color="red"> <strong> 원단, 측정방법에 따라 약간의 오차
+										가능성이 있습니다.</strong>
+								</font>
+
+								<div class="timehomme_pants_fit" style="display: none"></div>
+							</dd>
+							<dt>
+								<a href="#" id="DELI_RETURN_EVT">배송 및 교환/반품</a>
+							</dt>
+							<dd>
+								<p class="tit">배송안내</p>
+								<dl class="info_tbl">
+									<dt>배송방식 :</dt>
+									<dd>우체국택배, CJ대한통운, 로젠택배</dd>
+									<!-- 210728 oera 신규 추가  -->
+									<dt>배송지역 :</dt>
+									<dd>전국 (일부 지역 제외)</dd>
+									<dt>배송정보 :</dt>
+									<dd>평균 입금완료일 기준 2-4일 소요됩니다 (토/일/공휴일 제외)</dd>
+									<dt>배송비 :</dt>
+									<dd>
+										실결제금액 기준 30,000원 이상 결제 시 무료배송<br>30,000원 미만 결제 시
+										2,500원(기본 배송비)<br>* 실결제금액이란, 쿠폰/바우처 할인액 및 <br>&nbsp;
+										한섬마일리지/H.Point 사용 금액을 제외한 금액입니다. <br>
+										&nbsp;&nbsp;(e-money 사용은 실결제금액에 포함)<br>* 도서산간 지역은 3,000원의
+										별도 배송비가 부과됩니다.<br>* 일부 도서지역은 도선료가 부가될 수 있습니다.
+									</dd>
+								</dl>
+								<p class="tit mt20">교환 및 반품안내</p>
+								<!-- info_tbl -->
+								<dl class="info_tbl">
+									<dt>교환/반품 기간 :</dt>
+									<dd>상품 수령 후, 7일 이내</dd>
+									<dt>교환절차 :</dt>
+									<dd style="letter-spacing: -0.2px;">
+										사이즈 및 상품불량 교환만 가능(색상교환 불가)하며 교환을 원하실 경우<br> 고객센터로 문의해주시기
+										바랍니다. (교환 재고가 없을 경우, 환불로 안내예정)<br> - 교환은 배송비 입금 및 상품 입고
+										확인 이후에 진행됩니다. <br> 화장품은 상품 불량만 교환 가능하며(상품 개봉 후 교환 불가),
+										고객센터로<br> 문의해주시기 바랍니다.
+										<!-- 210728 oera 신규 추가  -->
+									</dd>
+									<dt>반품절차 :</dt>
+									<dd>
+										[배송완료] 7일 이내에 마이페이지 주문/배송/취소/반품 메뉴에서<br> [반품신청] 버튼을 클릭 시
+										가능합니다.
+									</dd>
+									<dt>교환/반품 배송비 :</dt>
+									<dd style="letter-spacing: -0.4px;">
+										배송비는 5,000원 이며(반품비는 주문시 배송비 결제 유무에 따라 변동)<br>상품 불량 등의 이유로
+										교환/반품하실 경우, 배송비는 무료입니다.
+									</dd>
+									<dt>교환/반품 불가사유</dt>
+									<dd>
+										다음의 경우에는 교환/반품이 불가합니다.
+										<ol class="numlist">
+											<li><span class="num sum">-</span> <span class="txt">교환/반품
+													기간(상품 수령 후 7일 이내)을 초과하였을 경우</span></li>
+											<li><span class="num sum">-</span> <span class="txt">고객님의
+													요청에 의해 제품 사양이 변경(이니셜 제품, 사이즈 맞춤 제품 등)된 경우</span></li>
+											<li><span class="num sum">-</span><span class="txt">제품을
+													이미 사용하였거나, 제품 일부를 소비하였을 경우</span></li>
+											<!-- 210728 oera 신규 추가  -->
+											<li><span class="num sum">-</span> <span class="txt">화장품
+													: 상품 개봉 후 교환/반품 불가. 단 상품 불량(내용물 불량) 혹은 피부 트러블로 인한 반품은 가능(용량
+													1/3 미만 사용 및 의사소견서 1:1문의 첨부 필수)</span></li>
+											<!-- // 210728 oera 신규 추가  -->
+											<li><span class="num sum">-</span> <span class="txt">식기류
+													: 제품 수령 후, 비닐포장을 개봉한 경우</span></li>
+											<li><span class="num sum">-</span> <span class="txt">고객님의
+													귀책사유로 인해 회수가 지연될 경우</span></li>
+											<li><span class="num sum">-</span> <span class="txt">국내외
+													환율 변동 등에 의해 가격이 변동되는 제품의 경우</span></li>
+											<li><span class="num sum">-</span> <span class="txt">문제소지가
+													있는 제품을 본사가 아닌, 타 업체(일반 수선실 등)에서 선처리가 된 경우</span></li>
+										</ol>
+									</dd>
+									<!-- 210728 oera 신규 추가  -->
+									<dt>교환/반품건 배송</dt>
+									<dd>
+										교환/반품 시 배송 받으신 박스로 반송하셔야 합니다. <br>(한섬/오에라/리퀴드퍼퓸바 상품 함께 주문
+										후 교환/반품 시 각각의 박스에 나눠서 반송해주세요. 한 박스에 함께 동봉하여 반송 시 교환/반품 처리가 불가할
+										수 있습니다)
+									</dd>
+									<!-- // 210728 oera 신규 추가  -->
+								</dl>
+								<p class="tit mt20">환불안내</p>
+								<p>환불은 반송제품 확인 후 진행됩니다.</p>
+								<br>
+							</dd>
+							<!--상품평 btn-->
+							<div class="popup_customer_review1807" id="customerReview">
+								<a href="#;" onclick="GA_Event('상품_상세','정보','상품평');">상품평(<span
+									id="customerReviewCnt">1</span>)
+									<div class="star_score1807" id="prodTotalStarScoreWrapper">
+										<span class="cmt_star"> <!-- 별점에 따라 class명 변경 (star1, star2 ,star3, star4, star5) -->
+											<span class="cmt_per" id="prodTotalStarScore"
+											style="width: 100%;">별점</span>
+										</span>
+									</div>
+								</a>
+							</div>
+							<!--//상품평 btn-->
+
+						</dl>
+					</div>
+
+					<div class="clearfix mt30">
+						<div class="btnwrap float_left">
+							<a href="javascript:fn_popupProductQnA();" class="btn arrow mr0"
+								onclick="GA_Event('상품_상세','Q&amp;A','클릭');">Q&amp;A(<span
+								class="data" id="productQnACnt">23</span>)
+							</a>
 						</div>
-						<!-- //info_tbl -->
-	
-						<!-- <p class="txt_last">- 모델착용사이즈 : <strong>82</strong></p> -->  <!-- 20160627 -->
-					
-					<!-- info_tbl -->
-				
-				<!-- //info_tbl -->
-				<!-- numlist -->
-				<br>
-	            <!-- //numlist -->
-				<font color="red">
-				<strong>
-						원단, 측정방법에 따라 약간의 오차 가능성이 있습니다.</strong>
-				</font>
-				
-				<div class="timehomme_pants_fit" style="display:none"></div>
-			</dd>
-		<dt><a href="#" id="DELI_RETURN_EVT">배송 및 교환/반품</a></dt>
-		<dd>
-		    <p class="tit">배송안내</p> <dl class="info_tbl"> <dt>배송방식 :</dt> <dd>우체국택배, CJ대한통운, 로젠택배</dd><!-- 210728 oera 신규 추가  --> <dt>배송지역 :</dt> <dd>전국 (일부 지역 제외)</dd> <dt>배송정보 :</dt> <dd>평균 입금완료일 기준 2-4일 소요됩니다 (토/일/공휴일 제외)</dd> <dt>배송비 :</dt> <dd>실결제금액 기준 30,000원 이상 결제 시 무료배송<br>30,000원 미만 결제 시 2,500원(기본 배송비)<br>* 실결제금액이란, 쿠폰/바우처 할인액 및 <br>&nbsp; 한섬마일리지/H.Point 사용 금액을 제외한 금액입니다. <br> &nbsp;&nbsp;(e-money 사용은 실결제금액에 포함)<br>* 도서산간 지역은 3,000원의 별도 배송비가 부과됩니다.<br>* 일부 도서지역은 도선료가 부가될 수 있습니다. </dd> </dl> <p class="tit mt20">교환 및 반품안내</p> <!-- info_tbl --> <dl class="info_tbl"> <dt>교환/반품 기간 :</dt> <dd>상품 수령 후, 7일 이내</dd> <dt>교환절차 :</dt> <dd style="letter-spacing: -0.2px;"> 사이즈 및 상품불량 교환만 가능(색상교환 불가)하며 교환을 원하실 경우<br> 고객센터로 문의해주시기 바랍니다. (교환 재고가 없을 경우, 환불로 안내예정)<br> - 교환은 배송비 입금 및 상품 입고 확인 이후에 진행됩니다. <br> 화장품은 상품 불량만 교환 가능하며(상품 개봉 후 교환 불가), 고객센터로<br> 문의해주시기 바랍니다. <!-- 210728 oera 신규 추가  --> </dd> <dt>반품절차 :</dt> <dd>[배송완료] 7일 이내에 마이페이지 주문/배송/취소/반품 메뉴에서<br> [반품신청] 버튼을 클릭 시 가능합니다.</dd> <dt>교환/반품 배송비 :</dt> <dd style="letter-spacing: -0.4px;">배송비는 5,000원 이며(반품비는 주문시 배송비 결제 유무에 따라 변동)<br>상품 불량 등의 이유로 교환/반품하실 경우, 배송비는 무료입니다.</dd> <dt>교환/반품 불가사유</dt> <dd>다음의 경우에는 교환/반품이 불가합니다. <ol class="numlist"> <li> <span class="num sum">-</span> <span class="txt">교환/반품 기간(상품 수령 후 7일 이내)을 초과하였을 경우</span> </li> <li> <span class="num sum">-</span> <span class="txt">고객님의 요청에 의해 제품 사양이 변경(이니셜 제품, 사이즈 맞춤 제품 등)된 경우</span></li><li><span class="num sum">-</span><span class="txt">제품을 이미 사용하였거나, 제품 일부를 소비하였을 경우</span> </li> <!-- 210728 oera 신규 추가  --> <li> <span class="num sum">-</span> <span class="txt">화장품 : 상품 개봉 후 교환/반품 불가. 단 상품 불량(내용물 불량) 혹은 피부 트러블로 인한 반품은 가능(용량 1/3 미만 사용 및 의사소견서 1:1문의 첨부 필수)</span></li> <!-- // 210728 oera 신규 추가  --> <li> <span class="num sum">-</span> <span class="txt">식기류 : 제품 수령 후, 비닐포장을 개봉한 경우</span> </li> <li> <span class="num sum">-</span> <span class="txt">고객님의 귀책사유로 인해 회수가 지연될 경우</span> </li> <li> <span class="num sum">-</span> <span class="txt">국내외 환율 변동 등에 의해 가격이 변동되는 제품의 경우</span> </li> <li> <span class="num sum">-</span> <span class="txt">문제소지가 있는 제품을 본사가 아닌, 타 업체(일반 수선실 등)에서 선처리가 된 경우</span> </li> </ol> </dd> <!-- 210728 oera 신규 추가  --> <dt>교환/반품건 배송</dt> <dd>교환/반품 시 배송 받으신 박스로 반송하셔야 합니다. <br>(한섬/오에라/리퀴드퍼퓸바 상품 함께 주문 후 교환/반품 시 각각의 박스에 나눠서 반송해주세요. 한 박스에 함께 동봉하여 반송 시 교환/반품 처리가 불가할 수 있습니다)</dd> <!-- // 210728 oera 신규 추가  --> </dl> <p class="tit mt20">환불안내</p> <p>환불은 반송제품 확인 후 진행됩니다.</p><br>
-				</dd>
-		<!--상품평 btn-->
-        <div class="popup_customer_review1807" id="customerReview">
-            <a href="#;" onclick="GA_Event('상품_상세','정보','상품평');">상품평(<span id="customerReviewCnt">1</span>)
-                <div class="star_score1807" id="prodTotalStarScoreWrapper">
-                    <span class="cmt_star">
-                       <!-- 별점에 따라 class명 변경 (star1, star2 ,star3, star4, star5) -->
-                        <span class="cmt_per" id="prodTotalStarScore" style="width: 100%;">별점</span>
-                    </span>
-                </div>
-            </a>
-        </div>
-        <!--//상품평 btn-->
-        
-        </dl>
-	</div>
-	
-	<div class="clearfix mt30">
-		<div class="btnwrap float_left">
-			<a href="javascript:fn_popupProductQnA();" class="btn arrow mr0" onclick="GA_Event('상품_상세','Q&amp;A','클릭');">Q&amp;A(<span class="data" id="productQnACnt">0</span>)</a>
-			</div>
-		<div class="float_right">
-<!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style" data-a2a-url="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko" data-a2a-title="[MINE] 
-					캐시미어 더블 재킷" style="line-height: 32px;">
-<a class="a2a_button_facebook" onclick="GA_Event('상품_상세','공유_SNS','FACEBOOK');" target="_blank" href="/#facebook" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_facebook" style="background-color: rgb(24, 119, 242);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span class="a2a_label">Facebook</span></a>
-<a class="a2a_button_twitter" onclick="GA_Event('상품_상세','공유_SNS','TWITTER');" target="_blank" href="/#twitter" rel="nofollow noopener"><span class="a2a_svg a2a_s__default a2a_s_twitter" style="background-color: rgb(29, 155, 240);"><svg focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M28 8.557a9.913 9.913 0 01-2.828.775 4.93 4.93 0 002.166-2.725 9.738 9.738 0 01-3.13 1.194 4.92 4.92 0 00-3.593-1.55 4.924 4.924 0 00-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 00-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 01-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 004.6 3.42 9.893 9.893 0 01-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 007.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span class="a2a_label">Twitter</span></a>
-<a href="javascript:fnSharePin(&quot;http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM&quot;);" class="pinterest" onclick="GA_Event('상품_상세','공유_SNS','PRINTEREST');"></a>
-<input type="hidden" id="url" value="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM">
-<div style="clear: both;"></div></div>
-<script type="text/javascript">
+						<div class="float_right">
+							<!-- AddToAny BEGIN -->
+							<div class="a2a_kit a2a_kit_size_32 a2a_default_style"
+								data-a2a-url="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko"
+								data-a2a-title="[MINE] 
+					캐시미어 더블 재킷"
+								style="line-height: 32px;">
+								<a class="a2a_button_facebook"
+									onclick="GA_Event('상품_상세','공유_SNS','FACEBOOK');"
+									target="_blank" href="/#facebook" rel="nofollow noopener"><span
+									class="a2a_svg a2a_s__default a2a_s_facebook"
+									style="background-color: rgb(24, 119, 242);"><svg
+											focusable="false" aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+											<path fill="#FFF"
+												d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z"></path></svg></span><span
+									class="a2a_label">Facebook</span></a> <a class="a2a_button_twitter"
+									onclick="GA_Event('상품_상세','공유_SNS','TWITTER');" target="_blank"
+									href="/#twitter" rel="nofollow noopener"><span
+									class="a2a_svg a2a_s__default a2a_s_twitter"
+									style="background-color: rgb(29, 155, 240);"><svg
+											focusable="false" aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+											<path fill="#FFF"
+												d="M28 8.557a9.913 9.913 0 01-2.828.775 4.93 4.93 0 002.166-2.725 9.738 9.738 0 01-3.13 1.194 4.92 4.92 0 00-3.593-1.55 4.924 4.924 0 00-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 00-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 01-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 004.6 3.42 9.893 9.893 0 01-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 007.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span
+									class="a2a_label">Twitter</span></a> <a
+									href="javascript:fnSharePin(&quot;http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM&quot;);"
+									class="pinterest"
+									onclick="GA_Event('상품_상세','공유_SNS','PRINTEREST');"></a> <input
+									type="hidden" id="url"
+									value="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM">
+								<div style="clear: both;"></div>
+							</div>
+							<script type="text/javascript">
 var a2a_config = a2a_config || {};
 a2a_config.num_services = 10;
 var brandName =	"[" + $('#brandName').val() + "]";
@@ -12180,356 +13196,64 @@ a2a_config.linkname = brandName + " " + productName;
 a2a_config.linkurl = 'http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko';
 a2a_config.track_links = 'googl';
 </script>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<!-- AddToAny END -->
+							<script type="text/javascript"
+								src="//static.addtoany.com/menu/page.js"></script>
+							<!-- AddToAny END -->
 
-			</div>
-	</div>
-
-	<input type="hidden" id="viewExhibitionPageCode" value="">
-	<input type="hidden" id="viewExhibitionPageName" value="">
-	
-	
-	
-	<!-- 코디상품 start -->
-	<div class="related_evt">
-		<div class="cd-n-lb-tab" id="codi_lookbook_tab" style="">
-			<ul>
-				<li class="on"><a href="#cd-n-lb-tab-01" onclick="GA_Event('상품_상세','함께 코디한 상품','함께 코디한 상품');">함께 코디한 상품</a></li>
-				</ul>
-		</div>
-		<!-- box1 -->
-		<div class="cd-n-lb-content-box" id="cd-n-lb-tab-01" style="display: block;">
-			<div class="matches_list together-codi-list" id="referencesListContent">
-				<div class="bx-wrapper" style="max-width: 491px; margin: 0px auto;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 277px;"><ul class="clearfix slides" style="width: 615%; position: relative; transition-duration: 0s; transform: translate3d(-483px, 0px, 0px);"><li id="prod_MN2C9NPC341W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9NPC341W_BK');" onclick="GA_Event('상품_상세','코디상품','크롭 슬림 데님 팬츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9NPC341W_BKLIKE" class="add_wishlist MN2C9NPC341W_BKLIKE like " onclick="addWishListProdClick('MN2C9NPC341W_BK');GA_Event('스타일', '코디상품 좋아요', '크롭 슬림 데님 팬츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크롭 슬림 데님 팬츠</span>
-		                                <span class="price">
-		                                    ₩375,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9NPC341W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9NPC341W_BK','MN2C9NPC341W_BK');" class="no_color on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C9ASZ098W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9ASZ098W_BK');" onclick="GA_Event('상품_상세','코디상품','레더 엠블럽 스트랩 부츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9ASZ098W_BKLIKE" class="add_wishlist MN2C9ASZ098W_BKLIKE like " onclick="addWishListProdClick('MN2C9ASZ098W_BK');GA_Event('스타일', '코디상품 좋아요', '레더 엠블럽 스트랩 부츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">레더 엠블럽 스트랩 부츠</span>
-		                                <span class="price">
-		                                    ₩595,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9ASZ098W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_BK');" class="beige on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9ASZ098W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C7AJW684W_YR" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C7AJW684W_YR');" onclick="GA_Event('상품_상세','코디상품','크리스탈 스퀘어 귀걸이');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C7AJW684W_YRLIKE" class="add_wishlist MN2C7AJW684W_YRLIKE like " onclick="addWishListProdClick('MN2C7AJW684W_YR');GA_Event('스타일', '코디상품 좋아요', '크리스탈 스퀘어 귀걸이');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크리스탈 스퀘어 귀걸이</span>
-		                                <span class="price">
-		                                    ₩145,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<li id="chipbtn_MN2C7AJW684W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															<input type="hidden" id="colorName" value="YELLOW ORANGE">
-															<li id="chipbtn_MN2C7AJW684W_YR">
-																	<input type="hidden" class="colorNameVal" value="YELLOW ORANGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_YR');" class="beige on" style="background:#d5b966 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		            <li id="prod_MN2C9KTO051W_BG" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9KTO051W_BG');" onclick="GA_Event('상품_상세','코디상품','울 언밸런스 니트 탑');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9KTO051W_BGLIKE" class="add_wishlist MN2C9KTO051W_BGLIKE like " onclick="addWishListProdClick('MN2C9KTO051W_BG');GA_Event('스타일', '코디상품 좋아요', '울 언밸런스 니트 탑');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">울 언밸런스 니트 탑</span>
-		                                <span class="price">
-		                                    ₩445,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BEIGE">
-															<li id="chipbtn_MN2C9KTO051W_BG">
-																	<input type="hidden" class="colorNameVal" value="BEIGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BG');" class="beige on" style="background:#cca07c url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9KTO051W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BK');" class="beige" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BK_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('BLACK');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C9NPC341W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9NPC341W_BK');" onclick="GA_Event('상품_상세','코디상품','크롭 슬림 데님 팬츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9NPC341W_BKLIKE" class="add_wishlist MN2C9NPC341W_BKLIKE like " onclick="addWishListProdClick('MN2C9NPC341W_BK');GA_Event('스타일', '코디상품 좋아요', '크롭 슬림 데님 팬츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크롭 슬림 데님 팬츠</span>
-		                                <span class="price">
-		                                    ₩375,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9NPC341W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9NPC341W_BK','MN2C9NPC341W_BK');" class="no_color on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C9ASZ098W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9ASZ098W_BK');" onclick="GA_Event('상품_상세','코디상품','레더 엠블럽 스트랩 부츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9ASZ098W_BKLIKE" class="add_wishlist MN2C9ASZ098W_BKLIKE like " onclick="addWishListProdClick('MN2C9ASZ098W_BK');GA_Event('스타일', '코디상품 좋아요', '레더 엠블럽 스트랩 부츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">레더 엠블럽 스트랩 부츠</span>
-		                                <span class="price">
-		                                    ₩595,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9ASZ098W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_BK');" class="beige on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9ASZ098W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C7AJW684W_YR" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C7AJW684W_YR');" onclick="GA_Event('상품_상세','코디상품','크리스탈 스퀘어 귀걸이');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C7AJW684W_YRLIKE" class="add_wishlist MN2C7AJW684W_YRLIKE like " onclick="addWishListProdClick('MN2C7AJW684W_YR');GA_Event('스타일', '코디상품 좋아요', '크리스탈 스퀘어 귀걸이');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크리스탈 스퀘어 귀걸이</span>
-		                                <span class="price">
-		                                    ₩145,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<li id="chipbtn_MN2C7AJW684W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															<input type="hidden" id="colorName" value="YELLOW ORANGE">
-															<li id="chipbtn_MN2C7AJW684W_YR">
-																	<input type="hidden" class="colorNameVal" value="YELLOW ORANGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C7AJW684W_YR','MN2C7AJW684W_YR');" class="beige on" style="background:#d5b966 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C7AJW684W_YR_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li>
-		                    <li id="prod_MN2C9KTO051W_BG" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9KTO051W_BG');" onclick="GA_Event('상품_상세','코디상품','울 언밸런스 니트 탑');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9KTO051W_BGLIKE" class="add_wishlist MN2C9KTO051W_BGLIKE like " onclick="addWishListProdClick('MN2C9KTO051W_BG');GA_Event('스타일', '코디상품 좋아요', '울 언밸런스 니트 탑');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">울 언밸런스 니트 탑</span>
-		                                <span class="price">
-		                                    ₩445,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BEIGE">
-															<li id="chipbtn_MN2C9KTO051W_BG">
-																	<input type="hidden" class="colorNameVal" value="BEIGE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BG');" class="beige on" style="background:#cca07c url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BG_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9KTO051W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9KTO051W_BG','MN2C9KTO051W_BK');" class="beige" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9KTO051W_BK_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('BLACK');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C9NPC341W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9NPC341W_BK');" onclick="GA_Event('상품_상세','코디상품','크롭 슬림 데님 팬츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9NPC341W_BKLIKE" class="add_wishlist MN2C9NPC341W_BKLIKE like " onclick="addWishListProdClick('MN2C9NPC341W_BK');GA_Event('스타일', '코디상품 좋아요', '크롭 슬림 데님 팬츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">크롭 슬림 데님 팬츠</span>
-		                                <span class="price">
-		                                    ₩375,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9NPC341W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9NPC341W_BK','MN2C9NPC341W_BK');" class="no_color on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9NPC341W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li><li id="prod_MN2C9ASZ098W_BK" style="float: left; list-style: none; position: relative; width: 151px; margin-right: 10px;" class="bx-clone">                    
-		                            <div class="together-codi-pic">
-										<a href="javascript:goDetailPage('MN2C9ASZ098W_BK');" onclick="GA_Event('상품_상세','코디상품','레더 엠블럽 스트랩 부츠');" class="pic">
-											<img src="http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_S01.jpg" alt="코디상품" class="respon_image">
-										</a>
-										<a href="#;" id="MN2C9ASZ098W_BKLIKE" class="add_wishlist MN2C9ASZ098W_BKLIKE like " onclick="addWishListProdClick('MN2C9ASZ098W_BK');GA_Event('스타일', '코디상품 좋아요', '레더 엠블럽 스트랩 부츠');">위시리스트 담기</a>
-									</div>
-		                            <span class="info_wrap item_info2">
-		                                <span class="brand BR02">MINE</span>
-		                                <span class="title">레더 엠블럽 스트랩 부츠</span>
-		                                <span class="price">
-		                                    ₩595,000</span>
-	                                    </span>
-		                            
-		                            <!-- 컬러칩 추가(20210614) -->
-									<div class="we-codi-colorchip">
-										<ul class="color_chip clearfix">
-											<input type="hidden" id="colorName" value="BLACK">
-															<li id="chipbtn_MN2C9ASZ098W_BK">
-																	<input type="hidden" class="colorNameVal" value="BLACK">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_BK');" class="beige on" style="background:#000000 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_BK_C01.jpg/dims/resize/24x24')"></a>
-																</li>
-															<li id="chipbtn_MN2C9ASZ098W_OL">
-																	<input type="hidden" class="colorNameVal" value="OLIVE">
-																	<a href="#;" onclick="chngColorChip(this, 'MN2C9ASZ098W_BK','MN2C9ASZ098W_OL');" class="beige" style="background:#6c5710 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C9ASZ098W_OL_C01.jpg/dims/resize/24x24')" onmouseover="setColorName('OLIVE');" onmouseout="setColorName('');"></a>
-																</li>
-															</ul>
-									</div>
-									<!-- //컬러칩 추가(20210614) -->
-		                        </li></ul></div></div>
-				<div class="controls" id="referencesControls">
-		                <a href="javascript:void(0);" class="prev"></a>
-		                <a href="javascript:void(0);" class="next"></a>
-		            </div>
-	            </div>
-		</div>
-		<!-- //box1 -->
-		
-		<!-- box2 -->
-		<div class="cd-n-lb-content-box" id="cd-n-lb-tab-02">
-				<div class="detail-pg-lookbook-aside-box">
-					<!-- title-slide -->
-					<div class="title-slide-zone">
-						<div class="swiper-container">
-							<div class="swiper-wrapper">
-								</div>
-							</div>
-						<!-- nav -->
-						<!-- //nav -->
-					</div>
-					<!-- //title-slide -->
-	
-					<!-- sub-slide -->
-					<div class="sub-slide-zone">
 						</div>
-					<!-- //sub-slide -->
+					</div>
+
+					<input type="hidden" id="viewExhibitionPageCode" value="">
+					<input type="hidden" id="viewExhibitionPageName" value="">
+
+
+
+					<!-- 코디상품 start -->
+					<div class="related_evt">
+
+						<!-- box1 -->
+						<div class="cd-n-lb-content-box" id="cd-n-lb-tab-01"
+							style="display: block;">
+							<div class="matches_list together-codi-list"
+								id="referencesListContent"></div>
+
+						</div>
+					</div>
+					<!-- //box1 -->
+
+					<!-- box2 -->
+					<div class="cd-n-lb-content-box" id="cd-n-lb-tab-02">
+						<div class="detail-pg-lookbook-aside-box">
+							<!-- title-slide -->
+							<div class="title-slide-zone">
+								<div class="swiper-container">
+									<div class="swiper-wrapper"></div>
+								</div>
+								<!-- nav -->
+								<!-- //nav -->
+							</div>
+							<!-- //title-slide -->
+
+							<!-- sub-slide -->
+							<div class="sub-slide-zone"></div>
+							<!-- //sub-slide -->
+						</div>
+					</div>
+
+					<!-- //box2 -->
 				</div>
+
+				<!--코디상품 end -->
+
+
+
 			</div>
-		
-			<!-- //box2 -->
-		</div>
-	
-	<!--코디상품 end -->
-	
-	
 
-    </div>
-
-<form id="PAY_FORM" method="post" accept-charset="euc-kr">
-</form>
-</div>
-	<div class="product-detail-img">
+			<form id="PAY_FORM" method="post" accept-charset="euc-kr"></form>
 		</div>
-<div class="matches_items" id="productDetailEtc">
-                <script type="text/javascript">
+		<div class="product-detail-img"></div>
+		<div class="matches_items" id="productDetailEtc">
+			<script type="text/javascript">
 //<![CDATA[
 
 $(document).ready(function(){
@@ -12563,897 +13287,760 @@ function onMouseOutRecommend() {
 //]]>
 </script>
 
-<div class="clearfix">
-	<div class="tab_b" id="productEctTab">
-		<ul class="clearfix">
-			<li class="rmd_pb"><a href="javascript:void(0);" class="on" onclick="GA_Event('상품_상세','추천상품','클릭');">추천상품(18)</a><img src="${pageContext.request.contextPath}/resources/images/common/ico_quest.png" alt="추천상품이란?" class="tlt" onmouseover="onMouseOverRecommend();" onmouseout="onMouseOutRecommend();">
-			<div class="rmd_pb_popup" style="display:none;">
-				<p>이 상품을 본 고객들이 함께 본 상품입니다.</p> <!-- 이 상품을 본 고객들이 함께 본 상품입니다. -->
-				<span class="box_arr"></span>
+			<div class="clearfix">
+				<div class="tab_b" id="productEctTab">
+					<ul class="clearfix">
+						<li class="rmd_pb"><a href="javascript:void(0);" class="on"
+							onclick="GA_Event('상품_상세','추천상품','클릭');">추천상품(18)</a><img
+							src="${pageContext.request.contextPath}/resources/images/common/ico_quest.png"
+							alt="추천상품이란?" class="tlt" onmouseover="onMouseOverRecommend();"
+							onmouseout="onMouseOutRecommend();">
+							<div class="rmd_pb_popup" style="display: none;">
+								<p>이 상품을 본 고객들이 함께 본 상품입니다.</p>
+								<!-- 이 상품을 본 고객들이 함께 본 상품입니다. -->
+								<span class="box_arr"></span>
+							</div></li>
+						<li class="halatest_pb"><a href="javascript:void(0);"
+							onclick="GA_Event('상품_상세','최근본상품','클릭');">최근본상품<!-- 최근본상품 -->(16)
+						</a></li>
+						<li style="display: none"><a href="javascript:void(0);"
+							onclick="GA_Event('상품_상세','룩북','클릭');">룩북(0)<!-- 룩북 --></a></li>
+					</ul>
+				</div>
 			</div>
-			</li>
-			<li class="halatest_pb">
-				<a href="javascript:void(0);" onclick="GA_Event('상품_상세','최근본상품','클릭');">최근본상품<!-- 최근본상품 -->(16)</a>
-			</li>
-			<li style="display:none">
-				<a href="javascript:void(0);" onclick="GA_Event('상품_상세','룩북','클릭');">룩북(0)<!-- 룩북 --></a>
-			</li>
-			</ul>
-	</div>
-</div>
 
 
 
 
-<!-- 추천상품 start -->
-<div class="matches_list productEtcDiv" id="recommendItemsListContent" style="display: block;">
-	<div class="controls">
-		<a href="javascript:void(0);" id="etcprev" class="prev">이전</a>
-		<a href="javascript:void(0);" id="etcnext" class="next">다음</a>
-	</div>
-	<div class="hidden_wrap">
-		<ul class="clearfix productSlide">
-			<li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8WJM316M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WJM316M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'0');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM316M_BK_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">모크넥 스트랩 점퍼</span>
-							 <span class="price">
-								₩630,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8WPC521M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WPC521M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'1');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WPC521M_LE_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">[SET-UP] 밴딩 원턱 팬츠</span>
-							 <span class="price">
-								₩315,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SY2CATTO339WM1', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SY2CATTO339WM1&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'2');">
-							 <span><img src="http://newmedia.thehandsome.com/SY/2C/FW/SY2CATTO339WM1_DG_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR03">SYSTEM</span>
-							 <span class="title">언밸런스 헴 슬릿 티셔츠</span>
-							 <span class="price">
-								₩295,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('O22C9TTO576W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C9TTO576W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'3');">
-							 <span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22C9TTO576W_IV_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR45">O'2nd</span>
-							 <span class="title">텍스처 블록 펄 티셔츠</span>
-							 <span class="price">
-								₩298,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SY2C8WJS656WM1', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SY2C8WJS656WM1&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'4');">
-							 <span><img src="http://newmedia.thehandsome.com/SY/2C/FW/SY2C8WJS656WM1_KG_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR03">SYSTEM</span>
-							 <span class="title">디테쳐블 커프스 체크 재킷</span>
-							 <span class="price">
-								₩559,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C9WJM306M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C9WJM306M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'5');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9WJM306M_IN_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">캐시미어 블렌드 포켓 점퍼</span>
-							 <span class="price">
-								₩640,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('O22CAWJC381W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22CAWJC381W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'6');">
-							 <span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22CAWJC381W_BK_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR45">O'2nd</span>
-							 <span class="title">울 블렌드 트리밍 재킷</span>
-							 <span class="price">
-								₩638,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('O22C9QOT604W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C9QOT604W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'7');">
-							 <span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22C9QOT604W_BK_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR45">O'2nd</span>
-							 <span class="title">디테쳐블 다운 점퍼</span>
-							 <span class="price">
-								₩798,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C9WOT304M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C9WOT304M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'8');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9WOT304M_LE_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">캐시미어 블렌드 패널 재킷</span>
-							 <span class="price">
-								₩640,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8WJM323MM', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WJM323MM&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'9');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM323MM_SE_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">텍스처 블록 레더 점퍼</span>
-							 <span class="price">
-								₩590,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8WOT308M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WOT308M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'10');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WOT308M_OT_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">모크넥 점퍼</span>
-							 <span class="price">
-								₩590,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8LJM902M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8LJM902M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'11');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8LJM902M_TP_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">램스킨 셔츠 점퍼</span>
-							 <span class="price">
-								₩1,150,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('O22CAWPC331W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22CAWPC331W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'12');">
-							 <span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22CAWPC331W_BK_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR45">O'2nd</span>
-							 <span class="title">레이어 패널 밴딩 팬츠</span>
-							 <span class="price">
-								₩298,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SY2C8WOTT04WM', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SY2C8WOTT04WM&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'13');">
-							 <span><img src="http://newmedia.thehandsome.com/SY/2C/FW/SY2C8WOTT04WM_LE_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR03">SYSTEM</span>
-							 <span class="title">[PARIS] 하이넥 오버사이즈 패딩 점퍼</span>
-							 <span class="price">
-								₩690,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8WJM303M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WJM303M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'14');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM303M_DN_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">백 플랩 칼라 점퍼</span>
-							 <span class="price">
-								₩495,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('SH2C8KVT008M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8KVT008M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'15');">
-							 <span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8KVT008M_BK_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR07">SYSTEM HOMME</span>
-							 <span class="title">울 하프 집업 스트랩 베스트</span>
-							 <span class="price">
-								₩315,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('O22C8KCD840W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C8KCD840W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'16');">
-							 <span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22C8KCD840W_BK_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR45">O'2nd</span>
-							 <span class="title">글리터 인타르시아 펄 가디건</span>
-							 <span class="price">
-								₩398,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 <li style="padding: 0px; width: 165.833px;">
-                         <a href="javascript:goDetailPagebyRecommend('O22C9NOT672W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C9NOT672W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');" onclick="callRecommendClick($(this),'17');">
-							 <span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22C9NOT672W_BL_S01.jpg" alt="추천상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-						 </a>
-						 <span class="item_info2">
-							 <span class="brand BR45">O'2nd</span>
-							 <span class="title">디테쳐블 데님 베스트 레이어 점퍼</span>
-							 <span class="price">
-								₩698,000</span>
-							 <span class="flag"></span>
-						 </span>
-					 </li>
-					 </ul>
-	</div>
-</div>
-<!-- 추천상품 end -->
+			<!-- 추천상품 start -->
+			<div class="matches_list productEtcDiv"
+				id="recommendItemsListContent" style="display: block;">
+				<div class="controls">
+					<a href="javascript:void(0);" id="etcprev" class="prev">이전</a> <a
+						href="javascript:void(0);" id="etcnext" class="next">다음</a>
+				</div>
+				<div class="hidden_wrap">
+					<ul class="clearfix productSlide">
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8WJM316M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WJM316M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'0');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM316M_BK_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">모크넥 스트랩 점퍼</span> <span class="price">
+									₩630,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8WPC521M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WPC521M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'1');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WPC521M_LE_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">[SET-UP] 밴딩 원턱 팬츠</span> <span
+								class="price"> ₩315,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SY2CATTO339WM1', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SY2CATTO339WM1&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'2');"> <span><img
+									src="http://newmedia.thehandsome.com/SY/2C/FW/SY2CATTO339WM1_DG_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR03">SYSTEM</span>
+								<span class="title">언밸런스 헴 슬릿 티셔츠</span> <span class="price">
+									₩295,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('O22C9TTO576W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C9TTO576W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'3');"> <span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22C9TTO576W_IV_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">텍스처 블록 펄 티셔츠</span> <span class="price">
+									₩298,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SY2C8WJS656WM1', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SY2C8WJS656WM1&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'4');"> <span><img
+									src="http://newmedia.thehandsome.com/SY/2C/FW/SY2C8WJS656WM1_KG_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR03">SYSTEM</span>
+								<span class="title">디테쳐블 커프스 체크 재킷</span> <span class="price">
+									₩559,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C9WJM306M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C9WJM306M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'5');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9WJM306M_IN_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">캐시미어 블렌드 포켓 점퍼</span> <span
+								class="price"> ₩640,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('O22CAWJC381W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22CAWJC381W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'6');"> <span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22CAWJC381W_BK_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">울 블렌드 트리밍 재킷</span> <span class="price">
+									₩638,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('O22C9QOT604W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C9QOT604W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'7');"> <span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22C9QOT604W_BK_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">디테쳐블 다운 점퍼</span> <span class="price">
+									₩798,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C9WOT304M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C9WOT304M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'8');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9WOT304M_LE_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">캐시미어 블렌드 패널 재킷</span> <span
+								class="price"> ₩640,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8WJM323MM', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WJM323MM&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'9');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM323MM_SE_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">텍스처 블록 레더 점퍼</span> <span
+								class="price"> ₩590,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8WOT308M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WOT308M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'10');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WOT308M_OT_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">모크넥 점퍼</span> <span class="price">
+									₩590,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8LJM902M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8LJM902M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'11');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8LJM902M_TP_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">램스킨 셔츠 점퍼</span> <span class="price">
+									₩1,150,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('O22CAWPC331W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22CAWPC331W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'12');"> <span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22CAWPC331W_BK_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">레이어 패널 밴딩 팬츠</span> <span class="price">
+									₩298,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SY2C8WOTT04WM', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SY2C8WOTT04WM&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'13');"> <span><img
+									src="http://newmedia.thehandsome.com/SY/2C/FW/SY2C8WOTT04WM_LE_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR03">SYSTEM</span>
+								<span class="title">[PARIS] 하이넥 오버사이즈 패딩 점퍼</span> <span
+								class="price"> ₩690,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8WJM303M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8WJM303M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'14');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM303M_DN_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">백 플랩 칼라 점퍼</span> <span class="price">
+									₩495,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('SH2C8KVT008M', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=SH2C8KVT008M&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'15');"> <span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8KVT008M_BK_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">울 하프 집업 스트랩 베스트</span> <span
+								class="price"> ₩315,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('O22C8KCD840W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C8KCD840W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'16');"> <span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22C8KCD840W_BK_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">글리터 인타르시아 펄 가디건</span> <span class="price">
+									₩398,000</span> <span class="flag"></span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPagebyRecommend('O22C9NOT672W', 'https://lc.recopick.com/1/banner/1919/pick?uid=16680443.1664201066809&amp;source=&amp;pick=O22C9NOT672W&amp;method=25&amp;channel=product&amp;reco_type=user-item&amp;product_type=R&amp;reco_list=%5B%22SH2C8WJM316M%22%2C%22SH2C8WPC521M%22%2C%22SY2CATTO339WM1%22%2C%22O22C9TTO576W%22%2C%22SY2C8WJS656WM1%22%2C%22SH2C9WJM306M%22%2C%22O22CAWJC381W%22%2C%22O22C9QOT604W%22%2C%22SH2C9WOT304M%22%2C%22SH2C8WJM323MM%22%2C%22SH2C8WOT308M%22%2C%22SH2C8LJM902M%22%2C%22O22CAWPC331W%22%2C%22SY2C8WOTT04WM%22%2C%22SH2C8WJM303M%22%2C%22SH2C8KVT008M%22%2C%22O22C8KCD840W%22%2C%22O22C9NOT672W%22%2C%22O22C9TTO575W%22%2C%22SH2C7NSH707MP%22%2C%22SY2C9WTO272W%22%2C%22O22C9WOT274W%22%2C%22SH2C9KRN021M%22%2C%22O22C9WSC423W%22%2C%22SY2CAKTO237W%22%2C%22O22CAROT523W%22%2C%22SH2C8WJM323M%22%2C%22O22C9KTO728W%22%2C%22SY2C8WJM803W%22%2C%22SH2C9TTN613M%22%2C%22SY2C9KTO228W%22%2C%22SY2CAWSC925W%22%2C%22O22CAQOT611W%22%2C%22SY2CARCT413W%22%2C%22O22C9WOP152W%22%2C%22O22C9WSC426N%22%2C%22SH2C8TTO608MM%22%2C%22O22C9WSC424W%22%2C%22SY2CAWOT775W%22%2C%22O22C9WSC425N%22%5D&amp;tag=D');"
+							onclick="callRecommendClick($(this),'17');"> <span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22C9NOT672W_BL_S01.jpg"
+									alt="추천상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">디테쳐블 데님 베스트 레이어 점퍼</span> <span
+								class="price"> ₩698,000</span> <span class="flag"></span>
+						</span></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 추천상품 end -->
 
-<!-- 최근본 상품 start -->
-<div class="matches_list productEtcDiv" style="display:none" id="newItemsListContent">
-	<div class="controls">
-		<a href="javascript:void(0);" id="etcprev" class="prev">이전</a>
-		<a href="javascript:void(0);" id="etcnext" class="next">다음</a>
-	</div>
-	<div class="hidden_wrap">
-		<ul class="clearfix productSlide">
-			<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('SH2C8WJM323M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('0','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM323M_BK_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR07">SYSTEM HOMME</span>
-								<span class="title">텍스처 블록 레더 점퍼</span>
-								<span class="price">
-									₩590,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('IL2C9ASZ096W');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('1','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/IL/2C/FW/IL2C9ASZ096W_BR_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR31">LÄTT</span>
-								<span class="title">엠블럼 밴딩 스니커즈</span>
-								<span class="price">
-									₩325,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('O22C8WJC364WP1');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('2','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/O2/2C/FW/O22C8WJC364WP1_BK_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR45">O'2nd</span>
-								<span class="title">[기은세 Pick] 울 블렌드 더블 버튼 재킷</span>
-								<span class="price">
-									₩478,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('MN2B7KTO602W');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('3','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/MN/2B/FW/MN2B7KTO602W_LE_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR02">MINE</span>
-								<span class="title">메쉬 크로셰 니트 탑</span>
-								<span class="price">
-									₩207,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('TH2C9WPC581M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('4','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C9WPC581M_BK_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR06">TIME HOMME</span>
-								<span class="title">울 블렌드 테이퍼드 팬츠</span>
-								<span class="price">
-									₩395,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('SJ2C8TTO416W');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('5','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C8TTO416W_BG_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR04">SJSJ</span>
-								<span class="title">와플 칼라 티셔츠</span>
-								<span class="price">
-									₩335,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('TM2C7TTO901WM1');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('6','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/TM/2C/FW/TM2C7TTO901WM1_BK_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR01">TIME</span>
-								<span class="title">레터링 비딩 크롭 탑</span>
-								<span class="price">
-									₩525,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('TM2C9KOT250W');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('7','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/TM/2C/FW/TM2C9KOT250W_LS_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR01">TIME</span>
-								<span class="title">카멜 블렌드 디테쳐블 후드 재킷</span>
-								<span class="price">
-									₩1,250,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('YS2D1WJC003WHD');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('8','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/YS/2D/SS/YS2D1WJC003WHD_BK_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR35">FOURM THE STORE</span>
-								<span class="title">[HIDDEN FOREST MARKET] 마티니 비건 레더 크롭 집업 재킷</span>
-								<span class="price">
-									₩218,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('MM2C9WJC203M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('9','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/MM/2C/FW/MM2C9WJC203M_DE_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR44">CLUB MONACO</span>
-								<span class="title">울 블렌드 하운드투스 재킷</span>
-								<span class="price">
-									₩558,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('TH2C8WJC200M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('10','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C8WJC200M_DR_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR06">TIME HOMME</span>
-								<span class="title">울 블렌드 트위드 재킷</span>
-								<span class="price">
-									₩790,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('SH2C9NPC543NM');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('11','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9NPC543NM_BL_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR07">SYSTEM HOMME</span>
-								<span class="title">[NEW PREP] 원턱 와이드 데님 팬츠</span>
-								<span class="price">
-									₩235,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('TH2C8WOT317M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('12','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C8WOT317M_BG_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR06">TIME HOMME</span>
-								<span class="title">후드 블록 점퍼</span>
-								<span class="price">
-									₩930,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('TH2C9WJC204M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('13','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C9WJC204M_SW_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR06">TIME HOMME</span>
-								<span class="title">알파카 블렌드 체크 재킷</span>
-								<span class="price">
-									₩1,180,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('SH2C9ASZ092M');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('14','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9ASZ092M_BK_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR07">SYSTEM HOMME</span>
-								<span class="title">레더 첼시 부츠</span>
-								<span class="price">
-									₩345,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						<li style="padding: 0px; width: 165.833px;">
-							<a href="javascript:goDetailPage('LV2C7ASZ006W');" onclick="GA_Detail('halatest',$(this));setEcommerceData2('15','RECENT_FROM_DETAIL');">
-								<span><img src="http://newmedia.thehandsome.com/LV/2C/FW/LV2C7ASZ006W_BG_S01.jpg" alt="최근본 상품" class="respon_image" onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'" style="width: 96%; padding: 0px 2%;"></span>
-							</a>
-							<span class="item_info2">
-								<span class="brand BR20">LANVIN PARIS</span>
-								<span class="title">빈티지 솔 범퍼 스니커즈</span>
-								<span class="price">
-									₩970,000</span>
-								<span class="flag">
-									</span>
-							</span>
-						</li>
-						</ul>
-	</div>
-</div>
-<!-- 최근본 상품 start -->
+			<!-- 최근본 상품 start -->
+			<div class="matches_list productEtcDiv" style="display: none"
+				id="newItemsListContent">
+				<div class="controls">
+					<a href="javascript:void(0);" id="etcprev" class="prev">이전</a> <a
+						href="javascript:void(0);" id="etcnext" class="next">다음</a>
+				</div>
+				<div class="hidden_wrap">
+					<ul class="clearfix productSlide">
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('SH2C8WJM323M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('0','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C8WJM323M_BK_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">텍스처 블록 레더 점퍼</span> <span
+								class="price"> ₩590,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('IL2C9ASZ096W');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('1','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/IL/2C/FW/IL2C9ASZ096W_BR_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR31">LÄTT</span>
+								<span class="title">엠블럼 밴딩 스니커즈</span> <span class="price">
+									₩325,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('O22C8WJC364WP1');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('2','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/O2/2C/FW/O22C8WJC364WP1_BK_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR45">O'2nd</span>
+								<span class="title">[기은세 Pick] 울 블렌드 더블 버튼 재킷</span> <span
+								class="price"> ₩478,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('MN2B7KTO602W');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('3','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/MN/2B/FW/MN2B7KTO602W_LE_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR02">MINE</span>
+								<span class="title">메쉬 크로셰 니트 탑</span> <span class="price">
+									₩207,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('TH2C9WPC581M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('4','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C9WPC581M_BK_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR06">TIME
+									HOMME</span> <span class="title">울 블렌드 테이퍼드 팬츠</span> <span
+								class="price"> ₩395,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('SJ2C8TTO416W');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('5','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C8TTO416W_BG_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR04">SJSJ</span>
+								<span class="title">와플 칼라 티셔츠</span> <span class="price">
+									₩335,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('TM2C7TTO901WM1');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('6','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/TM/2C/FW/TM2C7TTO901WM1_BK_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR01">TIME</span>
+								<span class="title">레터링 비딩 크롭 탑</span> <span class="price">
+									₩525,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('TM2C9KOT250W');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('7','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/TM/2C/FW/TM2C9KOT250W_LS_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR01">TIME</span>
+								<span class="title">카멜 블렌드 디테쳐블 후드 재킷</span> <span class="price">
+									₩1,250,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('YS2D1WJC003WHD');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('8','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/YS/2D/SS/YS2D1WJC003WHD_BK_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR35">FOURM
+									THE STORE</span> <span class="title">[HIDDEN FOREST MARKET] 마티니
+									비건 레더 크롭 집업 재킷</span> <span class="price"> ₩218,000</span> <span
+								class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('MM2C9WJC203M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('9','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/MM/2C/FW/MM2C9WJC203M_DE_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR44">CLUB
+									MONACO</span> <span class="title">울 블렌드 하운드투스 재킷</span> <span
+								class="price"> ₩558,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('TH2C8WJC200M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('10','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C8WJC200M_DR_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR06">TIME
+									HOMME</span> <span class="title">울 블렌드 트위드 재킷</span> <span
+								class="price"> ₩790,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('SH2C9NPC543NM');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('11','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9NPC543NM_BL_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">[NEW PREP] 원턱 와이드 데님 팬츠</span> <span
+								class="price"> ₩235,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('TH2C8WOT317M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('12','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C8WOT317M_BG_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR06">TIME
+									HOMME</span> <span class="title">후드 블록 점퍼</span> <span class="price">
+									₩930,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('TH2C9WJC204M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('13','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/TH/2C/FW/TH2C9WJC204M_SW_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR06">TIME
+									HOMME</span> <span class="title">알파카 블렌드 체크 재킷</span> <span
+								class="price"> ₩1,180,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('SH2C9ASZ092M');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('14','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/SH/2C/FW/SH2C9ASZ092M_BK_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR07">SYSTEM
+									HOMME</span> <span class="title">레더 첼시 부츠</span> <span class="price">
+									₩345,000</span> <span class="flag"> </span>
+						</span></li>
+						<li style="padding: 0px; width: 165.833px;"><a
+							href="javascript:goDetailPage('LV2C7ASZ006W');"
+							onclick="GA_Detail('halatest',$(this));setEcommerceData2('15','RECENT_FROM_DETAIL');">
+								<span><img
+									src="http://newmedia.thehandsome.com/LV/2C/FW/LV2C7ASZ006W_BG_S01.jpg"
+									alt="최근본 상품" class="respon_image"
+									onerror="this.src='${pageContext.request.contextPath}/resources/images/products/no_img2.jpg'"
+									style="width: 96%; padding: 0px 2%;"></span>
+						</a> <span class="item_info2"> <span class="brand BR20">LANVIN
+									PARIS</span> <span class="title">빈티지 솔 범퍼 스니커즈</span> <span
+								class="price"> ₩970,000</span> <span class="flag"> </span>
+						</span></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 최근본 상품 start -->
 
 
-<!-- 룩북 -->
-<div class="matches_list productEtcDiv" style="display:none" id="lookbookListContent">
-	<div class="hidden_wrap lookbook_list191211 swiper-container">
-			<ul class="clearfix productSlide swiper-wrapper">
-				</ul>
- 			<a href="javascript:prevImgMove();" class="lookbook_prev swiper-button-prev" style="display:none">이전</a>
-	   		<a href="javascript:lastImgMove();" class="lookbook_next swiper-button-next" style="display:none">다음</a> 
+			<!-- 룩북 -->
+			<div class="matches_list productEtcDiv" style="display: none"
+				id="lookbookListContent">
+				<div class="hidden_wrap lookbook_list191211 swiper-container">
+					<ul class="clearfix productSlide swiper-wrapper">
+					</ul>
+					<a href="javascript:prevImgMove();"
+						class="lookbook_prev swiper-button-prev" style="display: none">이전</a>
+					<a href="javascript:lastImgMove();"
+						class="lookbook_next swiper-button-next" style="display: none">다음</a>
+				</div>
+			</div>
+			<!-- 룩북 end-->
 		</div>
 	</div>
-<!-- 룩북 end-->
-</div>
-        </div>
 
-        <!--상품평 리스트 팝업-->
-<div class="popwrap w_type_4" id="customerReviewDiv" style="display:none;">
-    <!--마일리지 안내영역 1906 -->
-    <div class="mileage_info_wrap1906">
-        <p class="wrap_heading">상품평 작성 시 추가 마일리지를 드려요!</p>
-        <div class="mileage_info_box">
-            <div class="review_w">
-                <p class="review_w_tit">• 온라인 구매 상품평 작성 시</p>
-                <ul>
-                    <li>
-                        <div class="ico_mileage1906">
-                            정상상품
-                        </div>
-                        <p><strong>정상상품</strong><br>구매금액의 <b>0.5%</b></p>
-                    </li>
-                    <li>
-                        <div class="ico_mileage1906">
-                            아울렛상품
-                        </div>
-                        <p><strong>아울렛상품</strong><br>구매금액의 <b>0.1%</b></p>
-                    </li>
-                    <li>
-                        <div class="ico_mileage1906">
-                            포토상품평
-                        </div>
-                        <p><strong>포토상품평</strong><br>(상품별 최초)<br><b>2,000마일리지</b></p>
-                    </li>
-                </ul>
-            </div>
-            <div class="best_review">
-                <p class="review_w_tit">• 온라인/오프라인 구매</p>
-                <ul>
-                    <li>
-                        <div class="ico_mileage1906">
-                            베스트리뷰
-                        </div>
-                        <p><strong>베스트리뷰</strong><br>매월 5명 <b>10만원</b> 바우처</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="noti_box" style="display:none;">
-            <ul class="bul_sty01_li">
-                <li>마일리지는 배송 완료일로부터 30일 이내, 작성한 상품평에 한하여 제공됩니다.</li>
-                <li>상품평 작성 시, 제공되는 추가 마일리지는 온라인에서 구입한 상품에 한하여 제공됩니다.</li>
-                <li>베스트 리뷰는 온라인/오프라인에서 구매한 상품의 상품평 전체를 대상으로 선정합니다.</li>
-                <li>할인, 쿠폰 적용 후 실결제금액이 5,000원 이상인 상품에 한하여 지급됩니다.</li>
-                <li>판매가 종료된 상품의 경우, 상품 상세페이지가 소멸되어 상품평 작성 및 마일리지 적립이 불가능합니다.</li>
-            </ul>
-        </div>
-        <div class="btn_noti_box"><span>자세히 보기</span></div>
-    </div>
-        <!--//마일리지 안내영역 1906 -->
-    <div class="pop_tltwrap2 pb0 customerreviewdiv1905">
-    
-        <h3>
-            상품평(<span id="review_cnt" class="review_cnt">1</span>)
-        </h3>
-        <div class="star_score1807" id="totalStarScoreWrapper">
-            <span class="cmt_star">
-                 <!-- 별점에 따라 class명 변경 (star1, star2 ,star3, star4, star5) -->
-                <span class="cmt_per" id="totalStarScore">별점</span>
-            </span>
-        </div>
-        <a href="#;" class="btn_evaluation1905" id="customerReviewWrite" onclick="GA_Event('상품평','상품평 작성하기','클릭');">상품평 작성하기</a>
-    </div>
-    <!-- pop_cnt-->
-    <div class="pop_cnt evaluation_list1807 options">
-        <div class="tab_a m3 mt20">
-            <input type="hidden" id="review_tab_active" value="ALL">
-            <ul id="review_tab">
-                <li id="ALL"><a href="#;" class="active" onclick="GA_Event('상품평','탭','전체');">전체 (1)</a></li>
-                <li id="PHOTO"><a href="#;" class="" onclick="GA_Event('상품평','탭','포토상품평');">포토 상품평 (0)</a></li>
-                <li id="TEXT"><a href="#;" onclick="GA_Event('상품평','탭','일반상품평');">일반 상품평 (0)</a></li>
-            </ul>
-        </div>
-        <div class="clearfix review_tab1_1807">
-            <ul></ul>
-        </div>
-        <!-- paging -->
-        <div class="paging mt30" id="reviewPagingDiv"></div>
-        <!-- //paging -->
-    </div>
-    <!--// pop_cnt-->
-    <a href="javascript:void(0);" class="btn_close"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div>
-<!--//상품평 리스트 팝업 -->
+	<!--상품평 리스트 팝업-->
+	<div class="popwrap w_type_4" id="customerReviewDiv"
+		style="display: none;">
 
-<!--상품평 쓰기 팝업 -->
-<div class="popwrap w_type_4" id="customerReviewWriteDiv" style="display:none;">
-    <div class="pop_tltwrap2 customerreviewwritediv1807">
-        <h3 id="review_title">상품평 작성하기</h3>
-        <p class="reqd_txt float_right"><strong class="reqd">*</strong> 표시는 필수항목입니다.</p>
-    </div>
-    <div class="pop_cnt evaluation_write1905 options1811">
-        <form id="reviewForm" name="reviewForm" action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051" method="post" enctype="multipart/form-data"><input type="hidden" name="productCode">
-            <input type="hidden" name="productCodeType">
-            <input type="hidden" name="orderNumber" id="orderNumber" value="">
-            <input type="hidden" name="purchaseColor" id="purchaseColor" value="">
-            <input type="hidden" name="purchaseColorName" id="purchaseColorName" value="">
-            <input type="hidden" name="purchaseSize" id="purchaseSize" value="">
-            <input type="hidden" name="purchaseProdYN" id="purchaseProdYN" value="">
-            <input type="hidden" name="orderWriteChk" id="orderWriteChk" value="">
-            <input type="hidden" name="closeWriteChk" id="closeWriteChk" value="">
-            <input type="hidden" name="productId" id="productId" value="">
-            <input type="hidden" name="fileDeleteYN" id="fileDeleteYN">
-            
-                <!-- 상품평활성화 -->
-            <input type="hidden" name="categoryCode" id="categoryCode" value="SZ06">
-            <input type="hidden" name="shoulderWidth" id="shoulderWidth" value="">
-            <input type="hidden" name="chestSize" id="chestSize" value="">
-            <input type="hidden" name="waistSize" id="waistSize" value="">
-            <input type="hidden" name="buttSize" id="buttSize" value="">
-            <input type="hidden" name="totalSize" id="totalSize" value="">
-            <input type="hidden" name="photoAccumulationRightYn" id="photoAccumulationRightYn" value="">
-            <input type="hidden" name="offlineOrdDt" id="offlineOrdDt" value="">
-            <input type="hidden" name="offlineShpCd" id="offlineShpCd" value="">
-            <input type="hidden" name="offlineShpNm" id="offlineShpNm" value="">
-            <input type="hidden" name="tempProductId" id="tempProductId" value="">
-        	<input type="hidden" name="reviewFileCd" id="reviewFileCd" value="">
-        	<input type="hidden" name="reviewFileCd1" id="reviewFileCd1" value="">
-        	<input type="hidden" name="reviewFileCd2" id="reviewFileCd2" value="">
-        	<input type="hidden" name="reviewFileCd3" id="reviewFileCd3" value="">
-        	<input type="hidden" name="reviewFileCd4" id="reviewFileCd4" value="">
-            <fieldset>
-                <legend>상품평쓰기</legend>
-                <div class="tblwrap">
-                    <table class="tbl_wtype1">
-                        <caption>상품평쓰기 입력항목</caption>
-                        <colgroup>
-                            <col style="width:135px">
-                            <col>
-                            <col style="width:130px">
-                            <col>
-                        </colgroup>
-                        <tbody>
-                            <tr>
-                                <th scope="row" class="th_space">상품명</th>
-                                <td colspan="3" style="padding:15px;">
-                                    <div class="item_box" id="reviewProductDiv">
-                                        <div class="pt_list_all">
-                                            <a href="#;"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg" id="reviewProducImg" alt="상품 이미지" onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></a>
-                                            <div class="tlt_wrap review_header_wrapper">
-                                            <!-- <div class="tlt_wrap review_header_wrapper nodata"> -->
-                                                <a href="#;" class="basket_tlt">
-                                                    <span class="tlt" id="reviewProductBrandName"></span>
-                                                    <span class="sb_tlt" id="reviewProductProductName"></span> / <span id="reviewProducPrice"></span>
-                                                </a>
-                                                <!-- 주문조회에서 넘어올시 이거 보여줌<p class="color_op" id="purchased_color_size" style="display:none;">COLOR : <span id="review_color_name"></span>   <span class="and_line">/</span>  SIZE : <span id="review_size"></span></p> -->
-                                                <div class="select_options_wrap" style="display:none;">
-                                                    <ul class="select_options">
-                                                        <li class="select_colors">
-                                                            <p><span class="compulsory">*</span> 색상<!-- 색상 --></p>
-                                                            <ul class="color_chip clearfix">
-                                                            <input type="hidden" id="colorName" value="CAMEL">
-	                                                                        <li id="MN2C8WJC026WP_CM">
-	                                                                <input type="hidden" class="colorNameVal" value="CAMEL">
-	                                                                <a href="#;" class="beige" data-color="CAMEL" style="background:#a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg/dims/resize/24x24');" onclick="javascript:fn_clickColorCode('MN2C8WJC026WP_CM', 'CAMEL');" onmouseover="setColorName('CAMEL');" onmouseout="setColorName('');"></a>
-	                                                            </li>
-	                                                                        <li>
-                                                                    <span class="cl_name" id="colorNameContent"></span>
-                                                                </li>
-                                                            </ul>
-                                                        </li>
-                                                    <li class="select_size">
-                                                        <p><span class="compulsory">*</span> 사이즈<!-- 사이즈 --></p>
-                                                            <ul class="size_chip clearfix" id="review_size_btn_area">
-                                                                <li id="MN2C8WJC026WP_CM_76">
-                                                                <a onclick="javascript:fn_clickSizeCode('MN2C8WJC026WP_CM_76');">76</a>
-                                                                            <productdetails:popupsizequickreference>
-                                                                            </productdetails:popupsizequickreference></li>
-                                                                        <li id="MN2C8WJC026WP_CM_82">
-                                                                <a onclick="javascript:fn_clickSizeCode('MN2C8WJC026WP_CM_82');">82</a>
-                                                                            </li>
-                                                                        </ul>
-                                                            <!-- <ul class="size_chip clearfix">
+		<!--//마일리지 안내영역 1906 -->
+		<div class="pop_tltwrap2 pb0 customerreviewdiv1905">
+
+			<h3>
+				상품평(<span id="review_cnt" class="review_cnt">1</span>)
+			</h3>
+			<div class="star_score1807" id="totalStarScoreWrapper">
+				<span class="cmt_star"> <!-- 별점에 따라 class명 변경 (star1, star2 ,star3, star4, star5) -->
+					<span class="cmt_per" id="totalStarScore">별점</span>
+				</span>
+			</div>
+			<a href="#;" class="btn_evaluation1905" id="customerReviewWrite"
+				onclick="GA_Event('상품평','상품평 작성하기','클릭');">상품평 작성하기</a>
+		</div>
+		<!-- pop_cnt-->
+		<div class="pop_cnt evaluation_list1807 options">
+			<div class="tab_a m3 mt20">
+				<input type="hidden" id="review_tab_active" value="ALL">
+				<ul id="review_tab">
+					<li id="ALL"><a href="#;" class="active"
+						onclick="GA_Event('상품평','탭','전체');">전체 (1)</a></li>
+					<li id="PHOTO"><a href="#;" class=""
+						onclick="GA_Event('상품평','탭','포토상품평');">포토 상품평 (0)</a></li>
+					<li id="TEXT"><a href="#;"
+						onclick="GA_Event('상품평','탭','일반상품평');">일반 상품평 (0)</a></li>
+				</ul>
+			</div>
+			<div class="clearfix review_tab1_1807">
+				<ul></ul>
+			</div>
+			<!-- paging -->
+			<div class="paging mt30" id="reviewPagingDiv"></div>
+			<!-- //paging -->
+		</div>
+		<!--// pop_cnt-->
+		<a href="javascript:void(0);" class="btn_close"><img
+			src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+			alt="닫기"></a>
+	</div>
+	<!--//상품평 리스트 팝업 -->
+
+	<!--상품평 쓰기 팝업 -->
+	<div class="popwrap w_type_4" id="customerReviewWriteDiv"
+		style="display: none;">
+		<div class="pop_tltwrap2 customerreviewwritediv1807">
+			<h3 id="review_title">상품평 작성하기</h3>
+			<p class="reqd_txt float_right">
+				<strong class="reqd">*</strong> 표시는 필수항목입니다.
+			</p>
+		</div>
+		<div class="pop_cnt evaluation_write1905 options1811">
+			<form id="reviewForm" name="reviewForm"
+				action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+				method="post" enctype="multipart/form-data">
+				<input type="hidden" name="productCode"> <input
+					type="hidden" name="pcode" value="${product.pcode}"> <input
+					type="hidden" name="pno" value="${product.pno}"> <input
+					type="hidden" name="productCodeType"> <input type="hidden"
+					name="orderNumber" id="orderNumber" value=""> <input
+					type="hidden" name="purchaseColor" id="purchaseColor" value="">
+				<input type="hidden" name="purchaseColorName" id="purchaseColorName"
+					value=""> <input type="hidden" name="purchaseSize"
+					id="purchaseSize" value=""> <input type="hidden"
+					name="purchaseProdYN" id="purchaseProdYN" value=""> <input
+					type="hidden" name="orderWriteChk" id="orderWriteChk" value="">
+				<input type="hidden" name="closeWriteChk" id="closeWriteChk"
+					value=""> <input type="hidden" name="productId"
+					id="productId" value=""> <input type="hidden"
+					name="fileDeleteYN" id="fileDeleteYN">
+
+				<!-- 상품평활성화 -->
+				<input type="hidden" name="categoryCode" id="categoryCode"
+					value="SZ06"> <input type="hidden" name="shoulderWidth"
+					id="shoulderWidth" value=""> <input type="hidden"
+					name="chestSize" id="chestSize" value=""> <input
+					type="hidden" name="waistSize" id="waistSize" value=""> <input
+					type="hidden" name="buttSize" id="buttSize" value=""> <input
+					type="hidden" name="totalSize" id="totalSize" value=""> <input
+					type="hidden" name="photoAccumulationRightYn"
+					id="photoAccumulationRightYn" value=""> <input
+					type="hidden" name="offlineOrdDt" id="offlineOrdDt" value="">
+				<input type="hidden" name="offlineShpCd" id="offlineShpCd" value="">
+				<input type="hidden" name="offlineShpNm" id="offlineShpNm" value="">
+				<input type="hidden" name="tempProductId" id="tempProductId"
+					value=""> <input type="hidden" name="reviewFileCd"
+					id="reviewFileCd" value=""> <input type="hidden"
+					name="reviewFileCd1" id="reviewFileCd1" value=""> <input
+					type="hidden" name="reviewFileCd2" id="reviewFileCd2" value="">
+				<input type="hidden" name="reviewFileCd3" id="reviewFileCd3"
+					value=""> <input type="hidden" name="reviewFileCd4"
+					id="reviewFileCd4" value="">
+				<fieldset>
+					<legend>상품평쓰기</legend>
+					<div class="tblwrap">
+						<table class="tbl_wtype1">
+							<caption>상품평쓰기 입력항목</caption>
+							<colgroup>
+								<col style="width: 135px">
+								<col>
+								<col style="width: 130px">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row" class="th_space">상품명</th>
+									<td colspan="3" style="padding: 15px;">
+										<div class="item_box" id="reviewProductDiv">
+											<div class="pt_list_all">
+												<a href="#;"><img src="${productimage1}"
+													id="reviewProducImg" alt="상품 이미지"
+													onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></a>
+												<div class="tlt_wrap review_header_wrapper">
+													<!-- <div class="tlt_wrap review_header_wrapper nodata"> -->
+													<a href="#;" class="basket_tlt"> <span class="tlt"
+														id="reviewProductBrandName"></span> <span class="sb_tlt"
+														id="reviewProductProductName"></span> / <span
+														id="reviewProducPrice"></span>
+													</a>
+													<!-- 주문조회에서 넘어올시 이거 보여줌<p class="color_op" id="purchased_color_size" style="display:none;">COLOR : <span id="review_color_name"></span>   <span class="and_line">/</span>  SIZE : <span id="review_size"></span></p> -->
+													<div class="select_options_wrap" style="display: none;">
+														<ul class="select_options">
+															<li class="select_colors">
+																<p>
+																	<span class="compulsory">*</span> 색상
+																	<!-- 색상 -->
+																</p>
+																<ul class="color_chip clearfix">
+																	<input type="hidden" id="colorName" value="CAMEL">
+																	<li id="MN2C8WJC026WP_CM"><input type="hidden"
+																		class="colorNameVal" value="CAMEL"> <a
+																		href="#;" class="beige" data-color="CAMEL"
+																		style="background: #a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg/dims/resize/24x24');"
+																		onclick="javascript:fn_clickColorCode('MN2C8WJC026WP_CM', 'CAMEL');"
+																		onmouseover="setColorName('CAMEL');"
+																		onmouseout="setColorName('');"></a></li>
+																	<li><span class="cl_name" id="colorNameContent"></span>
+																	</li>
+																</ul>
+															</li>
+															<li class="select_size">
+																<p>
+																	<span class="compulsory">*</span> 사이즈
+																	<!-- 사이즈 -->
+																</p>
+																<ul class="size_chip clearfix" id="review_size_btn_area">
+																	<li id="MN2C8WJC026WP_CM_76"><a
+																		onclick="javascript:fn_clickSizeCode('MN2C8WJC026WP_CM_76');">76</a>
+																		<productdetails:popupsizequickreference>
+																		</productdetails:popupsizequickreference></li>
+																	<li id="MN2C8WJC026WP_CM_82"><a
+																		onclick="javascript:fn_clickSizeCode('MN2C8WJC026WP_CM_82');">82</a>
+																	</li>
+																</ul> <!-- <ul class="size_chip clearfix">
                                                             <li id="MN1IBKTO483W_MB_90">
                                                                 <a href="javascript:fn_detailProductAjax('MN1IBKTO483W_MB_90')">90</a>
                                                             </li>
                                                  </ul> -->
-                                                    </li>
-                                                </ul>
-                                                </div>
-                                                
-                                            <!-- <div class="select_checkbox">
+															</li>
+														</ul>
+													</div>
+
+													<!-- <div class="select_checkbox">
                                                 <input type="checkbox" name="" value="" id="storePickTFC">
                                                 <label for="storePickTFC">상품을 매장에서 구매하셨나요?</label>
                                             </div> -->
-                                            </div>
-                                            <!--20190529_selelct_group -->
-                                            <div class="select_group" id="productOption" style="display:none;">
-                                            </div>
-                                            <!--//20190529_selelct_group -->
-                                            <div class="select_checkbox" style="display:none;">
-                                                <input type="checkbox" id="packopt" name="packopt">
-                                                <label for="purchaseYN">
-                                                    매장에서 구매한 상품입니다.</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr class="tbl_blank1807">
-                                <td colspan="4">&nbsp;</td>
-                            </tr>
-                            <tr class="radio_btn_1905 bk">
-                                <th scope="row" class="th_space">연 령</th>
-                                <td colspan="3">
-                                    <input id="ageG1" type="radio" name="age" value="18세 이하">
-                                    <label for="ageG1">18세 이하</label>
-                                    <input id="ageG2" type="radio" name="age" value="20대">
-                                    <label for="ageG2">20대</label>
-                                    <input id="ageG3" type="radio" name="age" value="30대">
-                                    <label for="ageG3">30대</label>
-                                    <input id="ageG4" type="radio" name="age" value="40대">
-                                    <label for="ageG4">40대</label>
-                                    <input id="ageG5" type="radio" name="age" value="50대">
-                                    <label for="ageG5">50대</label>
-                                    <input id="ageG6" type="radio" name="age" value="60대 이상">
-                                    <label for="ageG6">60대 이상</label>
-                                    </td>
-                            </tr>
-                            <tr class="input_txt_1905">
-                                <th scope="row" class="th_space" id="thHeight">
-                                    <strong class="reqd">*</strong>
-                                    키</th>
-                                <td><input type="text" name="height" id="height" style="width:75%amrgin-right:10px">cm</td>
-                                <th scope="row" class="th_space" id="thEnjoySize">
-                                    <strong class="reqd">*</strong>
-                                    평소 사이즈</th>
-                                <td><input type="text" name="enjoySize" id="enjoySize"></td>
-                            </tr>
-                            <tr class="radio_btn_1905">
-                                <th scope="row" class="th_space" id="thBodyType">
-                                    <strong class="reqd">*</strong>
-                                    체 형</th>
-                                <td colspan="3">
-                                    <input id="dark1" type="radio" name="bodyType" value="마른 체형">
-                                    <label for="dark1">마른 체형</label>
-                                    <input id="dark2" type="radio" name="bodyType" value="보통">
-                                    <label for="dark2">보통</label>
-                                    <input id="dark3" type="radio" name="bodyType" value="통통한 체형">
-                                    <label for="dark3">통통한 체형</label>
-                                </td>
-                            </tr>
-                            <tr class="tbl_blank1807">
-                                <td colspan="4">&nbsp;</td>
-                            </tr>
-                            <tr class="write_star_wrap">
-                                <th colspan="4">
-                                    <div class="write_star_score1807">
-                                        <span class="cmt_star">
-                                            <span class="cmt_per star5">별점</span>
-                                        </span>
-                                        <ul class="btn_star_score">
-                                            <li><a href="#;" value="1">1점</a></li>
-                                            <li><a href="#;" value="2">2점</a></li>
-                                            <li><a href="#;" value="3">3점</a></li>
-                                            <li><a href="#;" value="4">4점</a></li>
-                                            <li><a href="#;" value="5">5점</a></li>
-                                            <input type="hidden" id="rating" name="rating" value="5">
-                                        </ul>
-                                        <p>평점을 선택해 주세요.</p>
-                                    </div>
-                                </th>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="th_space"><strong class="reqd">*</strong>실 착용 사이즈</th>
-                                <td colspan="3">
-                                    <!--20190529_상품평활성화-->
-                                    <div class="cont_detail">
-                                        <p class="left_txt">어깨너비 : </p>
-                                        <ul class="rd_box_radio_list">
-                                            <li>
-                                                <input id="realWearSize1_01" type="radio" name="realWearSize1" value="1">
-                                                <label for="realWearSize1_01">타이트함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize1_02" type="radio" name="realWearSize1" value="2">
-                                                <label for="realWearSize1_02">적당함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize1_03" type="radio" name="realWearSize1" value="3">
-                                                <label for="realWearSize1_03">여유있음</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cont_detail">
-                                        <p class="left_txt">가슴둘레 : </p>
-                                        <ul class="rd_box_radio_list">
-                                            <li>
-                                                <input id="realWearSize2_01" type="radio" name="realWearSize2" value="1">
-                                                <label for="realWearSize2_01">타이트함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize2_02" type="radio" name="realWearSize2" value="2">
-                                                <label for="realWearSize2_02">적당함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize2_03" type="radio" name="realWearSize2" value="3">
-                                                <label for="realWearSize2_03">여유있음</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="cont_detail">
-                                        <p class="left_txt">총길이 : </p>
-                                        <ul class="rd_box_radio_list">
-                                            <li>
-                                                <input id="realWearSize3_01" type="radio" name="realWearSize3" value="1">
-                                                <label for="realWearSize3_01">짧은 편</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize3_02" type="radio" name="realWearSize3" value="2">
-                                                <label for="realWearSize3_02">적당함</label>
-                                            </li>
-                                            <li>
-                                                <input id="realWearSize3_03" type="radio" name="realWearSize3" value="3">
-                                                <label for="realWearSize3_03">긴 편</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!--//20190529_상품평활성화-->
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row" class="th_space"><strong class="reqd">*</strong>실 제품 색상</th>
-                                <td colspan="3">
-                                    <input id="dark" type="radio" name="realProductColor" value="1">
-                                    <label for="dark">어두워요</label>
-                                    <input id="same" type="radio" name="realProductColor" class="ml20" value="2">
-                                    <label for="same">화면과 같아요</label>
-                                    <input id="light" type="radio" name="realProductColor" class="ml20" value="3">
-                                    <label for="light">밝아요</label>
-                                </td>
-                            </tr>
-                                    <tr>
-                                <th scope="row">
-                                    <strong class="reqd" style="margin-top:6px;">*</strong>
-                                    <label for="lb1" style="margin-top:6px;">상품평<br>
-                                        <span class="subtxt_1905">
-                                            (20자 이상<br>&nbsp;200자 이하)</span>
-                                    </label>
-                                        </th>
-                                <td colspan="3">
-                                    <textarea id="reviewHeadline" name="headline" cols="30" rows="5" style="width:98%;height:78px" maxlength="200"></textarea>
-                                </td>
-                            </tr>
-                            	<tr>
-                                <th scope="row" id="thFile" class="th_space"><label for="file">사진등록</label></th>
-                                <td colspan="3">
-                                    <!-- File upload -->
-                                    <div class="file_upload hs_input_file_wrap2003">
-                                    	<div class="upload_wrap2003">
-                                        	<input type="text" id="textReviewFile" class="text" title="파일 첨부하기" readonly="readonly" name="fileText">
-                                        	<div class="upload_btn">
-                                        		<input type="file" name="reviewFile" id="reviewFile" class="btn add_s" title="파일찾기">
-                                            	<label for="reviewFile">
-	                                            <!-- 	 <button type="button" id="uploadFile1" class="img_upload" title="파일찾기">  --> 
-	                                            		 <span id="uploadFile1" class="img_upload">파일찾기</span>
-	                                            <!--	 </button> -->
-                                            	</label>
-                                            	
-                                        	</div>
-                                        </div>
-                                        <ul class="file_image_wrap2003">
-														
-										</ul>
-                                    	<p class="txt_guide">10MB 미만의 jpg,gif,png 파일만 첨부하실 수 있습니다.</p>                                    <!-- //File upload -->
-                                </div></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="txt_guide">
-                        <span style="color:#e46764; font-weight: bold;">- 상품평과 무관한 내용이거나  상품 재판매, 광고, 동일 문자의 반복 및 기타 불법적인 내용은 통보 없이 삭제되며,<br>&nbsp;&nbsp;해당 글 작성자 ID는 글쓰기 권한이 제한됩니다.</span><br>- 반품, 취소 등의 CS관련 글은 고객센터&gt;1:1문의로 이동될 수 있습니다.<br>
-                        <span>- 더한섬닷컴에서 구매한 상품의 상품평을 배송완료 30일 이내 작성 시, 추가 마일리지를 지급합니다.</span><br>
-                        
-                        - 마일리지 지급에 대한 상세 내용은 마이페이지&gt;내 상품평 페이지에서 확인 부탁드립니다.<br>
-                        &nbsp;&nbsp;(마일리지 적립은 오프라인 구매 및 간편회원 제외)</p>
-                </div>
-                <div class="btnwrap mt40">
-                    <input type="button" id="reviewCancle" value="취소하기" class="btn wt">
-                    <input type="button" id="reviewWriteSend" value="등록하기" class="btn gray mr0">
-                </div>
+												</div>
+												<!--20190529_selelct_group -->
+												<div class="select_group" id="productOption"
+													style="display: none;"></div>
+												<!--//20190529_selelct_group -->
+												<div class="select_checkbox" style="display: none;">
+													<input type="checkbox" id="packopt" name="packopt">
+													<label for="purchaseYN"> 매장에서 구매한 상품입니다.</label>
+												</div>
+											</div>
+										</div>
+									</td>
+								</tr>
+								<tr class="tbl_blank1807">
+									<td colspan="4">&nbsp;</td>
+								</tr>
 
-            </fieldset>
-        <div>
-<input type="hidden" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-</div></form></div>
-        <a href="javascript:void(0);" id="reviewCloseBtn" style="position: absolute; top: 20px; right: 20px; width: 20px; height: 20px;"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div>
-<!--//상품평 쓰기 팝업 --><style>
+
+								<tr class="tbl_blank1807">
+									<td colspan="4">&nbsp;</td>
+								</tr>
+								<tr class="write_star_wrap">
+									<th colspan="4">
+										<div class="write_star_score1807">
+											<span class="cmt_star"> <span class="cmt_per star5">별점</span>
+											</span>
+											<ul class="btn_star_score">
+												<li><a href="#;" value="1">1점</a></li>
+												<li><a href="#;" value="2">2점</a></li>
+												<li><a href="#;" value="3">3점</a></li>
+												<li><a href="#;" value="4">4점</a></li>
+												<li><a href="#;" value="5">5점</a></li>
+												<input type="hidden" id="rating" name="rating" value="5">
+											</ul>
+											<p>평점을 선택해 주세요.</p>
+										</div>
+									</th>
+								</tr>
+
+								<tr>
+									<th scope="row"><strong class="reqd"
+										style="margin-top: 6px;">*</strong> <label for="lb1"
+										style="margin-top: 6px;">상품평<br> <span
+											class="subtxt_1905"> (20자 이상<br>&nbsp;200자 이하)
+										</span>
+									</label></th>
+									<td colspan="3"><textarea id="reviewHeadline"
+											name="headline" cols="30" rows="5"
+											style="width: 98%; height: 78px" maxlength="200"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" id="thFile" class="th_space"><label
+										for="file">사진등록</label></th>
+									<td colspan="3">
+										<!-- File upload -->
+										<div class="file_upload hs_input_file_wrap2003">
+											<div class="upload_wrap2003">
+												<input type="text" id="textReviewFile" class="text"
+													title="파일 첨부하기" readonly="readonly" name="fileText">
+												<div class="upload_btn">
+													<input type="file" name="reviewFile" id="reviewFile"
+														class="btn add_s" title="파일찾기"> <label
+														for="reviewFile"> <!-- 	 <button type="button" id="uploadFile1" class="img_upload" title="파일찾기">  -->
+														<span id="uploadFile1" class="img_upload">파일찾기</span> <!--	 </button> -->
+													</label>
+
+												</div>
+											</div>
+											<ul class="file_image_wrap2003">
+
+											</ul>
+											<p class="txt_guide">10MB 미만의 jpg,gif,png 파일만 첨부하실 수
+												있습니다.</p>
+											<!-- //File upload -->
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="txt_guide">
+							<span style="color: #e46764; font-weight: bold;">- 상품평과
+								무관한 내용이거나 상품 재판매, 광고, 동일 문자의 반복 및 기타 불법적인 내용은 통보 없이 삭제되며,<br>&nbsp;&nbsp;해당
+								글 작성자 ID는 글쓰기 권한이 제한됩니다.
+							</span><br>- 반품, 취소 등의 CS관련 글은 고객센터&gt;1:1문의로 이동될 수 있습니다.<br>
+							<span>- 더한섬닷컴에서 구매한 상품의 상품평을 배송완료 30일 이내 작성 시, 추가 마일리지를
+								지급합니다.</span><br> - 마일리지 지급에 대한 상세 내용은 마이페이지&gt;내 상품평 페이지에서 확인
+							부탁드립니다.<br> &nbsp;&nbsp;(마일리지 적립은 오프라인 구매 및 간편회원 제외)
+						</p>
+					</div>
+					<div class="btnwrap mt40">
+						<input type="button" id="reviewCancle" value="취소하기" class="btn wt">
+						<input type="button" id="reviewWriteSend" value="등록하기"
+							class="btn gray mr0">
+					</div>
+
+				</fieldset>
+				<div>
+					<input type="hidden" name="CSRFToken"
+						value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
+				</div>
+			</form>
+		</div>
+		<a href="javascript:void(0);" id="reviewCloseBtn"
+			style="position: absolute; top: 20px; right: 20px; width: 20px; height: 20px;"><img
+			src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+			alt="닫기"></a>
+	</div>
+	<!--//상품평 쓰기 팝업 -->
+	<style>
 #delQnAFile {
-    display: inline;
-    position: absolute;
-    top: 9px;
-    right: 115px;
+	display: inline;
+	position: absolute;
+	top: 9px;
+	right: 115px;
 }
 
 #textQnAFile {
-    padding: 0 30px 0 6px;
-    width: calc(100% - 24px);
-    text-overflow: ellipsis;
+	padding: 0 30px 0 6px;
+	width: calc(100% - 24px);
+	text-overflow: ellipsis;
 }
 </style>
-<script type="text/javascript">
+	<script type="text/javascript">
 $(document).ready(function() {
 	$("#inquiryMobileNo2").on("keyup", function() {
 		$(this).val( $(this).val().replace( /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g, '' ) );
@@ -13499,304 +14086,360 @@ $(document).ready(function() {
 	});
 });
 </script>
-<div class="popwrap w_type_4" id="productQnADiv" style="display:none;">
+	<div class="popwrap w_type_4" id="productQnADiv" style="display: none;">
 
-	<div class="pop_tltwrap2 pb0">
-		<h3>Q&amp;A</h3>
-	</div>
-	<div class="pop_cnt evaluation_list">
-		<a href="#;" class="btn_evaluation" id="productQnAWrite">상품문의하기</a>					
-		<div class="clearfix">
-			<table class="pop_tbl_ltype1">
-				<caption>Q&amp;A</caption>
-				<thead>
-					<tr>
-						<th scope="col">번호</th>
-						<th scope="col">Q&amp;A</th>
-						<th scope="col">작성자</th>
-						<th scope="col">작성일</th>
-					</tr>
-				</thead>
-				<tbody></tbody>
-			</table>
+		<div class="pop_tltwrap2 pb0">
+			<h3>Q&amp;A</h3>
 		</div>
-		<!-- paging -->
-		<div class="paging mt30" id="qnAPagingDiv"></div>
-		<!-- //paging -->
+		<div class="pop_cnt evaluation_list">
+			<a href="#;" class="btn_evaluation" id="productQnAWrite">상품문의하기</a>
+			<div class="clearfix">
+				<table class="pop_tbl_ltype1">
+					<caption>Q&amp;A</caption>
+					<thead>
+						<tr>
+							<th scope="col">번호</th>
+							<th scope="col">Q&amp;A</th>
+							<th scope="col">작성자</th>
+							<th scope="col">작성일</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			<!-- paging -->
+			<div class="paging mt30" id="qnAPagingDiv"></div>
+			<!-- //paging -->
+		</div>
+		<a href="javascript:void(0);" class="btn_close"><img
+			src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+			alt="닫기"></a>
 	</div>
-	<a href="javascript:void(0);" class="btn_close"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div>
 
 
-<div class="popwrap w_type_3" id="productQnAWriteDiv" style="display:none;">
-	<div class="pop_tltwrap2">
-		<h3>상품문의하기</h3>
-	</div>
-	<div class="pop_cnt evaluation_write">
-		<form id="productQnAForm" name="productQnAForm" action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051" method="post" enctype="multipart/form-data"><input type="hidden" id="productCode" name="productCode">
-			<input type="hidden" id="productQnaCode" name="productQnaCode">
-			<input type="hidden" id="delAttach" name="delAttach" value="N">
-			<fieldset>
-				<legend>상품문의하기</legend>
-				<div class="tblwrap">
-					<p class="reqd_txt float_right"><strong class="reqd">*</strong> 표시는 필수항목입니다.</p>
-					<table class="tbl_wtype1">
-						<caption>상품문의하기 입력항목</caption>
-						<colgroup>
-							<col width="140px">
-							<col width="*">
-						</colgroup>
-						<tbody>
-							<tr>
-								<th scope="row"><strong class="reqd">*</strong><label for="inquiryTitle">문의제목</label></th>
-								<td>
-									<input type="text" id="inquiryTitle" name="inquiryTitle" title="input" style="width:100%">
-								</td>
-							</tr>
-							<tr>
-								<th scope="row"><strong class="reqd">*</strong><label for="inquiryContents">문의내용</label><span class="com_txt_p">(300자 이하)</span></th>
-								<td>
-									<textarea name="inquiryContents" id="inquiryContents" cols="30" rows="5" style="width:98%;height:200px"></textarea>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row" class="th_space"><label for="file">파일 첨부하기</label></th>
-								<td>
-									<!-- File upload -->
-									<div class="file_upload">
-										<input type="text" id="textQnAFile" class="text" title="파일찾기" readonly="readonly" name="fileText">
-										<a href="javascript:void(0);" id="delQnAFile">
-											<img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="파일삭제">
-										</a>
-										<div class="upload_btn">
-											<label for="qnaFile"><button type="button" id="uploadFile" class="img_upload" title="파일찾기"><span>파일찾기</span></button></label>
-											<input type="file" id="qnaFile" name="uploadFile" class="btn add_s" title="파일찾기">
-										</div>
-									</div>
-									<!-- //File upload -->
-									<p class="txt_guide">10MB 미만의 jpg,gif,png 파일만 첨부하실 수 있습니다.</p>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row" class="th_space">
-									<label for="inquiryMobileNo2">SMS 알림받기</label>
-								</th>
-								<td>
-									<div style="position:relative;">
-										<input type="hidden" id="smsMobileNo" name="smsMobileNo">
-										<select id="inquiryMobileNo1" title="휴대폰 번호 앞자리" style="width:80px; margin-top:0; vertical-align:middle; padding: 3px 8px 3px 8px;">
-											<option value="010" selected="selected">010</option>
-											<option value="011">011</option>
-											<option value="016">016</option>
-											<option value="017">017</option>
-											<option value="018">018</option>
-											<option value="019">019</option>
-										</select>
-										<div class="form_hyphen">-</div>
-										<input type="text" id="inquiryMobileNo2" name="inquiryMobileNo2" title="휴대폰 번호 가운데자리" style="width:80px;" maxlength="4">
-										<div class="form_hyphen">-</div>
-										<input type="text" id="inquiryMobileNo3" name="inquiryMobileNo3" title="휴대폰 번호 뒷자리" style="width:80px;" maxlength="4">
-										<span class="sms_alm_2006_chk" style="display: block; position:absolute; top:3px; right:14px;">
-											<input type="hidden" id="smsNoticeYN" name="smsNoticeYN" value="N">
-											<input type="checkbox" id="inquirySmsNoticeYn" name="inquirySmsNoticeYn" style="margin-top:1px;">
-											<label for="inquirySmsNoticeYn">SMS 알람고지</label>
-										</span>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<th scope="row">
-									<label for="inquiryEmailAddress"><strong class="reqd">*</strong><label for="inquiryMobileNo2">이메일 답변받기</label></label>
-								</th>
-								<td>
-									<input type="hidden" id="replyToEmail" name="replyToEmail">
-									<input type="text" id="inquiryEmailAddress" name="inquiryEmailAddress" title="이메일아이디" style="width:120px;">
-									<span class="andmail">@</span>
-									<input type="text" id="inquiryEmailDomain" name="inquiryEmailDomain" title="이메일계정 입력란" style="width:120px;">
-									<select id="inquiryEmailSel" title="이메일계정" style="width:140px; padding: 3px 8px 3px 8px;">
-										<option value="" selected="selected">직접입력</option>
-										<option value="naver.com">naver.com</option>
-										<option value="daum.net">daum.net</option>
-										<option value="gmail.com">gmail.com</option>
-										<option value="yahoo.co.kr">yahoo.co.kr</option>
-										<option value="lycos.co.kr">lycos.co.kr</option>
-										<option value="nate.com">nate.com</option>
-										<option value="empas.com">empas.com</option>
-										<option value="hotmail.com">hotmail.com</option>
-										<option value="msn.com">msn.com</option>
-										<option value="hanmir.com">hanmir.com</option>
-										<option value="chol.net">chol.net</option>
-										<option value="korea.com">korea.com</option>
-										<option value="netsgo.com">netsgo.com</option>
-										<option value="dreamwiz.com">dreamwiz.com</option>
-										<option value="hanafos.com">hanafos.com</option>
-										<option value="freechal.com">freechal.com</option>
-										<option value="hitel.net">hitel.net</option>
-									</select>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<p class="guide_txt clearfix" style="border-top:0;">
-					<span class="float_left"><strong>상품에 관한 배송, 교환, 취소 등의 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</strong></span>
-					<span class="float_right">
-						<input type="checkbox" name="securitySentenceYn" id="securitySentenceYn" value="Y"> <label for="securitySentenceYn">비밀글 설정</label>
-					</span>
-				</p>
-				<div class="btnwrap mt40">
-					<input type="button" id="qnaCancle" value="취소하기" class="btn wt">
-					<input type="button" id="qnaWriteSend" value="등록하기" class="btn gray mr0">
-				</div>
-			</fieldset>
-		<div>
-<input type="hidden" name="CSRFToken" value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
-</div></form></div>
-	<a href="javascript:void(0);" class="btn_close"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
-</div>
-<!-- layer pop 1 -->
-			<div class="popwrap w_type_3" id="storePickupDiv" style="display:none;">
-				<!--title-->
-				<div class="pop_tltwrap">
-					<h3>수령 매장 선택</h3>
-				</div>
-				<!--//title-->
-				<!--contents-->
-				<div class="pop_cnt zipcode">
-					<!-- search -->
-					<div class="search">
-						<label for="search">지역명 (도로명)</label>
-						<input type="text" id="storePickupSearchWord" name="searchWord" placeholder="매장명 또는 지역 명을 입력 후 검색해 주세요" style="width:260px">
-						<input type="button" value="검색" id="storePickupSearchBtn" class="btn wt_s mr0 min_auto">
-					</div>
-					<!-- //search -->
-					<!--  del_tab_container -->
-					<div class="del_tab_container"> 
-						<table class="pop_dtable store">
-							<caption>배송지 목록</caption>
-							<thead>
+	<div class="popwrap w_type_3" id="productQnAWriteDiv"
+		style="display: none;">
+		<div class="pop_tltwrap2">
+			<h3>상품문의하기</h3>
+		</div>
+		<div class="pop_cnt evaluation_write">
+			<form id="productQnAForm" name="productQnAForm"
+				action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+				method="post" enctype="multipart/form-data">
+				<input type="hidden" id="productCode" name="productCode"> <input
+					type="hidden" id="productQnaCode" name="productQnaCode"> <input
+					type="hidden" id="delAttach" name="delAttach" value="N">
+				<fieldset>
+					<legend>상품문의하기</legend>
+					<div class="tblwrap">
+						<p class="reqd_txt float_right">
+							<strong class="reqd">*</strong> 표시는 필수항목입니다.
+						</p>
+						<table class="tbl_wtype1">
+							<caption>상품문의하기 입력항목</caption>
+							<colgroup>
+								<col width="140px">
+								<col width="*">
+							</colgroup>
+							<tbody>
 								<tr>
-									<th scope="col">선택</th>
-									<th scope="col">배송지 주소</th>
-									<th scope="col">연락처/휴대폰</th>
+									<th scope="row"><strong class="reqd">*</strong><label
+										for="inquiryTitle">문의제목</label></th>
+									<td><input type="text" id="inquiryTitle"
+										name="inquiryTitle" title="input" style="width: 100%">
+									</td>
 								</tr>
-							</thead>
-							<tbody id="popupStorePickupContent">
-
+								<tr>
+									<th scope="row"><strong class="reqd">*</strong><label
+										for="inquiryContents">문의내용</label><span class="com_txt_p">(300자
+											이하)</span></th>
+									<td><textarea name="inquiryContents" id="inquiryContents"
+											cols="30" rows="5" style="width: 98%; height: 200px"></textarea>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="th_space"><label for="file">파일
+											첨부하기</label></th>
+									<td>
+										<!-- File upload -->
+										<div class="file_upload">
+											<input type="text" id="textQnAFile" class="text" title="파일찾기"
+												readonly="readonly" name="fileText"> <a
+												href="javascript:void(0);" id="delQnAFile"> <img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+												alt="파일삭제">
+											</a>
+											<div class="upload_btn">
+												<label for="qnaFile"><button type="button"
+														id="uploadFile" class="img_upload" title="파일찾기">
+														<span>파일찾기</span>
+													</button></label> <input type="file" id="qnaFile" name="uploadFile"
+													class="btn add_s" title="파일찾기">
+											</div>
+										</div> <!-- //File upload -->
+										<p class="txt_guide">10MB 미만의 jpg,gif,png 파일만 첨부하실 수 있습니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row" class="th_space"><label
+										for="inquiryMobileNo2">SMS 알림받기</label></th>
+									<td>
+										<div style="position: relative;">
+											<input type="hidden" id="smsMobileNo" name="smsMobileNo">
+											<select id="inquiryMobileNo1" title="휴대폰 번호 앞자리"
+												style="width: 80px; margin-top: 0; vertical-align: middle; padding: 3px 8px 3px 8px;">
+												<option value="010" selected="selected">010</option>
+												<option value="011">011</option>
+												<option value="016">016</option>
+												<option value="017">017</option>
+												<option value="018">018</option>
+												<option value="019">019</option>
+											</select>
+											<div class="form_hyphen">-</div>
+											<input type="text" id="inquiryMobileNo2"
+												name="inquiryMobileNo2" title="휴대폰 번호 가운데자리"
+												style="width: 80px;" maxlength="4">
+											<div class="form_hyphen">-</div>
+											<input type="text" id="inquiryMobileNo3"
+												name="inquiryMobileNo3" title="휴대폰 번호 뒷자리"
+												style="width: 80px;" maxlength="4"> <span
+												class="sms_alm_2006_chk"
+												style="display: block; position: absolute; top: 3px; right: 14px;">
+												<input type="hidden" id="smsNoticeYN" name="smsNoticeYN"
+												value="N"> <input type="checkbox"
+												id="inquirySmsNoticeYn" name="inquirySmsNoticeYn"
+												style="margin-top: 1px;"> <label
+												for="inquirySmsNoticeYn">SMS 알람고지</label>
+											</span>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="inquiryEmailAddress"><strong
+											class="reqd">*</strong><label for="inquiryMobileNo2">이메일
+												답변받기</label></label></th>
+									<td><input type="hidden" id="replyToEmail"
+										name="replyToEmail"> <input type="text"
+										id="inquiryEmailAddress" name="inquiryEmailAddress"
+										title="이메일아이디" style="width: 120px;"> <span
+										class="andmail">@</span> <input type="text"
+										id="inquiryEmailDomain" name="inquiryEmailDomain"
+										title="이메일계정 입력란" style="width: 120px;"> <select
+										id="inquiryEmailSel" title="이메일계정"
+										style="width: 140px; padding: 3px 8px 3px 8px;">
+											<option value="" selected="selected">직접입력</option>
+											<option value="naver.com">naver.com</option>
+											<option value="daum.net">daum.net</option>
+											<option value="gmail.com">gmail.com</option>
+											<option value="yahoo.co.kr">yahoo.co.kr</option>
+											<option value="lycos.co.kr">lycos.co.kr</option>
+											<option value="nate.com">nate.com</option>
+											<option value="empas.com">empas.com</option>
+											<option value="hotmail.com">hotmail.com</option>
+											<option value="msn.com">msn.com</option>
+											<option value="hanmir.com">hanmir.com</option>
+											<option value="chol.net">chol.net</option>
+											<option value="korea.com">korea.com</option>
+											<option value="netsgo.com">netsgo.com</option>
+											<option value="dreamwiz.com">dreamwiz.com</option>
+											<option value="hanafos.com">hanafos.com</option>
+											<option value="freechal.com">freechal.com</option>
+											<option value="hitel.net">hitel.net</option>
+									</select></td>
+								</tr>
 							</tbody>
 						</table>
-						<div class="btnwrap">
-							<input class="btn wt_s" id="storePickupCloseBtn" value="취소" type="button">
-							<input class="btn gray_s" id="storePickupChoiceBtn" value="확인" type="button">
-						</div>
 					</div>
-					<!-- //del_tab_container -->
+					<p class="guide_txt clearfix" style="border-top: 0;">
+						<span class="float_left"><strong>상품에 관한 배송, 교환, 취소
+								등의 자세한 문의사항은 고객센터를 이용해 주시기 바랍니다.</strong></span> <span class="float_right">
+							<input type="checkbox" name="securitySentenceYn"
+							id="securitySentenceYn" value="Y"> <label
+							for="securitySentenceYn">비밀글 설정</label>
+						</span>
+					</p>
+					<div class="btnwrap mt40">
+						<input type="button" id="qnaCancle" value="취소하기" class="btn wt">
+						<input type="button" id="qnaWriteSend" value="등록하기"
+							class="btn gray mr0">
+					</div>
+				</fieldset>
+				<div>
+					<input type="hidden" name="CSRFToken"
+						value="77badcd5-86c7-4e47-8c1f-0663967bf7b6">
 				</div>
-				<!--//contents-->
-				<a href="#;" class="btn_close" id="storePickupClose"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png" alt="닫기"></a>
+			</form>
+		</div>
+		<a href="javascript:void(0);" class="btn_close"><img
+			src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+			alt="닫기"></a>
+	</div>
+	<!-- layer pop 1 -->
+	<div class="popwrap w_type_3" id="storePickupDiv"
+		style="display: none;">
+		<!--title-->
+		<div class="pop_tltwrap">
+			<h3>수령 매장 선택</h3>
+		</div>
+		<!--//title-->
+		<!--contents-->
+		<div class="pop_cnt zipcode">
+			<!-- search -->
+			<div class="search">
+				<label for="search">지역명 (도로명)</label> <input type="text"
+					id="storePickupSearchWord" name="searchWord"
+					placeholder="매장명 또는 지역 명을 입력 후 검색해 주세요" style="width: 260px">
+				<input type="button" value="검색" id="storePickupSearchBtn"
+					class="btn wt_s mr0 min_auto">
 			</div>
-			<!-- layer pop 1 -->
-<!-- layer pop 1 -->
-            <div class="popwrap w_type_2" id="restockReminder" style="width:450px;display:none;">
-                <div class="pop_tltwrap mb20">
-                    <h3>재입고 알림 신청</h3>
-                </div>
-                <div class="pop_cnt pop_con_restock1904">
-                    <div class="item_box" id="rewareHousingDiv">
-                        <input type="hidden" id="popupHProduct" value="">
-                        <div class="pt_list_all">
-                            <img src="${pageContext.request.contextPath}/resources/images/popup/cart_set_img1.jpg" id="popupProductImageS01" alt="">
-                            <div class="tlt_wrap">
-                                <div class="basket_tlt">
-                                    <span class="tlt" id="popupBrandName"></span>
-                                    <span class="sb_tlt" id="popupProductName"></span>
-                                </div>
-                                <p class="color_op" id="popupProductColor"></p>
-                                <input type="hidden" id="popupProductSize">
-                                <p class="mt5" id="popupProductPrice"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="input_box1904">
-                        <p class="txt1904">재입고 알림을 받으실 이메일 정보를 확인해주세요.</p>
-                        <form action="#" method="post">
-                            <!-- email -->
-                            <input type="text" id="email_address" title="이메일 아이디" class="em_form" style="width:198px;" value="" disabled="disabled">
-                            <span class="andmail">@</span>
-                            <input type="text" id="email_domain" title="이메일 도메인" class="em_form" style="width:198px;margin-right:0;" value="" disabled="disabled">
-                        </form>
-                        <ul class="bul_sty01_li mt15">
-                            <li>재입고 알림 예정이 있는 상품(컬러/사이즈)에 한해서 재입고 알림 신청이 가능합니다. <br>(제작상황에 따라 변경될 수 있습니다.)</li>
-                            <li>신청 후 30일 내에 상품이 재입고 되면 '1회' 알림이 발송됩니다.</li>
-                            <li>소량 입고되거나 동시 구매가 이루어질 경우 등 알림 후에도 품절이 발생할 수 있습니다.</li>
-                            <li>회원정보에 등록된 이메일 정보로 안내 드리며, 이메일 정보 수정은<br>마이페이지 &gt; 개인정보변경 페이지에서 가능합니다.</li>
-                            <li>알림 신청 시의 상품 옵션 및 가격 등의 상품정보가 재입고 시 변동될 수 있습니다.</li>
-                            <li>아울렛으로 판매 전환 되었을 경우, 알림이 발송되지 않습니다.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="btnwrap">
-                    <input type="button" class="btn wt_s" id="rewareHousingCancel" value="취소">
-                    <input type="button" class="btn gray_s mr0" id="rewareHousingApply" value="신청">
-                </div>
-                <!-- btn_close -->
-                <a href="#" class="btn_close"><img src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png" alt="닫기"></a>
-                <!-- //btn_close -->
-            </div>
-            <!-- layer pop 1 -->
-<!--리얼핏 팝업 -->
-			<div class="popwrap w_type_3" id="viewRealFit1810" style="width:624px;display:none;margin-left:-342px;">
-				<!-- Title1 -->
-				<div class="pop_tltwrap rlfit_pop_tltwrap">
-					<h3>핏 가이드</h3>
+			<!-- //search -->
+			<!--  del_tab_container -->
+			<div class="del_tab_container">
+				<table class="pop_dtable store">
+					<caption>배송지 목록</caption>
+					<thead>
+						<tr>
+							<th scope="col">선택</th>
+							<th scope="col">배송지 주소</th>
+							<th scope="col">연락처/휴대폰</th>
+						</tr>
+					</thead>
+					<tbody id="popupStorePickupContent">
+
+					</tbody>
+				</table>
+				<div class="btnwrap">
+					<input class="btn wt_s" id="storePickupCloseBtn" value="취소"
+						type="button"> <input class="btn gray_s"
+						id="storePickupChoiceBtn" value="확인" type="button">
 				</div>
-				<!-- //Title1 -->
-				<div class="rlfit_pop_cnt">
-					<div class="tab_d m2">
-						<ul>
-							<li><a href="javascript:chageFitGuideTab('FIRST')" class="active"></a></li>
-							<li><a href="javascript:chageFitGuideTab('SECOND')"></a></li>
-						</ul>
-					</div>
-					<div class="rlfit_pop_slider">
-						<!-- rlfit_slide1 -->
-						<div class="tab_cnt1810 rlfit_slide1">
-							<p class="fit_guide_size1810">• 착용 사이즈: </p>
-							<ul class="slides">
-							</ul>
-							<div class="controls">
-								<span class="prev" id="fitGuiPrev1"></span>
-								<span class="next" id="fitGuiNext1"></span>
-							</div>
-							<div class="bx_pager1810">
-								<a class="bx-pager-link" data-slide-index="0" href="#;">정면</a>
-								<a class="bx-pager-link" data-slide-index="1" href="#;">뒷면</a>
-							</div>
-						</div>
-						<!--// rlfit_slide1 -->
-						<!-- rlfit_slide2 -->
-						<div class="tab_cnt1810 rlfit_slide2" style="display:none;">
-							<p class="fit_guide_size1810">• 착용 사이즈: </p>
-							<ul class="slides">
-							</ul>
-							<div class="controls">
-								<span class="prev" id="fitGuiPrev2"></span>
-								<span class="next" id="fitGuiNext2"></span>
-							</div>
-							<div class="bx_pager1810">
-								<a class="bx-pager-link" data-slide-index="0" href="#;">정면</a>
-								<a class="bx-pager-link" data-slide-index="1" href="#;">뒷면</a>
-							</div>
-						</div>
-						<!--// rlfit_slide2 -->
-					</div>
-				</div>
-				<!-- btn_close -->
-				<a href="#" class="btn_close"><img src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png" alt="닫기"></a>
-				<!-- //btn_close -->
 			</div>
-			<!--//리얼핏 팝업 -->
-<script type="text/javascript">
+			<!-- //del_tab_container -->
+		</div>
+		<!--//contents-->
+		<a href="#;" class="btn_close" id="storePickupClose"><img
+			src="http://cdn.thehandsome.com/_ui/desktop/common/images/popup/ico_close.png"
+			alt="닫기"></a>
+	</div>
+	<!-- layer pop 1 -->
+	<!-- layer pop 1 -->
+	<div class="popwrap w_type_2" id="restockReminder"
+		style="width: 450px; display: none;">
+		<div class="pop_tltwrap mb20">
+			<h3>재입고 알림 신청</h3>
+		</div>
+		<div class="pop_cnt pop_con_restock1904">
+			<div class="item_box" id="rewareHousingDiv">
+				<input type="hidden" id="popupHProduct" value="">
+				<div class="pt_list_all">
+					<img
+						src="${pageContext.request.contextPath}/resources/images/popup/cart_set_img1.jpg"
+						id="popupProductImageS01" alt="">
+					<div class="tlt_wrap">
+						<div class="basket_tlt">
+							<span class="tlt" id="popupBrandName"></span> <span
+								class="sb_tlt" id="popupProductName"></span>
+						</div>
+						<p class="color_op" id="popupProductColor"></p>
+						<input type="hidden" id="popupProductSize">
+						<p class="mt5" id="popupProductPrice"></p>
+					</div>
+				</div>
+			</div>
+			<div class="input_box1904">
+				<p class="txt1904">재입고 알림을 받으실 이메일 정보를 확인해주세요.</p>
+				<form action="#" method="post">
+					<!-- email -->
+					<input type="text" id="email_address" title="이메일 아이디"
+						class="em_form" style="width: 198px;" value="" disabled="disabled">
+					<span class="andmail">@</span> <input type="text" id="email_domain"
+						title="이메일 도메인" class="em_form"
+						style="width: 198px; margin-right: 0;" value=""
+						disabled="disabled">
+				</form>
+				<ul class="bul_sty01_li mt15">
+					<li>재입고 알림 예정이 있는 상품(컬러/사이즈)에 한해서 재입고 알림 신청이 가능합니다. <br>(제작상황에
+						따라 변경될 수 있습니다.)
+					</li>
+					<li>신청 후 30일 내에 상품이 재입고 되면 '1회' 알림이 발송됩니다.</li>
+					<li>소량 입고되거나 동시 구매가 이루어질 경우 등 알림 후에도 품절이 발생할 수 있습니다.</li>
+					<li>회원정보에 등록된 이메일 정보로 안내 드리며, 이메일 정보 수정은<br>마이페이지 &gt;
+						개인정보변경 페이지에서 가능합니다.
+					</li>
+					<li>알림 신청 시의 상품 옵션 및 가격 등의 상품정보가 재입고 시 변동될 수 있습니다.</li>
+					<li>아울렛으로 판매 전환 되었을 경우, 알림이 발송되지 않습니다.</li>
+				</ul>
+			</div>
+		</div>
+		<div class="btnwrap">
+			<input type="button" class="btn wt_s" id="rewareHousingCancel"
+				value="취소"> <input type="button" class="btn gray_s mr0"
+				id="rewareHousingApply" value="신청">
+		</div>
+		<!-- btn_close -->
+		<a href="#" class="btn_close"><img
+			src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png"
+			alt="닫기"></a>
+		<!-- //btn_close -->
+	</div>
+	<!-- layer pop 1 -->
+	<!--리얼핏 팝업 -->
+	<div class="popwrap w_type_3" id="viewRealFit1810"
+		style="width: 624px; display: none; margin-left: -342px;">
+		<!-- Title1 -->
+		<div class="pop_tltwrap rlfit_pop_tltwrap">
+			<h3>핏 가이드</h3>
+		</div>
+		<!-- //Title1 -->
+		<div class="rlfit_pop_cnt">
+			<div class="tab_d m2">
+				<ul>
+					<li><a href="javascript:chageFitGuideTab('FIRST')"
+						class="active"></a></li>
+					<li><a href="javascript:chageFitGuideTab('SECOND')"></a></li>
+				</ul>
+			</div>
+			<div class="rlfit_pop_slider">
+				<!-- rlfit_slide1 -->
+				<div class="tab_cnt1810 rlfit_slide1">
+					<p class="fit_guide_size1810">• 착용 사이즈:</p>
+					<ul class="slides">
+					</ul>
+					<div class="controls">
+						<span class="prev" id="fitGuiPrev1"></span> <span class="next"
+							id="fitGuiNext1"></span>
+					</div>
+					<div class="bx_pager1810">
+						<a class="bx-pager-link" data-slide-index="0" href="#;">정면</a> <a
+							class="bx-pager-link" data-slide-index="1" href="#;">뒷면</a>
+					</div>
+				</div>
+				<!--// rlfit_slide1 -->
+				<!-- rlfit_slide2 -->
+				<div class="tab_cnt1810 rlfit_slide2" style="display: none;">
+					<p class="fit_guide_size1810">• 착용 사이즈:</p>
+					<ul class="slides">
+					</ul>
+					<div class="controls">
+						<span class="prev" id="fitGuiPrev2"></span> <span class="next"
+							id="fitGuiNext2"></span>
+					</div>
+					<div class="bx_pager1810">
+						<a class="bx-pager-link" data-slide-index="0" href="#;">정면</a> <a
+							class="bx-pager-link" data-slide-index="1" href="#;">뒷면</a>
+					</div>
+				</div>
+				<!--// rlfit_slide2 -->
+			</div>
+		</div>
+		<!-- btn_close -->
+		<a href="#" class="btn_close"><img
+			src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png"
+			alt="닫기"></a>
+		<!-- //btn_close -->
+	</div>
+	<!--//리얼핏 팝업 -->
+	<script type="text/javascript">
 $(document).ready(function() {
 	$("#stockconfirm .btnwrap .btn.wt_s").on("click", function() {
 		$("#offlieQtyClose").trigger("click");
@@ -13918,1316 +14561,1487 @@ function getOfflineQty() {
 }
 </script>
 
-			<!-- 매장 재고 확인 팝업 -->
-			<div class="popwrap w_type_2_1" id="stockconfirm" style="top: 50%; position: fixed; z-index: 101; margin-top:-175px; display: none;">
-				<!-- Title1 -->
-				<div class="pop_tltwrap">
-					<h3>매장 재고 확인</h3>
-				</div>
-				<!-- //Title1 -->
-				<!-- pop_cnt-->
-				<div class="pop_cnt" id="offlineQtyListPop">
-					<span class="stock_poptit">
-						오프라인 매장 재고를 확인하실 색상과 사이즈를 선택해주세요.
-					</span>
-					<ul class="color_size_qty czq_pop">
-						<li>
-							<span class="title">색상</span>
-							<div class="txt">
-								<ul class="color_chip clearfix">
-									<input type="hidden" id="colorName" value="CAMEL">
-													<li>
-														<input type="hidden" class="colorNameVal" value="CAMEL">
-														<a href="#;" class="beige" style="background:#a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg/dims/resize/24x24')" data-color-code="CM" data-color-name="CAMEL" onmouseover="setColorNamePop('CAMEL')" onmouseout="setColorNamePop('')"></a>
-													</li>
-												</ul>
-							</div>
-							<span class="cl_namepop" id="colorNamepop"></span>
-						</li>
-						<li>
-							<span class="title">사이즈</span>
-							<span class="txt size_chip190527">
-								<ul class="size_chip clearfix sizeChipKo1901">
-										<li>
-														<a href="#;" data-size-code="76" data-kr-size="(44)" data-erp-size="1">76<span class="ko_size1901">&nbsp;(44)</span></a>
-													</li>
-												<li>
-														<a href="#;" data-size-code="82" data-kr-size="(55)" data-erp-size="2">82<span class="ko_size1901">&nbsp;(55)</span></a>
-													</li>
-												</ul>
-								</span>
-						</li>
-					</ul>
-					<div class="btnwrap_pop">
-						<input type="button" class="btn gray_s" onclick="javascript:showOfflineQtyInformation();GA_Event('매장_재고_확인','매장 재고 확인하기','MINE_캐시미어 더블 재킷');" value="매장 재고 확인하기">
-					</div>
-			
-					<div class="more_stockbox" style="display:none;">
-						<p class="stock_pop_txt">
-						</p>
-						<div class="chk_box">
-							<input type="checkbox" id="soldOutYn" onclick="GA_Event('매장_재고_확인','필터','품절 매장 제외');">
-							<label for="soldOutYn">품절 매장 제외</label>
-						</div>
-						<table class="pop_stocktb">
-							<caption>배송지 목록</caption>
-							<thead>
-								<tr>
-								<th class="mj_th" scope="col">매장 정보</th>
-								<th scope="col">연락처</th>
-								</tr>
-							</thead>
-							<tbody id="offlineQtyList">
-							</tbody>
-						</table>
-						<!-- //table -->
-						<div class="btnwrap">
-							<input class="btn wt_s" onclick="GA_Event('매장_재고_확인','취소 / 확인','취소');" value="취소" type="button">
-							<input class="btn gray_s" onclick="GA_Event('매장_재고_확인','취소 / 확인','확인');" value="확인" type="button">
-						</div>
-					</div>
-					
-				</div>
-				<!--// pop_cnt-->
-				<div class="pop_cnt_info" id="offlineQtyInfoPop" style="display:none;">
-					<strong>매장 재고 안내</strong>
-					<p>
-						현 시점 재고 수량을 조회합니다.
-					</p>
-					<p class="pci_txt">
-						재고 확인 시 동일 시점에 해당 상품이 판매될 경우
-						수량의 차이가 있을 수 있으니,<br>
-						<span>정확한 수량 및 구매 가능 여부는 매장으로 직접 문의해주시기 바랍니다.</span>
-					</p>
-					<div class="btnwrap_pop">
-						<input type="button" class="btn info_gray" onclick="javascript:hideOfflineQtyInformation();GA_Event('매장_재고_확인','안내사항 확인 완료','클릭');" value="안내사항 확인 완료">
-					</div>
-				</div>
-				<a href="javascript:void(0);" id="offlieQtyClose" class="btn_close" onclick="GA_Event('매장_재고_확인','닫기','클릭');"><img src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png" alt="닫기"></a>
+	<!-- 매장 재고 확인 팝업 -->
+	<div class="popwrap w_type_2_1" id="stockconfirm"
+		style="top: 50%; position: fixed; z-index: 101; margin-top: -175px; display: none;">
+		<!-- Title1 -->
+		<div class="pop_tltwrap">
+			<h3>매장 재고 확인</h3>
+		</div>
+		<!-- //Title1 -->
+		<!-- pop_cnt-->
+		<div class="pop_cnt" id="offlineQtyListPop">
+			<span class="stock_poptit"> 오프라인 매장 재고를 확인하실 색상과 사이즈를 선택해주세요.
+			</span>
+			<ul class="color_size_qty czq_pop">
+				<li><span class="title">색상</span>
+					<div class="txt">
+						<ul class="color_chip clearfix">
+							<input type="hidden" id="colorName" value="CAMEL">
+							<li><input type="hidden" class="colorNameVal" value="CAMEL">
+								<a href="#;" class="beige"
+								style="background: #a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg/dims/resize/24x24')"
+								data-color-code="CM" data-color-name="CAMEL"
+								onmouseover="setColorNamePop('CAMEL')"
+								onmouseout="setColorNamePop('')"></a></li>
+						</ul>
+					</div> <span class="cl_namepop" id="colorNamepop"></span></li>
+				<li><span class="title">사이즈</span> <span
+					class="txt size_chip190527">
+						<ul class="size_chip clearfix sizeChipKo1901">
+							<li><a href="#;" data-size-code="76" data-kr-size="(44)"
+								data-erp-size="1">76<span class="ko_size1901">&nbsp;(44)</span></a>
+							</li>
+							<li><a href="#;" data-size-code="82" data-kr-size="(55)"
+								data-erp-size="2">82<span class="ko_size1901">&nbsp;(55)</span></a>
+							</li>
+						</ul>
+				</span></li>
+			</ul>
+			<div class="btnwrap_pop">
+				<input type="button" class="btn gray_s"
+					onclick="javascript:showOfflineQtyInformation();GA_Event('매장_재고_확인','매장 재고 확인하기','MINE_캐시미어 더블 재킷');"
+					value="매장 재고 확인하기">
 			</div>
-			<!--// 매장 재고 확인 팝업 -->
-<!-- 211101 체험단 리뷰 추가 S -->
-    <!-- 체험단 상품평 리스트-->
-    <div class="popwrap w_type_4 pop-tester-review" id="testerReviewDiv" style="display:none;">
-        <div class="pop_tltwrap2 pb0 customerreviewdiv1905">
-            <h3>
-                체험단(<span class="review_cnt">15</span>)
-            </h3>           
-            <p>더한섬닷컴 체험단 이벤트에 당첨된 고객님들의 상품 사용 후기입니다.</p>
-        </div>
-        <!-- pop_cnt-->
-        <div class="pop_cnt evaluation_list1807 options">
-            <div class="clearfix review_tab1_1807">
-                <ul>
-                    <!-- 1 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>장*윤</span> / <span>30대</span> / <span>민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_0">
-                            <ul class="slides reviewImg0">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_3.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_4.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_5.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_6.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_7.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="5" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="6" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                열흘 정도 써본 한섬의 럭셔리 뷰티 oera♥ <br> 
-                                세안 후 솜으로 닦아내지 않으면 마무리가 되지 않은 느낌인데, 오에라의 캘리브레이터로 스킨 대신 첫 단계로 써보니 피부가 한결 정리된 기분. 그리고 무엇보다 울긋불긋한 톤이 균일해졌다! 특히 전용 패드가 너~무 좋아서 감동. <br>
-                                세심하게 만든게 느껴지는 오에라의 캘리브레이터 꾸준히 쓰면 올 여름 상한 피부가 다시 돌아올 것 같아~
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>
-                    <!-- 2 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>이*주</span> / <span>30대</span> / <span>복합-민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_1">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_5.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_6.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_7.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="5" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="6" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                오에라의 멀티-베네핏 캘리브레이터는 전용 패드 120매와 80ml의 본품이 함께 구성되어 있습니다. <br>
-                                한 손으로 다 잡히지 않는, 넉넉한 용량입니다. 은빛의 고급스러운 패키지가 눈에 띕니다. <br>
-                                용기는 펌핑형으로, 무게감이 적당해 사용이 편리했습니다. <br>
-                                제품을 펌핑하여 페이스에 사용하기 전부터 향에서 깊은 인상을 받을 수 있었습니다. 스킨케어 첫 단계에서 사용하는 제품인 만큼, 휴식과 안정의 느낌을 선사하는 향이라는 느낌이 듭니다.<br>
-                                멀티-베네핏 캘리브레이터는 묽게 흐르는 제형이지만, 피부에 금방 흡수되며 촉촉한 느낌입니다. <br>
-                                전용 패드는 한쪽에 엠보가 도드라지며, 다른 한 쪽은 좀더 부드러운 느낌입니다. 부드러운 패드 반대 쪽 면에 묻혀 사용하니 진정과 수분 공급에 탁월한 효과를 볼 수 있었습니다. <br>
-                                탄력이 조금 더 신경 쓰이는 날에는 패드에 캘리브레이터를 넉넉히 묻혀 팩처럼 활용하기도 했습니다. 시간이 지나 패드를 떼어 내면 눈에 띄게 촉촉해지고 쫀쫀해진 피부 때문에 자꾸 손이 가는 제품입니다.<br>
-                                사용하며 가장 인상적이었던 점은 자극없이 피부에 생기를 불어넣어 준다는 점입니다. 복합성에 민감성 피부인 제가 민감한 부위에 제품을 덧바르더라도 자극이 전혀 느껴지지 않았습니다. <br>
-                                2주 동안 캘리브레이터를 사용하며 스킨 토너를 사용할 때보다 수분이 충전되는 느낌을 받았습니다.<br>
-                                캘리브레이터는 기초 첫 단계에서 단독 사용하더라도, 토너 뿐만 아니라 에센스의 역할까지도 훌륭히 해내는 듯합니다.
-                                역할까지도 훌륭히 해내는 듯합니다.
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>                       
-                    <!-- 3 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>최*정</span> / <span>30대</span> / <span>민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_2">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_5.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_6.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="5" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                한섬의 프리미엄 스킨케어 브랜드라 해서 넘나 기대가 되었는데요, 포장 상태도 마음에 들었고 케이스도 고급스러운 디자인이라, 엄마 선물로도 좋을 것 같아요! <br>
-                                처음에는 큰 박스가 와서 왜 이렇게 큰가 했더니, 캘리브레이터랑, 캘리브레이터 전용 패드가 같이 들어가 있었어요!<br>
-                                제가 피부가 예민한 편이라, 많은 성분과 기능을 담은 제품은 사용하기 무서워하는 편인데, 오에라 켈리브레이터는 사용 후에 자극이나 가려움이 느껴지지 않아서 좋았어요! <br>
-                                왜 패드가 포함되어 있나 했더니, 패드를 활용해서 피부결을 정돈하는 단계가 첫 단계더라구요! 패드는 촘촘하지 않은 독특한 재질로 되어 있어요! 피부결을 따라 닦아내듯 발라주면 된답니다!<br>
-                                캘리브레이터 전용 패드를 이용해서 피부결을 닦아낸 후에는, 손바닥에 적당량을 펌핑한 후에 피부에 지그시 누르듯 흡수시켜주면 된답니다!  용기는 펌핑형으로 되어 있어서 위생적으로 사용하기 좋답니다!ㅎㅎ <br>
-                                제형은 흐르는 물 같은 제형에, 향은 딱 맡아도 고급스러운 향이 나더라구요. 자연스러운 향이다보니 호불호가 크게 갈리지 않고 사용할 수 있을 것 같았답니다!<br>
-                                무엇보다 흡수력이 빠르고, 얼굴에 두껍게 발리는 느낌이 아니여서 산뜻한 느낌이 났어요! <br>
-                                아침저녁으로 사용중인데,촉촉한 느낌이 지속되어서 계속 꾸준히 사용해볼 생각이랍니다!
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>                       
-                    <!-- 4 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>박*영</span> / <span>30대</span> / <span>건성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_3">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_3.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_4.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_5.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_6.gif" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="5" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                한 박스에는 "오에라 멀티 베네핏 캘리브레이터"가 있었고, 나머지 한 박스는 전용 패드가 들어있다. <br>
-                                전용 패드는 일반 화장솜이 아니었다.내 얼굴의 숨은 각질을 한번에 닦아버리겠다는 포부가 그대로 느껴지는 질감!<br>
-                                어떤 질감인지, 어떤 색인지 전혀 정보가 없는 채 꾹꾹 눌러보니....액체에 가까운 질감이 손등을 타고 흐른다.<br>
-                                손등에 문질러보니 끈적임이 1도 남아있지 않았다. 바르지 않은 손등과 비교해보면, 광택과 확연히 비교가 된다.<br>
-                                자연스럽게 손등이 코로 가는데, 향이 인위적인 느낌이 없이 너무 좋았다. <br>
-                                비싸보이는 화장솜에다가 멀티 베네핏 캘리브레이터를 몇번 펌프해준다. 기존에 쓰던 스킨을 화장솜에 묻혀 일단 피부결을 정돈하고 전용 패드에 적당양 오에라 멀티 베네핏 캘리브레이터를 뿌려 다시 닦아낸다. <br>
-                                특히, 거칠거칠하던 턱 주변과 볼을 더 집중적으로 닦아냈다. 일반 화장솜과 다르게 표면이 거칠해서 뭔가 각질이 잘 닦이는 느낌이 들었다. 왜 전용패드를 함께 패키지로 파는지 알 것 같았다. 전용패드 다쓰면 꼭 다시 사고 싶다.<br>
-                                그 다음날 아침과 저녁세안 후에도 역시 사용을 해본 결과 볼을 만져보니 확실히 부드러워졌다. 정말 제대로 느껴졌다. 괜히 '피부톤 개선, 피부결 개선, 피부 탄력' 에 좋다고 한게 아니었다. 계속 부드러운 얼굴을 만져보게 된다 ㅋㅋㅋ<br> 
-                                제품을 받고 사용한지 약 일주일째.. 이 제품을 이렇게 사용해보게 해준 한섬이 너무 고마워졌다. 일단 내 피부가 요즘 거칠하다.. 팩을 해도 거칠다...  라고 고민하시는 분들은 오에라 멀티 베네핏 캘리브레이터 써보시길 추천드린다.<br>
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>       
-                    
-                    <!-- 5 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>오*선</span> / <span>40대</span> / <span>복합성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_4">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_5.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_6.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_7.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="5" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="6" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                아침마다 세수할때 손끝에 느껴지는 부드러움을 알게해준 오에라! 한섬팬인데 오에라팬이 될거같아요. <br>
-                                첫째, 피부결이 일주일도 안되어 달라진걸 느꼈어요. <br>
-                                실크처럼 부드럽다라는 말보다 더 좋은 표현을 못찾겠어요. 아침저녁 사용하는데 손끝이 너무 행복해요<br>
-                                둘째, 피부결이 정리되니 피부톤도 한결 고르게 되고 밝아지는거 같아요.<br>
-                                셋째, 주름개선은 조금 더 써보고 공유할수 있을거 같아요.<br>
-                                사용은 펌핑하고 들어있는 패드에 (한쪽은 결이있고, 반대쪽은 매끄러워요~결있는데로 쓱 밀어서 각질까지 케어하고, 부드러운면으로 쓱 밀어서 피부결 살리고) 뭍혀서 얼굴결 정리하듯 쓱 발라주고, 한번더 펌핑해서 얼굴에 쏘옥~흡수하면 되는데요, 피부에서 겉돌지 않고 쏘옥~흡수되서 사용도 넘넘 편하답니다.<br>
-                                다른 에센스2배 짐승용량이라 가치가 있는거 같아요.14일도 안되어 피부결 변화와, 14일이면 느껴지는 피부톤 정리까지!!! 최고예요
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>
-                    <!-- 6 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>송*희</span> / <span>40대</span> / <span>건성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/06/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_5">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/06/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/06/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>                               
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                40대 중반에 가을이 되니 부석부석해진 피부가 좀 더 건강해졌으면 좋겠다는 바램이 생기더라구요. <br>
-                                건강하게 빛나는 피부, 좀 더 어려보이고건강해지고 싶다는 생각으로 피부과, 다양한 화장품, 팩등을 찾고 있던 중 운 좋게 만난 오에라의 멀티-베네핏 캘리브레이터♡~ <br>
-                                믿고 사용할 만한 스위스의 기술력과 연구과정으로 탄생했다는 과학기술,크로노 엘릭서를 담은 캘리브레이터가 피부를 케어해주네요. <br>
-                                세안후 앞 뒷면이 다른 패드 중 더 거친 부분으로 에센스를 3~4방울을 얼굴 전체를 부드럽게 닦아줘요. 그것만으로도 각질이 정리되어 피부결 톤을 정리가 되더라구요.<br>
-                                한 번 더 수분감으로 채울 부분은 에센스 몇방울을 덜어 손가락으로 살포시 눌러주면 최상의 컨디션으로 피부가 편안해지는 느낌.럭셔리리추얼스킨케어가 가능한 하이엔드 뷰티~였어요.<br>
-                                자연분해까지 생각해 환경친밀 비건패드로 수분감이 부족한 부분에 5분간 올려두면 피부의 수분감 충족, 톤과 결, 매끄러움을 향상시켜 줍니다. <br>
-                                눈가와 이마의 미세한 주름까지 잡아주는 오에라의 멀티-베네핏 캘리브레이터♡로 더 예뻐지세요~
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>
-                    <!-- 7 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>한*연</span> / <span>30대</span> / <span>민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_6">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_5.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>                               
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                용기 디자인은 깔끔, 영롱한 느낌! 오에라의 분위기를 느낄 수 있어요~<br>
-                                사용 방법은 간단해요 ㅎㅎ 먼저 전용 패드를 활용하여 피부결을 정돈하고, 두번째는 손으로 흡수시켜 수분 공급을 해주세요! 레이어링 해주는 느낌으로다가:) <br>
-                                처음 전용패드로 발라주었을 때 느낌은 "오!?!" 👀 촉촉 찹찹 바르면 느낌이 쫀득쫀득해지는 느낌이더라구요:) <br>
-                                피부톤 개선이나, 피부결, 탄력에 좋다고 하니 꾸준히 사용해 봐야 겠어요~<br>
-                                촉촉한 손등 보이죠!? 패드도 완전 꿀템이라 슥슥 닦아주고, 흡수시켜주면 최고의 조합이에요~ <br>
-                                환절기 민감한 피부에 추천해봅니다~
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>                           
-                    <!-- 8 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>김*현</span> / <span>40대</span> / <span>민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_7">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                한섬옷을 좋아하는 편이라, 한섬브랜드에 관심이 많았는데 한섬에서 화장품라인이 나온다는 소식에 넘 기대가 많았다… 체험단모집에 별기대없이 댓글 응모하였는데~~선정되어 넘 기쁨~~  <br> 
-                                기다리던 "오에라" 브랜드명의 멀티-베네핏 캘리브레이터 에센스 도착!!! <br> 
-                                밤에 세안 후 전용 패드로 살짝 닦아내듯 바른 후, 적당량을 덜어서 누르듯 바름~ <br> 
-                                아침에 일어나보니 맑아진 피부톤이 느껴져요~ 역시 명품이 좋군… 다른 라인도 넘 체험해보고 싶네요… 향도 고급스러운 향수 느낌의 달달함이 가득한 향이에요...^^ <br>
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>                                   
-                    
-                    <!-- 9 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>김*정</span> / <span>40대</span> / <span>복합성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_8">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                피부에 밸런스를 잡아줄 완벽한 #에센스 발견 <br>
-                                우선 처음 보자마자 멋있다!!! 감탄😍 그리고 향수를 쓰는 기분은 보너스~ <br>
-                                1. 피부를 가장 편안한 상태로 만들어주는 오에라만의 처방 솔루션.<br>
-                                2. 독자적인 크로노 엘릭서™가 "톤","결","촉(탄력)"을 동시에 케어하는 멀티 베네핏 효과 선사.<br>
-                                3. 전용패드로 피부결 정리 후 손으로 흡수시켜 수분공급하는 2-레이어링 케어.<br>
-                                앞으로 내피부를 맡겨보기로했다~
-                                #똑똑한에센스 #오에라 #컬러브레이터 
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>
-                    <!-- 10 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>한*연</span> / <span>30대</span> / <span>민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_9">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                독자성분 '크로노 엘릭서'와 피부 리듬을 잡아주는 '캘리브레이팅 시스템'<br>
-                                피부 톤/결/촉(탄력)을 함께 챙겨주는 멀티-베네핏 캘리브레이터 <br>
-                                1.써본지 2주 되었는데, 지금 계절이면 뒤집어졌을 피부가 나름 단단해져 있는 느낌😀<br>
-                                2.친환경 전용 비건패드로 각질을 정돈해주고 손으로 싸악 흡수시켜주니 촉촉함이 오래가는 느낌.<br>
-                                3.피부가 좋은편은 아닌데, 요새 안색이 좋아졌다는 얘기를 많이 듣는다.<br>
-                                #캘리브레이터 #더한섬닷컴 #모닝뷰티루틴 #에센스추천
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>
-                    <!-- 11 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>박*아</span> / <span>40대</span> / <span>건성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_10">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                캘리브레이터는 투명하고 묽은 제형으로 피부에 닿았을 때 우드향이 은은하게 나는 게 정말 좋았습니다. <br>
-                                함께 들어있는 패드에 두세번 펌핑하여 볼-이마-코와 턱 순으로 부드럽게 닦아 내듯 발라줍니다. <br>
-                                패드는 부드러운 면과 거친 면이 양면으로 되어 있어 각질이 신경 쓰일 때는 거친 면으로 바르고, 꼼꼼히 세안을 하여 피부가 민감한 상태가 되었을 때는 부드러운 면으로 발라 피부에 최소한으로 자극이 되도록 하였습니다.  <br>
-                                한 번 닦아 내듯 바른 패드는 바로 버리지 않고 뒤집어서 두어 번 더 펌핑한 후 가장 신경 쓰이는 이마와 미간 주름 위에 붙여 놓아 5분 간 팩을 하였습니다. 이마에 패드로 잠시 팩을 하는 동안 손바닥에 다시 캘리브레이터를 적당량 덜어 눈가와 볼, 팔자주름 등 피부에 대고 지긋이 누르듯 흡수시켜 주었습니다. <br>
-                                성분이 피부 속에 흡수되어 완전히 자리 잡는 데에 한 1~2분 정도 걸리는 것 같아요. 빠르게 피부에 흡수되어 금방 부드럽고 촉촉해집니다. 금방 피부에 스며들지만 신기하게도 피부결을 부드럽고 매끄럽게 정돈해주니 정말 신기했습니다. <br>
-                                캘리브레이터의 효과를 온전히 느끼고 싶어 2주일 째 화장을 하지 않고 맨 얼굴로 출근을 하고 있는데요,  <br>
-                                피부에 보습감을 전달하여 하루 종일 건조하지 않으면서 유수분 조절이 되어 산뜻한 느낌이 들었습니다. 쉽게 예민해졌던 피부에 자극 없이 스며들어 윤기와 영양분을 공급해주는 듯했습니다. <br>
-                                매일 아침저녁 세안 후 사용할수록 피부는 투명해졌고 자꾸 거울을 보고 싶어질 정도로 매끈해졌습니다. <br>
-                                이렇게 단기간에 미백효과가 나타나는 것이 정말 신기했고, 꾸준히 사용하면 분명 효과를 볼 수 있을 것 같아요. <br>
-                                다양한 피부 상태와 고민에 따라 오에라의 특징적인 솔루션을 담아낸 기능성 제품을 하나씩 단계별로 선택해 자신만의 리추얼을 완성해가는 즐거움을 느낄 수 있을 듯 합니다.  
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>   
-                    <!-- 12 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>최*희</span> / <span>30대</span> / <span>건성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_11">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_3.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_4.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_5.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_6.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="2" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="3" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="4" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="5" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                한섬의 럭셔리 뷰티 제품 답게 패키지 역시 고오급지다! 한섬하다! 할만했습니다. <br>
-                                실버톤의 화장품 용기며, 제품과 함께 동봉되어있는 친환경 전용 패드!! 그냥 말이 필요 없었습니다.<br>
-                                설명서에 나와있는대로 1차는 세안 후 가볍에 패드에 세럼을 약 2회 펌핑하여 피부결을 따라 닦토 하듯 닦어주었습니다.<br>
-                                피부에 닿는 순간 냄새 무슨일이죠? 기존 화장품들에서 나는 인위적인 향이 아닌 은은한 향이 특히 마음에 들었구요.<br>
-                                굴곡진 패드가 화장품을 흡수하는게 아니라, 그대로 머금고 있다가 제피부에 100% 전달해주어 피부 결정리에 너무 좋은 느낌을 받았습니다. <br>
-                                최근 제가 야근과 마법으로 인해 피부가 푸석해졌었는데요.. 요 제품으로 아침 저녁 2회씩 사용한 결과 확실히 피부톤이 맑다!  확실히 피부 결 (각질)이 정돈되었다! 하는 느낌을 받을 수 있었습니다.<br>
-                                제형은 아주 묽은 타입인데요. 끈적임 없이 피부에 부드럽게 스며들더라구요.가격은 조금(?) 비싸지만.. 이래서!! 좋은걸. 쓰는거지...하는 생각이  절로드는 아이였습니다.<br>
-                                평소에 화장품에 매우 관심이 많은지라 뷰티 체험단으로 다양한 브랜드도 접해 봤구요.  또 고가 제품, 저렴이 제품 할거 없이 신상이라고 하면 꼭! 써봐야 직성이 풀리는 1인인데요.<br>
-                                요아이 정말이지 체험단으로 접했지만 정말 제돈주고 사도 아깝지 않겠다!라는 생각이 절로 들었답니다!
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>                   
-                    
-                    <!-- 13 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>김*윤</span> / <span>40대</span> / <span>건성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/13/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_12">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/13/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/13/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>                               
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                처음 받아 봤을때 첫 느낌은 엄청 럭셔리 하네요^^  향은 좀 호불호가 있을듯 해요~ <br>
-                                부스터 같은 에센스라서 손등에 발라 보니까 스킨처럼 흐르네요~ <br>
-                                전용 패드로 자극 없이 피부결 정돈해 주어서 오래 쓰면 부드러운 피부결 만들어 줄듯 해요~ <br>
-                                요즘 같은 환절기에 쓰면 촉촉하고 건조하지 않아서 좋네요^^ 일주일 써 본 결과 지금까지 만족합니다^^
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>
-                    <!-- 14 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>권*리</span> / <span>30대</span> / <span>건성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/14/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_13">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/14/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>                               
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <!-- <div class="bx_pager191219">
+
+			<div class="more_stockbox" style="display: none;">
+				<p class="stock_pop_txt"></p>
+				<div class="chk_box">
+					<input type="checkbox" id="soldOutYn"
+						onclick="GA_Event('매장_재고_확인','필터','품절 매장 제외');"> <label
+						for="soldOutYn">품절 매장 제외</label>
+				</div>
+				<table class="pop_stocktb">
+					<caption>배송지 목록</caption>
+					<thead>
+						<tr>
+							<th class="mj_th" scope="col">매장 정보</th>
+							<th scope="col">연락처</th>
+						</tr>
+					</thead>
+					<tbody id="offlineQtyList">
+					</tbody>
+				</table>
+				<!-- //table -->
+				<div class="btnwrap">
+					<input class="btn wt_s"
+						onclick="GA_Event('매장_재고_확인','취소 / 확인','취소');" value="취소"
+						type="button"> <input class="btn gray_s"
+						onclick="GA_Event('매장_재고_확인','취소 / 확인','확인');" value="확인"
+						type="button">
+				</div>
+			</div>
+
+		</div>
+		<!--// pop_cnt-->
+		<div class="pop_cnt_info" id="offlineQtyInfoPop"
+			style="display: none;">
+			<strong>매장 재고 안내</strong>
+			<p>현 시점 재고 수량을 조회합니다.</p>
+			<p class="pci_txt">
+				재고 확인 시 동일 시점에 해당 상품이 판매될 경우 수량의 차이가 있을 수 있으니,<br> <span>정확한
+					수량 및 구매 가능 여부는 매장으로 직접 문의해주시기 바랍니다.</span>
+			</p>
+			<div class="btnwrap_pop">
+				<input type="button" class="btn info_gray"
+					onclick="javascript:hideOfflineQtyInformation();GA_Event('매장_재고_확인','안내사항 확인 완료','클릭');"
+					value="안내사항 확인 완료">
+			</div>
+		</div>
+		<a href="javascript:void(0);" id="offlieQtyClose" class="btn_close"
+			onclick="GA_Event('매장_재고_확인','닫기','클릭');"><img
+			src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png"
+			alt="닫기"></a>
+	</div>
+	<!--// 매장 재고 확인 팝업 -->
+	<!-- 211101 체험단 리뷰 추가 S -->
+	<!-- 체험단 상품평 리스트-->
+	<div class="popwrap w_type_4 pop-tester-review" id="testerReviewDiv"
+		style="display: none;">
+		<div class="pop_tltwrap2 pb0 customerreviewdiv1905">
+			<h3>
+				체험단(<span class="review_cnt">15</span>)
+			</h3>
+			<p>더한섬닷컴 체험단 이벤트에 당첨된 고객님들의 상품 사용 후기입니다.</p>
+		</div>
+		<!-- pop_cnt-->
+		<div class="pop_cnt evaluation_list1807 options">
+			<div class="clearfix review_tab1_1807">
+				<ul>
+					<!-- 1 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>장*윤</span> / <span>30대</span> /
+									<span>민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_0">
+							<ul class="slides reviewImg0">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_3.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_4.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_5.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_6.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/01/pc_7.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="5" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="6" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								열흘 정도 써본 한섬의 럭셔리 뷰티 oera♥ <br> 세안 후 솜으로 닦아내지 않으면 마무리가 되지 않은
+								느낌인데, 오에라의 캘리브레이터로 스킨 대신 첫 단계로 써보니 피부가 한결 정리된 기분. 그리고 무엇보다 울긋불긋한
+								톤이 균일해졌다! 특히 전용 패드가 너~무 좋아서 감동. <br> 세심하게 만든게 느껴지는 오에라의
+								캘리브레이터 꾸준히 쓰면 올 여름 상한 피부가 다시 돌아올 것 같아~
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 2 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>이*주</span> / <span>30대</span> /
+									<span>복합-민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_1">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_5.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_6.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/02/pc_7.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="5" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="6" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								오에라의 멀티-베네핏 캘리브레이터는 전용 패드 120매와 80ml의 본품이 함께 구성되어 있습니다. <br>
+								한 손으로 다 잡히지 않는, 넉넉한 용량입니다. 은빛의 고급스러운 패키지가 눈에 띕니다. <br> 용기는
+								펌핑형으로, 무게감이 적당해 사용이 편리했습니다. <br> 제품을 펌핑하여 페이스에 사용하기 전부터 향에서
+								깊은 인상을 받을 수 있었습니다. 스킨케어 첫 단계에서 사용하는 제품인 만큼, 휴식과 안정의 느낌을 선사하는
+								향이라는 느낌이 듭니다.<br> 멀티-베네핏 캘리브레이터는 묽게 흐르는 제형이지만, 피부에 금방 흡수되며
+								촉촉한 느낌입니다. <br> 전용 패드는 한쪽에 엠보가 도드라지며, 다른 한 쪽은 좀더 부드러운
+								느낌입니다. 부드러운 패드 반대 쪽 면에 묻혀 사용하니 진정과 수분 공급에 탁월한 효과를 볼 수 있었습니다. <br>
+								탄력이 조금 더 신경 쓰이는 날에는 패드에 캘리브레이터를 넉넉히 묻혀 팩처럼 활용하기도 했습니다. 시간이 지나
+								패드를 떼어 내면 눈에 띄게 촉촉해지고 쫀쫀해진 피부 때문에 자꾸 손이 가는 제품입니다.<br> 사용하며
+								가장 인상적이었던 점은 자극없이 피부에 생기를 불어넣어 준다는 점입니다. 복합성에 민감성 피부인 제가 민감한 부위에
+								제품을 덧바르더라도 자극이 전혀 느껴지지 않았습니다. <br> 2주 동안 캘리브레이터를 사용하며 스킨
+								토너를 사용할 때보다 수분이 충전되는 느낌을 받았습니다.<br> 캘리브레이터는 기초 첫 단계에서 단독
+								사용하더라도, 토너 뿐만 아니라 에센스의 역할까지도 훌륭히 해내는 듯합니다. 역할까지도 훌륭히 해내는 듯합니다.
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 3 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>최*정</span> / <span>30대</span> /
+									<span>민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_2">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_5.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/03/pc_6.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="5" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								한섬의 프리미엄 스킨케어 브랜드라 해서 넘나 기대가 되었는데요, 포장 상태도 마음에 들었고 케이스도 고급스러운
+								디자인이라, 엄마 선물로도 좋을 것 같아요! <br> 처음에는 큰 박스가 와서 왜 이렇게 큰가 했더니,
+								캘리브레이터랑, 캘리브레이터 전용 패드가 같이 들어가 있었어요!<br> 제가 피부가 예민한 편이라, 많은
+								성분과 기능을 담은 제품은 사용하기 무서워하는 편인데, 오에라 켈리브레이터는 사용 후에 자극이나 가려움이 느껴지지
+								않아서 좋았어요! <br> 왜 패드가 포함되어 있나 했더니, 패드를 활용해서 피부결을 정돈하는 단계가 첫
+								단계더라구요! 패드는 촘촘하지 않은 독특한 재질로 되어 있어요! 피부결을 따라 닦아내듯 발라주면 된답니다!<br>
+								캘리브레이터 전용 패드를 이용해서 피부결을 닦아낸 후에는, 손바닥에 적당량을 펌핑한 후에 피부에 지그시 누르듯
+								흡수시켜주면 된답니다! 용기는 펌핑형으로 되어 있어서 위생적으로 사용하기 좋답니다!ㅎㅎ <br> 제형은
+								흐르는 물 같은 제형에, 향은 딱 맡아도 고급스러운 향이 나더라구요. 자연스러운 향이다보니 호불호가 크게 갈리지
+								않고 사용할 수 있을 것 같았답니다!<br> 무엇보다 흡수력이 빠르고, 얼굴에 두껍게 발리는 느낌이
+								아니여서 산뜻한 느낌이 났어요! <br> 아침저녁으로 사용중인데,촉촉한 느낌이 지속되어서 계속 꾸준히
+								사용해볼 생각이랍니다!
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 4 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>박*영</span> / <span>30대</span> /
+									<span>건성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_3">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_3.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_4.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_5.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/04/pc_6.gif"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="5" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								한 박스에는 "오에라 멀티 베네핏 캘리브레이터"가 있었고, 나머지 한 박스는 전용 패드가 들어있다. <br>
+								전용 패드는 일반 화장솜이 아니었다.내 얼굴의 숨은 각질을 한번에 닦아버리겠다는 포부가 그대로 느껴지는 질감!<br>
+								어떤 질감인지, 어떤 색인지 전혀 정보가 없는 채 꾹꾹 눌러보니....액체에 가까운 질감이 손등을 타고 흐른다.<br>
+								손등에 문질러보니 끈적임이 1도 남아있지 않았다. 바르지 않은 손등과 비교해보면, 광택과 확연히 비교가 된다.<br>
+								자연스럽게 손등이 코로 가는데, 향이 인위적인 느낌이 없이 너무 좋았다. <br> 비싸보이는 화장솜에다가
+								멀티 베네핏 캘리브레이터를 몇번 펌프해준다. 기존에 쓰던 스킨을 화장솜에 묻혀 일단 피부결을 정돈하고 전용 패드에
+								적당양 오에라 멀티 베네핏 캘리브레이터를 뿌려 다시 닦아낸다. <br> 특히, 거칠거칠하던 턱 주변과 볼을
+								더 집중적으로 닦아냈다. 일반 화장솜과 다르게 표면이 거칠해서 뭔가 각질이 잘 닦이는 느낌이 들었다. 왜 전용패드를
+								함께 패키지로 파는지 알 것 같았다. 전용패드 다쓰면 꼭 다시 사고 싶다.<br> 그 다음날 아침과
+								저녁세안 후에도 역시 사용을 해본 결과 볼을 만져보니 확실히 부드러워졌다. 정말 제대로 느껴졌다. 괜히 '피부톤
+								개선, 피부결 개선, 피부 탄력' 에 좋다고 한게 아니었다. 계속 부드러운 얼굴을 만져보게 된다 ㅋㅋㅋ<br>
+								제품을 받고 사용한지 약 일주일째.. 이 제품을 이렇게 사용해보게 해준 한섬이 너무 고마워졌다. 일단 내 피부가
+								요즘 거칠하다.. 팩을 해도 거칠다... 라고 고민하시는 분들은 오에라 멀티 베네핏 캘리브레이터 써보시길
+								추천드린다.<br>
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+
+					<!-- 5 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>오*선</span> / <span>40대</span> /
+									<span>복합성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_4">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_5.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_6.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/05/pc_7.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="5" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="6" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								아침마다 세수할때 손끝에 느껴지는 부드러움을 알게해준 오에라! 한섬팬인데 오에라팬이 될거같아요. <br>
+								첫째, 피부결이 일주일도 안되어 달라진걸 느꼈어요. <br> 실크처럼 부드럽다라는 말보다 더 좋은 표현을
+								못찾겠어요. 아침저녁 사용하는데 손끝이 너무 행복해요<br> 둘째, 피부결이 정리되니 피부톤도 한결 고르게
+								되고 밝아지는거 같아요.<br> 셋째, 주름개선은 조금 더 써보고 공유할수 있을거 같아요.<br>
+								사용은 펌핑하고 들어있는 패드에 (한쪽은 결이있고, 반대쪽은 매끄러워요~결있는데로 쓱 밀어서 각질까지 케어하고,
+								부드러운면으로 쓱 밀어서 피부결 살리고) 뭍혀서 얼굴결 정리하듯 쓱 발라주고, 한번더 펌핑해서 얼굴에 쏘옥~흡수하면
+								되는데요, 피부에서 겉돌지 않고 쏘옥~흡수되서 사용도 넘넘 편하답니다.<br> 다른 에센스2배 짐승용량이라
+								가치가 있는거 같아요.14일도 안되어 피부결 변화와, 14일이면 느껴지는 피부톤 정리까지!!! 최고예요
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 6 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>송*희</span> / <span>40대</span> /
+									<span>건성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/06/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_5">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/06/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/06/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								40대 중반에 가을이 되니 부석부석해진 피부가 좀 더 건강해졌으면 좋겠다는 바램이 생기더라구요. <br>
+								건강하게 빛나는 피부, 좀 더 어려보이고건강해지고 싶다는 생각으로 피부과, 다양한 화장품, 팩등을 찾고 있던 중 운
+								좋게 만난 오에라의 멀티-베네핏 캘리브레이터♡~ <br> 믿고 사용할 만한 스위스의 기술력과 연구과정으로
+								탄생했다는 과학기술,크로노 엘릭서를 담은 캘리브레이터가 피부를 케어해주네요. <br> 세안후 앞 뒷면이
+								다른 패드 중 더 거친 부분으로 에센스를 3~4방울을 얼굴 전체를 부드럽게 닦아줘요. 그것만으로도 각질이 정리되어
+								피부결 톤을 정리가 되더라구요.<br> 한 번 더 수분감으로 채울 부분은 에센스 몇방울을 덜어 손가락으로
+								살포시 눌러주면 최상의 컨디션으로 피부가 편안해지는 느낌.럭셔리리추얼스킨케어가 가능한 하이엔드 뷰티~였어요.<br>
+								자연분해까지 생각해 환경친밀 비건패드로 수분감이 부족한 부분에 5분간 올려두면 피부의 수분감 충족, 톤과 결,
+								매끄러움을 향상시켜 줍니다. <br> 눈가와 이마의 미세한 주름까지 잡아주는 오에라의 멀티-베네핏
+								캘리브레이터♡로 더 예뻐지세요~
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 7 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>한*연</span> / <span>30대</span> /
+									<span>민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_6">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/07/pc_5.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								용기 디자인은 깔끔, 영롱한 느낌! 오에라의 분위기를 느낄 수 있어요~<br> 사용 방법은 간단해요 ㅎㅎ
+								먼저 전용 패드를 활용하여 피부결을 정돈하고, 두번째는 손으로 흡수시켜 수분 공급을 해주세요! 레이어링 해주는
+								느낌으로다가:) <br> 처음 전용패드로 발라주었을 때 느낌은 "오!?!" 👀 촉촉 찹찹 바르면 느낌이
+								쫀득쫀득해지는 느낌이더라구요:) <br> 피부톤 개선이나, 피부결, 탄력에 좋다고 하니 꾸준히 사용해 봐야
+								겠어요~<br> 촉촉한 손등 보이죠!? 패드도 완전 꿀템이라 슥슥 닦아주고, 흡수시켜주면 최고의
+								조합이에요~ <br> 환절기 민감한 피부에 추천해봅니다~
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 8 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>김*현</span> / <span>40대</span> /
+									<span>민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_7">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/08/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								한섬옷을 좋아하는 편이라, 한섬브랜드에 관심이 많았는데 한섬에서 화장품라인이 나온다는 소식에 넘 기대가 많았다…
+								체험단모집에 별기대없이 댓글 응모하였는데~~선정되어 넘 기쁨~~ <br> 기다리던 "오에라" 브랜드명의
+								멀티-베네핏 캘리브레이터 에센스 도착!!! <br> 밤에 세안 후 전용 패드로 살짝 닦아내듯 바른 후,
+								적당량을 덜어서 누르듯 바름~ <br> 아침에 일어나보니 맑아진 피부톤이 느껴져요~ 역시 명품이 좋군…
+								다른 라인도 넘 체험해보고 싶네요… 향도 고급스러운 향수 느낌의 달달함이 가득한 향이에요...^^ <br>
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+
+					<!-- 9 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>김*정</span> / <span>40대</span> /
+									<span>복합성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_8">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/09/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								피부에 밸런스를 잡아줄 완벽한 #에센스 발견 <br> 우선 처음 보자마자 멋있다!!! 감탄😍 그리고
+								향수를 쓰는 기분은 보너스~ <br> 1. 피부를 가장 편안한 상태로 만들어주는 오에라만의 처방 솔루션.<br>
+								2. 독자적인 크로노 엘릭서™가 "톤","결","촉(탄력)"을 동시에 케어하는 멀티 베네핏 효과 선사.<br>
+								3. 전용패드로 피부결 정리 후 손으로 흡수시켜 수분공급하는 2-레이어링 케어.<br> 앞으로 내피부를
+								맡겨보기로했다~ #똑똑한에센스 #오에라 #컬러브레이터
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 10 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>한*연</span> / <span>30대</span> /
+									<span>민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_9">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/10/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								독자성분 '크로노 엘릭서'와 피부 리듬을 잡아주는 '캘리브레이팅 시스템'<br> 피부 톤/결/촉(탄력)을
+								함께 챙겨주는 멀티-베네핏 캘리브레이터 <br> 1.써본지 2주 되었는데, 지금 계절이면 뒤집어졌을 피부가
+								나름 단단해져 있는 느낌😀<br> 2.친환경 전용 비건패드로 각질을 정돈해주고 손으로 싸악 흡수시켜주니
+								촉촉함이 오래가는 느낌.<br> 3.피부가 좋은편은 아닌데, 요새 안색이 좋아졌다는 얘기를 많이 듣는다.<br>
+								#캘리브레이터 #더한섬닷컴 #모닝뷰티루틴 #에센스추천
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 11 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>박*아</span> / <span>40대</span> /
+									<span>건성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_10">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/11/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								캘리브레이터는 투명하고 묽은 제형으로 피부에 닿았을 때 우드향이 은은하게 나는 게 정말 좋았습니다. <br>
+								함께 들어있는 패드에 두세번 펌핑하여 볼-이마-코와 턱 순으로 부드럽게 닦아 내듯 발라줍니다. <br>
+								패드는 부드러운 면과 거친 면이 양면으로 되어 있어 각질이 신경 쓰일 때는 거친 면으로 바르고, 꼼꼼히 세안을 하여
+								피부가 민감한 상태가 되었을 때는 부드러운 면으로 발라 피부에 최소한으로 자극이 되도록 하였습니다. <br>
+								한 번 닦아 내듯 바른 패드는 바로 버리지 않고 뒤집어서 두어 번 더 펌핑한 후 가장 신경 쓰이는 이마와 미간 주름
+								위에 붙여 놓아 5분 간 팩을 하였습니다. 이마에 패드로 잠시 팩을 하는 동안 손바닥에 다시 캘리브레이터를 적당량
+								덜어 눈가와 볼, 팔자주름 등 피부에 대고 지긋이 누르듯 흡수시켜 주었습니다. <br> 성분이 피부 속에
+								흡수되어 완전히 자리 잡는 데에 한 1~2분 정도 걸리는 것 같아요. 빠르게 피부에 흡수되어 금방 부드럽고
+								촉촉해집니다. 금방 피부에 스며들지만 신기하게도 피부결을 부드럽고 매끄럽게 정돈해주니 정말 신기했습니다. <br>
+								캘리브레이터의 효과를 온전히 느끼고 싶어 2주일 째 화장을 하지 않고 맨 얼굴로 출근을 하고 있는데요, <br>
+								피부에 보습감을 전달하여 하루 종일 건조하지 않으면서 유수분 조절이 되어 산뜻한 느낌이 들었습니다. 쉽게 예민해졌던
+								피부에 자극 없이 스며들어 윤기와 영양분을 공급해주는 듯했습니다. <br> 매일 아침저녁 세안 후
+								사용할수록 피부는 투명해졌고 자꾸 거울을 보고 싶어질 정도로 매끈해졌습니다. <br> 이렇게 단기간에
+								미백효과가 나타나는 것이 정말 신기했고, 꾸준히 사용하면 분명 효과를 볼 수 있을 것 같아요. <br>
+								다양한 피부 상태와 고민에 따라 오에라의 특징적인 솔루션을 담아낸 기능성 제품을 하나씩 단계별로 선택해 자신만의
+								리추얼을 완성해가는 즐거움을 느낄 수 있을 듯 합니다.
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 12 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>최*희</span> / <span>30대</span> /
+									<span>건성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_11">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_3.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_4.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_5.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/12/pc_6.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="2" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="3" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="4" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="5" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								한섬의 럭셔리 뷰티 제품 답게 패키지 역시 고오급지다! 한섬하다! 할만했습니다. <br> 실버톤의 화장품
+								용기며, 제품과 함께 동봉되어있는 친환경 전용 패드!! 그냥 말이 필요 없었습니다.<br> 설명서에
+								나와있는대로 1차는 세안 후 가볍에 패드에 세럼을 약 2회 펌핑하여 피부결을 따라 닦토 하듯 닦어주었습니다.<br>
+								피부에 닿는 순간 냄새 무슨일이죠? 기존 화장품들에서 나는 인위적인 향이 아닌 은은한 향이 특히 마음에 들었구요.<br>
+								굴곡진 패드가 화장품을 흡수하는게 아니라, 그대로 머금고 있다가 제피부에 100% 전달해주어 피부 결정리에 너무
+								좋은 느낌을 받았습니다. <br> 최근 제가 야근과 마법으로 인해 피부가 푸석해졌었는데요.. 요 제품으로
+								아침 저녁 2회씩 사용한 결과 확실히 피부톤이 맑다! 확실히 피부 결 (각질)이 정돈되었다! 하는 느낌을 받을 수
+								있었습니다.<br> 제형은 아주 묽은 타입인데요. 끈적임 없이 피부에 부드럽게 스며들더라구요.가격은
+								조금(?) 비싸지만.. 이래서!! 좋은걸. 쓰는거지...하는 생각이 절로드는 아이였습니다.<br> 평소에
+								화장품에 매우 관심이 많은지라 뷰티 체험단으로 다양한 브랜드도 접해 봤구요. 또 고가 제품, 저렴이 제품 할거 없이
+								신상이라고 하면 꼭! 써봐야 직성이 풀리는 1인인데요.<br> 요아이 정말이지 체험단으로 접했지만 정말
+								제돈주고 사도 아깝지 않겠다!라는 생각이 절로 들었답니다!
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+
+					<!-- 13 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>김*윤</span> / <span>40대</span> /
+									<span>건성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/13/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_12">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/13/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/13/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								처음 받아 봤을때 첫 느낌은 엄청 럭셔리 하네요^^ 향은 좀 호불호가 있을듯 해요~ <br> 부스터 같은
+								에센스라서 손등에 발라 보니까 스킨처럼 흐르네요~ <br> 전용 패드로 자극 없이 피부결 정돈해 주어서
+								오래 쓰면 부드러운 피부결 만들어 줄듯 해요~ <br> 요즘 같은 환절기에 쓰면 촉촉하고 건조하지 않아서
+								좋네요^^ 일주일 써 본 결과 지금까지 만족합니다^^
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 14 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>권*리</span> / <span>30대</span> /
+									<span>건성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/14/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_13">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/14/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<!-- <div class="bx_pager191219">
                                 <a class ="bx-pager-link" data-slide-index="0" href="#;"></a>
                             </div> -->
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                피부 각질 제거 전, 피부 컨디션이 좋지 않은 상태에서 사용했음에도 불구하고, 기타 기초 케어와 피부 화장이 얇게 잘 되어서 피부 밸런스를 잘 잡아줄 수 있을 거라 생각됩니다! <br>
-                                피부 각질 제거 후, 묵은 각질이 없는 상태에서는 역시나 기초의 역할을 탄탄히 하는 것 같았어요. <br>
-                                바쁜 생활에서 화장 단계를 최소화하기 위해 ‘오에라-스킨-선크림-쿠션’으로 사용해 보았습니다. <br>
-                                기초 케어가 부실했음에도 불구하고 밀림이나 들뜨는 현상 없이 쿠션을 잡아주어서 매우 놀라웠습니다!<br>
-                                제품의 묽기는 일반 스킨과 같이 흐르는 제형이며, 향은 "은은하다" 정도로 생각됩니다.<br>
-                                전용 패드는 100% 생분해 가능한 친환경 패드라는 점에 높은 점수를 주고 싶습니다!<br>
-                                제품 용기는 은색의 은은한 용기가 화장대의 어떤 화장품과 있어도 어울릴 것 같습니다. <br>
-                                마지막으로 캘리브레이터는 기대 이상으로 스킨케어 첫 단계의 역할을 완벽하게 수행하고 있디고 생각되었습니다.<br>
-                                피부의 톤, 결, 탄력을 이상적인 상태로 가꿔줄 수 있을 것으로 예상되기 때문에 계속해서 사용할 용의가 있습니다. :)
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>                       
-                    <!-- 15 -->
-                    <li class="evaluation_view">                        
-                        <div class="member_info_bottom">
-                            <ul>
-                                <li class="choice">
-                                    • <span>이*민</span> / <span>30대</span> / <span>민감성</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->                     
-                        <div class="review_represent_img1912">
-                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/15/pc_1.jpg" alt="리뷰 이미지">
-                            <div class="img_count191212">
-                                <span class="img_count191212_inner">+</span>
-                            </div>
-                        </div>
-                        <div class="review_img_wrap review_img_cont191216" id="testerReviewImg_14">
-                            <ul class="slides">
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/15/pc_1.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="review_img_cont_inner191216">
-                                        <div class="img_wrap">
-                                            <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/15/pc_2.jpg" alt="리뷰 이미지">
-                                        </div>
-                                    </div>
-                                </li>                               
-                            </ul>
-                            <div class="controls">
-                                <span class="prev"></span>
-                                <span class="next"></span>
-                            </div>
-                            <div class="bx_pager191219">
-                                <a class="bx-pager-link" data-slide-index="0" href="#;"></a>
-                                <a class="bx-pager-link" data-slide-index="1" href="#;"></a>
-                            </div>
-                        </div>
-                        <!--//리뷰이미지 영역 -->
-                        <div class="review_txt_wrap">
-                            <p class="review_txt">
-                                캘리브레이터가 처음 피부에 닿았을 때 코로 들어오는 향이 자극적이지 않고, 천연 아로마와 유사한 느낌이 들어 향만으로도 힐링이 되었다. 무엇보다 피부에 즉각적으로 잘 스며들어 산뜻함과 촉촉함이 느껴졌다. <br>
-                                함께 동봉된 전용 친환경 패드는 한쪽 면은 부드럽고 다른 쪽은 거친 촉감이 다소 느껴져, 과연 부드럽게 닦아질 수 있을까? 하는 의문이 들었다. <br>
-                                캘리브레이터를 2~3번 펌핑 후 전용 패드의 부드러운 면으로 피부결을 따라 닦아내 본 결과, 평소 쓰던 패드에 비해 피부에 훨씬 빠르게 흡수되며 수분감이 느껴졌다. 리퀴드 제형이라 발림성과 흡수성이 뛰어나 에센스만으로 피부 속 영양분이 공급되는 느낌이 들었다. <br> 
-                                가을과 겨울에는 오일과 함께 사용한다면 수분감의 지속과 더불어 피부 밸런스를 보다 더 균형있게 잡아주는 효과를 얻을 수 있을 것 같다. <br>
-                                체험 후, 피부결이 상당히 좋아진 것을 느낄 수 있었다. <br>
-                                체험 전에는 메이크업 단계에서 밀리는 경우가 종종 있었는데, 체험 기간 동안에는 메이크업에서 밀림 현상 없이 화장이 잘 먹혀서 에센스 사용만으로도 이렇게 달라질 수 있음에 다소 놀랐다.
-                            </p>
-                        </div>                      
-                        <div class="review_more_1807">
-                            <a href="#;">리뷰 더보기</a>
-                        </div>
-                    </li>   
-                </ul>
-            </div>
-            <!-- paging -->
-            <div class="paging mt30" id="reviewPagingDiv">
-                <span class="num">
-                    <a href="javascript:void(0);" class="pageBtn on" pagenum="1">1</a>
-                    <a href="javascript:void(0);" class="pageBtn" pagenum="2">2</a>
-                    <a href="javascript:void(0);" class="pageBtn" pagenum="3">3</a>
-                    <a href="javascript:void(0);" class="pageBtn" pagenum="4">4</a>
-                </span>
-            </div>
-            <!-- //paging -->
-        </div>
-        <!--// pop_cnt-->
-        <a href="javascript:void(0);" class="btn_close"><img src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png" alt="닫기"></a>
-    </div>
-    <!-- //상품평 리스트-->
-<!-- // 211101 체험단 리뷰 추가 E -->
-</div><div id="criteo-tags-div" style="display: none;"></div>
-    <div class="layerArea" id="productLayer" style="display: none;">
-        <div class="layerBg"></div>
-    </div>
-    
-    <form id="productOneCLickDeliveryForm" action="/ko/mypage/myDeliveryList">
-        <input type="hidden" name="code" id="code" value="">
-    </form>
-    
-    <input type="hidden" id="chkToastFirstYn" name="chkToastFirstYn" value="N">
-    <!--beshow conversion starts-->
-    <script type="text/javascript">
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								피부 각질 제거 전, 피부 컨디션이 좋지 않은 상태에서 사용했음에도 불구하고, 기타 기초 케어와 피부 화장이 얇게
+								잘 되어서 피부 밸런스를 잘 잡아줄 수 있을 거라 생각됩니다! <br> 피부 각질 제거 후, 묵은 각질이
+								없는 상태에서는 역시나 기초의 역할을 탄탄히 하는 것 같았어요. <br> 바쁜 생활에서 화장 단계를
+								최소화하기 위해 ‘오에라-스킨-선크림-쿠션’으로 사용해 보았습니다. <br> 기초 케어가 부실했음에도
+								불구하고 밀림이나 들뜨는 현상 없이 쿠션을 잡아주어서 매우 놀라웠습니다!<br> 제품의 묽기는 일반 스킨과
+								같이 흐르는 제형이며, 향은 "은은하다" 정도로 생각됩니다.<br> 전용 패드는 100% 생분해 가능한
+								친환경 패드라는 점에 높은 점수를 주고 싶습니다!<br> 제품 용기는 은색의 은은한 용기가 화장대의 어떤
+								화장품과 있어도 어울릴 것 같습니다. <br> 마지막으로 캘리브레이터는 기대 이상으로 스킨케어 첫 단계의
+								역할을 완벽하게 수행하고 있디고 생각되었습니다.<br> 피부의 톤, 결, 탄력을 이상적인 상태로 가꿔줄 수
+								있을 것으로 예상되기 때문에 계속해서 사용할 용의가 있습니다. :)
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+					<!-- 15 -->
+					<li class="evaluation_view">
+						<div class="member_info_bottom">
+							<ul>
+								<li class="choice">• <span>이*민</span> / <span>30대</span> /
+									<span>민감성</span>
+								</li>
+							</ul>
+						</div> <!--리뷰이미지 영역 (이미지 없으면 영역 삭제)-->
+						<div class="review_represent_img1912">
+							<img
+								src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/15/pc_1.jpg"
+								alt="리뷰 이미지">
+							<div class="img_count191212">
+								<span class="img_count191212_inner">+</span>
+							</div>
+						</div>
+						<div class="review_img_wrap review_img_cont191216"
+							id="testerReviewImg_14">
+							<ul class="slides">
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/15/pc_1.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="review_img_cont_inner191216">
+										<div class="img_wrap">
+											<img
+												src="http://cdn.thehandsome.com/_ui/desktop/common/images/beauty/review/15/pc_2.jpg"
+												alt="리뷰 이미지">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="controls">
+								<span class="prev"></span> <span class="next"></span>
+							</div>
+							<div class="bx_pager191219">
+								<a class="bx-pager-link" data-slide-index="0" href="#;"></a> <a
+									class="bx-pager-link" data-slide-index="1" href="#;"></a>
+							</div>
+						</div> <!--//리뷰이미지 영역 -->
+						<div class="review_txt_wrap">
+							<p class="review_txt">
+								캘리브레이터가 처음 피부에 닿았을 때 코로 들어오는 향이 자극적이지 않고, 천연 아로마와 유사한 느낌이 들어
+								향만으로도 힐링이 되었다. 무엇보다 피부에 즉각적으로 잘 스며들어 산뜻함과 촉촉함이 느껴졌다. <br>
+								함께 동봉된 전용 친환경 패드는 한쪽 면은 부드럽고 다른 쪽은 거친 촉감이 다소 느껴져, 과연 부드럽게 닦아질 수
+								있을까? 하는 의문이 들었다. <br> 캘리브레이터를 2~3번 펌핑 후 전용 패드의 부드러운 면으로
+								피부결을 따라 닦아내 본 결과, 평소 쓰던 패드에 비해 피부에 훨씬 빠르게 흡수되며 수분감이 느껴졌다. 리퀴드
+								제형이라 발림성과 흡수성이 뛰어나 에센스만으로 피부 속 영양분이 공급되는 느낌이 들었다. <br> 가을과
+								겨울에는 오일과 함께 사용한다면 수분감의 지속과 더불어 피부 밸런스를 보다 더 균형있게 잡아주는 효과를 얻을 수
+								있을 것 같다. <br> 체험 후, 피부결이 상당히 좋아진 것을 느낄 수 있었다. <br> 체험
+								전에는 메이크업 단계에서 밀리는 경우가 종종 있었는데, 체험 기간 동안에는 메이크업에서 밀림 현상 없이 화장이 잘
+								먹혀서 에센스 사용만으로도 이렇게 달라질 수 있음에 다소 놀랐다.
+							</p>
+						</div>
+						<div class="review_more_1807">
+							<a href="#;">리뷰 더보기</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- paging -->
+			<div class="paging mt30" id="reviewPagingDiv">
+				<span class="num"> <a href="javascript:void(0);"
+					class="pageBtn on" pagenum="1">1</a> <a href="javascript:void(0);"
+					class="pageBtn" pagenum="2">2</a> <a href="javascript:void(0);"
+					class="pageBtn" pagenum="3">3</a> <a href="javascript:void(0);"
+					class="pageBtn" pagenum="4">4</a>
+				</span>
+			</div>
+			<!-- //paging -->
+		</div>
+		<!--// pop_cnt-->
+		<a href="javascript:void(0);" class="btn_close"><img
+			src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png"
+			alt="닫기"></a>
+	</div>
+	<!-- //상품평 리스트-->
+	<!-- // 211101 체험단 리뷰 추가 E -->
+	</div>
+	<div id="criteo-tags-div" style="display: none;"></div>
+	<div class="layerArea" id="productLayer" style="display: none;">
+		<div class="layerBg"></div>
+	</div>
+
+	<form id="productOneCLickDeliveryForm"
+		action="/ko/mypage/myDeliveryList">
+		<input type="hidden" name="code" id="code" value="">
+	</form>
+
+	<input type="hidden" id="chkToastFirstYn" name="chkToastFirstYn"
+		value="N">
+	<!--beshow conversion starts-->
+	<script type="text/javascript">
 function _p(name,url){if(!url) url=location.href;name=name.replace(/[[]/,"[").replace(/[]]/,"]");   var regexS="[?&]"+name+"=([^&#]*)";   var regex=new RegExp(regexS);  var results=regex.exec(url); return results==null?null:results[1];}
 </script>
-    <script type="text/javascript">
+	<script type="text/javascript">
 if(_p('_strack')){$.getScript("http://beshow.kr/plugins/strack/strack.min.js").done(function(script,textStatus){strack.execute('setDomain',location.host);strack.trackView();}).fail(function(jqxhr,settings,exception){console.log("StrackNotInclude.");});}
 </script>
-    <!--beshow conversion ends-->
-    <iframe style="display: none" id="fileFrame" title="fileFrame" scr=""></iframe>
-    <script type="text/javascript">
+	<!--beshow conversion ends-->
+	<iframe style="display: none" id="fileFrame" title="fileFrame" scr=""></iframe>
+	<script type="text/javascript">
     if ( 'Y' == 'N' ) {
         window.onload=function(){
             NetFunnel_Complete();
         };
     }
     </script>
-<!-- footerWrap -->
+	<!-- footerWrap -->
 
-<script type="text/javascript">
+	<script type="text/javascript">
 //<![CDATA[ 
 
 $(document).ready(function(){
@@ -15261,177 +16075,319 @@ function setLogout(){
 //]]>
 </script>
 
-<div id="footerWrap">
-	<div id="topBtn" style="display: none;">
-		<a href="javascript:void(0);" class="viewTopArea"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/top_btn.png" alt="맨 위로" onclick="GA_Event('공통','퀵버튼','TOP');"></a>
-	</div>
-	<div class="footer">
-		<!--footer_cnts1 -->
-		<div class="footer_cnts1 clearfix">
-			<!-- footer_menu-->
-			<div class="footer_menu cnts1_left">
-				<div class="footer_logo"><a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_logo_renew.png" alt="HANDSOME"></a></div>
-				<div class="footer_link">
-					<ul class="clearfix">
-					    <li><a href="/ko/svcenter/theClubInfo" onclick="GA_Event('공통','푸터_메뉴','온라인 멤버십');">온라인 멤버십</a></li>
-						<li><a href="/ko/svcenter/memberbenefitguide" onclick="GA_Event('공통','푸터_메뉴','한섬 VVIP 혜택');">한섬 VVIP 혜택</a></li>
-						<li><a href="/ko/svcenter/pointguide" onclick="GA_Event('공통','푸터_메뉴','한섬마일리지 혜택');">한섬마일리지 혜택</a></li>
-						<li><a href="/ko/svcenter/couponguide" onclick="GA_Event('공통','푸터_메뉴','쿠폰');">쿠폰</a></li>
-<li><a href="/ko/svcenter/asguide" onclick="GA_Event('공통','푸터_메뉴','반품&amp;환불안내');">반품&amp;환불안내</a></li>
-							</ul>
-					<ul class="clearfix">
-						<li><a href="/ko/svcenter/submain" onclick="GA_Event('공통','푸터_메뉴','고객센터');">고객센터</a></li>
-						<li><a href="/ko/svcenter/faq" onclick="GA_Event('공통','푸터_메뉴','FAQ');">FAQ</a></li>
-						<li><a href="/ko/svcenter/mending" onclick="GA_Event('공통','푸터_메뉴','수선진행조회');">수선진행조회</a></li>
-						</ul>
-					<ul class="clearfix">
-					   <li><a href="/ko/member/login" onclick="GA_Event('공통','푸터_메뉴','로그인');">로그인</a></li>
-					   <li><a href="/ko/mypage/order/myorders" onclick="GA_Event('공통','푸터_메뉴','주문배송조회');">주문배송조회</a></li>
-						<li><a href="/ko/mypage/order/myorders" onclick="GA_Event('공통','푸터_메뉴','취소/반품');">취소/반품</a></li>
-						<li><a href="/ko/mypage/myWish" onclick="GA_Event('공통','푸터_메뉴','위시리스트');">위시리스트</a></li>
-					</ul>
-					<ul class="clearfix">
-						<li><a href="http://www.handsome.co.kr/ko/company/aboutHandsome.do" target="_blank" onclick="GA_Event('공통','푸터_메뉴','회사소개');">회사소개<!-- 회사소개 --></a></li>
-						<li><a href="http://www.handsome.co.kr/ko/brand/fashion.do" target="_blank" onclick="GA_Event('공통','푸터_메뉴','브랜드소개');">브랜드소개</a></li>
-						<li><a href="http://www.handsome.co.kr/ko/ir/governance01.do" target="_blank" onclick="GA_Event('공통','푸터_메뉴','투자정보');">투자정보</a></li>
-						<li><a href="https://recruit.ehyundai.com/recruit-info/announcement/list.nhd?pageNo=1&amp;hireGb=01&amp;coCd=HDHAN" target="_blank" onclick="GA_Event('공통','푸터_메뉴','채용정보');">채용정보</a></li>
-						<li><a href="http://www.handsome.co.kr/ko/sustainability/sharedGrowth01.do" target="_blank" onclick="GA_Event('공통','푸터_메뉴','동반성장');">동반성장</a></li>
-						</ul>
-				</div>
-			</div>
-			<!-- //footer_menu-->
-			<div class="footer_apps cnts1_right">
-				<ul>
-					<li class="loca"><a href="/ko/b/storeInformation" onclick="GA_Event('공통','푸터','매장안내');">매장안내</a></li>
-					<li class="look"><a href="/ko/magazine/lookbook" onclick="GA_Event('공통','푸터','룩북');">룩북</a></li>
-					<li class="ico_youtube"><a href="/ko/magazine/youtubeList" onclick="GA_Event('공통','푸터_SNS','YOUTUBE');">비디오</a></li><!-- 200330 추가 -->
-					<li class="ico_insta" id="f_insta" style=""><a href="https://www.instagram.com/thehandsome_official/" target="_blank" onclick="GA_Event('공통','푸터_SNS','INSTAGRAM');">인스타그램</a></li><!-- 200330 추가 -->
-				</ul>
-				<!--download_app , athome-->
-				<div class="cnts1_right_inner">
-				    <a href="/ko/appDownloadSMS/sendSMSPage" onclick="GA_Event('공통','푸터','APP다운로드');">
-<img src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_ico_apps.png" alt="APP 다운로드" style="width:52px;height:71px;">
-<!-- 				        <img src="${pageContext.request.contextPath}/resources/images/common/ico_apps_new.png" alt="APP 다운로드" style="width:54px;height:70px;"> -->
-<p>APP 다운로드 &gt;</p>
-			        </a>
-				    <a href="/ko/svcenter/footerAthomeInfo" style="margin-right:0;" onclick="GA_Event('공통','푸터','딜리버리서비스');">
-<img src="http://cdn.thehandsome.com/pc/footer/footer_athome_car.png" alt="딜리버리 서비스" style="width:85px;">
-<!-- 				        <img src="http://cdn.thehandsome.com/pc/footer_athome_car.jpg" alt="딜리버리 서비스" style="width:95px;"> -->
-<p>딜리버리 서비스 &gt;</p>
-			        </a>
-			    </div>
-				<!--//download_app , athome-->
-			</div>
+	<div id="footerWrap">
+		<div id="topBtn" style="display: none;">
+			<a href="javascript:void(0);" class="viewTopArea"><img
+				src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/top_btn.png"
+				alt="맨 위로" onclick="GA_Event('공통','퀵버튼','TOP');"></a>
 		</div>
-		<!--//footer_cnts1 -->
-	</div>
-	<!--footer_cnts2 -->
-	<div class="footer_cnts2 clearfix">
 		<div class="footer">
-			<div class="cnts2_left">
-				<a href="/ko/footer/footerTermBusiness" onclick="GA_Event('공통','푸터_CNT','서비스이용약관');">서비스이용약관</a>
-				<a href="/ko/footer/footerPrivacy" onclick="GA_Event('공통','푸터_CNT','개인정보처리방침');"><strong>개인정보처리방침<!-- 개인정보처리방침 --></strong></a>
-				<a href="javascript:void(0);" class="box" onclick="javascript:window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208126337', 'communicationViewPopup', 'width=750, height=700');GA_Event('공통','푸터_CNT','통신판매사업자정보확인');">통신판매사업자정보확인</a>
-				<a href="https://mark.inicis.com/mark/escrow_popup.php?mid=handsomep1" class="box" onclick="GA_Event('공통','푸터_CNT','에스크로서비스가입확인');">에스크로서비스 가입 확인</a>
-				<p class="top_p"><span>(주)한섬</span><span>대표이사 : 김민덕</span><span>서울시 강남구 도산대로 523 한섬빌딩</span><span>TEL 1800-5700 (유료)</span><span class="bgnone">FAX 02-6078-2856</span></p>
-				<p><span>사업자등록번호 120-81-26337</span><span>통신판매업신고번호 강남 제 00826호</span><span>개인정보보호책임자 윤인수</span><span class="bgnone">호스팅서비스 : (주) 한섬</span></p>
-				<p class="copyright">COPYRIGHT © 2017 HANDSOME. ALL RIGHT RESERVED.</p>
+			<!--footer_cnts1 -->
+			<div class="footer_cnts1 clearfix">
+				<!-- footer_menu-->
+				<div class="footer_menu cnts1_left">
+					<div class="footer_logo">
+						<a href="/ko/main" onclick="GA_Event('공통','로고','하단');"><img
+							src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_logo_renew.png"
+							alt="HANDSOME"></a>
+					</div>
+					<div class="footer_link">
+						<ul class="clearfix">
+							<li><a href="/ko/svcenter/theClubInfo"
+								onclick="GA_Event('공통','푸터_메뉴','온라인 멤버십');">온라인 멤버십</a></li>
+							<li><a href="/ko/svcenter/memberbenefitguide"
+								onclick="GA_Event('공통','푸터_메뉴','한섬 VVIP 혜택');">한섬 VVIP 혜택</a></li>
+							<li><a href="/ko/svcenter/pointguide"
+								onclick="GA_Event('공통','푸터_메뉴','한섬마일리지 혜택');">한섬마일리지 혜택</a></li>
+							<li><a href="/ko/svcenter/couponguide"
+								onclick="GA_Event('공통','푸터_메뉴','쿠폰');">쿠폰</a></li>
+							<li><a href="/ko/svcenter/asguide"
+								onclick="GA_Event('공통','푸터_메뉴','반품&amp;환불안내');">반품&amp;환불안내</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li><a href="/ko/svcenter/submain"
+								onclick="GA_Event('공통','푸터_메뉴','고객센터');">고객센터</a></li>
+							<li><a href="/ko/svcenter/faq"
+								onclick="GA_Event('공통','푸터_메뉴','FAQ');">FAQ</a></li>
+							<li><a href="/ko/svcenter/mending"
+								onclick="GA_Event('공통','푸터_메뉴','수선진행조회');">수선진행조회</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li><a href="/ko/member/login"
+								onclick="GA_Event('공통','푸터_메뉴','로그인');">로그인</a></li>
+							<li><a href="/ko/mypage/order/myorders"
+								onclick="GA_Event('공통','푸터_메뉴','주문배송조회');">주문배송조회</a></li>
+							<li><a href="/ko/mypage/order/myorders"
+								onclick="GA_Event('공통','푸터_메뉴','취소/반품');">취소/반품</a></li>
+							<li><a href="/ko/mypage/myWish"
+								onclick="GA_Event('공통','푸터_메뉴','위시리스트');">위시리스트</a></li>
+						</ul>
+						<ul class="clearfix">
+							<li><a
+								href="http://www.handsome.co.kr/ko/company/aboutHandsome.do"
+								target="_blank" onclick="GA_Event('공통','푸터_메뉴','회사소개');">회사소개<!-- 회사소개 --></a></li>
+							<li><a href="http://www.handsome.co.kr/ko/brand/fashion.do"
+								target="_blank" onclick="GA_Event('공통','푸터_메뉴','브랜드소개');">브랜드소개</a></li>
+							<li><a
+								href="http://www.handsome.co.kr/ko/ir/governance01.do"
+								target="_blank" onclick="GA_Event('공통','푸터_메뉴','투자정보');">투자정보</a></li>
+							<li><a
+								href="https://recruit.ehyundai.com/recruit-info/announcement/list.nhd?pageNo=1&amp;hireGb=01&amp;coCd=HDHAN"
+								target="_blank" onclick="GA_Event('공통','푸터_메뉴','채용정보');">채용정보</a></li>
+							<li><a
+								href="http://www.handsome.co.kr/ko/sustainability/sharedGrowth01.do"
+								target="_blank" onclick="GA_Event('공통','푸터_메뉴','동반성장');">동반성장</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //footer_menu-->
+				<div class="footer_apps cnts1_right">
+					<ul>
+						<li class="loca"><a href="/ko/b/storeInformation"
+							onclick="GA_Event('공통','푸터','매장안내');">매장안내</a></li>
+						<li class="look"><a href="/ko/magazine/lookbook"
+							onclick="GA_Event('공통','푸터','룩북');">룩북</a></li>
+						<li class="ico_youtube"><a href="/ko/magazine/youtubeList"
+							onclick="GA_Event('공통','푸터_SNS','YOUTUBE');">비디오</a></li>
+						<!-- 200330 추가 -->
+						<li class="ico_insta" id="f_insta" style=""><a
+							href="https://www.instagram.com/thehandsome_official/"
+							target="_blank" onclick="GA_Event('공통','푸터_SNS','INSTAGRAM');">인스타그램</a></li>
+						<!-- 200330 추가 -->
+					</ul>
+					<!--download_app , athome-->
+					<div class="cnts1_right_inner">
+						<a href="/ko/appDownloadSMS/sendSMSPage"
+							onclick="GA_Event('공통','푸터','APP다운로드');"> <img
+							src="http://cdn.thehandsome.com/_ui/desktop/common/images/common/footer_ico_apps.png"
+							alt="APP 다운로드" style="width: 52px; height: 71px;"> <!-- 				        <img src="${pageContext.request.contextPath}/resources/images/common/ico_apps_new.png" alt="APP 다운로드" style="width:54px;height:70px;"> -->
+							<p>APP 다운로드 &gt;</p>
+						</a> <a href="/ko/svcenter/footerAthomeInfo" style="margin-right: 0;"
+							onclick="GA_Event('공통','푸터','딜리버리서비스');"> <img
+							src="http://cdn.thehandsome.com/pc/footer/footer_athome_car.png"
+							alt="딜리버리 서비스" style="width: 85px;"> <!-- 				        <img src="http://cdn.thehandsome.com/pc/footer_athome_car.jpg" alt="딜리버리 서비스" style="width:95px;"> -->
+							<p>딜리버리 서비스 &gt;</p>
+						</a>
+					</div>
+					<!--//download_app , athome-->
+				</div>
 			</div>
-			<div class="cnts2_right">
-				<div class="related_site clearfix">
-					<dl class="global lang_1911">
-					    <dt><a href="javascript:void(0);" class="" onclick="GA_Event('공통','푸터_CNT','LANGUAGE');">LANGUAGE</a></dt>
-						<dd style="display: none;">
-							<ul>
-								<li><a href="javascript:language('ko')" onclick="GA_Event('공통','푸터_CNT','LANGUAGE_한국어');">한국어</a></li>
-								<li><a href="javascript:language('en')" onclick="GA_Event('공통','푸터_CNT','LANGUAGE_ENGLISH');">ENGLISH</a></li>
-								<li><a href="javascript:language('zh')" onclick="GA_Event('공통','푸터_CNT','LANGUAGE_中文');">中文</a></li>
-							</ul>
-						</dd>
-					</dl>
-					<dl class="family">
-						<dt><a href="javascript:void(0);" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE');">FAMILY SITE<!-- FAMILY SITE --></a></dt>
-						<dd style="">
-							<ul>
-	                            <li class="bold_division1811">쇼핑몰 Site<!-- 쇼핑몰 Site --></li>
-	                            <li><a href="https://www.thehyundai.com/Home.html" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_더현대닷컴');">더현대닷컴<!-- 더현대닷컴 --></a></li>
-	                            <li><a href="https://www.hddfs.com/shop/dm/main.do?ptnrChlCd=00003014" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대백화점 면세점');">현대백화점 면세점<!-- 현대백화점 DUTY FREE --></a></li>
-	                            <li><a href="http://esuper.ehyundai.com/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_e수퍼마켓');">e수퍼마켓<!-- e수퍼마켓 --></a></li>
-	                            <li><a href="https://www.hyundaihmall.com/Home.html" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대Hmall');">현대Hmall<!-- 현대 Hmall --></a></li>
-	                            <li><a href="http://mall.hyundailivart.co.kr/front/vrStoreList.lv" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대리바트몰');">현대리바트몰<!-- 현대리바트몰 --></a></li>
-	                            <li><a href="http://www.hyundairentalcare.co.kr/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대렌탈케어');">현대렌탈케어<!-- 현대렌탈케어 --></a></li>
-	                            <li><a href="http://www.hfashionmall.com/sfmweb/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_H패션몰');">H패션몰<!-- H패션몰 --></a></li>
-	                            <li><a href="https://www.h-vrstation.com/main" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_VR STATION');">VR STATION<!-- VR STATION --></a></li>
-	                            
-	                            <li class="bold_division1811">관계사 Site<!-- 관계사 Site --></li>
-	                            <li><a href="http://www.ehyundai.com/newPortal/ir/main.do" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대백화점그룹');">현대백화점그룹<!-- 현대백화점 그룹 --></a></li>
-	                            <li><a href="https://www.ehyundai.com/newPortal/index.do" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대백화점');">현대백화점<!-- 현대백화점 --></a></li>
-	                            <li><a href="http://www.hyundaigreenfood.com/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대그린푸드');">현대그린푸드<!-- (주)현대그린푸드 --></a></li>
-	                            <li><a href="https://www.hyundaihmall.com/Home.html" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대홈쇼핑');">현대홈쇼핑<!-- (주)현대홈쇼핑 --></a></li>
-	                            <li><a href="http://www.hyundailivart.co.kr/ko/intro/index.lvt" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대리바트');">현대리바트<!-- (주)현대 리바트 --></a></li>
-	                            <li><a href="http://www.hyundaimedia.com/mpp/index.hcn" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대미디어');">현대미디어<!-- 현대 미디어 --></a></li>
-	                            <li><a href="http://www.hyundairentalcare.co.kr/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대렌탈케어');">현대렌탈케어<!-- 현대렌탈케어 --></a></li>
-	                            <li><a href="http://www.hyundaidreamtour.com/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대드림투어');">현대드림투어<!-- 현대드림투어 --></a></li>
-	                            <li><a href="http://www.everdigm.com/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_에버다임');">에버다임<!-- 에버다임 --></a></li>
-	                            <li><a href="http://www.cnsfoodsystem.co.kr/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_씨엔에스푸드시스템');">씨엔에스푸드시스템<!-- 씨엔에스푸드시스템 --></a></li>
-	                            <li><a href="http://www.hyundaicatering.co.kr/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대캐터링시스템');">현대캐터링시스템<!-- 현대캐터링시스템 --></a></li>
-	                            <li><a href="http://www.hyundai-ite.com/index.jsp" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대IT&amp;E');">현대IT&amp;E<!-- 현대IT&amp;E --></a></li>
-	                            <li><a href="http://www.hyundailnc.com/" target="_blank" onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대L&amp;C');">현대L&amp;C<!-- 현대L&amp;C --></a></li>
-	                        </ul>
-						</dd>
-					</dl>
-				
-				
-				</div>
-				<!-- 푸터 공지 추가 220404 -->
-				<!-- 공지 -->
-				<div id="noticeWrap" class="notice">
-					<div class="controls">
-						<a href="javascript:void(0);" class="prev">이전</a>
-						<a href="javascript:void(0);" class="next">다음</a>
-					</div>
-					<div class="list">
-						<div class="tlt">공지<!-- 공지 --></div>
-						<ul class="list_new" style="top: -0.120781px;"><li><a href="/ko/svcenter/notice?noticeCode=8804383379376">더한섬닷컴 서비스 점검 안내 (9/27, 02시 ~ 05시)</a></li><li><a href="/ko/svcenter/notice?noticeCode=8804448948144">[당첨자발표] 더한섬닷컴 7주년 기념 신규회원 래플 이벤트(WEEK1) 당첨자 발표</a></li><li><a href="/ko/svcenter/notice?noticeCode=8804448915376">10월 한글날 연휴(대체공휴일)로 인한 배송지연 안내</a></li><li><a href="/ko/svcenter/notice?noticeCode=8804416147376">[당첨자 발표] 9월 뷰티 릴레이 체험단 당첨</a></li></ul>
-					</div>
-				</div>
-				<!-- //공지 -->
-				
-				<!-- 뉴스 -->
-				<div id="newsWrap" class="news">
-					<div class="controls">
-						<a href="javascript:void(0);" class="prev">이전</a>
-						<a href="javascript:void(0);" class="next">다음</a>
-					</div>
-					<div class="list">
-						<div class="tlt">뉴스<!-- 뉴스 --></div>
-						<ul class="list_new" style="top: -0.0197327px;"><li><a href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804154070812&amp;typeCode=WEB" onclick="GA_Common('news',$(this))">[핸썸TV] MUE에서 만나는 피어오브갓 ESSENTIALS</a></li><li><a href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804186773276&amp;typeCode=WEB" onclick="GA_Common('news',$(this))">배우 김고은의 더한섬닷컴 7주년 축하 영상 공개</a></li><li><a href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804154136348&amp;typeCode=WEB" onclick="GA_Common('news',$(this))">[핸썸TV] 더한섬닷컴 7주년, 광고 속 아이템 찾기</a></li><li><a href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804154103580&amp;typeCode=WEB" onclick="GA_Common('news',$(this))">클럽모나코 X 배우 남지현 브이로그 공개</a></li></ul>
-					</div>
-				</div>
-				<!-- //뉴스 -->
-				<!-- // 푸터 공지 추가 220404 -->
-				</div>
+			<!--//footer_cnts1 -->
 		</div>
+		<!--footer_cnts2 -->
+		<div class="footer_cnts2 clearfix">
+			<div class="footer">
+				<div class="cnts2_left">
+					<a href="/ko/footer/footerTermBusiness"
+						onclick="GA_Event('공통','푸터_CNT','서비스이용약관');">서비스이용약관</a> <a
+						href="/ko/footer/footerPrivacy"
+						onclick="GA_Event('공통','푸터_CNT','개인정보처리방침');"><strong>개인정보처리방침<!-- 개인정보처리방침 --></strong></a>
+					<a href="javascript:void(0);" class="box"
+						onclick="javascript:window.open('http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1208126337', 'communicationViewPopup', 'width=750, height=700');GA_Event('공통','푸터_CNT','통신판매사업자정보확인');">통신판매사업자정보확인</a>
+					<a
+						href="https://mark.inicis.com/mark/escrow_popup.php?mid=handsomep1"
+						class="box" onclick="GA_Event('공통','푸터_CNT','에스크로서비스가입확인');">에스크로서비스
+						가입 확인</a>
+					<p class="top_p">
+						<span>(주)한섬</span><span>대표이사 : 김민덕</span><span>서울시 강남구 도산대로
+							523 한섬빌딩</span><span>TEL 1800-5700 (유료)</span><span class="bgnone">FAX
+							02-6078-2856</span>
+					</p>
+					<p>
+						<span>사업자등록번호 120-81-26337</span><span>통신판매업신고번호 강남 제
+							00826호</span><span>개인정보보호책임자 윤인수</span><span class="bgnone">호스팅서비스
+							: (주) 한섬</span>
+					</p>
+					<p class="copyright">COPYRIGHT © 2017 HANDSOME. ALL RIGHT
+						RESERVED.</p>
+				</div>
+				<div class="cnts2_right">
+					<div class="related_site clearfix">
+						<dl class="global lang_1911">
+							<dt>
+								<a href="javascript:void(0);" class=""
+									onclick="GA_Event('공통','푸터_CNT','LANGUAGE');">LANGUAGE</a>
+							</dt>
+							<dd style="display: none;">
+								<ul>
+									<li><a href="javascript:language('ko')"
+										onclick="GA_Event('공통','푸터_CNT','LANGUAGE_한국어');">한국어</a></li>
+									<li><a href="javascript:language('en')"
+										onclick="GA_Event('공통','푸터_CNT','LANGUAGE_ENGLISH');">ENGLISH</a></li>
+									<li><a href="javascript:language('zh')"
+										onclick="GA_Event('공통','푸터_CNT','LANGUAGE_中文');">中文</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="family">
+							<dt>
+								<a href="javascript:void(0);"
+									onclick="GA_Event('공통','푸터_CNT','FAMILY SITE');">FAMILY
+									SITE<!-- FAMILY SITE -->
+								</a>
+							</dt>
+							<dd style="">
+								<ul>
+									<li class="bold_division1811">쇼핑몰 Site<!-- 쇼핑몰 Site --></li>
+									<li><a href="https://www.thehyundai.com/Home.html"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_더현대닷컴');">더현대닷컴<!-- 더현대닷컴 --></a></li>
+									<li><a
+										href="https://www.hddfs.com/shop/dm/main.do?ptnrChlCd=00003014"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대백화점 면세점');">현대백화점
+											면세점<!-- 현대백화점 DUTY FREE -->
+									</a></li>
+									<li><a href="http://esuper.ehyundai.com/" target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_e수퍼마켓');">e수퍼마켓<!-- e수퍼마켓 --></a></li>
+									<li><a href="https://www.hyundaihmall.com/Home.html"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대Hmall');">현대Hmall<!-- 현대 Hmall --></a></li>
+									<li><a
+										href="http://mall.hyundailivart.co.kr/front/vrStoreList.lv"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대리바트몰');">현대리바트몰<!-- 현대리바트몰 --></a></li>
+									<li><a href="http://www.hyundairentalcare.co.kr/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대렌탈케어');">현대렌탈케어<!-- 현대렌탈케어 --></a></li>
+									<li><a href="http://www.hfashionmall.com/sfmweb/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_H패션몰');">H패션몰<!-- H패션몰 --></a></li>
+									<li><a href="https://www.h-vrstation.com/main"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_VR STATION');">VR
+											STATION<!-- VR STATION -->
+									</a></li>
+
+									<li class="bold_division1811">관계사 Site<!-- 관계사 Site --></li>
+									<li><a href="http://www.ehyundai.com/newPortal/ir/main.do"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대백화점그룹');">현대백화점그룹<!-- 현대백화점 그룹 --></a></li>
+									<li><a href="https://www.ehyundai.com/newPortal/index.do"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대백화점');">현대백화점<!-- 현대백화점 --></a></li>
+									<li><a href="http://www.hyundaigreenfood.com/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대그린푸드');">현대그린푸드<!-- (주)현대그린푸드 --></a></li>
+									<li><a href="https://www.hyundaihmall.com/Home.html"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대홈쇼핑');">현대홈쇼핑<!-- (주)현대홈쇼핑 --></a></li>
+									<li><a
+										href="http://www.hyundailivart.co.kr/ko/intro/index.lvt"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대리바트');">현대리바트<!-- (주)현대 리바트 --></a></li>
+									<li><a href="http://www.hyundaimedia.com/mpp/index.hcn"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대미디어');">현대미디어<!-- 현대 미디어 --></a></li>
+									<li><a href="http://www.hyundairentalcare.co.kr/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대렌탈케어');">현대렌탈케어<!-- 현대렌탈케어 --></a></li>
+									<li><a href="http://www.hyundaidreamtour.com/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대드림투어');">현대드림투어<!-- 현대드림투어 --></a></li>
+									<li><a href="http://www.everdigm.com/" target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_에버다임');">에버다임<!-- 에버다임 --></a></li>
+									<li><a href="http://www.cnsfoodsystem.co.kr/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_씨엔에스푸드시스템');">씨엔에스푸드시스템<!-- 씨엔에스푸드시스템 --></a></li>
+									<li><a href="http://www.hyundaicatering.co.kr/"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대캐터링시스템');">현대캐터링시스템<!-- 현대캐터링시스템 --></a></li>
+									<li><a href="http://www.hyundai-ite.com/index.jsp"
+										target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대IT&amp;E');">현대IT&amp;E<!-- 현대IT&amp;E --></a></li>
+									<li><a href="http://www.hyundailnc.com/" target="_blank"
+										onclick="GA_Event('공통','푸터_CNT','FAMILY SITE_현대L&amp;C');">현대L&amp;C<!-- 현대L&amp;C --></a></li>
+								</ul>
+							</dd>
+						</dl>
+
+
+					</div>
+					<!-- 푸터 공지 추가 220404 -->
+					<!-- 공지 -->
+					<div id="noticeWrap" class="notice">
+						<div class="controls">
+							<a href="javascript:void(0);" class="prev">이전</a> <a
+								href="javascript:void(0);" class="next">다음</a>
+						</div>
+						<div class="list">
+							<div class="tlt">
+								공지
+								<!-- 공지 -->
+							</div>
+							<ul class="list_new" style="top: -0.120781px;">
+								<li><a href="/ko/svcenter/notice?noticeCode=8804383379376">더한섬닷컴
+										서비스 점검 안내 (9/27, 02시 ~ 05시)</a></li>
+								<li><a href="/ko/svcenter/notice?noticeCode=8804448948144">[당첨자발표]
+										더한섬닷컴 7주년 기념 신규회원 래플 이벤트(WEEK1) 당첨자 발표</a></li>
+								<li><a href="/ko/svcenter/notice?noticeCode=8804448915376">10월
+										한글날 연휴(대체공휴일)로 인한 배송지연 안내</a></li>
+								<li><a href="/ko/svcenter/notice?noticeCode=8804416147376">[당첨자
+										발표] 9월 뷰티 릴레이 체험단 당첨</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //공지 -->
+
+					<!-- 뉴스 -->
+					<div id="newsWrap" class="news">
+						<div class="controls">
+							<a href="javascript:void(0);" class="prev">이전</a> <a
+								href="javascript:void(0);" class="next">다음</a>
+						</div>
+						<div class="list">
+							<div class="tlt">
+								뉴스
+								<!-- 뉴스 -->
+							</div>
+							<ul class="list_new" style="top: -0.0197327px;">
+								<li><a
+									href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804154070812&amp;typeCode=WEB"
+									onclick="GA_Common('news',$(this))">[핸썸TV] MUE에서 만나는 피어오브갓
+										ESSENTIALS</a></li>
+								<li><a
+									href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804186773276&amp;typeCode=WEB"
+									onclick="GA_Common('news',$(this))">배우 김고은의 더한섬닷컴 7주년 축하 영상
+										공개</a></li>
+								<li><a
+									href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804154136348&amp;typeCode=WEB"
+									onclick="GA_Common('news',$(this))">[핸썸TV] 더한섬닷컴 7주년, 광고 속
+										아이템 찾기</a></li>
+								<li><a
+									href="/ko/magazine/newsDetailtemplatetype4?newsCode=8804154103580&amp;typeCode=WEB"
+									onclick="GA_Common('news',$(this))">클럽모나코 X 배우 남지현 브이로그 공개</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //뉴스 -->
+					<!-- // 푸터 공지 추가 220404 -->
+				</div>
+			</div>
+		</div>
+		<!--//footer_cnts2 -->
 	</div>
-	<!--//footer_cnts2 -->
-	</div><!-- 네이버 애널리틱스 전환페이지 설정 : s -->
-    <!-- 네이버 애널리틱스 전환페이지 설정 : e -->
+	<!-- 네이버 애널리틱스 전환페이지 설정 : s -->
+	<!-- 네이버 애널리틱스 전환페이지 설정 : e -->
 	<form name="accessiblityForm">
-		<input type="hidden" id="accesibility_refreshScreenReaderBufferField" name="accesibility_refreshScreenReaderBufferField" value="">
+		<input type="hidden" id="accesibility_refreshScreenReaderBufferField"
+			name="accesibility_refreshScreenReaderBufferField" value="">
 	</form>
-	<div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text" aria-live="polite"></div>
-	
+	<div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text"
+		aria-live="polite"></div>
+
 	<!--loadingbar-->
 	<div class="layerBg"></div>
 	<!--//loadingbar-->
-	
-	<div id="popwrap_maple_evt2209" style="top:50%;left:50%;margin:-200px 0 0 -185px;width:400px;position:fixed;display:block;z-index:102">
+
+	<div id="popwrap_maple_evt2209"
+		style="top: 50%; left: 50%; margin: -200px 0 0 -185px; width: 400px; position: fixed; display: block; z-index: 102">
 	</div>
-	
-	<div class="layerArea" id="mapleLayer" style="display:none;">
-	   <div class="layerBg"></div>
+
+	<div class="layerArea" id="mapleLayer" style="display: none;">
+		<div class="layerBg"></div>
 	</div>
-	
+
 	<!-- Google 리마케팅 태그 코드 -->
 	<script type="text/javascript">
 	/* <![CDATA[ */
@@ -15440,14 +16396,16 @@ function setLogout(){
 	var google_remarketing_only = true;
 	/* ]]> */
 	</script>
-	<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+	<script type="text/javascript"
+		src="//www.googleadservices.com/pagead/conversion.js">
 	</script>
 	<noscript>
-	<div style="display:inline;">
-	<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/943253288/?value=0&amp;guid=ON&amp;script=0"/>
-	</div>
+		<div style="display: inline;">
+			<img height="1" width="1" style="border-style: none;" alt=""
+				src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/943253288/?value=0&amp;guid=ON&amp;script=0" />
+		</div>
 	</noscript>
-	
+
 	<script type="text/javascript">  
 	
 	    var virtusizeViewYn = false;
@@ -15459,18 +16417,19 @@ function setLogout(){
 	    }
 	</script>
 
-<input type="hidden" id="apiConfmKey" value="U01TX0FVVEgyMDE5MDYxNzE2NDczMzEwODgxNTI=">
+	<input type="hidden" id="apiConfmKey"
+		value="U01TX0FVVEgyMDE5MDYxNzE2NDczMzEwODgxNTI=">
 
-<!-- GTM 추적코드 추가 -->
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PCJDFJ"
-     height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
+	<!-- GTM 추적코드 추가 -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PCJDFJ"
+			height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
 
-<!-- Beusable(뷰저블 코드) : s -->
-<script type="text/javascript">
+	<!-- Beusable(뷰저블 코드) : s -->
+	<script type="text/javascript">
 (function(w, d, a){
     w.__beusablerumclient__ = {
         load : function(src){
@@ -15481,22 +16440,22 @@ function setLogout(){
     };w.__beusablerumclient__.load(a);
 })(window, document, "//rum.beusable.net/script/b200506e124944u371/29f6068460");
 </script>
-<!-- Beusable(뷰저블 코드) : e -->
+	<!-- Beusable(뷰저블 코드) : e -->
 
 
-<!-- 네이버 애널리틱스 공통 적용 : s -->
-<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-<script type="text/javascript">
+	<!-- 네이버 애널리틱스 공통 적용 : s -->
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+	<script type="text/javascript">
 	if (!wcs_add) var wcs_add = {};
 	wcs_add["wa"] = "5c81384bbc8d5c";
 	if (window.wcs) {
 		wcs_do();
 	}
-</script> 
-<!-- 네이버 애널리틱스 공통 적용 : e -->
-<!-- 네이버 애널리틱스 공통 적용(프리미엄로그분석) : s -->
-<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
-<script type="text/javascript"> 
+</script>
+	<!-- 네이버 애널리틱스 공통 적용 : e -->
+	<!-- 네이버 애널리틱스 공통 적용(프리미엄로그분석) : s -->
+	<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+	<script type="text/javascript"> 
     if (!wcs_add)
     var wcs_add = {};
     wcs_add["wa"] = "s_56892c2154ef";
@@ -15506,9 +16465,9 @@ function setLogout(){
     wcs.inflow("thehandsome.com");
     wcs_do(_nasa);
 </script>
-<!-- 네이버 애널리틱스 공통 적용(프리미엄로그분석) : e -->
-<!-- Enliple Tracker Start -->
-<script type="text/javascript">
+	<!-- 네이버 애널리틱스 공통 적용(프리미엄로그분석) : e -->
+	<!-- Enliple Tracker Start -->
+	<script type="text/javascript">
 	try{
 	    (function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
 		enp('create', 'common', 'thehandsome', { device: 'W' });  // W:웹, M: 모바일, B: 반응형
@@ -15517,30 +16476,120 @@ function setLogout(){
 	    console.log(e);
 	}
 </script>
-<!-- Enliple Tracker End -->
+	<!-- Enliple Tracker End -->
 
 
-<!-- AceCounter Log Gathering Script V.7.5.2013010701 -->
-<script language="javascript">
+	<!-- AceCounter Log Gathering Script V.7.5.2013010701 -->
+	<script language="javascript">
 	var _AceGID=(function(){var Inf=['dgc17.acecounter.com','8080','AP6F40149814536','CW','0','NaPm,Ncisy','ALL','0']; var _CI=(!_AceGID)?[]:_AceGID.val;var _N=0;var _T=new Image(0,0);if(_CI.join('.').indexOf(Inf[3])<0){ _T.src =( location.protocol=="https:"?"https://"+Inf[0]:"http://"+Inf[0]+":"+Inf[1]) +'/?cookie'; _CI.push(Inf);  _N=_CI.length; } return {o: _N,val:_CI}; })();
 	var _AceCounter=(function(){var G=_AceGID;if(G.o!=0){var _A=G.val[G.o-1];var _G=( _A[0]).substr(0,_A[0].indexOf('.'));var _C=(_A[7]!='0')?(_A[2]):_A[3];	var _U=( _A[5]).replace(/\,/g,'_');var _S=((['<scr','ipt','type="text/javascr','ipt"></scr','ipt>']).join('')).replace('tt','t src="'+location.protocol+ '//cr.acecounter.com/Web/AceCounter_'+_C+'.js?gc='+_A[2]+'&py='+_A[4]+'&gd='+_G+'&gp='+_A[1]+'&up='+_U+'&rd='+(new Date().getTime())+'" t');document.writeln(_S); return _S;} })();
-</script><script src="http://cr.acecounter.com/Web/AceCounter_CW.js?gc=AP6F40149814536&amp;py=0&amp;gd=dgc17&amp;gp=8080&amp;up=NaPm_Ncisy&amp;rd=1665669738811" type="text/javascript"></script>
+</script>
+	<script
+		src="http://cr.acecounter.com/Web/AceCounter_CW.js?gc=AP6F40149814536&amp;py=0&amp;gd=dgc17&amp;gp=8080&amp;up=NaPm_Ncisy&amp;rd=1665669738811"
+		type="text/javascript"></script>
 
-<noscript><img src='http://dgc17.acecounter.com:8080/?uid=AP6F40149814536&je=n&' border='0' width='0' height='0' alt=''></noscript>	
-<!-- AceCounter Log Gathering Script End --> 
+	<noscript>
+		<img src='http://dgc17.acecounter.com:8080/?uid=AP6F40149814536&je=n&'
+			border='0' width='0' height='0' alt=''>
+	</noscript>
+	<!-- AceCounter Log Gathering Script End -->
 
-<!-- adinsight 공통스크립트 start -->
-<script type="text/javascript">
+	<!-- adinsight 공통스크립트 start -->
+	<script type="text/javascript">
 var TRS_AIDX = 11864;
 var TRS_PROTOCOL = document.location.protocol;
 document.writeln();
 var TRS_URL = TRS_PROTOCOL + '//' + ((TRS_PROTOCOL=='https:')?'analysis.adinsight.co.kr':'adlog.adinsight.co.kr') +  '/emnet/trs_esc.js';
 document.writeln("<scr"+"ipt language='javascript' src='" + TRS_URL + "'></scr"+"ipt>");
 </script>
-<script language="javascript" src="http://adlog.adinsight.co.kr/emnet/trs_esc.js"></script>
+	<script language="javascript"
+		src="http://adlog.adinsight.co.kr/emnet/trs_esc.js"></script>
 
-<!-- adinsight 공통스크립트 end -->
+	<!-- adinsight 공통스크립트 end -->
 
 
 
-<iframe id="groobeeBox" name="groobeeBox" style="display: none;"></iframe><div style="position: static;"><div class="a2a_overlay" id="a2a_overlay"></div><div id="a2a_modal" class="a2a_modal a2a_hide" role="dialog" tabindex="-1" aria-label=""><div class="a2a_modal_body a2a_menu a2a_hide" id="a2a_copy_link"><span id="a2a_copy_link_icon" class="a2a_svg a2a_s_link a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path fill="#FFF" d="M24.4 21.18c0-.36-.1-.67-.36-.92l-2.8-2.8a1.24 1.24 0 0 0-.92-.38c-.38 0-.7.14-.97.43.02.04.1.12.25.26l.3.3.2.24c.08.12.14.24.17.35.03.1.05.23.05.37 0 .36-.13.66-.38.92a1.25 1.25 0 0 1-.92.37 1.4 1.4 0 0 1-.37-.03 1.06 1.06 0 0 1-.35-.18 2.27 2.27 0 0 1-.25-.2 6.82 6.82 0 0 1-.3-.3l-.24-.25c-.3.28-.44.6-.44.98 0 .36.13.66.38.92l2.78 2.8c.24.23.54.35.9.35.37 0 .68-.12.93-.35l1.98-1.97c.26-.25.38-.55.38-.9zm-9.46-9.5c0-.37-.13-.67-.38-.92l-2.78-2.8a1.24 1.24 0 0 0-.9-.37c-.36 0-.67.1-.93.35L7.97 9.92c-.26.25-.38.55-.38.9 0 .36.1.67.37.92l2.8 2.8c.24.25.55.37.92.37.36 0 .7-.13.96-.4-.03-.04-.1-.12-.26-.26s-.24-.23-.3-.3a2.67 2.67 0 0 1-.2-.24 1.05 1.05 0 0 1-.17-.35 1.4 1.4 0 0 1-.04-.37c0-.36.1-.66.36-.9.26-.26.56-.4.92-.4.14 0 .26.03.37.06.12.03.23.1.35.17.1.1.2.16.25.2l.3.3.24.26c.3-.28.44-.6.44-.98zM27 21.17c0 1.07-.38 2-1.15 2.73l-1.98 1.98c-.74.75-1.66 1.12-2.73 1.12-1.1 0-2-.38-2.75-1.14l-2.8-2.8c-.74-.74-1.1-1.65-1.1-2.73 0-1.1.38-2.04 1.17-2.82l-1.18-1.17c-.8.8-1.72 1.18-2.82 1.18-1.08 0-2-.36-2.75-1.12l-2.8-2.8C5.38 12.8 5 11.9 5 10.82c0-1.08.38-2 1.15-2.74L8.13 6.1C8.87 5.37 9.78 5 10.86 5c1.1 0 2 .38 2.75 1.15l2.8 2.8c.74.73 1.1 1.65 1.1 2.72 0 1.1-.38 2.05-1.17 2.82l1.18 1.18c.8-.8 1.72-1.2 2.82-1.2 1.08 0 2 .4 2.75 1.14l2.8 2.8c.76.76 1.13 1.68 1.13 2.76z"></path></svg></span><input id="a2a_copy_link_text" type="text" title="Copy link" readonly=""><div id="a2a_copy_link_copied">✓</div></div><div class="a2a_modal_body a2a_menu a2a_thanks a2a_hide" id="a2a_thanks"><div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">공유 해줘서 고마워.</div></div></div><div class="a2a_menu a2a_full a2a_localize" id="a2apage_full" role="dialog" tabindex="-1" aria-label="Share" data-a2a-localize="title,Share" title="나누기"><div class="a2a_full_header"><div id="a2apage_find_container" class="a2a_menu_find_container"><input id="a2apage_find" class="a2a_menu_find a2a_localize" type="text" autocomplete="off" title="추가할 서비스를 즉시 찾습니다." data-a2a-localize="title,FindAnyServiceToAddTo"><span id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#CCC" d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></span></div></div><div class="a2a_full_services" id="a2apage_full_services" role="presentation"></div><div class="a2a_full_footer"><a href="https://www.addtoany.com" title="Share Buttons" rel="noopener" target="_blank"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a></div></div><div id="a2apage_dropdown" class="a2a_menu a2a_mini a2a_localize a2a_hide" tabindex="-1" aria-label="나누기" data-a2a-localize="label,Share"><div class="a2a_mini_services" id="a2apage_mini_services"></div><div id="a2apage_cols_container" class="a2a_cols_container"><div class="a2a_col1" id="a2apage_col1"></div><div id="a2apage_2_col1" class="a2a_hide"></div><div class="a2a_clear"></div></div><div class="a2apage_wide a2a_wide"><a href="#addtoany" id="a2apage_show_more_less" class="a2a_more a2a_localize" title="모두 보이기" data-a2a-localize="title,ShowAll"><span class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><g fill="#FFF"><path d="M14 7h4v18h-4z"></path><path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize" data-a2a-localize="inner,More">더…</span></a></div></div><div style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;"><iframe id="a2a_sm_ifr" title="AddToAny Utility Frame" transparency="true" allowtransparency="true" frameborder="0" src="https://static.addtoany.com/menu/sm.23.html#type=core&amp;event=load" style="height: 1px; width: 1px; border: 0px; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;"></iframe></div></div><script src="https://static.addtoany.com/menu/locale/ko-KR.js"></script><iframe height="0" width="0" title="Criteo DIS iframe" style="display: none;"></iframe></body></html>
+	<iframe id="groobeeBox" name="groobeeBox" style="display: none;"></iframe>
+	<div style="position: static;">
+		<div class="a2a_overlay" id="a2a_overlay"></div>
+		<div id="a2a_modal" class="a2a_modal a2a_hide" role="dialog"
+			tabindex="-1" aria-label="">
+			<div class="a2a_modal_body a2a_menu a2a_hide" id="a2a_copy_link">
+				<span id="a2a_copy_link_icon"
+					class="a2a_svg a2a_s_link a2a_logo_color"><svg
+						focusable="false" xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 32 32">
+						<path fill="#FFF"
+							d="M24.4 21.18c0-.36-.1-.67-.36-.92l-2.8-2.8a1.24 1.24 0 0 0-.92-.38c-.38 0-.7.14-.97.43.02.04.1.12.25.26l.3.3.2.24c.08.12.14.24.17.35.03.1.05.23.05.37 0 .36-.13.66-.38.92a1.25 1.25 0 0 1-.92.37 1.4 1.4 0 0 1-.37-.03 1.06 1.06 0 0 1-.35-.18 2.27 2.27 0 0 1-.25-.2 6.82 6.82 0 0 1-.3-.3l-.24-.25c-.3.28-.44.6-.44.98 0 .36.13.66.38.92l2.78 2.8c.24.23.54.35.9.35.37 0 .68-.12.93-.35l1.98-1.97c.26-.25.38-.55.38-.9zm-9.46-9.5c0-.37-.13-.67-.38-.92l-2.78-2.8a1.24 1.24 0 0 0-.9-.37c-.36 0-.67.1-.93.35L7.97 9.92c-.26.25-.38.55-.38.9 0 .36.1.67.37.92l2.8 2.8c.24.25.55.37.92.37.36 0 .7-.13.96-.4-.03-.04-.1-.12-.26-.26s-.24-.23-.3-.3a2.67 2.67 0 0 1-.2-.24 1.05 1.05 0 0 1-.17-.35 1.4 1.4 0 0 1-.04-.37c0-.36.1-.66.36-.9.26-.26.56-.4.92-.4.14 0 .26.03.37.06.12.03.23.1.35.17.1.1.2.16.25.2l.3.3.24.26c.3-.28.44-.6.44-.98zM27 21.17c0 1.07-.38 2-1.15 2.73l-1.98 1.98c-.74.75-1.66 1.12-2.73 1.12-1.1 0-2-.38-2.75-1.14l-2.8-2.8c-.74-.74-1.1-1.65-1.1-2.73 0-1.1.38-2.04 1.17-2.82l-1.18-1.17c-.8.8-1.72 1.18-2.82 1.18-1.08 0-2-.36-2.75-1.12l-2.8-2.8C5.38 12.8 5 11.9 5 10.82c0-1.08.38-2 1.15-2.74L8.13 6.1C8.87 5.37 9.78 5 10.86 5c1.1 0 2 .38 2.75 1.15l2.8 2.8c.74.73 1.1 1.65 1.1 2.72 0 1.1-.38 2.05-1.17 2.82l1.18 1.18c.8-.8 1.72-1.2 2.82-1.2 1.08 0 2 .4 2.75 1.14l2.8 2.8c.76.76 1.13 1.68 1.13 2.76z"></path></svg></span><input
+					id="a2a_copy_link_text" type="text" title="Copy link" readonly="">
+				<div id="a2a_copy_link_copied">✓</div>
+			</div>
+			<div class="a2a_modal_body a2a_menu a2a_thanks a2a_hide"
+				id="a2a_thanks">
+				<div class="a2a_localize" data-a2a-localize="inner,ThanksForSharing">공유
+					해줘서 고마워.</div>
+			</div>
+		</div>
+		<div class="a2a_menu a2a_full a2a_localize" id="a2apage_full"
+			role="dialog" tabindex="-1" aria-label="Share"
+			data-a2a-localize="title,Share" title="나누기">
+			<div class="a2a_full_header">
+				<div id="a2apage_find_container" class="a2a_menu_find_container">
+					<input id="a2apage_find" class="a2a_menu_find a2a_localize"
+						type="text" autocomplete="off" title="추가할 서비스를 즉시 찾습니다."
+						data-a2a-localize="title,FindAnyServiceToAddTo"><span
+						id="a2apage_find_icon" class="a2a_svg a2a_s_find"><svg
+							focusable="false" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24">
+							<path fill="#CCC"
+								d="M19.7 18.2l-4.5-4.5c.7-1.1 1.2-2.3 1.2-3.6 0-3.5-2.8-6.3-6.3-6.3s-6.3 2.8-6.3 6.3 2.8 6.3 6.3 6.3c1.4 0 2.6-.4 3.6-1.2l4.5 4.5c.6.6 1.3.7 1.7.2.5-.4.4-1.1-.2-1.7zm-9.6-3.6c-2.5 0-4.5-2.1-4.5-4.5 0-2.5 2.1-4.5 4.5-4.5 2.5 0 4.5 2.1 4.5 4.5s-2 4.5-4.5 4.5z"></path></svg></span>
+				</div>
+			</div>
+			<div class="a2a_full_services" id="a2apage_full_services"
+				role="presentation"></div>
+			<div class="a2a_full_footer">
+				<a href="https://www.addtoany.com" title="Share Buttons"
+					rel="noopener" target="_blank"><span
+					class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg
+							focusable="false" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 32 32">
+							<g fill="#FFF">
+							<path d="M14 7h4v18h-4z"></path>
+							<path d="M7 14h18v4H7z"></path></g></svg></span>AddToAny</a>
+			</div>
+		</div>
+		<div id="a2apage_dropdown"
+			class="a2a_menu a2a_mini a2a_localize a2a_hide" tabindex="-1"
+			aria-label="나누기" data-a2a-localize="label,Share">
+			<div class="a2a_mini_services" id="a2apage_mini_services"></div>
+			<div id="a2apage_cols_container" class="a2a_cols_container">
+				<div class="a2a_col1" id="a2apage_col1"></div>
+				<div id="a2apage_2_col1" class="a2a_hide"></div>
+				<div class="a2a_clear"></div>
+			</div>
+			<div class="a2apage_wide a2a_wide">
+				<a href="#addtoany" id="a2apage_show_more_less"
+					class="a2a_more a2a_localize" title="모두 보이기"
+					data-a2a-localize="title,ShowAll"><span
+					class="a2a_svg a2a_s__default a2a_s_a2a a2a_logo_color"><svg
+							focusable="false" xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 32 32">
+							<g fill="#FFF">
+							<path d="M14 7h4v18h-4z"></path>
+							<path d="M7 14h18v4H7z"></path></g></svg></span><span class="a2a_localize"
+					data-a2a-localize="inner,More">더…</span></a>
+			</div>
+		</div>
+		<div
+			style="height: 1px; width: 1px; position: absolute; z-index: 100000; top: 0px; visibility: hidden;">
+			<iframe id="a2a_sm_ifr" title="AddToAny Utility Frame"
+				transparency="true" allowtransparency="true" frameborder="0"
+				src="https://static.addtoany.com/menu/sm.23.html#type=core&amp;event=load"
+				style="height: 1px; width: 1px; border: 0px; left: 0px; top: 0px; position: absolute; z-index: 100000; display: none;"></iframe>
+		</div>
+	</div>
+	<script src="https://static.addtoany.com/menu/locale/ko-KR.js"></script>
+	<iframe height="0" width="0" title="Criteo DIS iframe"
+		style="display: none;"></iframe>
+</body>
+</html>

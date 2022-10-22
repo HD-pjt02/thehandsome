@@ -34,16 +34,18 @@
 	href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico" />
 <link rel="stylesheet" type="text/css"
 	href="../../../resources/css/font_80.css" media="all" />
-
+<link rel="stylesheet" href="../../../resources/css/contents1e5d.css">
+<link rel="stylesheet" href="../../../resources/css/contents.css">
 <link rel="stylesheet" type="text/css"
 	href="../../../resources/css/common.css" media="all" />
+<link rel="stylesheet" type="text/css"
+	href="../../../resources/css/products.css" media="all" />
 <link rel="stylesheet" type="text/css"
 	href="../../../resources/css/layout.css" media="all" />
 <link rel="stylesheet" type="text/css"
 	href="../../../resources/css/popup.css" media="all" />
 <link rel="stylesheet" type="text/css"
 	href="../../../resources/css/jquery-ui.min.css" media="all" />
-
 <link rel="stylesheet" type="text/css"
 	href="../../../resources/css/brand.css" media="all" />
 <link rel="stylesheet" type="text/css"
@@ -595,11 +597,31 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
 :
 
 
 
+
+
+
+
+
  
+
+
+
+
+
 
 
 
@@ -610,8 +632,28 @@ rotate
 
 
 
+
+
+
+
+
+
+
+
+
+
 (9
 deg
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -627,11 +669,31 @@ transform
 
 
 
+
+
+
+
+
+
+
+
+
+
 :
 
 
 
+
+
+
+
+
  
+
+
+
+
+
 
 
 
@@ -642,8 +704,28 @@ rotate
 
 
 
+
+
+
+
+
+
+
+
+
+
 (-1
 deg
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2498,8 +2580,7 @@ deg
 					<div class="brand_menu brand_menu1903">
 						<ul class="clearfix">
 							<!-- 선호 브랜드 없음 -->
-							<li><span class="on"> <a href="/ko/main"
-									onclick="GA_Event('공통','탑_네비게이션','HOME')">HOME</a>
+							<li><span class="on"> <a href="/home">HOME</a>
 							</span></li>
 							<!-- 로그인 상태 -->
 							<!-- 비로그인 상태 -->
@@ -2806,7 +2887,7 @@ deg
 			<!-- //headerWrap -->
 			<div class="gnbwarp com clearfix">
 				<h1 class="logo logo1903">
-					<a href="/ko/main" onclick="GA_Event('공통', '로고', '상단');">thehandsome.com</a>
+					<a href="/home">thehandsome.com</a>
 				</h1>
 				<div class="gnb_nav gnb_nav1903 hscene1906 hscene1910">
 					<h2 class="invisible">주메뉴</h2>
@@ -2823,27 +2904,22 @@ deg
 											<ul class="clearfix">
 												<li><input id="gnb_br_NEW_NORMAL_BRANDS_WE_BR01"
 													name="gnb_br_ch" type="checkbox" class="checkboxEvent"
-													title="TIME" onclick="GA_Common('WE_brandLike',$(this));"
-													value="NEW_NORMAL_BRANDS_WE#BR01#1"> <label
-													for="gnb_br_NEW_NORMAL_BRANDS_WE_BR01"></label> <a
-													href="/ko/b/br01"
-													onclick="GA_Common('WE_commonBrand',$(this));">TIME</a></li>
+													title="TIME"> <label
+													for="gnb_br_NEW_NORMAL_BRANDS_WE_BR01"></label><a
+													href='${pageContext.request.contextPath}/product/brandproductlist?bname=TIME&pageNo=1'>  TIME</a></li>
 												<li><input id="gnb_br_NEW_NORMAL_BRANDS_WE_BR02"
 													name="gnb_br_ch" type="checkbox" class="checkboxEvent"
 													title="MINE" onclick="GA_Common('WE_brandLike',$(this));"
 													value="NEW_NORMAL_BRANDS_WE#BR02#2"> <label
-													for="gnb_br_NEW_NORMAL_BRANDS_WE_BR02"></label> <a
-													href="/ko/b/br02"
-													onclick="GA_Common('WE_commonBrand',$(this));">MINE</a></li>
+													for="gnb_br_NEW_NORMAL_BRANDS_WE_BR02"></label> <a href='${pageContext.request.contextPath}/product/brandproductlist?bname=MINE&pageNo=1'>  MINE</a></li>
 												<li><input id="gnb_br_NEW_NORMAL_BRANDS_WE_BR19"
 													name="gnb_br_ch" type="checkbox" class="checkboxEvent"
 													title="LANVIN COLLECTION"
 													onclick="GA_Common('WE_brandLike',$(this));"
 													value="NEW_NORMAL_BRANDS_WE#BR19#3"> <label
-													for="gnb_br_NEW_NORMAL_BRANDS_WE_BR19"></label> <a
-													href="/ko/b/br19"
-													onclick="GA_Common('WE_commonBrand',$(this));">LANVIN
-														COLLECTION</a></li>
+													for="gnb_br_NEW_NORMAL_BRANDS_WE_BR19"></label> <a href='${pageContext.request.contextPath}/product/brandproductlist?bname=LANVIN COLLECTION&pageNo=1'>  LANVIN
+														COLLECTION</a>
+													</li>
 												<li><input id="gnb_br_NEW_NORMAL_BRANDS_WE_BR03"
 													name="gnb_br_ch" type="checkbox" class="checkboxEvent"
 													title="SYSTEM" onclick="GA_Common('WE_brandLike',$(this));"
@@ -3088,106 +3164,63 @@ deg
 								</div>
 							</div></li>
 
-						<li><a href="/ko/item/we"
-							onclick="GA_Event('공통','GNB','여성');GA_Event('공통_카테고리','1DEPTH','여성');">
-								여성 <span class="arr">arrow</span>
+						<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=none&csmall=none&pageNo=1'>여성
+							<span class="arr">arrow</span>
 						</a>
 							<div class="sub_back">
 								<div class="sub_menu clearfix">
 									<ul class="al_frt1">
+										<!-- 이거 해야됨! -->
 										<li><a href="/ko/c/we"
 											onclick="GA_Event('공통_카테고리','2DEPTH','여성_전체보기');"> 전체보기 <!-- 전체보기 -->
 										</a></li>
-										
+
 										<!--  status2.last end -->
-										<li><a href="/ko/c/we05/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','여성_아우터');">아우터</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=none&pageNo=1'>아우터</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/we051/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_아우터_재킷');">재킷</a>
-												</li>
-												<li><a href="/ko/c/we052/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_아우터_점퍼');">점퍼</a>
-												</li>
-												<li><a href="/ko/c/we015/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_아우터_가디건/베스트');">가디건/베스트</a>
-												</li>
-												<li><a href="/ko/c/we053/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_아우터_트렌치 코트');">트렌치
-														코트</a></li>
-												<li><a href="/ko/c/we054/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_아우터_코트');">코트</a>
-												</li>
-												<li><a href="/ko/c/we055/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_아우터_다운/패딩');">다운/패딩</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=재킷&pageNo=1'>재킷</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=점퍼&pageNo=1'>점퍼</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=가디건/베스트&pageNo=1'>가디건/베스트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=트렌치 코트&pageNo=1'>트렌치코트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=코트&pageNo=1'>코트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=아우터&csmall=다운/패딩&pageNo=1'>다운/패딩</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/we01/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','여성_탑');">탑</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=탑&csmall=none&pageNo=1'>탑</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/we011/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_탑_티셔츠');">티셔츠</a>
-												</li>
-												<li><a href="/ko/c/we012/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_탑_블라우스');">블라우스</a>
-												</li>
-												<li><a href="/ko/c/we013/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_탑_셔츠');">셔츠</a></li>
-												<li><a href="/ko/c/we014/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_탑_니트');">니트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=탑&csmall=티셔츠&pageNo=1'>티셔츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=탑&csmall=블라우스&pageNo=1'>블라우스</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=탑&csmall=셔츠&pageNo=1'>셔츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=탑&csmall=니트&pageNo=1'>니트</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/we04/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','여성_드레스');">드레스</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=드레스&csmall=none&pageNo=1'>드레스</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/we041/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_드레스_미니 드레스');">미니
-														드레스</a></li>
-												<li><a href="/ko/c/we042/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_드레스_미디 드레스');">미디
-														드레스</a></li>
-												<li><a href="/ko/c/we043/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_드레스_롱/맥시 드레스');">롱/맥시
-														드레스</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=드레스&csmall=미니 드레스&pageNo=1'>미니 드레스</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=드레스&csmall=미디 드레스&pageNo=1'>미디 드레스</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=드레스&csmall=롱/맥시 드레스&pageNo=1'></a>롱/맥시 드레스</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/we02/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','여성_팬츠');">팬츠</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=팬츠&csmall=none&pageNo=1'>팬츠</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/we021/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_팬츠_캐주얼');">캐주얼</a>
-												</li>
-												<li><a href="/ko/c/we022/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_팬츠_포멀');">포멀</a></li>
-												<li><a href="/ko/c/we023/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_팬츠_데님');">데님</a></li>
-												<li><a href="/ko/c/we024/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_팬츠_쇼츠');">쇼츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=팬츠&csmall=캐주얼&pageNo=1'>캐주얼</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=팬츠&csmall=포멀&pageNo=1'>포멀</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=팬츠&csmall=데님&pageNo=1'>데님</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=팬츠&csmall=쇼츠&pageNo=1'>쇼츠</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li style="margin-right: 0px"><a href="/ko/c/we03/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','여성_스커트');">스커트</a>
+										<li style="margin-right: 0px"><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=스커트&csmall=none&pageNo=1'>스커트</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/we031/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_스커트_미니 스커트');">미니
-														스커트</a></li>
-												<li><a href="/ko/c/we032/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_스커트_펜슬 스커트');">펜슬
-														스커트</a></li>
-												<li><a href="/ko/c/we033/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_스커트_플레어 스커트');">플레어
-														스커트</a></li>
-												<li><a href="/ko/c/we034/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','여성_스커트_롱/맥시 스커트');">롱/맥시
-														스커트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=스커트&csmall=미니 스커트&pageNo=1'>미니 스커트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=스커트&csmall=펜슬 스커트&pageNo=1'>펜슬 스커트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=스커트&csmall=플레어 스커트&pageNo=1'>플레어 스커트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=여성&cmedium=스커트&csmall=롱/맥시 스커트&pageNo=1'>롱/맥시 스커트</a></li>
 											</ul></li>
 									</ul>
 									<div class="gnb_banner float_right"></div>
 								</div>
 							</div> <!--  status2.last end --> <!-- categoryItemList end --></li>
-						<li><a href="/ko/item/me"
-							onclick="GA_Event('공통','GNB','남성');GA_Event('공통_카테고리','1DEPTH','남성');">
+						<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=none&csmall=none&pageNo=1'>
 								남성 <span class="arr">arrow</span>
 						</a>
 							<div class="sub_back">
@@ -3196,234 +3229,123 @@ deg
 										<li><a href="/ko/c/me"
 											onclick="GA_Event('공통_카테고리','2DEPTH','남성_전체보기');"> 전체보기 <!-- 전체보기 -->
 										</a></li>
-										
+
 										<!--  status2.last end -->
-										<li><a href="/ko/c/me03/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','남성_아우터');">아우터</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=none&pageNo=1'>아우터</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/me031/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_아우터_재킷');">재킷</a>
-												</li>
-												<li><a href="/ko/c/me032/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_아우터_점퍼');">점퍼</a>
-												</li>
-												<li><a href="/ko/c/me015/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_아우터_가디건/베스트');">가디건/베스트</a>
-												</li>
-												<li><a href="/ko/c/me033/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_아우터_트렌치코트');">트렌치코트</a>
-												</li>
-												<li><a href="/ko/c/me034/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_아우터_코트');">코트</a>
-												</li>
-												<li><a href="/ko/c/me035/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_아우터_다운/패딩');">다운/패딩</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=재킷&pageNo=1'>재킷</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=점퍼&pageNo=1'>점퍼</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=가디건/베스트&pageNo=1'>가디건/베스트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=트렌치코트&pageNo=1'>트렌치코트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=코트&pageNo=1'>코트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=아우터&csmall=다운/패딩&pageNo=1'>다운/패딩</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/me01/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','남성_탑');">탑</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=탑&csmall=none&pageNo=1'>탑</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/me011/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_탑_티셔츠');">티셔츠</a>
-												</li>
-												<li><a href="/ko/c/me012/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_탑_셔츠');">셔츠</a></li>
-												<li><a href="/ko/c/me013/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_탑_니트');">니트</a></li>
-												<li><a href="/ko/c/me014/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_탑_스웨터');">스웨터</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=탑&csmall=티셔츠&pageNo=1'>티셔츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=탑&csmall=셔츠&pageNo=1'>셔츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=탑&csmall=니트&pageNo=1'>니트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=탑&csmall=스웨터&pageNo=1'>스웨터</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/me02/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','남성_팬츠');">팬츠</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=팬츠&csmall=none&pageNo=1'>팬츠</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/me021/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_팬츠_루즈/테이퍼드');">루즈/테이퍼드</a>
-												</li>
-												<li><a href="/ko/c/me025/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_팬츠_슬림/스트레이트');">슬림/스트레이트</a>
-												</li>
-												<li><a href="/ko/c/me028/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_팬츠_조거/트랙');">조거/트랙</a>
-												</li>
-												<li><a href="/ko/c/me022/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_팬츠_데님');">데님</a></li>
-												<li><a href="/ko/c/me023/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_팬츠_쇼츠');">쇼츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=팬츠&csmall=루즈/테이퍼드&pageNo=1'>루즈/테이퍼드</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=팬츠&csmall=슬림/스트레이트&pageNo=1'>슬림/스트레이트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=팬츠&csmall=조거/트랙&pageNo=1'>조거/트랙</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=팬츠&csmall=데님&pageNo=1'>데님</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=팬츠&csmall=쇼츠&pageNo=1'>쇼츠</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li style="margin-right: 0px"><a href="/ko/c/me04/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','남성_수트');">수트</a>
+										<li style="margin-right: 0px"><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=수트&csmall=none&pageNo=1'>수트</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/me041/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_수트_드레스셔츠');">드레스셔츠</a>
-												</li>
-												<li><a href="/ko/c/me042/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_수트_수트재킷');">수트재킷</a>
-												</li>
-												<li><a href="/ko/c/me044/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','남성_수트_수트팬츠');">수트팬츠</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=수트&csmall=드레스셔츠&pageNo=1'>드레스셔츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=수트&csmall=수트재킷&pageNo=1'>수트재킷</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=남성&cmedium=수트&csmall=수트셔츠&pageNo=1'>수트팬츠</a></li>
 											</ul></li>
 									</ul>
 									<div class="gnb_banner float_right"></div>
 								</div>
 							</div> <!--  status2.last end --> <!-- categoryItemList end --></li>
-						<li><a href="/ko/c/as"
-							onclick="GA_Event('공통','GNB','잡화');GA_Event('공통_카테고리','1DEPTH','잡화');">
+						<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=none&csmall=none&pageNo=1'>
 								잡화 <span class="arr">arrow</span>
 						</a>
 							<div class="sub_back">
 								<div class="sub_menu clearfix">
 									<ul class="al_frt1">
+										<!-- 전체보기들 아직 안함 -->
 										<li><a href="/ko/c/as"
 											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_전체보기');"> 전체보기 <!-- 전체보기 -->
 										</a></li>
-										<li><a href="/ko/c/as01/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_여성슈즈');">여성슈즈</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=none&pageNo=1'>여성슈즈</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as011/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_부츠');">부츠</a>
-												</li>
-												<li><a href="/ko/c/as012/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_로퍼/블로퍼');">로퍼/블로퍼</a>
-												</li>
-												<li><a href="/ko/c/as013/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_스니커즈');">스니커즈</a>
-												</li>
-												<li><a href="/ko/c/as014/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_플랫');">플랫</a>
-												</li>
-												<li><a href="/ko/c/as015/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_힐/슬링백');">힐/슬링백</a>
-												</li>
-												<li><a href="/ko/c/as016/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_샌들/슬라이드');">샌들/슬라이드</a>
-												</li>
-												<li><a href="/ko/c/as017/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성슈즈_기타 슈즈');">기타
-														슈즈</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=부츠&pageNo=1'>부츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=로퍼/블로퍼&pageNo=1'>로퍼/블로퍼</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=스니커즈&pageNo=1'>스니커즈</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=플랫&pageNo=1'>플랫</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=힐/슬링백&pageNo=1'>힐/슬링백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=샌들/슬라이드&pageNo=1'>샌들/슬라이드</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성슈즈&csmall=기타 슈즈&pageNo=1'>기타 슈즈</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/as02/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_남성슈즈');">남성슈즈</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성슈즈&csmall=none&pageNo=1'>남성슈즈</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as021/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성슈즈_부츠');">부츠</a>
-												</li>
-												<li><a href="/ko/c/as022/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성슈즈_포멀슈즈');">포멀슈즈</a>
-												</li>
-												<li><a href="/ko/c/as023/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성슈즈_스니커즈');">스니커즈</a>
-												</li>
-												<li><a href="/ko/c/as024/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성슈즈_샌들/슬라이드');">샌들/슬라이드</a>
-												</li>
-												<li><a href="/ko/c/as025/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성슈즈_기타 슈즈');">기타
-														슈즈</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성슈즈&csmall=부츠&pageNo=1'>부츠</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성슈즈&csmall=포멀슈즈&pageNo=1'>포멀슈즈</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성슈즈&csmall=스니커즈&pageNo=1'>스니커즈</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성슈즈&csmall=샌들/슬라이드&pageNo=1'>샌들/슬라이드</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성슈즈&csmall=기타 슈즈&pageNo=1'>기타 슈즈</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/as03/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_여성백');">여성백</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성백&csmall=none&pageNo=1'>여성백</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as031/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성백_토트백');">토트백</a>
-												</li>
-												<li><a href="/ko/c/as032/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성백_숄더/크로스바디백');">숄더/크로스바디백</a>
-												</li>
-												<li><a href="/ko/c/as034/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_여성백_기타 백');">기타
-														백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성백&csmall=토트백&pageNo=1'>토트백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성백&csmall=숄더/크로스바디백&pageNo=1'>숄더/크로스바디백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=여성백&csmall=기타 백&pageNo=1'>기타 백</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/as04/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_남성백');">남성백</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성백&csmall=none&pageNo=1'>남성백</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as041/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성백_토트백');">토트백</a>
-												</li>
-												<li><a href="/ko/c/as042/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성백_숄더/크로스바디백');">숄더/크로스바디백</a>
-												</li>
-												<li><a href="/ko/c/as043/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성백_클러치 백');">클러치
-														백</a></li>
-												<li><a href="/ko/c/as044/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_남성백_기타 백');">기타
-														백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성백&csmall=토트백&pageNo=1'>토트백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성백&csmall=숄더/크로스바디백&pageNo=1'>숄더/크로스바디백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성백&csmall=클러치 백&pageNo=1'>클러치 백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=남성백&csmall=기타 백&pageNo=1'>기타 백</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/as05/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_머플러/스카프');">머플러/스카프</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=머플러/스카프&csmall=none&pageNo=1'>머플러/스카프</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as051/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_머플러/스카프_머플러');">머플러</a>
-												</li>
-												<li><a href="/ko/c/as052/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_머플러/스카프_스카프');">스카프</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=머플러/스카프&csmall=머플러&pageNo=1'>머플러</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=머플러/스카프&csmall=스카프&pageNo=1'>스카프</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/as06/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_주얼리');">주얼리</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=주얼리&csmall=none&pageNo=1'>주얼리</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as061/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_주얼리_이어링/커프');">이어링/커프</a>
-												</li>
-												<li><a href="/ko/c/as062/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_주얼리_목걸이');">목걸이</a>
-												</li>
-												<li><a href="/ko/c/as063/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_주얼리_팔찌');">팔찌</a>
-												</li>
-												<li><a href="/ko/c/as064/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_주얼리_반지');">반지</a>
-												</li>
-												<li><a href="/ko/c/as065/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_주얼리_기타 주얼리');">기타
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=주얼리&csmall=이어링/커프&pageNo=1'>이어링/커프</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=주얼리&csmall=목걸이&pageNo=1'>목걸이</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=주얼리&csmall=팔찌&pageNo=1'>팔찌</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=주얼리&csmall=반지&pageNo=1'>반지</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=주얼리&csmall=기타&pageNo=1'>기타
 														주얼리</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li style="margin-right: 0px"><a href="/ko/c/as07/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','잡화_기타 ACC');">기타
+										<li style="margin-right: 0px"><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=none&pageNo=1'>기타
 												ACC</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/as071/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_모자');">모자</a>
-												</li>
-												<li><a href="/ko/c/as072/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_양말');">양말</a>
-												</li>
-												<li><a href="/ko/c/as073/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_장갑');">장갑</a>
-												</li>
-												<li><a href="/ko/c/as074/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_벨트');">벨트</a>
-												</li>
-												<li><a href="/ko/c/as075/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_지갑');">지갑</a>
-												</li>
-												<li><a href="/ko/c/as076/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_헤어ACC');">헤어ACC</a>
-												</li>
-												<li><a href="/ko/c/as077/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_테크ACC');">테크ACC</a>
-												</li>
-												<li><a href="/ko/c/as078/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','잡화_기타 ACC_기타소품');">기타소품</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=모자&pageNo=1'>모자</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=양말&pageNo=1'>양말</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=장갑&pageNo=1'>장갑</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=벨트&pageNo=1'>벨트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=지갑&pageNo=1'>지갑</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=헤어ACC&pageNo=1'>헤어ACC</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=테크ACC&pageNo=1'>테크ACC</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=잡화&cmedium=기타 ACC&csmall=기타소품&pageNo=1'>기타소품</a></li>
 											</ul></li>
 									</ul>
 									<div class="gnb_banner float_right"></div>
 								</div>
 							</div> <!--  status2.last end --> <!-- categoryItemList end --></li>
-						<li><a href="/ko/c/gf"
-							onclick="GA_Event('공통','GNB','골프');GA_Event('공통_카테고리','1DEPTH','골프');">
+						<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=none&csmall=none&pageNo=1'>
 								골프 <i class="ico-new">new</i> <span class="arr">arrow</span>
 						</a>
 							<div class="sub_back">
@@ -3432,137 +3354,80 @@ deg
 										<li><a href="/ko/c/gf"
 											onclick="GA_Event('공통_카테고리','2DEPTH','골프_전체보기');"> 전체보기 <!-- 전체보기 -->
 										</a></li>
-										<li><a href="/ko/c/gf01/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','골프_여성웨어');">여성웨어</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=여성웨어&csmall=none&pageNo=1'>여성웨어</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/gf011/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_여성웨어_아우터');">아우터</a>
-												</li>
-												<li><a href="/ko/c/gf012/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_여성웨어_가디건/베스트');">가디건/베스트</a>
-												</li>
-												<li><a href="/ko/c/gf013/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_여성웨어_탑');">탑</a></li>
-												<li><a href="/ko/c/gf014/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_여성웨어_스커트/원피스');">스커트/원피스</a>
-												</li>
-												<li><a href="/ko/c/gf015/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_여성웨어_팬츠');">팬츠</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=여성웨어&csmall=아우터&pageNo=1'>아우터</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=여성웨어&csmall=가디건/베스트&pageNo=1'>가디건/베스트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=여성웨어&csmall=탑&pageNo=1'>탑</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=여성웨어&csmall=스커트/원피스&pageNo=1'>스커트/원피스</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=여성웨어&csmall=팬츠&pageNo=1'>팬츠</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/gf02/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','골프_남성웨어');">남성웨어</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=남성웨어&csmall=none&pageNo=1'>남성웨어</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/gf021/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_남성웨어_아우터');">아우터</a>
-												</li>
-												<li><a href="/ko/c/gf022/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_남성웨어_베스트');">베스트</a>
-												</li>
-												<li><a href="/ko/c/gf023/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_남성웨어_탑');">탑</a></li>
-												<li><a href="/ko/c/gf024/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_남성웨어_팬츠');">팬츠</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=남성웨어&csmall=아우터&pageNo=1'>아우터</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=남성웨어&csmall=베스트&pageNo=1'>베스트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=남성웨어&csmall=탑&pageNo=1'>탑</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=남성웨어&csmall=팬츠&pageNo=1'>팬츠</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li style="margin-right: 0px"><a href="/ko/c/gf03/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','골프_ACC');">ACC</a>
+										<li style="margin-right: 0px"><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=none&pageNo=1'>ACC</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/gf031/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_골프백');">골프백</a>
-												</li>
-												<li><a href="/ko/c/gf032/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_골프화');">골프화</a>
-												</li>
-												<li><a href="/ko/c/gf033/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_모자');">모자</a>
-												</li>
-												<li><a href="/ko/c/gf034/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_장갑');">장갑</a>
-												</li>
-												<li><a href="/ko/c/gf035/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_양말');">양말</a>
-												</li>
-												<li><a href="/ko/c/gf036/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_벨트');">벨트</a>
-												</li>
-												<li><a href="/ko/c/gf037/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','골프_ACC_기타');">기타</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=골프백&pageNo=1'>골프백</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=골프화&pageNo=1'>골프화</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=모자&pageNo=1'>모자</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=장갑&pageNo=1'>장갑</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=양말&pageNo=1'>양말</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=벨트&pageNo=1'>벨트</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=골프&cmedium=ACC&csmall=기타&pageNo=1'>기타</a></li>
 											</ul></li>
 									</ul>
 									<div class="gnb_banner float_right"></div>
 								</div>
 							</div> <!--  status2.last end --> <!-- categoryItemList end --></li>
-						<li><a href="/ko/c/be"
-							onclick="GA_Event('공통','GNB','뷰티');GA_Event('공통_카테고리','1DEPTH','뷰티');">
+						<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=none&csmall=none&pageNo=1'>
 								뷰티 <span class="arr">arrow</span>
 						</a>
 							<div class="sub_back">
 								<div class="sub_menu clearfix">
 									<ul class="al_frt1">
+										<!-- 전체보기 안됨 -->
 										<li><a href="/ko/c/be"
 											onclick="GA_Event('공통_카테고리','2DEPTH','뷰티_전체보기');"> 전체보기 <!-- 전체보기 -->
 										</a></li>
-										<li><a href="/ko/c/be01/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','뷰티_스킨케어');">스킨케어</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티0&cmedium=스킨케어&csmall=none&pageNo=1'>스킨케어</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/be011/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_스킨케어_토너/에멀전/크림');">토너/에멀전/크림</a>
-												</li>
-												<li><a href="/ko/c/be012/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_스킨케어_세럼/앰플/오일/밤');">세럼/앰플/오일/밤</a>
-												</li>
-												<li><a href="/ko/c/be013/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_스킨케어_클렌징/스크럽/마스크');">클렌징/스크럽/마스크</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=스킨케어&csmall=토너/에멀전/크림&pageNo=1'>토너/에멀전/크림</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=스킨케어&csmall=세럼/앰플/오일/밤&pageNo=1'>세럼/앰플/오일/밤</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=스킨케어&csmall=클렌징/스크럽/마스크&pageNo=1'>클렌징/스크럽/마스크</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/be02/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','뷰티_메이크업');">메이크업</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=메이크업&csmall=none&pageNo=1'>메이크업</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/be021/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_메이크업_페이스 메이크업');">페이스
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=메이크업&csmall=페이스 메이크업&pageNo=1'>페이스
 														메이크업</a></li>
-												<li><a href="/ko/c/be023/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_메이크업_립 메이크업');">립
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=메이크업&csmall=립 메이크업&pageNo=1'>립
 														메이크업</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/be03/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','뷰티_바디/헤어케어');">바디/헤어케어</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=바디/헤어케어&csmall=none&pageNo=1'>바디/헤어케어</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/be031/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_바디/헤어케어_핸드·바디로션/크림/오일');">핸드·바디로션/크림/오일</a>
-												</li>
-												<li><a href="/ko/c/be032/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_바디/헤어케어_핸드·바디워시/스크럽');">핸드·바디워시/스크럽</a>
-												</li>
-												<li><a href="/ko/c/be033/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_바디/헤어케어_샴푸/컨디셔너');">샴푸/컨디셔너</a>
-												</li>
-												<li><a href="/ko/c/be034/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_바디/헤어케어_트리트먼트/오일/스프레이');">트리트먼트/오일/스프레이</a>
-												</li>
-												<li><a href="/ko/c/be035/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_바디/헤어케어_기타 바디/헤어케어');">기타
-														바디/헤어케어</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=바디/헤어케어&csmall=핸드·바디로션/크림/오일&pageNo=1'>핸드·바디로션/크림/오일</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=바디/헤어케어&csmall=핸드·바디워시/스크럽&pageNo=1'>핸드·바디워시/스크럽</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=바디/헤어케어&csmall=샴푸/컨디셔너&pageNo=1'>샴푸/컨디셔너</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=바디/헤어케어&csmall=트리트먼트/오일/스프레이&pageNo=1'>트리트먼트/오일/스프레이</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=바디/헤어케어&csmall=기타 바디/헤어케어&pageNo=1'>기타 바디/헤어케어</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li style="margin-right: 0px"><a href="/ko/c/be04/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','뷰티_향수');">향수</a>
+										<li style="margin-right: 0px"><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=향수&csmall=none&pageNo=1'>향수</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/be041/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','뷰티_향수_향수');">향수</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=뷰티&cmedium=향수&csmall=향수&pageNo=1'>향수</a></li>
 											</ul></li>
 									</ul>
 									<div class="gnb_banner float_right"></div>
 								</div>
 							</div> <!--  status2.last end --> <!-- categoryItemList end --></li>
-						<li><a href="/ko/c/ls"
-							onclick="GA_Event('공통','GNB','라이프스타일');GA_Event('공통_카테고리','1DEPTH','라이프스타일');">
+						<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=none&csmall=none&pageNo=1'>
 								라이프스타일 <span class="arr">arrow</span>
 						</a>
 							<div class="sub_back">
@@ -3572,77 +3437,42 @@ deg
 											onclick="GA_Event('공통_카테고리','2DEPTH','라이프스타일_전체보기');">
 												전체보기 <!-- 전체보기 -->
 										</a></li>
-										<li><a href="/ko/c/ls01/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','라이프스타일_홈');">홈</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=홈&csmall=none&pageNo=1'>홈</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/ls011/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_홈_패브릭');">패브릭</a>
-												</li>
-												<li><a href="/ko/c/ls012/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_홈_프래그런스');">프래그런스</a>
-												</li>
-												<li><a href="/ko/c/ls013/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_홈_데코레이션');">데코레이션</a>
-												</li>
-												<li><a href="/ko/c/ls014/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_홈_기타소품');">기타소품</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=홈&csmall=패브릭&pageNo=1'>패브릭</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=홈&csmall=프래그런스&pageNo=1'>프래그런스</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=홈&csmall=데코레이션&pageNo=1'>데코레이션</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=홈&csmall=기타소품&pageNo=1'>기타소품</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/ls02/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','라이프스타일_배스');">배스</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=배스&csmall=none&pageNo=1'>배스</a>
 											<ul class="clearfix">
 												<li><a href="/ko/c/ls022/"
 													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_배스_욕실용품');">욕실용품</a>
 												</li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/ls03/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','라이프스타일_키친');">키친</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=none&pageNo=1'>키친</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/ls031/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키친_그릇');">그릇</a>
-												</li>
-												<li><a href="/ko/c/ls032/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키친_보드/트레이');">보드/트레이</a>
-												</li>
-												<li><a href="/ko/c/ls033/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키친_커트러리');">커트러리</a>
-												</li>
-												<li><a href="/ko/c/ls034/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키친_커피/티');">커피/티</a>
-												</li>
-												<li><a href="/ko/c/ls035/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키친_패브릭/냅킨');">패브릭/냅킨</a>
-												</li>
-												<li><a href="/ko/c/ls036/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키친_기타소품');">기타소품</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=그릇&pageNo=1'>그릇</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=보드/트레이&pageNo=1'>보드/트레이</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=커트러리&pageNo=1'>커트러리</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=커피/티&pageNo=1'>커피/티</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=패브릭/냅킨&pageNo=1'>패브릭/냅킨</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키친&csmall=기타소품&pageNo=1'>기타소품</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li><a href="/ko/c/ls04/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','라이프스타일_데스크');">데스크</a>
+										<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=데스크&csmall=none&pageNo=1'>데스크</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/ls041/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_데스크_문구');">문구</a>
-												</li>
-												<li><a href="/ko/c/ls042/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_데스크_책');">책</a>
-												</li>
-												<li><a href="/ko/c/ls043/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_데스크_기타소품');">기타소품</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=데스크&csmall=문구&pageNo=1'>문구</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=데스크&csmall=책&pageNo=1'>책</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=데스크&csmall=기타소품&pageNo=1'>기타소품</a></li>
 											</ul></li>
 										<!--  status2.last end -->
-										<li style="margin-right: 0px"><a href="/ko/c/ls06/"
-											onclick="GA_Event('공통_카테고리','2DEPTH','라이프스타일_키즈');">키즈</a>
+										<li style="margin-right: 0px"><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키즈&csmall=none&pageNo=1'>키즈</a>
 											<ul class="clearfix">
-												<li><a href="/ko/c/ls061/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키즈_의류');">의류</a>
-												</li>
-												<li><a href="/ko/c/ls062/"
-													onclick="GA_Event('공통_카테고리','3DEPTH','라이프스타일_키즈_잡화');">잡화</a>
-												</li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키즈&csmall=의류&pageNo=1'>의류</a></li>
+												<li><a href='${pageContext.request.contextPath}/product/productlist?clarge=라이프스타일&cmedium=키즈&csmall=잡화&pageNo=1'>잡화</a></li>
 											</ul></li>
 									</ul>
 									<div class="gnb_banner float_right"></div>
