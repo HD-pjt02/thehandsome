@@ -24,6 +24,8 @@ public interface ReviewService {
 	Long insertReview(ReviewDTO reviewDTO);
 
 	Long insertPhotoReview(ReviewDTO reviewDTO);
+
+	Long selectNextReviewNo();
 	
 	
 	

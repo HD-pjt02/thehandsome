@@ -18,4 +18,6 @@ public interface ReviewMapper {
 
 	Long insertPhotoReview(ReviewDTO reviewDTO);
 
+	Long selectNextReviewNo();
+
 }

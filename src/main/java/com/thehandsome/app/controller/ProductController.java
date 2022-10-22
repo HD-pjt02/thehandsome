@@ -29,11 +29,10 @@ import com.thehandsome.app.service.ProductService;
 import lombok.extern.log4j.Log4j;
 
 /* 
- * 작성자 : 정승하
+ * 작성자 : 정승하,신미림
  * 작성일 : 2022.10.17.월
- * 상품 상세 조회 관련 기능을 다룬 컨트롤러
- * [상품 상세 정보, 상품 컬러 리스트]
- */
+ * 상품에 관련된 컨트롤러
+*/
 @Log4j
 @Controller
 @RequestMapping("/product")

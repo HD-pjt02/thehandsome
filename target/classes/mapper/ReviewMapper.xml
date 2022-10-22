@@ -23,6 +23,12 @@
 		]]>
 	</select>
 	
+	<select id="selectNextReviewNo" resultType="Long">
+		<![CDATA[
+		SELECT REVIEW_SEQ.nextVal FROM DUAL
+		]]>
+	</select>
+	
 	<insert id="insertReview" parameterType="ReviewDTO">
 		<![CDATA[
 		insert into review values(review_seq.nextVal,#{mid},#{pcode},#{pcodecolor},sysdate,#{rrate},#{rcontent},#{rimg},#{product_pcode},#{product_pno},#{reviewtype})
@@ -31,7 +37,7 @@
 	
 	<insert id="insertPhotoReview" parameterType="ReviewDTO">
 		<![CDATA[
-		insert into review values(review_seq.nextVal,#{mid},#{pcode},#{pcodecolor},sysdate,#{rrate},#{rcontent},#{rimg},#{product_pcode},#{product_pno},#{reviewtype})
+		insert into review values(review_seq.currVal,#{mid},#{pcode},#{pcodecolor},sysdate,#{rrate},#{rcontent},#{rimg},#{product_pcode},#{product_pno},#{reviewtype})
 		]]>
 	</insert>
 	
