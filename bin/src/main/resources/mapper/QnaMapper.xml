@@ -6,12 +6,55 @@
   	<!-- 1:1문의 -->
   	<insert id="qnaInsert">
   		insert into qna values(qna_seq.nextval, 
-  		'bansongs', #{qTitle}, #{qContent}, sysdate, 
-  		sysdate, 'test','test', 'kms', 1, #{qCategory}, '접수대기중')
+  		'bansongs', #{qtitle}, #{qcontent}, sysdate, 
+<<<<<<< Updated upstream
+  		sysdate, 'test','test', 'kms', 2, #{qcategory}, '접수대기중', #{qimg})
+=======
+  		sysdate, 'test','test', 'kms', 10, #{qcategory}, '접수대기중', #{qimg})
+>>>>>>> Stashed changes
   	</insert>	
   	
   	<!-- 1:1조회-->
   	<select id="qnaSelect" resultType="QnaDTO">
-  		select qDate, qCategory, qContent, qStatus from qna where mno = #{mNo}
+  		select * from qna where mno = #{mno}
   	</select>
+  	
+  	<!-- qna삭제 -->
+  	<delete id="qnaDelete">
+  		delete from qna where qid = #{qid}
+  	</delete>
+  	
+  	<!-- qna수정하기하기 위한 qnaDto조회 -->
+  	<select id="qnaSelectDTO" resultType="QnaDTO">
+		select * from qna where qid = #{qid}
+	</select>
+	
+	
+	<!-- 총 게시글 갯수 출력 -->
+	<select id="countQna" resultType="int">
+		SELECT COUNT(*) FROM QNA
+	</select>
+
+	<!-- 페이징 처리 후 게시글 조회 -->
+	<select id="selectQna" resultType="QnaDTO">
+		SELECT * 
+			FROM (
+				SELECT ROWNUM RN, A.* 
+					FROM (
+							SELECT * 
+							FROM QNA 						
+							) A
+					)
+		WHERE RN BETWEEN #{start} AND #{end}
+	</select>
+	
+	<!-- qna수정하기 -->
+	<update id="qnaUpdate">
+		update qna 
+           set qcategory = #{qcategory}
+             , qtitle = #{qtitle}
+             , qcontent = #{qcontent}
+     
+         where qid = #{qid}
+	</update>
   </mapper>

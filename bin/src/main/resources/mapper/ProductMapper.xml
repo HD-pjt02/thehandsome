@@ -4,18 +4,22 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.thehandsome.app.mapper.ProductMapper">
+	<!-- 상품 선택 후 상품 상세페이지에서 상품 정보 반환 -->
 	<select id="selectProduct" resultType="ProductDTO"
 		parameterType="String">
 		SELECT p.pcode, p.pname, p.pprice, p.pcontent, p.bname,
 		b.bno, b.bname,
 		p.clarge, p.cmedium, p.csmall,
-		p.pregdate, p.pdiscount, p.plikeamount
+		p.pregdate, p.pdiscount,
+		p.plikeamount
 		FROM product
 		p, brand b
 		WHERE p.pcode = #{pcode}
-		AND p.bname = b.bname
+		AND p.bname
+		= b.bname
 	</select>
 
+	<!-- 상품 카테고리(대,중,소) 검색 후 상품 리스트 반환 -->
 	<select id="selectProducts" resultType="ProductDTO"
 		parameterType="HashMap">
 		<![CDATA[
@@ -46,7 +50,7 @@
 		WHERE pcode = #{pcode}
 	</select>
 
-
+	<!-- 상품 카테고리(대,중) 검색 후 상품 리스트 반환 -->
 	<select id="selectProductsNoSmall" resultType="ProductDTO"
 		parameterType="HashMap">
 		<![CDATA[
@@ -70,6 +74,7 @@
 		]]>
 	</select>
 
+	<!-- 상품 카테고리(대) 검색 후 상품 리스트 반환 -->
 	<select id="selectProductsNoMedium" resultType="ProductDTO"
 		parameterType="HashMap">
 		<![CDATA[
@@ -93,6 +98,7 @@
 		]]>
 	</select>
 
+	<!-- 상품 색상 검색 -->
 	<select id="selectProductColor" resultType="ColorDTO"
 		parameterType="ProductDTO">
 		SELECT *
@@ -101,6 +107,7 @@
 		#{pcode}
 	</select>
 
+	<!-- 상품 사이즈 검색 -->
 	<select id="selectProductSize" resultType="StockDTO"
 		parameterType="ProductDTO">
 		SELECT distinct(psize)
@@ -116,26 +123,18 @@
 
 	</select>
 
-	<select id="count" resultType="int" parameterType="CategoryDTO">
-		SELECT
-		COUNT(pcode)
-		FROM product
-		WHERE clarge = #{clarge}
-		AND cmedium =
-		#{cmedium}
-		AND csmall = #{csmall}
-	</select>
-
-	<select id="countNoSmall" resultType="int"
+	<select id="countNoLarge" resultType="int"
 		parameterType="CategoryDTO">
 		SELECT
 		COUNT(pcode)
 		FROM product
-		WHERE clarge = #{clarge}
-		AND cmedium = #{cmedium}
+		WHERE clarge LIKE '%'
+		AND
+		cmedium LIKE '%'
 		AND csmall LIKE '%'
 	</select>
 
+	<!-- 상품 카테고리(대) 검색 후 상품 개수 반환 -->
 	<select id="countNoMedium" resultType="int"
 		parameterType="CategoryDTO">
 		SELECT
@@ -146,6 +145,29 @@
 		AND csmall LIKE '%'
 	</select>
 
+	<!-- 상품 카테고리(대,중) 검색 후 상품 개수 반환 -->
+	<select id="countNoSmall" resultType="int"
+		parameterType="CategoryDTO">
+		SELECT
+		COUNT(pcode)
+		FROM product
+		WHERE clarge = #{clarge}
+		AND cmedium = #{cmedium}
+		AND csmall LIKE '%'
+	</select>
+
+	<!-- 상품 카테고리(대,중,소) 검색 후 상품 개수 반환 -->
+	<select id="count" resultType="int" parameterType="CategoryDTO">
+		SELECT
+		COUNT(pcode)
+		FROM product
+		WHERE clarge = #{clarge}
+		AND cmedium =
+		#{cmedium}
+		AND csmall = #{csmall}
+	</select>
+
+	<!-- 상품 브랜드 검색 후 상품 리스트 반환 -->
 	<select id="selectProductsBrand" resultType="ProductDTO"
 		parameterType="HashMap">
       <![CDATA[
@@ -170,16 +192,6 @@
       ]]>
 	</select>
 
-	<select id="countNoLarge" resultType="int"
-		parameterType="CategoryDTO">
-		SELECT
-		COUNT(pcode)
-		FROM product
-		WHERE clarge LIKE '%'
-		AND
-		cmedium LIKE '%'
-		AND csmall LIKE '%'
-	</select>
 
 	<select id="countNoLargeIncludeBrand" resultType="int"
 		parameterType="HashMap">
@@ -194,4 +206,390 @@
 		AND
 		b.bname = #{brand.bname,javaType=String ,jdbcType=VARCHAR}
 	</select>
+
+	<select id="selectProductsBrandDropdown" resultType="ProductDTO"
+		parameterType="HashMap">
+      <![CDATA[
+      SELECT distinct(bname)
+		FROM (
+		        SELECT ROWNUM as rnum, bname
+		        FROM (
+		            SELECT b.bname as bname
+		            FROM product p, brand b
+		            WHERE p.clarge = #{clarge}
+		            AND p.cmedium = #{cmedium}
+		            AND p.csmall = #{csmall}
+		            AND b.bname = p.bname
+		        )
+      )
+      WHERE rnum >= 1
+      ]]>
+	</select>
+
+	<!-- 필터링 처리 시작 -->
+	<!-- 브랜드 상품 카테고리 필터링 -->
+	<select id="filterProductsBrandDropdownLarge"
+		resultType="ProductDTO" parameterType="CategoryDTO">
+		<![CDATA[
+            SELECT distinct(bname)
+            FROM product
+            WHERE clarge = like '%'
+            AND cmedium like '%'
+            AND csmall like '%'
+		]]>
+	</select>
+
+	<!-- 브랜드 상품 카테고리(대) 필터링 -->
+	<select id="filterProductsBrandDropdownMedium"
+		resultType="ProductDTO" parameterType="CategoryDTO">
+		<![CDATA[
+            SELECT distinct(bname)
+            FROM product
+            WHERE clarge = #{clarge}
+            AND cmedium like '%'
+            AND csmall like '%'
+		]]>
+	</select>
+
+	<!-- 브랜드 상품 카테고리(대,중) 필터링 -->
+	<select id="filterProductsBrandDropdownSmall"
+		resultType="ProductDTO" parameterType="CategoryDTO">
+		<![CDATA[
+            SELECT distinct(bname)
+            FROM product
+            WHERE clarge = #{clarge}
+            AND cmedium = #{cmedium}
+            AND csmall like '%'
+		]]>
+	</select>
+
+	<!-- 브랜드 상품 카테고리(대,중,소) 필터링 -->
+	<select id="filterProductsBrandDropdown" resultType="ProductDTO"
+		parameterType="CategoryDTO">
+		<![CDATA[
+            SELECT distinct(bname)
+            FROM product
+            WHERE clarge = #{clarge}
+            AND cmedium = #{cmedium}
+            AND csmall = #{csmall}
+		]]>
+	</select>
+
+	<!-- 색상 상품 카테고리 필터링 -->
+	<select id="filterProductsColorDropdownLarge"
+		resultType="ColorDTO" parameterType="CategoryDTO">
+		<![CDATA[
+			SELECT  distinct(c.colorurl)
+            FROM product p, color c
+            WHERE p.clarge like '%'
+            AND p.cmedium like '%'
+            AND p.csmall like '%'
+            and p.pcode = c.pcode
+            and rownum <= 28
+		]]>
+	</select>
+
+	<!-- 색상 상품 카테고리(대) 필터링 -->
+	<select id="filterProductsColorDropdownMedium"
+		resultType="ColorDTO" parameterType="CategoryDTO">
+		<![CDATA[
+			SELECT  distinct(c.colorurl)
+            FROM product p, color c
+            WHERE p.clarge = #{clarge}
+            AND p.cmedium like '%'
+            AND p.csmall like '%'
+            and p.pcode = c.pcode
+            and rownum <= 28
+		]]>
+	</select>
+
+	<!-- 색상 상품 카테고리(대, 중) 필터링 -->
+	<select id="filterProductsColorDropdownSmall"
+		resultType="ColorDTO" parameterType="CategoryDTO">
+		<![CDATA[
+			SELECT  distinct(c.colorurl)
+            FROM product p, color c
+            WHERE p.clarge = #{clarge}
+            AND p.cmedium = #{cmedium}
+            AND p.csmall like '%'
+            and p.pcode = c.pcode
+            and rownum <= 28
+		]]>
+	</select>
+
+	<!-- 색상 상품 카테고리(대, 중, 소) 필터링 -->
+	<select id="filterProductsColorDropdown" resultType="ColorDTO"
+		parameterType="CategoryDTO">
+		<![CDATA[
+			SELECT  distinct(c.colorurl)
+            FROM product p, color c
+            WHERE p.clarge = #{clarge}
+            AND p.cmedium = #{cmedium}
+            AND p.csmall = #{csmall}
+            and p.pcode = c.pcode
+            and rownum <= 28
+		]]>
+	</select>
+
+	<!-- 브랜드리스트, 색상, 사이즈, 가격, 정렬순 필터링 -->
+	<select id="filterProducts" resultType="ProductDTO"
+		parameterType="HashMap">
+		<![CDATA[
+		SELECT pcode, pno, pregdate, pamount, pprice, pname, rnum,
+			bname, clarge, cmedium, csmall, pcolor
+		FROM (
+		        SELECT pcode, pno, pregdate, pamount, pprice, pname, ROWNUM as rnum, 
+					bname, clarge, cmedium, csmall, pcolor
+		        FROM (
+		             SELECT p.pcode as pcode, p.pno as pno, p.pregdate as pregdate, s.pamount as pamount, p.pprice as pprice, p.pname as pname,
+		                b.bname as bname, p.clarge as clarge, p.cmedium as cmedium, p.csmall as csmall,
+                        c.pcolor as pcolor, s.psize as psize,
+                        ROW_NUMBER() OVER(PARTITION BY p.pcode ORDER BY p.pno DESC) AS rn
+		            FROM product p, brand b, color c, stock s
+		            WHERE p.pcode = c.pcode
+                    AND c.pcodecolor = s.pcolor
+                    AND c.pcode = s.pcode
+		            AND p.clarge = #{category.clarge}
+		            AND p.cmedium = #{category.cmedium}
+		            AND p.csmall = #{category.csmall}
+		            AND b.bname = p.bname
+		            
+		            ]]>
+		<!-- 브랜드 필터링 -->
+		<choose>
+			<when test="brands.size != 0">
+				AND p.bname in
+				<foreach collection="brands" item="item" index="index"
+					separator="," open="(" close=")">
+					#{item}
+				</foreach>
+			</when>
+			<otherwise>
+				AND p.bname in (select bb.bname from brand bb)
+			</otherwise>
+		</choose>
+		<!-- 색상 필터링 -->
+		<choose>
+			<when test='color.pcolor == "empty"'>
+				AND c.pcolor like '%'
+			</when>
+			<otherwise>
+				AND c.pcolor = #{color.pcolor}
+			</otherwise>
+		</choose>
+		<!-- 사이즈 필터링 -->
+		<choose>
+			<when test='stock.psize == "XXXS"'>
+				AND s.psize = 'XXXS'
+			</when>
+			<when test='stock.psize == "XXS"'>
+				AND s.psize = 'XXS'
+			</when>
+			<when test='stock.psize == "XS"'>
+				AND s.psize = 'XS'
+			</when>
+			<when test='stock.psize == "S"'>
+				AND s.psize = 'S'
+			</when>
+			<when test='stock.psize == "M"'>
+				AND s.psize = 'M
+			</when>
+			<when test='stock.psize == "L"'>
+				AND s.psize = 'L'
+			</when>
+			<when test='stock.psize == "XL"'>
+				AND s.psize = 'XL'
+			</when>
+			<when test='stock.psize == "XXL"'>
+				AND s.psize = 'XXL'
+			</when>
+			<when test='stock.psize == "XXXL"'>
+				AND s.psize = 'XXXL'
+			</when>
+			<when test='stock.psize == "XXXXL"'>
+				AND s.psize = 'XXXXL'
+			</when>
+			<when test='stock.psize == "FREE"'>
+				AND s.psize like '%F'
+			</when>
+			<when test='stock.psize == "ETC"'>
+				AND s.psize = 'ETC'
+			</when>
+			<otherwise>
+				AND s.psize like '%'
+			</otherwise>
+		</choose>
+		<!-- 가격 필터링 -->
+		<choose>
+			<when test="product.pprice == 0">
+			            	<![CDATA[AND p.pprice > 0 and p.pprice < 100000]]>
+			</when>
+			<when test="product.pprice == 100000">
+			            	<![CDATA[AND p.pprice >= 100000 and p.pprice < 300000]]>
+			</when>
+			<when test="product.pprice == 300000">
+			            	<![CDATA[AND p.pprice >= 300000 and p.pprice < 500000]]>
+			</when>
+			<when test="product.pprice == 500000">
+			            	<![CDATA[AND p.pprice >= 500000 and p.pprice < 1000000]]>
+			</when>
+			<when test="product.pprice == 1000000">
+			            	<![CDATA[AND p.pprice  >= 1000000]]>
+			</when>
+			<otherwise>
+			        		<![CDATA[AND p.pprice >= 0]]>
+			</otherwise>
+		</choose>
+					<![CDATA[
+					and p.pno = (select max(pp.pno) from product pp where pp.pno = p.pno)
+		        )
+		        WHERE ROWNUM <= #{page.endRowNo}
+		        and rn = 1
+		)
+		WHERE rnum >= #{page.startRowNo}
+		]]>
+		<choose>
+			<!-- 신상품 필터링 -->
+			<when test="orderby == 1">
+				order by pregdate desc
+			</when>
+			<!-- 판매순 필터링 -->
+			<when test="orderby == 2">
+				order by pamount asc
+			</when>
+			<!-- 고가순 필터링 -->
+			<when test="orderby == 3">
+				order by pprice desc
+			</when>
+			<!-- 저가순 필터링 -->
+			<when test="orderby == 4">
+				order by pprice asc
+			</when>
+			<!-- 이름순 필터링 -->
+			<when test="orderby == 5">
+				order by pname asc
+			</when>
+			<!-- 이름순 필터링 -->
+			<when test="orderby == 5">
+				order by pname asc
+			</when>
+			<otherwise>
+				order by pregdate desc
+			</otherwise>
+		</choose>
+	</select>
+
+	<select id="selectProductsPrice" resultType="ProductDTO"
+		parameterType="HashMap">
+		<![CDATA[
+		SELECT rnum, pno, pcode, pname, pprice,
+			bname, clarge, cmedium, csmall
+		FROM (
+		        SELECT ROWNUM as rnum, pno, pcode, pname, pprice, 
+					bname, clarge, cmedium, csmall
+		        FROM (
+		            SELECT p.pno as pno, p.pcode as pcode, p.pname as pname, p.pprice as pprice,
+		                b.bname as bname, p.clarge as clarge, p.cmedium as cmedium, p.csmall as csmall
+		            FROM product p, brand b
+		            WHERE p.clarge = #{category.clarge}
+		            AND p.cmedium = #{category.cmedium}
+		            AND p.csmall = #{category.csmall}
+		            AND b.bname = p.bname
+		            ]]>
+		<!-- 가격 필터링 -->
+		<choose>
+			<when test="product.pprice == 0">
+			            	<![CDATA[AND p.pprice > 0 and p.pprice < 100000]]>
+			</when>
+			<when test="product.pprice == 100000">
+			            	<![CDATA[AND p.pprice >= 100000 and p.pprice < 300000]]>
+			</when>
+			<when test="product.pprice == 300000">
+			            	<![CDATA[AND p.pprice >= 300000 and p.pprice < 500000]]>
+			</when>
+			<when test="product.pprice == 500000">
+			            	<![CDATA[AND p.pprice >= 500000 and p.pprice < 1000000]]>
+			</when>
+			<when test="product.pprice == 1000000">
+			            	<![CDATA[AND p.pprice  >= 1000000]]>
+			</when>
+			<otherwise>
+			        		<![CDATA[AND p.pprice >= 0]]>
+			</otherwise>
+		</choose>
+		            <![CDATA[
+		        )
+		        WHERE ROWNUM <= #{page.endRowNo}
+		)
+		WHERE rnum >= #{page.startRowNo}
+		]]>
+		<choose>
+			<!-- 신상품 필터링 -->
+			<when test="orderby == 1">
+				order by pregdate desc
+			</when>
+			<!-- 판매순 필터링 -->
+			<when test="orderby == 2">
+				order by pamount asc
+			</when>
+			<!-- 고가순 필터링 -->
+			<when test="orderby == 3">
+				order by pprice desc
+			</when>
+			<!-- 저가순 필터링 -->
+			<when test="orderby == 4">
+				order by pprice asc
+			</when>
+			<!-- 이름순 필터링 -->
+			<when test="orderby == 5">
+				order by pname desc
+			</when>
+		</choose>
+	</select>
+	
+	<select id="selectProductsColor" resultType="ColorDTO"
+		parameterType="HashMap">
+		<![CDATA[
+		SELECT rnum, pcode, pcolor
+		FROM (
+		        SELECT ROWNUM as rnum, pcode, pcolor
+		        FROM (
+		            SELECT c.pcode as pcode, c.pcolor as pcolor
+		            FROM product p, brand b, color c
+		            WHERE p.pcode = c.pcode
+		            AND p.clarge = #{category.clarge}
+		            AND p.cmedium = #{category.cmedium}
+		            AND p.csmall = #{category.csmall}
+		            AND b.bname = p.bname
+		            ]]>
+		<!-- 브랜드 필터링 -->
+		<choose>
+			<when test="brands.size != 0">
+				AND p.bname in
+				<foreach collection="brands" item="item" index="index"
+					separator="," open="(" close=")">
+					#{item}
+				</foreach>
+			</when>
+			<otherwise>
+				AND p.bname in (select bb.bname from brand bb)
+			</otherwise>
+		</choose>
+		<!-- 색상 필터링 -->
+		<choose>
+			<when test='color.pcolor == "empty"'>
+				AND c.pcolor like '%'
+			</when>
+			<otherwise>
+				AND c.pcolor = #{color.pcolor}
+			</otherwise>
+		</choose>
+		            <![CDATA[
+		        )
+		        WHERE ROWNUM <= #{page.endRowNo}
+		)
+		WHERE rnum >= #{page.startRowNo}
+		]]>
+	</select>
+	<!-- 필터링 처리 끝 -->
 </mapper>

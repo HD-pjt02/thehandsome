@@ -34,9 +34,8 @@
 	content="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko">
 <meta property="og:type" content="product">
 <meta property="og:title" content="[MINE] 캐시미어 더블 재킷">
-<meta property="og:description" content="">
-<meta property="og:image"
-	content="http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_W01.jpg">
+<meta property="og:descriptizfon" content="">
+<meta property="og:image" content="http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_W01.jpg">
 <meta property="product:price:amount" content="1250000">
 <meta property="product:price:currency" content="KRW">
 <!-- 1. recopick START -->
@@ -51,40 +50,20 @@
 <meta property="recopick:author" content="MINE">
 
 <!-- 1. recopick END -->
-<title><!--22.10.19 미림 변경완료 --> ${product.pname} |
-	${product.csmall} | ${product.cmedium} | ${product.clarge} | HANDSOME |
-	더한섬닷컴
-</title>
-<link rel="shortcut icon"
-	href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/font_80.css"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/common.css?20220929"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/layout.css?20220826"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/popup.css?20210225"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css"
-	media="all">
+<!--22.10.19 미림 변경완료 -->
+<title>
+	${product.pname} | ${product.csmall} | ${product.cmedium} | ${product.clarge} | HANDSOME | 더한섬닷컴</title>
+<link rel="shortcut icon" href="http://cdn.thehandsome.com/_ui/desktop/common/images/common/thehandsome_ic_16x16.ico">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/font_80.css" media="all">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/common.css?20220929" media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/layout.css?20220826" media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/popup.css?20210225" media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/jquery-ui.min.css" media="all">
 
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/brand.css"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/footer.css?20220406"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/contents1e5d.css?20220907"
-	media="all">
-<link rel="stylesheet" type="text/css"
-	href="${pageContext.request.contextPath}/resources/css/swiper.min.css"
-	media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/brand.css" media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/footer.css?20220406" media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/contents1e5d.css?20220907" media="all">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/swiper.min.css" media="all">
 <style type="text/css" media="print">
 @IMPORT
 	url("${pageContext.request.contextPath}/resources/blueprint/print.css")
@@ -10783,22 +10762,21 @@ function sendGroobee(){
 
 //]]>
 </script>
+<!-- 이 위에 날려버리기 -->
+    <div id="globalMessages">
+        </div>
+    <div id="bodyWrap" class="item_detail" style="">
+        <div id="oneEventLayer"></div>
 
-	<div id="globalMessages"></div>
-	<div id="bodyWrap" class="item_detail" style="">
-		<div id="oneEventLayer"></div>
-
-		<div class="adaptive_wrap">
-			<div class="clearfix prd_detail1905" id="clearfix">
-				<div class="clearfix image_view3">
-					<a href="javascript:imageZoom()" id="btn_zoom" class="btn_zoom"
-						onclick="GA_Event('상품_상세','크게보기','클릭')">크게보기</a>
-					<!-- 버튼 클릭시 item_visual 에 zoom 클래스 추가 -->
-					<!-- 2021.08.18 동영상 재생 수정, 상품 imageDivisionCode에 VOD가 있는 경우 동영상 url 세팅 -->
-					<div class="image_view1" id="image_view1">
-						<div class="item_visual" id="imageDiv" style="margin-top: 20px;">
-							<ul>
-								<!--
+        <div class="adaptive_wrap">
+            <div class="clearfix prd_detail1905" id="clearfix">
+		<div class="clearfix image_view3">
+	<a href="javascript:imageZoom()" id="btn_zoom" class="btn_zoom" onclick="GA_Event('상품_상세','크게보기','클릭')">크게보기</a><!-- 버튼 클릭시 item_visual 에 zoom 클래스 추가 -->
+	<!-- 2021.08.18 동영상 재생 수정, 상품 imageDivisionCode에 VOD가 있는 경우 동영상 url 세팅 -->
+	<div class="image_view1" id="image_view1">
+		<div class="item_visual" id="imageDiv" style="margin-top: 20px;">
+			<ul>
+				<!--
 							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
 							-->
 

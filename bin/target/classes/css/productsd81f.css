@@ -1098,7 +1098,7 @@ body.gate_body{ width:100%; height:100%; background:url('../../../../../cdn.theh
 .color_chip > li > a.no_color.on:after{content: ""; display: block; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px; background:none; background-color: #000; top:auto;}
 
 .items_list li .item_box .color_more_wrap a:hover{border:0; width: 15px; height: 16px;}
-.items_list li .item_box .color_more_wrap .wt:hover{border: 1px solid #dcdcdc; width: 13px; height: 14px;}
+.items_list li .item_box .color_more_wrap .wt:hover{padding: 3px border: 1px solid #dcdcdc; width: 13px; height: 14px;}
 .items_list li .item_box .color_more_wrap a:hover:after{content:""; display:block; position: absolute; bottom:-5px; left:0; width:100%; height:2px; background-color:#000;}
 /* 아울렛가격표기 변경 - 할인율 추가 20201029 */
 .items_list li .item_box .item_info2 .price .ou_price{color:#222; font-size:12px;}

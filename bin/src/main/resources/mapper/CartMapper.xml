@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.thehandsome.app.mapper.CartMapper">
+  	<!-- 카트 추가 -->
+	<insert id="addCart">
+	
+		insert into cart(cartid, pcount, mno, pcode)
+		values(cart_seq.nextval, #{pcount}, #{mno}, #{pcode}) 
+	
+	</insert>
+	
+	
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+	
+		delete from cart where cartid = #{cartid}
+	
+	</delete>
+	
+	<!-- 카트 수량 수정 -->
+	<update id="modifyCount">
+	
+		update cart set pcount=#{pcount} where cartid = #{cartid}
+	
+	</update>
+	
+	
+	<!-- 카트 목록 -->
+	<select id="getCart" resultType="CartDTO">
+	
+select o.frontimg1
+     , b.bname
+     , p.pname
+     , o.pcolor
+     , s.psize
+  from cart c
+     , member m
+     , product p
+     , color o
+     , brand b
+     , stock s
+     
+ where c.mno = m.mno            
+   and c.pcode = p.pcode        
+   and p.bname = b.bname        
+   and p.pcode = o.pcode        
+   and o.pcode = s.pcode
+   and m.mno = #{mno}
+	
+	</select>
+	
+	<!-- 카트 확인 -->
+	<select id="checkCart" resultType="CartDTO">
+	
+		select * from cart 
+		where mno = #{mno} and pcode = #{pcode}
+	
+	</select>
+  </mapper>
