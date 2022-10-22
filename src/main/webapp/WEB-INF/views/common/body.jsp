@@ -3450,37 +3450,7 @@
 		<!-- new & best -->
 	</div>
 	<!-- //main_container-->
-	<!-- video_main_wrap-->
-	<div class="video_main_wrap">
-		<h4 class="tit">
-			<spring:theme code="main.video.title" />
-		</h4>
-		<div class="video_area1903" id="videoDiv1903">
-			<a href="javascript:void(0);"
-				onclick="GA_main('exhibitionVideo',$(this));">
-				<div class="video_main" style="display: block;">
-					<span class="play_btn"></span> <img
-						src="resources/medias/D-7th-03.jpg?context=bWFzdGVyfGltYWdlc3wxMDk0NjF8aW1hZ2UvanBlZ3xpbWFnZXMvaGQxL2hhNS85MzM3NjQxNzYyODQ2LmpwZ3w2OWZmMTU1MmYxMGI2MGFkYjk2MGRmOGI4NDA0ZWE0NGYxYTQ2NzhjMGJiMDRjOTg5MzVhODJkOTA2YzIyMmNh"
-						alt="poster">
-				</div> <video id="video" class="video-js" controls="auto" preload="auto"
-					style="display: none; width: 884px; height: auto;"
-					onended="videoEnded('videoDiv1903',0)" width="884" height="auto">
-					<source
-						src="http://s3.ap-northeast-2.amazonaws.com/cdn.thehandsome.com-kr/pc/0_main_video/221005_tvc/2022%20tvc.mp4"
-						type="video/mp4">
-				</video>
-			</a>
-		</div>
-		<div class="txt">
-			<p class="tit">
-				Some Moments <br> 배우 김고은 X 더한섬닷컴
-			</p>
-			<p class="s_t">
-				한 순간을 살아도 섬세하게 <br> 2022 새로운 브랜딩 캠페인을 만나보세요.
-			</p>
-		</div>
-	</div>
-	<!--// video_main_wrap-->
+	
 	<!-- main_container-->
 	<div class="main_container">
 		<!-- the_magazine_wrap1903-->

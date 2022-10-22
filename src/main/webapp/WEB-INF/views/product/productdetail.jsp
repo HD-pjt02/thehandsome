@@ -2549,13 +2549,13 @@ function buynow(check4pmOver)
     }
     
 }
-
+<!--미림 좋아요기능-->
 function addWishList(){
     
     var productCode = $("#productCode").val();
     
     $.ajax({
-         url: '/ko/wishlist/add-product-action',
+         url: '/wishlist/add-product-action',
          type: "GET",            
          data: {productCode: productCode
                 ,type:'toggle'},
