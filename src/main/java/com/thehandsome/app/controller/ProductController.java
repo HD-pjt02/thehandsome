@@ -1,5 +1,6 @@
 package com.thehandsome.app.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,7 +11,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +26,6 @@ import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
 import com.thehandsome.app.service.ProductService;
 
-import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j;
 
 /* 
@@ -49,7 +48,7 @@ public class ProductController {
 	@GetMapping("/brandproductlist")
 	public String brandproductList(@RequestParam(defaultValue = "1") int pageNo, String bname, Model model,
 			HttpSession session) {
-		logger.info("brandproductlist 실행");
+		System.out.println("brandproductlist 실행");
 
 		String clarge = "none";
 		String cmedium = "none";
@@ -64,7 +63,7 @@ public class ProductController {
 
 		session.setAttribute("totalRows", totalRows);
 
-		PageDTO page = new PageDTO(12, 5, totalRows, pageNo);
+		PageDTO page = new PageDTO(12, 10, totalRows, pageNo);
 
 		model.addAttribute("page", page);
 
@@ -75,12 +74,14 @@ public class ProductController {
 	@ResponseBody
 	public String getBrandProductList(@RequestParam(defaultValue = "1") int pageNo, String bname, Model model,
 			HttpSession session) {
-
+		System.out.println("getBrandProductList 실행");
 		String clarge = "none";
 		String cmedium = "none";
 		String csmall = "none";
+		
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 		BrandDTO brand = new BrandDTO(bname);
+		
 		model.addAttribute("category", category);
 		model.addAttribute("brand", brand);
 
@@ -121,7 +122,7 @@ public class ProductController {
 	@GetMapping("/productlist")
 	public String productList(@RequestParam(defaultValue = "1") int pageNo, String clarge, String cmedium,
 			String csmall, Model model, HttpSession session) {
-		logger.info("productlist 실행");
+		System.out.println("productlist 실행");
 
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 
@@ -130,17 +131,85 @@ public class ProductController {
 		int totalRows = productService.getTotalProductNum(category);
 		session.setAttribute("totalRows", totalRows);
 
-		PageDTO page = new PageDTO(12, 5, totalRows, pageNo);
+		PageDTO page = new PageDTO(12, 10, totalRows, pageNo);
 
 		model.addAttribute("page", page);
 
 		return "product/productlist";
+	}
+	
+	/* 대,중,소분류, 브랜드리스트, 색상, 정렬순, 가격, 사이즈로 필터링*/
+	@GetMapping(value="/getFilterList", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public String productFilterList(@RequestParam(defaultValue = "1") int pageNo, String clarge, String cmedium,
+			String csmall, String[] brandList, String pcolor, String orderby, String pprice, String psize, Model model, HttpSession session) {
+		System.out.println("productFilterList 실행");
+
+		/* 대,중,소분류 카테고리*/
+		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
+		model.addAttribute("category", category);
+
+		int totalRows = Integer.parseInt(session.getAttribute("totalRows").toString());
+
+		PageDTO page = new PageDTO(12, 5, totalRows, pageNo);
+		model.addAttribute("page", page);
+		
+		/* 색상 필터링*/
+		ColorDTO color = new ColorDTO();
+		color.setPcolor(pcolor);
+		
+		/* 사이즈 필터링*/
+		StockDTO stock = new StockDTO();
+		stock.setPsize(psize);
+		
+		/* 가격 필터링*/
+		ProductDTO product = new ProductDTO();
+		product.setPprice(Integer.parseInt(pprice));
+		
+		List<ProductDTO> products = productService.filterProducts(category, page, brandList, color, stock, product, Integer.parseInt(orderby));
+		
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		
+		int count = 0;
+		for (ProductDTO p : products) {
+			count += 1;
+			System.out.println(""+count+" : "+p);
+			JSONObject tmpObject = new JSONObject();
+
+			JSONObject pObject = new JSONObject();
+			pObject.put("pcode", p.getPcode());
+			pObject.put("pname", p.getPname());
+			pObject.put("pprice", p.getPprice());
+			pObject.put("bname", p.getBname());
+			
+			List<StockDTO> st = productService.getProductSize(p);
+			ArrayList<String> arrList = new ArrayList<String>();
+			for(StockDTO s: st) {
+				arrList.add(s.getPsize());
+			}
+			pObject.put("size", arrList);
+
+			tmpObject.put("product", pObject);
+
+			List<ColorDTO> colors = productService.getProductColor(p);
+			tmpObject.put("colors", colors);
+			tmpObject.put("state", 0);
+			jsonArray.put(tmpObject);
+		}
+
+		jsonObject.put("products", jsonArray);
+		jsonObject.put("result", "success");
+		String json = jsonObject.toString();
+		System.out.println("데이터 생성 완료");
+		return json;
 	}
 
 	@GetMapping(value = "/getProductList", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String getProductList(@RequestParam(defaultValue = "1") int pageNo, String clarge, String cmedium,
 			String csmall, Model model, HttpSession session) {
+		System.out.println("getProductlist 실행");
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 		model.addAttribute("category", category);
 
@@ -151,11 +220,14 @@ public class ProductController {
 		BrandDTO brand = new BrandDTO();
 
 		List<ProductDTO> products = productService.getProducts(brand, category, page);
-
+		
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
-
+		
+		int count = 0;
 		for (ProductDTO p : products) {
+			count += 1;
+			System.out.println(""+count+" : "+p);
 			JSONObject tmpObject = new JSONObject();
 
 			JSONObject pObject = new JSONObject();
@@ -163,6 +235,13 @@ public class ProductController {
 			pObject.put("pname", p.getPname());
 			pObject.put("pprice", p.getPprice());
 			pObject.put("bname", p.getBname());
+			
+			List<StockDTO> stock = productService.getProductSize(p);
+			ArrayList<String> arrList = new ArrayList<String>();
+			for(StockDTO s: stock) {
+				arrList.add(s.getPsize());
+			}
+			pObject.put("size", arrList);
 
 			tmpObject.put("product", pObject);
 
@@ -176,6 +255,60 @@ public class ProductController {
 		jsonObject.put("result", "success");
 		String json = jsonObject.toString();
 
+		return json;
+	}
+	
+	/* 필터링을 위한 brand 리스트 가져오기*/
+	@GetMapping(value = "/filterProductBrandList", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public String filterProductsBrandDropdown(@RequestParam(defaultValue = "1") String clarge, String cmedium,
+			String csmall, Model model, HttpSession session) {
+		System.out.println("filterProductBrandList 실행");
+		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
+		model.addAttribute("filterBrand", category);
+		
+		List<ProductDTO> result = productService.filterProductsBrand(category);
+		//System.out.println(result);
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		
+		for (ProductDTO r : result) {
+			JSONObject bObject = new JSONObject();
+			bObject.put("bname", r.getBname());
+			
+			jsonArray.put(bObject);
+		}
+		
+		jsonObject.put("brands", jsonArray);
+		String json = jsonObject.toString();
+		
+		return json;
+	}
+	
+	/* 필터링을 위한 color 리스트 가져오기*/
+	@GetMapping(value = "/filterProductColorList", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public String filterProductsColorDropdown(@RequestParam(defaultValue = "1") String clarge, String cmedium,
+			String csmall, Model model, HttpSession session) {
+		System.out.println("filterProductColorList 실행");
+		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
+		model.addAttribute("filterColor", category);
+		
+		List<ColorDTO> result = productService.filterProductsColor(category);
+		System.out.println(result);
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		
+		for (ColorDTO r : result) {
+			JSONObject cObject = new JSONObject();
+			cObject.put("colorurl", r.getColorurl());
+			
+			jsonArray.put(cObject);
+		}
+		
+		jsonObject.put("colors", jsonArray);
+		String json = jsonObject.toString();
+		
 		return json;
 	}
 
@@ -240,6 +373,7 @@ public class ProductController {
 	@RequestMapping(value = "/getProductStock", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String getProductStock(String pcode, String color, String size, Model model) {
+		logger.info("getProductStock 실행");
 		String scode = pcode + "_" + color + "_" + size;
 
 		JSONObject jsonObject = new JSONObject();
@@ -256,14 +390,5 @@ public class ProductController {
 
 		return json;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
