@@ -56,7 +56,7 @@ _amt = _RP('1250000',1);
 
 _A_amt=Array('1250000'); 
 _A_nl=Array('1'); 
-_A_pl=Array('MN2C8WJC026WP_CM'); 
+_A_pl=Array('${productCode}'); 
 _A_pn=Array('캐시미어 더블 재킷'); 
 _A_ct=Array('BR02'); </script>
 	<!-- AceCounter eCommerce (Product_detail) v6.4 Start -->
@@ -84,13 +84,13 @@ try{
 		collect: {},
 		conversion: { product: [] }
 	};
-	ENP_VAR.collect.productCode = 'MN2C8WJC026WP_CM';
+	ENP_VAR.collect.productCode = '${productCode}';
 	ENP_VAR.collect.productName = '캐시미어 더블 재킷';
 	ENP_VAR.collect.price = '1250000';
 	ENP_VAR.collect.dcPrice = '1250000';
 	ENP_VAR.collect.soldOut = 'N';
 	
-    ENP_VAR.collect.imageUrl = 'http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg';
+    ENP_VAR.collect.imageUrl = 'http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg';
 	    
 	ENP_VAR.collect.topCategory = '여성';
 	ENP_VAR.collect.firstSubCategory = '여성';
@@ -99,14 +99,14 @@ try{
 	
 	/* 간편 결제 시스템을 통한 전환.*/
 	ENP_VAR.conversion.product.push({
-		productCode : 'MN2C8WJC026WP_CM',
+		productCode : '${productCode}',
 		productName : '캐시미어 더블 재킷',
 		price : '1250000',
 		dcPrice : '1250000',
 		qty : '1',
 		soldOut : 'N',
 		
-		imageUrl : 'http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg',
+		imageUrl : 'http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg',
 		    
 		topCategory : '여성',
 		firstSubCategory : '여성',
@@ -145,7 +145,7 @@ $(document).ready(function(){
     // start of Facebook Pixel Code
     if('ko' != 'zh'){
         window._fbq.push (['track', 'ViewContent',{'value':$("#productPrice").val(),'currency':'KRW', content_type: 'product',
-            content_ids: 'MN2C8WJC026WP'}]);
+            content_ids: '${product.pcode}'}]);
     }
     // end of Facebook Pixel Code
     
@@ -168,7 +168,7 @@ $(document).ready(function(){
     
     
     
-    var testerChkCode = "MN2C8WJC026WP_CM";
+    var testerChkCode = "${productCode}";
     if(testerChkCode.indexOf("_") > -1) {
         testerChkCode = testerChkCode.split("_")[0];
     }
@@ -512,7 +512,7 @@ $(document).ready(function(){
             
             var imgSrc = "";
             
-                imgSrc = "http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg";
+                imgSrc = "http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg";
                 
             
             $("#reviewProducImg").attr('src',imgSrc);
@@ -1241,7 +1241,7 @@ function testerReviewListMore(){//체험단 상품평 더보기
                 if(!$(this).parents('.evaluation_view').find('.review_img_cont191216').children('div').hasClass('bx-wrapper')){
                     testerReviewImg(idx191216);
                 }else { // 체험단만 (bxslider 2중으로 먹는경우가 있어서 초기화 로직추가)
-                    var testerChkCode = "MN2C8WJC026WP_CM";
+                    var testerChkCode = "${productCode}";
                     if(testerChkCode.indexOf("_") > -1) {
                         testerChkCode = testerChkCode.split("_")[0];
                     }
@@ -1663,20 +1663,22 @@ function qnawWriteCheck()
 }
 
 //2018.01.16 로그인 팝업
+//신미림 로그인 URL 경로 수정
 function goLoginPopup(pageType){    
     
-    var url = '/ko/member/login';    
+    var url = '/member/login';    
     var param = "?returnType="+pageType+"&loginType=loginPop&productCode="+ $("#productCode").val();
     
     centerPopup(url+param, 'LoginPopup', '520', '709' );
 }
-
+//신미림 로그인 URL 경로 수정
 function goLogin(pageType){
-    
-    var url = '/ko/p';
+	var url = '/member/login';
+    /* var url = '/ko/p';
     url += "/"+$("#productCode").val()+"/login";
     var param = "?returnType="+pageType;
-    window.location.href=url+param;
+    window.location.href=url+param;*/
+    window.location.href=url;
 }
 var intervalId = -1;
 function bodyReSize(){
@@ -2549,16 +2551,21 @@ function buynow(check4pmOver)
     }
     
 }
-<!--미림 좋아요기능-->
+/* <!--미림 좋아요 기능 --> */
 function addWishList(){
     
     var productCode = $("#productCode").val();
+    var wishOn = "N"; 
+    if($('.wishlist1803').hasClass('on')){
+    	wishOn = "Y";
+    }
     
     $.ajax({
          url: '/wishlist/add-product-action',
          type: "GET",            
          data: {productCode: productCode
-                ,type:'toggle'},
+                ,type:'toggle'
+                ,wishOn: wishOn},
          success: function(errorMsg){
              
              var wishMessageTimer = false;
@@ -2614,15 +2621,16 @@ function addWishList(){
 
 function addWishListClick()
 {   
-    
-    
-        var lc = new layerConfirm("로그인 하시겠습니까?", "확인", "취소");
+    if(loginYn != "Y"){
+		var lc = new layerConfirm("로그인 하시겠습니까?", "확인", "취소");
         
         lc.confirmAction = function(){
             $(".btn_close").trigger("click");
             goLogin("wishList");    
         };
         return;
+    }
+        
     
     
     // start of Facebook Pixel Code
@@ -2783,7 +2791,8 @@ function fn_detailProductAjax(productCode){
     $(".reserveSaleSize").hide();
 
     $.ajax({
-         url: '/ko/p/productDetailAjax.json',
+         url: '/product/productDetailAjax',
+         //url: '/ko/p/productDetailAjax.json',
          type: "GET",
          //dataType:"json",
          async:false,
@@ -2791,6 +2800,7 @@ function fn_detailProductAjax(productCode){
          data: {code: productCode},
          success: function(data){
             // START OF 4PM,ATHOME,QUICK SIDE VALUE SAVE
+            //미림 여기
             var tempFourpmValue = "";
             var tempAthomeValue = "";
             var tempPickupValue = "";
@@ -2842,9 +2852,15 @@ function fn_detailProductAjax(productCode){
                 clearTimeout(toastPopupPreOrderStop);
             } */
             var description = $(".info_sect .item_txt").html();
+            //미림 테스트 
             //$("#clearfix").html(data);
+            
             $(".product-detail-img").remove();
-            $("#clearfix").replaceWith(data);
+            
+            //미림 테스트
+            //$("#clearfix").replaceWith( $( "#clearfix" ));
+            //$("#clearfix").replaceWith(data));
+            
             // 상품설명 size 단위로 설정안하나, 혹시 셋팅했을시에 방어로직
             if($('form[name=addToCartForm] input[name=productCodeType]').val() == "ApparelSizeVariantProduct"){
                 $(".info_sect .item_txt").html(description);
@@ -4448,7 +4464,7 @@ function modifyReview(reviewPk, color, colorName, size, orderNumber, purchasePro
             
             var imgSrc = "";
             
-                imgSrc = "http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg";
+                imgSrc = "http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg";
                 
             
             $("#reviewProducImg").attr('src',imgSrc);
@@ -5693,7 +5709,7 @@ function getWarehousingPage(productcode, size) {
     $("#popupProductName").text($("#productName").val());
     $("#popupProductColor").html("COLOR : " + color + "<span class='and_line'>/</span> SIZE : " + size);
     $("#popupProductSize").val(size);
-    $("#popupProductPrice").text('₩1,250,000');
+    $("#popupProductPrice").text('₩'+${product.pprice});
     if($(".respon_image:eq(0)").attr("src").indexOf("dims") > -1) {
         $("#popupProductImageS01").attr("src", $(".respon_image:eq(0)").attr("src").substring( 0, $(".respon_image:eq(0)").attr("src").lastIndexOf("_")) + "_S01.jpg");
     } else {
@@ -6276,9 +6292,9 @@ function prevImgMove(){
 
 
 function setEcommerceData(action){
-    var baseCode = "MN2C8WJC026WP_CM";
-    if("MN2C8WJC026WP_CM".indexOf("_") > -1) {
-        baseCode = "MN2C8WJC026WP_CM".split("_")[0];
+    var baseCode = "${productCode}";
+    if("${productCode}".indexOf("_") > -1) {
+        baseCode = "${productCode}".split("_")[0];
     }
     
     /* 상품 정상이월세일 */
@@ -6292,7 +6308,7 @@ function setEcommerceData(action){
             'detail': {
                 'products':
                     [{
-                        "id": "MN2C8WJC026WP_CM".indexOf("_") > -1 ? "MN2C8WJC026WP_CM".split("_")[0] : "MN2C8WJC026WP_CM", //상품코드
+                        "id": "${productCode}".indexOf("_") > -1 ? "${productCode}".split("_")[0] : "${productCode}", //상품코드
                         "name": "캐시미어 더블 재킷", //상품명
                         "brand": "MINE", //상품 브랜드
                         "category": decodeURIComponent("WOMEN")+"/"+decodeURIComponent("OUTER")+"/"+decodeURIComponent("JACKET"), //상품 카테고리
@@ -7267,7 +7283,7 @@ function sendGroobee(){
                 prc: "1250000",
                 salePrc: "1250000",
                 status : "판매중", // 품절이거나 상품이 판매상태가 아닐 경우 "SS"
-                img: "http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_S01.jpg",
+                img: "http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg",
                 cat: "WE051",
                 cateNm: "재킷",
                 catL: "WE",
@@ -7475,11 +7491,11 @@ $(document).ready(function() {
    });
     
 
-		stockOnlineStockpile["MN2C8WJC026WP_CM_76"] = "4";
-		warehouseStockpile["MN2C8WJC026WP_CM_76"] = "0";
+		stockOnlineStockpile["${productCode}_76"] = "4";
+		warehouseStockpile["${productCode}_76"] = "0";
 	
-		stockOnlineStockpile["MN2C8WJC026WP_CM_82"] = "3";
-		warehouseStockpile["MN2C8WJC026WP_CM_82"] = "0";
+		stockOnlineStockpile["${productCode}_82"] = "3";
+		warehouseStockpile["${productCode}_82"] = "0";
 	
 	$(".btn_close").on("click", function(){
 		hideProductLayer(); 
@@ -7998,7 +8014,7 @@ function setOneClick(){
 }
 
 function fnSharePin(sUrl){
-	var sImg = "http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg";
+	var sImg = "http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_C01.jpg";
 	var sTxt = "[MINE] 캐시미어 더블 재킷";
 	
 	if(sImg.indexOf("_C01") > 0) {
@@ -8143,7 +8159,7 @@ function addWishListProd(productBaseCode){
          success: function(msg){	 
         	 
 			if(msg !== 'erroor1'){
-				if(productBaseCode === 'MN2C8WJC026WP_CM'){
+				if(productBaseCode === '${productCode}'){
         			$('.wishlist1803').toggleClass('on'); 
         		}
             	$('.' + productBaseCode + 'LIKE').each(function(index, ele){
@@ -8254,8 +8270,8 @@ function testerReviewReset() { //팝업초기화
 							<div class="flag"></div>
 
 							<p class="price">
-								<span>₩${product.pprice}</span> <input type="hidden"
-									id="productPrice" value="${product.pprice}">
+								<span>₩<fmt:formatNumber value="${product.pprice}" pattern='#,###'/></span> <input type="hidden"
+									id="productPrice" value="${product.pprice}"/>
 							</p>
 							<!-- 상품추가설명 -->
 							<p class="selling_point"></p>
@@ -9254,7 +9270,7 @@ $(document).ready(function(){
 								<!-- 	                </div> -->
 								<!-- 	        	</div> -->
 								<!-- 				</div> -->
-								<span id="sumPrice">₩1,250,000</span>
+								<span id="sumPrice">₩<fmt:formatNumber value="${product.pprice}" pattern="#,###" /></span>
 							</div>
 						</div>
 						<!-- st_receipt_wrap -->
@@ -9289,7 +9305,7 @@ $(document).ready(function(){
 						<div class="btnwrap clearfix"
 							style="position: absolute; width: 473px; margin-top: -371.413px; margin-bottom: 371.413px;">
 							<input type="button" value=""
-								class="btn wishlist1803 float_left ml0  "
+								class="btn wishlist1803 float_left ml0  ${wishYn}"
 								onclick="addWishListClick();GA_Event('상품_상세','하단 고정 버튼','좋아요');">
 
 							<div class="toast_popup">
@@ -9308,14 +9324,14 @@ $(document).ready(function(){
 							<!--//190508 추가 -->
 
 							<form id="addToCartForm" name="addToCartForm"
-								action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+								action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}?categoryCode=we051"
 								method="post">
-								<input type="hidden" maxlength="3" size="1" name="qty"
+								<input type="hidden" maxlength="3" size="0" name="qty"
 									class="qty"> <input type="hidden"
-									name="productCodePost" value="MN2C8WJC026WP_CM"> <input
+									name="productCodePost" value="${productCode}"> <input
 									type="hidden" id="productCodeType" name="productCodeType"
-									value="ApparelStyleVariantProduct"> <input
-									type="hidden" id="stockCnt" value="0"> <input
+									value="ApparelSizeVariantProduct"> <input
+									type="hidden" id="stockCnt" value="${pamount}"> <input
 									type="hidden" name="storeId" id="storeId" value=""> <input
 									type="hidden" name="storePickupDate" id="storePickupDate"
 									value=""> <input type="hidden" name="workOrder"
@@ -9620,7 +9636,7 @@ $(document).ready(function(){
 						<div class="float_right">
 							<!-- AddToAny BEGIN -->
 							<div class="a2a_kit a2a_kit_size_32 a2a_default_style"
-								data-a2a-url="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko"
+								data-a2a-url="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}?lang=ko"
 								data-a2a-title="[MINE] 
 					캐시미어 더블 재킷"
 								style="line-height: 32px;">
@@ -9643,11 +9659,11 @@ $(document).ready(function(){
 											<path fill="#FFF"
 												d="M28 8.557a9.913 9.913 0 01-2.828.775 4.93 4.93 0 002.166-2.725 9.738 9.738 0 01-3.13 1.194 4.92 4.92 0 00-3.593-1.55 4.924 4.924 0 00-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 00-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 01-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 004.6 3.42 9.893 9.893 0 01-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 007.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z"></path></svg></span><span
 									class="a2a_label">Twitter</span></a> <a
-									href="javascript:fnSharePin(&quot;http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM&quot;);"
+									href="javascript:fnSharePin(&quot;http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}&quot;);"
 									class="pinterest"
 									onclick="GA_Event('상품_상세','공유_SNS','PRINTEREST');"></a> <input
 									type="hidden" id="url"
-									value="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM">
+									value="http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}">
 								<div style="clear: both;"></div>
 							</div>
 							<script type="text/javascript">
@@ -9656,7 +9672,7 @@ a2a_config.num_services = 10;
 var brandName =	"[" + $('#brandName').val() + "]";
 var productName = $('.name').contents().first().text();
 a2a_config.linkname = brandName + " " + productName;
-a2a_config.linkurl = 'http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?lang=ko';
+a2a_config.linkurl = 'http://www.thehandsome.com/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}?lang=ko';
 a2a_config.track_links = 'googl';
 </script>
 							<script type="text/javascript"
@@ -10267,7 +10283,7 @@ function onMouseOutRecommend() {
 		</div>
 		<div class="pop_cnt evaluation_write1905 options1811">
 			<form id="reviewForm" name="reviewForm"
-				action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+				action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}?categoryCode=we051"
 				method="post" enctype="multipart/form-data">
 				<input type="hidden" name="productCode"> <input
 					type="hidden" name="pcode" value="${product.pcode}"> <input
@@ -10343,11 +10359,11 @@ function onMouseOutRecommend() {
 																</p>
 																<ul class="color_chip clearfix">
 																	<input type="hidden" id="colorName" value="CAMEL">
-																	<li id="MN2C8WJC026WP_CM"><input type="hidden"
+																	<li id="${productCode}"><input type="hidden"
 																		class="colorNameVal" value="CAMEL"> <a
 																		href="#;" class="beige" data-color="CAMEL"
-																		style="background: #a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg/dims/resize/24x24');"
-																		onclick="javascript:fn_clickColorCode('MN2C8WJC026WP_CM', 'CAMEL');"
+																		style="background: #a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_C01.jpg/dims/resize/24x24');"
+																		onclick="javascript:fn_clickColorCode('${productCode}', 'CAMEL');"
 																		onmouseover="setColorName('CAMEL');"
 																		onmouseout="setColorName('');"></a></li>
 																	<li><span class="cl_name" id="colorNameContent"></span>
@@ -10360,13 +10376,15 @@ function onMouseOutRecommend() {
 																	<!-- 사이즈 -->
 																</p>
 																<ul class="size_chip clearfix" id="review_size_btn_area">
-																	<li id="MN2C8WJC026WP_CM_76"><a
-																		onclick="javascript:fn_clickSizeCode('MN2C8WJC026WP_CM_76');">76</a>
-																		<productdetails:popupsizequickreference>
-																		</productdetails:popupsizequickreference></li>
-																	<li id="MN2C8WJC026WP_CM_82"><a
-																		onclick="javascript:fn_clickSizeCode('MN2C8WJC026WP_CM_82');">82</a>
-																	</li>
+																<c:forEach var="size" items="${sizes}">
+																		<li id="${size.psize}"><a
+																	href="javascript:fn_clickSizeCode('${size.psize}')"
+																	onclick="GA_Event('상품_상세','사이즈','${size.psize}')">${size.psize}</a>
+																		</li>
+																</c:forEach>
+																	<!--미림 주석처리 
+																	<productdetails:popupsizequickreference>
+																		</productdetails:popupsizequickreference> -->
 																</ul> <!-- <ul class="size_chip clearfix">
                                                             <li id="MN1IBKTO483W_MB_90">
                                                                 <a href="javascript:fn_detailProductAjax('MN1IBKTO483W_MB_90')">90</a>
@@ -10587,7 +10605,7 @@ $(document).ready(function() {
 		</div>
 		<div class="pop_cnt evaluation_write">
 			<form id="productQnAForm" name="productQnAForm"
-				action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/MN2C8WJC026WP_CM?categoryCode=we051"
+				action="/ko/HANDSOME/WOMEN/OUTER/JACKET/%EC%BA%90%EC%8B%9C%EB%AF%B8%EC%96%B4-%EB%8D%94%EB%B8%94-%EC%9E%AC%ED%82%B7/p/${productCode}?categoryCode=we051"
 				method="post" enctype="multipart/form-data">
 				<input type="hidden" id="productCode" name="productCode"> <input
 					type="hidden" id="productQnaCode" name="productQnaCode"> <input
@@ -10962,7 +10980,7 @@ function showOfflineQtyInformation() {
 }
 
 function getOfflineQty() {
-	var pCode, tmpCode = "MN2C8WJC026WP_CM";
+	var pCode, tmpCode = "${productCode}";
 	var infoTxt;
 	
 	if(tmpCode.indexOf("_") > -1) {
@@ -11043,7 +11061,7 @@ function getOfflineQty() {
 							<input type="hidden" id="colorName" value="CAMEL">
 							<li><input type="hidden" class="colorNameVal" value="CAMEL">
 								<a href="#;" class="beige"
-								style="background: #a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/MN2C8WJC026WP_CM_C01.jpg/dims/resize/24x24')"
+								style="background: #a36944 url('http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_C01.jpg/dims/resize/24x24')"
 								data-color-code="CM" data-color-name="CAMEL"
 								onmouseover="setColorNamePop('CAMEL')"
 								onmouseout="setColorNamePop('')"></a></li>

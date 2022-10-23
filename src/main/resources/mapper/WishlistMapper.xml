@@ -4,6 +4,23 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.thehandsome.app.mapper.WishlistMapper">
-
+	
+	<insert id="insertWishProduct" parameterType="WishlistDTO">
+		<![CDATA[
+		insert into wishlist values(#{mid}, #{pid}, #{member_mno})
+		]]>
+	</insert>
+	
+	<delete id="deleteWishProduct" parameterType="WishlistDTO">
+		<![CDATA[
+			delete from wishlist where mid=#{mid} and pid=#{pid}
+		]]>
+	</delete>
+	
+	<select id="selectWishlistYN" parameterType="WishlistDTO" resultType="Long">
+		<![CDATA[
+			select 1 from wishlist where mid=#{mid} and pid=#{pid}
+		]]>
+	</select>
 	
 </mapper>
