@@ -12,4 +12,6 @@ public interface MemberService {
 
 	MemberDTO memberLogin(MemberDTO memberDTO);
 
+	MemberDTO getMember(int parseInt);
+
 }

@@ -2829,7 +2829,7 @@ var loginYn = "<%=loginYn%>";
 								class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
 								<div class="list">
 									<ul>
-										<li><a href="/mypage/myorders"
+										<li><a href="/member/myorders"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_주문조회')"> 주문조회 <!-- 주문조회 -->
 										</a></li>
 										<li><a href="/mypage/myGradeInfo"
@@ -3343,7 +3343,7 @@ var loginYn = "<%=loginYn%>";
 									( <span id="wishlistCount">0</span> )
 							</span>
 						</a></li>
-						<li><a href="/ko/shoppingbag"
+						<li><a href="/member/mycart"
 							onclick="GA_Event('공통','유틸_메뉴','쇼핑백');"> <span
 								class="ico cart">장바구니</span> <span class="count"> ( <span
 									id="cartCount">0</span> )

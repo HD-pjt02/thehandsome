@@ -1,5 +1,6 @@
 package com.thehandsome.app.service;
 
+import java.util.Collection;
 import java.util.List;
 
 import com.thehandsome.app.dto.BrandDTO;
@@ -26,6 +27,14 @@ public interface ReviewService {
 	Long insertPhotoReview(ReviewDTO reviewDTO);
 
 	Long selectNextReviewNo();
+	
+	Long selectAllReviewCount(ReviewDTO reviewDTO);
+
+	Long selectPhotoReviewCount(ReviewDTO reviewDTO);
+
+	Long selectTextReviewCount(ReviewDTO reviewDTO);
+
+	Long selectoReviewRateAvg(ReviewDTO reviewDTO);
 	
 	
 	

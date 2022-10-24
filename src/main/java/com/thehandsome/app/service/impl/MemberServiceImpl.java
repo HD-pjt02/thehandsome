@@ -18,7 +18,6 @@ import com.thehandsome.app.service.MemberService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
 @Component
 public class MemberServiceImpl implements MemberService{
@@ -143,6 +142,14 @@ public class MemberServiceImpl implements MemberService{
 	public MemberDTO memberLogin(MemberDTO memberDTO) {
 		return memberMapper.memberLogin(memberDTO);
 	}
+
+	@Override
+	public MemberDTO getMember(int parseInt) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	
 	/*이메일 인증 끝*/
 
