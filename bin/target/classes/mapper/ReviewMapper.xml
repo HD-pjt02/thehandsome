@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.thehandsome.app.mapper.ReviewMapper">
+	<select id="getReviewList" resultType="ReviewDTO"
+		parameterType="ReviewDTO">
+		<![CDATA[
+		SELECT * FROM REVIEW
+		WHERE PCODECOLOR = #{pcodecolor}
+		AND REVIEWTYPE LIKE NVL(#{reviewtype},'%')
+		]]>
+	</select>
+	
+	<select id="getColorProduct" resultType="ReviewDTO"
+		parameterType="ReviewDTO">
+		<![CDATA[
+		SELECT T2.BNAME,T1.COLORURL,T2.PNAME,T2.PPRICE FROM COLOR T1
+        JOIN PRODUCT T2 ON T1.PCODE = T2.PCODE
+        WHERE T1.PCODECOLOR = #{pcodecolor}
+
+		]]>
+	</select>
+	
+	<insert id="insertReview" parameterType="ReviewDTO">
+		<![CDATA[
+		insert into review values(review_seq.nextVal,#{mid},#{pcode},#{pcodecolor},sysdate,#{rrate},#{rcontent},#{rimg},#{product_pcode},#{product_pno},#{reviewtype})
+		]]>
+	</insert>
+	
+	<insert id="insertPhotoReview" parameterType="ReviewDTO">
+		<![CDATA[
+		insert into review values(review_seq.nextVal,#{mid},#{pcode},#{pcodecolor},sysdate,#{rrate},#{rcontent},#{rimg},#{product_pcode},#{product_pno},#{reviewtype})
+		]]>
+	</insert>
+	
+</mapper>

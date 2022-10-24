@@ -43,26 +43,26 @@
         </div>
 
         <div class="customerform">
-          <form class="inqrForm" id="inquiry_insert" method="post" name="formm">
+          <form class="inqrForm" id="inquiry_insert" method="post" name="formm" enctype="multipart/form-data">
             <div class="form-filter">
               <p>문의 분야</p>
-              <select name="qCategory" title="문의선택" class="select_small" id="inquiry1">
-                <option value="event">행사/이벤트</option>
-                <option value="coupon">쿠폰/혜택문의</option>
-                <option value="orderdelete">주문/확인취소</option>
-                <option value="wedding">웨딩 프로모션</option>
-                <option value="onelinerepair">온라인수선</option>
-                <option value="offlineinquiry">오프라인 문의</option>
-                <option value="oerainquiry">오에라 문의</option>
-                <option value="productinquiry">상품문의</option>
-                <option value="shppingrelated">배송관련</option>
+              <select name="qcategory" title="문의선택" class="select_small" id="inquiry1">
+                <option value="행사/이벤트">행사/이벤트</option>
+                <option value="쿠폰/혜택문의">쿠폰/혜택문의</option>
+                <option value="주문/확인취소">주문/확인취소</option>
+                <option value="웨딩 프로모션">웨딩 프로모션</option>
+                <option value="온라인수선">온라인수선</option>
+                <option value="오프라인 문의">오프라인 문의</option>
+                <option value="오에라 문의">오에라 문의</option>
+                <option value="상품문의">상품문의</option>
+                <option value="배송관련">배송관련</option>
               </select>
             </div>
 
             <div class="inquiryTitle">
               <label for="name">문의 제목</label>
 
-              <input type="text" id="inquiryTitle" name="qTitle" required minlength="4" maxlength="8" size="10">
+              <input type="text" id="inquiryTitle" name="qtitle" required minlength="4" maxlength="8" size="10">
             </div>
 
             <div class="contentsbox">
@@ -72,27 +72,20 @@
                   <em id="em1">0</em><em>/500</em>
                 </span>
               </div>
-              <textarea id="text1" name="qContent" title="리뷰 입력" style="padding: 10px 15px" placeholder="문의하실 상품의 상품명/제품코드/사이즈/컬러를 정확히 적어주세요. 주문하신 상품이라면 주문번호와 문의 하실 상품명/제품코드/사이즈/컬러와 함께 궁금하신 
+              <textarea id="text1" name="qcontent" title="리뷰 입력" style="padding: 10px 15px" placeholder="문의하실 상품의 상품명/제품코드/사이즈/컬러를 정확히 적어주세요. 주문하신 상품이라면 주문번호와 문의 하실 상품명/제품코드/사이즈/컬러와 함께 궁금하신 
               사항을 적어주시면 정확한 답변을 드리는데 도움이 됩니다. 반품접수는 마이페이지 주문내역에서 '반품 신청' 버튼을 클릭하여 반품을 접수해주셔야 합니다." maxlength="500"
                 rows="5" cols="80"></textarea>
             </div>
 
             <div class="imginsert">사진등록</div>
 
-            <div class="imgcontents">
-
-              <label class="img_label" for="file">
+              <!-- <label class="img_label" for="file">
                 <i class="bi bi-plus" style="font-size: 48px"></i>
                 <input type="file" accept=".jpg .png .gif" name="uploading" class="upload-hidden" title="사진 첨부"
-                  id="file" onchange="change_img()" />
-              </label>
-              <ol class="img_ol">
-                <li id="a1"></li>
-                <li id="a2"></li>
-                <li id="a3"></li>
-                <li id="a4"></li>
-              </ol>
-            </div>
+                  id="file" onchange="change_img()" style="display:none"/>
+                  
+              </label> -->
+              <input type="file" name="uploadFile" multiple="multiple">
 
 
             <div>SMS 알림받기</div>
@@ -131,13 +124,13 @@
 
 <script>
   function go_save() {
-    if (document.formm.qCategory.value == "") {
+    if (document.formm.qcategory.value == "") {
       alert("문의 분야를 설정해주세요.");
       document.formm.depth1.focus();
-    } else if (document.formm.qContent.value == "") {
+    } else if (document.formm.qcontent.value == "") {
       alert("문의 내용을 입력해주세요.");
       document.formm.cntn.focus();
-    } else if (document.formm.qTitle.value == "") {
+    } else if (document.formm.qtitle.value == "") {
         alert("문의 제목을 입력해주세요.");
         document.formm.cntn.focus();
       }
@@ -147,36 +140,6 @@
     }
   }
 
-  function change_img() {
-    //document.getElementById("img_name").innerHTML = a;
-
-    var file = document.getElementById('file');
-    //파일 경로.
-    var filePath = file.value;
-    //전체경로를 \ 나눔.
-    var filePathSplit = filePath.split('\\');
-    //전체경로를 \로 나눈 길이.
-    var filePathLength = filePathSplit.length;
-    //마지막 경로를 .으로 나눔.
-    var fileNameSplit = filePathSplit[filePathLength - 1].split('.');
-    //파일명 : .으로 나눈 앞부분
-    var fileName = fileNameSplit[0];
-    //파일 확장자 : .으로 나눈 뒷부분
-    var fileExt = fileNameSplit[1];
-    //파일 크기
-    var fileSize = file.files[0].size;
-
-    document.getElementById("a1").innerHTML = '파일 경로 : ' + filePath;
-    document.getElementById("a2").innerHTML = '파일명 : ' + fileName;
-    document.getElementById("a3").innerHTML = '파일 확장자 : ' + fileExt;
-    document.getElementById("a4").innerHTML = '파일 크기 : ' + fileSize;
-
-
-    console.log('파일 경로 : ' + filePath);
-    console.log('파일명 : ' + fileName);
-    console.log('파일 확장자 : ' + fileExt);
-    console.log('파일 크기 : ' + fileSize);
-  }
 </script>
 
 

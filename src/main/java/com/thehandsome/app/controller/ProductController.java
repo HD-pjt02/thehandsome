@@ -21,19 +21,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.thehandsome.app.dto.BrandDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
+import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
+import com.thehandsome.app.dto.WishlistDTO;
 import com.thehandsome.app.service.ProductService;
+import com.thehandsome.app.service.WishlistService;
 
 import lombok.extern.log4j.Log4j;
 
 /* 
- * 작성자 : 정승하
+ * 작성자 : 정승하,신미림
  * 작성일 : 2022.10.17.월
- * 상품 상세 조회 관련 기능을 다룬 컨트롤러
- * [상품 상세 정보, 상품 컬러 리스트]
- */
+ * 상품에 관련된 컨트롤러
+*/
 @Log4j
 @Controller
 @RequestMapping("/product")
@@ -45,6 +47,9 @@ public class ProductController {
 	@Resource
 	ProductService productService;
 
+	@Resource
+	WishlistService wishlistService; 
+	
 	@GetMapping("/brandproductlist")
 	public String brandproductList(@RequestParam(defaultValue = "1") int pageNo, String bname, Model model,
 			HttpSession session) {
@@ -314,17 +319,22 @@ public class ProductController {
 
 	/*221017미림 수정 */
 	@RequestMapping("/productdetail")
-	public String productDetail(String pcode, String pcolor, Model model) {
+	public String productDetail(String pcode, String pcolor, Model model,HttpSession session) {
 		logger.info("productdetail 실행");
 		logger.info("pcode: "+pcode);
 		logger.info("pcolor: "+ pcolor);
+		
+		MemberDTO memberInfo =(MemberDTO)session.getAttribute("member");
+		
 		ProductDTO product = productService.getProduct(pcode);
 		List<ColorDTO> colors = productService.getProductColor(product);
 		List<StockDTO> sizes = productService.getProductSize(product);
+		WishlistDTO wishlistDTO = new WishlistDTO();
 		logger.info("color size: "+colors.size());
 		for (int i = 0; i < colors.size(); i++) {
 			logger.info("now color: "+colors.get(i).getPcolor());
 			if (pcolor.equals(colors.get(i).getPcolor())) {
+				wishlistDTO.setPid(colors.get(i).getPcodecolor());
 				model.addAttribute("currentcolorcode", colors.get(i).getPcodecolor());
 				model.addAttribute("currentpcolor", colors.get(i).getPcolor());
 				model.addAttribute("productimage1", colors.get(i).getImgurl1());
@@ -337,7 +347,32 @@ public class ProductController {
 				break;
 			}
 		}
-
+		Long result = -1L;
+		if(memberInfo == null) {
+			wishlistDTO.setMid("");
+			wishlistDTO.setMember_mno(-1);
+		}
+		else {
+			wishlistDTO.setMid(memberInfo.getId());
+			wishlistDTO.setMember_mno(memberInfo.getMno());
+			try {
+			result = wishlistService.selectWishlistYN(wishlistDTO);
+			if(result == null) {
+				result = 0L;
+			}
+			}catch(NullPointerException e) {
+				result = 0L;
+			}
+		}
+		
+		
+		
+		String wishYn="";
+		if(result == 1) {
+			wishYn = "on";
+		}
+		
+		model.addAttribute("wishYn", wishYn);
 		model.addAttribute("product", product);
 		model.addAttribute("colors", colors);
 		model.addAttribute("sizes", sizes);
@@ -355,6 +390,11 @@ public class ProductController {
 		}
 
 		model.addAttribute("viewer", viewers.get(pcode));
+		
+		
+		
+		
+		
 
 		return "product/productdetail";
 	}
@@ -390,5 +430,28 @@ public class ProductController {
 
 		return json;
 	}
+	
+	@RequestMapping(value = "/productDetailAjax", produces = "application/json; charset=UTF-8")
+	@ResponseBody
+	public String productDetailAjax(@RequestParam String code, Model model) {
+		logger.info("productDetailAjax 실행");
+		
+
+		JSONObject jsonObject = new JSONObject();
+		String json;
+
+		try {
+			
+			jsonObject.put("amount", code);
+		} catch (Exception e) {
+			jsonObject.put("amount", 0);
+		} finally {
+			json = jsonObject.toString();
+		}
+
+		return code;
+	}
+	
+	
 
 }

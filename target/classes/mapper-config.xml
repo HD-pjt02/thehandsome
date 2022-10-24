@@ -34,5 +34,7 @@
 			type="com.thehandsome.app.dto.CartDTO" />
 		<typeAlias alias="ReviewDTO"
 			type="com.thehandsome.app.dto.ReviewDTO" />
+		<typeAlias alias="WishlistDTO"
+			type="com.thehandsome.app.dto.WishlistDTO" />
 	</typeAliases>
 </configuration>

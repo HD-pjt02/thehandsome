@@ -52,4 +52,9 @@ public class ReviewServicelmpl implements ReviewService{
 		return reviewMapper.insertPhotoReview(reviewDTO);
 	}
 
+	@Override
+	public Long selectNextReviewNo() {
+		return reviewMapper.selectNextReviewNo();
+	}
+
 }

@@ -1,5 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+
+<!-- 신미림 자바 로그인  -->
+<%
+String loginYn = "N";
+//Session을 받을때는 값이 null로 올때를 생각해서 조건문을 사용한다.
+if (session.getAttribute("member") != null) {
+  //세션의 값을 가져오기
+  loginYn = "Y";
+}
+%>
+<!-- 신미림 자바 로그인 끝 -->
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -734,7 +750,11 @@ deg
 }
 }
 </style>
-
+<!--신미림 수정 로그인  -->
+<script>
+var loginYn = "<%=loginYn%>";
+</script>
+<!-- 신미림 수정 로그인 끝 -->
 <script>
 	$(document)
 			.ready(

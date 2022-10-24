@@ -7,5 +7,5 @@
 	<select id="selectAllBrands" resultType="BrandDTO">
 		SELECT bno, bname
 		FROM BRAND
-	</select>
+	</select> 
 </mapper>
