@@ -13,6 +13,6 @@ public interface MemberMapper {
 
 	MemberDTO memberLogin(MemberDTO memberDTO);
 	
-	public MemberDTO findById(String mid);
+	MemberDTO findById(String id);
 
 }

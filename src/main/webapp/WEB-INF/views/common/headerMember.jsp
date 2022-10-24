@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <html lang="ko"><head>
     <meta name="naver-site-verification" content="2f9358e1e36605519854a595f243f0171519dd1d">
     <meta name="google-site-verification" content="0bGV8gPhwO_PzritNvIsz2k74EH5yPsrXXluJ8ZUed8">
@@ -1803,7 +1809,7 @@
             
                 $.ajax({ 
                     type : "post", 
-                    url : "/ko/logout?"+getCSRFToken(),
+                    url : "/member/logout?"+getCSRFToken(),
                     error : function( request, status, error ){				
                         //console.log( "code:" + request.status+"\n" + "message:" + request.responseText+"\n" + "error:" + error );
                         $.ajax({ 
@@ -1848,7 +1854,7 @@
         deletecookie("UID");   
         deletecookie("criteoEmail"); 
         deletecookie("memberGb");
-        location.href = "/ko/logout";
+        location.href = "/member/logout";
     }
     
     
@@ -2044,9 +2050,16 @@
                 <ul class="clearfix">
                     <!-- 선호 브랜드 없음 -->
                             <li><span class="on"><a href="/home">HOME</a></span></li>
-                            <!-- 로그인 상태 -->
+                            <!-- 신미림 로그인 로그아웃 처리 -->
+						<sec:authorize access="isAuthenticated()">
+							 <!-- 로그인 상태 -->
                                     <p class="brand_menu_guide_text">아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
-                                    <!-- 비로그인 상태 -->
+						</sec:authorize>
+						<sec:authorize access="isAnonymous()">
+						 <!-- 비로그인 상태 -->
+							<p class="gnbbr_txt">로그인 후 좋아하는 브랜드를 ♥해주세요. '적용하기' 버튼을 클릭하면
+										웹사이트 상단에 추가됩니다.</p>>
+						</sec:authorize>
                                     </ul>
             </div>
         <div class="gnb_sh_wrap" style="display:none;">

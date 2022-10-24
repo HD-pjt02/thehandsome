@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -2120,7 +2126,7 @@ deg
 					deletecookie("UID");
 					deletecookie("criteoEmail");
 					deletecookie("memberGb");
-					location.href = "/ko/logout";
+					location.href = "/member/logout";
 				}
 
 				//START OF 메인 검색창////////////////////////
@@ -2582,12 +2588,16 @@ deg
 							<!-- 선호 브랜드 없음 -->
 							<li><span class="on"> <a href="/home">HOME</a>
 							</span></li>
-							<!-- 로그인 상태 -->
-							<!-- 비로그인 상태 -->
-							<p class="brand_menu_guide_text">
-								로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span
-									style="margin-top: -1px; display: inline-block;">♥</span> 해주세요
-							</p>
+							<!-- 신미림 로그인 로그아웃 처리 -->
+							<sec:authorize access="isAuthenticated()">
+						 	<!-- 로그인 상태 -->
+                                   <p class="brand_menu_guide_text">아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
+							</sec:authorize>
+							<sec:authorize access="isAnonymous()">
+							 <!-- 비로그인 상태 -->
+								<p class="brand_menu_guide_text">
+						로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top: -1px; display: inline-block;">♥</span> 해주세요</p>
+							</sec:authorize>
 						</ul>
 					</div>
 					<div class="gnb_sh_wrap" style="display: none;">
@@ -2802,33 +2812,39 @@ deg
 					<!--// 201705 search_box_wrap -->
 					<div class="util_menu" style="display: block;">
 						<ul class="clearfix">
-							<li><a href="/ko/member/login"
-								onclick="GA_Event('공통','헤더_메뉴','로그인')"> 로그인 <!-- 로그인 -->
+							<!-- 신미림 로그인 로그아웃 처리 -->
+						<sec:authorize access="isAuthenticated()">
+							<li><a href="javascript:setLogout();" onclick="GA_Event('공통','헤더_메뉴','로그아웃')">로그아웃</a></li>
+						</sec:authorize>
+						<sec:authorize access="isAnonymous()">
+							<li><a href="/member/login"
+								 onclick="GA_Event('공통','헤더_메뉴','로그인')"> 로그인 <!-- 로그인 -->
 							</a></li>
-							<li class="header_dropmemu mypage"><a href="/ko/mypage"
+						</sec:authorize>
+							<li class="header_dropmemu mypage"><a href="/mypage/mypage"
 								class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
 								<div class="list">
 									<ul>
-										<li><a href="/ko/mypage/order/myorders"
+										<li><a href="/member/myorders"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_주문조회')"> 주문조회 <!-- 주문조회 -->
 										</a></li>
-										<li><a href="/ko/mypage/myGradeInfo"
+										<li><a href="/mypage/myGradeInfo"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_나의회원등급')"> 나의회원등급 <!-- 온라인등급 -->
 										</a></li>
-										<li><a href="/ko/mypage/voucher"
+										<li><a href="/mypage/voucher"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_쿠폰조회')"> 쿠폰조회 <!-- 쿠폰조회 -->
 										</a></li>
-										<li><a href="/ko/mypage/mypoint"
+										<li><a href="/mypage/mypoint"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_마일리지조회')"> 마일리지조회 <!-- 포인트조회 -->
 										</a></li>
-										<li><a href="/ko/mypage/myEGiftCard"
+										<li><a href="/mypage/myEGiftCard"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_e-Gift Card')">
 												e-Gift Card <!-- e-Gfit Card -->
 										</a></li>
-										<li><a href="/ko/mypage/personInfomationChangePWCheck"
+										<li><a href="/mypage/personInfomationChangePWCheck"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_회원정보변경')"> 회원정보변경 <!-- 회원정보변경 -->
 										</a></li>
-										<li><a href="/ko/svcenter/mantomaninquiry"
+										<li><a href="/svcenter/mantomaninquiry"
 											onclick="GA_Event('공통','헤더_메뉴','마이페이지_온라인상담')"> 온라인상담 <!-- 온라인 상담 -->
 										</a></li>
 									</ul>
