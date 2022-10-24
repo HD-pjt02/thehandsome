@@ -4,7 +4,7 @@ import com.thehandsome.app.dto.MemberDTO;
 
 public interface MemberService {
 
-	Long isdupluid(String uid);
+	String isdupluid(String uid);
 
 	String joinEmail(String userMail);
 

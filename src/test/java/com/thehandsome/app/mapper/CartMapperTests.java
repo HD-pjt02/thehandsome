@@ -67,13 +67,8 @@ public class CartMapperTests {
 				CartDTO dto = new CartDTO(); 
 				dto.setMno(2);
 				dto.setPcode("OB2C9AJW691W");
-				dto.setPcount(5);
+				
 			
-			//when
-				int result = service.addCart(dto);
-			
-			//then
-				System.out.println("** result : " + result);
 			
 			
 		}

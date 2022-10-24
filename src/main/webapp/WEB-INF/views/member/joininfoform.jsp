@@ -324,7 +324,7 @@ $(document).ready(function(){
               $("#emailAddress").val("");
           }
           $("#sBirthday").val($("#selYear").val() + $("#selMonth").val() + $("#selDay").val());
-          $("#memberJoinForm").attr("action", "/member/joincomplete");
+          $("#memberJoinForm").attr("action", "/member/joincompleteaction");
           $("#memberJoinForm").submit();
       });
       
@@ -453,7 +453,7 @@ function validateEmail(email) {
 
 </script>
 
-<form id="memberJoinForm" action="/member/joininfoform" method="POST"><input type="hidden" name="emailDuplChk" id="emailDuplChk" value="" title="이메일 중복">
+<form id="memberJoinForm" action="/member/joininfoform" method="GET"><input type="hidden" name="emailDuplChk" id="emailDuplChk" value="" title="이메일 중복">
         <input type="hidden" name="pwTypeChk" id="pwTypeChk" value="" title="비밀번호 형식">
         <input type="hidden" name="pwConfirmChk" id="pwConfirmChk" value="" title="비밀번호 일치">
         <input type="hidden" id="uid" name="uid" value="${useremail}">
