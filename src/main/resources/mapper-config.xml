@@ -40,5 +40,7 @@
 			type="com.thehandsome.app.dto.OrderItemListDTO" />
 		<typeAlias alias="AddressDTO"
 			type="com.thehandsome.app.dto.AddressDTO" />
+		<typeAlias alias="CustomUserDetails"
+			type="com.thehandsome.app.dto.CustomUserDetails" />
 	</typeAliases>
 </configuration>

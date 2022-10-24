@@ -112,13 +112,12 @@ $(document).ready(function(){
 	            return;
 	        }
         }
-        
         $.ajax({
-            type:"POST",
+            type:"GET",//post였음
             url:"/member/isduplglobaluid",
             data: {"uid":id,"upw":pw,"CSRFToken":"289c8a50-3404-43c6-9404-7ea8ef0646fd"},
             success:function(data){
-            	if(data.result == "exist"){
+            	if(data == "exist"){
                     GA_Event('로그인', '로그인', '로그인');
                     $("#inputId").val(id);
                     $("#loginForm").submit();
@@ -163,6 +162,8 @@ $(document).ready(function(){
                         });
                     });
                 }else{
+                	$("#inputId").val(id);
+                    $("#loginForm").submit();
                     if(true){
                         hpLogin(id, pw);
                     }else{
@@ -677,7 +678,7 @@ function kakaoLogin(){
 	                    <h4>회원</h4>
 	                </div>
 	                <div id="hpIPLogin">
-	                <form id="loginForm" name="loginForm" action="/member/login" method="post"> <!--post로 action으로 넘기겠다 --> 
+	                <form id="loginForm" name="loginForm" action="/member/loginaction" method="get"> <!--post로 action으로 넘기겠다 --> 
 	                    <input type="hidden" name="inputId" id="inputId" value="">
 	                    <fieldset>
 	                        <legend>로그인 입력항목</legend>

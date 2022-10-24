@@ -21,6 +21,8 @@
     class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
 	</bean>
 	
+	<bean id="springSecurityFilterChain" class="org.springframework.web.filter.DelegatingFilterProxy"/>
+	
 	
 	<mvc:resources mapping="/resources/**" location="/resources/" />
 </beans>

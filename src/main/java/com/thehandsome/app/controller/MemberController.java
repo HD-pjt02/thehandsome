@@ -52,8 +52,8 @@ public class MemberController {
 	   @Resource
 	   MyOrderService myOrderService;
 
-	@Autowired
-	private BCryptPasswordEncoder pwEncoder;
+	   @Autowired
+	   private BCryptPasswordEncoder pwEncoder;
 
 	/***************** 회원가입 관련 기능 **********************/
 	@RequestMapping(value = "/joinstart", method = { RequestMethod.GET })
@@ -85,7 +85,7 @@ public class MemberController {
 
 	}
 
-	@RequestMapping(value = "/joininfoform", method = { RequestMethod.POST })
+	@RequestMapping(value = "/joininfoformaction", method = { RequestMethod.GET })
 	public String joininfoformaction(@RequestParam Map<String, Object> map, Model model) {
 		log.info("회원가입 정보 입력 폼 포스트");
 		String token = (String) map.get("CSRFToken");
@@ -96,7 +96,7 @@ public class MemberController {
 
 	}
 
-	@RequestMapping(value = "/joincomplete", method = { RequestMethod.POST })
+	@RequestMapping(value = "/joincompleteaction", method = { RequestMethod.GET })
 	public String joincompleteaction(@RequestParam Map<String, Object> map) {
 		log.info("회원가입 완료 폼");
 		String rawPw = (String) map.get("passwd");
@@ -169,8 +169,8 @@ public class MemberController {
 		return "member/login";
 	}
 
-	@RequestMapping(value = "/isduplglobaluid", method = { RequestMethod.POST })
-	public @ResponseBody Map<String, String> isduplglobaluid(@RequestParam Map<String, Object> map) {
+	@RequestMapping(value = "/isduplglobaluid", method = { RequestMethod.GET })//요거 포스트였어요
+	public @ResponseBody String isduplglobaluid(@RequestParam Map<String, Object> map) {
 		log.info("통합회원 여부 체크");
 		MemberDTO memberDTO = new MemberDTO();
 		memberDTO.setId((String) map.get("uid"));
@@ -179,13 +179,12 @@ public class MemberController {
 		log.info("pw: " + memberDTO.getPassword());
 
 		Map<String, String> msg = new HashMap<String, String>();
-		msg.put("result", "exist");
+		
 		log.info("" + msg);
-
-		return msg;
+		return "exist";
 	}
 
-	@RequestMapping(value = "/login", method = { RequestMethod.POST })
+	@RequestMapping(value = "/loginaction", method = { RequestMethod.GET })
 	public String loginaction(@RequestParam Map<String, Object> map, Model model, HttpServletRequest request) {
 		log.info("로그인 진행");
 
