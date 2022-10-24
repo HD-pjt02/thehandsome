@@ -7,9 +7,7 @@ import org.springframework.security.core.userdetails.User;
 
 public class Member extends User{
 	
-	/**
-	 * 
-	 */
+	 
 	private static final long serialVersionUID = 1L;
 
 	public Member(String username, String password, Collection<? extends GrantedAuthority> authorities) {
