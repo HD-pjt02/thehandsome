@@ -57,4 +57,28 @@ public class ReviewServicelmpl implements ReviewService{
 		return reviewMapper.selectNextReviewNo();
 	}
 
+	@Override
+	public Long selectAllReviewCount(ReviewDTO reviewDTO) {
+		
+		return reviewMapper.selectAllReviewCount(reviewDTO);
+	}
+
+	@Override
+	public Long selectPhotoReviewCount(ReviewDTO reviewDTO) {
+		
+		return reviewMapper.selectPhotoReviewCount(reviewDTO);
+	}
+
+	@Override
+	public Long selectTextReviewCount(ReviewDTO reviewDTO) {
+		
+		return reviewMapper.selectTextReviewCount(reviewDTO);
+	}
+
+	@Override
+	public Long selectoReviewRateAvg(ReviewDTO reviewDTO) {
+		
+		return reviewMapper.selectoReviewRateAvg(reviewDTO);
+	}
+
 }

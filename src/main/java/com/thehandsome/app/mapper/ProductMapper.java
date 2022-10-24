@@ -81,4 +81,6 @@ public interface ProductMapper {
 	
 	/* 색상 소팅 테스트*/
 	public List<ColorDTO> selectProductsColor(HashMap<String, Object> categoryPage);
+	
+	public StockDTO selectCartStock(String pcodeSelected, String colorSelected, String sizeSelected);
 }

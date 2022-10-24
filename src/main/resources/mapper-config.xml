@@ -16,8 +16,6 @@
 	<typeAliases>
 		<typeAlias alias="QnaDTO"
 			type="com.thehandsome.app.dto.QnaDTO" />
-		<typeAlias alias="OrderDTO"
-			type="com.thehandsome.app.dto.OrderDTO" />
 		<typeAlias alias="ProductDTO"
 			type="com.thehandsome.app.dto.ProductDTO" />
 		<typeAlias alias="CategoryDTO"
@@ -36,5 +34,11 @@
 			type="com.thehandsome.app.dto.ReviewDTO" />
 		<typeAlias alias="WishlistDTO"
 			type="com.thehandsome.app.dto.WishlistDTO" />
+		<typeAlias alias="OrderItemDTO"
+			type="com.thehandsome.app.dto.OrderItemDTO" />
+		<typeAlias alias="OrderItemListDTO"
+			type="com.thehandsome.app.dto.OrderItemListDTO" />
+		<typeAlias alias="AddressDTO"
+			type="com.thehandsome.app.dto.AddressDTO" />
 	</typeAliases>
 </configuration>

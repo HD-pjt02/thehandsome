@@ -41,4 +41,29 @@
 		]]>
 	</insert>
 	
+	
+	<select id="selectAllReviewCount" parameterType="ReviewDTO" resultType="Long">
+		<![CDATA[
+		select count(rno) from review where pcodecolor = #{pcodecolor}
+		]]>
+	</select>
+	
+	<select id="selectTextReviewCount" parameterType="ReviewDTO" resultType="Long">
+		<![CDATA[
+		select count(rno) from review where reviewtype = 'TEXT' and pcodecolor = #{pcodecolor}
+		]]>
+	</select>
+	
+	
+	<select id="selectPhotoReviewCount" parameterType="ReviewDTO" resultType="Long">
+		<![CDATA[
+		select count(rno) from review where reviewtype = 'PHOTO' and pcodecolor = #{pcodecolor}
+		]]>
+	</select>
+	
+	<select id="selectoReviewRateAvg" parameterType="ReviewDTO" resultType="Long">
+		<![CDATA[
+		select avg(rrate) from review where pcodecolor = #{pcodecolor}
+		]]>
+	</select>
 </mapper>

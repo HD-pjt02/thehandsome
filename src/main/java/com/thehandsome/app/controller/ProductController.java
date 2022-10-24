@@ -19,14 +19,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.thehandsome.app.dto.BrandDTO;
+import com.thehandsome.app.dto.CartDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
 import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
+import com.thehandsome.app.dto.ReviewDTO;
 import com.thehandsome.app.dto.StockDTO;
 import com.thehandsome.app.dto.WishlistDTO;
+import com.thehandsome.app.service.CartService;
 import com.thehandsome.app.service.ProductService;
+import com.thehandsome.app.service.ReviewService;
 import com.thehandsome.app.service.WishlistService;
 
 import lombok.extern.log4j.Log4j;
@@ -48,8 +52,11 @@ public class ProductController {
 	ProductService productService;
 
 	@Resource
-	WishlistService wishlistService; 
-	
+	WishlistService wishlistService;
+
+	@Resource
+	ReviewService reviewService;
+
 	@GetMapping("/brandproductlist")
 	public String brandproductList(@RequestParam(defaultValue = "1") int pageNo, String bname, Model model,
 			HttpSession session) {
@@ -83,10 +90,10 @@ public class ProductController {
 		String clarge = "none";
 		String cmedium = "none";
 		String csmall = "none";
-		
+
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 		BrandDTO brand = new BrandDTO(bname);
-		
+
 		model.addAttribute("category", category);
 		model.addAttribute("brand", brand);
 
@@ -142,15 +149,16 @@ public class ProductController {
 
 		return "product/productlist";
 	}
-	
-	/* 대,중,소분류, 브랜드리스트, 색상, 정렬순, 가격, 사이즈로 필터링*/
-	@GetMapping(value="/getFilterList", produces = "application/json; charset=UTF-8")
+
+	/* 대,중,소분류, 브랜드리스트, 색상, 정렬순, 가격, 사이즈로 필터링 */
+	@GetMapping(value = "/getFilterList", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String productFilterList(@RequestParam(defaultValue = "1") int pageNo, String clarge, String cmedium,
-			String csmall, String[] brandList, String pcolor, String orderby, String pprice, String psize, Model model, HttpSession session) {
+			String csmall, String[] brandList, String pcolor, String orderby, String pprice, String psize, Model model,
+			HttpSession session) {
 		System.out.println("productFilterList 실행");
 
-		/* 대,중,소분류 카테고리*/
+		/* 대,중,소분류 카테고리 */
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 		model.addAttribute("category", category);
 
@@ -158,28 +166,29 @@ public class ProductController {
 
 		PageDTO page = new PageDTO(12, 5, totalRows, pageNo);
 		model.addAttribute("page", page);
-		
-		/* 색상 필터링*/
+
+		/* 색상 필터링 */
 		ColorDTO color = new ColorDTO();
 		color.setPcolor(pcolor);
-		
-		/* 사이즈 필터링*/
+
+		/* 사이즈 필터링 */
 		StockDTO stock = new StockDTO();
 		stock.setPsize(psize);
-		
-		/* 가격 필터링*/
+
+		/* 가격 필터링 */
 		ProductDTO product = new ProductDTO();
 		product.setPprice(Integer.parseInt(pprice));
-		
-		List<ProductDTO> products = productService.filterProducts(category, page, brandList, color, stock, product, Integer.parseInt(orderby));
-		
+
+		List<ProductDTO> products = productService.filterProducts(category, page, brandList, color, stock, product,
+				Integer.parseInt(orderby));
+
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
-		
+
 		int count = 0;
 		for (ProductDTO p : products) {
 			count += 1;
-			System.out.println(""+count+" : "+p);
+			System.out.println("" + count + " : " + p);
 			JSONObject tmpObject = new JSONObject();
 
 			JSONObject pObject = new JSONObject();
@@ -187,10 +196,10 @@ public class ProductController {
 			pObject.put("pname", p.getPname());
 			pObject.put("pprice", p.getPprice());
 			pObject.put("bname", p.getBname());
-			
+
 			List<StockDTO> st = productService.getProductSize(p);
 			ArrayList<String> arrList = new ArrayList<String>();
-			for(StockDTO s: st) {
+			for (StockDTO s : st) {
 				arrList.add(s.getPsize());
 			}
 			pObject.put("size", arrList);
@@ -225,14 +234,14 @@ public class ProductController {
 		BrandDTO brand = new BrandDTO();
 
 		List<ProductDTO> products = productService.getProducts(brand, category, page);
-		
+
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
-		
+
 		int count = 0;
 		for (ProductDTO p : products) {
 			count += 1;
-			System.out.println(""+count+" : "+p);
+			System.out.println("" + count + " : " + p);
 			JSONObject tmpObject = new JSONObject();
 
 			JSONObject pObject = new JSONObject();
@@ -240,10 +249,10 @@ public class ProductController {
 			pObject.put("pname", p.getPname());
 			pObject.put("pprice", p.getPprice());
 			pObject.put("bname", p.getBname());
-			
+
 			List<StockDTO> stock = productService.getProductSize(p);
 			ArrayList<String> arrList = new ArrayList<String>();
-			for(StockDTO s: stock) {
+			for (StockDTO s : stock) {
 				arrList.add(s.getPsize());
 			}
 			pObject.put("size", arrList);
@@ -262,8 +271,8 @@ public class ProductController {
 
 		return json;
 	}
-	
-	/* 필터링을 위한 brand 리스트 가져오기*/
+
+	/* 필터링을 위한 brand 리스트 가져오기 */
 	@GetMapping(value = "/filterProductBrandList", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String filterProductsBrandDropdown(@RequestParam(defaultValue = "1") String clarge, String cmedium,
@@ -271,26 +280,26 @@ public class ProductController {
 		System.out.println("filterProductBrandList 실행");
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 		model.addAttribute("filterBrand", category);
-		
+
 		List<ProductDTO> result = productService.filterProductsBrand(category);
-		//System.out.println(result);
+		// System.out.println(result);
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
-		
+
 		for (ProductDTO r : result) {
 			JSONObject bObject = new JSONObject();
 			bObject.put("bname", r.getBname());
-			
+
 			jsonArray.put(bObject);
 		}
-		
+
 		jsonObject.put("brands", jsonArray);
 		String json = jsonObject.toString();
-		
+
 		return json;
 	}
-	
-	/* 필터링을 위한 color 리스트 가져오기*/
+
+	/* 필터링을 위한 color 리스트 가져오기 */
 	@GetMapping(value = "/filterProductColorList", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String filterProductsColorDropdown(@RequestParam(defaultValue = "1") String clarge, String cmedium,
@@ -298,43 +307,46 @@ public class ProductController {
 		System.out.println("filterProductColorList 실행");
 		CategoryDTO category = new CategoryDTO(clarge, cmedium, csmall);
 		model.addAttribute("filterColor", category);
-		
+
 		List<ColorDTO> result = productService.filterProductsColor(category);
 		System.out.println(result);
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
-		
+
 		for (ColorDTO r : result) {
 			JSONObject cObject = new JSONObject();
 			cObject.put("colorurl", r.getColorurl());
-			
+
 			jsonArray.put(cObject);
 		}
-		
+
 		jsonObject.put("colors", jsonArray);
 		String json = jsonObject.toString();
-		
+
 		return json;
 	}
 
-	/*221017미림 수정 */
+	/* 221017미림 수정 */
 	@RequestMapping("/productdetail")
-	public String productDetail(String pcode, String pcolor, Model model,HttpSession session) {
+	public String productDetail(String pcode, String pcolor, Model model, HttpSession session) {
 		logger.info("productdetail 실행");
-		logger.info("pcode: "+pcode);
-		logger.info("pcolor: "+ pcolor);
-		
-		MemberDTO memberInfo =(MemberDTO)session.getAttribute("member");
-		
+		logger.info("pcode: " + pcode);
+		logger.info("pcolor: " + pcolor);
+
+		MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");
+
 		ProductDTO product = productService.getProduct(pcode);
 		List<ColorDTO> colors = productService.getProductColor(product);
 		List<StockDTO> sizes = productService.getProductSize(product);
 		WishlistDTO wishlistDTO = new WishlistDTO();
-		logger.info("color size: "+colors.size());
+		ReviewDTO reviewDTO = new ReviewDTO();
+
+		logger.info("color size: " + colors.size());
 		for (int i = 0; i < colors.size(); i++) {
-			logger.info("now color: "+colors.get(i).getPcolor());
+			logger.info("now color: " + colors.get(i).getPcolor());
 			if (pcolor.equals(colors.get(i).getPcolor())) {
 				wishlistDTO.setPid(colors.get(i).getPcodecolor());
+				reviewDTO.setPcodecolor(colors.get(i).getPcodecolor());
 				model.addAttribute("currentcolorcode", colors.get(i).getPcodecolor());
 				model.addAttribute("currentpcolor", colors.get(i).getPcolor());
 				model.addAttribute("productimage1", colors.get(i).getImgurl1());
@@ -348,30 +360,29 @@ public class ProductController {
 			}
 		}
 		Long result = -1L;
-		if(memberInfo == null) {
+		if (memberInfo == null) {
 			wishlistDTO.setMid("");
 			wishlistDTO.setMember_mno(-1);
-		}
-		else {
+		} else {
 			wishlistDTO.setMid(memberInfo.getId());
 			wishlistDTO.setMember_mno(memberInfo.getMno());
 			try {
-			result = wishlistService.selectWishlistYN(wishlistDTO);
-			if(result == null) {
-				result = 0L;
-			}
-			}catch(NullPointerException e) {
+				result = wishlistService.selectWishlistYN(wishlistDTO);
+				if (result == null) {
+					result = 0L;
+				}
+			} catch (NullPointerException e) {
 				result = 0L;
 			}
 		}
-		
-		
-		
-		String wishYn="";
-		if(result == 1) {
+
+		model.addAttribute("reviewCnt", reviewService.selectAllReviewCount(reviewDTO));
+
+		String wishYn = "";
+		if (result == 1) {
 			wishYn = "on";
 		}
-		
+
 		model.addAttribute("wishYn", wishYn);
 		model.addAttribute("product", product);
 		model.addAttribute("colors", colors);
@@ -390,11 +401,6 @@ public class ProductController {
 		}
 
 		model.addAttribute("viewer", viewers.get(pcode));
-		
-		
-		
-		
-		
 
 		return "product/productdetail";
 	}
@@ -430,18 +436,17 @@ public class ProductController {
 
 		return json;
 	}
-	
+
 	@RequestMapping(value = "/productDetailAjax", produces = "application/json; charset=UTF-8")
 	@ResponseBody
 	public String productDetailAjax(@RequestParam String code, Model model) {
 		logger.info("productDetailAjax 실행");
-		
 
 		JSONObject jsonObject = new JSONObject();
 		String json;
 
 		try {
-			
+
 			jsonObject.put("amount", code);
 		} catch (Exception e) {
 			jsonObject.put("amount", 0);
@@ -451,7 +456,36 @@ public class ProductController {
 
 		return code;
 	}
-	
-	
+
+	@Resource
+	CartService cartService;
+
+	@RequestMapping("/insertToCart")
+	public String insertToCart(CartDTO cart, HttpSession session) {
+
+		// Integer.parseInt(session.getAttribute("mno").toString())
+		cart.setMno(1);
+		int cartno = cartService.selectCartno(cart);
+
+		if (cartno == -1) {
+
+			cartService.insertCart(cart);
+		} else {
+			cart.setCartno(cartno);
+
+			cartService.updateCart(cart);
+		}
+
+		return "redirect:/member/mycart";
+	}
+
+	@RequestMapping("/insertToCartForDirectOrder")
+	public String insertToCartForDirectOrder(CartDTO cart, HttpSession session) {
+
+		cart.setMno(Integer.parseInt(session.getAttribute("mno").toString()));
+		cartService.insertCart(cart);
+
+		return "redirect:/member/cartForDirectOrder";
+	}
 
 }

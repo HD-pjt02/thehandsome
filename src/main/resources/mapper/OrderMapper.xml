@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.thehandsome.app.mapper.OrderMapper">
+  	<insert id="insertOrderNewAddress" parameterType="OrderItemListDTO">
+		INSERT INTO
+		orderitemlist(ono, odate, ostate, pmonth, ptype, oreceivername, oreceiverphone1,
+					oreceiverphone2, ocomment, mno, ano)
+		VALUES(ONO_SEQ.nextval, #{odate}, #{ostate}, #{pmonth}, #{ptype}, #{oreceivername}, #{oreceiverphone1},
+					#{oreceiverphone2}, #{ocomment}, #{mno}, ANO_SEQ.currval)
+	</insert>
+	
+	<insert id="insertOrderOldAddress" parameterType="OrderItemListDTO">
+		INSERT INTO
+		orderitemlist(ono, odate, ostate, pmonth, ptype, oreceivername, oreceiverphone1,
+					oreceiverphone2, ocomment, mno, ano)
+		VALUES(ONO_SEQ.nextval, #{odate}, #{ostate}, #{pmonth}, #{ptype}, #{oreceivername}, #{oreceiverphone1},
+					#{oreceiverphone2}, #{ocomment}, #{mno}, #{ano})
+	</insert>
+	
+	<insert id="insertItemToProductOrderItem" parameterType="OrderItemDTO">
+		INSERT INTO
+		orderitem(ONO, SNO, OAMOUNT)
+		VALUES(ONO_SEQ.currval, #{sno}, #{oamount})
+	</insert>
+	
+	<update id="decreaseStockAmount" parameterType="HashMap">
+		UPDATE stock
+		SET
+		pamount = pamount - #{pamount}
+		WHERE sno = #{sno}
+	</update>
+	
+
+  </mapper>
