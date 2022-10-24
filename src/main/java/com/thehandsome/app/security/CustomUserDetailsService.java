@@ -16,7 +16,6 @@ import com.thehandsome.app.mapper.MemberMapper;
 import lombok.extern.log4j.Log4j;
 
 
-//DB에서 VO객체의 정보를 가져와 사용자 정보를 담는 UserDetails객체로 바꾸는 서비스
 @Log4j
 public class CustomUserDetailsService implements UserDetailsService {
 
@@ -37,7 +36,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 	
 	
 	
-	// UserDetails의 권한의 반환 값과 VO의 mrole을 일치 시키기 위한 메소드
 	private static Collection authorities(MemberDTO memberDTO){
         Collection authorities = new ArrayList<>();
         if(memberDTO.getRole().equals("ROLE_ADMIN")){
