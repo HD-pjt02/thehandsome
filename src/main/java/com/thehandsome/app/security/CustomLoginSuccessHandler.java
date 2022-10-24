@@ -28,6 +28,7 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
 			roleNames.add(authority.getAuthority());
 		});
 		log.info("success");
+		System.out.println("success login");
 		
 		//권한이 관리자면 관리자 페이지 그 외는 메인페이지로 전송
 		if(roleNames.contains("ROLE_ADMIN")) {

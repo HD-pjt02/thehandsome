@@ -5,6 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -2636,7 +2637,7 @@ function setLogout(){
     deletecookie("UID");   
     deletecookie("criteoEmail"); 
     deletecookie("memberGb");
-    location.href = "/ko/logout";
+    location.href = "/member/logout";
 }
 
 
@@ -2834,12 +2835,16 @@ function GA_search(){
 							<!-- 선호 브랜드 없음 -->
 							<li><span><a href="/ko/main"
 									onclick="GA_Event('공통','탑_네비게이션','HOME')">HOME</a></span></li>
-							<!-- 로그인 상태 -->
-							<!-- 비로그인 상태 -->
-							<p class="brand_menu_guide_text">
-								로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span
-									style="margin-top: -1px; display: inline-block;">♥</span>해주세요
-							</p>
+							<!-- 신미림 로그인 로그아웃 처리 -->
+							<sec:authorize access="isAuthenticated()">
+						 	<!-- 로그인 상태 -->
+                                   <p class="brand_menu_guide_text">아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
+							</sec:authorize>
+							<sec:authorize access="isAnonymous()">
+							 <!-- 비로그인 상태 -->
+								<p class="brand_menu_guide_text">
+						로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top: -1px; display: inline-block;">♥</span> 해주세요</p>
+							</sec:authorize>
 						</ul>
 					</div>
 					<div class="gnb_sh_wrap" style="display: none;">
@@ -6241,13 +6246,13 @@ function buynow(check4pmOver)
         if("false" == "true"  &&  "ko" == "ko"){
         	NetFunnel_Action({action_id:"buy_now"},function(ev,ret){
         		
-                    location.replace("/ko/login/checkout");
+                    location.replace("/member/login/checkout");
                     
         
             });
         }else{
         	
-                location.replace("/ko/login/checkout");
+                location.replace("/member/login/checkout");
             
         }
         

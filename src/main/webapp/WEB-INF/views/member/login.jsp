@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/common/header2.jsp"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 		<!-- validation check message global -->
 		<input type="hidden" id="validationCheckPwd" value="비밀번호를 재입력 하셔야 합니다.">
@@ -19,7 +20,7 @@
 		<form id="chatbotForm" action="https://talk.thehandsome.com/front/v1/jsp/view/chat.jsp" method="post" target="chatwindow"><input type="hidden" name="token" id="chatbot_token">
           <input type="hidden" name="talkId" id="chatbot_talkId">
         <div>
-<input type="hidden" name="CSRFToken" value="289c8a50-3404-43c6-9404-7ea8ef0646fd">
+<input type="hidden" name="CSRFToken" value="${ _csrf.token }">
 </div></form><!-- //headerWrap --><div class="gnbwarp new201608 clearfix">
         <h1 class="logo logo1903">
             <a href="/ko/main" onclick="GA_Event('공통', '로고', '상단');">thehandsome.com</a>
@@ -665,7 +666,7 @@ function kakaoLogin(){
 <form id="dormMcustForm" action="/ko/member/login" method="post"><input type="hidden" name="mcustNo" id="mcustNoD" value="">
     <input type="hidden" name="otpId" id="otpIdD" value="">
 <div>
-<input type="hidden" name="CSRFToken" value="289c8a50-3404-43c6-9404-7ea8ef0646fd">
+<input type="hidden" name="CSRFToken" value="${ _csrf.token }">
 </div></form><!-- 다국어 한국에서만 사용 -->
 <input type="hidden" name="loginLayer" id="loginLayer" value="E">
 <div id="bodyWrap" class="login">
@@ -678,7 +679,7 @@ function kakaoLogin(){
 	                    <h4>회원</h4>
 	                </div>
 	                <div id="hpIPLogin">
-	                <form id="loginForm" name="loginForm" action="/member/loginaction" method="get"> <!--post로 action으로 넘기겠다 --> 
+	                <form id="loginForm" name="loginForm" action="/member/loginaction" method="POST"> <!--post로 action으로 넘기겠다 --> 
 	                    <input type="hidden" name="inputId" id="inputId" value="">
 	                    <fieldset>
 	                        <legend>로그인 입력항목</legend>
@@ -694,6 +695,7 @@ function kakaoLogin(){
 	                                </div>
 	                            </div>
 	                            <a href="javascript:void(0);" class="btn_login" id="login_btn">로그인</a>
+	                            <input type="hidden" name="${ _csrf.parameterName }" value="${ _csrf.token }">
 	                            <div class="id_save">
 	                               <input type="checkbox" id="id_save" name="id_save" value="Y"> <label for="id_save">아이디 저장</label>
 	                            </div>

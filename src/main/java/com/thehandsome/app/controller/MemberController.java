@@ -168,6 +168,12 @@ public class MemberController {
 		log.info("로그인 폼");
 		return "member/login";
 	}
+	
+	@RequestMapping(value = "/logout", method = { RequestMethod.GET, RequestMethod.POST })
+	public void logout(HttpSession session) {
+		session.removeAttribute("member");
+		log.info("로그아웃 액션");
+	}
 
 	@RequestMapping(value = "/isduplglobaluid", method = { RequestMethod.GET })//요거 포스트였어요
 	public @ResponseBody String isduplglobaluid(@RequestParam Map<String, Object> map) {
@@ -184,8 +190,8 @@ public class MemberController {
 		return "exist";
 	}
 
-	@RequestMapping(value = "/loginaction", method = { RequestMethod.GET })
-	public String loginaction(@RequestParam Map<String, Object> map, Model model, HttpServletRequest request) {
+	@RequestMapping(value = "/loginaction", method = { RequestMethod.POST })
+	public void loginaction(@RequestParam Map<String, Object> map, Model model, HttpServletRequest request) {
 		log.info("로그인 진행");
 
 		HttpSession session = request.getSession();// 세션가져옴
@@ -201,15 +207,15 @@ public class MemberController {
 
 			if (true == pwEncoder.matches(rawPw, encodePw)) {
 				session.setAttribute("member", memberInfo);
-				return "redirect:/";
+			
 			} else {
 				model.addAttribute("result", 0);
-				return "redirect:/member/login";
+			
 			}
 
 		} else {
 			model.addAttribute("result", 0);
-			return "redirect:/member/login";
+
 		}
 
 	}

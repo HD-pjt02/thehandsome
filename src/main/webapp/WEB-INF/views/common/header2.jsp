@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 <html lang="ko"><head>
     <meta name="naver-site-verification" content="2f9358e1e36605519854a595f243f0171519dd1d">
     <meta name="google-site-verification" content="0bGV8gPhwO_PzritNvIsz2k74EH5yPsrXXluJ8ZUed8">
@@ -778,7 +784,7 @@
     };
     
     function goLogin(){
-        location.href='/ko/member/login';
+        location.href='/member/login';
     }
     
     function goEalryEvent(){
@@ -1803,7 +1809,7 @@
             
                 $.ajax({ 
                     type : "post", 
-                    url : "/ko/logout?"+getCSRFToken(),
+                    url : "/member/logout?"+getCSRFToken(),
                     error : function( request, status, error ){				
                         //console.log( "code:" + request.status+"\n" + "message:" + request.responseText+"\n" + "error:" + error );
                         $.ajax({ 
@@ -1848,7 +1854,7 @@
         deletecookie("UID");   
         deletecookie("criteoEmail"); 
         deletecookie("memberGb");
-        location.href = "/ko/logout";
+        location.href = "/member/logout";
     }
     
     

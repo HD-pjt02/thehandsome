@@ -5,6 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <!-- 신미림 자바 로그인  -->
 <%
@@ -2140,7 +2141,7 @@ var loginYn = "<%=loginYn%>";
 					deletecookie("UID");
 					deletecookie("criteoEmail");
 					deletecookie("memberGb");
-					location.href = "/ko/logout";
+					location.href = "/member/logout";
 				}
 
 				//START OF 메인 검색창////////////////////////
@@ -2602,12 +2603,16 @@ var loginYn = "<%=loginYn%>";
 							<!-- 선호 브랜드 없음 -->
 							<li><span class="on"> <a href="/home">HOME</a>
 							</span></li>
-							<!-- 로그인 상태 -->
-							<!-- 비로그인 상태 -->
-							<p class="brand_menu_guide_text">
-								로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span
-									style="margin-top: -1px; display: inline-block;">♥</span> 해주세요
-							</p>
+							<!-- 신미림 로그인 로그아웃 처리 -->
+							<sec:authorize access="isAuthenticated()">
+						 	<!-- 로그인 상태 -->
+                                   <p class="brand_menu_guide_text">아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
+							</sec:authorize>
+							<sec:authorize access="isAnonymous()">
+							 <!-- 비로그인 상태 -->
+								<p class="brand_menu_guide_text">
+						로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top: -1px; display: inline-block;">♥</span> 해주세요</p>
+							</sec:authorize>
 						</ul>
 					</div>
 					<div class="gnb_sh_wrap" style="display: none;">
@@ -2822,10 +2827,16 @@ var loginYn = "<%=loginYn%>";
 					<!--// 201705 search_box_wrap -->
 					<div class="util_menu" style="display: block;">
 						<ul class="clearfix">
+						<!-- 신미림 로그인 로그아웃 처리 -->
+						<sec:authorize access="isAuthenticated()">
+							<li><a href="javascript:setLogout();" onclick="GA_Event('공통','헤더_메뉴','로그아웃')">로그아웃</a></li>
+						</sec:authorize>
+						<sec:authorize access="isAnonymous()">
 							<li><a href="/member/login"
-								onclick="GA_Event('공통','헤더_메뉴','로그인')"> 로그인 <!-- 로그인 -->
+								 onclick="GA_Event('공통','헤더_메뉴','로그인')"> 로그인 <!-- 로그인 -->
 							</a></li>
-							<li class="header_dropmemu mypage"><a href="/ko/mypage"
+						</sec:authorize>
+							<li class="header_dropmemu mypage"><a href="/mypage/mypage"
 								class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
 								<div class="list">
 									<ul>
@@ -3072,8 +3083,16 @@ var loginYn = "<%=loginYn%>";
 											</ul></li>
 										<!-- #1141 - 카테고리 개편 - 메인 즐겨찾기 브랜드 레이어 -->
 									</ul>
-									<p class="gnbbr_txt">로그인 후 좋아하는 브랜드를 ♥해주세요. '적용하기' 버튼을 클릭하면
-										웹사이트 상단에 추가됩니다.</p>
+									<!-- 신미림 로그인 로그아웃 처리 -->
+									<sec:authorize access="isAuthenticated()">
+								 	<!-- 로그인 상태 -->
+	                                    <p class="brand_menu_guide_text">아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top:-1px; display:inline-block;">♥</span>해주세요</p>
+									</sec:authorize>
+									<sec:authorize access="isAnonymous()">
+									 <!-- 비로그인 상태 -->
+										<p class="brand_menu_guide_text">
+								로그인 후 아래 '브랜드' 메뉴에서 좋아하는 브랜드를 <span style="margin-top: -1px; display: inline-block;">♥</span> 해주세요</p>
+									</sec:authorize>
 									<br />
 									<div class="br_button_wrap">
 										<button type="button" name="button" class="btn_br_apply"
