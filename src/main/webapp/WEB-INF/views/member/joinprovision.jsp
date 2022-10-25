@@ -2250,7 +2250,7 @@ $(document).ready(function(){
         }
         
         if(agreeAll){
-            $("#resultSend").attr("action", "/member/joininfoform" );
+            $("#resultSend").attr("action", "/member/joininfoformaction" );
             $("#resultSend").submit();
         }
     });
@@ -2929,7 +2929,7 @@ $(document).ready(function(){
             <!--//sub container-->
         </div>
         
-        <form id="resultSend" action="/member/joinprovision" method="POST"><input type="hidden" name="uid" value="${useremail}">
+        <form id="resultSend" action="/member/joinprovision" method="GET"><input type="hidden" name="uid" value="${useremail}">
             <input type="hidden" name="checkOptional" id="checkOptional">
         <div>
 <input type="hidden" name="CSRFToken" value="${token}">

@@ -1,7 +1,6 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ include file="/WEB-INF/views/common/headerMain.jsp"%>
-
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
 </head>
 <body>
    <div id="bodyWrap" class="products">
@@ -228,285 +227,7 @@
          </div>
 
          <script>
-         $(document).ready(function(){        
-               //라디오 요소처럼 동작시킬 체크박스 그룹 셀렉터       
-               $('input[type="checkbox"][name="price_value"]').click(function(){          
-                  //클릭 이벤트 발생한 요소가 체크 상태인 경우            
-                  if ($(this).prop('checked')) 
-                  {              
-                  //체크박스 그룹의 요소 전체를 체크 해제후 클릭한 요소 체크 상태지정        
-                  $('input[type="checkbox"][name="price_value"]').prop('checked', false);
-                      $(this).prop('checked', true);       
-                  }
-            });
-         });
-
-      var product_brand;
-      $(window).ready(function () {
-         $.ajax({
-            url: "${pageContext.request.contextPath}/product/filterProductBrandList?clarge=" + urlParams.get("clarge")
-                  + "&cmedium=" + urlParams.get("cmedium")
-                  + "&csmall=" + urlParams.get("csmall")
-                  + "&pageNo=" + urlParams.get("pageNo")
-         }).done((data) => {
-            brand_array = data.brands;
-            console.log(brand_array);
-            let html_tmp = "";
-            for (let i = 0; i < brand_array.length; i++) {
-               let brand = brand_array.at(i);
-               let tmp = "";
-               tmp += "<li>";
-               tmp += "   <input type='checkbox' id='brand_ck" + String(i+1) + "' name='brand_value' value='" + brand.bname;
-               tmp +=          "' onclick='GA_Event('카테고리_리스트', '정렬','" + brand.bname + "')'; setOnlineShopBrand(this, 'BR" + String(i+1) + "');>";
-               tmp += "       <label for='branck_ck'" + String(i+1) + ">" + brand.bname + "</label>";
-               tmp += "</li>";
-               html_tmp += tmp;
-            }
-            $("#category_brand_chip").html(html_tmp);
-         });
-      });
-      var post_data = new Object();
-         post_data.brands = {};
-         post_data.color = 'empty';
-         post_data.price = 1;
-         post_data.orderby = '0';
-         post_data.size = 'empty';
-
-      function getCheckboxValue()  {
-          post_data.brands = {};
-           const query_brand = "input[name='brand_value']:checked";
-           const query_price = "input[name='price_value']:checked";
-           const selected_brand = 
-               document.querySelectorAll(query_brand);
-           
-           const selected_price = 
-               document.querySelectorAll(query_price);
-           
-           var pdata = new Array();
-              selected_brand.forEach((el) => {
-                 pdata.push(el.value)
-              });
-                post_data.brands = pdata;
-              selected_price.forEach((el) => {
-                post_data.price = el.value;
-              });
-              console.log(post_data);
-              console.log(post_data);
-           
-              var u = "${pageContext.request.contextPath}/product/getFilterList?clarge=" + urlParams.get("clarge")
-               + "&cmedium=" + urlParams.get("cmedium")
-               + "&csmall=" + urlParams.get("csmall")
-               + "&pageNo=" + urlParams.get("pageNo")
-               + "&brandList=";
-               for(let i=0;i<post_data.brands.length;i++){
-                  u += post_data.brands[i];
-                  if ( i == post_data.brands.length-1){
-                     break;
-                  }else{
-                     u += ", ";
-                  }
-               };
-               u += "&pcolor=" + post_data.color;
-               u += "&orderby=" + post_data.orderby;
-               u += "&pprice=" + post_data.price;
-               u += "&psize=" + post_data.size;
-            
-               let product_array;
-            
-            
-               $(function () {
-                  $.ajax({
-                     url: u
-                     }).done((data) => {
-                     console.log("안되는 부분");
-                     console.log(data);
-                     product_array = data.products;
-                     html_tmp = "";
-                     if (product_array.length == 0){
-                        let empty = "";
-                        empty += "<div class='sh_result none' id='searchResult_None' style='display: block;'>조건에 맞는 상품 정보가 없습니다.</div>"
-                        $("#listBody").html(empty);         
-                     }
-                     else{
-                        for (let i = 0; i < product_array.length; i++) {
-                       let product = product_array.at(i);
-                       let product_color = product.colors;
-                       //console.log(product_color);
-                       let product_info = product.product;
-                       //console.log(product_info);
-                       let tmp = "";
-                       if (i % 4 == 3){
-                          tmp += "<li class='mr1m'>";
-                       }
-                       else if (i % 4 == 0 && i != 0) {
-                          tmp += "<li style='clear: both;'>";
-                       }
-                       else{
-                          tmp += "<li>";
-                       }
-                       tmp +=       "<div class='item_box'>";
-                       tmp +=          "<a class='item_info1' id='product_link'" + i + " href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
-                       tmp +=             "<span class='item_img' id='product_img'"+i+ ">";
-                       tmp +=                "<img class='respon_image' src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
-                       tmp +=                "<img class='respon_image on' style='display: none; opacity: 1;' src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
-                       tmp +=             "</span>";
-                       tmp +=            "<span class='item_size' id='itemsize_"+i +"' style='display: none; height: 20px; padding-top: 15px; margin-top: 0px; padding-bottom: 15px; margin-bottom: 0px;'>"; 
-                       tmp +=             "<div id='"+ product_array.at(i).product.pcode +"'>";
-                       for (let j = 0; j< product_array.at(i).product.size.length; j++){
-                          tmp += "<span>" + product_array.at(i).product.size.at(j) + "</span>"
-                       } 
-                       tmp += "</div>"
-                       tmp +=             "</span>";
-                       tmp +=          "</a>";
-                       tmp +=          "<a class='item_info2' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
-                       tmp +=             "<span class='brand'>"+product_info.bname+"</span>";
-                       tmp +=            "<span class='title'>"+product_info.pname+"</span>";
-                       tmp +=            "<span class='price'>￦"+product_info.pprice.toLocaleString()+"원</span>";
-                       tmp +=         "</a>";
-                       
-                       tmp +=         "<div class='color_more_wrap'>";
-                       for (let j = 0; j < product_color.length; j++) {
-                          tmp +=    "<a class='cl wt' href='javascript:changeColor(" + i + ", " + j + ")' style='background: url(\"";
-                          tmp +=       product_color.at(j)['colorurl'];
-                          tmp +=  "\");'></a>"; 
-                       }
-                       tmp +=         "</div>";
-                       tmp +=       "</div>";
-                       tmp += "</li>";
-                       
-                       html_tmp += tmp;
-                    }
-                    $("#listBody").html(html_tmp);
-                     }
-                  });
-               });
-            function changeColor(product_idx, color_idx) {
-             product_array.at(product_idx)["state"] = color_idx;
-             let color_img = product_array.at(product_idx).colors.at(color_idx);
-             console.log("color_img");
-             console.log(color_img);
-             let p_color_id = "#product_img" + product_idx;
-             let p_link = "#product_link" + product_idx;
-             //2022.10.19.수 수정사항
-             let tmp = "";
-                tmp += "<img class='respon_image' src='" + color_img["imgurl1"] + "' alt='' />";
-                tmp += "<img class='respon_image on' style='display: none; opacity: 1;' src='" + color_img["imgurl2"] + "' alt='' />";
-             console.log(tmp);
-             $(p_link).attr("href", "productdetail?pcode=" + product_array.at(product_idx).product.pcode + "&pcolor=" + product_array.at(product_idx).colors.at(product_array.at(product_idx).state).pcolor);
-             $(p_color_id).html(tmp);
-          }
-            }
-      
-         function setRepProdColorCode(color){
-            post_data.color = color;
-         }
-         function setProductOrderCode(number){
-            post_data.orderby = number;
-         }
-         function setRepSizeEnumCode(size){
-            post_data.size = size;
-         }
-         function reset(){
-            post_data.brands = {};
-            post_data.color = 'empty';
-            post_data.price = 1;
-            post_data.orderby = '0';
-            post_data.size = 'empty';
-            // 초기화할 checkbox 선택
-            const brand_checkboxes 
-                 = document.getElementsByName('brand_value');
-            
-            // 체크박스 목록을 순회하며 checked 값을 초기화
-            brand_checkboxes.forEach((checkbox) => {
-              checkbox.checked = false;
-            })
-            // 초기화할 checkbox 선택
-            const price_checkboxes 
-                 = document.getElementsByName('price_value');
-            
-            // 체크박스 목록을 순회하며 checked 값을 초기화
-            price_checkboxes.forEach((checkbox) => {
-              checkbox.checked = false;
-            })
-            $(function () {
-                $.ajax({
-                   url: "${pageContext.request.contextPath}/product/getProductList?clarge=" + urlParams.get("clarge")
-                         + "&cmedium=" + urlParams.get("cmedium")
-                         + "&csmall=" + urlParams.get("csmall")
-                         + "&pageNo=" + urlParams.get("pageNo")
-                }).done((data) => {
-                product_array = data.products;
-               console.log(product_array);
-               let html_tmp = "";
-               for (let i = 0; i < product_array.length; i++) {
-                  let product = product_array.at(i);
-                  let product_color = product.colors;
-                  //console.log(product_color);
-                  let product_info = product.product;
-                  //console.log(product_info);
-                  let tmp = "";
-                  if (i % 4 == 3){
-                     tmp += "<li class='mr1m'>";
-                  }
-                  else if (i % 4 == 0 && i != 0) {
-                     tmp += "<li style='clear: both;'>";
-                  }
-                  else{
-                     tmp += "<li>";
-                     
-                  }
-                  tmp +=       "<div class='item_box'>";
-                  tmp +=          "<a class='item_info1' id='product_link'" + i + " href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
-                  tmp +=             "<span class='item_img' id='product_img'"+i+ ">";
-                  tmp +=                "<img class='respon_image' src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
-                  tmp +=                "<img class='respon_image on' style='display: none; opacity: 1;' src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
-                  tmp +=             "</span>";
-                  tmp +=            "<span class='item_size' id='itemsize_"+i +"' style='display: none; height: 20px; padding-top: 15px; margin-top: 0px; padding-bottom: 15px; margin-bottom: 0px;'>"; 
-                  tmp +=             "<div id='"+ product_array.at(i).product.pcode +"'>";
-                  
-                  for (let j = 0; j< product_array.at(i).product.size.length; j++){
-                     tmp += "<span>" + product_array.at(i).product.size.at(j) + "</span>"
-                  } 
-                  tmp += "</div>"
-                  tmp +=             "</span>";
-                  tmp +=          "</a>";
-                  tmp +=          "<a class='item_info2' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
-                  tmp +=             "<span class='brand'>"+product_info.bname+"</span>";
-                  tmp +=            "<span class='title'>"+product_info.pname+"</span>";
-                  tmp +=            "<span class='price'>￦"+product_info.pprice.toLocaleString()+"원</span>";
-                  tmp +=         "</a>";
-                  
-                  tmp +=         "<div class='color_more_wrap'>";
-                  for (let j = 0; j < product_color.length; j++) {
-                     tmp +=    "<a class='cl wt' href='javascript:changeColor(" + i + ", " + j + ")' style='background: url(\"";
-                     tmp +=       product_color.at(j)['colorurl'];
-                     tmp +=  "\");'></a>"; 
-                  }
-                  tmp +=         "</div>";
-                  tmp +=       "</div>";
-                  tmp += "</li>";
-                  
-                  html_tmp += tmp;
-               }
-               $("#listBody").html(html_tmp);
-                });
-             });
-            function changeColor(product_idx, color_idx) {
-             product_array.at(product_idx)["state"] = color_idx;
-             let color_img = product_array.at(product_idx).colors.at(color_idx);
-             console.log("color_img");
-             console.log(color_img);
-             let p_color_id = "#product_img" + product_idx;
-             let p_link = "#product_link" + product_idx;
-             //2022.10.19.수 수정사항
-             let tmp = "";
-                tmp += "<img class='respon_image' src='" + color_img["imgurl1"] + "' alt='' />";
-                tmp += "<img class='respon_image on' style='display: none; opacity: 1;' src='" + color_img["imgurl2"] + "' alt='' />";
-             console.log(tmp);
-             $(p_link).attr("href", "productdetail?pcode=" + product_array.at(product_idx).product.pcode + "&pcolor=" + product_array.at(product_idx).colors.at(product_array.at(product_idx).state).pcolor);
-             $(p_color_id).html(tmp);
-          }
-          }
+         
           </script>
 
          <div class="items_list cate_item4" id="listContent"
@@ -516,39 +237,289 @@
             </ul>
          </div>
       </div>
-      <div id="page-container" class="paging">
-         <a
-            href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=1">처음
-            페이지로 이동</a>
+      <div id="page-container" class="paging" style="display: block;">
+         <a class="prev2"
+            href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=1">처음페이지로
+            이동</a>
          <c:if test="${page.groupNo > 1}">
-            <a class="btn btn-light btn-sm"
-               href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.startPageNo-1}">이전
-               페이지로 이동</a>
+            <a class="prev"
+               href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.startPageNo-1}">이전페이지로
+               이동</a>
          </c:if>
-         <c:forEach var="i" begin="${page.startPageNo}"
-            end="${page.endPageNo}">
-            <c:if test="${page.pageNo != i}">
-               <a class="btn btn-light btn-sm"
-                  href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
-            </c:if>
-            <c:if test="${page.pageNo == i}">
-               <a class="btn btn-outline-dark btn-sm"
-                  href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
-            </c:if>
-         </c:forEach>
+         <span class="num"> <c:forEach var="i"
+               begin="${page.startPageNo}" end="${page.endPageNo}">
+               <c:if test="${page.pageNo == 1}">
+                  <a class="class=" pageBtn on " pagenum=${i+1
+                     }
+            href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
+               </c:if>
+               <c:if test="${page.pageNo > 1}">
+                  <a class="pageBtn " pagenum=${i+1
+                     }
+            href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${i}">${i}</a>
+               </c:if>
+            </c:forEach>
+         </span>
          <c:if test="${page.groupNo < page.totalGroupNo}">
-            <a class=""
+            <a class="next"
                href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.endPageNo+1}">다음
                페이지로 이동</a>
          </c:if>
 
-         <a class=""
+         <a class="next2"
             href="productlist?clarge=${category.clarge}&cmedium=${category.cmedium}&csmall=${category.csmall}&pageNo=${page.totalPageNo}">마지막
             페이지로 이동</a>
       </div>
       <script>
-      let product_array;
-      
+      $(document).ready(function(){        
+            //라디오 요소처럼 동작시킬 체크박스 그룹 셀렉터       
+            $('input[type="checkbox"][name="price_value"]').click(function(){          
+               //클릭 이벤트 발생한 요소가 체크 상태인 경우            
+               if ($(this).prop('checked')) 
+               {              
+               //체크박스 그룹의 요소 전체를 체크 해제후 클릭한 요소 체크 상태지정        
+               $('input[type="checkbox"][name="price_value"]').prop('checked', false);
+                   $(this).prop('checked', true);       
+               }
+         });
+      });
+
+   var product_brand;
+   $(window).ready(function () {
+      $.ajax({
+         url: "${pageContext.request.contextPath}/product/filterProductBrandList?clarge=" + urlParams.get("clarge")
+               + "&cmedium=" + urlParams.get("cmedium")
+               + "&csmall=" + urlParams.get("csmall")
+               + "&pageNo=" + urlParams.get("pageNo")
+      }).done((data) => {
+         brand_array = data.brands;
+         console.log(brand_array);
+         let html_tmp = "";
+         for (let i = 0; i < brand_array.length; i++) {
+            let brand = brand_array.at(i);
+            let tmp = "";
+            tmp += "<li>";
+            tmp += "   <input type='checkbox' id='brand_ck" + String(i+1) + "' name='brand_value' value='" + brand.bname;
+            tmp +=          "' onclick='GA_Event('카테고리_리스트', '정렬','" + brand.bname + "')'; setOnlineShopBrand(this, 'BR" + String(i+1) + "');>";
+            tmp += "       <label for='branck_ck'" + String(i+1) + ">" + brand.bname + "</label>";
+            tmp += "</li>";
+            html_tmp += tmp;
+         }
+         $("#category_brand_chip").html(html_tmp);
+      });
+   });
+   var post_data = new Object();
+     post_data.brands = {};
+     post_data.color = 'empty';
+     post_data.price = 1;
+     post_data.orderby = '0';
+     post_data.size = 'empty';
+   
+     let product_array;
+   function getCheckboxValue()  {
+       post_data.brands = {};
+        const query_brand = "input[name='brand_value']:checked";
+        const query_price = "input[name='price_value']:checked";
+        const selected_brand = 
+            document.querySelectorAll(query_brand);
+        
+        const selected_price = 
+            document.querySelectorAll(query_price);
+        
+        var pdata = new Array();
+          selected_brand.forEach((el) => {
+             pdata.push(el.value)
+          });
+            post_data.brands = pdata;
+          selected_price.forEach((el) => {
+            post_data.price = el.value;
+          });
+          console.log(post_data);
+          console.log(post_data);
+        
+          var u = "${pageContext.request.contextPath}/product/getFilterList?clarge=" + urlParams.get("clarge")
+           + "&cmedium=" + urlParams.get("cmedium")
+           + "&csmall=" + urlParams.get("csmall")
+           + "&pageNo=" + urlParams.get("pageNo")
+           + "&brandList=";
+           for(let i=0;i<post_data.brands.length;i++){
+              u += post_data.brands[i];
+              if ( i == post_data.brands.length-1){
+                 break;
+              }else{
+                 u += ", ";
+              }
+           };
+           u += "&pcolor=" + post_data.color;
+           u += "&orderby=" + post_data.orderby;
+           u += "&pprice=" + post_data.price;
+           u += "&psize=" + post_data.size;
+        
+        
+        
+           $(function () {
+              $.ajax({
+                 url: u
+                 }).done((data) => {
+                 console.log("안되는 부분");
+                 console.log(data);
+                 product_array = data.products;
+                 html_tmp = "";
+                 if (product_array.length == 0){
+                    let empty = "";
+                    empty += "<div class='sh_result none' id='searchResult_None' style='display: block;'>조건에 맞는 상품 정보가 없습니다.</div>"
+                    $("#listBody").html(empty);         
+                 }
+                 else{
+                    for (let i = 0; i < product_array.length; i++) {
+                   let product = product_array.at(i);
+                   let product_color = product.colors;
+                   //console.log(product_color);
+                   let product_info = product.product;
+                   //console.log(product_info);
+                   let tmp = "";
+                   if (i % 4 == 3){
+                      tmp += "<li class='mr1m'>";
+                   }
+                   else if (i % 4 == 0 && i != 0) {
+                      tmp += "<li style='clear: both;'>";
+                   }
+                   else{
+                      tmp += "<li>";
+                   }
+                   tmp +=       "<div class='item_box'>";
+                   tmp +=          "<a class='item_info1' id='product_link" + i + "' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
+                   tmp +=             "<span class='item_img' id='product_img"+i+ "'>";
+                   tmp +=                "<img class='respon_image' src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
+                   tmp +=                "<img class='respon_image on' style='display: none; opacity: 1;' src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
+                   tmp +=             "</span>";
+                   tmp +=            "<span class='item_size' id='itemsize_"+i +"' style='display: none; height: 20px; padding-top: 15px; margin-top: 0px; padding-bottom: 15px; margin-bottom: 0px;'>"; 
+                   tmp +=             "<div id='"+ product_array.at(i).product.pcode +"'>";
+                   for (let j = 0; j< product_array.at(i).product.size.length; j++){
+                      tmp += "<span>" + product_array.at(i).product.size.at(j) + "</span>"
+                   } 
+                   tmp += "</div>"
+                   tmp +=             "</span>";
+                   tmp +=          "</a>";
+                   tmp +=          "<a class='item_info2' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
+                   tmp +=             "<span class='brand'>"+product_info.bname+"</span>";
+                   tmp +=            "<span class='title'>"+product_info.pname+"</span>";
+                   tmp +=            "<span class='price'>￦"+product_info.pprice.toLocaleString()+"원</span>";
+                   tmp +=         "</a>";
+                   
+                   tmp +=         "<div class='color_more_wrap'>";
+                   for (let j = 0; j < product_color.length; j++) {
+                      tmp +=    "<a class='cl wt' href='javascript:changeColor(" + i + ", " + j + ")' style='background: url(\"";
+                      tmp +=       product_color.at(j)['colorurl'];
+                      tmp +=  "\");'></a>"; 
+                   }
+                   tmp +=         "</div>";
+                   tmp +=       "</div>";
+                   tmp += "</li>";
+                   
+                   html_tmp += tmp;
+                }
+                $("#listBody").html(html_tmp);
+                 }
+              });
+           });
+        }
+   
+     function setRepProdColorCode(color){
+        post_data.color = color;
+     }
+     function setProductOrderCode(number){
+        post_data.orderby = number;
+     }
+     function setRepSizeEnumCode(size){
+        post_data.size = size;
+     }
+     function reset(){
+        post_data.brands = {};
+        post_data.color = 'empty';
+        post_data.price = 1;
+        post_data.orderby = '0';
+        post_data.size = 'empty';
+        // 초기화할 checkbox 선택
+        const brand_checkboxes 
+             = document.getElementsByName('brand_value');
+        
+        // 체크박스 목록을 순회하며 checked 값을 초기화
+        brand_checkboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        })
+        // 초기화할 checkbox 선택
+        const price_checkboxes 
+             = document.getElementsByName('price_value');
+        
+        // 체크박스 목록을 순회하며 checked 값을 초기화
+        price_checkboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+        })
+        $(function () {
+            $.ajax({
+               url: "${pageContext.request.contextPath}/product/getProductList?clarge=" + urlParams.get("clarge")
+                     + "&cmedium=" + urlParams.get("cmedium")
+                     + "&csmall=" + urlParams.get("csmall")
+                     + "&pageNo=" + urlParams.get("pageNo")
+            }).done((data) => {
+            product_array = data.products;
+            console.log(product_array);
+            let html_tmp = "";
+            for (let i = 0; i < product_array.length; i++) {
+               let product = product_array.at(i);
+               let product_color = product.colors;
+               //console.log(product_color);
+               let product_info = product.product;
+               //console.log(product_info);
+               let tmp = "";
+               if (i % 4 == 3){
+                  tmp += "<li class='mr1m'>";
+               }
+               else if (i % 4 == 0 && i != 0) {
+                  tmp += "<li style='clear: both;'>";
+               }
+               else{
+                  tmp += "<li>";
+                  
+               }
+               tmp +=       "<div class='item_box'>";
+               tmp +=          "<a class='item_info1' id='product_link" + i + "' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
+               tmp +=             "<span class='item_img' id='product_img"+i+ "'>";
+               tmp +=                "<img class='respon_image' src='" + product_color.at(product_array.at(i)["state"])["imgurl1"] + "' alt='' />";
+               tmp +=                "<img class='respon_image on' style='display: none; opacity: 1;' src='" + product_color.at(product_array.at(i)["state"])["imgurl2"] + "' alt='' />";
+               tmp +=             "</span>";
+               tmp +=            "<span class='item_size' id='itemsize_"+i +"' style='display: none; height: 20px; padding-top: 15px; margin-top: 0px; padding-bottom: 15px; margin-bottom: 0px;'>"; 
+               tmp +=             "<div id='"+ product_array.at(i).product.pcode +"'>";
+               
+               for (let j = 0; j< product_array.at(i).product.size.length; j++){
+                  tmp += "<span>" + product_array.at(i).product.size.at(j) + "</span>"
+               } 
+               tmp += "</div>"
+               tmp +=             "</span>";
+               tmp +=          "</a>";
+               tmp +=          "<a class='item_info2' href='productdetail?pcode=" + product_array.at(i).product.pcode + "&pcolor=" + product_array.at(i).colors.at(product_array.at(i).state).pcolor + "'>";
+               tmp +=             "<span class='brand'>"+product_info.bname+"</span>";
+               tmp +=            "<span class='title'>"+product_info.pname+"</span>";
+               tmp +=            "<span class='price'>￦"+product_info.pprice.toLocaleString()+"원</span>";
+               tmp +=         "</a>";
+               
+               tmp +=         "<div class='color_more_wrap'>";
+               for (let j = 0; j < product_color.length; j++) {
+                  tmp +=    "<a class='cl wt' href='javascript:changeColor(" + i + ", " + j + ")' style='background: url(\"";
+                  tmp +=       product_color.at(j)['colorurl'];
+                  tmp +=  "\");'></a>"; 
+               }
+               tmp +=         "</div>";
+               tmp +=       "</div>";
+               tmp += "</li>";
+               
+               html_tmp += tmp;
+            }
+            $("#listBody").html(html_tmp);
+            });
+         });
+      }
       $(window).ready(function () {
          $.ajax({
             url: "${pageContext.request.contextPath}/product/getProductList?clarge=" + urlParams.get("clarge")
@@ -615,12 +586,18 @@
       });
       
       function changeColor(product_idx, color_idx) {
+         console.log(product_idx);
+         console.log(color_idx);
+
          product_array.at(product_idx)["state"] = color_idx;
          let color_img = product_array.at(product_idx).colors.at(color_idx);
+         console.log("여기도 안되네?");
+         console.log(product_array.at(product_idx).colors.at(color_idx));
          console.log("color_img");
          console.log(color_img);
          let p_color_id = "#product_img" + product_idx;
          let p_link = "#product_link" + product_idx;
+         console.log(p_link);
          //2022.10.19.수 수정사항
          let tmp = "";
             tmp += "<img class='respon_image' src='" + color_img["imgurl1"] + "' alt='' />";

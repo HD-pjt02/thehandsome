@@ -546,7 +546,7 @@
 			</when>
 		</choose>
 	</select>
-	
+
 	<select id="selectProductsColor" resultType="ColorDTO"
 		parameterType="HashMap">
 		<![CDATA[
@@ -592,4 +592,13 @@
 		]]>
 	</select>
 	<!-- 필터링 처리 끝 -->
+
+	<select id="selectCartStock" resultType="StockDTO"
+		parameterType="String">
+		SELECT *
+		FROM stock
+		WHERE pcode = #{pcode}
+		and pcolor = #{pcolor}
+		and psize = #{psize}
+	</select>
 </mapper>

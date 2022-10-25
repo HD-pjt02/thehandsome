@@ -39,5 +39,5 @@ public interface ProductService {
 	
 	public List<StockDTO> getProductSize(ProductDTO pcode);
 
-	
+	public StockDTO getCartStock(String pcodeSelected, String colorSelected, String sizeSelected);
 }

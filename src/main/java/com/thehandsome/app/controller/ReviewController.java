@@ -47,6 +47,8 @@ public class ReviewController {
 	@ResponseBody
 	public String getProductReviewList(@RequestParam(defaultValue = "1") int pageNum, String productCode, int pageSize,
 			String reviewType, Model model, HttpSession session) {
+		
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setPcodecolor(productCode);
 		if(!reviewType.equals("ALL")) {
@@ -61,9 +63,16 @@ public class ReviewController {
 
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
-
+		JSONObject reviewListObject = new JSONObject();
+		JSONObject pageObject = new JSONObject();
+		
+		pageObject.put("currentPage", 0);
+		pageObject.put("numberOfPages", 2);
+		pageObject.put("pageSize", 4);
+		pageObject.put("totalNumberOfResults", 0);
+		
 		for (ReviewDTO review : reviewList) {
-			JSONObject tmpObject = new JSONObject();
+			
 
 			JSONObject pObject = new JSONObject();
 			pObject.put("rno", review.getRno());
@@ -71,28 +80,40 @@ public class ReviewController {
 			pObject.put("pcode", review.getPcode());
 			pObject.put("pcodecolor", review.getPcodecolor());
 			pObject.put("psize", review.getPsize());
-			pObject.put("rdate", review.getRdate());
-			pObject.put("rrate", review.getRrate());
-			pObject.put("rcontent", review.getRcontent());
-			pObject.put("rimg", review.getRimg());
+			pObject.put("displayCreateDate", review.getRdate());//리뷰작성일
+			pObject.put("rating", review.getRrate());//별점
+			pObject.put("headline", review.getRcontent());//리뷰내용
+			pObject.put("photograph", review.getRimg());
 			pObject.put("product_pcode", review.getProduct_pcode());
 			pObject.put("product_pno", review.getProduct_pno());
 			pObject.put("reviewtype", review.getReviewtype());
 			
-			tmpObject.put("review", pObject);
-		
-			jsonArray.put(tmpObject);
+			
+			pObject.put("realAccumulationReviewPoint", 0);
+			pObject.put("photographCnt", 1);
+			pObject.put("bestYN", false);
+			pObject.put("profileData", "NORMAL");//등급
+			
+			
+
+			jsonArray.put(pObject);
 		}
+		reviewListObject.put("pagination", pageObject);
+		reviewListObject.put("results", jsonArray);
 		
 		//jsonObject.put("reviewOrderData", jsonArray);		
-		jsonObject.put("reviewList", jsonArray);
-		jsonObject.put("reviewCnt", 3);
-		jsonObject.put("reviewPhotoCnt", 1);
-		jsonObject.put("reviewTextCnt", 2);
-		jsonObject.put("reviewAvg", 4);
+		jsonObject.put("reviewList", reviewListObject);
+		jsonObject.put("reviewCnt", reviewService.selectAllReviewCount(reviewDTO));
+		jsonObject.put("reviewPhotoCnt", reviewService.selectPhotoReviewCount(reviewDTO));
+		jsonObject.put("reviewTextCnt", reviewService.selectTextReviewCount(reviewDTO));
+		jsonObject.put("reviewAvg", reviewService.selectoReviewRateAvg(reviewDTO));
+		jsonObject.put("reviewType", reviewType);
+		//jsonObject.put("reviewOrderData", );
 		jsonObject.put("result", "success");
 		String json = jsonObject.toString();
-
+		
+		
+	
 		return json;
 	}
 	
@@ -215,7 +236,7 @@ public class ReviewController {
 			reviewDTO.setRimg(saveFileName);
 			reviewDTO.setProduct_pcode((String)map.get("pcode"));
 			reviewDTO.setProduct_pno(Integer.parseInt((String)map.get("pno")));
-			reviewDTO.setReviewtype("IMAGE");
+			reviewDTO.setReviewtype("PHOTO");
 			Long result = reviewService.insertPhotoReview(reviewDTO);
 			
 			

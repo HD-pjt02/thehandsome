@@ -2313,6 +2313,7 @@ input[type="week"]:disabled {
   text-align: center;
   border-left: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
+  font-size: 12px;
 }
 
 .tbl_ltype td.frt {

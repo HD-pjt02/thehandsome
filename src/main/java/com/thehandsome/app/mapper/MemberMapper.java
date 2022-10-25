@@ -7,10 +7,12 @@ import com.thehandsome.app.dto.MemberDTO;
 @Mapper
 public interface MemberMapper {
 
-	Long isdupluid(String uid);
+	String isdupluid(String uid);
 
 	Long joinMember(MemberDTO memberDTO);
 
 	MemberDTO memberLogin(MemberDTO memberDTO);
+	
+	MemberDTO findById(String id);
 
 }

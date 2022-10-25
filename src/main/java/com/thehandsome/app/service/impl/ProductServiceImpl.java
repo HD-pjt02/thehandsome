@@ -155,5 +155,7 @@ public class ProductServiceImpl implements ProductService {
 	public StockDTO getProductStock(String pcode) {
 		return productMapper.selectProductStock(pcode);
 	}
-
+	public StockDTO getCartStock(String pcodeSelected, String colorSelected, String sizeSelected) {
+	      return productMapper.selectCartStock(pcodeSelected, colorSelected, sizeSelected);
+	   }
 }

@@ -20,4 +20,12 @@ public interface ReviewMapper {
 
 	Long selectNextReviewNo();
 
+	Long selectAllReviewCount(ReviewDTO reviewDTO);
+
+	Long selectPhotoReviewCount(ReviewDTO reviewDTO);
+
+	Long selectTextReviewCount(ReviewDTO reviewDTO);
+
+	Long selectoReviewRateAvg(ReviewDTO reviewDTO);
+
 }
