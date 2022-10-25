@@ -1,7 +1,6 @@
 package com.thehandsome.app.controller;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -12,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,8 +21,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.thehandsome.app.dto.ColorDTO;
 import com.thehandsome.app.dto.MemberDTO;
+import com.thehandsome.app.dto.OrderItemListDTO;
 import com.thehandsome.app.dto.ReviewDTO;
+import com.thehandsome.app.service.OrderService;
+import com.thehandsome.app.service.ProductService;
 import com.thehandsome.app.service.ReviewService;
 
 import lombok.extern.log4j.Log4j;
@@ -43,7 +47,83 @@ public class ReviewController {
 	@Resource
 	ReviewService reviewService; 
 	
-	@GetMapping(value = "/getproductreview", produces = "application/json; charset=UTF-8")
+	@Autowired
+	OrderService orderService;
+	
+	@Autowired
+	ProductService productService;
+	
+	@RequestMapping(value = "/review", produces = "application/json; charset=UTF-8", method = {RequestMethod.GET})
+	@ResponseBody
+	public String review(@RequestParam String productCode, Model model, HttpSession session) {
+		
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		ReviewDTO reviewDTO = new ReviewDTO();
+		reviewDTO.setPcodecolor(productCode);
+		reviewDTO.setReviewtype("%");	
+		
+		
+		//mapper에서 조회해온 데이터를 이곳에 담아 반환
+		List<ReviewDTO> reviewList = reviewService.getReviewList(reviewDTO);
+
+		JSONObject jsonObject = new JSONObject();
+		JSONArray jsonArray = new JSONArray();
+		JSONObject reviewListObject = new JSONObject();
+		JSONObject pageObject = new JSONObject();
+		
+		pageObject.put("currentPage", 0);
+		pageObject.put("numberOfPages", 2);
+		pageObject.put("pageSize", 4);
+		pageObject.put("totalNumberOfResults", 0);
+		
+		for (ReviewDTO review : reviewList) {
+			
+
+			JSONObject pObject = new JSONObject();
+			pObject.put("rno", review.getRno());
+			pObject.put("mid", review.getMid());
+			pObject.put("pcode", review.getPcode());
+			pObject.put("pcodecolor", review.getPcodecolor());
+			pObject.put("psize", review.getPsize());
+			pObject.put("displayCreateDate", review.getRdate());//리뷰작성일
+			pObject.put("rating", review.getRrate());//별점
+			pObject.put("headline", review.getRcontent());//리뷰내용
+			pObject.put("photograph", review.getRimg());
+			pObject.put("product_pcode", review.getProduct_pcode());
+			pObject.put("product_pno", review.getProduct_pno());
+			pObject.put("reviewtype", review.getReviewtype());
+			
+			
+			pObject.put("realAccumulationReviewPoint", 0);
+			pObject.put("photographCnt", 1);
+			pObject.put("bestYN", false);
+			pObject.put("profileData", "NORMAL");//등급
+			
+			
+
+			jsonArray.put(pObject);
+		}
+		reviewListObject.put("pagination", pageObject);
+		reviewListObject.put("results", jsonArray);
+		
+		//jsonObject.put("reviewOrderData", jsonArray);		
+		jsonObject.put("reviewList", reviewListObject);
+		jsonObject.put("reviewCnt", reviewService.selectAllReviewCount(reviewDTO));
+		jsonObject.put("reviewPhotoCnt", reviewService.selectPhotoReviewCount(reviewDTO));
+		jsonObject.put("reviewTextCnt", reviewService.selectTextReviewCount(reviewDTO));
+		jsonObject.put("reviewAvg", reviewService.selectoReviewRateAvg(reviewDTO));
+		jsonObject.put("reviewType", "ALL");
+		//jsonObject.put("reviewOrderData", );
+		jsonObject.put("result", "success");
+		String json = jsonObject.toString();
+		
+		
+	
+		return json;
+	}
+	
+	
+	@RequestMapping(value = "/getproductreview", produces = "application/json; charset=UTF-8", method = {RequestMethod.GET})
 	@ResponseBody
 	public String getProductReviewList(@RequestParam(defaultValue = "1") int pageNum, String productCode, int pageSize,
 			String reviewType, Model model, HttpSession session) {
@@ -156,6 +236,28 @@ public class ReviewController {
 		System.out.println(memberInfo.getId());
 		System.out.println((String)map.get("pcode"));
 		System.out.println((String)map.get("productCode"));
+		ColorDTO colorDTO = productService.getCurrentProductColor((String)map.get("productCode"));
+		
+		OrderItemListDTO orderDTO = new OrderItemListDTO();
+		orderDTO.setMno(memberInfo.getMno());
+		orderDTO.setPcode((String)map.get("pcode"));
+		orderDTO.setPcolor(colorDTO.getPcolor());
+		
+		
+		Long orderResult = orderService.checkMemberOrderProduct(orderDTO);
+		Long reviewResult = -1L;
+		if(orderResult != 1) {
+			return new JSONObject("rsltMsg","주문 내역이 없습니다.").toString();
+		}
+		ReviewDTO reviewCheck = new ReviewDTO();
+		reviewCheck.setMid(memberInfo.getId());
+		reviewCheck.setPcode((String)map.get("pcode"));
+		reviewCheck.setPcodecolor(colorDTO.getPcodecolor());
+		
+		reviewResult = reviewService.checkMemberReviewProduct(reviewCheck);
+		if(reviewResult == 1L) {
+			return new JSONObject("rsltMsg","이미 리뷰를 작성했습니다.").toString();
+		}
 		
 		
 		System.out.println("리뷰쓰기 폼");
@@ -197,6 +299,29 @@ public class ReviewController {
 			System.out.println(memberInfo.getId());
 			System.out.println((String)map.get("pcode"));
 			System.out.println((String)map.get("productCode"));
+			ColorDTO colorDTO = productService.getCurrentProductColor((String)map.get("productCode"));
+			
+			OrderItemListDTO orderDTO = new OrderItemListDTO();
+			orderDTO.setMno(memberInfo.getMno());
+			orderDTO.setPcode((String)map.get("pcode"));
+			orderDTO.setPcolor(colorDTO.getPcolor());
+			
+			
+			Long orderResult = orderService.checkMemberOrderProduct(orderDTO);
+			Long reviewResult = -1L;
+			if(orderResult != 1) {
+				return new JSONObject("rsltMsg","주문 내역이 없습니다.").toString();
+			}
+			ReviewDTO reviewCheck = new ReviewDTO();
+			reviewCheck.setMid(memberInfo.getId());
+			reviewCheck.setPcode((String)map.get("pcode"));
+			reviewCheck.setPcodecolor(colorDTO.getPcodecolor());
+			
+			reviewResult = reviewService.checkMemberReviewProduct(reviewCheck);
+			if(reviewResult == 1L) {
+				return new JSONObject("rsltMsg","이미 리뷰를 작성했습니다.").toString();
+			}
+			
 			
 			Long nextRno = reviewService.selectNextReviewNo();
 			

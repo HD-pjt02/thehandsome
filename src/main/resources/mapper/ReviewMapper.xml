@@ -61,9 +61,20 @@
 		]]>
 	</select>
 	
-	<select id="selectoReviewRateAvg" parameterType="ReviewDTO" resultType="Long">
+	<select id="selectoReviewRateAvg" parameterType="ReviewDTO" resultType="Double">
 		<![CDATA[
 		select avg(rrate) from review where pcodecolor = #{pcodecolor}
 		]]>
 	</select>
+	
+	<select id="checkMemberReviewProduct" resultType="Long"
+		parameterType="ReviewDTO">
+		<![CDATA[
+		SELECT 1 FROM REVIEW
+		WHERE PCODECOLOR = #{pcodecolor}
+		AND MID = #{mid}
+		AND PCODE = #{pcode]
+		]]>
+	</select>
+	
 </mapper>

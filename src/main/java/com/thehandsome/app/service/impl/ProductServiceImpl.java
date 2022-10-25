@@ -158,4 +158,9 @@ public class ProductServiceImpl implements ProductService {
 	public StockDTO getCartStock(String pcodeSelected, String colorSelected, String sizeSelected) {
 	      return productMapper.selectCartStock(pcodeSelected, colorSelected, sizeSelected);
 	   }
+
+	@Override
+	public ColorDTO getCurrentProductColor(String productCode) {
+		return productMapper.getCurrentProductColor(productCode);
+	}
 }

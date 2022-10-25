@@ -109,7 +109,7 @@ try{
 		imageUrl : 'http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg',
 		    
 		topCategory : '여성',
-		firstSubCategory : '여성',22222222222222222222222
+		firstSubCategory : '여성',
 		secondSubCategory : '아우터',
 		thirdSubCategory : '재킷'
 	});
@@ -153,6 +153,7 @@ $(document).ready(function(){
     reScroll();
     bodyReSize();
     resizeEtcImage();
+    
     
     //동영상 플레이
     videoFunction();
@@ -208,7 +209,7 @@ $(document).ready(function(){
       
         //로그인이 되어 있는지 확인한다.
         
-          //  goLogin("review");
+          goLogin("review");
           //미림 주석  return;
         
         
@@ -682,8 +683,8 @@ $(document).ready(function(){
         }
         
         
-            //goLogin("review"); 추후 로그인처리 미림주석
-            //return;
+            goLogin("review"); //추후 로그인처리 미림주석
+            return;
         
         
         $("#reviewHeadline").val($("#reviewHeadline").val().trim());
@@ -1125,8 +1126,7 @@ $(document).ready(function(){
 	});
     
     setEcommerceData("Detail");
-	
-	
+    
 	// 20220729 그루비 스크립트 추가
 	sendGroobee();
 	
@@ -1701,6 +1701,7 @@ function bodyReSize(){
 //      intervalId = setInterval(bodyReSize, 100);
         return false;
     } else {
+    	
         if(intervalLoopCnt < imageDivSize) {
             intervalLoopCnt = intervalLoopCnt + 1;
             intervalId = setTimeout(bodyReSize, 100);
@@ -1788,7 +1789,7 @@ function reScroll(){
             'margin-bottom': -btnwrapMarginTop
         });
         
-        
+
     }).trigger('scroll');
 }
 
@@ -2072,7 +2073,7 @@ function addToCart(buyNow)
 
         var buyNowYn = $.trim(buyNow) == "true" ? true:false;
         $('form[name=addToCartForm] input[name=buyNowYn]').val(buyNowYn);
-        
+        //미림 사용 장바구니 체크
         if(buyNowYn == false){ //프로모션 상품 체크를 위한 선처리 로직 
             $.ajax({
                 url: '/mycart/checkCartProduct',
@@ -2103,7 +2104,7 @@ function addToCart(buyNow)
     }
 }
 
-// 기존로직
+// 미림 장바구니 담기 기존로직
 function addtoCartProcessFunction(){
     
     var productCode = $('form[name=addToCartForm] input[name=productCodePost]').val();
@@ -2140,7 +2141,7 @@ function addtoCartProcessFunction(){
         addToCartProcess = true;
         return false;
     }
-
+    
     var checkQuickProcess = false;
     var checkAthomeProcess = false;
     var check4pmProcess = false;
@@ -2355,6 +2356,7 @@ function addtoCartProcessFunction(){
                  }
             });
         }
+        
     }else{
         if($("#deliveryKind").val() != "normal"){
             $("#deliveryKind").val("");
@@ -2386,14 +2388,14 @@ function addtoCartProcessFunction(){
         addToCartProcess = true;
     }
 }
-
+//미림  장바구니 추가 함수
 function addtoCartFunction(qty,check4pmOver){
     $.ajax({
-         url: '/ko/shoppingbag/add',
+         url: '/mycart/add',
          cache : false,
          async : false,
          type: "GET",            
-         data: $('form[name=addToCartForm]').serialize(),
+         data: $('form[name=addToCartForm]').serialize(),//해당form안에 들어있는 name으로 된 데이터를 모두 넘겨준다. 컨트롤러에서는 필요한것만 받음 
          success: function(msg){
              var errorMsg = msg;
              if(errorMsg == null || errorMsg == ''){
@@ -2746,7 +2748,7 @@ function reloadSize(prodcode) {
     });
 }
 
-//상품평쓰기 사이즈 저장
+//미림 상품평쓰기 사이즈 저장
 function fn_clickSizeCode(productCode){
     $('.select_options .select_size p').css("color", "black"); // 등록시 밸류 체크때 폰트색 변경한 부분을 사이즈 클릭하면 원래색으로 변경
     $('.select_options .select_size p').css("font-weight","normal");
@@ -2758,11 +2760,11 @@ function fn_clickSizeCode(productCode){
     }
     $('form[name=reviewForm] input[name=purchaseSize]').val(realSize);
     $('form[name=reviewForm] input[name=productCodeType]').val("ApparelSizeVariantProduct");
-    
+    var selectProductSize = $('form[name=addToCartForm] input[name=selectProductSize]').val();
     
 	// 중복 옵션 조회
 	$.ajax({
-		url: '/ko/p/duplicateCheckReview' + '?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6',
+		url: '/review/duplicateCheckReview' + '?CSRFToken=77badcd5-86c7-4e47-8c1f-0663967bf7b6',
 		type: 'POST',
 		datatype: 'json',
 		data: {'productCode' : productCode,
@@ -2789,6 +2791,7 @@ function fn_detailProductAjax(productCode){
         $('form[name=addToCartForm] input[name=productCodeType]').val("");
         return;
     }
+    $('form[name=addToCartForm] input[name=selectProductSize]').val(productCode);
     $(".reserveSaleSize").hide();
 
     $.ajax({
@@ -3734,7 +3737,7 @@ function reviewHtml(data){
 	            reviewHtml += "        <li>";
 	            reviewHtml += "            <div class='review_img_cont_inner191216'>";
 	            reviewHtml += "                <div class='img_wrap'>";
-	            reviewHtml += "                    <img src='"+list[i].photograph.url+"' alt='리뷰 이미지'>";
+	            reviewHtml += "                    <img src='../../../resources/upload/"+list[i].photograph+"' alt='리뷰 이미지'>";
 	            reviewHtml += "                </div>";
 	            reviewHtml += "            </div>";
 	            reviewHtml += "        </li>";
@@ -4553,7 +4556,8 @@ function fn_popupCustomerReview(pageNum,reviewType){
              reviewHtml(data);
          },
          error: function(xhr, Status, error) {
-             var la = new layerAlert(error);
+             alert(error);
+        	 var la = new layerAlert(error);
                 la.confirmAction = function(){
                     return;
                 };
@@ -6931,7 +6935,7 @@ function chkPopularProudct(qty) {
     
 
 function sendGroobee(){
-    
+	
     groobee( "VG", {
         goods : [
             {
@@ -7024,49 +7028,7 @@ function sendGroobee(){
 								<li><img src="${productimage7}" class="respon_image"
 									alt="캐시미어 더블 재킷"
 									onerror="this.src='http://cdn.thehandsome.com/_ui/desktop/common/images/products/no_img1.jpg'"></li>
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
-
-								<!--
-							<li><img src="${pageContext.request.contextPath}/resources/images/products/item_img5.jpg" alt="MINE - Jemion Dress in Crunch Wash 1" class="respon_image" /></li>
-							-->
+							
 
 							</ul>
 						</div>
@@ -7126,7 +7088,7 @@ $(document).ready(function() {
 
     var productCode = $("#productCode").val();
     $.ajax({
-        url: '/ko/p/review',
+        url: '/review/review',
         type: "GET",
         data: {"productCode":productCode},
         success: function(data){
@@ -7141,7 +7103,8 @@ $(document).ready(function() {
             }
         },
         error: function(xhr, Status, error) {
-            var la = new layerAlert(error);
+
+        	var la = new layerAlert(error);
                la.confirmAction = function(){
                    return;
                };
@@ -8986,7 +8949,10 @@ $(document).ready(function(){
 								method="post">
 								<input type="hidden" maxlength="3" size="0" name="qty"
 									class="qty"> <input type="hidden"
-									name="productCodePost" value="${productCode}"> <input
+									name="productCodePost" value="${currentcolorcode}"> 
+									<input type="hidden"
+									name="selectProductSize" value="${sizes.get(0).psize}">
+									<input
 									type="hidden" id="productCodeType" name="productCodeType"
 									value="ApparelSizeVariantProduct"> <input
 									type="hidden" id="stockCnt" value="${pamount}"> <input
@@ -9277,13 +9243,12 @@ $(document).ready(function(){
 							</dd>
 							<!--상품평 btn-->
 							<div class="popup_customer_review1807" id="customerReview">
-								<a href="#;" onclick="GA_Event('상품_상세','정보','상품평');">상품평(<span
-									id="customerReviewCnt">${reviewCnt}</span>)
-									
+								<a href="#;" onclick="GA_Event('상품_상세','정보','상품평');">
+								상품평(<span id="customerReviewCnt">${reviewCnt}</span>)
 									<div class="star_score1807" id="prodTotalStarScoreWrapper">
 										<span class="cmt_star"> <!-- 별점에 따라 class명 변경 (star1, star2 ,star3, star4, star5) -->
 											<span class="cmt_per" id="prodTotalStarScore"
-											style="width: 100%;">별점</span>
+											style="width: ${reviewRating * 20}%;">별점</span>
 										</span>
 									</div>
 								</a>

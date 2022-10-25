@@ -91,4 +91,10 @@ public class OrderServiceImpl implements OrderService{
 //         logger.info("우린 절대 '결제하기'를 실패하지 않는다.");
 //      }
    }
+
+   //리뷰 남기기 전 주문한 내역이 있는지 체크
+@Override
+public Long checkMemberOrderProduct(OrderItemListDTO orderDTO) {
+	return ordermapper.checkMemberOrderProduct(orderDTO);
+}
 }

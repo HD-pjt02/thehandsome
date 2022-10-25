@@ -83,4 +83,6 @@ public interface ProductMapper {
 	public List<ColorDTO> selectProductsColor(HashMap<String, Object> categoryPage);
 	
 	public StockDTO selectCartStock(String pcodeSelected, String colorSelected, String sizeSelected);
+
+	public ColorDTO getCurrentProductColor(String productCode);
 }

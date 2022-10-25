@@ -34,7 +34,11 @@ public interface ReviewService {
 
 	Long selectTextReviewCount(ReviewDTO reviewDTO);
 
-	Long selectoReviewRateAvg(ReviewDTO reviewDTO);
+	Double selectoReviewRateAvg(ReviewDTO reviewDTO);
+
+	Long checkMemberReviewProduct(ReviewDTO reviewDTO);
+
+	
 	
 	
 	

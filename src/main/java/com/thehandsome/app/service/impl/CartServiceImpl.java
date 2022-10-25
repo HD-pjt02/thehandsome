@@ -46,4 +46,9 @@ public class CartServiceImpl implements CartService {
    public CartDTO getCartProduct(int cartno) {
       return cartMapper.selectCartProduct(cartno);
    }
+
+@Override
+public CartDTO getMemberProductCart(CartDTO cartDTO) {
+	return cartMapper.getMemberProductCart(cartDTO);
+}
 }

@@ -601,4 +601,12 @@
 		and pcolor = #{pcolor}
 		and psize = #{psize}
 	</select>
+	
+	
+	<select id="getCurrentProductColor" resultType="ColorDTO"
+		parameterType="String">
+		SELECT *
+		FROM color
+		WHERE pcodecolor = #{productCode}
+	</select>
 </mapper>

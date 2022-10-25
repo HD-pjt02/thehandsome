@@ -21,4 +21,6 @@ public interface CartMapper {
    
    public CartDTO selectCartProduct(int cartno);
    
+   public CartDTO getMemberProductCart(CartDTO cartDTO);
+   
 }
