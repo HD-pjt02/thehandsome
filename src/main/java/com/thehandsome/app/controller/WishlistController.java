@@ -37,6 +37,8 @@ public class WishlistController {
 	public String wishlistAddProductAction(@RequestParam String productCode, String wishOn, HttpSession session) {
 		MemberDTO memberInfo =(MemberDTO)session.getAttribute("member");
 		
+
+		
 		WishlistDTO wishlistDTO = new WishlistDTO();
 		wishlistDTO.setPid(productCode); // 화면에서 받아온 데이터
 		wishlistDTO.setMid(memberInfo.getId());
@@ -53,6 +55,7 @@ public class WishlistController {
 		
 		
 		
+		
 		JSONObject jsonObject = new JSONObject();
 		JSONArray jsonArray = new JSONArray();
 		
@@ -60,6 +63,8 @@ public class WishlistController {
 		return json;
 		
 	}
+		
+		
 	
 		
 }

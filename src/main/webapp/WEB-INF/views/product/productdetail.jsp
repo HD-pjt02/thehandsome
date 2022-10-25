@@ -9009,6 +9009,14 @@ $(document).ready(function(){
 									type="hidden" name="pickupList" id="pickupList"> <input
 									type="hidden" name="quickList" id="quickList"> <input
 									type="hidden" name="buyNowYn" id="buyNowYn" value="false">
+									
+									<input type="hidden" name="buyNowYn" id="productCode" value="${productCode}">
+									<input type="hidden" name="buyNowYn" id="buyNowYn" value="false">
+									<input type="hidden" name="buyNowYn" id="buyNowYn" value="false">
+									<input type="hidden" name="buyNowYn" id="buyNowYn" value="false">
+									<input type="hidden" name="buyNowYn" id="buyNowYn" value="false">
+									
+									
 								<input type="button" value="쇼핑백 담기"
 									class="btn cart1803 float_left ml0" id="addToCartButton"
 									onclick="addToCart();GA_Event('상품_상세','하단 고정 버튼','쇼핑백담기');">
@@ -9271,6 +9279,7 @@ $(document).ready(function(){
 							<div class="popup_customer_review1807" id="customerReview">
 								<a href="#;" onclick="GA_Event('상품_상세','정보','상품평');">상품평(<span
 									id="customerReviewCnt">${reviewCnt}</span>)
+									
 									<div class="star_score1807" id="prodTotalStarScoreWrapper">
 										<span class="cmt_star"> <!-- 별점에 따라 class명 변경 (star1, star2 ,star3, star4, star5) -->
 											<span class="cmt_per" id="prodTotalStarScore"
