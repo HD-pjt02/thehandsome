@@ -76,9 +76,16 @@ public class ReviewServicelmpl implements ReviewService{
 	}
 
 	@Override
-	public Long selectoReviewRateAvg(ReviewDTO reviewDTO) {
+	public Double selectoReviewRateAvg(ReviewDTO reviewDTO) {
 		
 		return reviewMapper.selectoReviewRateAvg(reviewDTO);
 	}
+
+	@Override
+	public Long checkMemberReviewProduct(ReviewDTO reviewDTO) {
+		return reviewMapper.checkMemberReviewProduct(reviewDTO);
+	}
+
+	
 
 }

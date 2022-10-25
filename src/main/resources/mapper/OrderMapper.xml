@@ -32,5 +32,16 @@
 		WHERE sno = #{sno}
 	</update>
 	
+	<select id="checkMemberOrderProduct" resultType="Long"
+		parameterType="OrderItemListDTO">
+		<![CDATA[
+			SELECT 1
+			from orderitemlist
+			where mno = #{mno}
+			and pcode = #{pcode}
+			and pcolor = #{pcolor}
+		]]>
+	</select>
+	
 
   </mapper>

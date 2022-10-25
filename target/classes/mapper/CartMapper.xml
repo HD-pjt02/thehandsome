@@ -60,4 +60,15 @@
       FROM cart
       WHERE cartno = #{cartno}
    </select>
+   
+    <select id="getMemberProductCart" parameterType="CartDTO"
+      resultType="CartDTO">
+      SELECT *
+      FROM cart
+      WHERE mno = #{mno}
+      AND pcode = #{pcode}
+      AND pcolor = #{pcolor}
+   </select>
+   
+   
 </mapper>

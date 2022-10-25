@@ -809,7 +809,7 @@ function setLogout(){
     deletecookie("UID");   
     deletecookie("criteoEmail"); 
     deletecookie("memberGb");
-    location.href = "/ko/logout";
+    location.href = "/member/logout";
 }
 
 //]]>

@@ -17,4 +17,5 @@ public interface OrderMapper {
 	public int insertOrderOldAddress(OrderItemListDTO orderitemlist);
 	public int insertItemToProductOrderItem(OrderItemDTO orderitem);
 	public int decreaseStockAmount(HashMap<String, Object> map);
+	public Long checkMemberOrderProduct(OrderItemListDTO orderDTO);
 }

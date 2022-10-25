@@ -18,4 +18,6 @@ public interface CartService {
    
    public CartDTO getCartProduct(int cartno);
    
+   public CartDTO getMemberProductCart(CartDTO cartDTO);
+   
 }

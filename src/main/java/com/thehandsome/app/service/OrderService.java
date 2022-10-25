@@ -24,4 +24,6 @@ public interface OrderService {
 	// 결제하기 버튼을 누르고 일어나는 트랜잭션
 	public void paymentOrder(OrderItemListDTO orderitemlist, AddressDTO address, 
 			String checkedItems, int itemsLength);
+
+	public Long checkMemberOrderProduct(OrderItemListDTO orderDTO);
 }

@@ -26,6 +26,10 @@ public interface ReviewMapper {
 
 	Long selectTextReviewCount(ReviewDTO reviewDTO);
 
-	Long selectoReviewRateAvg(ReviewDTO reviewDTO);
+	Double selectoReviewRateAvg(ReviewDTO reviewDTO);
+
+	Long checkMemberReviewProduct(ReviewDTO reviewDTO);
+
+	
 
 }

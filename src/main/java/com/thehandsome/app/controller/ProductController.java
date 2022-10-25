@@ -375,8 +375,9 @@ public class ProductController {
 				result = 0L;
 			}
 		}
-
+		
 		model.addAttribute("reviewCnt", reviewService.selectAllReviewCount(reviewDTO));
+		model.addAttribute("reviewRating", reviewService.selectoReviewRateAvg(reviewDTO));
 
 		String wishYn = "";
 		if (result == 1) {

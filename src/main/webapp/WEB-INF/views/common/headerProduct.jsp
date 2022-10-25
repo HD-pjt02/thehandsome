@@ -3724,13 +3724,13 @@ function GA_search(){
 					<ul class="clearfix">
 						<li><a href="javascript:void(0);"> <span class="ico_sh">search</span>
 						</a></li>
-						<li><a href="/ko/mypage/myWish"
+						<li><a href="/mypage/myWish"
 							onclick="GA_Event('공통','유틸_메뉴','위시리스트');"> <span
 								class="ico wishlist">wish list</span> <span class="count">
 									( <span id="wishlistCount">0</span> )
 							</span>
 						</a></li>
-						<li><a href="/ko/shoppingbag"
+						<li><a href="/member/mycart"
 							onclick="GA_Event('공통','유틸_메뉴','쇼핑백');"> <span
 								class="ico cart">장바구니</span> <span class="count"> ( <span
 									id="cartCount">0</span> )
