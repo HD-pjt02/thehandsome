@@ -472,7 +472,7 @@ input[type="week"]:disabled {
   display: inline-block;
   padding-left: 20px;
   color: #c69c6c;
-  background: url("/_ui/desktop/common/images/common/ico_err.png") 0 9px no-repeat;
+  background: url("../../../resources/images/common/ico_err.png") 0 9px no-repeat;
   line-height: 30px;
 }
 
@@ -556,7 +556,7 @@ input[type="week"]:disabled {
 .minus {
   display: inline-block;
   width: 15px;
-  background: url("/_ui/desktop/common/images/common/ico_minus.png") 0 6px no-repeat;
+  background: url("../../../resources/images/common/ico_minus.png") 0 6px no-repeat;
   text-indent: 999em;
   overflow: hidden;
 }
@@ -613,7 +613,7 @@ input[type="week"]:disabled {
   padding: 3px 0 0 20px;
   color: #c69c6c;
   height: 15px;
-  background: url("/_ui/desktop/common/images/common/ico_file.png") no-repeat 0 3px;
+  background: url("../../../resources/images/common/ico_file.png") no-repeat 0 3px;
 }
 
 .input_sumtxt {
@@ -665,25 +665,25 @@ input[type="week"]:disabled {
 
 .card.shinhan {
   width: 88px;
-  background: url("/_ui/desktop/common/images/popup/card_logo.gif") 0 0 no-repeat;
+  background: url("../../../resources/images/popup/card_logo.gif") 0 0 no-repeat;
   text-indent: -999em
 }
 
 .card.hana {
   width: 74px;
-  background: url("/_ui/desktop/common/images/popup/card_logo.gif") 0 -50px no-repeat;
+  background: url("../../../resources/images/popup/card_logo.gif") 0 -50px no-repeat;
   text-indent: -999em
 }
 
 .card.nk {
   width: 115px;
-  background: url("/_ui/desktop/common/images/popup/card_logo.gif") 0 -100px no-repeat;
+  background: url("../../../resources/images/popup/card_logo.gif") 0 -100px no-repeat;
   text-indent: -999em
 }
 
 .card.kb {
   width: 120px;
-  background: url("/_ui/desktop/common/images/popup/card_logo.gif") 0 -150px no-repeat;
+  background: url("../../../resources/images/popup/card_logo.gif") 0 -150px no-repeat;
   text-indent: -999em
 }
 
@@ -692,7 +692,7 @@ input[type="week"]:disabled {
   display: inline-block;
   color: #222;
   line-height: 26px;
-  background: url("/_ui/desktop/common/images/common/ico_point.png") no-repeat;
+  background: url("../../../resources/images/common/ico_point.png") no-repeat;
 }
 
 .cp_txt.point {
@@ -771,7 +771,7 @@ input[type="week"]:disabled {
   margin-left: 15px;
   padding-left: 15px;
   color: #999;
-  background: url("/_ui/desktop/common/images/common/ico_txt_line.gif") 0 2px no-repeat;
+  background: url("../../../resources/images/common/ico_txt_line.gif") 0 2px no-repeat;
 }
 
 .title_wrap .sh_wrap {
@@ -791,7 +791,7 @@ input[type="week"]:disabled {
 .title_wrap h5.bul_tlt {
   font-size: 14px;
   padding-left: 10px;
-  background: url("/_ui/desktop/common/images/common/bul_tlt.gif") 0 5px no-repeat;
+  background: url("../../../resources/images/common/bul_tlt.gif") 0 5px no-repeat;
 }
 
 .title_wrap h6 {
@@ -828,7 +828,7 @@ input[type="week"]:disabled {
 .cnts_title span a {
   display: inline-block;
   padding: 0 20px 0 40px;
-  background: url("/_ui/desktop/common/images/products/ico_location_arr.png") 0 50% no-repeat;
+  background: url("../../../resources/images/products/ico_location_arr.png") 0 50% no-repeat;
 }
 
 .cnts_title span a:first-child {
@@ -1200,7 +1200,7 @@ input[type="week"]:disabled {
   height: 21px;
   line-height: 12px;
   border: 1px solid #ccc;
-  background: url("/_ui/desktop/common/images/common/btn_arr1.png") right 50% no-repeat;
+  background: url("../../../resources/images/common/btn_arr1.png") right 50% no-repeat;
 }
 
 .btn.arrow span {
@@ -1217,7 +1217,7 @@ input[type="week"]:disabled {
   padding-left: 15px;
   line-height: 22px;
   border: none;
-  background: url("/_ui/desktop/common/images/common/ico_arr.png") 5px 7px no-repeat;
+  background: url("../../../resources/images/common/ico_arr.png") 5px 7px no-repeat;
 }
 
 .btn_close {
@@ -1228,7 +1228,7 @@ input[type="week"]:disabled {
   width: 9px;
   height: 9px;
   display: block;
-  background: url("/_ui/desktop/common/images/common/btn_close.png") center center no-repeat;
+  background: url("../../../resources/images/common/btn_close.png") center center no-repeat;
   border: none;
   cursor: pointer;
   overflow: hidden;
@@ -1247,18 +1247,18 @@ input[type="week"]:disabled {
   background: #fff;
   border: 1px solid #a3a3a3;
   font-size: 14px;
-  background: url("/_ui/desktop/common/images/common/ico_download.gif") right 50% no-repeat;
+  background: url("../../../resources/images/common/ico_download.gif") right 50% no-repeat;
 }
 
 .bul_sty01 {
   padding-left: 11px;
-  background: url("/_ui/desktop/common/images/common/li_bul_1.png") 0 8px no-repeat;
+  background: url("../../../resources/images/common/li_bul_1.png") 0 8px no-repeat;
   font-size: 12px;
 }
 
 .bul_sty01_li li {
   padding-left: 11px;
-  background: url("/_ui/desktop/common/images/common/li_bul_1.png") 0 8px no-repeat;
+  background: url("../../../resources/images/common/li_bul_1.png") 0 8px no-repeat;
   line-height: 22px;
   font-size: 12px
 }
@@ -1391,7 +1391,7 @@ input[type="week"]:disabled {
 
 .tab_b li {
   float: left;
-  background: url("/_ui/desktop/common/images/common/bul_1.gif") left 4px no-repeat
+  background: url("../../../resources/images/common/bul_1.gif") left 4px no-repeat
 }
 
 .tab_b li:first-child {
@@ -1499,14 +1499,14 @@ input[type="week"]:disabled {
   line-height: 25px;
   display: block;
   border: 1px solid #e3e3e3;
-  background: #f5f5f5 url("/_ui/desktop/common/images/common/ico_svlink.png") 30px 20px no-repeat
+  background: #f5f5f5 url("../../../resources/images/common/ico_svlink.png") 30px 20px no-repeat
 }
 
 .svlink li a span {
   display: inline-block;
   width: 30px;
   height: 20px;
-  background: url("/_ui/desktop/common/images/common/ico_svlink_arr.png") 10px 8px no-repeat;
+  background: url("../../../resources/images/common/ico_svlink_arr.png") 10px 8px no-repeat;
   overflow: hidden;
   text-indent: -100px;
 }
@@ -1531,7 +1531,7 @@ input[type="week"]:disabled {
 .toggle_type1>dt {
   position: relative;
   border-bottom: 1px solid #ebebeb;
-  background: url("/_ui/desktop/common/images/common/ico_toggle.png") right 30px no-repeat;
+  background: url("../../../resources/images/common/ico_toggle.png") right 30px no-repeat;
 }
 
 .toggle_type1>dt.on {
@@ -1594,7 +1594,7 @@ input[type="week"]:disabled {
   padding: 12px 0 12px 20px;
   color: #363636;
   border-bottom: 1px solid #e3e3e3;
-  background: #f5f5f5 url("/_ui/desktop/common/images/common/ico_toggle2.png") right 18px no-repeat;
+  background: #f5f5f5 url("../../../resources/images/common/ico_toggle2.png") right 18px no-repeat;
   font-weight: bold;
 }
 
@@ -1649,7 +1649,7 @@ input[type="week"]:disabled {
   float: right;
   width: inherit;
   padding-left: 15px;
-  background: url("/_ui/desktop/common/images/common/btn_close.png") 0 7px no-repeat;
+  background: url("../../../resources/images/common/btn_close.png") 0 7px no-repeat;
 }
 
 .qna_box {
@@ -1665,7 +1665,7 @@ input[type="week"]:disabled {
   float: left;
   width: 32px;
   height: 32px;
-  background: url("/_ui/desktop/common/images/common/ico_qna.png") 0 0 no-repeat;
+  background: url("../../../resources/images/common/ico_qna.png") 0 0 no-repeat;
   text-indent: -100px;
   overflow: hidden;
 }
@@ -1698,7 +1698,7 @@ input[type="week"]:disabled {
   float: left;
   width: 32px;
   height: 32px;
-  background: url("/_ui/desktop/common/images/common/ico_qna.png") -70px 0 no-repeat;
+  background: url("../../../resources/images/common/ico_qna.png") -70px 0 no-repeat;
   text-indent: -100px;
   overflow: hidden;
 }
@@ -1756,7 +1756,7 @@ input[type="week"]:disabled {
   display: inline-block;
   width: 25px;
   height: 24px;
-  background: url("/_ui/desktop/common/images/common/ico_gnb_sh.png") no-repeat;
+  background: url("../../../resources/images/common/ico_gnb_sh.png") no-repeat;
   text-indent: -100px;
   overflow: hidden;
 }
@@ -1824,7 +1824,7 @@ input[type="week"]:disabled {
   height: 22px;
   overflow: hidden;
   text-indent: -100px;
-  background: url("/_ui/desktop/common/images/common/btn_close_s.png") no-repeat center center;
+  background: url("../../../resources/images/common/btn_close_s.png") no-repeat center center;
 }
 
 .gnb_sh_result .result_list .btn_svclose {
@@ -1882,7 +1882,7 @@ input[type="week"]:disabled {
   width: 17px;
   height: 16px;
   float: left;
-  background: url("/_ui/desktop/common/images/common/btn_sh_all.png") 4px 5px no-repeat;
+  background: url("../../../resources/images/common/btn_sh_all.png") 4px 5px no-repeat;
   text-indent: -100px;
   overflow: hidden;
 }
@@ -1909,12 +1909,12 @@ input[type="week"]:disabled {
   display: inline-block;
   width: 160px;
   height: 30px;
-  background: url("/_ui/desktop/common/images/common/ico_sh_arr.png") 140px 13px no-repeat;
+  background: url("../../../resources/images/common/ico_sh_arr.png") 140px 13px no-repeat;
   z-index: 4
 }
 
 .sh_all_wrap .ranklist.on {
-  background: url("/_ui/desktop/common/images/common/ico_sh_arr.png") 140px -14px no-repeat;
+  background: url("../../../resources/images/common/ico_sh_arr.png") 140px -14px no-repeat;
 }
 
 .sh_all_wrap .ranklist .tlt_top {
@@ -1946,7 +1946,7 @@ input[type="week"]:disabled {
   display: block;
   color: #363636;
   font-size: 12px;
-  background: url("/_ui/desktop/common/images/common/ico_sh_num.png") no-repeat;
+  background: url("../../../resources/images/common/ico_sh_num.png") no-repeat;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -2177,7 +2177,7 @@ input[type="week"]:disabled {
 .search_sv_wrap .alink a {
   padding: 0 7px;
   display: inline-block;
-  background: url("/_ui/desktop/common/images/common/ico_linkline.gif") no-repeat center left;
+  background: url("../../../resources/images/common/ico_linkline.gif") no-repeat center left;
 }
 
 .search_sv_wrap .alink a:first-child {
@@ -2557,7 +2557,7 @@ table .ico_pic {
   width: 15px;
   height: 15px;
   text-indent: -999em;
-  background: url("/_ui/desktop/common/images/common/ico_list_bul.gif") 0 3px no-repeat;
+  background: url("../../../resources/images/common/ico_list_bul.gif") 0 3px no-repeat;
 }
 
 table .ico_new {
@@ -2566,7 +2566,7 @@ table .ico_new {
   width: 28px;
   height: 15px;
   text-indent: -999em;
-  background: url("/_ui/desktop/common/images/common/ico_list_bul.gif") -42px 3px no-repeat
+  background: url("../../../resources/images/common/ico_list_bul.gif") -42px 3px no-repeat
 }
 
 table .ico_secret {
@@ -2575,7 +2575,7 @@ table .ico_secret {
   width: 15px;
   height: 15px;
   text-indent: -999em;
-  background: url("/_ui/desktop/common/images/common/ico_list_bul.gif") -98px 3px no-repeat
+  background: url("../../../resources/images/common/ico_list_bul.gif") -98px 3px no-repeat
 }
 
 table .answer_ready {
@@ -2820,7 +2820,7 @@ table td .receive_choice>span label {
   width: 15px;
   margin: 0 5px;
   height: 13px;
-  background: url("/_ui/desktop/common/images/common/ico_paging.png") 0 0 no-repeat;
+  background: url("../../../resources/images/common/ico_paging.png") 0 0 no-repeat;
   text-indent: -999em;
   cursor: pointer;
 }
@@ -3032,7 +3032,7 @@ table td .receive_choice>span label {
 .cl_select a.no_color {
   width: 18px;
   height: 18px;
-  background-image: url("/_ui/desktop/common/images/common/color_chip_no_order.gif");
+  background-image: url("../../../resources/images/common/color_chip_no_order.gif");
   border: 1px solid #cacaca;
   cursor: default;
 }
@@ -3109,7 +3109,7 @@ table td .receive_choice>span label {
   display: block;
   text-indent: -100px;
   overflow: hidden;
-  background: url("/_ui/desktop/common/images/common/ico_tb_arr.png") no-repeat center center;
+  background: url("../../../resources/images/common/ico_tb_arr.png") no-repeat center center;
 }
 
 .basket_info .pt_list {
@@ -3223,7 +3223,7 @@ table td .receive_choice>span label {
   width: 40px;
   height: 20px;
   color: #222;
-  background: url("/_ui/desktop/common/images/common/ico_ship.gif") no-repeat right 4px;
+  background: url("../../../resources/images/common/ico_ship.gif") no-repeat right 4px;
 }
 
 .shcode_wrap {
@@ -6745,7 +6745,7 @@ table td .receive_choice>span label {
   margin-left: 15px;
   padding-left: 15px;
   color: #999;
-  background: url("/_ui/desktop/common/images/common/ico_txt_line.gif") 0 5px no-repeat;
+  background: url("../../../resources/images/common/ico_txt_line.gif") 0 5px no-repeat;
   line-height: 24px;
 }
 
@@ -7100,13 +7100,13 @@ table.e-gift .tlt_wrap p {
 
 .float_left.e-gift .guide_comment {
   font-size: 11px;
-  background: url("/_ui/desktop/common/images/common/ico_err.png") 0 16px no-repeat;
+  background: url("../../../resources/images/common/ico_err.png") 0 16px no-repeat;
   line-height: inherit;
   padding-top: 12px
 }
 
 .tblwrap.receive_info .guide_comment.second {
-  background: url("/_ui/desktop/common/images/common/ico_err.png") 0 4px no-repeat;
+  background: url("../../../resources/images/common/ico_err.png") 0 4px no-repeat;
   line-height: inherit;
   padding-top: 0;
   margin-left: 0
@@ -7681,7 +7681,7 @@ table.e-gift .tlt_wrap p {
 }
 
 .login_wrap.renewal1904 .inner_box .title_wrap h4 a.otp {
-  background: url("/_ui/desktop/common/images/common/ico_txt_line.gif") right center no-repeat;
+  background: url("../../../resources/images/common/ico_txt_line.gif") right center no-repeat;
   padding-right: 20px;
   margin-right: 20px
 }
@@ -7724,7 +7724,7 @@ table.e-gift .tlt_wrap p {
 }
 
 .login_wrap.renewal1904 .border_box1 .title_wrap.otp1904 h4:first-child {
-  background: url("/_ui/desktop/common/images/common/ico_txt_line.gif") right center no-repeat;
+  background: url("../../../resources/images/common/ico_txt_line.gif") right center no-repeat;
   padding-right: 20px;
   margin-right: 20px;
   margin-left: 0

@@ -772,7 +772,7 @@ function kakaoLogin(){
                     <input class="btn gray" value="더한섬닷컴 가입" type="button" style="width:200px" onclick="simpJoin();">
                 </div>
             </div>
-        </div>
+        </div> 
         <a href="#" class="btn_close" id="closeLayerPop" onclick="layerPopup('close');"><img src="${pageContext.request.contextPath}/resources/images/popup/ico_close.png"></a>
     </div>
 </div>
