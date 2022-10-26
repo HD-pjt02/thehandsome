@@ -41,19 +41,19 @@ import lombok.extern.slf4j.Slf4j;
 public class MemberController {
 	private static final Logger logger = LoggerFactory.getLogger(MemberController.class);
 
-	   @Autowired
-	   private MemberService memberService;
-	   @Resource
-	   CartService cartService;
-	   
-	   @Resource
-	   ProductService productService;
-	   
-	   @Resource
-	   MyOrderService myOrderService;
+	@Autowired
+	private MemberService memberService;
+	@Resource
+	CartService cartService;
 
-	   @Autowired
-	   private BCryptPasswordEncoder pwEncoder;
+	@Resource
+	ProductService productService;
+
+	@Resource
+	MyOrderService myOrderService;
+
+	@Autowired
+	private BCryptPasswordEncoder pwEncoder;
 
 	/***************** 회원가입 관련 기능 **********************/
 	@RequestMapping(value = "/joinstart", method = { RequestMethod.GET })
@@ -168,14 +168,14 @@ public class MemberController {
 		log.info("로그인 폼");
 		return "member/login";
 	}
-	
+
 	@RequestMapping(value = "/logout", method = { RequestMethod.GET, RequestMethod.POST })
 	public void logout(HttpSession session) {
 		session.removeAttribute("member");
 		log.info("로그아웃 액션");
 	}
 
-	@RequestMapping(value = "/isduplglobaluid", method = { RequestMethod.GET })//요거 포스트였어요
+	@RequestMapping(value = "/isduplglobaluid", method = { RequestMethod.GET }) // 요거 포스트였어요
 	public @ResponseBody String isduplglobaluid(@RequestParam Map<String, Object> map) {
 		log.info("통합회원 여부 체크");
 		MemberDTO memberDTO = new MemberDTO();
@@ -185,7 +185,7 @@ public class MemberController {
 		log.info("pw: " + memberDTO.getPassword());
 
 		Map<String, String> msg = new HashMap<String, String>();
-		
+
 		log.info("" + msg);
 		return "exist";
 	}
@@ -207,10 +207,10 @@ public class MemberController {
 
 			if (true == pwEncoder.matches(rawPw, encodePw)) {
 				session.setAttribute("member", memberInfo);
-			
+
 			} else {
 				model.addAttribute("result", 0);
-			
+
 			}
 
 		} else {
@@ -277,13 +277,15 @@ public class MemberController {
 	@RequestMapping("/mycart")
 	public String cart(HttpSession session, Model model) {
 		logger.info("mycart 실행");
-
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		if(memberInfo == null) {
+			return "redirect:/member/login";
+		}
 		// int mno = Integer.parseInt(session.getAttribute("1").toString());
-		int mno = 1;
-		System.out.println(mno);
+		int mno = memberInfo.getMno();
+
 		// mno라는 사람의 쇼핑백 정보를 DB 쇼핑백 테이블에서 가져온다.
 		List<CartDTO> carts = cartService.getCartProducts(mno);
-		logger.info("여기까지 mycart 실행1");
 		for (CartDTO cart : carts) {
 			ProductDTO p = productService.getProduct(cart.getPcode());
 
@@ -304,7 +306,6 @@ public class MemberController {
 
 			cart.setSizes(productService.getProductSize(p));
 		}
-		logger.info("여기까지 mycart 실행2");
 		model.addAttribute("carts", carts);
 
 		return "member/mycart";
@@ -329,45 +330,44 @@ public class MemberController {
 		return "redirect:/member/insertorder?checkedItems=" + String.valueOf(maxVal) + ",&itemsLength=1";
 	}
 
-	@PostMapping("/changeProductOption")
-	public String changeProductOption(int cartnoSelected, String pcodeSelected, String colorSelected,
-			String sizeSelected, int amountSelected, HttpSession session) {
+	@RequestMapping("/changeProductOption")
+	public String changeProductOption(int cartno, String pcode, String pcolor, String psize, int pamount,
+			HttpSession session) {
 		logger.info("changeProductOption 실행");
 
 		CartDTO cart = new CartDTO();
-		cart.setCartno(cartnoSelected);
-		cart.setPcolor(colorSelected);
-		cart.setPsize(sizeSelected);
-		cart.setPcode(pcodeSelected);
+		cart.setCartno(cartno);
+		cart.setPcolor(pcolor);
+		cart.setPsize(psize);
+		cart.setPcode(pcode);
+		cart.setPamount(pamount);
 		// cart.setMno(Integer.parseInt(session.getAttribute("mno").toString()));
 		cart.setMno(1);
 		// 변경하려는 값이 이미 존재하는지 확인한다.
-		int cartno = cartService.selectCartno(cart);
+		int cartnumber = cartService.selectCartno(cart);
 
-		if (cartno == -1) {
+		if (cartnumber == -1) {
 			// 쇼핑백에 이미 같은 종류의 상품이 담겨있으면 값을 갱신한다.
 			cartService.updateCart(cart);
 		} else {
 			// 이미 존재한다면 변경하려는 행을 삭제하고, 이전에 존재하는 행을 갱신한다.
-			if (cartnoSelected != cartno) {
-				cartService.deleteCart(cartnoSelected);
+			if (cartno != cartnumber) {
+				cartService.deleteCart(cartno);
 				cart.setCartno(cartno);
 			}
 			cartService.updateCart(cart);
 		}
 
 		// String scode = pcodeSelected + "_" + colorSelected + "_" + sizeSelected;
-		System.out.println(pcodeSelected);
-		System.out.println(colorSelected);
-		System.out.println(sizeSelected);
-		int remainStock = productService.getCartStock(pcodeSelected, colorSelected, sizeSelected).getPamount();
-		
-		cart.setPamount(Math.min(amountSelected, remainStock));
+		// int remainStock = productService.getCartStock(pcodeSelected, colorSelected,
+		// sizeSelected).getPamount();
+
+		// cart.setPamount(Math.min(amountSelected, remainStock));
 		cartService.updateCart(cart);
 
 		// 너무 많은 디비 접근이 있을 거 같아서 변경하는 곳 한 군데만 재고를 보여준다.
-		session.setAttribute("remainStock", remainStock);
-		session.setAttribute("remainCartno", cartnoSelected);
+		// session.setAttribute("remainStock", remainStock);
+		session.setAttribute("remainCartno", cartno);
 
 		return "redirect:/member/mycart";
 	}

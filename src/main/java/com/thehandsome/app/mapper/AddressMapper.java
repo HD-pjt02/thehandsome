@@ -8,7 +8,7 @@ import com.thehandsome.app.dto.AddressDTO;
 
 @Mapper
 public interface AddressMapper {
-	public int insertAddress(AddressDTO address);
-	public AddressDTO selectBaseAddress(int mno);
-	public List<AddressDTO> selectAddresses(int mno);
+   public int insertAddress(AddressDTO address);
+   public AddressDTO selectBaseAddress(int mno);
+   public List<AddressDTO> selectAddresses(int mno);
 }

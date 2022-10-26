@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.thehandsome.app.mapper.MyOrderMapper">
-   <select id="selectProductOrders" parameterType="HashMap"
+      <select id="selectProductOrders" parameterType="HashMap"
       resultType="OrderItemListDTO">
       <![CDATA[
          SELECT rnum, ono, pcode, pcolor, psize,
@@ -14,10 +14,10 @@
                   oamount, pname, bname
                  FROM (
                      select i.ono as ono, substr(i.sno, 1, instr(i.sno,'_')-1) as pcode, 
-                      substr(i.sno, instr(i.sno,'_')+1, 2) as pcolor,
+                      SUBSTR(i.sno, INSTR(i.sno, '_', 1, 1) + 1, INSTR(i.sno, '_', 1, 2) - INSTR(i.sno, '_', 1, 1) - 1) AS pcolor,
                       substr(i.sno, instr(i.sno,'_',-1)+1) as psize, i.oamount as oamount,
                       p.pname as pname, b.bname as bname
-                          from orderitem i, product p, brand b
+                          from orderitem i, product p, brand b 
                           where ono in (select ono from orderitemlist where mno = #{mno})
                           and p.pcode = substr(i.sno, 1, instr(i.sno,'_')-1)
                           and p.bname = b.bname
@@ -29,6 +29,8 @@
          WHERE rnum >= #{page.startRowNo}
       ]]>
    </select>
+   
+   
 
    <select id="selectProductOrderCount" resultType="int"
       parameterType="HashMap">

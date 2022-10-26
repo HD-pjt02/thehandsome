@@ -12,22 +12,22 @@ import com.thehandsome.app.service.AddressService;
 
 @Service
 public class AddressServiceImpl implements AddressService{
-	
-	@Resource
-	private AddressMapper addressMapper;
-	
-	@Override
-	public int insertAddress(AddressDTO address) {
-		return addressMapper.insertAddress(address);
-	}
+   
+   @Resource
+   private AddressMapper addressMapper;
+   
+   @Override
+   public int insertAddress(AddressDTO address) {
+      return addressMapper.insertAddress(address);
+   }
 
-	@Override
-	public AddressDTO getBaseAddress(int mno) {
-		return addressMapper.selectBaseAddress(mno);
-	}
+   @Override
+   public AddressDTO getBaseAddress(int mno) {
+      return addressMapper.selectBaseAddress(mno);
+   }
 
-	@Override
-	public List<AddressDTO> getAddresses(int mno) {
-		return addressMapper.selectAddresses(mno);
-	}
+   @Override
+   public List<AddressDTO> getAddresses(int mno) {
+      return addressMapper.selectAddresses(mno);
+   }
 }

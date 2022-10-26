@@ -19,27 +19,12 @@
 			<h4><a href="/mypage">마이페이지<!-- 마이페이지 --></a></h4>
 			<div class="lnb">
 						<dl>
-							<dt>주문조회</dt>
-							<dd><a href="/mypage/myorders" onclick="GA_Event('마이페이지','LNB','주문/배송/반품/취소');">주문/배송/반품/취소</a></dd>
-							</dl>
-						<dl>
-							<dt>혜택관리</dt>
-							<dd><a href="/mypage/voucher" onclick="GA_Event('마이페이지','LNB','나의 쿠폰');">나의 쿠폰<!-- 쿠폰함 --></a></dd>
-							</dl>
-						<dl>
 							<dt>나의 상품관리</dt>
 							<dd><a href="/mypage/myWish" onclick="GA_Event('마이페이지','LNB','위시리스트');">위시리스트<!-- 위시리스트 --></a></dd>
 							</dl>
 						<dl>
-							<dt>나의 정보관리</dt>
-							<dd><a href="/mypage/personInfomationChangePWCheck" onclick="GA_Event('마이페이지','LNB','개인정보 변경/탈퇴');">개인정보 변경/탈퇴</a></dd>
-							<dd><a href="/mypage/shoppingAddressPWCheck" onclick="GA_Event('마이페이지','LNB','배송지 관리');">배송지 관리</a></dd>
-							</dl>
-						<dl>
 							<dt>나의 활동관리</dt>
 							<!-- <dd><a href="#">회원등급</a></dd> -->
-							<dd><a href="/mypage/myreview" onclick="GA_Event('마이페이지','LNB','내 상품평');">내 상품평</a></dd>
-							<dd><a href="/mypage/myqna" onclick="GA_Event('마이페이지','LNB','상품 Q&amp;A');">상품 Q&amp;A</a></dd>
 							<dd><a href="/mypage/mymantomaninquiry" onclick="GA_Event('마이페이지','LNB','1:1 문의');">1:1 문의</a></dd>
 							<!-- <dd><a href="#">이벤트 참여현황</a></dd> -->
 						</dl>
@@ -933,22 +918,19 @@ function dayClose(cName, cValue, cDay) {
         <input type="hidden" name="eterm" class="input_date" title="기간 입력" id="eterm" value="2022-10-19" readonly="">
     </form>
     <!-- 회원정보 -->
+    <!-- 박소은 jsp 수정 -->
     <div class="profile_info1 clearfix review_betterment1905">
-            <div class="name type2">
-                    <span class="ico_grade">박*은&nbsp;<span>님</span></span>
+            <div  style="padding-left: 50px;">
+                    <span style=" font-size: 30px;" class="ico_grade">박*은&nbsp;<span style=" font-size: 25px;" >님</span></span>
                     <span class="grade_txt"></span>
                 </div>              
-                <div class="point" style="border:0; padding-left:0; width:95px">
-                    <p class="title">COUPON</p>
-                    <a class="count" href="/ko/mypage/voucher" onclick="GA_Event('마이페이지','회원정보','COUPON');">0&nbsp;<span>장</span></a>
-                </div>
-                <div class="point review">
-                    <p class="title">상품평</p>
-                    <a href="/mypage/myreview" class="count" onclick="GA_Event('마이페이지','회원정보','상품평');">0&nbsp;<span>개</span></a>
+                <div class="point" style="border:0; text-align: center; width:95px">
+                    <p class="title">MILEAGE</p>
+                    <a class="count" href="/ko/mypage/voucher" onclick="GA_Event('마이페이지','회원정보','COUPON');">0&nbsp;<span>점</span></a>
                 </div>
                 <div class="point type2">
-                   <p class="title2">간편회원은 H.Point / 한섬마일리지 적립과 사용이 불가합니다. <br>혜택을 받으시려면, H.Point 통합회원으로 가입해주세요.</p>
-                   <a href="javascript:void(0);" id="hpoinJoin" class="btn" onclick="GA_Event('마이페이지','회원정보','H.POINT 회원가입');">H.Point 회원가입</a>
+                   <p class="title2">지금 바로 Event 페이지를 방문하시고 룰렛 돌리시면, <br>랜덤 마일리지 즉시 지급!</p>
+                   <a href="/event">이벤트 페이지 바로가기</a>
                </div>
             </div>
     <!-- 회원정보 -->

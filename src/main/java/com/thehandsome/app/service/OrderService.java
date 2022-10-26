@@ -15,15 +15,15 @@ import com.thehandsome.app.dto.OrderItemListDTO;
  * 주문 서비스(주문수량, 결제, 상세상품넘어오는 값들, 주문)
  */
 public interface OrderService {
-	public int insertOrder(OrderItemListDTO orderitemlist, int ano);
+   public int insertOrder(OrderItemListDTO orderitemlist, int ano);
 
-	public int insertItemToProductOrderItem(OrderItemDTO orderitem);
+   public int insertItemToProductOrderItem(OrderItemDTO orderitem);
 
-	public int decreaseStockAmount(String scode, int amount);
+   public int decreaseStockAmount(String scode, int amount);
 
-	// 결제하기 버튼을 누르고 일어나는 트랜잭션
-	public void paymentOrder(OrderItemListDTO orderitemlist, AddressDTO address, 
-			String checkedItems, int itemsLength);
+   // 결제하기 버튼을 누르고 일어나는 트랜잭션
+   public void paymentOrder(OrderItemListDTO orderitemlist, AddressDTO address, 
+         String checkedItems, int itemsLength);
 
-	public Long checkMemberOrderProduct(OrderItemListDTO orderDTO);
+   public Long checkMemberOrderProduct(OrderItemListDTO orderDTO);
 }

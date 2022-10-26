@@ -36,10 +36,10 @@
 		parameterType="OrderItemListDTO">
 		<![CDATA[
 			SELECT 1
-			from orderitemlist
+			from orderitem
 			where mno = #{mno}
-			and pcode = #{pcode}
-			and pcolor = #{pcolor}
+			and pno = #{pcode}
+			and ccolorcode = #{pcolorcode}
 		]]>
 	</select>
 	

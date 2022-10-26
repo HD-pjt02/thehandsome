@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" session="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -2836,53 +2836,11 @@ var loginYn = "<%=loginYn%>";
 								 onclick="GA_Event('공통','헤더_메뉴','로그인')"> 로그인 <!-- 로그인 -->
 							</a></li>
 						</sec:authorize>
-							<li class="header_dropmemu mypage"><a href="/mypage/mypage"
-								class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
+							<li class="util_menu" ><a href="/mypage/mypage"
+								 onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
 								<div class="list">
-									<ul>
-										<li><a href="/member/myorders"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_주문조회')"> 주문조회 <!-- 주문조회 -->
-										</a></li>
-										<li><a href="/mypage/myGradeInfo"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_나의회원등급')"> 나의회원등급 <!-- 온라인등급 -->
-										</a></li>
-										<li><a href="/mypage/voucher"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_쿠폰조회')"> 쿠폰조회 <!-- 쿠폰조회 -->
-										</a></li>
-										<li><a href="/mypage/mypoint"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_마일리지조회')"> 마일리지조회 <!-- 포인트조회 -->
-										</a></li>
-										<li><a href="/mypage/myEGiftCard"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_e-Gift Card')">
-												e-Gift Card <!-- e-Gfit Card -->
-										</a></li>
-										<li><a href="/mypage/personInfomationChangePWCheck"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_회원정보변경')"> 회원정보변경 <!-- 회원정보변경 -->
-										</a></li>
-										<li><a href="/svcenter/mantomaninquiry"
-											onclick="GA_Event('공통','헤더_메뉴','마이페이지_온라인상담')"> 온라인상담 <!-- 온라인 상담 -->
-										</a></li>
-									</ul>
 								</div></li>
 
-							<li>
-								<div class="header_dropmemu lang_switch lang_1911">
-									<a href="javascript:void(0);" class="btn"
-										onclick="GA_Event('공통','헤더_메뉴','LANGUAGE')">LANGUAGE</a>
-									<div class="list"
-										style="display: none; height: 87px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-										<ul>
-											<li><a href="javascript:language('ko')"
-												onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_한국어')">한국어</a></li>
-											<li><a href="javascript:language('en')"
-												onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_ENGLISH')">ENGLISH</a>
-											</li>
-											<li><a href="javascript:language('zh')"
-												onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_中文')">中文</a></li>
-										</ul>
-									</div>
-								</div>
-							</li>
 						</ul>
 					</div>
 				</div>
@@ -3286,66 +3244,11 @@ var loginYn = "<%=loginYn%>";
 								</div>
 							</div> <!--  status2.last end --> <!-- categoryItemList end --></li>
 					</ul>
-
+					<!-- 박소은 header 수정 -->
 					<ul class="cate_m cate_banner gnbul2" id="cate_m_main"
 						style="float: right;">
-						<li><a href="/ko/magazine/exhibitions"
-							onclick="GA_Event('공통','GNB','기획전');"> 기획전 <!-- 기획전 -->
-						</a></li>
-						<li><a href="/ko/magazine/events"
+						<li><a href="event"
 							onclick="GA_Event('공통','GNB','이벤트');">이벤트</a></li>
-						<!-- THE 매거진 수정 200330 -->
-						<li><a href="/ko/magazine/submain" class="magazine1803"
-							onclick="GA_Event('공통','GNB','매거진');"> 매거진 <!-- 매거진 --> <span
-								class="arr">arrow</span>
-						</a>
-							<div class="sub_back">
-								<div class="sub_menu clearfix newtmzbox">
-									<ul class="the_maga_sublist">
-										<li><a href="/ko/magazine/submain">전체보기</a>
-											<ul>
-												<li><a href="/ko/magazine/coverstory">커버스토리</a></li>
-												<li><a href="/ko/magazine/weeklypick">위클리 픽</a></li>
-												<li><a href="/ko/magazine/selection">셀렉션</a></li>
-												<li><a href="/ko/magazine/styleguide">스타일 가이드</a></li>
-												<li><a href="/ko/magazine/some">#SOME</a></li>
-												<li><a href="/ko/magazine/news">뉴스 </a></li>
-											</ul></li>
-									</ul>
-									<div class="img_themaga_sub">
-										<a href="/ko/magazine/editorials/8806742841416"> <img
-											class="amc_img"
-											src="http://cdn.thehandsome.com/mobile/editorial/list/banner/20221011_52054778728252265_ko.jpg"
-											alt="" />
-											<p>
-												<strong>커버스토리</strong> <span>아우터로 완성한 톰 바이브</span>
-											</p>
-										</a> <a
-											href="/magazine/newsDetailtemplatetype4?newsCode=8804154103580">
-											<img class="amc_img"
-											src="http://cdn.thehandsome.com/mobile/news/list/banner/20221011_52049783713360676_ko.jpg"
-											alt="" />
-											<p>
-												<strong>뉴스</strong> <span>클럽모나코 X 배우 남지현 브이로그 공개</span>
-											</p>
-										</a> <a href="/ko/magazine/editorials/8806742808648"> <img
-											class="amc_img"
-											src="http://cdn.thehandsome.com/mobile/editorial/list/banner/20221007_51715717836831438_ko.jpg"
-											alt="" />
-											<p>
-												<strong>커버스토리</strong> <span>타임옴므가 마주할 겨울</span>
-											</p>
-										</a>
-									</div>
-								</div>
-							</div></li>
-						<!-- // THE 매거진 수정 200330 -->
-						<!-- 20210319 편집샵 추가 -->
-						<li><a href="/ko/ed/edMain"
-							onclick="GA_Event('공통','GNB','편집샵');">편집샵</a></li>
-						<!-- 20200710 룩북 추가 -->
-						<li><a href="/ko/ou/outletMain"
-							onclick="GA_Event('공통','GNB','아울렛');">아울렛*</a></li>
 					</ul>
 				</div>
 				<!-- 첫번째 c:if -->
@@ -3354,8 +3257,6 @@ var loginYn = "<%=loginYn%>";
 				<!-- 201803 util menu -->
 				<div class="util_menu util_menu1803">
 					<ul class="clearfix">
-						<li><a href="javascript:void(0);"> <span class="ico_sh">search</span>
-						</a></li>
 						<li><a href="/mypage/myWish"
 							onclick="GA_Event('공통','유틸_메뉴','위시리스트');"> <span
 								class="ico wishlist">wish list</span> <span class="count">
