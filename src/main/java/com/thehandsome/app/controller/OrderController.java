@@ -251,13 +251,14 @@ public class OrderController {
 
    @RequestMapping("/ordering")
    public String order(HttpSession session, HttpServletRequest request) {
+	  MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
       logger.info("ordering 실행");
 
       // 결제 총액을 저장한다.
       int total = 0;
       // 배송비를 저장한다.
       int post = 2500;
-
+//미림 요거 바로주문할 때도 세션에 담아주세요
       int itemsLength = Integer.parseInt(session.getAttribute("itemsLength").toString());
       String checkedItems = session.getAttribute("checkedItems").toString();
       System.out.println(itemsLength);
@@ -272,6 +273,7 @@ public class OrderController {
          int cartno = Integer.parseInt(st.nextToken());
 
          CartDTO cart = cartService.getCartProduct(cartno);
+         //미림 여기에서 오류나는데 원인이 세션에 없어서 그렇습ㄴ디ㅏ
          ProductDTO p = productService.getProduct(cart.getPcode());
 
          List<ColorDTO> colors = productService.getProductColor(p);
@@ -299,6 +301,7 @@ public class OrderController {
       request.setAttribute("carts", carts);
       request.setAttribute("total", total);
       request.setAttribute("post", post);
+     // request.setAttribute("mileage", memberInfo.getMileage());
       
       System.out.println(carts);
       System.out.println(total);
@@ -306,13 +309,13 @@ public class OrderController {
       
       
       //Integer.parseInt(session.getAttribute("mno").toString())
-      MemberDTO member = memberService.getMember(1);
-      String phone = member.getPhone();
+      //MemberDTO member = memberService.getMember(memberInfo.getMno());
+      String phone = memberInfo.getPhone();
       //System.out.println(phone);
       phone = phone.substring(0, 3) + "-" + phone.substring(3, 7) + "-" + phone.substring(7);
-      member.setPhone(phone);
-      request.setAttribute("member", member);
-      System.out.println(member);
+      memberInfo.setPhone(phone);
+      request.setAttribute("member", memberInfo);
+      System.out.println(memberInfo);
       return "order/order";
    }
 
