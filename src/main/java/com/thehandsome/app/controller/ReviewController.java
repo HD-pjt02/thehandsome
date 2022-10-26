@@ -132,6 +132,7 @@ public class ReviewController {
 		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setPcodecolor(productCode);
+		session.setAttribute("currentId", memberInfo.getId());
 		if(!reviewType.equals("ALL")) {
 			reviewDTO.setReviewtype(reviewType);	
 		}
@@ -169,11 +170,14 @@ public class ReviewController {
 			pObject.put("product_pno", review.getProduct_pno());
 			pObject.put("reviewtype", review.getReviewtype());
 			
-			
+			pObject.put("purchaseColorName", review.getPcodecolor());
+			pObject.put("purchaseSize", review.getPsize());
 			pObject.put("realAccumulationReviewPoint", 0);
 			pObject.put("photographCnt", 1);
 			pObject.put("bestYN", false);
 			pObject.put("profileData", "NORMAL");//등급
+			pObject.put("orderNumber", 1);
+			pObject.put("purchaseProdYN", 'Y');
 			
 			
 
@@ -204,11 +208,11 @@ public class ReviewController {
 	@ResponseBody // 데이터만 조회해서 보내주기 때문에 화면 전환이 아닌 전송방식
 	public String reviewWriteBeforeVerify(@RequestParam String productCode, HttpSession session) { // 세션 로그인 체크를 위함 
 		MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");//세션에 있는 멤버 관련 내용을 모두 가져옴 
+		session.setAttribute("currentId", memberInfo.getId());
 		System.out.println(memberInfo.getId());
 		ColorDTO colorDTO = productService.getCurrentProductColor(productCode);
 		ProductDTO productDTO = productService.getProduct(colorDTO.getPcode());
 		System.out.println(colorDTO.getPcodecolor());
-		
 		OrderItemListDTO orderDTO = new OrderItemListDTO();
 		orderDTO.setMno(memberInfo.getMno());
 		orderDTO.setPcode(colorDTO.getPcode());
@@ -263,26 +267,6 @@ public class ReviewController {
 		System.out.println((String)map.get("productCode"));
 		ColorDTO colorDTO = productService.getCurrentProductColor((String)map.get("productCode"));
 		
-		OrderItemListDTO orderDTO = new OrderItemListDTO();
-		orderDTO.setMno(memberInfo.getMno());
-		orderDTO.setPcode((String)map.get("pcode"));
-		orderDTO.setPcolor(colorDTO.getPcolor());
-		
-		
-		Long orderResult = orderService.checkMemberOrderProduct(orderDTO);
-		Long reviewResult = -1L;
-		if(orderResult != 1) {
-			return new JSONObject("rsltMsg","주문 내역이 없습니다.").toString();
-		}
-		ReviewDTO reviewCheck = new ReviewDTO();
-		reviewCheck.setMid(memberInfo.getId());
-		reviewCheck.setPcode((String)map.get("pcode"));
-		reviewCheck.setPcodecolor(colorDTO.getPcodecolor());
-		
-		reviewResult = reviewService.checkMemberReviewProduct(reviewCheck);
-		if(reviewResult == 1L) {
-			return new JSONObject("rsltMsg","이미 리뷰를 작성했습니다.").toString();
-		}
 		
 		
 		System.out.println("리뷰쓰기 폼");
@@ -326,26 +310,7 @@ public class ReviewController {
 			System.out.println((String)map.get("productCode"));
 			ColorDTO colorDTO = productService.getCurrentProductColor((String)map.get("productCode"));
 			
-			OrderItemListDTO orderDTO = new OrderItemListDTO();
-			orderDTO.setMno(memberInfo.getMno());
-			orderDTO.setPcode((String)map.get("pcode"));
-			orderDTO.setPcolor(colorDTO.getPcolor());
-			
-			
-			Long orderResult = orderService.checkMemberOrderProduct(orderDTO);
-			Long reviewResult = -1L;
-			if(orderResult != 1) {
-				return new JSONObject("rsltMsg","주문 내역이 없습니다.").toString();
-			}
-			ReviewDTO reviewCheck = new ReviewDTO();
-			reviewCheck.setMid(memberInfo.getId());
-			reviewCheck.setPcode((String)map.get("pcode"));
-			reviewCheck.setPcodecolor(colorDTO.getPcodecolor());
-			
-			reviewResult = reviewService.checkMemberReviewProduct(reviewCheck);
-			if(reviewResult == 1L) {
-				return new JSONObject("rsltMsg","이미 리뷰를 작성했습니다.").toString();
-			}
+	
 			
 			
 			Long nextRno = reviewService.selectNextReviewNo();

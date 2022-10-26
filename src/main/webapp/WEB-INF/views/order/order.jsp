@@ -461,6 +461,14 @@ input[type="text"], input[type="password"], input[type="email"] {
                      <fmt:formatNumber value="${post}" />
                   </div>
                </div>
+               <div class="d-flex">
+                  <div style="font-size: 11px; color: #555555">마일리지 사용</div>
+                  <div
+                     style="font-size: 11px; color: #555555; margin-left: auto; margin-bottom: 13px;">
+                     ₩
+                     <fmt:formatNumber value="${member.mileage}" />
+                  </div>
+               </div>
             </div>
             <div style="background-color: #f5f5f5; padding: 20px 10px 15px 20px">
                <div class="d-flex align-items-center">
@@ -469,7 +477,7 @@ input[type="text"], input[type="password"], input[type="email"] {
                   <div
                      style="font-size: 18px; font-weight: bolder; color: #c69c6c; margin-left: auto;">
                      ₩
-                     <fmt:formatNumber value="${total + post}" />
+                     <fmt:formatNumber value="${total + post - member.mileage}" />
                   </div>
                </div>
             </div>

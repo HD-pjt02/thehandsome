@@ -934,7 +934,7 @@ var loginYn = "<%=loginYn%>";
 	};
 
 	function goLogin() {
-		location.href = '/ko/member/login';
+		location.href = '/member/login';
 	}
 
 	function goEalryEvent() {

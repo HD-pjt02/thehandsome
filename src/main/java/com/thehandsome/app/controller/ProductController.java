@@ -482,8 +482,15 @@ public class ProductController {
 
 	@RequestMapping("/insertToCartForDirectOrder")
 	public String insertToCartForDirectOrder(CartDTO cart, HttpSession session) {
-
-		cart.setMno(Integer.parseInt(session.getAttribute("mno").toString()));
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		cart.setMno(memberInfo.getMno());
+		//cart.setMno(Integer.parseInt(session.getAttribute("mno").toString()));
+		//미림 받아온 파라미터 로그로 확인
+		log.info(cart.getMno());
+		log.info(cart.getPcode());
+		log.info(cart.getPcolor());
+		log.info(cart.getPamount());
+		log.info(cart.getPsize());
 		cartService.insertCart(cart);
 
 		return "redirect:/member/cartForDirectOrder";

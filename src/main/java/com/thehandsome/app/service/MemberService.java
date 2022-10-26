@@ -14,4 +14,6 @@ public interface MemberService {
 
 	MemberDTO getMember(int parseInt);
 
+	Long updateMemberMileage(MemberDTO memberDTO);
+
 }

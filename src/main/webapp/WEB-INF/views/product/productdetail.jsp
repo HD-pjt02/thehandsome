@@ -2187,7 +2187,7 @@ function addtoCartProcessFunction(){
                      $(document).scrollTop(scrollTop);
                      $(".popwrap.w_type_1").css("margin-top",Number(scrollTop)+Number(top)+"px");
                      la.confirmAction = function(){
-                        var url = '/ko/member/login';
+                        var url = '/member/login';
                         window.location.href=url;
                      };
                      checkAthomeProcess = true;
@@ -2450,9 +2450,12 @@ function addtoCartFunction(qty,check4pmOver){
          }
     });
 }
+
+//미림 장바구니 담기 완료 및 바로 주문화면으로 전송
 function buynow(check4pmOver)
 {
-    if($('form[name=addToCartForm] input[name=buyNowYn]').val() == "true") {
+    //바로주문
+	if($('form[name=addToCartForm] input[name=buyNowYn]').val() == "true") {
         $("#addToCartButton, #addToCartBuyNowButton").off("click").on("click",  function(e) {
             new layerAlert("처리중입니다.");
             return false;
@@ -2461,20 +2464,37 @@ function buynow(check4pmOver)
         $("#addToCartButton").prop("href", "");
         $("#addToCartBuyNowButton").prop("onclick", "");
         
+        //파라미터 넘겨주는 것들 화면 여기저기에서 넘겨줌
+        var pamountVal = $("#txtqty").val();
+        var pcodeVal = $("form[id=reviewForm] input[name=pcode]").val();
+        var pcolorVal = $("form[id=reviewForm] input[name=currentpcolor]").val();
+        var psizeVal = "";
+        $(".size_chip li > a").each(function(){
+            if($(this).hasClass("on")){
+                psizeVal = $(this).text();
+                
+            }
+         });
+        //로그인이 되어 있는지 확인한다.
+       <% if(session.getAttribute("member")==null){%>
+          goLogin("directorder");
+        <%}%>
+          //미림 주석  return;
+        
         if("false" == "true"  &&  "ko" == "ko"){
         	NetFunnel_Action({action_id:"buy_now"},function(ev,ret){
-        		
-                    location.replace("/member/myorders");
+        			//미림 바로주문 화면 넘겨주는 코드와 파라미터 지정		
+                     location.replace("/product/insertToCartForDirectOrder?pcolor="+pcolorVal+"&psize="+psizeVal+"&pamount="+pamountVal+"&pcode="+pcodeVal);
                     
         
             });
         }else{
         	
-                location.replace("/member/myorders");
+        	location.replace("/product/insertToCartForDirectOrder?pcolor="+pcolorVal+"&psize="+psizeVal+"&pamount="+pamountVal+"&pcode="+pcodeVal);
             
         }
         
-    } else {
+    } else {//장바구니
         var layerMsg = "";
         if(check4pmOver){
             layerMsg = '오후{0}시 이후 주문시 일반배송으로 변경됩니다.';
@@ -3634,7 +3654,8 @@ function reviewHtml(data){
 	             reviewHtml += "</li>";
 	         }
 	     }else{
-	        for(var i=0; i<list.length; i++){
+	        
+	    	 for(var i=0; i<list.length; i++){
 	            reviewHtml += "<li class='evaluation_view' id='evaluation_view"+i+"'>";
 	            reviewHtml += "<div class='member_info_top'>";
 	            reviewHtml += "    <ul>";
@@ -3657,8 +3678,15 @@ function reviewHtml(data){
 	            reviewHtml += "            </div>";
 	            }
 	            /* if(list[i].originUid == 'anonymous'){ */
-	            if(list[i].mid == 'anonymous'){
-	                if ( 'Y' == 'Y' ) {
+	            	   //로그인이 되어 있는지 확인한다.
+		       <% if(session.getAttribute("member")==null){%>
+		          goLogin("review");
+		          return;
+	            <%}%>
+	            
+	            if(list[i].mid == '<%=session.getAttribute("currentId")%>'){
+	               
+	                if ( 'Y' == '미림리뷰수정삭제' ) {
 	                    if ( list[i].bestYN != true ) {
 	                        if ( (list[i].realAccumulationReviewPoint == null || list[i].realAccumulationReviewPoint <= 0)
                                             && (list[i].realAccumulationPhotoPoint == null || list[i].realAccumulationPhotoPoint <= 0) ) {
@@ -3668,8 +3696,9 @@ function reviewHtml(data){
 	                    }
 	                    
 	                } else {
-	                    reviewHtml += '        <li class="float_right delete"><a href="#;" onclick="javascript:deleteReview('+list[i].id+','+i+')">삭제</a></li>';
-	                    reviewHtml += '        <li class="float_right modify"><a href="#;" onclick="javascript:modifyReview('+"'"+list[i].id+"'"+",'"+list[i].purchaseColor+"'"+",'"+list[i].purchaseColorName+"'"+",'"+list[i].purchaseSize+"'"+",'"+list[i].orderNumber+"'"+",'"+list[i].purchaseProdYN+"'"+')">수정</a></li>';
+	                  
+	                	reviewHtml += '        <li class="float_right delete"><a href="#;" onclick="javascript:deleteReview('+list[i].mid+','+i+')">삭제</a></li>';
+	                    reviewHtml += '        <li class="float_right modify"><a href="#;" onclick="javascript:modifyReview('+"'"+list[i].mid+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].psize+"'"+",'"+list[i].orderNumber+"'"+",'"+list[i].purchaseProdYN+"'"+')">수정</a></li>';
 	                }
 	            }
 	            reviewHtml += "    </ul>";
@@ -4297,7 +4326,8 @@ function deleteReviewFile(li,idx){
 }
 
 function deleteReview(reviewPk, deleteTarget) {
-    var lc;
+    alert("zzzzzzzzzz");
+	var lc;
     if ( 'Y' == 'Y' ) {
         lc = new customLayerConfirm('삭제 하시겠습니까?', '확인', '취소');    
     } else {
@@ -5300,7 +5330,7 @@ function getWarehousingPage(productcode, size) {
     
     var clc = new customLayerConfirm('로그인 후 신청 가능합니다.<br />로그인 하시겠습니까?', '확인', '취소');
     clc.confirmAction = function(){
-        location.href='/ko/member/login';
+        location.href='/member/login';
     };
     
     return;
@@ -5343,7 +5373,7 @@ function getWarehousingPage(productcode, size) {
             if ( 'N' == data.loginYn ) {
                 var clc = new customLayerConfirm("장시간 사용하지 않아 로그아웃 되었습니다.", "확인", "취소");
                 clc.confirmAction = function() {
-                    location.href='/ko/member/login';
+                    location.href='/member/login';
                 };
             }
             
@@ -5373,7 +5403,7 @@ function reqRewarehousingAlram() {
     
     var clc = new customLayerConfirm("로그인 후 신청 가능합니다.<br />로그인 하시겠습니까?", "확인", "취소");
     clc.confirmAction = function(){
-        location.href='/ko/member/login';
+        location.href='/member/login';
     };
     return;
     
@@ -5394,7 +5424,7 @@ function reqRewarehousingAlram() {
             if ( data.rsltCd == 'E1') {
                 var clc = new customLayerConfirm("장시간 사용하지 않아 로그아웃 되었습니다.", "확인", "취소");
                 clc.confirmAction = function() {
-                    location.href='/ko/member/login';
+                    location.href='/member/login';
                 };
             } else {
                 var msg = '';
@@ -7720,7 +7750,7 @@ function addWishListProdClick(productBaseCode) {
         };
 
         lc.confirmAction = function(){//확인 호출 펑션
-            location.href = "/ko/member/login";
+            location.href = "/member/login";
         };
     
     
@@ -9875,7 +9905,9 @@ function onMouseOutRecommend() {
 				method="post" enctype="multipart/form-data">
 				<input type="hidden" name="productCode"> <input
 					type="hidden" name="pcode" value="${product.pcode}"> <input
-					type="hidden" name="pno" value="${product.pno}"> <input
+					type="hidden" name="pno" value="${product.pno}">
+					<input
+					type="hidden" name="currentpcolor" value="${currentpcolor}"> <input
 					type="hidden" name="productCodeType"> <input type="hidden"
 					name="orderNumber" id="orderNumber" value=""> <input
 					type="hidden" name="purchaseColor" id="purchaseColor" value="">

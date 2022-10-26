@@ -613,8 +613,8 @@
 .popwrap .evaluation_list1807 .evaluation_view.on .sizecolor{display:block;}
 .evaluation_list1807 .evaluation_view .review_more_1807 a{display:block;position:absolute;bottom:0;right:0;width:60px;height:60px;background:#fff url('http://cdn.thehandsome.com/_ui/desktop/common/images/common/btn_zoom.png') no-repeat;text-indent:-999em;}
 .evaluation_list1807 .evaluation_view.on .review_more_1807 a{background-position:left bottom;}
-.evaluation_list1807 .evaluation_view .member_info_top .modify a{display: inline-block;width: 30px;height: 30px;overflow: hidden;background: url(/_ui/desktop/common/images/products/ico_sns.png) no-repeat -45px -94px;background-size: 150px auto;text-indent:-999em;}
-.evaluation_list1807 .evaluation_view .member_info_top .delete a{display: inline-block;width: 30px;height: 30px;overflow: hidden;background: url(/_ui/desktop/common/images/products/ico_sns.png) no-repeat -45px -94px;background-size: 150px auto;background-position: -92px -94px;text-indent:-999em;}
+.evaluation_list1807 .evaluation_view .member_info_top .modify a{display: inline-block;width: 30px;height: 30px;overflow: hidden;background: url(http://www.thehandsome.com/_ui/desktop/common/images/products/ico_sns.png) no-repeat -45px -94px;background-size: 150px auto;text-indent:-999em;}
+.evaluation_list1807 .evaluation_view .member_info_top .delete a{display: inline-block;width: 30px;height: 30px;overflow: hidden;background: url(http://www.thehandsome.com/_ui/desktop/common/images/products/ico_sns.png) no-repeat -45px -94px;background-size: 150px auto;background-position: -92px -94px;text-indent:-999em;}
 /*상품상세 - 상품평쓰기 UI 1807*/
 .customerreviewwritediv1807{margin-top:40px;}
 .customerreviewwritediv1807 > h3{display:inline-block;}

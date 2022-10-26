@@ -235,7 +235,8 @@ public class MemberController {
 			@RequestParam(defaultValue = "pcode") String type, @RequestParam(defaultValue = "") String keyword,
 			HttpServletRequest httpServletRequest) { // 회원의 주문한 상품 리스트
 		logger.info("myorders 실행");
-		int mno = Integer.parseInt(session.getAttribute("1").toString());// 어떤 회원 인지
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		int mno = memberInfo.getMno();// 어떤 회원 인지
 		// 페이징 처리
 		int totalRows = myOrderService.getProductOrderCount(mno, type, keyword);
 

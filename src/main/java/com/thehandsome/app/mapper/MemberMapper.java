@@ -15,4 +15,6 @@ public interface MemberMapper {
 	
 	MemberDTO findById(String id);
 
+	Long updateMemberMileage(MemberDTO memberDTO);
+
 }
