@@ -1881,7 +1881,7 @@ iframe.lnb {
     width: 20px;
     height: 40px;
     display: inline-block;
-    background: url('/_ui/desktop/common/images/common/ico_utilmenu.png') right 19px no-repeat;
+    background: url('../../../resources/images/common/ico_utilmenu.png') right 19px no-repeat;
     text-indent: -999em;
     margin: 3px 0 0 20px;
   }
@@ -1972,7 +1972,7 @@ iframe.lnb {
   position: absolute;
   overflow: hidden;
   text-indent: -999px;
-  background: url('/_ui/desktop/common/images/common/btn_close_w.png') center no-repeat;
+  background: url('../../../resources/images/common/btn_close_w.png') center no-repeat;
   top: 3px;
   right: 0;
 }
@@ -2003,7 +2003,7 @@ iframe.lnb {
 
 #headerWrap .top_nav .top_nav_wrap .brand_menu1803 .plus_brand .btn span {
   display: block;
-  background: url('/_ui/desktop/common/images/common/ico_brand_more.png') center no-repeat;
+  background: url('../../../resources/images/common/ico_brand_more.png') center no-repeat;
   width: 29px;
   height: 40px;
   overflow: hidden;
@@ -2075,7 +2075,7 @@ iframe.lnb {
   position: absolute;
   top: 12px;
   right: 0;
-  background: url('/_ui/desktop/common/images/common/btn_br_delete.png') right center no-repeat;
+  background: url('../../../resources/images/common/btn_br_delete.png') right center no-repeat;
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -2102,7 +2102,7 @@ iframe.lnb {
 .util_menu1803>ul>li .ico_sh {
   display: block;
   width: 18px;
-  background: url('/_ui/desktop/common/images/common/btn_sh_all.png') 0 center no-repeat;
+  background: url('../../../resources/images/common/btn_sh_all.png') 0 center no-repeat;
   overflow: hidden;
   text-indent: -999em;
   text-align: left;
@@ -2259,7 +2259,7 @@ iframe.lnb {
   height: 10px;
   display: inline-block;
   padding-right: 5px;
-  background: url('/_ui/desktop/common/images/common/chk_aply_btn.png') no-repeat;
+  background: url('../../../resources/images/common/chk_aply_btn.png') no-repeat;
 }
 
 #headerWrap .gnbwarp .gnb_nav1803 ul.gnbul1>li:first-child .btn_br_reset {
@@ -2728,7 +2728,7 @@ iframe.lnb {
   position: absolute;
   overflow: hidden;
   text-indent: -999px;
-  background: url('/_ui/desktop/common/images/common/btn_close_w.png') center no-repeat;
+  background: url('../../../resources/images/common/btn_close_w.png') center no-repeat;
   top: 33px;
   right: -9px;
 }
@@ -2765,7 +2765,7 @@ iframe.lnb {
 
 #headerWrap .top_nav .top_nav_wrap .brand_menu1903 .plus_brand .btn span {
   display: block;
-  background: url('/_ui/desktop/common/images/common/ico_brand_more.png') center no-repeat;
+  background: url('../../../resources/images/common/ico_brand_more.png') center no-repeat;
   width: 29px;
   height: 40px;
   overflow: hidden;
@@ -2835,7 +2835,7 @@ iframe.lnb {
   position: absolute;
   top: 12px;
   right: 0;
-  background: url('/_ui/desktop/common/images/common/btn_br_delete.png') right center no-repeat;
+  background: url('../../../resources/images/common/btn_br_delete.png') right center no-repeat;
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -3010,7 +3010,7 @@ iframe.lnb {
   height: 10px;
   display: inline-block;
   padding-right: 5px;
-  background: url('/_ui/desktop/common/images/common/chk_aply_btn.png') no-repeat;
+  background: url('../../../resources/images/common/chk_aply_btn.png') no-repeat;
 }
 
 #headerWrap .gnbwarp .gnb_nav1903 ul.gnbul1>li:first-child .btn_br_reset {

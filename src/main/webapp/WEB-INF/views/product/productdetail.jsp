@@ -1,17 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="/WEB-INF/views/common/headerMain.jsp"%>
-
+<meta id="_csrf" name="_csrf" content="${_csrf.token}"/>
+<meta id="_csrf_header" name="_csrf_header" content="${_csrf.headerName}"/>
 <script type="text/javascript">
 
-if(typeof kakaoPixel !== 'undefined'){
-    var kakaoTrackId = '3482319208237780781'; //개발
-    if(location.href.indexOf("www.thehandsome.com") > -1) kakaoTrackId = '7855119525940511046'; //운영
-    kakaoPixel(kakaoTrackId).pageView();
-    kakaoPixel(kakaoTrackId).viewContent({
-        id: 'MN2C8WJC026WP'
-    });
-}
 </script>
 	<script type="text/javascript"
 		src="${pageContext.request.contextPath}/resources/js/handsome/jquery.bxslider.min.js"></script>
@@ -21,9 +14,7 @@ if(typeof kakaoPixel !== 'undefined'){
 		href="${pageContext.request.contextPath}/resources/css/popup.css"
 		media="all">
 
-	<!-- *) 제품상세페이지 분석코드 -->
-	<!-- AceCounter eCommerce (Product_Detail) v7.5 Start -->
-	<!-- Function and Variables Definition Block Start -->
+
 	<script language="javascript" type="text/javascript">
 var _JV="AMZ2013010701";//script Version
 var _UD='undefined';var _UN='unknown';
@@ -44,10 +35,7 @@ if(!_IDV(_pd)) var _pd = '' ;
 if(!_IDV(_ct)) var _ct = '' ;
 if(!_IDV(_amt)) var _amt = '' ;
 </script>
-	<!-- Function and Variables Definition Block End-->
-
-	<!-- AceCounter eCommerce (Product_Detail) v7.5 Start -->
-	<!-- Data Allocation (Product_Detail) -->
+	
 	<script language="javascript">
 
 _pd =_RP('캐시미어 더블 재킷');  
@@ -59,9 +47,9 @@ _A_nl=Array('1');
 _A_pl=Array('${productCode}'); 
 _A_pn=Array('캐시미어 더블 재킷'); 
 _A_ct=Array('BR02'); </script>
-	<!-- AceCounter eCommerce (Product_detail) v6.4 Start -->
 
-	<!--  criteo 상품 페이지 트래커 START  -->
+
+
 	<script type="text/javascript" src="//static.criteo.net/js/ld/ld.js"
 		async="true"></script>
 	<script type="text/javascript">
@@ -77,54 +65,7 @@ _A_ct=Array('BR02'); </script>
 </script>
 	<!--  criteo 상품 페이지 트래커 END -->
 
-	<!-- Enliple Tracker Start -->
-	<script type="text/javascript">
-try{
-	var ENP_VAR = {
-		collect: {},
-		conversion: { product: [] }
-	};
-	ENP_VAR.collect.productCode = '${productCode}';
-	ENP_VAR.collect.productName = '캐시미어 더블 재킷';
-	ENP_VAR.collect.price = '1250000';
-	ENP_VAR.collect.dcPrice = '1250000';
-	ENP_VAR.collect.soldOut = 'N';
 	
-    ENP_VAR.collect.imageUrl = 'http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg';
-	    
-	ENP_VAR.collect.topCategory = '여성';
-	ENP_VAR.collect.firstSubCategory = '여성';
-	ENP_VAR.collect.secondSubCategory = '아우터';
-	ENP_VAR.collect.thirdSubCategory = '재킷';
-	
-	/* 간편 결제 시스템을 통한 전환.*/
-	ENP_VAR.conversion.product.push({
-		productCode : '${productCode}',
-		productName : '캐시미어 더블 재킷',
-		price : '1250000',
-		dcPrice : '1250000',
-		qty : '1',
-		soldOut : 'N',
-		
-		imageUrl : 'http://newmedia.thehandsome.com/MN/2C/FW/${productCode}_S01.jpg',
-		    
-		topCategory : '여성',
-		firstSubCategory : '여성',
-		secondSubCategory : '아우터',
-		thirdSubCategory : '재킷'
-	});
-	
-	(function(a,g,e,n,t){a.enp=a.enp||function(){(a.enp.q=a.enp.q||[]).push(arguments)};n=g.createElement(e);n.async=!0;n.defer=!0;n.src="https://cdn.megadata.co.kr/dist/prod/enp_tracker_self_hosted.min.js";t=g.getElementsByTagName(e)[0];t.parentNode.insertBefore(n,t)})(window,document,"script");
-	/* 상품수집 */
-	enp('create', 'collect', 'thehandsome', { device: 'W' });
-	/* 장바구니 버튼 타겟팅 (이용하지 않는 경우 삭제) */
-	enp('create', 'cart', 'thehandsome', { device: 'W', btnSelector: '.cart1803' });
-	/* 찜 버튼 타겟팅 (이용하지 않는 경우 삭제) */
-	enp('create', 'wish', 'thehandsome', { device: 'W', btnSelector: '.wishlist1803' });
-} catch(e) {
-    console.log(e)
-}
-</script>
 	<!-- Enliple Tracker End -->
 
 	<script type="text/javascript">
@@ -206,10 +147,11 @@ $(document).ready(function(){
         
         //초기화
         reviewReset();
-      
+       
         //로그인이 되어 있는지 확인한다.
-        
+       <% if(session.getAttribute("member")==null){%>
           goLogin("review");
+        <%}%>
           //미림 주석  return;
         
         
@@ -221,6 +163,12 @@ $(document).ready(function(){
                 data : { "productCode" : $('#productCode').val()// /review/reviewWriteBeforeVerify해당 url 이 호출될때 json타입으로 컨트롤러 보내줌 
                 },
                 success : function(data) {
+                	
+                	if(data.rsltMsg != undefined){   
+                            var la = new layerAlert("[알림] " + data.rsltMsg);
+                            return;
+                	}
+                	else{
                 	var purchaseListCount = 0;
                 	var la;
                 	if('ko' == 'ko') {
@@ -472,9 +420,9 @@ $(document).ready(function(){
                     
                     // 상품평 팝업 닫기시 초기화 용
                     $('#closeWriteChk').val('Y');
-                    
+                	}
                 },
-                error   : function() {
+                error   : function(error) {
                     var la = new layerAlert("[Error] " + error);
                     return;
                 }
@@ -682,9 +630,10 @@ $(document).ready(function(){
             return;
         }
         
-        
+        <%if(session.getAttribute("member")==null){%>
             goLogin("review"); //추후 로그인처리 미림주석
             return;
+        <%}%>
         
         
         $("#reviewHeadline").val($("#reviewHeadline").val().trim());
@@ -2397,7 +2346,9 @@ function addtoCartFunction(qty,check4pmOver){
          type: "GET",            
          data: $('form[name=addToCartForm]').serialize(),//해당form안에 들어있는 name으로 된 데이터를 모두 넘겨준다. 컨트롤러에서는 필요한것만 받음 
          success: function(msg){
-             var errorMsg = msg;
+             console.log("REAL");
+        	 console.log($('form[name=addToCartForm]').serialize());
+        	 var errorMsg = msg;
              if(errorMsg == null || errorMsg == ''){
                 // start of Facebook Pixel Code
                     if('ko' != 'zh'){
@@ -3075,7 +3026,7 @@ function fn_detailProductAjax(productCode){
             /* CMB : 코디상품 세팅*/
             productCode = productCode.split("_",2).join("_");
             
-            $.ajax({
+          /*   $.ajax({
                  url: '/ko/p/getProductColorInofo',
                  type: "GET",
                  dataType:"json",
@@ -3434,7 +3385,7 @@ function fn_detailProductAjax(productCode){
                          }
                      }
                  },
-            });
+            }); */
             /* 코디상품 세팅 End*/
             
             //동영상 플레이
@@ -4728,7 +4679,7 @@ function uploadFilesubmit(){
              url: url,
              type: type,
              data: $('form#reviewForm').serialize(),//form에 있는 것들을 보내고
-             success: function(data){
+             success: function(data){alert(data);
                  if ( "F" == data.rsltCd ) {
                      if ( 'Y' == 'Y' ) {
                          var la = new customLayerAlert(data.rsltMsg);

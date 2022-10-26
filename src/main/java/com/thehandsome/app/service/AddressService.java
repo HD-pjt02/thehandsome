@@ -10,9 +10,9 @@ public interface AddressService {
 
 
 
-	public int insertAddress(AddressDTO address);
+   public int insertAddress(AddressDTO address);
 
-	public AddressDTO getBaseAddress(int mno);
+   public AddressDTO getBaseAddress(int mno);
 
-	public List<AddressDTO> getAddresses(int mno);
+   public List<AddressDTO> getAddresses(int mno);
 }

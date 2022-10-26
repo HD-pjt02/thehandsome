@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" session="true"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
@@ -2057,9 +2057,11 @@
 						</sec:authorize>
 						<sec:authorize access="isAnonymous()">
 						 <!-- 비로그인 상태 -->
+						 
 							<p class="gnbbr_txt">로그인 후 좋아하는 브랜드를 ♥해주세요. '적용하기' 버튼을 클릭하면
 										웹사이트 상단에 추가됩니다.</p>>
 						</sec:authorize>
+						
                                     </ul>
             </div>
         <div class="gnb_sh_wrap" style="display:none;">
@@ -2214,47 +2216,23 @@
                     <!--// 201705 search_box_wrap -->
                     <div class="util_menu" style="display:block;">
                         <ul class="clearfix">
-                            <li><a href="javascript:setLogout();" onclick="GA_Event('공통','헤더_메뉴','로그아웃')">로그아웃</a></li>
-                            <li class="header_dropmemu mypage">
-                                
-                            <a href="/ko/mypage" class="btn" onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
-                                <div class="list" style="display: none; height: 104px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-                                    <ul>
-                                        <li><a href="/ko/mypage/order/myorders" onclick="GA_Event('공통','헤더_메뉴','마이페이지_주문조회')">주문조회<!-- 주문조회 --></a></li>
-                                        <li><a href="/ko/mypage/voucher" onclick="GA_Event('공통','헤더_메뉴','마이페이지_쿠폰조회')">쿠폰조회<!-- 쿠폰조회 --></a></li>
-                                        <li><a href="/ko/mypage/personInfomationChangePWCheck" onclick="GA_Event('공통','헤더_메뉴','마이페이지_회원정보변경')">회원정보변경<!-- 회원정보변경 --></a></li>
-                                        <li><a href="/ko/svcenter/mantomaninquiry" onclick="GA_Event('공통','헤더_메뉴','마이페이지_온라인상담')">온라인상담<!-- 온라인 상담 --></a></li>
-                                        </ul>
-                                </div>
-                            </li>
+                            <sec:authorize access="isAuthenticated()">
+								<li><a href="javascript:setLogout();" onclick="GA_Event('공통','헤더_메뉴','로그아웃')">로그아웃</a></li>
+							</sec:authorize>
+							<sec:authorize access="isAnonymous()">
+								<li><a href="/member/login"
+									 onclick="GA_Event('공통','헤더_메뉴','로그인')"> 로그인 <!-- 로그인 -->
+								</a></li>
+								<li class="util_menu" ><a href="/mypage/mypage"
+								 onclick="GA_Event('공통','헤더_메뉴','마이페이지')">마이페이지</a>
+								<div class="list">
+								</div></li>
+							</sec:authorize>
                             
-                            <li>
-                                <div class="header_dropmemu lang_switch lang_1911">
-                                    <a href="javascript:void(0);" class="btn" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE')">LANGUAGE</a>
-                                    <div class="list" style="display: none; height: 87px; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
-                                        <ul>
-                                            <li><a href="javascript:language('ko')" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_한국어')">한국어</a></li>
-                                            <li><a href="javascript:language('en')" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_ENGLISH')">ENGLISH</a></li>
-                                            <li><a href="javascript:language('zh')" onclick="GA_Event('공통','헤더_메뉴','LANGUAGE_中文')">中文</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
+                            
                             </ul>
                     </div>
-                    <div class="honey_talk_service1905 remove1907"><!-- 추가 190702 -->
-                        <!-- vip 채팅 서비스 -->
-                        <div id="chatbotMain" style="display:none;">
-                            <!-- <div class="vip_chat_img">
-                                <span>VIP 채팅 서비스</span>
-                            </div> -->
-                            <!-- 200921 챗봇 이미지 변경 -->
-                            <a href="#none" class="btn_viptalk_v2 v3" onclick="callChatbot();GA_Event('공통','유틸_메뉴','하니톡');">
-                                <img src="http://cdn.thehandsome.com/_ui/desktop/common/images/main/talk-talk-chat-icon.png">
-                            </a>
-                        </div>
-                        <!-- //vip 채팅 서비스 -->
-                    </div>
+                    
                     </div>
             </div>
     

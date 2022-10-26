@@ -24,6 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.thehandsome.app.dto.ColorDTO;
 import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.OrderItemListDTO;
+import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.ReviewDTO;
 import com.thehandsome.app.service.OrderService;
 import com.thehandsome.app.service.ProductService;
@@ -202,13 +203,37 @@ public class ReviewController {
 	@GetMapping(value = "/reviewWriteBeforeVerify", produces = "application/json; charset=UTF-8")
 	@ResponseBody // 데이터만 조회해서 보내주기 때문에 화면 전환이 아닌 전송방식
 	public String reviewWriteBeforeVerify(@RequestParam String productCode, HttpSession session) { // 세션 로그인 체크를 위함 
-		ReviewDTO reviewDTO = new ReviewDTO();
-		reviewDTO.setPcodecolor(productCode); // 여기서 productcode 를 pcodecolor 라 지칭함 
+		MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");//세션에 있는 멤버 관련 내용을 모두 가져옴 
+		System.out.println(memberInfo.getId());
+		ColorDTO colorDTO = productService.getCurrentProductColor(productCode);
+		ProductDTO productDTO = productService.getProduct(colorDTO.getPcode());
+		System.out.println(colorDTO.getPcodecolor());
 		
-		ReviewDTO colorProduct = reviewService.getColorProduct(reviewDTO);
-
+		OrderItemListDTO orderDTO = new OrderItemListDTO();
+		orderDTO.setMno(memberInfo.getMno());
+		orderDTO.setPcode(colorDTO.getPcode());
+		orderDTO.setPcodecolor(colorDTO.getPcodecolor());
 		
 		JSONObject jsonObject = new JSONObject();
+		if(orderService.checkMemberOrderProduct(orderDTO) == null) {
+			jsonObject.put("rsltMsg", "주문 내역이 없습니다.");
+			return jsonObject.toString();
+		}
+		ReviewDTO reviewCheck = new ReviewDTO();
+		reviewCheck.setMid(memberInfo.getId());
+		reviewCheck.setPcode(colorDTO.getPcode());
+		reviewCheck.setPcodecolor(colorDTO.getPcodecolor());
+
+		if(reviewService.checkMemberReviewProduct(reviewCheck) != null) {
+			jsonObject.put("rsltMsg","이미 리뷰를 작성했습니다.");
+			return jsonObject.toString();
+		}
+		
+		
+		
+
+		
+		
 		JSONArray jsonArray = new JSONArray();
 		
 		jsonObject.put("orderProductReviewList", jsonArray);//주문내역을 확인 ? 

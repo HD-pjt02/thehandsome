@@ -8,6 +8,8 @@ import lombok.Data;
 @Data
 public class OrderItemDTO {
    private int ono;
+   // stock 넘버
    private String sno;
+   
    private int oamount;
 }

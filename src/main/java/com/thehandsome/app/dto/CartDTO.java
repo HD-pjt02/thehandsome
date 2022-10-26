@@ -12,16 +12,16 @@ import lombok.Data;
 @Data
 public class CartDTO {
    private int cartno;
+   private String cartcode;
+   private String pcode;
+   private String pname;
+   private String bname;
+   private int pprice;
    private String pcolor;
    private String psize;
    private int pamount;
    private int mno;
-   private String pcode;
    private List<ColorDTO> colors;
    private List<StockDTO> sizes;
    private int coloridx;
-   private String pname;
-   private String bname;
-   private int pprice;
-   private String cartcode;
 }

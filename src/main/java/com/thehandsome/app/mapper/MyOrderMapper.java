@@ -12,3 +12,4 @@ public interface MyOrderMapper {
    public List<OrderItemListDTO> selectProductOrders(HashMap<String, Object> mnoPage);
    public int selectProductOrderCount(HashMap<String, Object> map);
 }
+

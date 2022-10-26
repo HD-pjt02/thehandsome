@@ -85,4 +85,6 @@ public interface ProductMapper {
 	public StockDTO selectCartStock(String pcodeSelected, String colorSelected, String sizeSelected);
 
 	public ColorDTO getCurrentProductColor(String productCode);
+	
+	
 }
