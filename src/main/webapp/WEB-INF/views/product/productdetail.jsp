@@ -2350,13 +2350,15 @@ function addtoCartFunction(qty,check4pmOver){
         	 console.log($('form[name=addToCartForm]').serialize());
         	 var errorMsg = msg;
              if(errorMsg == null || errorMsg == ''){
+            	 
+             
                 // start of Facebook Pixel Code
-                    if('ko' != 'zh'){
+                  /*   if('ko' != 'zh'){
                         window._fbq.push (['track', 'AddToCart',{'value':$("#productPrice").val(),'currency':'KRW', content_type: 'product',
                             content_ids: 'MN2C8WJC026WP'}]);
-                    }
+                    } */
                 // end of Facebook Pixel Code
-                
+              
                 _A_pl=Array(productCode); 
                 AEC_F_D(productCode, 'i', qty);
                 
@@ -2380,7 +2382,7 @@ function addtoCartFunction(qty,check4pmOver){
                         lc.confirmAction = function(){
                             $(".btn_close").trigger("click");
                             
-                            var cartUrl = "/ko/shoppingbag";
+                            var cartUrl = "/member/mycart";
                             
                             if($("#storePickupCheck").is(":checked")) {
                                 cartUrl += "?cartDivision=store";
@@ -2419,7 +2421,9 @@ function addtoCartFunction(qty,check4pmOver){
                     $("#cartCount").text(cnt);
                 }
              }else{
-                if(msg.indexOf("당일출고") > -1){
+            	  
+             
+            	 if(msg.indexOf("당일출고") > -1){
                     var scrollTop = $(document).scrollTop();
                     var lc = new layerConfirm(msg, "쇼핑백 담기", "취소");
                     var top = $(".popwrap.w_type_1").css("margin-top").replace("px","");
@@ -2460,13 +2464,13 @@ function buynow(check4pmOver)
         if("false" == "true"  &&  "ko" == "ko"){
         	NetFunnel_Action({action_id:"buy_now"},function(ev,ret){
         		
-                    location.replace("/ko/login/checkout");
+                    location.replace("/member/myorders");
                     
         
             });
         }else{
         	
-                location.replace("/ko/login/checkout");
+                location.replace("/member/myorders");
             
         }
         
@@ -2487,7 +2491,7 @@ function buynow(check4pmOver)
         lc.confirmAction = function(){
             $(".btn_close").trigger("click");
             
-            var cartUrl = "/ko/shoppingbag";
+            var cartUrl = "/member/mycart";
             
             if($("#storePickupCheck").is(":checked")) {
                 cartUrl += "?cartDivision=store"; 
