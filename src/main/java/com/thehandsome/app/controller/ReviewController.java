@@ -207,32 +207,33 @@ public class ReviewController {
 		System.out.println(memberInfo.getId());
 		ColorDTO colorDTO = productService.getCurrentProductColor(productCode);
 		ProductDTO productDTO = productService.getProduct(colorDTO.getPcode());
-		System.out.println(productDTO.getPno());
 		System.out.println(colorDTO.getPcodecolor());
 		
 		OrderItemListDTO orderDTO = new OrderItemListDTO();
 		orderDTO.setMno(memberInfo.getMno());
-//		orderDTO.setPno(productDTO.getPno());
-//		orderDTO.setPcolorcode(colorDTO.getPcodecolor());
+		orderDTO.setPcode(colorDTO.getPcode());
+		orderDTO.setPcodecolor(colorDTO.getPcodecolor());
 		
-		
-		if(orderService.checkMemberOrderProduct(orderDTO) != 1) {
-			return new JSONObject("rsltMsg","주문 내역이 없습니다.").toString();
+		JSONObject jsonObject = new JSONObject();
+		if(orderService.checkMemberOrderProduct(orderDTO) == null) {
+			jsonObject.put("rsltMsg", "주문 내역이 없습니다.");
+			return jsonObject.toString();
 		}
 		ReviewDTO reviewCheck = new ReviewDTO();
 		reviewCheck.setMid(memberInfo.getId());
 		reviewCheck.setPcode(colorDTO.getPcode());
 		reviewCheck.setPcodecolor(colorDTO.getPcodecolor());
 
-		if(reviewService.checkMemberReviewProduct(reviewCheck) == 1L) {
-			return new JSONObject("rsltMsg","이미 리뷰를 작성했습니다.").toString();
+		if(reviewService.checkMemberReviewProduct(reviewCheck) != null) {
+			jsonObject.put("rsltMsg","이미 리뷰를 작성했습니다.");
+			return jsonObject.toString();
 		}
 		
 		
 		
 
 		
-		JSONObject jsonObject = new JSONObject();
+		
 		JSONArray jsonArray = new JSONArray();
 		
 		jsonObject.put("orderProductReviewList", jsonArray);//주문내역을 확인 ? 

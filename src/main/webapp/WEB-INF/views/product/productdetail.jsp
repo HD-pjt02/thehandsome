@@ -163,7 +163,8 @@ $(document).ready(function(){
                 data : { "productCode" : $('#productCode').val()// /review/reviewWriteBeforeVerify해당 url 이 호출될때 json타입으로 컨트롤러 보내줌 
                 },
                 success : function(data) {
-                	if(data.rsltMsg != null){   
+                	
+                	if(data.rsltMsg != undefined){   
                             var la = new layerAlert("[알림] " + data.rsltMsg);
                             return;
                 	}
@@ -421,7 +422,7 @@ $(document).ready(function(){
                     $('#closeWriteChk').val('Y');
                 	}
                 },
-                error   : function() {
+                error   : function(error) {
                     var la = new layerAlert("[Error] " + error);
                     return;
                 }

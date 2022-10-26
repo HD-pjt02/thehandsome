@@ -24,6 +24,7 @@ public class OrderItemListDTO {
    private int ano;
    private int oamount;
    private String pcode;
+   private String pcodecolor;
    private String pcolor;
    private String psize;
    private String pname;
