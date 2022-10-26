@@ -87,7 +87,7 @@ public class CartController {
 		
 		
 		int result = cartService.insertCart(cartDTO);
-		if(result < 1) {
+		if(result >= 1) {
 			return null;
 		}//insert 못할 경우 
 		
