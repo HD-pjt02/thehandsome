@@ -4,7 +4,7 @@ import lombok.Data;
 import java.sql.Timestamp;
 
 /* 
- * 작성자 : 정승하
+ * 작성자 : 정승하,신미림
  * 작성일 : 2022.10.17.월
  * 상품 상세 정보 저장하는 객체
  */

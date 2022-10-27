@@ -35,6 +35,15 @@ import com.thehandsome.app.service.MyOrderService;
 
 import lombok.extern.slf4j.Slf4j;
 
+
+/* 
+ * 작성자 : 신미림
+ * 작성일 : 2022.10.17.월
+ * 멤버 컨트롤러
+ * 회원관련부분 모두 포함
+*/
+
+
 @Controller
 @RequestMapping("/member")
 @Slf4j
@@ -53,7 +62,7 @@ public class MemberController {
 	MyOrderService myOrderService;
 
 	@Autowired
-	private BCryptPasswordEncoder pwEncoder;
+	private BCryptPasswordEncoder pwEncoder;//
 
 	/***************** 회원가입 관련 기능 **********************/
 	@RequestMapping(value = "/joinstart", method = { RequestMethod.GET })
@@ -78,6 +87,7 @@ public class MemberController {
 
 	}
 
+	
 	@RequestMapping(value = "/joininfoform", method = { RequestMethod.GET })
 	public String joininfoform() {
 		log.info("회원가입 정보 입력 폼");

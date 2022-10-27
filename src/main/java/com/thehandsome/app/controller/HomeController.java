@@ -24,6 +24,13 @@ import com.thehandsome.app.service.CategoryService;
 
 import lombok.extern.log4j.Log4j;
 
+
+/* 
+ * 작성자 : 신미림,박소은,김민석,정승하
+ * 작성일 : 2022.10.17.월
+ * 홈 컨트롤러
+*/
+
 @Controller
 public class HomeController {
 
