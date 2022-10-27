@@ -23,6 +23,7 @@ import com.thehandsome.app.service.WishlistService;
  * 좋아요 컨트롤러
 */
 
+//상품상세페이지에서 위시리스트 
 @Controller
 @RequestMapping("/wishlist")
 public class WishlistController {
@@ -36,7 +37,7 @@ public class WishlistController {
 	@ResponseBody
 	public String wishlistAddProductAction(@RequestParam String productCode, String wishOn, HttpSession session) {
 		MemberDTO memberInfo =(MemberDTO)session.getAttribute("member");
-		
+		//로그인을 해야지 좋아요가 눌리도록 한다. 
 
 		
 		WishlistDTO wishlistDTO = new WishlistDTO();
@@ -46,11 +47,11 @@ public class WishlistController {
 		
 		if(wishOn.equals("Y")) {
 			
-			Long result = wishlistService.deleteWishProduct(wishlistDTO);
+			Long result = wishlistService.deleteWishProduct(wishlistDTO);//좋아요를 눌러서 Y라면 좋아요테이블에서 삭제하고
 			
 		}else {
 			
-			Long result = wishlistService.insertWishProduct(wishlistDTO);
+			Long result = wishlistService.insertWishProduct(wishlistDTO);// Y가 아니라면 좋아요 테이블에 추가한다. 
 		}
 		
 		

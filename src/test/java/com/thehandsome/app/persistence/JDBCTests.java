@@ -10,6 +10,12 @@ import org.junit.Test;
 import lombok.extern.log4j.Log4j;
 
 
+/* 
+ * 작성자 : 신미림
+ * 작성일 : 2022.10.17.월
+ 
+*/
+
 
 @Log4j
 public class JDBCTests {

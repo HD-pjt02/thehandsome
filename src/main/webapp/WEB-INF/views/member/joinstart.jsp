@@ -2207,7 +2207,7 @@ $(document).ready(function(){
         
     });
     
-    /* 이메일 중복체크 */
+    /* 미림 - 이메일 중복체크 */
     $("#idDubChkBtn").click(function(){
         var vc = new ValidationCheck();
         vc.checkIdList = ['id','uidDomain'];

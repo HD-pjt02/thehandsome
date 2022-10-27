@@ -9,7 +9,7 @@ import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
 
-/* 작성자 : 정승하
+/* 작성자 : 정승하,신미림
  * 작성일 : 2022.10.17.월
  * 상품에 관련된 DB 호출을 관리하는 인터페이스
  */

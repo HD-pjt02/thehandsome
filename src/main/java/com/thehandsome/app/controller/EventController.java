@@ -33,7 +33,7 @@ public class EventController {
       else
          return "/member/login";
 
-   }
+   }// 이벤트의 경우 회원만 이벤트에 참여할 수 있도록 하였기에 로그인이 되어있는지 확인한다. 
    
    @GetMapping(value = "/wantmileage")
 	@ResponseBody
@@ -45,7 +45,7 @@ public class EventController {
 		}
 		
 		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
-		memberInfo.setMileage(memberInfo.getMileage()+mileage);
+		memberInfo.setMileage(memberInfo.getMileage()+mileage);//회원이 이벤트를 참여 하면 회원 테이블 안에 있는 마일리지 칼럼이 업데이터 되도록 함.
 		Long result = memberService.updateMemberMileage(memberInfo);
 		
 		if(result>=1) {

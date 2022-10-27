@@ -10,7 +10,7 @@ import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
-/* 작성자 : 정승하
+/* 작성자 : 정승하,신미림
  * 작성일 : 2022.10.18.월
  * 상품에 관련된 DB 호출을 관리하는 메퍼클래스
  */
@@ -82,8 +82,10 @@ public interface ProductMapper {
 	/* 색상 소팅 테스트*/
 	public List<ColorDTO> selectProductsColor(HashMap<String, Object> categoryPage);
 	
+	/*재고체크를  위함*/
 	public StockDTO selectCartStock(String pcodeSelected, String colorSelected, String sizeSelected);
 
+	/*현재상품에 대한 정보를 가져오기 위함*/
 	public ColorDTO getCurrentProductColor(String productCode);
 	
 	

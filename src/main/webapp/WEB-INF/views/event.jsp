@@ -68,7 +68,7 @@ const rLayerPopup = (num) => {
   }
   var la = "";
   if(mileage<=0){
-	la  = new layerAlert('꽝! 다음기회에');
+	la  = new layerAlert('당첨!! 5,000 마일리지 즉시 적립!');
   }
   else{
 	  $.ajax({
