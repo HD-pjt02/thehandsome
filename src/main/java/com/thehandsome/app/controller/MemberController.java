@@ -4,19 +4,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -28,10 +25,10 @@ import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.OrderItemListDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
-import com.thehandsome.app.service.MemberService;
 import com.thehandsome.app.service.CartService;
-import com.thehandsome.app.service.ProductService;
+import com.thehandsome.app.service.MemberService;
 import com.thehandsome.app.service.MyOrderService;
+import com.thehandsome.app.service.ProductService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -289,11 +286,12 @@ public class MemberController {
 	public String cart(HttpSession session, Model model) {
 		logger.info("mycart 실행");
 		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		int mno = memberInfo.getMno();
 		if(memberInfo == null) {
 			return "redirect:/member/login";
 		}
 		// int mno = Integer.parseInt(session.getAttribute("1").toString());
-		int mno = memberInfo.getMno();
+		
 
 		// mno라는 사람의 쇼핑백 정보를 DB 쇼핑백 테이블에서 가져온다.
 		List<CartDTO> carts = cartService.getCartProducts(mno);
@@ -327,7 +325,8 @@ public class MemberController {
 		logger.info("cartForDirectOrder 실행");
 
 		// int mno = Integer.parseInt(session.getAttribute("1").toString());
-		int mno = 1;
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		int mno = memberInfo.getMno();// 어떤 회원 인지
 		// mno라는 사람의 쇼핑백 정보를 DB 쇼핑백 테이블에서 가져온다.
 		List<CartDTO> carts = cartService.getCartProducts(mno);
 
@@ -353,7 +352,13 @@ public class MemberController {
 		cart.setPcode(pcode);
 		cart.setPamount(pamount);
 		// cart.setMno(Integer.parseInt(session.getAttribute("mno").toString()));
-		cart.setMno(1);
+		
+		
+		//세션변경 
+
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+
+		int mno = memberInfo.getMno();
 		// 변경하려는 값이 이미 존재하는지 확인한다.
 		int cartnumber = cartService.selectCartno(cart);
 
@@ -395,7 +400,11 @@ public class MemberController {
 	public String deleteAllCart(HttpSession session) {
 		logger.info("deleteallcart 실행");
 		// int mno = Integer.parseInt(session.getAttribute("1").toString());
-		int mno = 1;
+		//세션체크 추가 해줘야함 
+		MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+
+		int mno = memberInfo.getMno();
+		
 		List<CartDTO> carts = cartService.getCartProducts(mno);
 
 		for (CartDTO cart : carts) {

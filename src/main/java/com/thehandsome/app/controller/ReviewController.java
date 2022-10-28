@@ -370,6 +370,43 @@ public class ReviewController {
 		
 		}
 	
-	
+		@RequestMapping(value ="/modifyReviewPageAjax", method = {RequestMethod.GET})
+		@ResponseBody 
+		public String modifyReviewPageAjax(@RequestParam Map<String,Object> map,MultipartFile[] reviewFile, HttpSession session) {
+
+			MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");//세션에 있는 멤버 관련 내용을 모두 가져옴 
+			System.out.println(memberInfo.getId());
+			System.out.println((String)map.get("customerReviewId"));//mid
+			System.out.println((String)map.get("purchaseColor"));//pcodecolor
+			System.out.println((String)map.get("purchaseColorName"));//pcodecolor
+			System.out.println((String)map.get("purchaseSize"));//psize
+			System.out.println((String)map.get("orderNumber"));//rno
+			System.out.println((String)map.get("purchaseProdYN"));//purchaseProdYn
+		//	ColorDTO colorDTO = productService.getCurrentProductColor((String)map.get("productCode"));
+			return "";
+		}
+		
+		@RequestMapping(value ="/deleteCustomerReview", method = {RequestMethod.GET})
+		@ResponseBody 
+		public String deleteCustomerReview(@RequestParam Map<String,Object> map, HttpSession session) {
+			
+			MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");//세션에 있는 멤버 관련 내용을 모두 가져옴 
+			System.out.println(memberInfo.getId());
+			System.out.println((String)map.get("mid"));//mid
+			System.out.println((String)map.get("rno"));//rno
+			
+			ReviewDTO reviewDTO = new ReviewDTO();
+			reviewDTO.setMid((String)map.get("mid"));
+			reviewDTO.setRno(Integer.parseInt((String)map.get("rno")));
+			
+			if(reviewService.deleteReview(reviewDTO)!= null) {
+				return "SUCCESS";
+			}
+			else {
+				return "No Match";
+			}
+			
+			
+		}
 
 }

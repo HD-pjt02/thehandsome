@@ -25,7 +25,7 @@
 						<dl>
 							<dt>나의 활동관리</dt>
 							<!-- <dd><a href="#">회원등급</a></dd> -->
-							<dd><a href="/mypage/mymantomaninquiry" onclick="GA_Event('마이페이지','LNB','1:1 문의');">1:1 문의</a></dd>
+							<dd><a href="/qna/customerCenterMain" onclick="GA_Event('마이페이지','LNB','1:1 문의');">1:1 문의</a></dd>
 							<!-- <dd><a href="#">이벤트 참여현황</a></dd> -->
 						</dl>
 						</div>
@@ -921,12 +921,12 @@ function dayClose(cName, cValue, cDay) {
     <!-- 박소은 jsp 수정 -->
     <div class="profile_info1 clearfix review_betterment1905">
             <div  style="padding-left: 50px;">
-                    <span style=" font-size: 30px;" class="ico_grade">박*은&nbsp;<span style=" font-size: 25px;" >님</span></span>
+                    <span style=" font-size: 30px;" class="ico_grade">${member.name}&nbsp;<span style=" font-size: 25px;" >님</span></span>
                     <span class="grade_txt"></span>
                 </div>              
                 <div class="point" style="border:0; text-align: center; width:95px">
                     <p class="title">MILEAGE</p>
-                    <a class="count" href="/ko/mypage/voucher" onclick="GA_Event('마이페이지','회원정보','COUPON');">0&nbsp;<span>점</span></a>
+                    <a class="count" href="/ko/mypage/voucher" onclick="GA_Event('마이페이지','회원정보','COUPON');">${member.mileage}&nbsp;<span>점</span></a>
                 </div>
                 <div class="point type2">
                    <p class="title2">지금 바로 Event 페이지를 방문하시고 룰렛 돌리시면, <br>랜덤 마일리지 즉시 지급!</p>
@@ -939,7 +939,7 @@ function dayClose(cName, cValue, cDay) {
         <h4 class="float_left">최근주문<!-- 최근주문 --></h4>
         <p class="txt_line">최근 1개월 내 주문하신 내역입니다.<!-- 최근 1개월 내 주문하신 내역 입니다. --></p>
         <div class="btn_wrap">
-            <a href="/ko/mypage/order/myorders" class="btn add_ss" onclick="GA_Event('마이페이지','최근주문','전체보기');">전체보기<!-- 전체보기 --></a>
+            <a href="/member/myorders" class="btn add_ss" onclick="GA_Event('마이페이지','최근주문','전체보기');">전체보기<!-- 전체보기 --></a>
         </div>
     </div>
     <!-- table -->
@@ -964,7 +964,30 @@ function dayClose(cName, cValue, cDay) {
                     <th scope="col">구분<!-- 구분 --></th>
                 </tr>
             </thead>
-            <tbody id="listBody"><tr class="al_middle"><td rowspan="1" class="frt"><p class="num">221017P15400103</p><span class="sum_date">(2022.10.17)</span><a href="/ko/mypage/order/myorderdetail?code=221017P15400103" class="btn_view" onclick="GA_Event('마이페이지','최근주문','상세보기');">상세보기</a></td><td><div class="pt_list_all">                                                                            <a href="/ko/p/SJ2C7ACK479N_BK_FR" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');"><img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C7ACK479N_BK_S01.jpg" alt="상품 이미지"></a>       <div class="tlt_wrap">                                                                               <a href="/ko/p/SJ2C7ACK479N_BK_FR" class="basket_tlt" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');">                                                                      <span class="tlt">[SJSJ]</span>           <span class="sb_tlt">인타르시아 발목 양말</span>       </a><p class="color_op">color : BLACK  <span class="and_line">/</span>  size : FR</p>   </div></div></td><td><del>1</del>0</td><td>₩ 0</td><td>취소<span class="sum_date">(2022.10.17)</span></td><td class="pd12_resize"><div class="btn_wrap"></div></td></tr><tr class="al_middle"><td rowspan="1" class="frt"><p class="num">221017P15400099</p><span class="sum_date">(2022.10.17)</span><a href="/ko/mypage/order/myorderdetail?code=221017P15400099" class="btn_view" onclick="GA_Event('마이페이지','최근주문','상세보기');">상세보기</a></td><td><div class="pt_list_all">                                                                            <a href="/ko/p/SJ2C7ACK479N_BK_FR" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');"><img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C7ACK479N_BK_S01.jpg" alt="상품 이미지"></a>       <div class="tlt_wrap">                                                                               <a href="/ko/p/SJ2C7ACK479N_BK_FR" class="basket_tlt" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');">                                                                      <span class="tlt">[SJSJ]</span>           <span class="sb_tlt">인타르시아 발목 양말</span>       </a><p class="color_op">color : BLACK  <span class="and_line">/</span>  size : FR</p>   </div></div></td><td><del>1</del>0</td><td>₩ 0</td><td>취소<span class="sum_date">(2022.10.17)</span></td><td class="pd12_resize"><div class="btn_wrap"></div></td></tr><tr class="al_middle"><td rowspan="1" class="frt"><p class="num">221017P15400094</p><span class="sum_date">(2022.10.17)</span><a href="/ko/mypage/order/myorderdetail?code=221017P15400094" class="btn_view" onclick="GA_Event('마이페이지','최근주문','상세보기');">상세보기</a></td><td><div class="pt_list_all">                                                                            <a href="/ko/p/SJ2C7ACK471W_BK_FR" onclick="GA_Event('마이페이지','최근주문','%uAE00%uB9AC%uD130%20%uC591%uB9D0');"><img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C7ACK471W_BK_S01.jpg" alt="상품 이미지"></a>       <div class="tlt_wrap">                                                                               <a href="/ko/p/SJ2C7ACK471W_BK_FR" class="basket_tlt" onclick="GA_Event('마이페이지','최근주문','%uAE00%uB9AC%uD130%20%uC591%uB9D0');">                                                                      <span class="tlt">[SJSJ]</span>           <span class="sb_tlt">글리터 양말</span>       </a><p class="color_op">color : BLACK  <span class="and_line">/</span>  size : FR</p>   </div></div></td><td><del>1</del>0</td><td>₩ 0</td><td>취소<span class="sum_date">(2022.10.17)</span></td><td class="pd12_resize"><div class="btn_wrap"></div></td></tr></tbody>
+            <tbody id="listBody">
+            <tr class="al_middle">
+            	<td rowspan="1" class="frt">
+            		<p class="num">221017P15400103</p>
+            		<span class="sum_date">(2022.10.17)</span>
+            		<a href="/ko/mypage/order/myorderdetail?code=221017P15400103" class="btn_view" onclick="GA_Event('마이페이지','최근주문','상세보기');">상세보기</a>
+            	</td>
+            	<td>
+            	<div class="pt_list_all"> 
+            	<a href="/ko/p/SJ2C7ACK479N_BK_FR" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');">
+            	<img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C7ACK479N_BK_S01.jpg" alt="상품 이미지"></a>       
+            	<div class="tlt_wrap">                                                                               
+            	<a href="/ko/p/SJ2C7ACK479N_BK_FR" class="basket_tlt" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');"> 
+	            	<span class="tlt">[SJSJ]</span>
+					<span class="sb_tlt">인타르시아 발목 양말</span>
+				</a>
+				<p class="color_op">color : BLACK  <span class="and_line">/</span>  size : FR</p>   
+				</div>
+				</div>
+				</td>
+				<td><del>1</del>0</td><td>₩ 0</td><td>취소<span class="sum_date">(2022.10.17)</span></td>
+				<td class="pd12_resize"><div class="btn_wrap"></div></td>
+				</tr>
+				</tbody>
         </table>
     </div>
     <!-- table -->
@@ -976,8 +999,9 @@ function dayClose(cName, cValue, cDay) {
         </div>
     </div>
     <ul class="wish_wrap">
-        <li>
-                    <a href="/ko/p/SJ2CAKCD034W" class="a_link" onclick="GA_Mypage('wish',$(this));">
+    	<c:forEach var="wishProduct" items="${wishProductList}">
+    		<li>
+                    <a href="/product/SJ2CAKCD034W" class="a_link" onclick="GA_Mypage('wish',$(this));">
                     <img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2CAKCD034W_PR_S01.jpg" alt="상품 이미지">
                         <span class="brand">SJSJ</span>
                         <span class="tlt">캐시미어 블렌드 칼라 가디건</span>
@@ -985,15 +1009,9 @@ function dayClose(cName, cValue, cDay) {
                     <span class="prie">
                     	￦ 435,000</span>
                 </li>
-            <li>
-                    <a href="/ko/p/SJ2C9QOT213W" class="a_link" onclick="GA_Mypage('wish',$(this));">
-                    <img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C9QOT213W_DN_S01.jpg" alt="상품 이미지">
-                        <span class="brand">SJSJ</span>
-                        <span class="tlt">플랩 포켓 구스 다운 점퍼</span>
-                        </a>
-                    <span class="prie">
-                    	￦ 695,000</span>
-                </li>
+    	</c:forEach>
+        
+           
             </ul>
 
 </div>

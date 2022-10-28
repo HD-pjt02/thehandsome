@@ -16,4 +16,7 @@ public interface MemberService {
 
 	Long updateMemberMileage(MemberDTO memberDTO);
 
+	Long decreaseMemberMileage(MemberDTO memberInfo);
+
+
 }

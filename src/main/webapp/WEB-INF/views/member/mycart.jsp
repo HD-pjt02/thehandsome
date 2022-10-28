@@ -70,7 +70,7 @@
                                  disabled
                               </c:if>
                               onchange="handleCartnoCheckbox(this)"></td>
-                           <td class="pt_list_wrap">
+                        <td class="pt_list_wrap">
                               <div class="pt_list_all">
                                  <a href=""
                                     onclick="javascript:setEcommerceData('0', 'Click ADD');GA_Event('쇼핑백','상품','${cart_product.pname}');">
@@ -87,18 +87,18 @@
                                        <span class="tlt">${cart_product.bname}</span> <span
                                        class="sb_tlt"> ${cart_product.pname}</span>
                                     </a>
+                                    <p class="color_op">
                                     <c:forEach var="color" items="${cart_product.colors}">
                                        <c:if test="${color.pcolor eq cart_product.pcolor}">
-                                          <p class="color_op">
                                              color : ${color.pcolor}<span class="and_line">/</span>
                                        </c:if>
-                                       <c:forEach var="size" items="${cart_product.sizes}">
+                                    </c:forEach>
+                                    <c:forEach var="size" items="${cart_product.sizes}">
                                           <c:if test="${size.psize eq cart_product.psize}">
                                           size : ${size.psize}
                                           </c:if>
-                                       </c:forEach>
-                                       </p>
                                     </c:forEach>
+                                    </p>
                                     <!--  아래에 띄우는 용도  -->
                                     <div class="option_wrap">
                                        <a href="#none" class="btn_option"

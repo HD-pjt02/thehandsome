@@ -3,54 +3,54 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="com.thehandsome.app.mapper.QnaMapper">
-  	<!-- 1:1문의 -->
-  	<insert id="qnaInsert">
-  		insert into qna values(qna_seq.nextval, 
-  		'bansongs', #{qtitle}, #{qcontent}, sysdate, 
-  		sysdate, 'test','test', 'kms', 10, #{qcategory}, '접수대기중', #{qimg})
-  	</insert>	
-  	
-  	<!-- 1:1조회-->
-  	<select id="qnaSelect" resultType="QnaDTO">
-  		select * from qna where mno = #{mno}
-  	</select>
-  	
-  	<!-- qna삭제 -->
-  	<delete id="qnaDelete">
-  		delete from qna where qid = #{qid}
-  	</delete>
-  	
-  	<!-- qna수정하기하기 위한 qnaDto조회 -->
-  	<select id="qnaSelectDTO" resultType="QnaDTO">
-		select * from qna where qid = #{qid}
-	</select>
-	
-	
-	<!-- 총 게시글 갯수 출력 -->
-	<select id="countQna" resultType="int">
-		SELECT COUNT(*) FROM QNA
-	</select>
+     <!-- 1:1문의 -->
+     <insert id="qnaInsert">
+        insert into qna values(qna_seq.nextval, 
+        'bansongs', #{qtitle}, #{qcontent}, sysdate, 
+        sysdate, 'test','test', 'kms', 2, #{qcategory}, '접수대기중', #{qimg})
+     </insert>   
+     
+     <!-- 1:1조회-->
+     <select id="qnaSelect" resultType="QnaDTO">
+        select * from qna where mno = #{mno}
+     </select>
+     
+     <!-- qna삭제 -->
+     <delete id="qnaDelete">
+        delete from qna where qid = #{qid}
+     </delete>
+     
+     <!-- qna수정하기하기 위한 qnaDto조회 -->
+     <select id="qnaSelectDTO" resultType="QnaDTO">
+      select * from qna where qid = #{qid}
+   </select>
+   
+   
+   <!-- 총 게시글 갯수 출력 -->
+   <select id="countQna" resultType="int">
+      SELECT COUNT(*) FROM QNA
+   </select>
 
-	<!-- 페이징 처리 후 게시글 조회 -->
-	<select id="selectQna" resultType="QnaDTO">
-		SELECT * 
-			FROM (
-				SELECT ROWNUM RN, A.* 
-					FROM (
-							SELECT * 
-							FROM QNA 						
-							) A
-					)
-		WHERE RN BETWEEN #{start} AND #{end}
-	</select>
-	
-	<!-- qna수정하기 -->
-	<update id="qnaUpdate">
-		update qna 
+   <!-- 페이징 처리 후 게시글 조회 -->
+   <select id="selectQna" resultType="QnaDTO">
+      SELECT * 
+         FROM (
+            SELECT ROWNUM RN, A.* 
+               FROM (
+                     SELECT * 
+                     FROM QNA                   
+                     ) A
+               )
+      WHERE RN BETWEEN #{start} AND #{end}
+   </select>
+   
+   <!-- qna수정하기 -->
+   <update id="qnaUpdate">
+      update qna 
            set qcategory = #{qcategory}
              , qtitle = #{qtitle}
              , qcontent = #{qcontent}
      
          where qid = #{qid}
-	</update>
+   </update>
   </mapper>

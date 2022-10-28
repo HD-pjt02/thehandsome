@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
+import com.thehandsome.app.dto.MemberDTO;
 import com.thehandsome.app.dto.OrderItemListDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.mapper.MyOrderMapper;
@@ -36,5 +37,11 @@ public class MyOrderServiceImpl implements MyOrderService {
       map.put("type", type);
       map.put("keyword", keyword);
       return myOrderMapper.selectProductOrderCount(map);
+   }
+   
+   //미림 맴버 주문리스트
+   @Override
+   public List<OrderItemListDTO> getMemberOrders(MemberDTO memberInfo) {
+	      return myOrderMapper.getMemberOrders(memberInfo);
    }
 }

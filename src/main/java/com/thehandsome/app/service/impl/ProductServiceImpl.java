@@ -15,9 +15,11 @@ import org.springframework.transaction.annotation.Transactional;
 import com.thehandsome.app.dto.BrandDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
+import com.thehandsome.app.dto.OrderItemListDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
+import com.thehandsome.app.dto.WishlistDTO;
 import com.thehandsome.app.mapper.ProductMapper;
 import com.thehandsome.app.service.ProductService;
 
@@ -162,5 +164,15 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public ColorDTO getCurrentProductColor(String productCode) {
 		return productMapper.getCurrentProductColor(productCode);
+	}
+
+	@Override
+	public ColorDTO getMemberOrderProduct(OrderItemListDTO order) {
+		return productMapper.getMemberOrderProduct(order);
+	}
+
+	@Override
+	public ColorDTO getMemberWishProduct(WishlistDTO wish) {
+		return productMapper.getMemberWishProduct(wish);
 	}
 }

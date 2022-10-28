@@ -2396,7 +2396,7 @@ function reviewHtml(data){
 		          goLogin("review");
 		          return;
 	            <%}%>
-	            //alert(list[i].mid);
+	            
 	            if(list[i].mid == '<%=session.getAttribute("currentId")%>'){
 	               
 	                if ( 'Y' == '미림리뷰수정삭제' ) {
@@ -2410,8 +2410,8 @@ function reviewHtml(data){
 	                    
 	                } else {
 	                  
-	                	reviewHtml += '        <li class="float_right delete"><a href="#;" onclick="javascript:deleteReview('+"'"+list[i].mid+"'"+",'"+list[i].rno+"'"+')">삭제</a></li>';
-	                    reviewHtml += '        <li class="float_right modify"><a href="#;" onclick="javascript:modifyReview('+"'"+list[i].mid+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].psize+"'"+",'"+list[i].rno+"'"+",'"+list[i].purchaseProdYN+"'"+')">수정</a></li>';
+	                	reviewHtml += '        <li class="float_right delete"><a href="#;" onclick="javascript:deleteReview('+list[i].mid+','+i+')">삭제</a></li>';
+	                    reviewHtml += '        <li class="float_right modify"><a href="#;" onclick="javascript:modifyReview('+"'"+list[i].mid+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].psize+"'"+",'"+list[i].orderNumber+"'"+",'"+list[i].purchaseProdYN+"'"+')">수정</a></li>';
 	                }
 	            }
 	            reviewHtml += "    </ul>";
@@ -2623,7 +2623,7 @@ function modifyReview(reviewPk, color, colorName, size, orderNumber, purchasePro
     $("#tempProductId").val(reviewPk);
     
     $.ajax({
-        url     : '/review/modifyReviewPageAjax',
+        url     : '/ko/p/modifyReviewPageAjax',
         type    : 'GET',
         datatype: 'json',
         data    : {
@@ -2950,7 +2950,7 @@ function deleteReviewFile(li,idx){
 }
 
 function deleteReview(reviewPk, deleteTarget) {
-
+    alert("zzzzzzzzzz");
 	var lc;
     if ( 'Y' == 'Y' ) {
         lc = new customLayerConfirm('삭제 하시겠습니까?', '확인', '취소');    
@@ -2967,12 +2967,11 @@ function deleteReview(reviewPk, deleteTarget) {
     lc.confirmAction= function() {
         var la;
         $.ajax({
-            url     : '/review/deleteCustomerReview',
+            url     : '/ko/p/deleteCustomerReview',
             type    : 'GET',
             datatype: 'json',
             data    : {
-                        "mid" : reviewPk,
-                        "rno" : deleteTarget
+                        "productId" : reviewPk
             },
             success : function(result) {
                 if ( 'Y' == 'Y' ) {

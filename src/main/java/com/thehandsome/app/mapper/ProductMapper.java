@@ -8,8 +8,10 @@ import org.apache.ibatis.annotations.Mapper;
 
 import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
+import com.thehandsome.app.dto.WishlistDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
+import com.thehandsome.app.dto.OrderItemListDTO;
 /* 작성자 : 정승하,신미림
  * 작성일 : 2022.10.18.월
  * 상품에 관련된 DB 호출을 관리하는 메퍼클래스
@@ -87,6 +89,12 @@ public interface ProductMapper {
 
 	/*현재상품에 대한 정보를 가져오기 위함*/
 	public ColorDTO getCurrentProductColor(String productCode);
+
+	/*주문에 대한 상품정보조회*/
+	public ColorDTO getMemberOrderProduct(OrderItemListDTO order);
+
+	/*위시리스트에 대한 상품정보조회*/
+	public ColorDTO getMemberWishProduct(WishlistDTO wish);
 	
 	
 }

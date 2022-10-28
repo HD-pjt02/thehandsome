@@ -38,6 +38,8 @@ public interface ReviewService {
 
 	Long checkMemberReviewProduct(ReviewDTO reviewDTO);
 
+	Long deleteReview(ReviewDTO reviewDTO);
+
 	
 	
 	

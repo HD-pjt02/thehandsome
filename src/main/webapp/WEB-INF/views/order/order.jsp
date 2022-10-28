@@ -1,7 +1,7 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ include file="/WEB-INF/views/common/header.jsp"%>
+<%@ include file="/WEB-INF/views/common/headerOrigin.jsp"%>
 
 <style>
 .title_font {
@@ -119,6 +119,7 @@ input[type="text"], input[type="password"], input[type="email"] {
                      <tr>
                         <td class="align-middle table_detail"
                            style="width: 441px; padding: 15px">
+                           <input type="hidden" name="pcode" value="${cart_product.pcode}"/>
                            <div class="d-flex">
                               <img style="width: 98px;"
                                  src="${cart_product.colors[cart_product.coloridx].imgurl1}" />
@@ -499,10 +500,18 @@ input[type="text"], input[type="password"], input[type="email"] {
                    function selectPaymentType() {
                      console.log($('input[name="inlineRadioOptions"]:checked').val());
                   } 
+                 //김민석
                   function orderSubmit() {
+                	  
+                	 //미림수정
+                	 var pcodeArray = [];
+                      $('input[name="pcode"]').each(function(i){//체크된 리스트 저장
+                    	  pcodeArray.push($(this).val());
+                      });
                      let params = {
                            "ptype" : $('input[name="inlineRadioOptions"]:checked').val(),
                            "apostcode" : $("#postcode").val(),
+                           "pcode" : pcodeArray,
                            "aaddress1" : $("#address").val(),
                            "aaddress2" : $("#detailAddress").val(),
                            "oreceivername" : $("#oreceivername").val(),
@@ -513,7 +522,7 @@ input[type="text"], input[type="password"], input[type="email"] {
                      }
                      console.log(params);
                      
-                       let form = document.createElement('form');
+                      let form = document.createElement('form');
                      form.setAttribute('method', 'post');
                      form.setAttribute('action', 'orderpayment');
                      document.charset = "utf-8";
@@ -535,7 +544,7 @@ input[type="text"], input[type="password"], input[type="email"] {
                      }
                      
                      document.body.appendChild(form);
-                     form.submit(); 
+                     form.submit();  
                   }
                </script>
             </div>
@@ -543,4 +552,4 @@ input[type="text"], input[type="password"], input[type="email"] {
       </div>
    </div>
 
-   <%@ include file="/WEB-INF/views/common/footer.jsp"%>
+   <%@ include file="/WEB-INF/views/common/footerOrigin.jsp"%>

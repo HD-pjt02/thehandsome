@@ -6,17 +6,17 @@
   	<insert id="insertOrderNewAddress" parameterType="OrderItemListDTO">
 		INSERT INTO
 		orderitemlist(ono, odate, ostate, pmonth, ptype, oreceivername, oreceiverphone1,
-					oreceiverphone2, ocomment, mno, ano)
+					oreceiverphone2, ocomment, mno, ano, pcode)
 		VALUES(ONO_SEQ.nextval, #{odate}, #{ostate}, #{pmonth}, #{ptype}, #{oreceivername}, #{oreceiverphone1},
-					#{oreceiverphone2}, #{ocomment}, #{mno}, ANO_SEQ.currval)
+					#{oreceiverphone2}, #{ocomment}, #{mno}, ANO_SEQ.currval, #{pcode})
 	</insert>
 	
 	<insert id="insertOrderOldAddress" parameterType="OrderItemListDTO">
 		INSERT INTO
 		orderitemlist(ono, odate, ostate, pmonth, ptype, oreceivername, oreceiverphone1,
-					oreceiverphone2, ocomment, mno, ano)
+					oreceiverphone2, ocomment, mno, ano, pcode)
 		VALUES(ONO_SEQ.nextval, #{odate}, #{ostate}, #{pmonth}, #{ptype}, #{oreceivername}, #{oreceiverphone1},
-					#{oreceiverphone2}, #{ocomment}, #{mno}, #{ano})
+					#{oreceiverphone2}, #{ocomment}, #{mno}, #{ano}, #{pcode})
 	</insert>
 	
 	<insert id="insertItemToProductOrderItem" parameterType="OrderItemDTO">
@@ -32,6 +32,8 @@
 		WHERE sno = #{sno}
 	</update>
 	
+	
+	
 	<select id="checkMemberOrderProduct" resultType="Long"
 		parameterType="OrderItemListDTO">
 		<![CDATA[
@@ -41,7 +43,8 @@
 			and t1.ono = t2.ono 
 			and t2.mno = #{mno}
 			and t2.pcode = #{pcode}
-			and t1.sno like #{pcodecolor}||'%'
+			and t1.sno like #{pcode}||'%'
+			AND ROWNUM = 1
 		]]>
 	</select>
 	
