@@ -30,7 +30,7 @@ import com.thehandsome.app.service.MemberService;
 import com.thehandsome.app.service.OrderService;
 import com.thehandsome.app.service.ProductService;
 import com.thehandsome.app.service.CartService;
-/* 작성자 : 김민석, 신미림
+/* 작성자 : 김민석, 신미림(수정),박소은 (수정)
  * 작성일 : 2022.10.22.토
  * 주문처리하는 Controller
  */
@@ -141,7 +141,11 @@ public class OrderController {
 		int mno = memberInfo.getMno();// 어떤 회원 인지
 		
 		ProductDTO productInfo = productService.getProduct((String)pcode[0]);
-		memberInfo.setMileage(productInfo.getPprice());
+		memberInfo.setMileage(memberInfo.getMileage() - productInfo.getPprice());
+		if(memberInfo.getMileage() < 0) {
+			memberInfo.setMileage(0);
+		}
+		
       
       //int mno = 1;
 
@@ -175,7 +179,7 @@ public class OrderController {
 
       //주문된 정보를 orderitemlist와 orderitem에 저장해준다
       orderService.paymentOrder(oild, address, checkedItems, itemsLength);
-      memberService.decreaseMemberMileage(memberInfo);
+      memberService.updateMemberMileage(memberInfo);
 
       session.removeAttribute("checkedItems");
       session.removeAttribute("itemsLength");

@@ -947,46 +947,42 @@ function dayClose(cName, cValue, cDay) {
         <table class="tbl_ltype review_betterment1905">
             <caption>상품평 리스트</caption>
             <colgroup class="interval1812"><!-- 수정 181204 -->
-                <col style="width:120px">
+                
                 <col>
-                <col style="width:42px">
-                <col style="width:107px">
+                <col style="width:80px">
                 <col style="width:108px">
-                <col style="width:96px">
+                
             </colgroup>
             <thead>
                 <tr>
-                    <th scope="col">주문번호<!-- 주문번호 --></th>
+                 
                     <th scope="col">상품정보<!-- 상품정보 --></th>
-                    <th scope="col" style="padding:15px 0">수량<!-- 수량 --></th><!-- 스타일추가 181204 -->
                     <th scope="col">판매가<!-- 판매가 --></th>
-                    <th scope="col">주문상태<!-- 주문상태 --></th>
-                    <th scope="col">구분<!-- 구분 --></th>
+                    <th scope="col">주문상태<!-- 구분 --></th>
                 </tr>
             </thead>
             <tbody id="listBody">
+            <c:forEach var="orderProduct" items="${orderProductList}">
             <tr class="al_middle">
-            	<td rowspan="1" class="frt">
-            		<p class="num">221017P15400103</p>
-            		<span class="sum_date">(2022.10.17)</span>
-            		<a href="/ko/mypage/order/myorderdetail?code=221017P15400103" class="btn_view" onclick="GA_Event('마이페이지','최근주문','상세보기');">상세보기</a>
-            	</td>
             	<td>
             	<div class="pt_list_all"> 
-            	<a href="/ko/p/SJ2C7ACK479N_BK_FR" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');">
-            	<img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C7ACK479N_BK_S01.jpg" alt="상품 이미지"></a>       
+            	<a href="/product/productdetail?pcode=${orderProduct.pcode}&pcolor=${orderProduct.pcolor}" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');">
+            	<img src="${orderProduct.imgurl1}" alt="상품 이미지"></a>       
             	<div class="tlt_wrap">                                                                               
-            	<a href="/ko/p/SJ2C7ACK479N_BK_FR" class="basket_tlt" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');"> 
-	            	<span class="tlt">[SJSJ]</span>
-					<span class="sb_tlt">인타르시아 발목 양말</span>
+            	<a href="/product/productdetail?pcode=${orderProduct.pcode}&pcolor=${orderProduct.pcolor}" class="basket_tlt" onclick="GA_Event('마이페이지','최근주문','%uC778%uD0C0%uB974%uC2DC%uC544%20%uBC1C%uBAA9%20%uC591%uB9D0');"> 
+	            	<span class="tlt">[${orderProduct.bname}]</span>
+					<span class="sb_tlt">${orderProduct.pname}</span>
 				</a>
-				<p class="color_op">color : BLACK  <span class="and_line">/</span>  size : FR</p>   
+				<p class="color_op">color : ${orderProduct.pcolor}  <span class="and_line">/</span></p>   
 				</div>
 				</div>
 				</td>
-				<td><del>1</del>0</td><td>₩ 0</td><td>취소<span class="sum_date">(2022.10.17)</span></td>
+				<td>₩ <span>${orderProduct.pprice}</span></td>
+				<td>주문완료</td>
+				<td></td>
 				<td class="pd12_resize"><div class="btn_wrap"></div></td>
-				</tr>
+			</tr>
+			</c:forEach>
 				</tbody>
         </table>
     </div>
@@ -995,19 +991,19 @@ function dayClose(cName, cValue, cDay) {
     <div class="title_wrap line mt50">
         <h4>위시리스트<!-- 위시리스트 --></h4>
         <div class="btn_wrap">
-            <a href="/ko/mypage/myWish" class="btn add_ss" onclick="GA_Event('마이페이지','위시리스트','전체보기');">전체보기<!-- 전체보기 --></a>
+            <a href="/mypage/myWish" class="btn add_ss" onclick="GA_Event('마이페이지','위시리스트','전체보기');">전체보기<!-- 전체보기 --></a>
         </div>
     </div>
     <ul class="wish_wrap">
     	<c:forEach var="wishProduct" items="${wishProductList}">
     		<li>
-                    <a href="/product/SJ2CAKCD034W" class="a_link" onclick="GA_Mypage('wish',$(this));">
-                    <img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2CAKCD034W_PR_S01.jpg" alt="상품 이미지">
-                        <span class="brand">SJSJ</span>
-                        <span class="tlt">캐시미어 블렌드 칼라 가디건</span>
+                    <a href="/product/productdetail?pcode=${wishProduct.pcode}&pcolor=${wishProduct.pcolor}" class="a_link" onclick="GA_Mypage('wish',$(this));">
+                    <img src="${wishProduct.imgurl1}" alt="상품 이미지">
+                        <span class="brand">${wishProduct.bname}</span>
+                        <span class="tlt">${wishProduct.pname}</span>
                         </a>
                     <span class="prie">
-                    	￦ 435,000</span>
+                    	￦ ${wishProduct.pprice}</span>
                 </li>
     	</c:forEach>
         

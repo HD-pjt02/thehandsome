@@ -841,7 +841,7 @@
             <h4 class="float_left">위시리스트<!-- 위시리스트 --></h4>
             <p class="txt_line">위시리스트에는 상품이 최대 200개 까지 저장 됩니다.<!-- 위시리스트에는 상품이 최대 200개 까지 저장 됩니다. --></p>
         </div>
-        <form id="wishListForm" action="/ko/mypage/myWishList">
+        <form id="wishListForm" action="/mypage/myWishList">
         </form>
         <!-- Table -->
         <div class="tblwrap">
@@ -859,10 +859,54 @@
                         <th scope="col"><input type="checkbox" title="선택" value="" name="allcheck"></th>
                         <th scope="col">상품정보<!-- 상품정보 --></th>
                         <th scope="col">판매가<!-- 판매가 --></th>
-                        <th scope="col">선택<!-- 선택 --></th>
+                        <th scope="col">비고<!-- 선택 --></th>
                     </tr>
                 </thead>
-                <tbody id="listBody"><tr>   <td class="frt"><input type="checkbox" title="선택" value="9610457088702" name="checkpd" data-value="SJ2CAKCD034W"></td>   <td class="pt_list_wrap">      <div class="pt_list_all">           <a href="/ko/p/SJ2CAKCD034W" onclick="javascript:setEcommerceData('0','Click');GA_Event('위시리스트', '상품', '캐시미어 블렌드 칼라 가디건');"><img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2CAKCD034W_PR_S01.jpg" alt="상품 이미지"></a>           <div class="tlt_wrap">               <a href="/ko/p/SJ2CAKCD034W" class="basket_tlt" onclick="javascript:setEcommerceData('0','Click');GA_Event('위시리스트', '상품', '캐시미어 블렌드 칼라 가디건');">               <span class="tlt">SJSJ</span>               <span class="sb_tlt">캐시미어 블렌드 칼라 가디건                   </span>            </a>         </div>      </div>   </td>   <td class="al_middle">      <div class="price_wrap">         <span> ￦435,000 </span>      </div>   </td>      <td class="al_middle">      <div class="btn_wrap">         <a href="javascript:void(0)" class="btn wt_ss add_bag parent_add_bag" product="8864683229185" index="0" productcode="SJ2CAKCD034W" onclick="GA_Event(&quot;위시리스트&quot;, &quot;쇼핑백담기&quot;, &quot;캐시미어 블렌드 칼라 가디건&quot;);">쇼핑백담기<!-- 쇼핑백담기 --></a>         <a href="javascript:void(0)" class="btn wt_ss wishDel" wishcode="9610457088702" onclick="GA_Event(&quot;위시리스트&quot;, &quot;삭제&quot;, &quot;캐시미어 블렌드 칼라 가디건&quot;);" data-value="SJ2CAKCD034W">삭제<!-- 삭제 --></a>      </div>   </td></tr><tr class="hid">   <td colspan="5" class="basket_wrap">      <div class="basket_info" id="cart0">      <span class="btn_arr">위치아이콘</span>         <div class="info">            <div class="pt_list" id="pt_list_0">            </div>            <div class="btns">               <a href="javascript:void(0)" class="btn wt_ss bag" id="addToCart_0">쇼핑백담기<!-- 쇼핑백담기 --></a>               <a href="javascript:void(0)" class="btn wt_ss mt10 bag" id="cancle_0">취소<!-- 취소 --></a>               <a href="javascript:void(0)" class="btn_close bag" id="close_0">닫기<!-- 닫기 --></a>            </div>         </div>      </div>   </td></tr><tr>   <td class="frt"><input type="checkbox" title="선택" value="9610457055934" name="checkpd" data-value="SJ2C9QOT213W"></td>   <td class="pt_list_wrap">      <div class="pt_list_all">           <a href="/ko/p/SJ2C9QOT213W" onclick="javascript:setEcommerceData('1','Click');GA_Event('위시리스트', '상품', '플랩 포켓 구스 다운 점퍼');"><img src="http://newmedia.thehandsome.com/SJ/2C/FW/SJ2C9QOT213W_DN_S01.jpg" alt="상품 이미지"></a>           <div class="tlt_wrap">               <a href="/ko/p/SJ2C9QOT213W" class="basket_tlt" onclick="javascript:setEcommerceData('1','Click');GA_Event('위시리스트', '상품', '플랩 포켓 구스 다운 점퍼');">               <span class="tlt">SJSJ</span>               <span class="sb_tlt">플랩 포켓 구스 다운 점퍼                   </span>            </a>         </div>      </div>   </td>   <td class="al_middle">      <div class="price_wrap">         <span> ￦695,000 </span>      </div>   </td>   <td class="al_middle">      <div class="btn_wrap">         <a href="javascript:void(0)" class="btn wt_ss add_bag parent_add_bag" product="8864682115073" index="1" productcode="SJ2C9QOT213W" onclick="GA_Event(&quot;위시리스트&quot;, &quot;쇼핑백담기&quot;, &quot;플랩 포켓 구스 다운 점퍼&quot;);">쇼핑백담기<!-- 쇼핑백담기 --></a>         <a href="javascript:void(0)" class="btn wt_ss wishDel" wishcode="9610457055934" onclick="GA_Event(&quot;위시리스트&quot;, &quot;삭제&quot;, &quot;플랩 포켓 구스 다운 점퍼&quot;);" data-value="SJ2C9QOT213W">삭제<!-- 삭제 --></a>      </div>   </td></tr><tr class="hid">   <td colspan="5" class="basket_wrap">      <div class="basket_info" id="cart1">      <span class="btn_arr">위치아이콘</span>         <div class="info">            <div class="pt_list" id="pt_list_1">            </div>            <div class="btns">               <a href="javascript:void(0)" class="btn wt_ss bag" id="addToCart_1">쇼핑백담기<!-- 쇼핑백담기 --></a>               <a href="javascript:void(0)" class="btn wt_ss mt10 bag" id="cancle_1">취소<!-- 취소 --></a>               <a href="javascript:void(0)" class="btn_close bag" id="close_1">닫기<!-- 닫기 --></a>            </div>         </div>      </div>   </td></tr></tbody>
+                <tbody id="listBody">
+                <c:forEach var="wishProduct" items="${wishProductList}">
+                <tr>   
+                <td class="frt">
+                <input type="checkbox" title="선택" value="9610457088702" name="checkpd" data-value="SJ2CAKCD034W">
+                </td>   
+                <td class="pt_list_wrap">      
+                <div class="pt_list_all">           
+                <a href="/product/productdetail?pcode=${wishProduct.pcode}&pcolor=${wishProduct.pcolor}" onclick="javascript:setEcommerceData('0','Click');GA_Event('위시리스트', '상품', '캐시미어 블렌드 칼라 가디건');">
+                <img src="${wishProduct.imgurl1}" alt="상품 이미지"></a>          
+                 <div class="tlt_wrap">               
+                 <a href="/product/productdetail?pcode=${wishProduct.pcode}&pcolor=${wishProduct.pcolor}" class="basket_tlt" onclick="javascript:setEcommerceData('0','Click');GA_Event('위시리스트', '상품', '캐시미어 블렌드 칼라 가디건');">               
+                 <span class="tlt">>${wishProduct.bname}</span>               
+                 <span class="sb_tlt">${wishProduct.pname} </span>   
+         
+                 </a>        
+				</div>      
+				</div>   
+				</td>   
+				<td class="al_middle">      
+				<div class="price_wrap">         
+				<span> ￦ ${wishProduct.pprice} </span>      
+				</div>   
+				</td>      
+				<td class="al_middle">      
+				<div class="btn_wrap">         
+				<!-- <a href="javascript:void(0)" class="btn wt_ss add_bag parent_add_bag" product="8864683229185" index="0" productcode="SJ2CAKCD034W" onclick="GA_Event(&quot;위시리스트&quot;, &quot;쇼핑백담기&quot;, &quot;캐시미어 블렌드 칼라 가디건&quot;);">쇼핑백담기쇼핑백담기</a>
+				<a href="javascript:void(0)" class="btn wt_ss wishDel" wishcode="9610457088702" onclick="GA_Event(&quot;위시리스트&quot;, &quot;삭제&quot;, &quot;캐시미어 블렌드 칼라 가디건&quot;);" data-value="SJ2CAKCD034W">삭제삭제</a> -->
+				</div>   
+				</td>
+				</tr>
+				<tr class="hid">   
+				<td colspan="5" class="basket_wrap">      
+				<div class="basket_info" id="cart0">      
+				<span class="btn_arr">위치아이콘</span>         
+				<div class="info">            
+				<div class="pt_list" id="pt_list_0">            </div>            <div class="btns">               
+				<a href="javascript:void(0)" class="btn wt_ss bag" id="addToCart_0">쇼핑백담기<!-- 쇼핑백담기 --></a>               
+				<a href="javascript:void(0)" class="btn wt_ss mt10 bag" id="cancle_0">취소<!-- 취소 --></a>               
+				<a href="javascript:void(0)" class="btn_close bag" id="close_0">닫기<!-- 닫기 --></a> 
+				           </div>         </div>      </div>   </td></tr><tr>   
+				         
+                </tr>
+                </c:forEach>
+                </tbody>
             </table>
         </div>
         <!-- //Table -->

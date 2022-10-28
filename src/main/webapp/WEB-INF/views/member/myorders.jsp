@@ -86,7 +86,7 @@ a:hover {
                </tr>
             </thead>
             <tbody>
-               <c:forEach var="orders" items="${orderItemList}">
+               <c:forEach var="orders" items="${orderList}">
                   <tr class="row">
                      <td class="col-1 text-center">${orders.ono}</td>
                      <td class="col border-left">

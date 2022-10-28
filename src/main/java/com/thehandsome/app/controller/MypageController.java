@@ -69,8 +69,8 @@ public class MypageController {
 		}
 		
 		model.addAttribute("member", memberInfo);
-		model.addAttribute("wishProductList", wishList);
-		model.addAttribute("orderProductList", orderList);
+		model.addAttribute("wishProductList", wishProductList);
+		model.addAttribute("orderProductList", orderProductList);
 		return "mypage/mypage";
 		
 	}
@@ -86,9 +86,12 @@ public class MypageController {
 	public String myWish(HttpSession session,Model model) {
 		MemberDTO memberInfo = (MemberDTO) session.getAttribute("member");
 		List<WishlistDTO> wishList = wishlistService.getMemberWishlist(memberInfo);
-		
+		List<ColorDTO> wishProductList = new ArrayList<>();
+		for(WishlistDTO wish : wishList) {
+			wishProductList.add(productService.getMemberWishProduct(wish));
+		}
 		model.addAttribute("member", memberInfo);
-		model.addAttribute("wishlist", wishList);
+		model.addAttribute("wishProductList", wishProductList);
 		log.info("myWish");
 		return "mypage/myWish";
 	}
