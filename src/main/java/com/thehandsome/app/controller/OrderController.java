@@ -30,7 +30,7 @@ import com.thehandsome.app.service.MemberService;
 import com.thehandsome.app.service.OrderService;
 import com.thehandsome.app.service.ProductService;
 import com.thehandsome.app.service.CartService;
-/* 작성자 : 김민석
+/* 작성자 : 김민석, 신미림
  * 작성일 : 2022.10.22.토
  * 주문처리하는 Controller
  */
@@ -56,14 +56,13 @@ public class OrderController {
 
    @RequestMapping("/ordering")
    public String order(HttpSession session, HttpServletRequest request) {
-	  MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
       logger.info("ordering 실행");
 
       // 결제 총액을 저장한다.
       int total = 0;
       // 배송비를 저장한다.
       int post = 2500;
-//미림 요거 바로주문할 때도 세션에 담아주세요
+
       int itemsLength = Integer.parseInt(session.getAttribute("itemsLength").toString());
       String checkedItems = session.getAttribute("checkedItems").toString();
       System.out.println(itemsLength);
@@ -78,7 +77,6 @@ public class OrderController {
          int cartno = Integer.parseInt(st.nextToken());
 
          CartDTO cart = cartService.getCartProduct(cartno);
-         //미림 여기에서 오류나는데 원인이 세션에 없어서 그렇습ㄴ디ㅏ
          ProductDTO p = productService.getProduct(cart.getPcode());
 
          List<ColorDTO> colors = productService.getProductColor(p);
@@ -106,33 +104,46 @@ public class OrderController {
       request.setAttribute("carts", carts);
       request.setAttribute("total", total);
       request.setAttribute("post", post);
-     // request.setAttribute("mileage", memberInfo.getMileage());
       
       System.out.println(carts);
       System.out.println(total);
       System.out.println(post);
       
+      //MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		//int mno = memberInfo.getMno();// 어떤 회원 인지
+		//String phone = memberIfo.getPhone();
       
+      //신밀미 처리아러아어리ㅏㅇㄹ어랑마ㅓㄴ아러
       //Integer.parseInt(session.getAttribute("mno").toString())
-      //MemberDTO member = memberService.getMember(memberInfo.getMno());
+      MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
       String phone = memberInfo.getPhone();
-      //System.out.println(phone);
-      phone = phone.substring(0, 3) + "-" + phone.substring(3, 7) + "-" + phone.substring(7);
-      memberInfo.setPhone(phone);
+      //System.out.println(콜);
+     // phone = phone.substring(0, 3) + "-" + phone.substring(3, 7) + "-" + phone.substring(7);
+      phone="010-1234-5555";
+      //member.setPhone(콜);
       request.setAttribute("member", memberInfo);
       System.out.println(memberInfo);
       return "order/order";
    }
 
+   //미림수정
    @RequestMapping("/orderpayment")
    public String orderPayment(String ptype, String apostcode, String aaddress1, String aaddress2, String oreceivername,
-         String oreceiverphone1, String oreceiverphone2, String ocomment, int ano, HttpSession session) {
+         String oreceiverphone1, String oreceiverphone2, String ocomment, int ano,String[] pcode, HttpSession session) {
       logger.info("orderpayment 실행");
-      
+      logger.info(""+pcode.length);
+//      for(String p:pcode) {
+//    	  logger.info(p);
+//      }
       
       //int mno = Integer.parseInt(session.getAttribute("mno").toString());
+      MemberDTO memberInfo = (MemberDTO)session.getAttribute("member");
+		int mno = memberInfo.getMno();// 어떤 회원 인지
+		
+		ProductDTO productInfo = productService.getProduct((String)pcode[0]);
+		memberInfo.setMileage(productInfo.getPprice());
       
-      int mno = 1;
+      //int mno = 1;
 
       OrderItemListDTO oild = new OrderItemListDTO();
       oild.setPtype(ptype);
@@ -146,6 +157,7 @@ public class OrderController {
       oild.setOstate(0);
       oild.setPmonth(0);
       oild.setAno(ano);
+      oild.setPcode(pcode[0]);
       
       System.out.println("oild : " + oild);
 
@@ -163,6 +175,7 @@ public class OrderController {
 
       //주문된 정보를 orderitemlist와 orderitem에 저장해준다
       orderService.paymentOrder(oild, address, checkedItems, itemsLength);
+      memberService.decreaseMemberMileage(memberInfo);
 
       session.removeAttribute("checkedItems");
       session.removeAttribute("itemsLength");

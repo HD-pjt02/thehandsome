@@ -30,6 +30,8 @@ public interface ReviewMapper {
 	Double selectoReviewRateAvg(ReviewDTO reviewDTO);
 	/*구매내역이 있는 회원이 리뷰를 작성했는지 확인*/
 	Long checkMemberReviewProduct(ReviewDTO reviewDTO);
+	/*리뷰 삭제*/
+	Long deleteReview(ReviewDTO reviewDTO);
 
 	
 

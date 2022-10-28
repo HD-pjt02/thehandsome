@@ -74,7 +74,16 @@
 		WHERE PCODECOLOR = #{pcodecolor}
 		AND MID = #{mid}
 		AND PCODE = #{pcode}
+		AND ROWNUM = 1
 		]]>
 	</select>
+	
+	
+	<delete id="deleteReview" parameterType="ReviewDTO">
+		<![CDATA[
+		delete from review where mid = #{mid} and rno = #{rno}
+		]]>
+	</delete>
+	
 	
 </mapper>

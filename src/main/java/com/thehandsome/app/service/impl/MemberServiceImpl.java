@@ -154,6 +154,11 @@ public class MemberServiceImpl implements MemberService{
 		return memberMapper.updateMemberMileage(memberDTO);
 	}
 
+	@Override
+	public Long decreaseMemberMileage(MemberDTO memberInfo) {
+		return memberMapper.decreaseMemberMileage(memberInfo);
+	}
+
 
 	
 	/*이메일 인증 끝*/

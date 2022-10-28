@@ -41,5 +41,21 @@
         and p.bname = b.bname
         and DECODE(#{type}, 'pcode', p.pcode, 'pname', p.pname) LIKE '%'||#{keyword}||'%'
    </select>
+   
+   <select id="getMemberOrders" parameterType="MemberDTO"
+      resultType="OrderItemListDTO">
+      <![CDATA[
+         
+                     select i.ono as ono, substr(i.sno, 1, instr(i.sno,'_')-1) as pcode, 
+                      SUBSTR(i.sno, INSTR(i.sno, '_', 1, 1) + 1, INSTR(i.sno, '_', 1, 2) - INSTR(i.sno, '_', 1, 1) - 1) AS pcolor,
+                      substr(i.sno, instr(i.sno,'_',-1)+1) as psize, i.oamount as oamount,
+                      p.pname as pname, b.bname as bname
+                          from orderitem i, product p, brand b 
+                          where ono in (select ono from orderitemlist where mno = #{mno})
+                          and p.pcode = substr(i.sno, 1, instr(i.sno,'_')-1)
+                          and p.bname = b.bname
+                          ORDER BY ono DESC
+      ]]>
+   </select>
 
 </mapper>

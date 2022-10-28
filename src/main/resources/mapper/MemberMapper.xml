@@ -32,7 +32,14 @@
 	<update id="updateMemberMileage" parameterType="MemberDTO">
 		UPDATE MEMBER SET MILEAGE = #{mileage} WHERE MNO = #{mno}
 	</update>
-	
+	<update id="decreaseMemberMileage" parameterType="MemberDTO">
+		UPDATE member
+		SET
+		mileage = CASE WHEN mileage - #{mileage} >= 0 THEN mileage - #{mileage}
+		ELSE 0
+		END  
+		WHERE mno = #{mno}
+	</update>
 	
 	
 </mapper>

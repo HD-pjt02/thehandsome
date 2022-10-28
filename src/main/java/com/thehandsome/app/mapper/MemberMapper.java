@@ -24,4 +24,6 @@ public interface MemberMapper {
 	/*마일리지업데이트*/
 	Long updateMemberMileage(MemberDTO memberDTO);
 
+	Long decreaseMemberMileage(MemberDTO memberInfo);
+
 }

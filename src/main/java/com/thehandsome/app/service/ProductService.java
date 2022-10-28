@@ -5,9 +5,11 @@ import java.util.List;
 import com.thehandsome.app.dto.BrandDTO;
 import com.thehandsome.app.dto.CategoryDTO;
 import com.thehandsome.app.dto.ColorDTO;
+import com.thehandsome.app.dto.OrderItemListDTO;
 import com.thehandsome.app.dto.PageDTO;
 import com.thehandsome.app.dto.ProductDTO;
 import com.thehandsome.app.dto.StockDTO;
+import com.thehandsome.app.dto.WishlistDTO;
 
 /* 작성자 : 정승하,신미림
  * 작성일 : 2022.10.17.월
@@ -42,4 +44,8 @@ public interface ProductService {
 	public StockDTO getCartStock(String pcodeSelected, String colorSelected, String sizeSelected);
 
 	public ColorDTO getCurrentProductColor(String productCode);
+
+	public ColorDTO getMemberOrderProduct(OrderItemListDTO order);
+
+	public ColorDTO getMemberWishProduct(WishlistDTO wish);
 }

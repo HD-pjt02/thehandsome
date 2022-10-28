@@ -23,4 +23,11 @@
 		]]>
 	</select>
 	
+	<select id="getMemberWishlist" parameterType="MemberDTO" resultType="WishlistDTO">
+		<![CDATA[
+			select * from wishlist where mid=#{id}
+		]]>
+	</select>
+	
+	
 </mapper>

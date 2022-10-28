@@ -609,4 +609,22 @@
 		FROM color
 		WHERE pcodecolor = #{productCode}
 	</select>
+	
+		<select id="getMemberOrderProduct" resultType="ColorDTO"
+		parameterType="OrderItemListDTO">
+		SELECT t1.*
+		FROM color t1, orderitem i
+		WHERE t1.pcolor = SUBSTR(i.sno, INSTR(i.sno, '_', 1, 1) + 1, INSTR(i.sno, '_', 1, 2) - INSTR(i.sno, '_', 1, 1) - 1)
+		AND t1.pcode = substr(i.sno, 1, instr(i.sno,'_')-1)
+		AND i.ono = #{ono}
+		AND ROWNUM = 1
+	</select>
+	
+		<select id="getMemberWishProduct" resultType="ColorDTO"
+		parameterType="WishlistDTO">
+		SELECT t1.*
+		FROM color t1, wishlist t2
+		WHERE t1.pcodecolor = t2.pid
+		AND ROWNUM = 1
+	</select>
 </mapper>

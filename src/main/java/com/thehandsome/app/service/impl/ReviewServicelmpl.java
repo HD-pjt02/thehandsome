@@ -86,6 +86,11 @@ public class ReviewServicelmpl implements ReviewService{
 		return reviewMapper.checkMemberReviewProduct(reviewDTO);
 	}
 
+	@Override
+	public Long deleteReview(ReviewDTO reviewDTO) {
+		return reviewMapper.deleteReview(reviewDTO);
+	}
+
 	
 
 }
