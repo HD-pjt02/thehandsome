@@ -24,4 +24,8 @@ public class ColorDTO {
 	private String imgurl6;
 	private String imgurl7;
 	
+	private String bname;
+	private String pname;
+	private int pprice;
+	
 }//end class

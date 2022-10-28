@@ -2411,7 +2411,7 @@ function reviewHtml(data){
 	                } else {
 	                  
 	                	reviewHtml += '        <li class="float_right delete"><a href="#;" onclick="javascript:deleteReview('+"'"+list[i].mid+"'"+",'"+list[i].rno+"'"+')">삭제</a></li>';
-	                    reviewHtml += '        <li class="float_right modify"><a href="#;" onclick="javascript:modifyReview('+"'"+list[i].mid+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].psize+"'"+",'"+list[i].rno+"'"+",'"+list[i].purchaseProdYN+"'"+')">수정</a></li>';
+	                   /*  reviewHtml += '        <li class="float_right modify"><a href="#;" onclick="javascript:modifyReview('+"'"+list[i].mid+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].pcodecolor+"'"+",'"+list[i].psize+"'"+",'"+list[i].rno+"'"+",'"+list[i].purchaseProdYN+"'"+')">수정</a></li>'; */
 	                }
 	            }
 	            reviewHtml += "    </ul>";
